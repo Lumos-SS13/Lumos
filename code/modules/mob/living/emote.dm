@@ -514,7 +514,7 @@
 	key_third_person = "buzzes"
 	message = "buzzes."
 	message_param = "buzzes at %t."
-	sound = 'sound/machines/buzz-sigh.ogg"
+	sound = 'sound/machines/buzz-sigh.ogg'
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
 
 /datum/emote/sound/buzz2
