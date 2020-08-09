@@ -509,6 +509,36 @@
 	sound = 'sound/machines/twobeep.ogg'
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
 
+/datum/emote/sound/buzz
+	key = "buzz"
+	key_third_person = "buzzes"
+	message = "buzzes."
+	message_param = "buzzes at %t."
+	sound = 'sound/machines/buzz-sigh.ogg'
+	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+
+/datum/emote/sound/buzz2
+	key = "buzz2"
+	message = "buzzes twice."
+	message_param = "buzzes aggressively at %t."
+	sound = 'sound/machines/buzz-two.ogg'
+	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+
+/datum/emote/sound/chime
+	key = "chime"
+	key_third_person = "chimes"
+	message = "chimes."
+	sound = 'sound/machines/chime.ogg'
+	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+
+/datum/emote/sound/ping
+	key = "ping"
+	key_third_person = "pings"
+	message = "pings."
+	message_param = "pings at %t."
+	sound = 'sound/machines/ping.ogg'
+	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+
 /datum/emote/living/circle
 	key = "circle"
 	key_third_person = "circles"
