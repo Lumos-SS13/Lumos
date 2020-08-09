@@ -13,7 +13,7 @@
 		return
 	if(user.nextsoundemote >= world.time)
 		return
-	user.nextsoundemote = world.time + 5
+	user.nextsoundemote = world.time + 7
 	playsound(user, 'sound/machines/buzz-sigh.ogg', 50, 1, -1)
 
 /datum/emote/living/buzz2
@@ -29,7 +29,7 @@
 		return
 	if(user.nextsoundemote >= world.time)
 		return
-	user.nextsoundemote = world.time + 5
+	user.nextsoundemote = world.time + 7
 	playsound(user, 'sound/machines/buzz-two.ogg', 50, 1, -1)
 
 /datum/emote/living/chime
@@ -45,7 +45,7 @@
 		return
 	if(user.nextsoundemote >= world.time)
 		return
-	user.nextsoundemote = world.time + 5
+	user.nextsoundemote = world.time + 7
 	playsound(user, 'sound/machines/chime.ogg', 50, 1, -1)
 
 /datum/emote/living/ping
@@ -62,5 +62,5 @@
 		return
 	if(user.nextsoundemote >= world.time)
 		return
-	user.nextsoundemote = world.time + 5
+	user.nextsoundemote = world.time + 7
 	playsound(user, 'sound/machines/ping.ogg', 50, 1, -1)
