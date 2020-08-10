@@ -79,7 +79,7 @@
 				return
 			var/shell_scrubbed_input = shell_url_scrub(web_sound_input)
 			// var/list/output = world.shelleo("[ytdl] --format 'bestaudio\[ext=mp3]/best\[ext=mp4]\[height<=360]/bestaudio\[ext=m4a]/bestaudio\[ext=aac]' --dump-single-json --no-playlist -- \"[shell_scrubbed_input]\"") // SKYRAT EDIT - now works on linux, but I think it doesn't on windows
-			var/list/output = world.shelleo("[ytdl] --format \"bestaudio\[ext=mp3]/best\[ext=mp4]\[height<=360]/bestaudio\[ext=m4a]/bestaudio\[ext=aac]\" --dump-single-json --no-playlist -- \"[shell_scrubbed_input]\"") // LUMOS EDIT - reverts above to work on windows
+			var/list/output = world.shelleo("[ytdl] --geo-bypass --format \"bestaudio\[ext=mp3]/best\[ext=mp4]\[height<=360]/bestaudio\[ext=m4a]/bestaudio\[ext=aac]\" --dump-single-json --no-playlist -- \"[shell_scrubbed_input]\"") // LUMOS EDIT - reverts above to work on windows
 			var/errorlevel = output[SHELLEO_ERRORLEVEL]
 			var/stdout = output[SHELLEO_STDOUT]
 			var/stderr = output[SHELLEO_STDERR]
