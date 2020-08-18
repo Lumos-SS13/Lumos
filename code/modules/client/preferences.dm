@@ -487,7 +487,7 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 				dat += "[TextPreview(skyrat_ooc_notes)]..."
 			dat +=	"<h2>ERP Preferences</h2>"
 			dat += 	"<b>ERP :</b> <a href='?_src_=prefs;preference=erp_pref'>[erppref]</a> "
-			dat += 	"<b>Non-Con :</b> <a href='?_src_=prefs;preference=noncon_pref'>[nonconpref]</a> "
+			// dat += 	"<b>Non-Con :</b> <a href='?_src_=prefs;preference=noncon_pref'>[nonconpref]</a> " //lumos change
 			dat += 	"<b>Vore :</b> <a href='?_src_=prefs;preference=vore_pref'>[vorepref]</a><br>"
 			dat += 	"<h2>Records</h2>"
 			dat += 	"<a href='?_src_=prefs;preference=general_records;task=input'><b>General</b></a><br>"
