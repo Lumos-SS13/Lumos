@@ -43,6 +43,11 @@ export const KeycardAuth = props => {
                   fluid
                   onClick={() => act('bsa_unlock')}
                   content="Bluespace Artillery Unlock" />
+                <Button
+                  icon="meteor"
+                  fluid
+                  onClick={() => act('pin_auth')}
+                  content="Command-Approved Firing Pin Unlock" />
               </Fragment>
             )}
           </Fragment>
