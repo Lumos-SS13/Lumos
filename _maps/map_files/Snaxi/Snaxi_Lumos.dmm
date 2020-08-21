@@ -366,6 +366,9 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-04"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "aet" = (
@@ -2246,12 +2249,8 @@
 /turf/open/floor/circuit,
 /area/science/lab)
 "aEL" = (
-/obj/structure/chair/comfy/black{
-	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Pool"
-	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/toy/poolnoodle/blue,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
 "aEO" = (
@@ -8271,11 +8270,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/camera{
-	c_tag = "Medbay West";
-	dir = 4;
-	network = list("ss13","medbay")
-	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "czN" = (
@@ -8365,18 +8359,11 @@
 /turf/open/floor/engine/air,
 /area/engine/atmos)
 "cBZ" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/door/airlock/public/glass{
-	name = "Holodeck Door"
-	},
-/obj/structure/fans/tiny,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/white,
-/area/crew_quarters/dorms)
+/turf/open/floor/plasteel/yellowsiding,
+/area/crew_quarters/fitness/pool)
 "cCb" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
@@ -10785,14 +10772,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Medbay West";
+	dir = 4;
+	network = list("ss13","medbay")
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
@@ -11070,6 +11056,9 @@
 /area/hallway/secondary/exit/departure_lounge)
 "eei" = (
 /obj/machinery/pool/controller,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 5
+	},
 /turf/open/floor/plasteel/yellowsiding,
 /area/crew_quarters/fitness/pool)
 "eex" = (
@@ -11702,8 +11691,8 @@
 	pixel_x = 24
 	},
 /obj/structure/closet/crate/bin,
-/obj/machinery/vending/wallmed{
-	pixel_y = -28
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
@@ -12592,9 +12581,13 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "eYq" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 4
+/obj/machinery/camera{
+	c_tag = "Pool"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
 "eYu" = (
@@ -16487,23 +16480,18 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "hnB" = (
-/obj/item/radio/intercom{
-	pixel_x = 28
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/effect/turf_decal/tile/blue{
+/obj/machinery/door/airlock/public/glass{
+	name = "Holodeck Door"
+	},
+/obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/machinery/camera{
-	c_tag = "Chief Medical Office";
-	dir = 8;
-	network = list("ss13","medbay");
-	pixel_y = -22
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/crew_quarters/heads/cmo)
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "hnO" = (
 /obj/machinery/atmospherics/components/unary/cryo_cell,
 /turf/open/floor/plasteel/white,
@@ -17614,6 +17602,9 @@
 /obj/item/soap/nanotrasen,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/suit/straight_jacket,
+/obj/machinery/vending/wallmed{
+	pixel_x = -28
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "hQs" = (
@@ -17990,16 +17981,17 @@
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "hZW" = (
-/obj/machinery/light,
-/obj/machinery/door/airlock/public/glass{
-	name = "Holodeck Door"
+/obj/structure/table,
+/obj/item/paper/fluff/holodeck/disclaimer{
+	pixel_x = 9
 	},
-/obj/structure/fans/tiny,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
+/obj/machinery/button/door{
+	id = "holoprivacy";
+	name = "Holodeck Privacy";
+	plane = -4
 	},
-/turf/open/floor/plasteel/white,
-/area/crew_quarters/dorms)
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/pool)
 "iad" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
@@ -20822,7 +20814,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 10
+	},
 /turf/open/floor/plasteel/yellowsiding/corner{
 	dir = 8
 	},
@@ -22393,10 +22387,16 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "kHD" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/item/toy/poolnoodle/blue,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
+/obj/machinery/light,
+/obj/machinery/door/airlock/public/glass{
+	name = "Holodeck Door"
+	},
+/obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "kHI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
@@ -24077,11 +24077,17 @@
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
 "lLv" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "lLD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -24611,18 +24617,6 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/plasteel,
 /area/hydroponics)
-"mbI" = (
-/obj/structure/table,
-/obj/item/paper/fluff/holodeck/disclaimer{
-	pixel_x = 9
-	},
-/obj/machinery/button/door{
-	id = "holoprivacy";
-	name = "Holodeck Privacy";
-	plane = -4
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
 "mbM" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -29123,7 +29117,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "oJh" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+/obj/structure/chair/comfy/black{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -31444,6 +31438,21 @@
 	dir = 4
 	},
 /obj/machinery/suit_storage_unit/cmo,
+/obj/item/radio/intercom{
+	pixel_x = 28
+	},
+/obj/machinery/camera{
+	c_tag = "Chief Medical Office";
+	dir = 8;
+	network = list("ss13","medbay");
+	pixel_y = -22
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_y = 26
+	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "pTq" = (
@@ -32236,6 +32245,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
 "qtH" = (
@@ -33170,11 +33180,20 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "qTM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/structure/chair/comfy/black{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 10
+/obj/machinery/button/door{
+	id = "PoolShut";
+	name = "Pool Shutters";
+	pixel_y = 24
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
@@ -33267,12 +33286,6 @@
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
-"qWM" = (
-/obj/structure/chair/comfy/black{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
 "qXm" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -33912,6 +33925,9 @@
 /obj/machinery/keycard_auth{
 	pixel_x = -28
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "roW" = (
@@ -34182,18 +34198,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"rxl" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/machinery/light_switch{
-	pixel_y = 26
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/crew_quarters/heads/cmo)
 "rxt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -35456,7 +35460,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/visible{
 	dir = 10
 	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "spa" = (
 /obj/structure/disposalpipe/segment{
@@ -37289,7 +37293,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/light,
 /obj/structure/table,
 /obj/structure/bedsheetbin{
 	pixel_x = 2
@@ -37510,6 +37513,12 @@
 	icon_state = "0-2"
 	},
 /obj/structure/closet/secure_closet/CMO,
+/obj/machinery/button/door{
+	id = "cmoofficesh";
+	name = "office shutters";
+	pixel_y = 28;
+	req_access_txt = "40"
+	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "tyQ" = (
@@ -41074,24 +41083,6 @@
 	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
-"vzS" = (
-/obj/structure/chair/comfy/black{
-	dir = 8
-	},
-/obj/machinery/button/door{
-	id = "PoolShut";
-	name = "Pool Shutters";
-	pixel_y = 24
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/power/apc/auto_name/east,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
 "vAh" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -41810,9 +41801,6 @@
 /turf/open/floor/wood,
 /area/hallway/primary/central)
 "vTh" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -41820,12 +41808,6 @@
 	dir = 8
 	},
 /obj/machinery/holopad,
-/obj/machinery/button/door{
-	id = "cmoofficesh";
-	name = "office shutters";
-	pixel_y = 28;
-	req_access_txt = "40"
-	},
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/heads/cmo)
 "vTk" = (
@@ -60229,12 +60211,12 @@ kuy
 kuy
 kuy
 hQb
-sXJ
-rxl
+gIm
+pNO
 mfF
 imM
 jxw
-sXJ
+gIm
 lsA
 xHE
 cVu
@@ -60486,7 +60468,7 @@ xQH
 anH
 anH
 tsq
-sXJ
+gIm
 vTh
 lTB
 kMT
@@ -60743,7 +60725,7 @@ pxZ
 jmd
 jmd
 exq
-sXJ
+gIm
 pNO
 rVA
 eFC
@@ -61002,7 +60984,7 @@ aoj
 cxX
 sXJ
 pSY
-hnB
+pNO
 qhU
 vCE
 gIm
@@ -61259,7 +61241,7 @@ eLX
 cpf
 sXJ
 sXJ
-sXJ
+gIm
 vLa
 gIm
 gIm
@@ -61514,7 +61496,7 @@ anJ
 anm
 anm
 prP
-anH
+lLv
 dVV
 czF
 oqF
@@ -75375,14 +75357,14 @@ ydp
 ydp
 avT
 avT
-avT
-avT
-avT
-avT
-avT
+xUL
+xUL
+xUL
+xUL
+xUL
 soW
-etV
-etV
+vsM
+vsM
 aAh
 uim
 avT
@@ -75632,14 +75614,14 @@ avT
 avT
 avT
 avT
-avT
-avT
-avT
-avT
-avT
-avT
-avT
-avT
+xUL
+xUL
+xUL
+xUL
+xUL
+xUL
+xUL
+xUL
 xZL
 xBk
 avT
@@ -75888,12 +75870,12 @@ avT
 avT
 avT
 avT
-avT
-avT
-avT
-avT
-avT
-avT
+lJC
+hnB
+lJC
+lJC
+kHD
+lJC
 avT
 avT
 avT
@@ -76145,11 +76127,11 @@ avT
 avT
 avT
 avT
-avT
-iHM
-cBZ
-iHM
-hZW
+lJC
+kfM
+kfM
+kfM
+kfM
 iHM
 avT
 avT
@@ -76402,10 +76384,10 @@ avT
 avT
 avT
 avT
-avT
-iHM
+lJC
 kfM
-iHM
+kfM
+kfM
 kfM
 iHM
 avT
@@ -76660,8 +76642,8 @@ axL
 axL
 axL
 axL
-axL
 xxR
+axL
 axL
 xxR
 axL
@@ -78202,8 +78184,8 @@ axL
 axL
 axL
 axL
-axL
 unO
+axL
 axL
 unO
 axL
@@ -78455,12 +78437,12 @@ ydp
 ydp
 avT
 avT
+avT
 abU
 aez
 tOz
 tOz
-mbI
-tOz
+hZW
 hDy
 tOz
 tOz
@@ -78712,9 +78694,9 @@ ydp
 ydp
 avT
 avT
+avT
 acQ
 aDb
-tOz
 kxq
 kRk
 kRk
@@ -78969,9 +78951,9 @@ ydp
 ydp
 avT
 avT
+avT
 acQ
 aDo
-tOz
 oui
 lHe
 vQk
@@ -79226,9 +79208,9 @@ ydp
 ydp
 avT
 avT
+avT
 acQ
-kHD
-tOz
+aEL
 oui
 vQk
 vQk
@@ -79483,8 +79465,8 @@ ydp
 ydp
 avT
 avT
+avT
 acQ
-aDo
 tOz
 oui
 nAm
@@ -79740,8 +79722,8 @@ ydp
 avT
 avT
 avT
+avT
 acQ
-kHD
 tOz
 oui
 vQk
@@ -79997,8 +79979,8 @@ avT
 avT
 avT
 avT
+avT
 acQ
-aEL
 eYq
 eei
 vQk
@@ -80254,10 +80236,10 @@ avT
 xUL
 cav
 xUL
+avT
 acQ
-aUC
-oJh
-oui
+tOz
+cBZ
 vQk
 vQk
 vQk
@@ -80511,10 +80493,10 @@ avT
 xUL
 xUL
 xUL
+avT
 acQ
-lLv
-oJh
-oui
+tOz
+cBZ
 nAm
 vQk
 vQk
@@ -80768,10 +80750,10 @@ avT
 xUL
 xUL
 xUL
+avT
 acQ
-qWM
 oJh
-oui
+cBZ
 vQk
 vQk
 vQk
@@ -81025,10 +81007,10 @@ pgp
 xUL
 xUL
 xUL
+avT
 acQ
 aUC
-oJh
-oui
+cBZ
 vQk
 vQk
 cOb
@@ -81282,8 +81264,8 @@ pgp
 xUL
 bSC
 xUL
+avT
 abU
-vzS
 qTM
 jIK
 bUO
@@ -81541,8 +81523,8 @@ raM
 iHM
 pgp
 pgp
-rWi
-rWi
+pgp
+pgp
 rWi
 rRk
 xfs
