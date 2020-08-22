@@ -3,6 +3,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 #define KEYCARD_RED_ALERT "Red Alert"
 #define KEYCARD_EMERGENCY_MAINTENANCE_ACCESS "Emergency Maintenance Access"
 #define KEYCARD_BSA_UNLOCK "Bluespace Artillery Unlock"
+#define FIRING_PIN_UNLOCK "Command-Approved Firing Pin Unlock" // LUMOS EDIT - JJFIRINGPINS
 
 /obj/machinery/keycard_auth
 	name = "Keycard Authentication Device"
@@ -36,7 +37,10 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 					datum/tgui/master_ui = null, datum/ui_state/state = GLOB.physical_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "keycard_auth", name, 375, 125, master_ui, state)
+		// LUMOS EDIT START - JJFIRINGPINS
+		//ui = new(user, src, ui_key, "keycard_auth", name, 375, 125, master_ui, state)
+		ui = new(user, src, ui_key, "keycard_auth", name, 375, 135, master_ui, state)
+		// LUMOS EDIT STOP - JJFIRINGPINS
 		ui.open()
 
 /obj/machinery/keycard_auth/ui_data()
@@ -46,6 +50,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 	data["red_alert"] = (SECLEVEL2NUM(NUM2SECLEVEL(GLOB.security_level)) >= SEC_LEVEL_RED) ? 1 : 0
 	data["emergency_maint"] = GLOB.emergency_access
 	data["bsa_unlock"] = GLOB.bsa_unlock
+	data["pin_auth"] = GLOB.pin_auth // LUMOS EDIT - JJFIRINGPINS
 	return data
 
 /obj/machinery/keycard_auth/ui_status(mob/user)
@@ -82,6 +87,12 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 			if(!event_source)
 				sendEvent(KEYCARD_BSA_UNLOCK, ID)
 				. = TRUE
+		// LUMOS EDIT START - JJFIRING PINS
+		if("pin_auth")
+			if(!event_source)
+				sendEvent(FIRING_PIN_UNLOCK, ID)
+				. = TRUE
+		// LUMOS EDIT STOP - JJFIRING PINS
 
 /obj/machinery/keycard_auth/proc/sendEvent(event_type, trigger_id)
 	triggerer = usr
@@ -122,6 +133,10 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 			make_maint_all_access()
 		if(KEYCARD_BSA_UNLOCK)
 			toggle_bluespace_artillery()
+		// LUMOS EDIT START - JJFIRINGPINS
+		if(FIRING_PIN_UNLOCK)
+			toggle_firing_pin_lock()
+		// LUMOS EDIT STOP - JJFIRINGPINS
 
 GLOBAL_VAR_INIT(emergency_access, FALSE)
 /proc/make_maint_all_access()
@@ -147,6 +162,14 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 	minor_announce("Bluespace Artillery firing protocols have been [GLOB.bsa_unlock? "unlocked" : "locked"]", "Weapons Systems Update:")
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("bluespace artillery", GLOB.bsa_unlock? "unlocked" : "locked"))
 
+// LUMOS EDIT START - JJFIRINGPINS
+/proc/toggle_firing_pin_lock()
+	GLOB.pin_auth = !GLOB.pin_auth
+	minor_announce("Command-Approved firing pins have been [GLOB.pin_auth? "unlocked" : "locked"]", "Weapons Systems Update:")
+	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("command-approved firing pins", GLOB.pin_auth? "unlocked" : "locked"))
+// LUMOS EDIT STOP - JJFIRINGPINS
+
 #undef KEYCARD_RED_ALERT
 #undef KEYCARD_EMERGENCY_MAINTENANCE_ACCESS
 #undef KEYCARD_BSA_UNLOCK
+#undef FIRING_PIN_UNLOCK // LUMOS EDIT - JJFIRINGPINS
