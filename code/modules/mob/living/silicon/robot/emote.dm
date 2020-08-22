@@ -11,6 +11,7 @@
 	key_third_person = "boops"
 	message = "boops."
 
+/* Moved to modular lumos folder
 /datum/emote/sound/silicon/buzz
 	key = "buzz"
 	key_third_person = "buzzes"
@@ -28,6 +29,7 @@
 	key_third_person = "chimes"
 	message = "chimes."
 	sound = 'sound/machines/chime.ogg'
+*/
 
 /datum/emote/sound/silicon/honk
 	key = "honk"
@@ -36,6 +38,7 @@
 	vary = TRUE
 	sound = 'sound/items/bikehorn.ogg'
 
+/* Modular Lumos changes
 /datum/emote/sound/silicon/ping
 	key = "ping"
 	key_third_person = "pings"
@@ -48,6 +51,8 @@
 	key_third_person = "chimes"
 	message = "chimes."
 	sound = 'sound/machines/chime.ogg'
+*/
+// Lumos change end
 
 /datum/emote/sound/silicon/sad
 	key = "sad"

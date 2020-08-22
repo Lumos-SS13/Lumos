@@ -160,7 +160,7 @@
 	if(isturf(loc))
 		var/turf/T = loc
 		T.Entered(src)
-
+/* Moved to modular lumos
 /datum/emote/sound/human
 	mob_type_allowed_typecache = list(/mob/living/carbon/human)
 	emote_type = EMOTE_AUDIBLE
@@ -189,3 +189,5 @@
 	key_third_person = "chimes"
 	message = "chimes."
 	sound = 'sound/machines/chime.ogg'
+*/
+// Lumos change end
