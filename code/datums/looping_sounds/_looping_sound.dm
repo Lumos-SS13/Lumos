@@ -60,6 +60,7 @@
 		output_atoms -= remove_thing
 	if(init_timerid)
 		deltimer(init_timerid)
+		init_timerid = null //lumos change - fix sound loops
 	if(!timerid)
 		return
 	on_stop()

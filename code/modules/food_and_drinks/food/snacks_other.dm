@@ -600,7 +600,7 @@
 	name = "chocolate"
 	desc = "A tiny and sweet chocolate. Has a 'strawberry' filling!"
 	icon_state = "tiny_chocolate"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/coco = 1, /datum/reagent/drug/aphrodisiac = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/coco = 1) //Lumos edit
 	filling_color = "#A0522D"
 	tastes = list("chocolate" = 1)
 	foodtype = JUNKFOOD | SUGAR

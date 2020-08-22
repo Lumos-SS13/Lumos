@@ -25,12 +25,12 @@
 
 /obj/item/ammo_box/magazine/internal/shot/com
 	name = "combat shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot //Lumos edit - who the fuck codes an internal mag for a shotgun and doesn't implement it????
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/shot/com/compact
 	name = "compact combat shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot //lumos edit, fuck buckshot
 	max_ammo = 4
 
 /obj/item/ammo_box/magazine/internal/shot/dual
