@@ -37,7 +37,10 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 					datum/tgui/master_ui = null, datum/ui_state/state = GLOB.physical_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "keycard_auth", name, 375, 125, master_ui, state)
+		// LUMOS EDIT START - JJFIRINGPINS
+		//ui = new(user, src, ui_key, "keycard_auth", name, 375, 125, master_ui, state)
+		ui = new(user, src, ui_key, "keycard_auth", name, 375, 135, master_ui, state)
+		// LUMOS EDIT STOP - JJFIRINGPINS
 		ui.open()
 
 /obj/machinery/keycard_auth/ui_data()
@@ -162,7 +165,7 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 // LUMOS EDIT START - JJFIRINGPINS
 /proc/toggle_firing_pin_lock()
 	GLOB.pin_auth = !GLOB.pin_auth
-	minor_announce("Command-Approved firing pins have been [GLOB.bsa_unlock? "unlocked" : "locked"]", "Weapons Systems Update:")
+	minor_announce("Command-Approved firing pins have been [GLOB.pin_auth? "unlocked" : "locked"]", "Weapons Systems Update:")
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("command-approved firing pins", GLOB.pin_auth? "unlocked" : "locked"))
 // LUMOS EDIT STOP - JJFIRINGPINS
 
