@@ -89,12 +89,12 @@
 	using.hud = src
 	static_inventory += using
 
-	//LUMOS CHANGE
+	// LUMOS EDIT START - RESPAWNREQUEST
 	using = new /obj/screen/ghost/respawn()
 	using.screen_loc = ui_ghost_respawn
 	using.hud = src
 	static_inventory += using
-	//END LUMOS CHANGE
+	// LUMOS EDIT END - RESPAWNREQUEST
 
 
 /datum/hud/ghost/show_hud(version = 0, mob/viewmob)
