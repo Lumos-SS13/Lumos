@@ -122,7 +122,6 @@
 		// LUMOS EDIT START - RESPAWNREQUEST
 		if(CheckRespawnedChars(usr))
 			to_chat(usr, "<span class='danger'>You have already played as this character, chose another!</span>")
-			message_admins("h")
 			return
 		// LUMOS EDIT STOP - RESPAWNREQUEST
 

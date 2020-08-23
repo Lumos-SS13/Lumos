@@ -2980,6 +2980,7 @@
 		if(alert(usr, "Approve request?", "Confirm approve", "Yes", "No") != "Yes")
 			message_admins("[key_name(usr)] has cancelled approving [ADMIN_LOOKUPFLW(M)]'s request")
 			return
+
 		to_chat(M, "Respawn request <span class='greenannounce'>approved</span>! <br> You've been given the opportunity to continue playing the current round.<span class='userdanger'> Don't use any meta knowledge you've learnt in your past life and play as a different character!</span>")
 		log_admin("[key_name(usr)] has approved [key_name(M)]'s request")
 		message_admins("[key_name(usr)] has approved [ADMIN_LOOKUPFLW(M)]'s request")
@@ -2988,9 +2989,10 @@
 		var/mob/dead/new_player/NP = new()
 		NP.ckey = M.ckey
 		GLOB.respawns -= R
-		if(R.started_as_observer)//if started from observing, dont add to blacklist
-			message_admins("approving: R.started_as_observer = [R.started_as_observer]")
-			GLOB.respawned_chars += M.real_name
+		if(R.started_as_observer) //if started from observing, dont add the character name to the blacklist
+			qdel(M)
+			return
+		GLOB.respawned_chars += M.real_name
 		qdel(M)
 	
 	else if(href_list["respawnrequestdeny"])
@@ -3002,6 +3004,7 @@
 		if(alert(usr, "Deny request?", "Confirm deny", "Yes", "No") != "Yes")
 			message_admins("[key_name(usr)] has cancelled denying [ADMIN_LOOKUPFLW(M)]'s request")
 			return
+			
 		log_admin("[key_name(usr)] has denied [key_name(M)]'s request")
 		message_admins("[key_name(usr)] has denied [ADMIN_LOOKUPFLW(M)]'s request")
 		to_chat(M, "<span class='notice'>Respawn request <span class='boldannounce'>denied</span></span>.")

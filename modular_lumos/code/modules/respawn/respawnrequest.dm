@@ -6,10 +6,6 @@
 GLOBAL_LIST_EMPTY(respawns)
 GLOBAL_LIST_EMPTY(respawned_chars)
 
-/datum/respawn_requests
-	var/list/datum/respawns/request/requests = list()
-	var/cooldown = 30 SECONDS
-
 /datum/respawns/request
 	var/player_ckey
 	var/request_cooldown
@@ -17,34 +13,23 @@ GLOBAL_LIST_EMPTY(respawned_chars)
 
 proc/GetRespawnRequest(mob/M)
 	var/user_ckey = M.ckey
-	message_admins("called GetRespawnRequest")
 	for(var/datum/respawns/request/R in GLOB.respawns)
 		if(user_ckey == R.player_ckey)
 			return R
-
-proc/CreateRespawnRequest(mob/dead/observer/M)
-	var/datum/respawns/request/R = new /datum/respawns/request
-	R.player_ckey = M.ckey
-	R.request_cooldown = world.time + RESPAWN_REQUEST_COOLDOWN
-	if(M.started_as_observer)
-		R.started_as_observer = TRUE
-	message_admins("started_as_observer = [R.started_as_observer]")
-	GLOB.respawns += R
+	return
 
 proc/RespawnRequestCooldown(mob/M, amount)
 	var/datum/respawns/request/R = GetRespawnRequest(M)
 	R.request_cooldown = world.time + amount
 
 proc/CheckRespawnedChars(mob/M)
-	message_admins("CheckRespawnedChars")
+	// returns true if character name in the currently selected slot exists in respawned_chars
 	for(var/C in GLOB.respawned_chars)
 		if(M.client.prefs.real_name == C)
-			message_admins("found in list")
 			return TRUE
 		return FALSE
 
-proc/RequestRespawn(mob/M)
-	var/user_ckey = M.ckey
+proc/RequestRespawn(mob/dead/observer/M)
 	// attempt to get existing request
 	var/datum/respawns/request/R = GetRespawnRequest(M)
 	if(R)
@@ -55,8 +40,9 @@ proc/RequestRespawn(mob/M)
 		to_chat(usr, "<span class='notice'>Another respawn request has been created.</span>")
 	else // doesnt exist, create a new request
 		var/datum/respawns/request/NR = new /datum/respawns/request
-		NR.player_ckey = user_ckey
+		NR.player_ckey = M.ckey
 		NR.request_cooldown = world.time + RESPAWN_REQUEST_COOLDOWN
+		NR.started_as_observer = M.started_as_observer
 		GLOB.respawns += NR
 
 	// inform admins of new request
