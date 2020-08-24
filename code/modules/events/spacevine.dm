@@ -22,7 +22,12 @@
 
 	if(turfs.len) //Pick a turf to spawn at if we can
 		var/turf/T = pick(turfs)
-		new /datum/spacevine_controller(T, list(pick(subtypesof(/datum/spacevine_mutation))), rand(30,100), rand(5,10), src) //spawn a controller at turf with randomized stats and a single random mutation
+		// SKYRAT EDIT - VINES - START
+		//new /datum/spacevine_controller(T, list(pick(subtypesof(/datum/spacevine_mutation))), rand(30,100), rand(5,10), src) //spawn a controller at turf with randomized stats and a single random mutation
+		new /datum/spacevine_controller(T, list(), rand(30,100), rand(5,10), src)
+		for(var/i in 1 to 2)
+			new /mob/living/simple_animal/hostile/venus_human_trap/ghost_playable(T)
+		// SKYRAT EDIT - VINES - END
 
 
 
@@ -147,6 +152,8 @@
 	quality = NEGATIVE
 
 /datum/spacevine_mutation/aggressive_spread/on_spread(obj/structure/spacevine/holder, turf/target)
+	if(isvineimmune(holder))
+		return
 	target.ex_act(severity, null, src) // vine immunity handled at /mob/ex_act
 
 /datum/spacevine_mutation/aggressive_spread/on_buckle(obj/structure/spacevine/holder, mob/living/buckled)
@@ -228,14 +235,24 @@
 	quality = NEGATIVE
 
 /datum/spacevine_mutation/thorns/on_cross(obj/structure/spacevine/holder, mob/living/crosser)
-	if(prob(severity) && istype(crosser) && !isvineimmune(crosser))
+	//SKYRAT CHANGE START - VINES
+	//if(prob(severity) && istype(crosser) && !isvineimmune(crosser))
+	if(prob(severity) && istype(crosser))
 		var/mob/living/M = crosser
+		if(isvineimmune(M))
+			return
+	//SKYRAT CHANGE END - VINES
 		M.adjustBruteLoss(5)
 		to_chat(M, "<span class='alert'>You cut yourself on the thorny vines.</span>")
 
 /datum/spacevine_mutation/thorns/on_hit(obj/structure/spacevine/holder, mob/living/hitter, obj/item/I, expected_damage)
-	if(prob(severity) && istype(hitter) && !isvineimmune(hitter))
+	//SKYRAT CHANGE START - VINES
+	//if(prob(severity) && istype(hitter) && !isvineimmune(hitter))
+	if(prob(severity) && istype(hitter))
 		var/mob/living/M = hitter
+		if(isvineimmune(M))
+			return
+	//SKYRAT CHANGE END - VINES
 		M.adjustBruteLoss(5)
 		to_chat(M, "<span class='alert'>You cut yourself on the thorny vines.</span>")
 	. =	expected_damage
@@ -268,10 +285,190 @@
 		new/obj/structure/alien/resin/flower_bud_enemy(get_turf(holder))
 
 /datum/spacevine_mutation/flowering/on_cross(obj/structure/spacevine/holder, mob/living/crosser)
+	/* SKYRAT EDIT - VINES
+	if(istype(crosser, /mob/living/simple_animal/hostile/venus_human_trap)) //skyrat change: flowering vines heal flytraps 10% on cross
+		if(crosser.health == crosser.maxHealth)
+			return
+		crosser.health = clamp((crosser.health + crosser.maxHealth * 0.1), crosser.health, crosser.maxHealth)
+		to_chat(crosser, "<span class='notice'>The flowering vines attempt to regenerate some of your wounds!</span>")
+		return
+	SKYRAT EDIT - VINES */
 	if(prob(25))
 		holder.entangle(crosser)
+//SKYRAT EDIT - VINES - START
+/datum/spacevine_mutation/slipping
+	name = "slipping"
+	hue = "#97eaff"
+	severity = 1
+	quality = NEGATIVE
 
+/datum/spacevine_mutation/slipping/on_cross(obj/structure/spacevine/holder, mob/living/crosser)
+	if(issilicon(crosser))
+		return
+	if(ishuman(crosser))
+		var/mob/living/carbon/human/H = crosser
+		H.slip(20)
+		to_chat(H, "<span class='alert'>The vines slip you!</span>")
 
+/datum/spacevine_mutation/teleporting
+	name = "teleporting"
+	hue = "#1105b6"
+	severity = 3
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/teleporting/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
+	if(isliving(hitter))
+		var/mob/living/M = hitter
+		if(isvineimmune(M))
+			return
+		if(prob(25))
+			do_teleport(M, get_turf(M), 8, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+	. = expected_damage
+
+/datum/spacevine_mutation/meleereflecting
+	name = "melee reflecting"
+	hue = "#b6054f"
+	severity = 2
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/meleereflecting/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
+	if(isliving(hitter))
+		var/mob/living/M = hitter
+		if(isvineimmune(M))
+			return
+		if(prob(10))
+			M.adjustBruteLoss(expected_damage)
+		else
+			. = expected_damage
+
+/mob/living/proc/plant_kudzu()
+	var/turf/T = get_turf(src)
+	var/list/added_mut_list = list()
+	new /datum/spacevine_controller(T, added_mut_list, 50, 5)
+	new /mob/living/simple_animal/hostile/venus_human_trap/ghost_playable(T)
+
+/datum/spacevine_mutation/seeding
+	name = "seeding"
+	hue = "#68b95d"
+	severity = 3
+	quality = NEGATIVE
+	
+/datum/spacevine_mutation/seeding/on_cross(obj/structure/spacevine/holder, mob/crosser)
+	if(isliving(crosser))
+		var/mob/living/M = crosser
+		if(isvineimmune(M) || M.stat == DEAD)
+			return
+		if(prob(10))
+			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+
+/datum/spacevine_mutation/seeding/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
+	if(isliving(hitter))
+		var/mob/living/M = hitter
+		if(isvineimmune(M))
+			return
+		if(prob(10))
+			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+	. = expected_damage
+
+/datum/spacevine_mutation/electrify
+	name = "electrified"
+	hue = "#f7eb86"
+	severity = 3
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/electrify/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
+	if(isliving(hitter))
+		var/mob/living/M = hitter
+		if(isvineimmune(M))
+			return
+		if(prob(20))
+			M.electrocute_act(10, holder)
+	. = expected_damage
+
+/datum/spacevine_mutation/emp
+	name = "emp"
+	hue = "#ffffff"
+	severity = 3
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/emp/on_death(obj/structure/spacevine/holder)
+	empulse(holder, 1, 2)
+
+/datum/spacevine_mutation/randreagent
+	name = "reagent injecting"
+	hue = "#003cff"
+	severity = 3
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/randreagent/on_cross(obj/structure/spacevine/holder, mob/crosser)
+	if(isliving(crosser))
+		var/mob/living/M = crosser
+		if(isvineimmune(M))
+			return
+		if(prob(10))
+			var/choose_reagent = pick(subtypesof(/datum/reagent))
+			M.reagents.add_reagent(choose_reagent, 10)
+
+/datum/spacevine_mutation/radiation
+	name = "radiation pulsing"
+	hue = "#ffef62"
+	severity = 3
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/radiation/on_grow(obj/structure/spacevine/holder)
+	radiation_pulse(holder, 100, 3)
+
+/datum/spacevine_mutation/miasmagenerating
+	name = "miasma"
+	hue = "#470566"
+	severity = 5
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/miasmagenerating/on_grow(obj/structure/spacevine/holder)
+	var/turf/holder_turf = get_turf(holder)
+	holder_turf.atmos_spawn_air("miasma=100;TEMP=100")
+
+/datum/spacevine_mutation/fleshmending
+	name = "flesh-mending"
+	hue = "#470566"
+	severity = 10
+	quality = POSITIVE
+
+/datum/spacevine_mutation/fleshmending/on_cross(obj/structure/spacevine/holder, mob/crosser)
+	if(isliving(crosser))
+		var/mob/living/living_crosser = crosser
+		living_crosser.adjustBruteLoss(-1)
+		living_crosser.adjustFireLoss(-1)
+		living_crosser.adjustToxLoss(-1)
+	
+/datum/spacevine_mutation/fleshmending/on_eat(obj/structure/spacevine/holder, mob/living/eater)
+	if(isliving(eater))
+		var/mob/living/living_eater = eater
+		living_eater.adjustBruteLoss(-5)
+		living_eater.adjustFireLoss(-5)
+		living_eater.adjustToxLoss(-5)
+
+/datum/spacevine_mutation/oxygen_producing
+	name = "oxygen-producing"
+	hue = "#4620ee"
+	severity = 10
+	quality = POSITIVE
+
+/datum/spacevine_mutation/oxygen_producing/on_grow(obj/structure/spacevine/holder)
+	var/turf/holder_turf = get_turf(holder)
+	holder_turf.atmos_spawn_air("o2=100;TEMP=100")
+
+/datum/spacevine_mutation/nitrogen_producing
+	name = "nitrogen-producing"
+	hue = "#ce2929"
+	severity = 10
+	quality = POSITIVE
+
+/datum/spacevine_mutation/nitrogen_producing/on_grow(obj/structure/spacevine/holder)
+	var/turf/holder_turf = get_turf(holder)
+	holder_turf.atmos_spawn_air("n2=100;TEMP=100")
+
+//SKYRAT EDIT - VINES - END
 // SPACE VINES (Note that this code is very similar to Biomass code)
 /obj/structure/spacevine
 	name = "space vines"
@@ -287,6 +484,7 @@
 	var/energy = 0
 	var/datum/spacevine_controller/master = null
 	var/list/mutations = list()
+	var/plantbgone_resist = FALSE //skyrat edit
 
 /obj/structure/spacevine/Initialize()
 	. = ..()
@@ -319,7 +517,7 @@
 	var/override = 0
 	for(var/datum/spacevine_mutation/SM in mutations)
 		override += SM.on_chem(src, R)
-	if(!override && istype(R, /datum/reagent/toxin/plantbgone))
+	if(!override && istype(R, /datum/reagent/toxin/plantbgone) &&!plantbgone_resist)
 		if(prob(50))
 			qdel(src)
 
@@ -356,6 +554,15 @@
 		return
 	for(var/datum/spacevine_mutation/SM in mutations)
 		SM.on_cross(src, AM)
+	//SKYRAT EDIT START - VINES
+	if(istype(AM, /mob/living/simple_animal/hostile/venus_human_trap)) //skyrat change: vines heal flytraps 10% on cross
+		var/mob/living/simple_animal/hostile/venus_human_trap/VS = AM
+		if(VS.health == VS.maxHealth)
+			return
+		VS.health = clamp((VS.health + VS.maxHealth * 0.1), VS.health, VS.maxHealth)
+		to_chat(VS, "<span class='notice'>The vines attempt to regenerate some of your wounds!</span>")
+		return
+	//SKYRAT EDIT END - VINES
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/structure/spacevine/attack_hand(mob/user)
@@ -467,7 +674,8 @@
 		for(var/datum/spacevine_mutation/SM in SV.mutations)
 			SM.process_mutation(SV)
 		if(SV.energy < 2) //If tile isn't fully grown
-			if(prob(20))
+			//if(prob(20)) // SKYRAT EDIT - VINES (ORIGINAL)
+			if(prob(50)) // SKYRAT EDIT - VINES
 				SV.grow()
 		else //If tile is fully grown
 			SV.entangle_mob()
@@ -510,6 +718,9 @@
 /obj/structure/spacevine/proc/spread()
 	var/direction = pick(GLOB.cardinals)
 	var/turf/stepturf = get_step(src,direction)
+	for(var/obj/machinery/door/D in stepturf.contents)
+		if(prob(50))
+			D.open()
 	if (!isspaceturf(stepturf) && stepturf.Enter(src))
 		for(var/datum/spacevine_mutation/SM in mutations)
 			SM.on_spread(src, stepturf)
@@ -517,6 +728,19 @@
 		if(!locate(/obj/structure/spacevine, stepturf))
 			if(master)
 				master.spawn_spacevine_piece(stepturf, src)
+				return
+	if(isspaceturf(stepturf))
+		for(var/directions in GLOB.alldirs)
+			var/turf/directional_turf = get_step(src, directions)
+			if(!istype(directional_turf, /turf/closed) && !istype(directional_turf, /turf/open/floor))
+				continue
+			for(var/datum/spacevine_mutation/SM in mutations)
+				SM.on_spread(src, stepturf)
+				stepturf = get_step(src,direction) //in case turf changes, to make sure no runtimes happen
+			if(!locate(/obj/structure/spacevine, stepturf))
+				if(master)
+					master.spawn_spacevine_piece(stepturf, src)
+					return
 
 /obj/structure/spacevine/ex_act(severity, target)
 	if(istype(target, type)) //if its agressive spread vine dont do anything
@@ -544,4 +768,7 @@
 		var/mob/living/M = A
 		if(("vines" in M.faction) || ("plants" in M.faction))
 			return TRUE
+		if(istype(M, /mob/living/simple_animal/hostile/venus_human_trap))
+			return TRUE
 	return FALSE
+
