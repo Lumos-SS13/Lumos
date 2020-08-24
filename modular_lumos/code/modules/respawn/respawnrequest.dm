@@ -1,6 +1,3 @@
-#define RESPAWN_REQUEST_APPROVE(user) "(<a href='?_src_=holder;[HrefToken(TRUE)];respawnrequestapprove=[REF(user)]'>APPROVE</a>)"
-#define RESPAWN_REQUEST_DENY(user) "(<a href='?_src_=holder;[HrefToken(TRUE)];respawnrequestdeny=[REF(user)]'>DENY</a>)"
-#define RESPAWN_REQUEST_MONTY(user)"[RESPAWN_REQUEST_APPROVE(user)] [RESPAWN_REQUEST_DENY(user)]"
 #define RESPAWN_REQUEST_COOLDOWN (30 SECONDS)
 
 GLOBAL_LIST_EMPTY(respawns)
@@ -47,7 +44,7 @@ proc/RequestRespawn(mob/dead/observer/M)
 
 	// inform admins of new request
 	log_admin("[key_name(usr)] requested to respawn")
-	message_admins("[key_name_admin(M)] is requesting to respawn [RESPAWN_REQUEST_MONTY(M)]")
+	message_admins("[key_name_admin(M)] is requesting to respawn [ADMIN_RESPAWN_REQUEST_MONTY(M)]")
 	RespawnRequestCooldown(M, RESPAWN_REQUEST_COOLDOWN)
 	to_chat(usr, "<span class='notice'>Respawn request created. Please wait for an admin to decide.</span>")
 
