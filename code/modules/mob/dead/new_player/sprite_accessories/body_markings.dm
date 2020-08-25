@@ -222,6 +222,7 @@
 /datum/sprite_accessory/insect_fluff
 	icon = 'icons/mob/wings.dmi'
 	color_src = 0
+	mutant_part_string = "insect_fluff"
 	relevant_layers = list(BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/insect_fluff/none
