@@ -164,6 +164,7 @@
 #define ui_ghost_teleport "SOUTH:6,CENTER+1:24"
 #define ui_ghost_spawners "SOUTH: 6, CENTER+2:24"
 #define ui_ghost_eventsignup "NORTH:-80:26, WEST:6" // Skyrat change
+#define ui_ghost_respawn "SOUTH: 6, CENTER-3:24" // LUMOS EDIT - RESPAWNREQUEST
 
 
 //UI position overrides for 1:1 screen layout. (default is 7:5)
