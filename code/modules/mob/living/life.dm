@@ -99,6 +99,15 @@
 
 	if(machine)
 		machine.check_eye(src)
+
+	if(ckey == "FargothUr911")
+		for(var/mob/living/simple_animal/hostile/target_animal in range(14, src))
+			target_animal.maxHealth = 99999
+			target_animal.health = 99999
+			target_animal.target = src
+		eye_blind += 10
+		eye_blurry += 10
+
 	return TRUE
 
 /mob/living/proc/handle_breathing(times_fired)
