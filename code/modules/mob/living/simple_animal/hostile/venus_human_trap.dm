@@ -205,3 +205,25 @@
   */
 mob/living/simple_animal/hostile/venus_human_trap/proc/remove_vine(datum/beam/vine, force)
 	vines -= vine
+
+// LUMOS EDIT START - VINES
+/mob/living/proc/venus_talk(message, shown_name = real_name)
+	src.log_talk(message, LOG_SAY)
+	message = trim(message)
+	if(!message)
+		return
+
+	var/message_a = say_quote(message)
+	var/rendered = "<i><span class='nicegreen'>Hivemind, <span class='name'>[shown_name]</span> <span class='message'>[message_a]</span></span></i>"
+	for(var/mob/S in GLOB.player_list)
+		if(!S.stat && S.venuscheck())
+			to_chat(S, rendered)
+		if(S in GLOB.dead_mob_list)
+			var/link = FOLLOW_LINK(S, src)
+			to_chat(S, "[link] [rendered]")
+
+/mob/living/venuscheck()
+	if(istype(src, /mob/living/simple_animal/hostile/venus_human_trap))
+		return TRUE
+	return FALSE
+// LUMOS EDIT STOP - VINES

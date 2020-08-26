@@ -8,6 +8,9 @@
 /datum/round_event/spacevine
 	fakeable = FALSE
 
+/datum/round_event/spacevine/announce(fake)
+	priority_announce("Confirmed outbreak of level 8 biological biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", "outbreak8")
+
 /datum/round_event/spacevine/start()
 	var/list/turfs = list() //list of all the empty floor turfs in the hallway areas
 
