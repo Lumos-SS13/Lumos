@@ -421,17 +421,6 @@
 /datum/spacevine_mutation/radiation/on_grow(obj/structure/spacevine/holder)
 	radiation_pulse(holder, 100, 3)
 
-/datum/spacevine_mutation/miasmagenerating
-	name = "miasma"
-	hue = "#470566"
-	severity = 5
-	quality = NEGATIVE
-
-/datum/spacevine_mutation/miasmagenerating/on_grow(obj/structure/spacevine/holder)
-	var/turf/holder_turf = get_turf(holder)
-	if(prob(25))
-		holder_turf.atmos_spawn_air("miasma=10;TEMP=293")
-
 /datum/spacevine_mutation/fleshmending
 	name = "flesh-mending"
 	hue = "#470566"
@@ -451,28 +440,6 @@
 		living_eater.adjustBruteLoss(-5)
 		living_eater.adjustFireLoss(-5)
 		living_eater.adjustToxLoss(-5)
-
-/datum/spacevine_mutation/oxygen_producing
-	name = "oxygen-producing"
-	hue = "#4620ee"
-	severity = 10
-	quality = POSITIVE
-
-/datum/spacevine_mutation/oxygen_producing/on_grow(obj/structure/spacevine/holder)
-	var/turf/holder_turf = get_turf(holder)
-	if(prob(25))
-		holder_turf.atmos_spawn_air("o2=10;TEMP=293")
-
-/datum/spacevine_mutation/nitrogen_producing
-	name = "nitrogen-producing"
-	hue = "#ce2929"
-	severity = 10
-	quality = POSITIVE
-
-/datum/spacevine_mutation/nitrogen_producing/on_grow(obj/structure/spacevine/holder)
-	var/turf/holder_turf = get_turf(holder)
-	if(prob(25))
-		holder_turf.atmos_spawn_air("n2=10;TEMP=293")
 
 //SKYRAT EDIT - VINES - END
 // SPACE VINES (Note that this code is very similar to Biomass code)
