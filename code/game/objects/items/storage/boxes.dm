@@ -119,12 +119,11 @@
 
 // LUMOS EDIT START - SNAXIPICKS
 	if(SSmapping.stat_map_name == "Snow Taxi")
-        if(!ishuman(loc))
-            return
-        var/mob/living/carbon/human/H = loc
-        if(H.job == "Prisoner")
-            return
-
+		if(!ishuman(loc))
+			return
+		var/mob/living/carbon/human/H = loc
+		if(H.job == "Prisoner")
+			return
 		new /obj/item/pickaxe/mini(src)
 // LUMOS EDIT END - SNAXIPICKS
 
