@@ -473,3 +473,7 @@
 /datum/config_entry/number/max_ambitions	// Maximum number of ambitions a mind can store.
 	config_entry_value = 5
 //SKYRAT CHANGES END
+
+// LUMOS EDIT START - CENTCOMBAN
+/datum/config_entry/string/centcom_ban_db	// URL for the CentCom Galactic Ban DB API
+// LUMOS EDIT END - CENTCOMBAN
