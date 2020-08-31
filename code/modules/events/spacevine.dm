@@ -458,10 +458,23 @@
 	var/datum/spacevine_controller/master = null
 	var/list/mutations = list()
 	var/plantbgone_resist = FALSE //skyrat edit
+	var/force_mutated = FALSE
 
 /obj/structure/spacevine/Initialize()
 	. = ..()
 	add_atom_colour("#ffffff", FIXED_COLOUR_PRIORITY)
+
+/obj/structure/spacevine/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/energy/floramut) && prob(20) && !force_mutated)
+		var/list/vine_mutations_list = list()
+		init_subtypes(/datum/spacevine_mutation/, vine_mutations_list)
+		var/obj/structure/spacevine/SV = src
+		var/list/remaining_mutations = vine_mutations_list - SV.mutations
+		var/datum/spacevine_mutation/randmut = pick(remaining_mutations)
+		randmut.add_mutation_to_vinepiece(SV)
+		force_mutated = TRUE
+	else
+		return ..()
 
 /obj/structure/spacevine/examine(mob/user)
 	. = ..()
