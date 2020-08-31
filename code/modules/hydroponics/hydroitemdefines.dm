@@ -93,6 +93,7 @@
 	playsound(src, 'sound/weapons/bladeslice.ogg', 50, 1, -1)
 	return (BRUTELOSS)
 
+/* LUMOS EDIT START - VINES
 /obj/item/scythe
 	icon_state = "scythe0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
@@ -125,6 +126,7 @@
 			playsound(src,pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg') ,50, 1, -1)
 	return (BRUTELOSS)
 
+
 /obj/item/scythe/pre_attack(atom/A, mob/living/user, params)
 	if(swiping || !istype(A, /obj/structure/spacevine) || get_turf(A) == get_turf(user))
 		return ..()
@@ -143,6 +145,7 @@
 		swiping = FALSE
 		stam_gain += 2								//Initial hitcost
 		user.adjustStaminaLoss(-stam_gain)
+LUMOS EDIT STOP - VINES */
 
 // *************************************
 // Nutrient defines for hydroponics
