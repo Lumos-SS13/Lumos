@@ -123,7 +123,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggletitlemusic)()
 	usr.client.prefs.save_preferences()
 	if(usr.client.prefs.toggles & SOUND_LOBBY)
 		to_chat(usr, "You will now hear music in the game lobby.")
-		if(isnewplayer(usr))
+		if(isnewplayer(usr) && usr.client)
 			usr.client.playtitlemusic()
 	else
 		to_chat(usr, "You will no longer hear music in the game lobby.")
