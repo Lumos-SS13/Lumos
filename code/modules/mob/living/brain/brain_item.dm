@@ -322,7 +322,7 @@
 		if(istype(X, trauma))
 			return FALSE
 		var/datum/brain_trauma/T = X
-		if(resilience == T.resilience)
+		if(resilience == T?.resilience)
 			resilience_tier_count++
 
 	var/max_traumas
