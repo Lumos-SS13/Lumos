@@ -117,6 +117,16 @@
 
 	new /obj/item/tank/internals/emergency_oxygen(src)
 
+// LUMOS EDIT START - SNAXIPICKS
+	if(SSmapping.stat_map_name == "Snow Taxi")
+		if(!ishuman(loc))
+			return
+		var/mob/living/carbon/human/H = loc
+		if(H.job == "Prisoner")
+			return
+		new /obj/item/pickaxe/mini(src)
+// LUMOS EDIT END - SNAXIPICKS
+
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
 	new /obj/item/radio/off(src)
@@ -1460,15 +1470,3 @@ obj/item/storage/box/stingbangs
 /obj/item/storage/box/strange_seeds_5pack/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/seeds/random(src)
-
-//skyrat edit
-/obj/item/storage/box/stingbangs
-	name = "box of stingbangs (WARNING)"
-	desc = "<B>WARNING: These devices are extremely dangerous and can cause severe injuries or death in repeated use.</B>"
-	icon_state = "secbox"
-	illustration = "flashbang"
-
-/obj/item/storage/box/stingbangs/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/grenade/stingbang(src)
-//

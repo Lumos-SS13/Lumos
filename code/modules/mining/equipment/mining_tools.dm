@@ -48,6 +48,14 @@
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=1000)
 
+// LUMOS EDIT START - SNAXIPICKS
+/obj/item/pickaxe/mini/snaxi
+	name = "emergency pickaxe"
+	desc = "A smaller, compact version of the standard pickaxe, This one seems pretty dull."
+	force = 6
+	throwforce = 4
+// LUMOS EDIT END - SNAXIPICKS
+
 /obj/item/pickaxe/silver
 	name = "silver-plated pickaxe"
 	icon_state = "spickaxe"
