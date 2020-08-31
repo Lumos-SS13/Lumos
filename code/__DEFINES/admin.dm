@@ -66,6 +66,11 @@
 #define ADMIN_COORDJMP(src) "[src ? "[COORD(src)] [ADMIN_JMP(src)]" : "nonexistent location"]"
 #define ADMIN_VERBOSEJMP(src) "[src ? "[AREACOORD(src)] [ADMIN_JMP(src)]" : "nonexistent location"]"
 #define ADMIN_INDIVIDUALLOG(user) "(<a href='?_src_=holder;[HrefToken(TRUE)];individuallog=[REF(user)]'>LOGS</a>)"
+// LUMOS EDIT START - RESPAWNREQUEST
+#define ADMIN_RESPAWN_REQUEST_APPROVE(user) "(<a href='?_src_=holder;[HrefToken(TRUE)];respawnrequestapprove=[REF(user)]'>APPROVE</a>)"
+#define ADMIN_RESPAWN_REQUEST_DENY(user) "(<a href='?_src_=holder;[HrefToken(TRUE)];respawnrequestdeny=[REF(user)]'>DENY</a>)"
+#define ADMIN_RESPAWN_REQUEST_MONTY(user)"[ADMIN_RESPAWN_REQUEST_APPROVE(user)] [ADMIN_RESPAWN_REQUEST_DENY(user)] [ADMIN_QUE(user)] [ADMIN_PP(user)]"
+// LUMOS EDIT STOP - RESPAWNREQUEST
 
 #define ADMIN_PUNISHMENT_LIGHTNING "Lightning bolt"
 #define ADMIN_PUNISHMENT_BRAINDAMAGE "Brain damage"

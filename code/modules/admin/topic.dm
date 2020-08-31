@@ -2948,6 +2948,62 @@
 
 		usr << browse(dat.Join("<br>"), "window=related_[C];size=420x300")
 
+	// LUMOS EDIT START - CENTCOMBAN
+	else if(href_list["centcomlookup"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		if(!CONFIG_GET(string/centcom_ban_db))
+			to_chat(usr, "<span class='warning'>Centcom Galactic Ban DB is disabled!</span>")
+			return
+
+		var/ckey = href_list["centcomlookup"]
+
+		// Make the request
+		var/datum/http_request/request = new()
+		request.prepare(RUSTG_HTTP_METHOD_GET, "[CONFIG_GET(string/centcom_ban_db)]/[ckey]", "", "")
+		request.begin_async()
+		UNTIL(request.is_complete() || !usr)
+		if (!usr)
+			return
+		var/datum/http_response/response = request.into_response()
+
+		var/list/bans
+
+		var/list/dat = list("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><body>")
+
+		if(response.errored)
+			dat += "<br>Failed to connect to CentCom."
+		else if(response.status_code != 200)
+			dat += "<br>Failed to connect to CentCom. Status code: [response.status_code]"
+		else
+			if(response.body == "[]")
+				dat += "<center><b>0 bans detected for [ckey]</b></center>"
+			else
+				bans = json_decode(response["body"])
+				dat += "<center><b>[bans.len] ban\s detected for [ckey]</b></center>"
+				for(var/list/ban in bans)
+					dat += "<b>Server: </b> [sanitize(ban["sourceName"])]<br>"
+					dat += "<b>RP Level: </b> [sanitize(ban["sourceRoleplayLevel"])]<br>"
+					dat += "<b>Type: </b> [sanitize(ban["type"])]<br>"
+					dat += "<b>Banned By: </b> [sanitize(ban["bannedBy"])]<br>"
+					dat += "<b>Reason: </b> [sanitize(ban["reason"])]<br>"
+					dat += "<b>Datetime: </b> [sanitize(ban["bannedOn"])]<br>"
+					var/expiration = ban["expires"]
+					dat += "<b>Expires: </b> [expiration ? "[sanitize(expiration)]" : "Permanent"]<br>"
+					if(ban["type"] == "job")
+						dat += "<b>Jobs: </b> "
+						var/list/jobs = ban["jobs"]
+						dat += sanitize(jobs.Join(", "))
+						dat += "<br>"
+					dat += "<hr>"
+
+		dat += "<br></body>"
+		var/datum/browser/popup = new(usr, "centcomlookup-[ckey]", "<div align='center'>Central Command Galactic Ban Database</div>", 700, 600)
+		popup.set_content(dat.Join())
+		popup.open(0)
+	// LUMOS EDIT END - CENTCOMBAN
+
 	else if(href_list["modantagrep"])
 		if(!check_rights(R_ADMIN))
 			return
@@ -2969,6 +3025,47 @@
 					log_query_debug("[usr.key] | [response]")
 		else if(answer == "no")
 			log_query_debug("[usr.key] | Reported no server hang")
+
+	// LUMOS EDIT START - RESPAWNREQUEST
+	else if(href_list["respawnrequestapprove"])
+		var/mob/M = locate(href_list["respawnrequestapprove"])
+		message_admins("[key_name(usr)] Is approving [ADMIN_LOOKUPFLW(M)]'s request")
+		if(!check_rights(R_ADMIN))
+			return
+	
+		if(alert(usr, "Approve request?", "Confirm approve", "Yes", "No") != "Yes")
+			message_admins("[key_name(usr)] has cancelled approving [ADMIN_LOOKUPFLW(M)]'s request")
+			return
+
+		to_chat(M, "Respawn request <span class='greenannounce'>approved</span>! <br> You've been given the opportunity to continue playing the current round.<span class='userdanger'> Don't use any meta knowledge you've learnt in your past life and play as a different character!</span>")
+		log_admin("[key_name(usr)] has approved [key_name(M)]'s request")
+		message_admins("[key_name(usr)] has approved [ADMIN_LOOKUPFLW(M)]'s request")
+
+		var/datum/respawns/request/R = GetRespawnRequest(M)
+		var/mob/dead/new_player/NP = new()
+		NP.ckey = M.ckey
+		GLOB.respawns -= R
+		if(R.started_as_observer) //if started from observing, dont add the character name to the blacklist
+			qdel(M)
+			return
+		GLOB.respawned_chars += M.real_name
+		qdel(M)
+	
+	else if(href_list["respawnrequestdeny"])
+		var/mob/M = locate(href_list["respawnrequestdeny"])
+		message_admins("[key_name(usr)] Is denying [ADMIN_LOOKUPFLW(M)]'s request")
+		if(!check_rights(R_ADMIN))
+			return
+
+		if(alert(usr, "Deny request?", "Confirm deny", "Yes", "No") != "Yes")
+			message_admins("[key_name(usr)] has cancelled denying [ADMIN_LOOKUPFLW(M)]'s request")
+			return
+			
+		log_admin("[key_name(usr)] has denied [key_name(M)]'s request")
+		message_admins("[key_name(usr)] has denied [ADMIN_LOOKUPFLW(M)]'s request")
+		to_chat(M, "<span class='notice'>Respawn request <span class='boldannounce'>denied</span></span>.")
+		RespawnRequestCooldown(M, (5 MINUTES))
+// LUMOS EDIT STOP - RESPAWNREQUEST
 
 /datum/admins/proc/HandleCMode()
 	if(!check_rights(R_ADMIN))

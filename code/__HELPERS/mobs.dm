@@ -181,7 +181,7 @@
 		"legs"				= pick("Plantigrade","Digitigrade"),
 		"caps"				= pick(GLOB.caps_list),
 		"insect_wings"		= pick(GLOB.insect_wings_list),
-		"insect_fluff"		= "None",
+		"insect_fluff"		= pick(GLOB.insect_fluffs_list),
 		"insect_markings"	= pick(GLOB.insect_markings_list),
 		"taur"				= "None",
 		"mam_body_markings" = snowflake_markings_list.len ? pick(snowflake_markings_list) : "None",

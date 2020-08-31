@@ -722,7 +722,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_datums)
 
 	if(mutant_bodyparts["insect_fluff"])
 		if(!H.dna.features["insect_fluff"] || H.dna.features["insect_fluff"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
-			bodyparts_to_add -= "insect_fluff"
+			bodyparts_to_add -= "insect_fluffs"
 
 //CITADEL EDIT
 	//Race specific bodyparts:

@@ -44,6 +44,17 @@
 	var/mob/dead/observer/G = usr
 	G.open_spawners_menu()
 
+// LUMOS EDIT START - RESPAWNREQUEST
+/obj/screen/ghost/respawn
+	name = "Request Respawn"
+	icon = 'modular_lumos/icons/mob/screen_ghost.dmi' 
+	icon_state = "respawn"
+
+/obj/screen/ghost/respawn/Click()
+	var/mob/dead/observer/G = usr
+	G.request_respawn()
+// LUMOS EDIT STOP - RESPAWNREQUEST
+
 /datum/hud/ghost/New(mob/owner)
 	..()
 	var/obj/screen/using
@@ -77,6 +88,14 @@
 	using.icon = ui_style
 	using.hud = src
 	static_inventory += using
+
+	// LUMOS EDIT START - RESPAWNREQUEST
+	using = new /obj/screen/ghost/respawn()
+	using.screen_loc = ui_ghost_respawn
+	using.hud = src
+	static_inventory += using
+	// LUMOS EDIT END - RESPAWNREQUEST
+
 
 /datum/hud/ghost/show_hud(version = 0, mob/viewmob)
 	// don't show this HUD if observing; show the HUD of the observee
