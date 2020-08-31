@@ -334,6 +334,8 @@
 		if(scanning.opacity || scanning.has_opaque_atom)
 			stop = TRUE
 		var/obj/effect/abstract/eye_lighting/L = LAZYACCESS(eye_lighting, i)
+		if(!L)
+			return
 		if(stop)
 			L.forceMove(src)
 		else
