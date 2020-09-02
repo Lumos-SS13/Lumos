@@ -733,13 +733,13 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/yeehaw.ogg',
 		'sound/roundend/disappointed.ogg',
 		'sound/roundend/gondolabridge.ogg',
-		'sound/roundend/haveabeautifultime.ogg'
+		'sound/roundend/haveabeautifultime.ogg',
 		'modular_lumos/sound/roundend/authorised.ogg',
 		'modular_lumos/sound/roundend/doomed.ogg',
 		'modular_lumos/sound/roundend/eggywegs.ogg',
 		'modular_lumos/sound/roundend/plasticlove.ogg',
 		'modular_lumos/sound/roundend/scienceisleaking.ogg',
-		'modular_lumos/sound/roundend/ty4urcooperationgn.ogg',\
+		'modular_lumos/sound/roundend/ty4urcooperationgn.ogg'\
 		)
 	// LUMOS EDIT STOP - ROUNDENDSOUNDS
 
