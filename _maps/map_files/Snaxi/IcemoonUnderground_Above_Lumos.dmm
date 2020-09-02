@@ -420,11 +420,11 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
+/obj/structure/closet/crate,
+/obj/item/dice/d4,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "eI" = (
-/obj/structure/closet/crate,
-/obj/item/dice/d4,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -494,15 +494,20 @@
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "eZ" = (
-/obj/structure/sign/warning/docking,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
+	},
+/turf/open/floor/plasteel,
 /area/mine/production)
 "fa" = (
 /obj/item/beacon,
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
 /turf/open/floor/plasteel,
 /area/mine/production)
 "fb" = (
@@ -675,6 +680,12 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"fx" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/mine/production)
 "fA" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "testlab";
@@ -684,13 +695,12 @@
 /turf/open/floor/plating,
 /area/science/misc_lab)
 "fB" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
 	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining Shuttle Airlock";
-	opacity = 0
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -698,13 +708,11 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "fD" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining Shuttle Airlock";
-	opacity = 0
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -868,7 +876,11 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "gW" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -909,12 +921,10 @@
 /area/hallway/primary/port)
 "hv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "hz" = (
@@ -1060,25 +1070,16 @@
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "jr" = (
-/obj/machinery/door/airlock{
-	name = "Closet"
-	},
-/turf/open/floor/plating,
+/obj/machinery/mineral/equipment_vendor,
+/turf/open/floor/plasteel,
 /area/mine/production)
 "js" = (
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
-"ju" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/mine/production)
 "jy" = (
-/obj/machinery/space_heater,
-/turf/open/floor/plating,
-/area/mine/production)
+/turf/open/openspace,
+/area/mine/eva)
 "jA" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -1113,7 +1114,9 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "jL" = (
-/obj/structure/ladder,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "jN" = (
@@ -1129,6 +1132,7 @@
 	opacity = 0;
 	req_access_txt = "54"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "jV" = (
@@ -3480,6 +3484,13 @@
 /obj/machinery/mineral/processing_unit_console,
 /turf/closed/wall,
 /area/mine/production)
+"FV" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Maintenance";
+	req_access_txt = "12"
+	},
+/turf/open/floor/plating,
+/area/mine/production)
 "Gc" = (
 /turf/closed/mineral/random/high_chance/snow,
 /area/icemoon/surface/outdoors)
@@ -4450,7 +4461,9 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/mineral/equipment_vendor,
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
 /turf/open/floor/plasteel,
 /area/mine/production)
 "Nv" = (
@@ -4474,14 +4487,12 @@
 /turf/open/floor/plasteel,
 /area/science/test_area)
 "Ny" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "NC" = (
@@ -4494,7 +4505,6 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "NI" = (
-/obj/structure/closet/crate,
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -4608,6 +4618,11 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
+/area/mine/production)
+"Or" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/structure/closet/emcloset,
+/turf/open/floor/plasteel,
 /area/mine/production)
 "Ou" = (
 /obj/machinery/conveyor{
@@ -4817,6 +4832,9 @@
 /obj/machinery/processor/slime,
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"QM" = (
+/turf/open/floor/plating,
+/area/mine/production)
 "QN" = (
 /obj/machinery/vending/snack,
 /obj/effect/turf_decal/tile/bar,
@@ -4905,6 +4923,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"Rw" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/mine/production)
 "Rx" = (
 /obj/structure/chair{
 	dir = 4
@@ -5120,11 +5144,8 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "Tk" = (
-/obj/structure/closet/emcloset,
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
+/obj/structure/ladder,
+/turf/open/floor/plating,
 /area/mine/production)
 "Tl" = (
 /obj/machinery/light/small{
@@ -5582,7 +5603,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/mine/production)
 "WE" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -42234,13 +42255,13 @@ ah
 ah
 ah
 ah
-VE
-VE
-VE
-VE
-hS
-VE
-VE
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 VE
 VE
 VE
@@ -42257,8 +42278,8 @@ VE
 VE
 VE
 VE
-hS
-hS
+VE
+VE
 hS
 ah
 ah
@@ -42491,13 +42512,13 @@ ah
 ah
 ah
 ah
-VE
-hS
-VE
-hS
-hS
-VE
-VE
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 VE
 VE
 VE
@@ -42513,8 +42534,8 @@ VE
 VE
 VE
 VE
-hS
-hS
+VE
+VE
 hS
 hS
 hS
@@ -42748,13 +42769,13 @@ ah
 ah
 ah
 ah
-VE
-hS
-hS
-hS
-hS
-hS
-VE
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 VE
 VE
 VE
@@ -42769,9 +42790,9 @@ VE
 VE
 VE
 VE
-hS
-hS
-hS
+VE
+VE
+VE
 hS
 hS
 hS
@@ -43005,13 +43026,13 @@ ah
 ah
 ah
 ah
-hS
-hS
-hS
-hS
-hS
-hS
-VE
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 VE
 VE
 VE
@@ -43026,8 +43047,8 @@ VE
 VE
 VE
 VE
-hS
-hS
+VE
+VE
 hS
 hS
 hS
@@ -43261,14 +43282,14 @@ ah
 ah
 ah
 ah
-ah
 VE
 VE
-hS
-hS
-hS
-hS
-hS
+VE
+VE
+VE
+VE
+VE
+VE
 VE
 VE
 VE
@@ -43283,8 +43304,8 @@ VE
 VE
 VE
 VE
-hS
-hS
+VE
+VE
 hS
 hS
 hS
@@ -43518,15 +43539,15 @@ ah
 ah
 ah
 ah
-ah
 VE
-hS
-hS
-hS
-hS
-eZ
-fB
-er
+VE
+VE
+VE
+VE
+VE
+VE
+VE
+VE
 VE
 VE
 VE
@@ -43539,8 +43560,8 @@ er
 VE
 VE
 VE
-hS
-hS
+VE
+VE
 hS
 hS
 hS
@@ -43775,15 +43796,15 @@ ah
 ah
 ah
 ah
-ah
 VE
 VE
 VE
-hS
-hS
-er
-fC
-er
+VE
+VE
+VE
+VE
+VE
+VE
 VE
 VE
 VE
@@ -44032,16 +44053,16 @@ ah
 ah
 ah
 ah
-ah
 VE
 VE
 VE
 VE
-er
-er
-fD
-er
-er
+VE
+VE
+eq
+eq
+eq
+eq
 VE
 VE
 VE
@@ -44051,9 +44072,9 @@ er
 IK
 er
 er
-VE
-VE
-VE
+eq
+eq
+eq
 Vw
 Vw
 Vw
@@ -44289,16 +44310,16 @@ ah
 ah
 ah
 ah
-ah
+VE
 VE
 VE
 VE
 eq
-er
-fa
-fE
-gS
-er
+eq
+eq
+eZ
+fB
+eq
 eq
 eq
 eq
@@ -44307,10 +44328,10 @@ Bl
 je
 IM
 gS
-er
+jr
 eq
-VE
-VE
+Tk
+eq
 Vw
 Vw
 Vw
@@ -44546,16 +44567,16 @@ ah
 ah
 ah
 ah
-ah
+VE
 VE
 VE
 VE
 eq
 eH
 fb
+fa
 fC
-gW
-je
+fD
 nm
 oW
 fE
@@ -44566,8 +44587,8 @@ IB
 fC
 Nt
 eq
-VE
-VE
+Rw
+er
 Vw
 Vw
 Vw
@@ -44812,7 +44833,7 @@ eI
 fc
 fF
 hv
-jk
+gW
 jk
 pf
 uG
@@ -44823,9 +44844,9 @@ Jo
 MG
 Ny
 eq
-VE
-VE
-VE
+QM
+er
+fx
 VE
 VE
 VE
@@ -45080,7 +45101,7 @@ JM
 fC
 NI
 eq
-eq
+FV
 eq
 eq
 WD
@@ -45326,7 +45347,7 @@ eK
 fe
 eK
 dW
-jr
+dX
 eq
 pi
 vb
@@ -45337,8 +45358,8 @@ JU
 fC
 NK
 er
-Tk
-NK
+fG
+Or
 er
 hS
 hS
@@ -45583,7 +45604,7 @@ eL
 ff
 fH
 dW
-ju
+jy
 eq
 eq
 vq
@@ -46097,7 +46118,7 @@ eN
 fh
 fJ
 dW
-eq
+jy
 eq
 pJ
 fC
@@ -48149,9 +48170,9 @@ ah
 ah
 ah
 ah
-FK
-FK
-FK
+hS
+hS
+hS
 ah
 ah
 ah
@@ -48407,8 +48428,8 @@ ah
 ah
 ah
 ah
-FK
-FK
+hS
+hS
 ah
 ah
 ah
