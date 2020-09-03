@@ -516,12 +516,6 @@
 					"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_miner"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_miner"),
 				)
-				var/list/L = list("Blade" = "blade", "Vale" = "valemine")
-				for(var/a in L)
-					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
-					wide.pixel_x = -16
-					mining_icons[a] = wide
-				mining_icons = sortList(mining_icons)
 				var/borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
