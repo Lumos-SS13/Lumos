@@ -35,9 +35,9 @@
 	var/mob/living/silicon/robot/user // needed for process()
 	var/animation_playing = FALSE
 	var/list/borgmodels = list(
-							"(Standard) Default", 
+							"(Standard) Default",
 							"(Standard) Heavy",
-							"(Standard) Sleek", 
+							"(Standard) Sleek",
 							"(Standard) Marina",
 							"(Standard) Robot",
 							"(Standard) Eyebot",
