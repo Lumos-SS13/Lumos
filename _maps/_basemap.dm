@@ -10,7 +10,7 @@
 		#include "map_files\MetaStation\MetaStation_Skyrat.dmm"
 		#include "map_files\OmegaStation\OmegaStation_Skyrat.dmm"
 		#include "map_files\PubbyStation\PubbyStation_Skyrat.dmm"
-		#include "map_files\BoxStation\BoxStation_Skyrat.dmm"
+		#include "map_files\BoxStation\BoxStation_Lumos.dmm"
 		#include "map_files\LambdaStation\lambda_Skyrat.dmm"
 
 		#ifdef TRAVISBUILDING
