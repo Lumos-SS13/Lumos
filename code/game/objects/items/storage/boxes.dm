@@ -117,6 +117,16 @@
 
 	new /obj/item/tank/internals/emergency_oxygen(src)
 
+// LUMOS EDIT START - SNAXIPICKS
+	if(SSmapping.stat_map_name == "Snow Taxi")
+		if(!ishuman(loc))
+			return
+		var/mob/living/carbon/human/H = loc
+		if(H.job == "Prisoner")
+			return
+		new /obj/item/pickaxe/mini(src)
+// LUMOS EDIT END - SNAXIPICKS
+
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
 	new /obj/item/radio/off(src)

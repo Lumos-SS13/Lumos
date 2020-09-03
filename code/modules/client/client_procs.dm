@@ -577,7 +577,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		if (CONFIG_GET(flag/panic_bunker) && !holder && !GLOB.deadmins[ckey] && !(ckey in GLOB.bunker_passthrough))
 			log_access("Failed Login: [key] - [address] - New account attempting to connect during panic bunker") //skyrat-edit
 			message_admins("<span class='adminnotice'>Failed Login: [key] - [address] - New account attempting to connect during panic bunker</span>") //skyrat-edit
-			to_chat(src, {"<span class='notice'>Hi! We have temporarily enabled safety measures that prevents new players from joining currently.<br>Please try again later, or contact a staff on Discord if you have any questions. <br> <br> To join our community, check out our Discord! To gain full access to our Discord, read the rules and post a request in the #access-requests channel under the \"Landing Zone\" category in the Discord server linked here: <a href='https://discord.gg/6RpdCgR'>https://discord.gg/6RpdCgR</a></span>"}) //skyrat-edit
+			to_chat(src, {"<span class='notice'>Hi! We have temporarily enabled safety measures that prevents new players from joining currently.<br>Please try again later, or contact a staff on Discord if you have any questions. <br> <br> To join our community, check out our Discord! To gain full access to our Discord, read the rules and post a request in the #the-gates channel under the \"Important\" category in the Discord server linked here: <a href='https://discord.gg/2KghZZg'>https://discord.gg/2KghZZg</a></span>"}) //lumos edit - different link
 			var/list/connectiontopic_a = params2list(connectiontopic)
 			var/list/panic_addr = CONFIG_GET(string/panic_server_address)
 			if(panic_addr && !connectiontopic_a["redirect"])

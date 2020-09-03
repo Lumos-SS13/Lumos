@@ -48,6 +48,14 @@
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=1000)
 
+// LUMOS EDIT START - SNAXIPICKS
+/obj/item/pickaxe/mini/snaxi
+	name = "emergency pickaxe"
+	desc = "A smaller, compact version of the standard pickaxe, This one seems pretty dull."
+	force = 6
+	throwforce = 4
+// LUMOS EDIT END - SNAXIPICKS
+
 /obj/item/pickaxe/silver
 	name = "silver-plated pickaxe"
 	icon_state = "spickaxe"
@@ -143,7 +151,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=350)
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
-	sharpness = IS_SHARP
+	sharpness = SHARP_EDGED
 
 /obj/item/shovel/Initialize()
 	. = ..()
@@ -181,4 +189,4 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7
 	attack_verb = list("slashed", "impaled", "stabbed", "sliced")
-	sharpness = IS_SHARP
+	sharpness = SHARP_EDGED
