@@ -331,7 +331,7 @@
 /datum/spacevine_mutation/meleereflecting
 	name = "melee reflecting"
 	hue = "#b6054f"
-	severity = 2
+	severity = 4
 	quality = NEGATIVE
 
 /datum/spacevine_mutation/meleereflecting/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
@@ -343,6 +343,17 @@
 			M.adjustBruteLoss(expected_damage)
 		else
 			. = expected_damage
+
+/datum/spacevine_mutation/rangereflect
+	name = "range reflecting"
+	hue = "#b6054f"
+	severity = 4
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/rangereflect/on_birth(obj/structure/spacevine/holder)
+	holder.range_reflecting = TRUE
+	holder.flags_ricochet |= RICOCHET_SHINY
+	holder.flags_ricochet |= RICOCHET_HARD
 
 /mob/living/proc/plant_kudzu()
 	var/turf/T = get_turf(src)
@@ -459,6 +470,7 @@
 	var/list/mutations = list()
 	var/plantbgone_resist = FALSE //skyrat edit
 	var/force_mutated = FALSE
+	var/range_reflecting = FALSE
 
 /obj/structure/spacevine/Initialize()
 	. = ..()
@@ -473,6 +485,12 @@
 		var/datum/spacevine_mutation/randmut = pick(remaining_mutations)
 		randmut.add_mutation_to_vinepiece(SV)
 		force_mutated = TRUE
+	else
+		return ..()
+
+/obj/structure/spacevine/check_projectile_ricochet(obj/item/projectile/P)
+	if(range_reflecting && prob(50) && !istype(P, /obj/item/projectile/energy/floramut))
+		return PROJECTILE_RICOCHET_FORCE
 	else
 		return ..()
 
