@@ -6,7 +6,6 @@
 	default_driver_move = FALSE
 	var/legs_required = 1
 	var/arms_required = 0	//why not?
-	density = 0 //bullet go through haha
 
 /obj/vehicle/ridden/Initialize()
 	. = ..()
@@ -82,3 +81,9 @@
 /obj/vehicle/ridden/zap_act(zap_str, zap_flags, shocked_targets)
 	zap_buckle_check(zap_str)
 	. = ..()
+
+/obj/vehicle/ridden/CanPass(atom/movable/mover, turf/target)
+    if(isprojectile(mover))
+        return TRUE
+    else
+        return ..()
