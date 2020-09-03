@@ -32,12 +32,9 @@
 	saved_screen = C.dna.features["ipc_screen"]
 	C.dna.features["ipc_screen"] = "BSOD"
 	C.update_body()
-<<<<<<< HEAD
-=======
 	sleep(3 SECONDS)
 	C.dna.features["ipc_screen"] = null // Turns off their monitor on death.
 	C.update_body()
->>>>>>> lumos/master
 
 /datum/species/ipc/on_species_gain(mob/living/carbon/C) // Let's make that IPC actually robotic.
 	. = ..()
