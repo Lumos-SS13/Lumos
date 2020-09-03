@@ -35,9 +35,9 @@
 	var/mob/living/silicon/robot/user // needed for process()
 	var/animation_playing = FALSE
 	var/list/borgmodels = list(
-							"(Standard) Default", 
+							"(Standard) Default",
 							"(Standard) Heavy",
-							"(Standard) Sleek", 
+							"(Standard) Sleek",
 							"(Standard) Marina",
 							"(Standard) Robot",
 							"(Standard) Eyebot",
@@ -217,7 +217,6 @@
 					"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_med"),
 					"Qualified Doctor" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "qualified_doctor"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_med"),
-					"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakemedbox")
 				)
 				var/list/L = list("Medihound" = "medihound", "Medihound Dark" = "medihounddark", "Vale" = "valemed")
 				for(var/a in L)
@@ -265,26 +264,6 @@
 					if("Zoomba")
 						disguise = "zoomba_med"
 						disguise_icon_override = 'icons/mob/robots.dmi'
-					if("Medihound")
-						disguise = "medihound"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Medihound Dark")
-						disguise = "medihounddark"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Vale")
-						disguise = "valemed"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Drake")
-						disguise = "drakemed"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 
@@ -304,7 +283,6 @@
 					"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_eng"),
 					"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_eng"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_engi"),
-					"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox")
 				)
 				var/list/L = list("Pup Dozer" = "pupdozer", "Vale" = "valeeng", "Hound" = "engihound", "Darkhound" = "engihounddark")
 				for(var/a in L)
@@ -346,21 +324,6 @@
 					if("Heavy")
 						disguise = "heavyeng"
 						disguise_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-					if("Pup Dozer")
-						disguise = "pupdozer"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Vale")
-						disguise = "valeeng"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Alina")
-						disguise = "alina-eng"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					if("Bootyborg") //Skyrat change
 						disguise = "bootyeng"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -373,21 +336,6 @@
 					if("Miss m")
 						disguise = "missm_eng"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-					if("Drake")
-						disguise = "drakeeng"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Hound")
-						disguise = "engihound"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Darkhound")
-						disguise = "engihounddark"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 			if("Security")
@@ -404,7 +352,6 @@
 					"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_security"),
 					"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_security"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_sec"),
-					"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakesecbox")
 				)
 				var/list/L = list("K9" = "k9", "Vale" = "valesec", "K9 Dark" = "k9dark", "Otie" = "oties")
 				for(var/a in L)
@@ -440,26 +387,6 @@
 					if("Heavy")
 						disguise = "heavysec"
 						disguise_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-					if("K9")
-						disguise = "k9"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Alina")
-						disguise = "alina-sec"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("K9 Dark")
-						disguise = "k9dark"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Vale")
-						disguise = "valesec"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					if("Bootyborg") //Skyrat change
 						disguise = "bootysecurity"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -472,16 +399,6 @@
 					if("Miss m")
 						disguise = "missm_security"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-					if("Drake")
-						disguise = "drakesec"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Otie")
-						disguise = "oties"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 			if("Service")
@@ -507,7 +424,6 @@
 					"(Janitor) Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_janitor"),
 					"(Janitor) Heavy" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "heavyres"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_jani"),
-					"(Janitor) Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakejanitbox")
 				)
 				var/list/L = list("(Service) DarkK9" = "k50", "(Service) Vale" = "valeserv", "(Service) ValeDark" = "valeservdark",
 								"(Janitor) Scrubpuppy" = "scrubpup", "(Janitor) Otie" = "otiej")
@@ -544,21 +460,6 @@
 					if("(Service) Heavy")
 						disguise = "heavyserv"
 						disguise_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-					if("(Service) DarkK9")
-						disguise = "k50"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("(Service) Vale")
-						disguise = "valeserv"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("(Service) ValeDark")
-						disguise = "valeservdark"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					if("(Service) Bootyborg")
 						disguise = "bootyservice"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -586,11 +487,6 @@
 					if("(Janitor) Heavy")
 						disguise = "heavyres"
 						disguise_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-					if("(Janitor) Scrubpuppy")
-						disguise = "scrubpup"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					if("(Janitor) Bootyborg")
 						disguise = "bootyjanitor"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -603,16 +499,6 @@
 					if("(Janitor) Miss m")
 						disguise = "missm_janitor"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-					if("(Janitor) Drake")
-						disguise = "drakejanit"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("(Janitor) Otie")
-						disguise = "otiej"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 			if("Miner")
@@ -629,7 +515,6 @@
 					"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_miner"),
 					"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_miner"),
 					"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_miner"),
-					"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakeminebox")
 				)
 				var/list/L = list("Blade" = "blade", "Vale" = "valemine")
 				for(var/a in L)
@@ -665,16 +550,6 @@
 					if("Heavy")
 						disguise = "heavymin"
 						disguise_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-					if("Blade")
-						disguise = "blade"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
-					if("Vale")
-						disguise = "valemine"
-						disguise_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					if("Bootyborg")
 						disguise = "bootyminer"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -690,11 +565,6 @@
 					if("Zoomba")
 						disguise = "zoomba_miner"
 						disguise_icon_override = 'icons/mob/robots.dmi'
-					if("Drake")
-						disguise = "drakemine"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 			if("Peacekeeper")
@@ -707,7 +577,6 @@
 					"Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootypeace"),
 					"Male Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "male_bootypeace"),
 					"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_peacekeeper"),
-					"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakepeacebox")
 				))
 				var/borg_icon = show_radial_menu(R, R , peace_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
@@ -737,11 +606,6 @@
 					if("Protectron")
 						disguise = "protectron_peacekeeper"
 						disguise_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-					if("Drake")
-						disguise = "drakepeace"
-						disguise_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-						disguise_pixel_offset = -16
-						disguise_dogborg = TRUE
 					else
 						return FALSE
 			if("Clown")
