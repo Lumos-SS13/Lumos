@@ -7,7 +7,6 @@
 	var/cleanamount = 0.1
 	if(!ishuman(obj))
 		return
-	var/mob/living/carbon/human/H = obj
 	if(prob(cleanprob))
 		if(has_gravity(src))
 			var/dirtamount
