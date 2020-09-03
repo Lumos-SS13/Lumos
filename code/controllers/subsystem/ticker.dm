@@ -705,6 +705,8 @@ SUBSYSTEM_DEF(ticker)
 	gather_newscaster() //called here so we ensure the log is created even upon admin reboot
 	save_admin_data()
 	update_everything_flag_in_db()
+	// LUMOS EDIT START - ROUNDENDSOUNDS
+	/*
 	if(!round_end_sound)
 		round_end_sound = pick(\
 		'sound/roundend/newroundsexy.ogg',
@@ -718,6 +720,28 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/gondolabridge.ogg',
 		'sound/roundend/haveabeautifultime.ogg'\
 		)
+		*/
+
+	if(!round_end_sound)
+		round_end_sound = pick(\
+		'sound/roundend/newroundsexy.ogg',
+		'sound/roundend/apcdestroyed.ogg',
+		'sound/roundend/seeyoulaterokay.ogg',
+		'sound/roundend/bangindonk.ogg',
+		'sound/roundend/leavingtg.ogg',
+		'sound/roundend/its_only_game.ogg',
+		'sound/roundend/yeehaw.ogg',
+		'sound/roundend/disappointed.ogg',
+		'sound/roundend/gondolabridge.ogg',
+		'sound/roundend/haveabeautifultime.ogg',
+		'modular_lumos/sound/roundend/authorised.ogg',
+		'modular_lumos/sound/roundend/doomed.ogg',
+		'modular_lumos/sound/roundend/eggywegs.ogg',
+		'modular_lumos/sound/roundend/plasticlove.ogg',
+		'modular_lumos/sound/roundend/scienceisleaking.ogg',
+		'modular_lumos/sound/roundend/ty4urcooperationgn.ogg'\
+		)
+	// LUMOS EDIT STOP - ROUNDENDSOUNDS
 
 	SEND_SOUND(world, sound(round_end_sound))
 	text2file(login_music, "data/last_round_lobby_music.txt")
