@@ -383,7 +383,7 @@
 		"Qualified Doctor" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "qualified_doctor"),
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_med"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakemedbox") //Lumos Change
-		//)
+		)
 		//var/list/L = list("Medihound" = "medihound", "Medihound Dark" = "medihounddark", "Vale" = "valemed") //Lumos Change
 		//for(var/a in L)
 			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
@@ -393,10 +393,10 @@
 			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-med")
 			//bad_snowflake.pixel_x = -16
 			//med_icons["Alina"] = bad_snowflake
-		if(R.client && R.client.ckey == "banangarang") //skyrat change
-			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_med")
-			med_icons["RoboMaid"] = cus_maid
-		med_icons = sortList(med_icons)
+		//if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
+			//var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_med")
+			//med_icons["RoboMaid"] = cus_maid
+		//med_icons = sortList(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(med_borg_icon)
 		if("Default")
@@ -537,7 +537,7 @@
 		"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_eng"),
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_engi"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox") //Lumos Change
-		//)
+		)
 		//var/list/L = list("Pup Dozer" = "pupdozer", "Vale" = "valeeng", "Hound" = "engihound", "Darkhound" = "engihounddark") //skyrat change //Lumos Change
 		//for(var/a in L)
 			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
@@ -547,10 +547,10 @@
 			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-eng")
 			//bad_snowflake.pixel_x = -16
 			//engi_icons["Alina"] = bad_snowflake
-		if(R.client && R.client.ckey == "banangarang") //skyrat change
-			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_eng")
-			engi_icons["RoboMaid"] = cus_maid
-		engi_icons = sortList(engi_icons)
+		//if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
+			//var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_eng")
+			//engi_icons["RoboMaid"] = cus_maid
+		//engi_icons = sortList(engi_icons)
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(engi_borg_icon)
 		if("Default")
