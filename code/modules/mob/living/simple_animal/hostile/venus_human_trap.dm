@@ -115,12 +115,14 @@
 	if(!(. = ..()))
 		return
 	pull_vines()
+	//LUMOS EDIT START - VINES
 	var/turf/source_turf = get_turf(src)
 	if(!(locate(/obj/structure/spacevine) in source_turf))
 		adjustHealth(maxHealth*0.025) //take 2.5% of max health as damage when not near the vine
 		return
 	adjustHealth(-maxHealth*0.05)
 	new /obj/effect/temp_visual/heal(source_turf)
+	//LUMOS EDIT STOP - VINES
 
 /mob/living/simple_animal/hostile/venus_human_trap/AttackingTarget()
 	. = ..()
