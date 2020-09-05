@@ -3,8 +3,8 @@
 	Dirtify(obj, oldloc)
 
 /turf/open/floor/proc/Dirtify(atom/obj, atom/oldloc)
-	var/cleanprob = 50
-	var/cleanamount = 0.1
+	var/cleanprob = 25
+	var/cleanamount = 0.05
 	if(!ishuman(obj))
 		return
 	if(prob(cleanprob))
