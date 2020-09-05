@@ -555,15 +555,6 @@
 		return
 	for(var/datum/spacevine_mutation/SM in mutations)
 		SM.on_cross(src, AM)
-	//SKYRAT EDIT START - VINES
-	if(istype(AM, /mob/living/simple_animal/hostile/venus_human_trap)) //skyrat change: vines heal flytraps 10% on cross
-		var/mob/living/simple_animal/hostile/venus_human_trap/VS = AM
-		if(VS.health == VS.maxHealth)
-			return
-		VS.health = clamp((VS.health + VS.maxHealth * 0.1), VS.health, VS.maxHealth)
-		to_chat(VS, "<span class='notice'>The vines attempt to regenerate some of your wounds!</span>")
-		return
-	//SKYRAT EDIT END - VINES
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/structure/spacevine/attack_hand(mob/user)
