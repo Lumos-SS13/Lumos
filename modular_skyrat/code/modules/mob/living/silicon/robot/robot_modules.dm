@@ -191,11 +191,11 @@ obj/item/robot_module/butler/Initialize()
 			cyborg_base_icon = "marinapeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/customrobot.dmi'
 			has_snowflake_deadsprite = TRUE
-		//if("Drake") //Lumos Change
-			//cyborg_base_icon = "drakepeace"
-			//sleeper_overlay = "drakepeacesleeper"
-			//cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-			//dogborg = TRUE
+		/*if("Drake") //Lumos Change
+			cyborg_base_icon = "drakepeace"
+			sleeper_overlay = "drakepeacesleeper"
+			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
+			dogborg = TRUE*/
 		if("Bootyborg")
 			cyborg_base_icon = "bootypeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'

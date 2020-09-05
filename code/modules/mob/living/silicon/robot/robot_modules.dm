@@ -384,19 +384,19 @@
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_med"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakemedbox") //Lumos Change
 		)
-		//var/list/L = list("Medihound" = "medihound", "Medihound Dark" = "medihounddark", "Vale" = "valemed") //Lumos Change
-		//for(var/a in L)
-			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
-			//wide.pixel_x = -16
-			//med_icons[a] = wide
-		//if(R.client && R.client.ckey == "nezuli") //Lumos Change
-			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-med")
-			//bad_snowflake.pixel_x = -16
-			//med_icons["Alina"] = bad_snowflake
-		//if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
-			//var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_med")
-			//med_icons["RoboMaid"] = cus_maid
-		//med_icons = sortList(med_icons)
+		/*var/list/L = list("Medihound" = "medihound", "Medihound Dark" = "medihounddark", "Vale" = "valemed") //Lumos Change
+		for(var/a in L)
+			var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
+			wide.pixel_x = -16
+			med_icons[a] = wide
+		if(R.client && R.client.ckey == "nezuli") //Lumos Change
+			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-med")
+			bad_snowflake.pixel_x = -16
+			med_icons["Alina"] = bad_snowflake
+		if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
+			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_med")
+			med_icons["RoboMaid"] = cus_maid
+		med_icons = sortList(med_icons)*/
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(med_borg_icon)
 		if("Default")
@@ -419,35 +419,35 @@
 		if("Heavy")
 			cyborg_base_icon = "heavymed"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("Medihound") //Lumos Change
-			//cyborg_base_icon = "medihound"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "msleeper"
-			//moduleselect_icon = "medihound"
-			//moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
-			//dogborg = TRUE
-		//if("Medihound Dark") //Lumos Change
-			//cyborg_base_icon = "medihounddark"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "mdsleeper"
-			//moduleselect_icon = "medihound"
-			//moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
-			//dogborg = TRUE
-		//if("Vale") //Lumos Change
-			//cyborg_base_icon = "valemed"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "valemedsleeper"
-			//moduleselect_icon = "medihound"
-			//moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
-			//dogborg = TRUE
-		//if("Alina") //Lumos Change
-			//cyborg_base_icon = "alina-med"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//special_light_key = "alina"
-			//sleeper_overlay = "alinasleeper"
-			//moduleselect_icon = "medihound"
-			//moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
-		//	dogborg = TRUE
+		/*if("Medihound") //Lumos Change
+			cyborg_base_icon = "medihound"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "msleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Medihound Dark")
+			cyborg_base_icon = "medihounddark"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "mdsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valemed"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valemedsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE
+		if("Alina")
+			cyborg_base_icon = "alina-med"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			special_light_key = "alina"
+			sleeper_overlay = "alinasleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE*/ //Lumos Change
 		if("Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootymedical"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -466,13 +466,13 @@
 		if("RoboMaid") //skyrat change
 			cyborg_base_icon = "robomaid_med"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/robo-maid2.dmi'
-		//if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
-			//cyborg_base_icon = "drakemed"
-			//cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-			//sleeper_overlay = "drakemedsleeper"
-			//moduleselect_icon = "medihound"
-			//moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
-			//dogborg = TRUE
+		/*if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
+			cyborg_base_icon = "drakemed"
+			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
+			sleeper_overlay = "drakemedsleeper"
+			moduleselect_icon = "medihound"
+			moduleselect_alternate_icon = 'modular_citadel/icons/ui/screen_cyborg.dmi'
+			dogborg = TRUE */
 		else
 			return FALSE
 	return ..()
@@ -538,19 +538,19 @@
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_engi"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox") //Lumos Change
 		)
-		//var/list/L = list("Pup Dozer" = "pupdozer", "Vale" = "valeeng", "Hound" = "engihound", "Darkhound" = "engihounddark") //skyrat change //Lumos Change
-		//for(var/a in L)
-			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
-			//wide.pixel_x = -16
-			//engi_icons[a] = wide
-		//if(R.client && R.client.ckey == "nezuli") //Lumos Change
-			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-eng")
-			//bad_snowflake.pixel_x = -16
-			//engi_icons["Alina"] = bad_snowflake
-		//if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
-			//var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_eng")
-			//engi_icons["RoboMaid"] = cus_maid
-		//engi_icons = sortList(engi_icons)
+		/*var/list/L = list("Pup Dozer" = "pupdozer", "Vale" = "valeeng", "Hound" = "engihound", "Darkhound" = "engihounddark") //skyrat change //Lumos Change
+		for(var/a in L)
+			var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
+			wide.pixel_x = -16
+			engi_icons[a] = wide
+		if(R.client && R.client.ckey == "nezuli") //Lumos Change
+			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-eng")
+			bad_snowflake.pixel_x = -16
+			engi_icons["Alina"] = bad_snowflake
+		if(R.client && R.client.ckey == "banangarang") //skyrat change //Lumos Change
+			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_eng")
+			engi_icons["RoboMaid"] = cus_maid
+		engi_icons = sortList(engi_icons)*/
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(engi_borg_icon)
 		if("Default")
@@ -583,32 +583,32 @@
 		if("Heavy")
 			cyborg_base_icon = "heavyeng"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("Pup Dozer") //Lumos Change
-			//cyborg_base_icon = "pupdozer"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "dozersleeper"
-			//dogborg = TRUE
-		//if("Vale") //Lumos Change
-			//cyborg_base_icon = "valeeng"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "valeengsleeper"
-			//dogborg = TRUE
-		//if("Hound") //Skyrat change //Lumos Change
-			//cyborg_base_icon = "engihound"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "engihoundsleeper"
-			//dogborg = TRUE
-		//if("Darkhound") //Skyrat change //Lumos Change
-			//cyborg_base_icon = "engihounddark"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "engihounddarksleeper"
-			//dogborg = TRUE
-		//if("Alina") //Lumos Change
-			//cyborg_base_icon = "alina-eng"
-			//special_light_key = "alina"
-			//cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			//sleeper_overlay = "alinasleeper"
-			//dogborg = TRUE
+		/*if("Pup Dozer") //Lumos Change
+			cyborg_base_icon = "pupdozer"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "dozersleeper"
+			dogborg = TRUE
+		if("Vale")
+			cyborg_base_icon = "valeeng"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "valeengsleeper"
+			dogborg = TRUE
+		if("Hound") //Skyrat change //Lumos Change
+			cyborg_base_icon = "engihound"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "engihoundsleeper"
+			dogborg = TRUE
+		if("Darkhound") //Skyrat change //Lumos Change
+			cyborg_base_icon = "engihounddark"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "engihounddarksleeper"
+			dogborg = TRUE
+		if("Alina") //Lumos Change
+			cyborg_base_icon = "alina-eng"
+			special_light_key = "alina"
+			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
+			sleeper_overlay = "alinasleeper"
+			dogborg = TRUE*/ //Lumos Change
 		if("Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootyeng"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -624,11 +624,11 @@
 		if("RoboMaid") //skyrat change
 			cyborg_base_icon = "robomaid_eng"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/robo-maid2.dmi'
-		//if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
-			//cyborg_base_icon = "drakeeng"
-			//cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-			//sleeper_overlay = "drakesecsleeper"
-			//dogborg = TRUE
+		/*if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
+			cyborg_base_icon = "drakeeng"
+			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
+			sleeper_overlay = "drakesecsleeper"
+			dogborg = TRUE*/
 		else
 			return FALSE
 	return ..()
@@ -676,15 +676,15 @@
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_sec"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakesecbox") //Lumos Change
 		)
-		//var/list/L = list("K9" = "k9", "Vale" = "valesec", "K9 Dark" = "k9dark", "Otie" = "oties") //skyrat change //Lumos Change
-		//for(var/a in L)
-			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
-			//wide.pixel_x = -16
-			//sec_icons[a] = wide
-		//if(R.client && R.client.ckey == "nezuli") //Lumos Change
-			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
-			//bad_snowflake.pixel_x = -16
-			//sec_icons["Alina"] = bad_snowflake //Lumos Change
+		/*var/list/L = list("K9" = "k9", "Vale" = "valesec", "K9 Dark" = "k9dark", "Otie" = "oties") //skyrat change //Lumos Change
+		for(var/a in L)
+			var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
+			wide.pixel_x = -16
+			sec_icons[a] = wide
+		if(R.client && R.client.ckey == "nezuli")
+			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
+			bad_snowflake.pixel_x = -16
+			sec_icons["Alina"] = bad_snowflake*/ //Lumos Change
 		if(R.client && R.client.ckey == "banangarang") //skyrat change
 			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_sec")
 			sec_icons["RoboMaid"] = cus_maid
@@ -714,32 +714,32 @@
 		if("Heavy")
 			cyborg_base_icon = "heavysec"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("K9") //Lumos Change
+		/*if("K9") //Lumos Change
 			cyborg_base_icon = "k9"
 			sleeper_overlay = "ksleeper"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			dogborg = TRUE
-		//if("Otie") //Lumos Change
+		if("Otie")
 			cyborg_base_icon = "oties"
 			sleeper_overlay = "otiessleeper"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			dogborg = TRUE
-		//if("Alina") //Lumos Change
+		if("Alina")
 			cyborg_base_icon = "alina-sec"
 			special_light_key = "alina"
 			sleeper_overlay = "alinasleeper"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			dogborg = TRUE
-		//if("K9 Dark") //Lumos Change
+		if("K9 Dark")
 			cyborg_base_icon = "k9dark"
 			sleeper_overlay = "k9darksleeper"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			dogborg = TRUE
-		//if("Vale") //Lumos Change
+		if("Vale")
 			cyborg_base_icon = "valesec"
 			sleeper_overlay = "valesecsleeper"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
-			dogborg = TRUE
+			dogborg = TRUE*/
 		if("Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootysecurity"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -981,16 +981,16 @@
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_jani"),
 		//"(Janitor) Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakejanitbox")  //Lumos Change
 		)
-		//var/list/L = list("(Service) DarkK9" = "k50", "(Service) Vale" = "valeserv", "(Service) ValeDark" = "valeservdark", "(Janitor) Otie" = "otiej",
-						//"(Janitor) Scrubpuppy" = "scrubpup") //Skyrat change //Lumos Change
-		//for(var/a in L)
-			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
-			//wide.pixel_x = -16
-			//service_icons[a] = wide
-		//if(R.client && R.client.ckey == "nezuli") //Lumos Change
-			//var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
-			//bad_snowflake.pixel_x = -16
-			//service_icons["Alina"] = bad_snowflake
+		/*var/list/L = list("(Service) DarkK9" = "k50", "(Service) Vale" = "valeserv", "(Service) ValeDark" = "valeservdark", "(Janitor) Otie" = "otiej",
+						"(Janitor) Scrubpuppy" = "scrubpup") //Skyrat change //Lumos Change
+		for(var/a in L)
+			var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
+			wide.pixel_x = -16
+			service_icons[a] = wide
+		if(R.client && R.client.ckey == "nezuli") //Lumos Change
+			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
+			bad_snowflake.pixel_x = -16
+			service_icons["Alina"] = bad_snowflake*/ //Lumos Change
 		if(R.client && R.client.ckey == "banangarang") //skyrat change
 			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_jan")
 			service_icons["RoboMaid"] = cus_maid
@@ -1022,21 +1022,21 @@
 		if("(Service) Heavy")
 			cyborg_base_icon = "heavyserv"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("(Service) DarkK9") //Lumos Change
+		/*if("(Service) DarkK9") //Lumos Change
 			cyborg_base_icon = "k50"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "ksleeper"
 			dogborg = TRUE
-		//if("(Service) Vale") //Lumos Change
+		if("(Service) Vale")
 			cyborg_base_icon = "valeserv"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "valeservsleeper"
 			dogborg = TRUE
-		//if("(Service) ValeDark") //Lumos Change
+		if("(Service) ValeDark")
 			cyborg_base_icon = "valeservdark"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "valeservsleeper"
-			dogborg = TRUE
+			dogborg = TRUE*/
 		if("(Service) Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootyservice"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -1063,16 +1063,16 @@
 		if("(Janitor) Heavy")
 			cyborg_base_icon = "heavyres"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("(Janitor) Scrubpuppy") //Lumos Change
+		/*if("(Janitor) Scrubpuppy") //Lumos Change
 			cyborg_base_icon = "scrubpup"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "jsleeper"
 			dogborg = TRUE
-		//if("(Janitor) Otie") //Skyrat change //Lumos Change
+		if("(Janitor) Otie") //Skyrat change
 			cyborg_base_icon = "otiej"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "otiejsleeper"
-			dogborg = TRUE
+			dogborg = TRUE*/
 		if("(Janitor) Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootyjanitor"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -1088,11 +1088,11 @@
 		if("RoboMaid") //skyrat change
 			cyborg_base_icon = "robomaid_jan"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/robo-maid2.dmi'
-		//if("(Janitor) Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
+		/*if("(Janitor) Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
 			cyborg_base_icon = "drakejanit"
 			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
 			sleeper_overlay = "drakesecsleeper"
-			dogborg = TRUE
+			dogborg = TRUE*/
 		else
 			return FALSE
 	return ..()
@@ -1147,11 +1147,11 @@
 		"Zoomba" = image(icon = 'icons/mob/robots.dmi', icon_state = "zoomba_miner"),
 		//"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakeminebox") //Lumos Change
 		)
-		//var/list/L = list("Blade" = "blade", "Vale" = "valemine") //Lumos Change
-		//for(var/a in L)
-			//var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
-			//wide.pixel_x = -16
-			//mining_icons[a] = wide
+		/*var/list/L = list("Blade" = "blade", "Vale" = "valemine") //Lumos Change
+		for(var/a in L)
+			var/image/wide = image(icon = 'modular_skyrat/icons/mob/widerobot.dmi', icon_state = L[a]) //skyrat change
+			wide.pixel_x = -16
+			mining_icons[a] = wide*/
 		if(R.client && R.client.ckey == "banangarang") //skyrat change
 			var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_miner")
 			mining_icons["RoboMaid"] = cus_maid
@@ -1182,16 +1182,16 @@
 		if("Heavy")
 			cyborg_base_icon = "heavymin"
 			cyborg_icon_override = 'modular_citadel/icons/mob/robots.dmi'
-		//if("Blade") //Lumos Change
+		/*if("Blade") //Lumos Change
 			cyborg_base_icon = "blade"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "bladesleeper"
 			dogborg = TRUE
-		//if("Vale") //Lumos Change
+		if("Vale")
 			cyborg_base_icon = "valemine"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/widerobot.dmi'
 			sleeper_overlay = "valeminesleeper"
-			dogborg = TRUE
+			dogborg = TRUE*/
 		if("Bootyborg") //Skyrat change
 			cyborg_base_icon = "bootyminer"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -1209,11 +1209,11 @@
 		if("RoboMaid") //skyrat change
 			cyborg_base_icon = "robomaid_miner"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/robo-maid2.dmi'
-		//if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
+		/*if("Drake") // Dergborg brought to you by Navier#1236 | Skyrat | Commissioned Artist: deviantart.com/mizartz //Lumos Change
 			cyborg_base_icon = "drakemine"
 			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
 			sleeper_overlay = "drakeminesleeper"
-			dogborg = TRUE
+			dogborg = TRUE*/
 		else
 			return FALSE
 	return ..()
