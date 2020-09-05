@@ -81,3 +81,9 @@
 /obj/vehicle/ridden/zap_act(zap_str, zap_flags, shocked_targets)
 	zap_buckle_check(zap_str)
 	. = ..()
+
+/obj/vehicle/ridden/CanPass(atom/movable/mover, turf/target)
+    if(isprojectile(mover))
+        return TRUE
+    else
+        return ..()
