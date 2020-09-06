@@ -132,11 +132,19 @@
 	mineralAmt = 1
 	scan_state = "rock_Strange"
 
+/turf/closed/mineral/strange/ice
+	environment_type = "snow_cavern"
+	smooth_icon = 'icons/turf/walls/icerock_wall.dmi'
+	turf_type = /turf/open/floor/plating/asteroid/snow/ice
+	baseturfs = /turf/open/floor/plating/asteroid/snow/ice
+	initial_gas_mix = FROZEN_ATMOS
+	defer_change = TRUE
+
 /turf/closed/mineral/random/volcanic/New()
 	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 15)
 	. = ..()
 
 /turf/closed/mineral/random/snow/New(loc, ...)
-	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 15)
+	mineralSpawnChanceList += list(/turf/closed/mineral/strange/ice = 15)
 	. = ..()
 	
