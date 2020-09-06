@@ -118,7 +118,7 @@
 	else
 		return ..()
 
-/obj/item/airlock_painter/attack_self(mob/user)
+/obj/item/airlock_painter/AltClick(mob/user)
 	if(ink)
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		ink.forceMove(user.drop_location())
@@ -165,9 +165,9 @@
 		return
 	. = ..()
 
-/obj/item/airlock_painter/decal/AltClick(mob/user)
+/obj/item/airlock_painter/decal/CtrlClick(mob/user)
 	. = ..()
-	ui_interact(user)
+	toggle_mode(user)
 
 /obj/item/airlock_painter/decal/Initialize()
 	. = ..()
