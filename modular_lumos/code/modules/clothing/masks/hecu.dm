@@ -21,13 +21,13 @@
 		"backup" , "bag" , "bastard" , "blow" , "bogies" , "bravo" , "call" , "casualties" , "charlie" , "check" , "checking" , "clear" , "comma" ,
 		"command" , "continue" , "control" , "cover" , "creeps" , "damn" , "delta" , "down" , "east" , "echo" , "eliminate" , "everything" , "fall" ,
 		"fight" , "fire" , "five" , "force" , "formation" , "four" , "foxtrot" , "freeman" , "get" , "go" , "god" , "going" , "got" , "grenade" , "guard" ,
-		"haha" , "have" , "he" , "heavy" , "hell" , "here" , "hold" , "hole" , "hostiles" , "hot" , "i" , "in" , "is" , "kick" , "killcivvies" ,
-		"killscientists" , "lay" , "left" , "lets" , "level" , "lookout" , "maintain" , "mission" , "mister" , "mother" , "move" , "movement" , "moves" ,
+		"haha" , "have" , "he" , "heavy" , "hell" , "here" , "hold" , "hole" , "hostiles" , "hot" , "i" , "in" , "is" , "kick" ,
+		"lay" , "left" , "lets" , "level" , "lookout" , "maintain" , "mission" , "mister" , "mother" , "move" , "movement" , "moves" ,
 		"my" , "need" , "negative" , "neutralize" , "neutralized" , "nine" , "no" , "north" , "nothing" , "objective" , "of" , "oh" , "okay" , "one" ,
 		"orders" , "our" , "out" , "over" , "patrol" , "people" , "period" , "position" , "post" , "private" , "quiet" , "radio" , "recon" , "request" ,
 		"right" , "roger" , "sector" , "secure" , "shit" , "shot" , "sign" , "signs" , "silence" , "sir" , "six" , "some" , "something" , "south" , "squad" ,
-		"stay" , "suppressing" , "sweep" , "take" , "tango" , "target" , "team" , "that" , "thatbastard" , "the" , "there" , "these" , "this" , "those" ,
-		"three" , "tight" , "two" , "uh" , "under" , "up" , "we" , "weapons" , "weird" , "west" , "we've" , "whatbody" , "whoisfreeman" , "will" , "yeah" ,
+		"stay" , "suppressing" , "sweep" , "take" , "tango" , "target" , "team" , "that" , "the" , "there" , "these" , "this" , "those" ,
+		"three" , "tight" , "two" , "uh" , "under" , "up" , "we" , "weapons" , "weird" , "west" , "we've" , "will" , "yeah" ,
 		"yes" , "yessir" , "you" , "your" , "zero" , "zone" , "zulu" , "meters" , "seven" , "eight" , "hundred" , "to" , "too"
 		)
 
