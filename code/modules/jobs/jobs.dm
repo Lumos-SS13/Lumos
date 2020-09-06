@@ -13,8 +13,7 @@ GLOBAL_LIST_INIT(engineering_positions, list(
 	"Atmospheric Technician"))
 
 // Added Brig Phys SKYRAT CHANGE
-// People were AFKing as Brig Phys in order to get blueshield
-// Well fuck you. It's in medical now.
+//Remade Brig Phys Security , Not Medical , Lumos Change
 GLOBAL_LIST_INIT(medical_positions, list(
 	"Chief Medical Officer",
 	"Medical Doctor",
