@@ -9,10 +9,12 @@
 	if(disabler)
 		add_overlay("disabler")//ditto
 
+	/* LUMOS CHANGE - Should remove gross dogborg sleeper pixels from ever being used. Shouldn't be too necessary considering I took away the sleeper module
 	if(sleeper_g && module.sleeper_overlay)
 		add_overlay("[module.sleeper_overlay]_g[sleeper_nv ? "_nv" : ""]")
 	if(sleeper_r && module.sleeper_overlay)
 		add_overlay("[module.sleeper_overlay]_r[sleeper_nv ? "_nv" : ""]")
+	*/ //LUMOS CHANGE END
 	if(stat == DEAD && module.has_snowflake_deadsprite)
 		icon_state = "[module.cyborg_base_icon]-wreck"
 
