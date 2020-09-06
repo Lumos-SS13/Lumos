@@ -15,24 +15,36 @@
 
 /obj/item/strangerock/Initialize()
 	icon_state = pick("strange","strange0","strange1","strange2","strange3")
+	roll_item()
+	..()
+
+/obj/item/strangerock/proc/roll_item()
 	var/randomnumber = rand(1,100)
 	switch(randomnumber)
 		if(1 to 69)
-			chosenitem = pickweight(GLOB.bas_artifact)
-			itembasedepth = rand(30,40)
-			itemsafedepth = rand(3,6)
-			itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
+			roll_low_item()
 		if(70 to 99)
-			chosenitem = pickweight(GLOB.adv_artifact)
-			itembasedepth = rand(40,60)
-			itemsafedepth = rand(6,12)
-			itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
+			roll_med_item()
 		if(100)
-			chosenitem = pickweight(GLOB.ult_artifact)
-			itembasedepth = rand(70,100)
-			itemsafedepth = rand(12,14)
-			itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
-	..()
+			roll_high_item()
+
+/obj/item/strangerock/proc/roll_low_item()
+	chosenitem = pickweight(GLOB.bas_artifact)
+	itembasedepth = rand(30,70)
+	itemsafedepth = rand(3,6)
+	itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
+
+/obj/item/strangerock/proc/roll_med_item()
+	chosenitem = pickweight(GLOB.adv_artifact)
+	itembasedepth = rand(50,90)
+	itemsafedepth = rand(6,12)
+	itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
+
+/obj/item/strangerock/proc/roll_high_item()
+	chosenitem = pickweight(GLOB.ult_artifact)
+	itembasedepth = rand(70,110)
+	itemsafedepth = rand(12,14)
+	itemactualdepth = rand(itembasedepth - itemsafedepth,itembasedepth)
 
 /obj/item/strangerock/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/xenoarch/clean/hammer))
@@ -119,13 +131,20 @@
 	spread = 1
 	mineralAmt = 1
 	scan_state = "rock_Strange"
-/* this is for when we have multiz lavaland. Replace the walls with these.
-/turf/closed/mineral/random/volcanic/strangerock
-	mineralSpawnChanceList = list(
-		/turf/closed/mineral/uranium/volcanic = 3, /turf/closed/mineral/diamond/volcanic = 1, /turf/closed/mineral/gold/volcanic = 8, /turf/closed/mineral/titanium/volcanic = 8,
-		/turf/closed/mineral/silver/volcanic = 20, /turf/closed/mineral/plasma/volcanic = 30, /turf/closed/mineral/bscrystal/volcanic = 1, /turf/closed/mineral/gibtonite/volcanic = 2,
-		/turf/closed/mineral/iron/volcanic = 95, /turf/closed/mineral/strange = 15)
-*/
+
+/turf/closed/mineral/strange/ice
+	environment_type = "snow_cavern"
+	smooth_icon = 'icons/turf/walls/icerock_wall.dmi'
+	turf_type = /turf/open/floor/plating/asteroid/snow/ice
+	baseturfs = /turf/open/floor/plating/asteroid/snow/ice
+	initial_gas_mix = FROZEN_ATMOS
+	defer_change = TRUE
+
 /turf/closed/mineral/random/volcanic/New()
 	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 15)
 	. = ..()
+
+/turf/closed/mineral/random/snow/New(loc, ...)
+	mineralSpawnChanceList += list(/turf/closed/mineral/strange/ice = 15)
+	. = ..()
+	
