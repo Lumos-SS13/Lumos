@@ -57,6 +57,8 @@ var/global/obj/new_player_cam/new_player_cam = null
 	for(var/turf/open/floor/T in world)
 		if(!is_station_level(T.z))
 			continue
+		if(istype(T, /turf/open/floor/plating/asteroid/snow/icemoon))
+			continue
 		camturfs += T
 	thescreen = new()
 	thescreen.icon = 'icons/effects/ss13_dark_alpha6.dmi'
