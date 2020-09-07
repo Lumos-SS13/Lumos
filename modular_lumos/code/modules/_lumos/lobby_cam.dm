@@ -145,11 +145,3 @@ var/global/obj/new_player_cam/new_player_cam = null
 				sleep(1)
 			thescreen.icon_state = "0"
 			sleep(1)
-
-/proc/message_falaskian(message)
-	if(!message)
-		return
-	for(var/mob/M in world)
-		if(M.ckey == "falaskian")
-			to_chat(M, "[message]")
-			return
