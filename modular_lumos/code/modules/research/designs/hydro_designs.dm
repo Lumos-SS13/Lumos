@@ -1,3 +1,4 @@
+//These scythes are pretty nice...
 /datum/design/base_scythe
 	name = "Simple Scythe"
 	desc = "A scythe that can somewhat deal with kudzu."
