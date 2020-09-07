@@ -149,6 +149,7 @@
 	has_snowflake_deadsprite = TRUE
 	cyborg_pixel_offset = -16
 	hat_offset = INFINITY
+	/* Lumos Change - Removes cringe dogborg modules like tongue, SLEEPER, and nose
 	basic_modules += new /obj/item/dogborg_nose(src)
 	basic_modules += new /obj/item/dogborg_tongue(src)
 	var/obj/item/dogborg/sleeper/K9/flavour/I = new(src)
@@ -163,6 +164,7 @@
 		if(cyborg_base_icon == "scrubpup")
 			I.icon_state = "compactor"
 	basic_modules += I
+	*/ //Lumos Change End
 	rebuild_modules()
 
 /obj/item/robot_module/proc/remove_module(obj/item/I, delete_after)
