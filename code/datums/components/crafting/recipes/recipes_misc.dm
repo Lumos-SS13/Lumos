@@ -32,6 +32,23 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 
+	/*/datum/crafting_recipe/cross //Lumos Change, Adds Noose and Cross
+	name = "Cross (structure)"
+	result = /obj/structure/kitchenspike/cross
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 6,
+				/obj/item/stack/packageWrap = 4)
+	time = 100
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC*/
+
+/datum/crafting_recipe/noose //Lumos Change, Adds Noose and Cross
+	name = "Noose"
+	result = /obj/structure/chair/noose
+	reqs = list(/obj/item/stack/cable_coil = 20)
+	time = 75
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+
 // Blood Sucker stuff //
 /datum/crafting_recipe/bloodsucker/blackcoffin
 	name = "Black Coffin"
