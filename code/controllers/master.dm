@@ -206,6 +206,8 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	current_ticklimit = TICK_LIMIT_RUNNING
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
+	lumos_inializations() // LUMOS EDIT - allows items to be initialized in a modular fashion - LOBBYCAM
+
 	var/msg = "Initializations complete within [time] second[time == 1 ? "" : "s"]!"
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
