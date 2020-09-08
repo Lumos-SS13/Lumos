@@ -59,12 +59,14 @@
 	build_path = /obj/item/toy/windupToolbox
 	category = list("initial", "Toys")
 
+/*
 /datum/design/autoylathe/toydualsword
 	name = "Double-Bladed Toy Sword"
 	id = "dbtoysword"
 	materials = list(/datum/material/plastic = 1000)
 	build_path = /obj/item/dualsaber/toy
 	category = list("initial", "Melee")
+*/
 
 /datum/design/autoylathe/toykatana
 	name = "Replica Katana"
