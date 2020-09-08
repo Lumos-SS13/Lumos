@@ -100,8 +100,7 @@
 	if(do_mob(user, M, user == M ? 0:200))
 		if(buckle_mob(M))
 			user.visible_message(\
-				"<span class='warning'>[user] ties \the [M != user ? "[user]" : "their"][src] over [M]'s neck!</span>",\
-				"<span class='userdanger'>[M != user ? "[user] ties" : "You tie"] \the [src] over your neck!</span>")
+				"<span class='warning'>[user] ties \the [M != user ? "[user]" : "their"][src] over [M]'s neck!</span>")
 			playsound(user.loc, 'modular_lumos/sound/effects/noosed.ogg', 50, 1, -1)
 			log_combat(user, M, "hanged", src)
 			M.noosed = TRUE
