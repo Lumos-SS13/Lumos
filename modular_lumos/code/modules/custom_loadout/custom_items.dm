@@ -1,4 +1,6 @@
-//spensara + uncle burbon snowflake mask
+//##########lumos specific snowflake items##########
+
+//spensara + unclebourbon snowflake mask
 /obj/item/clothing/mask/gas/sec_snowflake
 	name = "private military mask"
 	desc = "An elite military gas mask."
