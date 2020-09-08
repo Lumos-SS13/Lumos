@@ -10,8 +10,13 @@
 	max_integrity = 100
 	dog_fashion = null
 	modifies_speech = TRUE
+	var/waifu_mode = TRUE
+	actions_types = list(/datum/action/item_action/snowflake/toggle_waifu)
 
 /obj/item/clothing/mask/gas/sec_snowflake/handle_speech(datum/source, list/speech_args) // copied from space ninja mask code YEET
+	if(!waifu_mode)
+		return
+
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
 		var/list/temp_message = splittext(message, " ")
@@ -52,3 +57,18 @@
 		message = replacetext(message, ".", "")
 		message = lowertext(message)
 		speech_args[SPEECH_MESSAGE] = message
+
+/obj/item/clothing/mask/gas/sec_snowflake/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Waifu mode is currently [ waifu_mode ? "enabled" : "disabled"].</span>"
+
+/datum/action/item_action/snowflake/toggle_waifu
+	name = "Toggle waifu mode"
+	desc = "Allows you to create a stunning Judicial Marker at any location in view. Click again to disable."
+
+/obj/item/clothing/mask/gas/sec_snowflake/ui_action_click(mob/user, action)
+	toggle_waifu(user)
+
+/obj/item/clothing/mask/gas/sec_snowflake/proc/toggle_waifu(mob/living/user)
+	waifu_mode = !waifu_mode
+	to_chat(user, "<span class='notice'>Waifu mode [ waifu_mode ? "enabled" : "disabled"].</span>")
