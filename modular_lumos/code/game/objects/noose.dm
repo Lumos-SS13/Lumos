@@ -3,7 +3,7 @@
 	name = "noose"
 	desc = "Hang-in around."
 	icon_state = "noose"
-	icon = 'icons/obj/noose.dmi'
+	icon = 'modular_lumos/icons/obj/noose.dmi'
 	layer = FLY_LAYER
 	flags_1 = NODECONSTRUCT_1
 	var/image/over
@@ -102,7 +102,7 @@
 			user.visible_message(\
 				"<span class='warning'>[user] ties \the [M != user ? "[user]" : "their"][src] over [M]'s neck!</span>",\
 				"<span class='userdanger'>[M != user ? "[user] ties" : "You tie"] \the [src] over your neck!</span>")
-			playsound(user.loc, 'sound/effects/noosed.ogg', 50, 1, -1)
+			playsound(user.loc, 'modular_lumos/sound/effects/noosed.ogg', 50, 1, -1)
 			log_combat(user, M, "hanged", src)
 			M.noosed = TRUE
 			return TRUE
@@ -136,7 +136,7 @@
 					flavor_text = list("<span class='suicide'>[buckled_mob]'s limbs lifelessly sway back and forth.</span>",\
 										"<span class='suicide'>[buckled_mob]'s eyes stare straight ahead.</span>")
 				buckled_mob.visible_message(pick(flavor_text))
-				playsound(buckled_mob.loc, 'sound/effects/noose_idle.ogg', 30, 1, -3)
+				playsound(buckled_mob.loc, 'modular_lumos/sound/effects/noose_idle.ogg', 30, 1, -3)
 
 /mob/living/carbon/human
 	var/noosed = FALSE
