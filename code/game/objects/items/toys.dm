@@ -264,6 +264,7 @@
 		icon_state = "sword0"
 		item_state = "sword0"
 
+/*
 // Copied from /obj/item/melee/transforming/energy/sword/attackby
 /obj/item/toy/sword/attackby(obj/item/W, mob/living/user, params)
 	if(istype(W, /obj/item/toy/sword))
@@ -288,6 +289,7 @@
 			to_chat(user, "<span class='warning'>It's already fabulous!</span>")
 	else
 		return ..()
+*/
 
 /obj/item/toy/sword/cx
 	name = "\improper DX Non-Euplastic LightSword"
