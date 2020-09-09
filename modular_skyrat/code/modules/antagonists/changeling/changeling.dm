@@ -1,3 +1,4 @@
+/* Readds greentext, lumos change now located in modular_lumos
 /datum/antagonist/changeling/roundend_report()
 	var/list/parts = list()
 
@@ -13,4 +14,4 @@
 			parts += "<B>Objective #[count]</B>: [objective.explanation_text]"
 			count++
 
-	return parts.Join("<br>")
+	return parts.Join("<br>")*/

@@ -1,3 +1,4 @@
+/* Readds greentext, lumos change now located in modular_lumos
 /datum/antagonist/traitor/roundend_report()
 	var/list/result = list()
 
@@ -32,4 +33,4 @@
 	if(contractor_hub)
 		result += contractor_round_end()
 
-	return result.Join("<br>")
+	return result.Join("<br>")*/
