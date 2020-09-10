@@ -422,7 +422,7 @@ There are several things that need to be remembered:
 				var/init_worn_icon = worn_icon
 				variation_flag |= S.mutantrace_variation & T.taur_mode || S.mutantrace_variation & T.alt_taur_mode
 				switch(variation_flag)
-					if(STYLE_HOOF_TAURIC)
+					if(STYLE_HOOF_TAURIC) //LUMOS CHANGE: Modularises the taur sprites, hooved taur sprite's worn icon uses canine temporarily.
 						if(!S.lumos_hoof_tauric)
 							worn_icon = 'icons/mob/clothing/taur_hooved.dmi'
 						else
