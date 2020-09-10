@@ -320,7 +320,13 @@ Key procs
 								/datum/language/technorussian = list(LANGUAGE_ATOM),
 								/datum/language/neokanji = list(LANGUAGE_ATOM),
 								/datum/language/dunmeri = list(LANGUAGE_ATOM),
-								/datum/language/dwarf = list(LANGUAGE_ATOM))
+								/datum/language/dwarf = list(LANGUAGE_ATOM),
+								// LUMOS EDIT - MOAR LANGUAGES
+								/datum/language/vox = list(LANGUAGE_ATOM),
+								/datum/language/calcic = list(LANGUAGE_ATOM),
+								/datum/language/moffic = list(LANGUAGE_ATOM),
+								/datum/language/sylvan = list(LANGUAGE_ATOM),
+								/datum/language/shadowtongue = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/machine = list(LANGUAGE_ATOM),
 							/datum/language/draconic = list(LANGUAGE_ATOM),
@@ -330,7 +336,13 @@ Key procs
 							/datum/language/neokanji = list(LANGUAGE_ATOM),
 							/datum/language/dunmeri = list(LANGUAGE_ATOM),
 							/datum/language/slime = list(LANGUAGE_ATOM),
-							/datum/language/dwarf = list(LANGUAGE_ATOM))
+							/datum/language/dwarf = list(LANGUAGE_ATOM),
+							// LUMOS EDIT - MOAR LANGUAGES
+							/datum/language/vox = list(LANGUAGE_ATOM),
+							/datum/language/calcic = list(LANGUAGE_ATOM),
+							/datum/language/moffic = list(LANGUAGE_ATOM),
+							/datum/language/sylvan = list(LANGUAGE_ATOM),
+							/datum/language/shadowtongue = list(LANGUAGE_ATOM))
 
 /datum/language_holder/venus
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
