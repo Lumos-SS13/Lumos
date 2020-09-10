@@ -163,6 +163,13 @@
 
 	new /obj/item/tank/internals/emergency_oxygen/engi(src)
 
+// LUMOS EDIT START - SNAXIPICKS
+	if(SSmapping.stat_map_name == "Snow Taxi")
+		if(!ishuman(loc))
+			return
+		new /obj/item/pickaxe/mini(src)
+// LUMOS EDIT END - SNAXIPICKS
+
 /obj/item/storage/box/engineer/radio/PopulateContents()
 	..() // we want the regular items too.
 	new /obj/item/radio/off(src)
