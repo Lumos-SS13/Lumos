@@ -43,6 +43,12 @@
 #define MODE_KEY_TERROR_SPIDER "t"
 //skyrat change stop
 
+// LUMOS CHANGE START - VINES
+#define MODE_VENUS "venustalk"
+#define MODE_KEY_VENUS "v"
+#define MODE_TOKEN_VENUS ":v"
+// LUMOS CHANGE STOP - VINES
+
 #define MODE_CHANGELING "changeling"
 #define MODE_KEY_CHANGELING "g"
 #define MODE_TOKEN_CHANGELING ":g"
