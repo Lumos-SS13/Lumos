@@ -56,3 +56,21 @@ proc/RequestRespawn(mob/dead/observer/M)
 	switch(alert(src, "Are you sure you want to request a respawn?", "Confirm request", "Yes", "No"))
 		if("Yes")
 			RequestRespawn(usr)
+
+/client/proc/respawn_blacklist()
+	set category = "Admin"
+	set name = "Respawn Blacklist"
+	var/list/names = GLOB.respawned_chars
+
+	if(names.len == 0)
+		to_chat(usr, "<span class='notice'>No characters have been respawned.</span>")
+		return
+
+	var/selection = input(usr, "Which name do you want to remove?", "Respawned Character Names") as null|anything in names
+	if(!selection)
+		return
+
+	GLOB.respawned_chars -= selection
+	to_chat(usr, "<span class='notice'>Removed [selection] from the list of respawned names.</span>")
+	message_admins("[key_name_admin(usr)] has removed [selection] from the list of respawned names.")
+	log_admin("[key_name_admin(usr)] has removed [selection] from the list of respawned names")
