@@ -22,6 +22,20 @@
 
 	sight |= SEE_TURFS
 
+	//LUMOS EDIT START - LOBBYCAM
+	var/obj/screen/lumoslogo = new()
+	lumoslogo.name = "Lumos Station"
+	lumoslogo.icon = 'modular_lumos/icons/lumoslogo.dmi'
+	lumoslogo.icon_state = "lumoslogo"
+	lumoslogo.screen_loc = "south:16,east-5:10"
+	lumoslogo.alpha = round(255*0.7,1)
+	lumoslogo.mouse_opacity = 0
+	lumoslogo.layer = 20
+	lumoslogo.plane = 100
+	if (client)
+		client.screen += lumoslogo
+	//LUMOS EDIT STOP - LOBBYCAM
+
 	new_player_panel()
 	client.playtitlemusic()
 	if(SSticker.current_state < GAME_STATE_SETTING_UP)

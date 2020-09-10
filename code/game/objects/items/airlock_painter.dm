@@ -118,7 +118,7 @@
 	else
 		return ..()
 
-/obj/item/airlock_painter/attack_self(mob/user)
+/obj/item/airlock_painter/AltClick(mob/user)
 	if(ink)
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		ink.forceMove(user.drop_location())
@@ -126,7 +126,7 @@
 		to_chat(user, "<span class='notice'>You remove [ink] from [src].</span>")
 		ink = null
 
-
+/* moving to modular_lumos
 /obj/item/airlock_painter/decal
 	name = "decal painter"
 	desc = "An airlock painter, reprogramed to use a different style of paint in order to apply decals for floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed. Alt-Click to change design."
@@ -165,9 +165,9 @@
 		return
 	. = ..()
 
-/obj/item/airlock_painter/decal/AltClick(mob/user)
+/obj/item/airlock_painter/decal/CtrlClick(mob/user)
 	. = ..()
-	ui_interact(user)
+	toggle_mode(user)
 
 /obj/item/airlock_painter/decal/Initialize()
 	. = ..()
@@ -234,3 +234,4 @@
 /obj/item/airlock_painter/decal/debug/Initialize()
 	. = ..()
 	ink = new /obj/item/toner/extreme(src)
+*/
