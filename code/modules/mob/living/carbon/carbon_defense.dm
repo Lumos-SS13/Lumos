@@ -136,7 +136,7 @@
 		message_verb = "[pick(I.attack_verb)]"
 	else if(!I.force)
 		return
-	
+
 	var/message_hit_area = ""
 	if(hit_area)
 		message_hit_area = " in the [parse_zone(hit_area)]"
@@ -173,12 +173,12 @@
 				if(!S.lying_required || (S.lying_required && lying))
 					if(S.next_step(user, user.a_intent))
 						return TRUE
-	
+
 	//skyrat edit
 	for(var/datum/wound/W in all_wounds)
 		if(W.try_handling(user))
 			return TRUE
-	
+
 	if((pulledby == user) && (pulledby.grab_state >= GRAB_AGGRESSIVE) && (user.a_intent == INTENT_HARM))
 		var/obj/item/bodypart/part = get_bodypart(user.zone_selected)
 		if(istype(part))
@@ -348,24 +348,19 @@
 			if(ishuman(src))
 				S = dna.species
 
-			M.visible_message("<span class='notice'>[M] gives [src] a pat on the head to make [p_them()] feel better!</span>", \
-						"<span class='notice'>You give [src] a pat on the head to make [p_them()] feel better!</span>", target = src,
-						target_message = "<span class='notice'>[M] gives you a pat on the head to make you feel better!</span>")
-			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "headpat", /datum/mood_event/headpat)
-			friendly_check = TRUE
-			if(S?.can_wag_tail(src) && !dna.species.is_wagging_tail())
-				var/static/list/many_tails = list("tail_human", "tail_lizard", "mam_tail")
-				for(var/T in many_tails)
-					if(S.mutant_bodyparts[T] && dna.features[T] != "None")
-						emote("wag")
-						break
+			if(!(client?.prefs.cit_toggles & NO_AUTO_WAG))
+				if(S?.can_wag_tail(src) && !dna.species.is_wagging_tail())
+					var/static/list/many_tails = list("tail_human", "tail_lizard", "mam_tail")
+					for(var/T in many_tails)
+						if(S.mutant_bodyparts[T] && dna.features[T] != "None")
+							emote("wag")
 
 		else if(check_zone(M.zone_selected) == BODY_ZONE_R_ARM || check_zone(M.zone_selected) == BODY_ZONE_L_ARM)
 			M.visible_message( \
 				"<span class='notice'>[M] shakes [src]'s hand.</span>", \
 				"<span class='notice'>You shake [src]'s hand.</span>", target = src,
 				target_message = "<span class='notice'>[M] shakes your hand.</span>")
-		
+
 		else
 			M.visible_message("<span class='notice'>[M] hugs [src] to make [p_them()] feel better!</span>", \
 						"<span class='notice'>You hug [src] to make [p_them()] feel better!</span>", target = src,\
@@ -568,7 +563,7 @@
 	if(attempted_grasper.active_hand_index == grasped_part.held_index)
 		to_chat(attempted_grasper, "<span class='danger'>You can't grasp your [grasped_part.name] with itself!</span>")
 		return
-	
+
 	for(var/i in grasped_part?.children_zones)
 		var/obj/item/bodypart/child = attempted_grasper.get_bodypart(i)
 		if(attempted_grasper.active_hand_index == child.held_index)
@@ -584,7 +579,7 @@
 		to_chat(attempted_grasper, "<span class='danger'>You fail to grasp your [grasped_part.name].</span>")
 		qdel(graspy)
 		return
-	
+
 	return TRUE
 
 /// an abstract item representing you holding your own limb to staunch the bleeding, see [/mob/living/carbon/proc/grabbedby] will probably need to find somewhere else to put this.

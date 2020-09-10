@@ -140,9 +140,9 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 	var/list/body_descriptors = list()
 
 	var/list/alt_titles_preferences = list()
-	
+
 	var/accept_ERG = FALSE
-	
+
 	/// If we have persistent scars enabled
 	var/persistent_scars = TRUE
 	/// We have 5 slots for persistent scars, if enabled we pick a random one to load (empty by default) and scars at the end of the shift if we survived as our original person
@@ -152,7 +152,7 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 	/// A list, associating a set of cosmetic scars to each limb. These are fluff and cannot be removed via medical means.
 	/// No scars are applied to limbs with empty lists.
 	var/list/cosmetic_scars = ASSOCIATED_SCARS
-	
+
 	//END OF SKYRAT CHANGES
 	var/underwear = "Nude"				//underwear type
 	var/undie_color = "FFF"
@@ -1207,11 +1207,11 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 			dat += "<b>FPS:</b> <a href='?_src_=prefs;preference=clientfps;task=input'>[clientfps]</a><br>"
 
 			dat += "<b>Income Updates:</b> <a href='?_src_=prefs;preference=income_pings'>[(chat_toggles & CHAT_BANKCARD) ? "Allowed" : "Muted"]</a><br>"
-			
+
 			dat += "<b>Combat Wound Messages (Other):</b> <a href='?_src_=prefs;preference=wounds_other'>[(chat_toggles & CHAT_WOUNDS_OTHER) ? "Allowed" : "Muted"]</a><br>"
 
 			dat += "<b>Combat Wound Messages (Self):</b> <a href='?_src_=prefs;preference=wounds_self'>[(chat_toggles & CHAT_WOUNDS_SELF) ? "Allowed" : "Muted"]</a><br>"
-			
+
 			dat += "<br>"
 
 			dat += "<b>Parallax (Fancy Space):</b> <a href='?_src_=prefs;preference=parallaxdown' oncontextmenu='window.location.href=\"?_src_=prefs;preference=parallaxup\";return false;'>"
@@ -1351,6 +1351,7 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Aphrodisiacs:</b> <a href='?_src_=prefs;preference=aphro'>[(cit_toggles & NO_APHRO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
+			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
 			//SKYRAT EDIT
 			dat += 	"<b>Extreme ERP verbs :</b> <a href='?_src_=prefs;preference=extremepref'>[extremepref]</a><br>" // https://youtu.be/0YrU9ASVw6w
 			if(extremepref != "No")
@@ -2213,10 +2214,10 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 									presets |= w.scarring_descriptions
 							presets |= list("None")
 							choice = input(user, "What preset will you use?", "Preset Scar", "None") as null|anything in presets
-						
+
 					if(choice && (choice != "None"))
 						cosmetic_scars[body_zone][specific_location]["desc"] = strip_html_simple(choice, 256)
-					
+
 				else if(href_list["severity"])
 					var/sev = href_list["severity"]
 					switch(sev)
@@ -3415,10 +3416,10 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 
 				if("pull_requests")
 					chat_toggles ^= CHAT_PULLR
-				
+
 				if("wounds_other")
 					chat_toggles ^= CHAT_WOUNDS_OTHER
-				
+
 				if("wounds_self")
 					chat_toggles ^= CHAT_WOUNDS_SELF
 
@@ -3471,6 +3472,9 @@ GLOBAL_LIST_INIT(food, list( // Skyrat addition
 
 				if("bimbo")
 					cit_toggles ^= BIMBOFICATION
+
+				if("auto_wag")
+					cit_toggles ^= NO_AUTO_WAG
 
 				//END CITADEL EDIT
 
