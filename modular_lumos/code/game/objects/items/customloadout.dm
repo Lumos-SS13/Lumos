@@ -5,8 +5,8 @@
 	icon = 'modular_lumos/icons/customloadout/vadimknife.dmi'
 	icon_state = "cumknife"
 	item_state = "cumknife"
-	lefthand_file = 'modular_lumos/icons/mob/lumosinhand/vadknifeh_left.dmi'
-	righthand_file = 'modular_lumos/icons/mob/lumosinhand/vadknifeh_right.dmi'
+	lefthand_file = 'modular_lumos/icons/mob/lumosinhand/cumknifeleft.dmi'
+	righthand_file = 'modular_lumos/icons/mob/lumosinhand/cumkniferight.dmi'
 	force = 13
 	throwforce = 10
 	attack_verb = list("slashed", "sliced", "cut", "chibbed")
