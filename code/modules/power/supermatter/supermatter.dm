@@ -5,7 +5,7 @@
 #define PLASMA_HEAT_PENALTY 15     // Higher == Bigger heat and waste penalty from having the crystal surrounded by this gas. Negative numbers reduce penalty.
 #define OXYGEN_HEAT_PENALTY 1
 #define CO2_HEAT_PENALTY 0.1
-#define PLUOXIUM_HEAT_PENALTY -1
+#define PLUOXIUM_HEAT_PENALTY 9
 #define TRITIUM_HEAT_PENALTY 10
 #define NITROGEN_HEAT_PENALTY -1.5
 #define BZ_HEAT_PENALTY 5
@@ -35,9 +35,9 @@
 #define DAMAGE_INCREASE_MULTIPLIER 0.25
 
 
-#define THERMAL_RELEASE_MODIFIER 5         //Higher == less heat released during reaction, not to be confused with the above values
-#define PLASMA_RELEASE_MODIFIER 750        //Higher == less plasma released by reaction
-#define OXYGEN_RELEASE_MODIFIER 325        //Higher == less oxygen released at high temperature/power
+#define THERMAL_RELEASE_MODIFIER 2         //Higher == less heat released during reaction, not to be confused with the above values
+#define PLASMA_RELEASE_MODIFIER 325        //Higher == less plasma released by reaction
+#define OXYGEN_RELEASE_MODIFIER 150        //Higher == less oxygen released at high temperature/power
 
 #define REACTION_POWER_MODIFIER 0.55       //Higher == more overall power
 
@@ -83,7 +83,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	critical_machine = TRUE
 
-	var/gasefficency = 0.15
+	var/gasefficency = 0.45
 
 	var/base_icon_state = "darkmatter"
 
@@ -512,7 +512,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			message_admins("[src] has been powered for the first time [ADMIN_JMP(src)].")
 			has_been_powered = TRUE
 	else if(takes_damage)
-		matter_power += Proj.damage * config_bullet_energy
+		matter_power += (Proj.damage * config_bullet_energy) * 4
 	return BULLET_ACT_HIT
 
 /obj/machinery/power/supermatter_crystal/singularity_act()
@@ -683,7 +683,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	base_icon_state = "darkmatter_shard"
 	icon_state = "darkmatter_shard"
 	anchored = FALSE
-	gasefficency = 0.125
+	gasefficency = 0.20
 	explosion_power = 12
 	moveable = TRUE
 
