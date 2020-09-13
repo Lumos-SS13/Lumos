@@ -37,7 +37,6 @@ Simple datum which is instanced once per type and is used for every object of sa
 	. = ..()
 	if(texture_layer_icon_state)
 		var/texture_icon = icon('icons/materials/composite.dmi', texture_layer_icon_state)
-		cached_texture_filter = filter(type="layer", icon=texture_icon, blend_mode = BLEND_INSET_OVERLAY)
 
 ///This proc is called when the material is added to an object.
 /datum/material/proc/on_applied(atom/source, amount, material_flags)
