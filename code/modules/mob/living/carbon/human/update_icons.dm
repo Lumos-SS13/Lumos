@@ -345,7 +345,7 @@ There are several things that need to be remembered:
 			if(hud_used.inventory_shown)
 				client.screen += gloves
 		update_observer_view(gloves,1)
-		overlays_standing[GLOVES_LAYER] = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = 'icons/mob/clothing/hands.dmi')	
+		overlays_standing[GLOVES_LAYER] = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = 'icons/mob/clothing/hands.dmi')
 		gloves_overlay = overlays_standing[GLOVES_LAYER]
 		if(OFFSET_GLOVES in dna.species.offset_features)
 			gloves_overlay.pixel_x += dna.species.offset_features[OFFSET_GLOVES][1]
@@ -625,12 +625,21 @@ There are several things that need to be remembered:
 				var/init_worn_icon = worn_icon
 				variation_flag |= S.mutantrace_variation & T.taur_mode || S.mutantrace_variation & T.alt_taur_mode
 				switch(variation_flag)
-					if(STYLE_HOOF_TAURIC)
-						worn_icon = 'icons/mob/clothing/taur_hooved.dmi'
+					if(STYLE_HOOF_TAURIC) //LUMOS CHANGE: Modularises the taur sprites, hooved taur sprite's worn icon uses canine temporarily.
+						if(!S.lumos_hoof_tauric)
+							worn_icon = 'icons/mob/clothing/taur_hooved.dmi'
+						else
+							worn_icon = 'modular_lumos/icons/mob/clothing/taur_canine.dmi'
 					if(STYLE_SNEK_TAURIC)
-						worn_icon = 'modular_skyrat/icons/mob/clothing/taur_naga.dmi'
+						if(!S.lumos_snek_tauric)
+							worn_icon = 'modular_skyrat/icons/mob/clothing/taur_naga.dmi'
+						else
+							worn_icon = 'modular_lumos/icons/mob/clothing/taur_naga.dmi'
 					if(STYLE_PAW_TAURIC)
-						worn_icon = 'icons/mob/clothing/taur_canine.dmi'
+						if(!S.lumos_paw_tauric)
+							worn_icon = 'icons/mob/clothing/taur_canine.dmi'
+						else
+							worn_icon = 'modular_lumos/icons/mob/clothing/taur_canine.dmi'
 				if(worn_icon != init_worn_icon) //worn icon sprite was changed, taur offsets will have to be applied.
 					if(S.taur_mob_worn_overlay) //not going to make several new variables for all taur types. Nope.
 						var/static/list/icon_to_state = list('icons/mob/clothing/taur_hooved.dmi' = "_hooved", 'modular_skyrat/icons/mob/clothing/taur_naga.dmi' = "_naga", 'icons/mob/clothing/taur_canine.dmi' = "_paws")
