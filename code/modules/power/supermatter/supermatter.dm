@@ -3,9 +3,9 @@
 //Modifications include removing the world-ending full supermatter variation, and leaving only the shard.
 
 #define PLASMA_HEAT_PENALTY 15     // Higher == Bigger heat and waste penalty from having the crystal surrounded by this gas. Negative numbers reduce penalty.
-#define OXYGEN_HEAT_PENALTY 1
-#define CO2_HEAT_PENALTY 0.1
-#define PLUOXIUM_HEAT_PENALTY 9
+#define OXYGEN_HEAT_PENALTY 2
+#define CO2_HEAT_PENALTY 0.5
+#define PLUOXIUM_HEAT_PENALTY 8
 #define TRITIUM_HEAT_PENALTY 10
 #define NITROGEN_HEAT_PENALTY -1.5
 #define BZ_HEAT_PENALTY 5
@@ -14,9 +14,9 @@
 #define PLASMA_TRANSMIT_MODIFIER 4
 #define BZ_TRANSMIT_MODIFIER -2
 
-#define TRITIUM_RADIOACTIVITY_MODIFIER 3  //Higher == Crystal spews out more radiation
+#define TRITIUM_RADIOACTIVITY_MODIFIER 6  //Higher == Crystal spews out more radiation
 #define BZ_RADIOACTIVITY_MODIFIER 5
-#define PLUOXIUM_RADIOACTIVITY_MODIFIER -2
+#define PLUOXIUM_RADIOACTIVITY_MODIFIER 2
 
 #define N2O_HEAT_RESISTANCE 6          //Higher == Gas makes the crystal more resistant against heat damage.
 #define PLUOXIUM_HEAT_RESISTANCE 3
@@ -133,7 +133,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	//Temporary values so that we can optimize this
 	//How much the bullets damage should be multiplied by when it is added to the internal variables
-	var/config_bullet_energy = 2
+	var/config_bullet_energy = 8
 	//How much of the power is left after processing is finished?
 //	var/config_power_reduction_per_tick = 0.5
 	//How much hallucination should it produce per unit of power?
@@ -512,7 +512,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			message_admins("[src] has been powered for the first time [ADMIN_JMP(src)].")
 			has_been_powered = TRUE
 	else if(takes_damage)
-		matter_power += (Proj.damage * config_bullet_energy) * 4
+		matter_power += (Proj.damage * config_bullet_energy)
 	return BULLET_ACT_HIT
 
 /obj/machinery/power/supermatter_crystal/singularity_act()
