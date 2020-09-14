@@ -426,8 +426,8 @@
 		check_core_stability()
 
 	updateDialog()
-	// LUMOS EDIT
+	//LUMOS EDIT
 	if(usr)
 		interact(usr)
-	// LUMOS EDIT
+	//LUMOS EDIT
 	return
