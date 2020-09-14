@@ -31,9 +31,8 @@ Bonus
 	var/bleed = FALSE
 	var/pain = FALSE
 	threshold_desc = list(
-		"Resistance 9" = "Doubles the intensity of the immolation effect, but reduces the frequency of all of this symptom's effects.",
-		"Stage Speed 8" = "Increases explosion radius and explosion damage to the host when the host is wet.",
-		"Transmission 8" = "Additionally synthesizes chlorine trifluoride and napalm inside the host. More chemicals are synthesized if the resistance 9 threshold has been met."
+		"Resistance 9" = "Host will bleed profusely during necrosis.",
+		"Transmission 8" = "Causes extreme pain to the host, weakening it."
 	)
 
 /datum/symptom/flesh_eating/Start(datum/disease/advance/A)
