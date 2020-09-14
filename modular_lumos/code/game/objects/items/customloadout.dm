@@ -1,8 +1,8 @@
-// this dm is intended for special loadout items for lumos. insert your gay snowflake/donator items here.
+// this dm is intended for special non-clothing items for lumos. insert your gay snowflake/donator items here.
 /obj/item/screwdriver/vadknife
 	name = "vadim's lucky knife"
 	desc = "A rusted and outdated military knife. Its tip has snapped off at some point, making it a decent makeshift screwdriver. On the blade 'Vadim Kozlov' is scratched in."
-	icon = 'modular_lumos/icons/customloadout/vadimknife.dmi'
+	icon = 'modular_lumos/icons/obj/vadimknife.dmi'
 	icon_state = "cumknife"
 	item_state = "cumknife"
 	lefthand_file = 'modular_lumos/icons/mob/lumosinhand/cumknifeleft.dmi'
