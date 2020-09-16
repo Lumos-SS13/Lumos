@@ -466,6 +466,7 @@
 					/obj/item/storage/backpack/satchel/vir = 3,
 					/obj/item/storage/backpack/courier/viro = 3)
 					// SKYRAT EDIT CLOSE
+	contraband = list(/obj/item/clothing/mask/gas/halfmask = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
 	payment_department = ACCOUNT_MED
 	cost_multiplier_per_dept = list(ACCOUNT_MED = 0)
