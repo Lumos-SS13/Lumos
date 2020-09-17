@@ -13,8 +13,10 @@
 #define NITROGEN_HEAT_PENALTY -1.5
 #define BZ_HEAT_PENALTY 5
 
-#define OXYGEN_TRANSMIT_MODIFIER 1.5   //Higher == Bigger bonus to power generation.
-#define PLASMA_TRANSMIT_MODIFIER 4
+//#define OXYGEN_TRANSMIT_MODIFIER 1.5   //Higher == Bigger bonus to power generation.
+#define OXYGEN_TRANSMIT_MODIFIER 2 // LUMOS EDIT
+//#define PLASMA_TRANSMIT_MODIFIER 4
+#define PLASMA_TRANSMIT_MODIFIER 6 // LUMOS EDIT
 #define BZ_TRANSMIT_MODIFIER -2
 
 //#define TRITIUM_RADIOACTIVITY_MODIFIER 3 //Higher == Crystal spews out more radiation
@@ -47,7 +49,8 @@
 //#define OXYGEN_RELEASE_MODIFIER 325        //Higher == less oxygen released at high temperature/power
 #define OXYGEN_RELEASE_MODIFIER 150        // LUMOS EDIT
 
-#define REACTION_POWER_MODIFIER 0.55       //Higher == more overall power
+//#define REACTION_POWER_MODIFIER 0.55       //Higher == more overall power
+#define REACTION_POWER_MODIFIER 2.0	// LUMOS EDIT
 
 #define MATTER_POWER_CONVERSION 10         //Crystal converts 1/this value of stored matter into energy.
 
