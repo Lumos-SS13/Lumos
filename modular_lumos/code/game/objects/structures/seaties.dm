@@ -8,7 +8,7 @@
 	icon_state = "kingthronelumos"
 	icon = 'modular_lumos/icons/obj/structures/seaties.dmi'
 	buildstacktype = /obj/item/stack/sheet/mineral/gold
-	buildstackamount = 10
+	buildstackamount = 20
 	max_integrity = 350
 
 /obj/structure/chair/bench
@@ -43,6 +43,6 @@ obj/structure/chair/bench/right
 	name = "metal bench end"
 	icon_state = "metalbench_left"
 
-/obj/structure/chair/bench/metal/right
+/obj/structure/chair/bench/right/metal
 	name = "metal bench end"
 	icon_state = "metalbench_right"
