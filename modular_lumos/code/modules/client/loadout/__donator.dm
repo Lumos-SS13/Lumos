@@ -9,4 +9,4 @@
 	name = "Piano plush"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/toy/plush/lizardplushie/piano
-	ckeywhitelist = list("dimy003")
+	ckeywhitelist = list("Dimy003", "Wombat321", "Just Kay", "QuaintSun1", "TrappedCat")
