@@ -282,6 +282,74 @@
 /obj/machinery/power/am_control_unit/proc/reset_stored_core_stability_delay()
 	stored_core_stability_delay = 0
 
+//LUMOS EDIT
+/obj/machinery/power/am_control_unit/interact(mob/user, special_state)
+	var/active_color = "#FFFFFF"
+	if(active)
+		active_color = "#15ff00"
+	else
+		active_color = "#ff0000"
+
+	var/dat = {"
+		<center>
+			<div class='statusDisplay'>Anti-Matter Control Panel</div>
+		</center>
+			<br>
+		<center>
+			<A href='?src=[REF(src)];close=1'>Close</a>
+			<A href='?src=[REF(src)];refresh=1'>Refresh</a>
+			<A href='?src=[REF(src)];refreshicons=1'>Force Shielding Update</a>
+		</center>
+			<br>
+			<br>
+		<center>
+			Status: [(active?"Injecting":"Standby")]
+			<span style='border: 1px solid #161616; background-color: [active_color];'>&nbsp;&nbsp;&nbsp;</span>
+			<A href='?src=[REF(src)];togglestatus=1'>Toggle Status</a>
+		</center>
+			<br>
+			<br>
+		<center>
+			Stability: [stability]%
+			Average Stability: [stored_core_stability] <A href='?src=[REF(src)];refreshstability=1'>(update)</a>
+			<br>
+			Reactor parts: [linked_shielding.len]
+			Cores: [linked_cores.len]
+		</center>
+		<br>
+		<br>
+		<center>
+			Current Efficiency: [reported_core_efficiency]
+			<br>
+			Last Produced: [DisplayPower(stored_power)]
+		</center>
+		<br>
+		<br>
+		<center>
+			Fuel:
+		</center>
+			"}
+	if(!fueljar)
+		dat += "<br><center>No fuel receptacle detected.</center>"
+	else
+		dat += {"
+		<center>
+			<br><A href='?src=[REF(src)];ejectjar=1'>Eject</a>
+			<br>
+			[fueljar.fuel]/[fueljar.fuel_max] Units
+			<br>
+			<br>
+			Injecting: [fuel_injection] units
+			<br>
+			<A href='?src=[REF(src)];strengthdown=1'>&lt;Strength Down</A>
+			<A href='?src=[REF(src)];strengthup=1'>Strength Up&gt;</A>
+			"}
+	
+	var/datum/browser/popup = new(user, "AMcontrol", name, 400, 600)
+	popup.set_content(dat)
+	popup.open()
+
+/*
 /obj/machinery/power/am_control_unit/ui_interact(mob/user)
 	. = ..()
 	if((get_dist(src, user) > 1) || (stat & (BROKEN|NOPOWER)))
@@ -319,7 +387,8 @@
 	user << browse(dat, "window=AMcontrol;size=420x500")
 	onclose(user, "AMcontrol")
 	return
-
+*/
+//LUMOS EDIT
 
 /obj/machinery/power/am_control_unit/Topic(href, href_list)
 	if(..())
@@ -345,14 +414,20 @@
 
 	if(href_list["strengthup"])
 		fuel_injection++
+		log_game("[key_name(usr)] has set the fuel injection to [fuel_injection]") // LUMOS EDIT
 
 	if(href_list["strengthdown"])
 		fuel_injection--
 		if(fuel_injection < 0)
 			fuel_injection = 0
+		log_game("[key_name(usr)] has set the fuel injection to [fuel_injection]") // LUMOS EDIT
 
 	if(href_list["refreshstability"])
 		check_core_stability()
 
 	updateDialog()
+	//LUMOS EDIT
+	if(usr)
+		interact(usr)
+	//LUMOS EDIT
 	return

@@ -28,6 +28,8 @@
 	var/excited = FALSE
 	var/datum/gas_mixture/turf/air
 
+	var/icy = FALSE // LUMOS EDIT
+
 	var/obj/effect/hotspot/active_hotspot
 	var/atmos_cooldown  = 0
 	var/planetary_atmos = FALSE //air will revert to initial_gas_mix over time
@@ -112,6 +114,8 @@
 	UNSETEMPTY(new_overlay_types)
 	src.atmos_overlay_types = new_overlay_types
 
+GLOBAL_VAR(iceoverlaymaster) // LUMOS EDIT
+
 /turf/open/proc/tile_graphic()
 	var/static/list/nonoverlaying_gases = typecache_of_gases_with_no_overlays()
 	if(!air)
@@ -125,6 +129,17 @@
 		var/gas_overlay = GLOB.meta_gas_overlays[id]
 		if(gas_overlay && gas > GLOB.meta_gas_visibility[id])
 			. += gas_overlay[min(FACTOR_GAS_VISIBLE_MAX, CEILING(gas / MOLES_GAS_VISIBLE_STEP, 1))]
+	// LUMOS EDIT START
+	if (icy)
+		if(!GLOB.iceoverlaymaster)
+			var/obj/effect/overlay/gas/iceoverlay = new()
+			iceoverlay.icon = 'icons/turf/overlays.dmi'
+			iceoverlay.icon_state = "snowfloor"
+			iceoverlay.layer = FROST_TURF_LAYER
+			iceoverlay.alpha = 255
+			GLOB.iceoverlaymaster = iceoverlay
+		. += GLOB.iceoverlaymaster
+	// LUMOS EDIT STOP
 
 /proc/typecache_of_gases_with_no_overlays()
 	. = list()
@@ -225,6 +240,13 @@
 			LAST_SHARE_CHECK
 
 	SSair.add_to_react_queue(src)
+
+	// LUMOS EDIT START
+	if(air.temperature < T0C && air.return_pressure() > 0.1)
+		icy = TRUE
+	else
+		icy = FALSE
+	// LUMOS EDIT STOP
 
 	if((!our_excited_group && !(our_air.temperature > MINIMUM_TEMPERATURE_START_SUPERCONDUCTION && consider_superconductivity(starting = TRUE))) \
 	  || (cached_atmos_cooldown > (EXCITED_GROUP_DISMANTLE_CYCLES * 2)))
