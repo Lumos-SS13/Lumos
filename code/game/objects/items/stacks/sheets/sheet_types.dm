@@ -24,6 +24,11 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("stool", /obj/structure/chair/stool, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bar stool", /obj/structure/chair/stool/bar, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bed", /obj/structure/bed, 2, one_per_turf = TRUE, on_floor = TRUE), \
+	null, \ // LUMOS Change
+	new/datum/stack_recipe("bench (middle)", /obj/structure/chair/bench/metal, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("bench (left)", /obj/structure/chair/bench/left/metal, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("bench (right)", /obj/structure/chair/bench/right/metal, one_per_turf = TRUE, on_floor = TRUE), \
+	null, \ // LUMOS Change
 	//CIT CHANGE - adds sofas to metal recipe list
 	new/datum/stack_recipe_list("sofas", list( \
 		new /datum/stack_recipe("sofa (middle)", /obj/structure/chair/sofa, one_per_turf = TRUE, on_floor = TRUE), \
@@ -233,7 +238,11 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("tiki mask", /obj/item/clothing/mask/gas/tiki_mask, 2), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
-	null, \
+	null, \ // LUMOS Change
+	new/datum/stack_recipe("bench (middle)", /obj/structure/chair/bench, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("bench (left)", /obj/structure/chair/bench/left, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("bench (right)", /obj/structure/chair/bench/right, one_per_turf = TRUE, on_floor = TRUE), \
+	null, \ // LUMOS Change
 	new/datum/stack_recipe_list("pews", list(
 		new /datum/stack_recipe("pew (middle)", /obj/structure/chair/pew, 3, one_per_turf = TRUE, on_floor = TRUE),\
 		new /datum/stack_recipe("pew (left)", /obj/structure/chair/pew/left, 3, one_per_turf = TRUE, on_floor = TRUE),\
