@@ -226,6 +226,15 @@
 	icon_state = "vortex core"
 	anomaly_type = /obj/effect/anomaly/bhole
 
+
+// LUMOS EDIT START
+/obj/item/assembly/signaler/anomaly/radiation
+	name = "\improper radiation anomaly core"
+	desc = "The neutralized core of a radiation anomaly. It keeps pulsing an ominous green. It'd probably be valuable for research."
+	icon_state = "anomaly core"
+	anomaly_type = /obj/effect/anomaly/radiation
+// LUMOS EDIT STOP
+
 /obj/item/assembly/signaler/cyborg
 
 /obj/item/assembly/signaler/cyborg/attackby(obj/item/W, mob/user, params)

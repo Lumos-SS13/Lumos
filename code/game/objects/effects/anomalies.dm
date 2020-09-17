@@ -324,3 +324,22 @@
 	//Damaging the turf
 	if( T && prob(turf_removal_chance) )
 		T.ex_act(ex_act_force)
+
+/obj/effect/anomaly/radiation
+	name = "radiation anomaly"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "bluespace"
+	density = TRUE
+
+/obj/effect/anomaly/radiation/anomalyEffect()
+	..()
+	for(var/i = 1 to 2)
+		fire_nuclear_particle_wimpy()
+	radiation_pulse(src, 100, 2)
+
+/obj/effect/anomaly/radiation/detonate()
+	for(var/i = 1 to 72)
+		var/angle = i * 10
+		fire_nuclear_particle_wimpy(angle)
+		sleep(1)
+	
