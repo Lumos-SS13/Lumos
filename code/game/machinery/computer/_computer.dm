@@ -28,8 +28,11 @@
 /obj/machinery/computer/Destroy()
 	QDEL_NULL(circuit)
 	for(var/obj/machinery/computer/selected in range(1, src))
-		addtimer(CALLBACK(selected, .update_overlays), 5)
+		addtimer(CALLBACK(selected, .proc/fuck_shit), 5)
 	return ..()
+
+/obj/machinery/computer/proc/fuck_shit()
+	src.update_overlays()
 
 /obj/machinery/computer/process()
 	if(stat & (NOPOWER|BROKEN))
