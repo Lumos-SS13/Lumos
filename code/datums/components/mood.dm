@@ -147,7 +147,7 @@
 	var/mob/living/owner = parent
 	//skyrat edit - screwy mood
 	if(!HAS_TRAIT(owner, TRAIT_SCREWY_MOOD))
-		if(owner.client && owner.hud_used)
+		if(owner.client && owner.hud_used && screen_obj)
 			if(sanity < 25)
 				screen_obj.icon_state = "mood_insane"
 			else if (owner.has_status_effect(/datum/status_effect/chem/enthrall))//Fermichem enthral chem, maybe change?
@@ -155,7 +155,8 @@
 			else
 				screen_obj.icon_state = "mood[mood_level]"
 	else
-		screen_obj.icon_state = "mood5"
+		if(screen_obj)
+			screen_obj.icon_state = "mood5"
 	//
 
 /datum/component/mood/process() //Called on SSobj process
