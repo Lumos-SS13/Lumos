@@ -169,7 +169,8 @@
 	antag_candidates = shuffle(antag_candidates)
 
 	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		replacementmode.restricted_jobs += replacementmode.protected_jobs
+		if(replacementmode)
+			replacementmode.restricted_jobs += replacementmode.protected_jobs
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		replacementmode.restricted_jobs += "Assistant"
 

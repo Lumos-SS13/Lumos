@@ -146,6 +146,5 @@
 	/// Last asset send job id.
 	var/last_asset_job = 0
 	var/last_completed_asset_job = 0
-	
 	//world.time of when the crew manifest can be accessed
 	var/crew_manifest_delay

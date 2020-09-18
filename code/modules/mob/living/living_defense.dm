@@ -123,12 +123,13 @@
 	// Throwingdatum can be null if someone had an accident() while slipping with an item in hand.
 	var/obj/item/I
 	var/throwpower = 30
+	var/total_damage = 0
 	if(isitem(AM))
 		I = AM
 		throwpower = I.throwforce
+		total_damage = I.throwforce
 	var/impacting_zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
 	var/list/block_return = list()
-	var/total_damage = I.throwforce
 	if(mob_run_block(AM, throwpower, "\the [AM.name]", ATTACK_TYPE_THROWN, 0, throwingdatum?.thrower, impacting_zone, block_return) & BLOCK_SUCCESS)
 		hitpush = FALSE
 		skipcatch = TRUE
