@@ -32,7 +32,7 @@
 	return ..()
 
 /obj/machinery/computer/proc/fuck_shit()
-	src.update_overlays()
+	update_overlays()
 
 /obj/machinery/computer/process()
 	if(stat & (NOPOWER|BROKEN))
