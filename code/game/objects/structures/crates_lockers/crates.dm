@@ -16,6 +16,7 @@
 	material_drop = /obj/item/stack/sheet/plasteel
 	material_drop_amount = 5
 	var/obj/item/paper/fluff/jobs/cargo/manifest/manifest
+	door_anim_time = 0 // no animation LUMOS EDIT
 
 /obj/structure/closet/crate/New()
 	..()
