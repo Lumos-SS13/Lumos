@@ -225,8 +225,11 @@
 			if("prisoner")
 				icon_state = "prisoner"
 		update_icon()
+	else
+		return ..()
 
 /obj/structure/closet/update_icon()
+	. = ..()
 	cut_overlays()
 	if(!opened)
 		layer = OBJ_LAYER
@@ -419,7 +422,8 @@
 		density = FALSE
 	climb_time *= 0.5 //it's faster to climb onto an open thing
 	dump_contents()
-	animate_door(FALSE)
+	if(!istype(src, /obj/structure/closet/crate))
+		animate_door(FALSE)
 	update_icon()
 	return 1
 
@@ -482,7 +486,8 @@
 	climb_time = initial(climb_time)
 	opened = FALSE
 	density = TRUE
-	animate_door(TRUE)
+	if(!istype(src, /obj/structure/closet/crate))
+		animate_door(TRUE)
 	update_icon()
 	return TRUE
 
