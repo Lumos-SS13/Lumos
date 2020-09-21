@@ -26,4 +26,5 @@
 /obj/item/fish_tool/fish_food
 	name = "fish food"
 	desc = "Food meant for fish, you can't eat... don't even try."
+	icon_state = "fish_food"
 	var/food_left = 100

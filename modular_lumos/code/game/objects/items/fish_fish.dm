@@ -5,6 +5,36 @@
 #define MALE_FISH	0
 #define FEMALE_FISH	1
 
+/obj/item/fish_box
+	name = "fish box"
+	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon_state = "box"
+	desc = "A box that is storing a fish. Just open it up and get your two fishes. Random sexes!"
+
+	var/obj/item/fishy/inside_fish
+
+/obj/item/fish_box/salmon
+	name = "salmon box"
+	inside_fish = /obj/item/fishy/salmon
+
+/obj/item/fish_box/shrimp
+	name = "shrimp box"
+	inside_fish = /obj/item/fishy/shrimp
+
+/obj/item/fish_box/lobster
+	name = "lobster box"
+	inside_fish = /obj/item/fishy/lobster
+
+/obj/item/fish_box/catfish
+	name = "catfish box"
+	inside_fish = /obj/item/fishy/catfish
+
+/obj/item/fish_box/attack_self(mob/user)
+	if(inside_fish)
+		for(var/i in 1 to 2)
+			new inside_fish(get_turf(user))
+		qdel(src)
+
 /obj/item/fishy
 	name = "fish"
 	desc = "parent fish, do not use"
@@ -66,9 +96,6 @@
 	. = ..()
 
 /obj/item/fishy/process()
-	if(!in_tank)
-		health--
-
 	if(dead)
 		return
 
@@ -78,7 +105,7 @@
 	timed_aging = world.time + 5 SECONDS
 
 	age++
-	if(prob(age / 5))
+	if(prob(age / 10))
 		switch(ageStatus)
 			if(YOUNG_FISH)
 				ageStatus = MIDDLE_FISH
@@ -90,6 +117,16 @@
 				maxHealth--
 		age = 0
 
+	hunger--
+	if(hunger <= 0)
+		hunger = 0
+		health--
+	else if(hunger > 0)
+		health++
+
+	if(!in_tank)
+		health -= 2
+
 	if(health > maxHealth)
 		health = maxHealth
 	if(health <= 0)
@@ -97,12 +134,6 @@
 		dead = TRUE
 		return
 	
-	hunger--
-	if(hunger <= 0)
-		hunger = 0
-		health--
-	else
-		health++
 
 /obj/item/fishy/attackby(obj/item/I, mob/living/user, params)
 	if(I.get_sharpness())
@@ -111,13 +142,14 @@
 		if(!do_after(user, 4 SECONDS, FALSE, src))
 			return
 		for(var/spawned_meat in meat)
-			new spawned_meat(get_turf(src))
+			for(var/i in 1 to rand(1,3))
+				new spawned_meat(get_turf(src))
 		new /obj/effect/gibspawner/generic(get_turf(src))
 		qdel(src)
 		return
 	else if(istype(I, /obj/item/fish_tool/analyzer))
 		var/age_string = null
-		switch(fish.ageStatus)
+		switch(ageStatus)
 			if(0)
 				age_string = "YOUNG"
 			if(1)
