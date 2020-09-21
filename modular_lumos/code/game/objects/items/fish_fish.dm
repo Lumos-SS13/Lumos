@@ -66,11 +66,15 @@
 	. = ..()
 
 /obj/item/fishy/process()
+	if(!in_tank)
+		health--
+
 	if(dead)
 		return
 
 	if(world.time < timed_aging)
 		return
+
 	timed_aging = world.time + 5 SECONDS
 
 	age++
@@ -86,8 +90,6 @@
 				maxHealth--
 		age = 0
 
-	if(!in_tank)
-		health--
 	if(health > maxHealth)
 		health = maxHealth
 	if(health <= 0)
@@ -112,25 +114,49 @@
 			new spawned_meat(get_turf(src))
 		new /obj/effect/gibspawner/generic(get_turf(src))
 		qdel(src)
+		return
+	else if(istype(I, /obj/item/fish_tool/analyzer))
+		var/age_string = null
+		switch(fish.ageStatus)
+			if(0)
+				age_string = "YOUNG"
+			if(1)
+				age_string = "MIDDLE"
+			if(2)
+				age_string = "OLD"
+		playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
+		to_chat(user, "<span class='notice'>---</span>")
+		to_chat(user, "<span class='notice'>[name]:</span>")
+		to_chat(user, "<span class='notice'>Sex: [sex ? "FEMALE" : "MALE"]</span>")
+		to_chat(user, "<span class='notice'>Age: [age_string]</span>")
+		to_chat(user, "<span class='notice'>Breedable: [breedable ? "TRUE" : "FALSE"]</span>")
+		to_chat(user, "<span class='notice'>Health: [health]/[maxHealth]</span>")
+		to_chat(user, "<span class='notice'>Hunger: [hunger]/[maxHunger]</span>")
+		to_chat(user, "<span class='notice'>---</span>")
+		return
 	else
 		return ..()
 
 /obj/item/fishy/salmon
+	name = "salmon"
 	spawned_egg = /obj/item/fishy_egg/salmon
 	icon_state = "salmon"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw)
 
 /obj/item/fishy/shrimp
+	name = "shrimp"
 	spawned_egg = /obj/item/fishy_egg/shrimp
 	icon_state = "shrimp"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
 
 /obj/item/fishy/lobster
+	name = "lobster"
 	spawned_egg = /obj/item/fishy_egg/lobster
 	icon_state = "lobster"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail)
 
 /obj/item/fishy/catfish
+	name = "lobster"
 	spawned_egg = /obj/item/fishy_egg/catfish
 	icon_state = "catfish"
 	meat = list(/obj/item/reagent_containers/food/snacks/catfish_raw)

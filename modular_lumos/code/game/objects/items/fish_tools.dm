@@ -18,6 +18,11 @@
 	desc = "A tool to euthanize fertilized fish eggs."
 	icon_state = "egg_scoop"
 
+/obj/item/fish_tool/analyzer
+	name = "fish analyzer"
+	desc = "A tool to analyze fish, or the tank."
+	icon_state = "fish_analyzer"
+
 /obj/item/fish_tool/fish_food
 	name = "fish food"
 	desc = "Food meant for fish, you can't eat... don't even try."
