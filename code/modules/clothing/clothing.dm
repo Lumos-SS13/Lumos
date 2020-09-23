@@ -410,3 +410,27 @@ BLIND     // can't see anything
 		return
 	if(prob(0.2))
 		to_chat(L, "<span class='warning'>The damaged threads on your [src.name] chafe!</span>")
+
+/obj/item/clothing/ears/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/ears.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/ears.dmi'
+
+/obj/item/clothing/glasses/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/eyes.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/glasses.dmi'
+
+/obj/item/clothing/gloves/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/hands.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/gloves.dmi'
+
+/obj/item/clothing/head/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/head.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/hats.dmi'
+
+/obj/item/clothing/neck/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/neck.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/neck.dmi'
+
+/obj/item/clothing/mask/yogs
+	alternate_worn_icon = 'modular_lumos/icons/mob/mask.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/masks.dmi'

@@ -101,6 +101,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/fax_panel,
 	/client/proc/cmd_admin_toggle_fov,
 	/client/proc/roll_dices					//CIT CHANGE - Adds dice verb
+	/client/proc/spawn_floor_cluwne,
 	))
 
 /world/proc/AVerbsServer()
