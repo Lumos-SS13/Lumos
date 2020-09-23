@@ -1184,6 +1184,15 @@ obj/item/storage/box/stingbangs
 		new /obj/item/reagent_containers/food/snacks/carpmeat(src)
 	new /obj/item/reagent_containers/food/snacks/meat/rawcrab(src)
 
+/obj/item/storage/box/ingredients/fish_starting
+	theme_name = "starting fish"
+
+/obj/item/storage/box/ingredients/fish_starting/PopulateContents()
+	new /obj/item/fish_box/salmon(src)
+	new /obj/item/fish_box/shrimp(src)
+	new /obj/item/fish_box/lobster(src)
+	new /obj/item/fish_box/catfish(src)
+
 /obj/item/storage/box/emptysandbags
 	name = "box of empty sandbags"
 
