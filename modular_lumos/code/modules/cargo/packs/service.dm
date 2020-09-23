@@ -14,7 +14,7 @@
 	name = "Shrimp Box Crate"
 	desc = "Nanotrasen has gotten into aquaculture! For an unlimited time, you may purchase fish and breed your monsters! This contains shrimp."
 	cost = 1000
-	contains = list(/obj/item/fish_box/salmon)
+	contains = list(/obj/item/fish_box/shrimp)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "shrimp box crate"
 
@@ -22,7 +22,7 @@
 	name = "Lobster Box Crate"
 	desc = "Nanotrasen has gotten into aquaculture! For an unlimited time, you may purchase fish and breed your monsters! This contains lobster."
 	cost = 1000
-	contains = list(/obj/item/fish_box/salmon)
+	contains = list(/obj/item/fish_box/lobster)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "lobster box crate"
 
@@ -30,7 +30,7 @@
 	name = "Catfish Box Crate"
 	desc = "Nanotrasen has gotten into aquaculture! For an unlimited time, you may purchase fish and breed your monsters! This contains catfish."
 	cost = 1000
-	contains = list(/obj/item/fish_box/salmon)
+	contains = list(/obj/item/fish_box/catfish)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "catfish box crate"
 
