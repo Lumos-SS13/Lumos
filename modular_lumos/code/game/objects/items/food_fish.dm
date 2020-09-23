@@ -131,7 +131,7 @@
 	name = "sake sushi"
 	desc = "Rice with raw salmon... mmm, fish."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "sushi_Saki"
+	icon_state = "sushi_Sake"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/mercury = 2, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("salmon" = 15, "salt" = 3, "rice" = 3, "seaweed" = 3)
 	foodtype = MEAT | GRAIN | VEGETABLES
