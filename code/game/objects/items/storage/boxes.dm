@@ -106,6 +106,16 @@
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/reagent_containers/hypospray/medipen(src)
 
+	// LUMOS EDIT START - SNAXIPICKS
+	if(SSmapping.stat_map_name == "Snow Taxi")
+		if(!ishuman(loc))
+			return
+		var/mob/living/carbon/human/H = loc
+		if(H.job == "Prisoner")
+			return
+		new /obj/item/pickaxe/mini(src)
+	// LUMOS EDIT END - SNAXIPICKS
+
 	// Skyrat change: check for different race first, else give oxy internals
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
@@ -116,16 +126,6 @@
 		return
 
 	new /obj/item/tank/internals/emergency_oxygen(src)
-
-// LUMOS EDIT START - SNAXIPICKS
-	if(SSmapping.stat_map_name == "Snow Taxi")
-		if(!ishuman(loc))
-			return
-		var/mob/living/carbon/human/H = loc
-		if(H.job == "Prisoner")
-			return
-		new /obj/item/pickaxe/mini(src)
-// LUMOS EDIT END - SNAXIPICKS
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
@@ -152,6 +152,13 @@
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/reagent_containers/hypospray/medipen(src)
 
+	// LUMOS EDIT START - SNAXIPICKS
+	if(SSmapping.stat_map_name == "Snow Taxi")
+		if(!ishuman(loc))
+			return
+		new /obj/item/pickaxe/mini(src)
+	// LUMOS EDIT END - SNAXIPICKS
+
 	// Skyrat change: check for different race first, else give oxy internals
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
@@ -162,13 +169,6 @@
 		return
 
 	new /obj/item/tank/internals/emergency_oxygen/engi(src)
-
-// LUMOS EDIT START - SNAXIPICKS
-	if(SSmapping.stat_map_name == "Snow Taxi")
-		if(!ishuman(loc))
-			return
-		new /obj/item/pickaxe/mini(src)
-// LUMOS EDIT END - SNAXIPICKS
 
 /obj/item/storage/box/engineer/radio/PopulateContents()
 	..() // we want the regular items too.
