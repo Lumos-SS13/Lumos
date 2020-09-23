@@ -1,6 +1,6 @@
-#define YOUNG_FISH 	0
-#define MIDDLE_FISH 1
-#define OLD_FISH 	2
+#define YOUNG_FISH 	2
+#define MIDDLE_FISH 0
+#define OLD_FISH 	7
 
 #define MALE_FISH	0
 #define FEMALE_FISH	1
@@ -169,7 +169,7 @@
 		</center>
 		"}
 
-	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 300)
+	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 225)
 	popup.set_content(dat)
 	popup.open()
 	

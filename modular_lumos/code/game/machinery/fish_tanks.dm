@@ -101,7 +101,7 @@
 		if(food.food_left >= 5)
 			food.food_left -= 5
 			current_food += 5
-			food.desc = "[initial[food.desc]] Food Remaining: [food.food_left]"
+			food.desc = "[initial(food.desc)] Food Remaining: [food.food_left]"
 			playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
 		return
 	else if(istype(I, /obj/item/fish_tool/analyzer))
@@ -144,7 +144,7 @@
 				</div>
 			</center>"}
 	
-	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 300)
+	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 500)
 	popup.set_content(dat)
 	popup.open()
 
