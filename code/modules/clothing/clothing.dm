@@ -412,25 +412,45 @@ BLIND     // can't see anything
 		to_chat(L, "<span class='warning'>The damaged threads on your [src.name] chafe!</span>")
 
 /obj/item/clothing/ears/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/ears.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/ears.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/ears.dmi'
 
 /obj/item/clothing/glasses/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/eyes.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/eyes.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/glasses.dmi'
 
 /obj/item/clothing/gloves/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/hands.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/hands.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/gloves.dmi'
 
 /obj/item/clothing/head/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/head.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/head.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/hats.dmi'
 
 /obj/item/clothing/neck/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/neck.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/neck.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/neck.dmi'
 
 /obj/item/clothing/mask/yogs
-	alternate_worn_icon = 'modular_lumos/icons/mob/mask.dmi'
+	mob_overlay_icon = 'modular_lumos/icons/mob/mask.dmi'
 	icon = 'modular_lumos/icons/obj/clothing/masks.dmi'
+
+/obj/item/clothing/shoes/yogs
+	mob_overlay_icon = 'modular_lumos/icons/mob/feet.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/shoes.dmi'
+
+/obj/item/clothing/suit/yogs
+	mob_overlay_icon = 'modular_lumos/icons/mob/suit.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/suits.dmi'
+
+/obj/item/clothing/under/yogs
+	mob_overlay_icon = 'modular_lumos/icons/mob/uniform.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/uniforms.dmi'
+
+/obj/item/clothing/back/yogs
+	mob_overlay_icon = 'modular_lumos/icons/mob/back.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/back.dmi'
+
+/obj/item/storage/belt/yogs
+	mob_overlay_icon = 'modular_lumos/icons/mob/belt.dmi'
+	icon = 'modular_lumos/icons/obj/clothing/belts.dmi'
