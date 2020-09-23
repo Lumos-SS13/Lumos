@@ -34,7 +34,7 @@
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
-/datum/design/fish_brush
+/datum/design/fish_egg_killer
 	name = "Fish Egg Killer"
 	id = "fish_egg_killer"
 	build_type = PROTOLATHE

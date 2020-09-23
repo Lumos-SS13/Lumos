@@ -1,6 +1,6 @@
 /obj/structure/fish_tank_base
 	name = "unfinished fish tank"
-	desc = "A tank that requires some reinforced glass"
+	desc = "A tank that requires some glass"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "tanki1"
 
@@ -74,8 +74,8 @@
 		update_icon()
 		return
 	else if(istype(I, /obj/item/fish_tool/clippers))
-		if(seaweed_grow >= 25)
-			seaweed_grow -= 25
+		if(seaweed_grow >= 50)
+			seaweed_grow -= 50
 			new /obj/item/reagent_containers/food/snacks/sea_weed(get_turf(src))
 		update_icon()
 		return
@@ -101,39 +101,54 @@
 		if(food.food_left >= 5)
 			food.food_left -= 5
 			current_food += 5
+			food.desc = "[initial[food.desc]] Food Remaining: [food.food_left]"
+			playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
 		return
 	else if(istype(I, /obj/item/fish_tool/analyzer))
 		playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
-		to_chat(user, "<span class='notice'>---</span>")
-		to_chat(user, "<span class='notice'>Dirty: [dirty]/255")
-		to_chat(user, "<span class='notice'>Seaweed: [seaweed_grow]/255")
-		to_chat(user, "<span class='notice'>Food: [current_food]")
-		to_chat(user, "<span class='notice'>---</span>")
-		var/fish_number = 1
-		for(var/obj/item/fishy/fish in contents)
-			var/age_string = null
-			switch(fish.ageStatus)
-				if(0)
-					age_string = "YOUNG"
-				if(1)
-					age_string = "MIDDLE"
-				if(2)
-					age_string = "OLD"
-			to_chat(user, "<span class='notice'>---</span>")
-			to_chat(user, "<span class='notice'>[fish.name] [fish_number]:</span>")
-			to_chat(user, "<span class='notice'>Sex: [fish.sex ? "FEMALE" : "MALE"]</span>")
-			to_chat(user, "<span class='notice'>Age: [age_string]</span>")
-			to_chat(user, "<span class='notice'>Breedable: [fish.breedable ? "TRUE" : "FALSE"]</span>")
-			to_chat(user, "<span class='notice'>Health: [fish.health]/[fish.maxHealth]</span>")
-			to_chat(user, "<span class='notice'>Hunger: [fish.hunger]/[fish.maxHunger]</span>")
-			to_chat(user, "<span class='notice'>---</span>")
-			fish_number++
+		interact(user)
 		return
 	else
 		return ..()
 
+/obj/structure/fish_tank/interact(mob/user)
+	var/dat = {"
+		<center>
+			<div class='statusDisplay'>
+				Fish Analyzer
+			</div>
+			<div class='statusDisplay'>
+				Dirty: [dirty] / 255<br>
+				Seaweed: [seaweed_grow]<br>
+				Food: [current_food]<br>
+			</div>
+		</center>"}
+	for(var/obj/item/fishy/fish in contents)
+		var/age_string = null
+		switch(fish.ageStatus)
+			if(0)
+				age_string = "YOUNG"
+			if(1)
+				age_string = "MIDDLE"
+			if(2)
+				age_string = "OLD"
+		dat += {"
+			<center>
+				<div class='statusDisplay'>
+					Fish One: [fish.name]<br>
+					<br>
+					Sex: [fish.sex ? "FEMALE" : "MALE"]<br>
+					Age: [age_string]<br>
+					Health: [fish.health]/[fish.maxHealth]<br>
+					Hunger: [fish.hunger]/[fish.maxHunger]<br>
+				</div>
+			</center>"}
+	
+	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 300)
+	popup.set_content(dat)
+	popup.open()
+
 /obj/structure/fish_tank/attack_hand(mob/living/user)
-	. = ..()
 	if(contents.len > 0)
 		var/atom/A = contents[contents.len] //Get the most recent hidden thing
 		if(istype(A, /obj/item/fishy))
@@ -187,6 +202,7 @@
 		seaweed_grow++
 	var/obj/item/fishy/fish1 = null
 	var/obj/item/fishy/fish2 = null
+	var/age_dividor = 1
 	for(var/obj/item/fishy/fish in contents)
 		if(!fish1)
 			fish1 = fish
@@ -197,8 +213,8 @@
 			fish.hunger += 2
 		if(dirty >= 100)
 			fish.health--
+		age_dividor += fish.ageStatus
 	if(istype(fish1, fish2.type))
 		if(fish1.sex != fish2.sex)
-			if(fish1.breedable && fish2.breedable)
-				if(prob(7))
-					new fish1.spawned_egg(get_turf(src))
+			if(prob(15 / age_dividor))
+				new fish1.spawned_egg(get_turf(src))

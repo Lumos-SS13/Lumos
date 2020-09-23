@@ -71,10 +71,6 @@
 	//if dead, the tank will start to get dirty faster, and the other fish will start to lose health as well
 	var/dead = FALSE
 
-	///Breedable: the status if it can breed
-	//breedable only at the middle age. 
-	var/breedable = FALSE
-
 	//this is for the process to do every 5 seconds
 	var/timed_aging
 
@@ -109,10 +105,8 @@
 		switch(ageStatus)
 			if(YOUNG_FISH)
 				ageStatus = MIDDLE_FISH
-				breedable = TRUE
 			if(MIDDLE_FISH)
 				ageStatus = OLD_FISH
-				breedable = FALSE
 			if(OLD_FISH)
 				maxHealth--
 		age = 0
@@ -148,47 +142,61 @@
 		qdel(src)
 		return
 	else if(istype(I, /obj/item/fish_tool/analyzer))
-		var/age_string = null
-		switch(ageStatus)
-			if(0)
-				age_string = "YOUNG"
-			if(1)
-				age_string = "MIDDLE"
-			if(2)
-				age_string = "OLD"
-		playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
-		to_chat(user, "<span class='notice'>---</span>")
-		to_chat(user, "<span class='notice'>[name]:</span>")
-		to_chat(user, "<span class='notice'>Sex: [sex ? "FEMALE" : "MALE"]</span>")
-		to_chat(user, "<span class='notice'>Age: [age_string]</span>")
-		to_chat(user, "<span class='notice'>Breedable: [breedable ? "TRUE" : "FALSE"]</span>")
-		to_chat(user, "<span class='notice'>Health: [health]/[maxHealth]</span>")
-		to_chat(user, "<span class='notice'>Hunger: [hunger]/[maxHunger]</span>")
-		to_chat(user, "<span class='notice'>---</span>")
+		interact(user)
 		return
 	else
 		return ..()
 
+/obj/item/fishy/interact(mob/user)
+	var/age_string = null
+	switch(ageStatus)
+		if(0)
+			age_string = "YOUNG"
+		if(1)
+			age_string = "MIDDLE"
+		if(2)
+			age_string = "OLD"
+	var/dat = {"
+		<center>
+			<div class='statusDisplay'>
+				Fish One: [name]<br>
+				<br>
+				Sex: [sex ? "FEMALE" : "MALE"]<br>
+				Age: [age_string]<br>
+				Health: [health]/[maxHealth]<br>
+				Hunger: [hunger]/[maxHunger]
+			</div>
+		</center>
+		"}
+
+	var/datum/browser/popup = new(user, "fish_analyzer", name, 225, 300)
+	popup.set_content(dat)
+	popup.open()
+	
 /obj/item/fishy/salmon
 	name = "salmon"
+	desc = "A salmon... fish that love to swim back to home."
 	spawned_egg = /obj/item/fishy_egg/salmon
 	icon_state = "salmon"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw)
 
 /obj/item/fishy/shrimp
 	name = "shrimp"
+	desc = "A shrimp... look at it's beady little eyes!"
 	spawned_egg = /obj/item/fishy_egg/shrimp
 	icon_state = "shrimp"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
 
 /obj/item/fishy/lobster
 	name = "lobster"
+	desc = "A lobster... look at it's beady little eyes!"
 	spawned_egg = /obj/item/fishy_egg/lobster
 	icon_state = "lobster"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail)
 
 /obj/item/fishy/catfish
-	name = "lobster"
+	name = "catfish"
+	desc = "A catfish... careful, it can hurt you."
 	spawned_egg = /obj/item/fishy_egg/catfish
 	icon_state = "catfish"
 	meat = list(/obj/item/reagent_containers/food/snacks/catfish_raw)
