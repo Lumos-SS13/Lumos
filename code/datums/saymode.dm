@@ -71,6 +71,16 @@
 		user.alien_talk(message)
 	return FALSE
 
+// LUMOS EDIT START - VINES
+/datum/saymode/venus
+	key = "v"
+	mode = MODE_VENUS
+
+/datum/saymode/venus/handle_message(mob/living/user, message, datum/language/language)
+	if(user.venuscheck())
+		user.venus_talk(message)
+	return FALSE
+// LUMOS EDIT STOP - VINES
 
 /datum/saymode/vocalcords
 	key = MODE_KEY_VOCALCORDS
