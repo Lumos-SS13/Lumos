@@ -53,9 +53,10 @@
 	. = ..()
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if(!isvineimmune(L))
-			L.adjustBruteLoss(5)
-			to_chat(L, "<span class='alert'>You cut yourself on the thorny vines.</span>")
+		if(isvineimmune(L))
+			return
+		L.adjustBruteLoss(10)
+		to_chat(L, "<span class='alert'>You cut yourself on the thorny vines.</span>")
 
 /**
   * Venus Human Trap
@@ -79,8 +80,11 @@
 	ranged = TRUE
 	harm_intent_damage = 5
 	obj_damage = 60
-	melee_damage_lower = 25
-	melee_damage_upper = 25
+	//SKYRAT EDIT START - VINES
+	//melee_damage_lower = 25 ORIGINAL
+	//melee_damage_upper = 25 ORIGINAL
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -111,6 +115,14 @@
 	if(!(. = ..()))
 		return
 	pull_vines()
+	//LUMOS EDIT START - VINES
+	var/turf/source_turf = get_turf(src)
+	if(!(locate(/obj/structure/spacevine) in source_turf))
+		adjustHealth(maxHealth*0.025) //take 2.5% of max health as damage when not near the vine
+		return
+	adjustHealth(-maxHealth*0.05)
+	new /obj/effect/temp_visual/heal(source_turf)
+	//LUMOS EDIT STOP - VINES
 
 /mob/living/simple_animal/hostile/venus_human_trap/AttackingTarget()
 	. = ..()
@@ -201,3 +213,25 @@
   */
 mob/living/simple_animal/hostile/venus_human_trap/proc/remove_vine(datum/beam/vine, force)
 	vines -= vine
+
+// LUMOS EDIT START - VINES
+/mob/living/proc/venus_talk(message, shown_name = real_name)
+	src.log_talk(message, LOG_SAY)
+	message = trim(message)
+	if(!message)
+		return
+
+	var/message_a = say_quote(message)
+	var/rendered = "<i><span class='nicegreen'>Hivemind, <span class='name'>[shown_name]</span> <span class='message'>[message_a]</span></span></i>"
+	for(var/mob/S in GLOB.player_list)
+		if(!S.stat && S.venuscheck())
+			to_chat(S, rendered)
+		if(S in GLOB.dead_mob_list)
+			var/link = FOLLOW_LINK(S, src)
+			to_chat(S, "[link] [rendered]")
+
+/mob/living/venuscheck()
+	if(istype(src, /mob/living/simple_animal/hostile/venus_human_trap))
+		return TRUE
+	return FALSE
+// LUMOS EDIT STOP - VINES
