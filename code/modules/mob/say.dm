@@ -145,6 +145,11 @@
 /mob/proc/hivecheck()
 	return 0
 
+// LUMOS EDIT START - VINES
+/mob/proc/venuscheck()
+	return 0
+// LUMOS EDIT STOP - VINES
+
 /mob/proc/lingcheck()
 	return LINGHIVE_NONE
 
