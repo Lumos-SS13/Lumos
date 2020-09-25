@@ -31,13 +31,10 @@ Difficulty: TOUHOU
 	move_to_delay = 5
 	ranged = 1
 	del_on_death = 1
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
-	loot = list(/obj/structure/closet/crate/necropolis/colossus)
+	loot = list(/obj/structure/closet/crate/necropolis/smchargedplasma)
 	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/animalhide/ashdrake = 10, /obj/item/stack/sheet/bone = 30)
 	deathmessage = "disintegrates, leaving a glowing core in its wake."
 	death_sound = 'sound/magic/demon_dies.ogg'
-
-	var/anom_list = list(/obj/effect/anomaly/flux, /obj/effect/anomaly/pyro)
 
 /mob/living/simple_animal/hostile/megafauna/smchargedplasma/devour(mob/living/L)
 	visible_message("<span class='colossus'>[src] disintegrates [L]!</span>")
@@ -144,3 +141,34 @@ Difficulty: TOUHOU
 /atom/proc/fire_nuclear_particle_simple(angle = rand(0,360)) //used by fusion to fire random nuclear particles. Fires one particle in a random direction.
 	var/obj/item/projectile/energy/nuclear_particle_simple/P = new /obj/item/projectile/energy/nuclear_particle_simple(src)
 	P.fire(angle)
+
+/obj/item/gravity_pull
+	name = "gravity staff"
+	desc = "Pull everyone around you, just like the monster did."
+	icon = 'modular_lumos/icons/obj/wizard.dmi'
+	icon_state = "grav_staff"
+
+	var/on_cooldown = FALSE
+
+/obj/item/gravity_pull/attack_self(mob/user)
+	if(on_cooldown)
+		to_chat(user, "<span class='warning'>Still on cooldown, wait!</span>")
+		return
+	on_cooldown = TRUE
+	addtimer(CALLBACK(src, .proc/off_cooldown), 10 SECONDS)
+	for(var/mob/living/L in viewers(user))
+		step_towards(L, user)
+		step_towards(L, user)
+		step_towards(L, user)
+		step_towards(L, user)
+		step_towards(L, user)
+
+/obj/item/gravity_pull/proc/off_cooldown()
+	on_cooldown = FALSE
+
+/obj/structure/closet/crate/necropolis/smchargedplasma
+	name = "super charged chest"
+
+/obj/structure/closet/crate/necropolis/smchargedplasma/PopulateContents()
+	new /obj/item/gravity_pull(src)
+	
