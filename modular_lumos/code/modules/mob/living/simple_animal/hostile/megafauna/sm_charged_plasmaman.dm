@@ -4,7 +4,7 @@ SUPERMATTER CHARGED PLASMAMAN
 
 The supermatter-charged plasmaman was an ancient crewmember who became stranded on what is now know as lavaland.
 
-Difficulty: Very Hard
+Difficulty: TOUHOU
 
 */
 
@@ -24,11 +24,11 @@ Difficulty: Very Hard
 	friendly_verb_simple = "pulses sporadically"
 	icon = 'modular_lumos/icons/mob/human.dmi'
 	speak_emote = list("roars")
-	armour_penetration = 40
-	melee_damage_lower = 20
-	melee_damage_upper = 20
+	armour_penetration = 80
+	melee_damage_lower = 40
+	melee_damage_upper = 40
 	speed = 0
-	move_to_delay = 10
+	move_to_delay = 5
 	ranged = 1
 	del_on_death = 1
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
@@ -52,40 +52,47 @@ Difficulty: Very Hard
 	for(var/mob/living/silicon/robot/R in range(14, src))
 		step_towards(R, src)
 	emp_rad_wave()
+	var/for_or_back = pick(list(-1,1))
 	switch(health)
 		if(2000 to INFINITY)
-			ranged_cooldown = world.time + 5 SECONDS
+			ranged_cooldown = world.time + 3 SECONDS
 			if(prob(25))
-				rad_wheel()
+				rad_wheel(backwards = for_or_back)
 			else
 				blast_shot()
 		if(1000 to 1999)
-			ranged_cooldown = world.time + 3 SECONDS
-			if(prob(25))
-				rad_wheel(double = TRUE)
+			ranged_cooldown = world.time + 2 SECONDS
+			if(prob(35))
+				rad_wheel(double = TRUE, backwards = for_or_back)
 			else
 				blast_shot(double = TRUE)
 		if(-INFINITY to 999)
 			ranged_cooldown = world.time + 1 SECONDS
-			if(prob(25))
-				rad_wheel(double = TRUE, delay = FALSE)
+			if(prob(35))
+				rad_wheel(double = TRUE, delay = FALSE, amount = 3, backwards = for_or_back, opening = TRUE)
 			else
 				blast_shot(double = TRUE, delay = FALSE)
+			for(var/mob/living/carbon/human/H in range(14, src))
+				step_towards(H, src)
 
 /mob/living/simple_animal/hostile/megafauna/smchargedplasma/Initialize()
 	. = ..()
 	internal = new/obj/item/gps/internal/smcharged_plasma(src)
 
-/mob/living/simple_animal/hostile/megafauna/smchargedplasma/proc/rad_wheel(double = FALSE, delay = TRUE)
-	for(var/i in 1 to 36)
-		fire_nuclear_particle_simple(i * 10)
-		if(double)
-			fire_nuclear_particle_simple((i * 10) + 180)
-		if(delay)
-			sleep(1)
+/mob/living/simple_animal/hostile/megafauna/smchargedplasma/proc/rad_wheel(double = FALSE, delay = TRUE, amount = 1, backwards = 1, opening = FALSE)
+	for(var/i1 in 1 to amount)
+		for(var/i in 1 to 36)
+			if(opening && prob(15))
+				continue
+			fire_nuclear_particle_simple(i * (10 * backwards))
+			if(double)
+				fire_nuclear_particle_simple((i * (10 * backwards)) + 180)
+			if(delay)
+				sleep(1)
+		sleep(10)
 
 /mob/living/simple_animal/hostile/megafauna/smchargedplasma/proc/blast_shot(double = FALSE, delay = TRUE)
-	var/list/around_tar = list(-20,-10,0,10,20)
+	var/list/around_tar = list(-20,-15,-10,-5,0,5,10,15,20)
 	var/tar_angle = Get_Angle(src, target)
 	for(var/i in around_tar)
 		fire_nuclear_particle_simple(tar_angle + i)
@@ -116,8 +123,8 @@ Difficulty: Very Hard
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	flag = "rad"
 	irradiate = 5000
-	damage = 10
-	pixels_per_second = TILES_TO_PIXELS(10)
+	damage = 50
+	pixels_per_second = TILES_TO_PIXELS(6)
 	hitsound = 'sound/weapons/emitter2.ogg'
 	impact_type = /obj/effect/projectile/impact/xray
 	var/static/list/particle_colors = list(
@@ -125,7 +132,7 @@ Difficulty: Very Hard
 		"yellow" = "#FFFF00",
 		"orange" = "#ff7b00"
 	)
-	wound_bonus = 10
+	wound_bonus = 25
 
 /obj/item/projectile/energy/nuclear_particle_simple/Initialize()
 	. = ..()
