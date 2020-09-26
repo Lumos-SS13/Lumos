@@ -184,7 +184,7 @@
 	name = "shrimp"
 	desc = "A shrimp... look at it's beady little eyes!"
 	spawned_egg = /obj/item/fishy_egg/shrimp
-	icon_state = "shrimp"
+	icon_state = "shrimp_raw"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
 
 /obj/item/fishy/lobster
