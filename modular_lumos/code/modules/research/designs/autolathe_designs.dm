@@ -47,7 +47,7 @@
 	name = "Advanced Fishing Rod"
 	id = "fish_rod_adv"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 600)
 	build_path = /obj/item/fish_tool/fishing_rod/advanced
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
