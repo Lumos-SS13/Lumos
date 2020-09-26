@@ -37,6 +37,8 @@
 
 	var/fishing_chance = 60
 
+	var/in_use = FALSE
+
 /obj/item/fish_tool/fishing_rod/primal
 	name = "primal fishing rod"
 	desc = "A rod that is quite durable, but the look is quite primal."
@@ -55,13 +57,21 @@
 	. = ..()
 	if(!proximity_flag)
 		return
+	if(in_use)
+		to_chat(user, "<span class='warning'>You are already fishing!</span>")
+		return
+	in_use = TRUE
 	if(istype(target, /turf/open/water))
-		if(!do_after(user, 5 SECONDS, target = src))
+		if(!do_after(user, 5 SECONDS, target = target))
+			in_use = FALSE
 			return
 		if(!prob(fishing_chance))
+			in_use = FALSE
 			return
 		var/chosen_fish = pick(list(/obj/item/fishy/catfish, /obj/item/fishy/lobster, /obj/item/fishy/shrimp, /obj/item/fishy/salmon))
 		new chosen_fish(get_turf(target))
+		in_use = FALSE
+		return
 
 /obj/item/paper/fluff/stations/chef/fishing
 	name = "fishing manual"
