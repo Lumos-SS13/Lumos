@@ -42,3 +42,12 @@
 	build_path = /obj/item/fish_tool/egg_killer
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+
+/datum/design/fish_rod_adv
+	name = "Advanced Fishing Rod"
+	id = "fish_rod_adv"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 300)
+	build_path = /obj/item/fish_tool/fishing_rod/advanced
+	category = list("initial","Tools","Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE

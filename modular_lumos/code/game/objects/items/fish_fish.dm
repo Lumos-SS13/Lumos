@@ -150,11 +150,11 @@
 /obj/item/fishy/interact(mob/user)
 	var/age_string = null
 	switch(ageStatus)
-		if(0)
-			age_string = "YOUNG"
-		if(1)
-			age_string = "MIDDLE"
 		if(2)
+			age_string = "YOUNG"
+		if(0)
+			age_string = "MIDDLE"
+		if(7)
 			age_string = "OLD"
 	var/dat = {"
 		<center>

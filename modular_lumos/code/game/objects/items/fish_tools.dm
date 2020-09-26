@@ -2,6 +2,7 @@
 	name = "fish tool"
 	desc = "parent fish tool, do not use"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/fish_tool/brush
 	name = "brush"
@@ -28,6 +29,39 @@
 	desc = "Food meant for fish, you can't eat... don't even try."
 	icon_state = "fish_food"
 	var/food_left = 100
+
+/obj/item/fish_tool/fishing_rod
+	name = "fishing rod"
+	desc = "A rod used to fish fish."
+	icon_state = "norm_rod"
+
+	var/fishing_chance = 60
+
+/obj/item/fish_tool/fishing_rod/primal
+	name = "primal fishing rod"
+	desc = "A rod that is quite durable, but the look is quite primal."
+	icon_state = "prim_rod"
+
+	fishing_chance = 40
+
+/obj/item/fish_tool/fishing_rod/advanced
+	name = "advanced fishing rod"
+	desc = "A rod that is the top of the line."
+	icon_state = "adv_rod"
+
+	fishing_chance = 80
+
+/obj/item/fish_tool/fishing_rod/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(!proximity)
+		return
+	if(istype(target, /turf/open/water))
+		if(!do_after(user, 5 SECONDS, target = src))
+			return
+		if(!prob(fishing_chance))
+			return
+		var/chosen_fish = pick(list(/obj/item/fishy/catfish, /obj/item/fishy/lobster, /obj/item/fishy/shrimp, /obj/item/fishy/salmon))
+		new chosen_fish(get_turf(target))
 
 /obj/item/paper/fluff/stations/chef/fishing
 	name = "fishing manual"

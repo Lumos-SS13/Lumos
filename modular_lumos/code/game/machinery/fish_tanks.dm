@@ -126,11 +126,11 @@
 	for(var/obj/item/fishy/fish in contents)
 		var/age_string = null
 		switch(fish.ageStatus)
-			if(0)
-				age_string = "YOUNG"
-			if(1)
-				age_string = "MIDDLE"
 			if(2)
+				age_string = "YOUNG"
+			if(0)
+				age_string = "MIDDLE"
+			if(7)
 				age_string = "OLD"
 		dat += {"
 			<center>
