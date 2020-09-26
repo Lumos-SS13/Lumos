@@ -53,7 +53,7 @@
 
 /obj/item/fish_tool/fishing_rod/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
-	if(!proximity)
+	if(!proximity_flag)
 		return
 	if(istype(target, /turf/open/water))
 		if(!do_after(user, 5 SECONDS, target = src))
