@@ -466,7 +466,7 @@
 	if(busy)
 		return
 	busy = TRUE
-	if(!isashwalker(user))
+	if(!isashwalker(user) && !ispodperson(user))
 		busy = FALSE
 		return ..()
 	if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf))
@@ -483,7 +483,7 @@
 		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
 		if(!do_after(user, 4 SECONDS, FALSE, src))
 			busy = FALSE
-			return ..()
+			return
 		var/obj/structure/flora/ash/cap_shroom/flora_ash = new /obj/structure/flora/ash/cap_shroom(get_turf(src))
 		flora_ash.harvest(harvest_allow = FALSE)
 		qdel(W)
@@ -493,7 +493,7 @@
 		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
 		if(!do_after(user, 4 SECONDS, FALSE, src))
 			busy = FALSE
-			return ..()
+			return
 		var/obj/structure/flora/ash/stem_shroom/flora_ash = new /obj/structure/flora/ash/stem_shroom(get_turf(src))
 		flora_ash.harvest(harvest_allow = FALSE)
 		qdel(W)
@@ -503,10 +503,24 @@
 		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
 		if(!do_after(user, 4 SECONDS, FALSE, src))
 			busy = FALSE
-			return ..()
+			return
 		var/obj/structure/flora/ash/cacti/flora_ash = new /obj/structure/flora/ash/cacti(get_turf(src))
 		flora_ash.harvest(harvest_allow = FALSE)
 		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/stack/sheet/mineral/sandstone))
+		var/obj/item/stack/sheet/mineral/sandstone/sandstone
+		if(sandstone.amount < 5)
+			to_chat(user, "<span class='notice'>Five sandstone is required to create dirt on the floor!")
+			busy = FALSE
+			return
+		to_chat(user, "<span class='notice'>You start placing dirt on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		sandstone.use(5)
+		ChangeTurf(/turf/open/floor/plating/smooth/dirt/lavaland_jungle)
 		busy = FALSE
 		return
 	else
