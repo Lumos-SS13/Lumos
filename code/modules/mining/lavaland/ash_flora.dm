@@ -19,8 +19,8 @@
 	var/base_icon
 	//var/regrowth_time_low = 8 MINUTES
 	//var/regrowth_time_high = 16 MINUTES
-	var/regrowth_time_low = 3 MINUTES
-	var/regrowth_time_high = 6 MINUTES
+	var/regrowth_time_low = 2 MINUTES
+	var/regrowth_time_high = 3 MINUTES
 
 /obj/structure/flora/ash/Initialize()
 	. = ..()
@@ -75,7 +75,7 @@
 			harvest(user)
 
 /obj/structure/flora/ash/tall_shroom //exists only so that the spawning check doesn't allow these spawning near other things
-	regrowth_time_low = 4200
+	//regrowth_time_low = 4200
 
 /obj/structure/flora/ash/leaf_shroom
 	icon_state = "s_mushroom"
@@ -145,6 +145,23 @@
 	. = ..()
 	// min dmg 3, max dmg 6, prob(70)
 	AddComponent(/datum/component/caltrop, 3, 6, 70)
+
+// LUMOS EDIT START
+/obj/structure/flora/ash/hard_mushroom
+	icon = 'modular_lumos/icons/obj/flora/ash_flora.dmi'
+	icon_state = "woodbranch"
+	name = "hardened mushrooms"
+	desc = "Long and extended mushrooms that look almost wooden."
+	harvested_name = "hardened mushrooms"
+	harvested_desc = "A bunch of mushrooms that have hardened over time."
+	harvest = /obj/item/grown/log
+	needs_sharp_harvest = FALSE
+	harvest_amount_high = 3
+	harvest_time = 10
+	harvest_message_low = "You pick a hardened mushroom."
+	harvest_message_med = "You pick several hardened mushrooms." //shouldn't show up, because you can't get more than two
+	harvest_message_high = "You pick a pair of hardened mushroom."
+// LUMOS EDIT STOP
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora
 	name = "mushroom shavings"

@@ -96,6 +96,12 @@
 			return
 		busy = FALSE
 		return
+	else if(istype(C, /obj/item/shovel))
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		ChangeTurf(/turf/open/floor/plating/asteroid/basalt/lava_land_surface)
+		return
 	else
 		busy = FALSE
 		return ..()
