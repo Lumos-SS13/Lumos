@@ -99,6 +99,8 @@
 	floor_variance = 15
 	digResult = /obj/item/stack/ore/glass/basalt
 
+	var/busy = FALSE //LUMOS EDIT
+
 /turf/open/floor/plating/asteroid/basalt/lava //lava underneath
 	baseturfs = /turf/open/lava/smooth
 
@@ -458,3 +460,56 @@
 /turf/open/floor/plating/asteroid/snow/atmosphere
 	initial_gas_mix = FROZEN_ATMOS
 	planetary_atmos = FALSE
+
+// LUMOS EDIT START
+/turf/open/floor/plating/asteroid/basalt/attackby(obj/item/W, mob/user, params)
+	if(busy)
+		return
+	busy = TRUE
+	if(!isashwalker(user))
+		busy = FALSE
+		return ..()
+	if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return ..()
+		var/obj/structure/flora/ash/leaf_shroom/flora_ash = new /obj/structure/flora/ash/leaf_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_cap))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return ..()
+		var/obj/structure/flora/ash/cap_shroom/flora_ash = new /obj/structure/flora/ash/cap_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return ..()
+		var/obj/structure/flora/ash/stem_shroom/flora_ash = new /obj/structure/flora/ash/stem_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return ..()
+		var/obj/structure/flora/ash/cacti/flora_ash = new /obj/structure/flora/ash/cacti(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else
+		busy = FALSE
+		return ..()
+// LUMOS EDIT STOP
