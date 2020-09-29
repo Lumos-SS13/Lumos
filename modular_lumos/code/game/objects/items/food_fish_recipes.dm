@@ -1,0 +1,65 @@
+/datum/crafting_recipe/food/masago_sushi
+	name = "Masago Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/fish_eggs = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/masago_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/ikura_sushi
+	name = "Ikura Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/fish_eggs = 3
+	)
+	result = /obj/item/reagent_containers/food/snacks/ikura_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/ebi_sushi
+	name = "Ebi Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/shrimp_raw = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/ebi_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/tamago_sushi
+	name = "Tamago Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/egg = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/tamago_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/sake_sushi
+	name = "Sake Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/salmon_raw = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/sake_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/cooked_salmon_sushi
+	name = "Cooked Salmon Sushi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
+		/obj/item/reagent_containers/food/snacks/salmon = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/cooked_salmon_sushi
+	subcategory = CAT_SEAFOOD
