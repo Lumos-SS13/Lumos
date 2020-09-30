@@ -174,6 +174,7 @@
 	max_integrity = 70
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	cutting_tool = /obj/item/screwdriver
+	door_anim_time = 0 // no animation LUMOS EDIT
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
