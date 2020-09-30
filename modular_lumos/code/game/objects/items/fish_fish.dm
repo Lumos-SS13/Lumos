@@ -138,7 +138,6 @@
 		for(var/spawned_meat in meat)
 			for(var/i in 1 to rand(1,3))
 				new spawned_meat(get_turf(src))
-		new /obj/effect/gibspawner/generic(get_turf(src))
 		qdel(src)
 		return
 	else if(istype(I, /obj/item/fish_tool/analyzer))
