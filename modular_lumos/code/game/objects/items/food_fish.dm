@@ -78,18 +78,56 @@
 	desc = "Lobster meat, ready to be eaten."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "raw_lobster_meat"
+	cooked_type = /obj/item/reagent_containers/food/snacks/basic_lobster
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/basic_lobster
+	name = "steamed lobster"
+	desc = "Lobster that has been simply cooked."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lobster_steamed_simple"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("lobster" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/deluxe_lobster
+	name = "deluxe steamed lobster"
+	desc = "Lobster that has been cooked to perfection, drizzled with some lemon to increase the flavor."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lobster_steamed_deluxe"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 5)
+	tastes = list("lobster" = 15, "salt" = 3, "lemon" = 3, "greens" = 3)
+	foodtype = MEAT | FRUIT | VEGETABLES
 
 /obj/item/reagent_containers/food/snacks/lobster_raw_tail
 	name = "raw lobster tail"
 	desc = "Lobster tail meat, ready to be eaten."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "raw_lobster_tail"
+	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	name = "baked lobster tail"
+	desc = "Lobster tail meat that has been baked to crispyness."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lobster_tail_baked"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("lobster" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/lobster_sushi
+	name = "lobster sushi"
+	desc = "Can you consider this sushi? Rice served with lobster on top..."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lobster_sushi"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 7, /datum/reagent/consumable/nutriment/vitamin = 4)
+	tastes = list("lobster" = 15, "salt" = 3, "rice" = 3, "seaweed" = 3)
+	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/masago_sushi
 	name = "masago sushi"

@@ -23,7 +23,7 @@
 			return
 		I.play_tool_sound(src, 50)
 		var/obj/item/stack/sheet/metal/metal = new /obj/item/stack/sheet/metal(get_turf(src))
-		metal.amount = 20
+		metal.amount = 10
 		qdel(src)
 		return
 	else
@@ -215,9 +215,9 @@
 			fish1 = fish
 		else
 			fish2 = fish
-		if(current_food >= 2 && fish.hunger <= 98)
-			current_food -= 2
-			fish.hunger += 2
+		if(current_food >= 1 && fish.hunger <= 99)
+			current_food -= 1
+			fish.hunger += 1
 		if(dirty >= 100)
 			fish.health--
 		age_dividor += fish.ageStatus
