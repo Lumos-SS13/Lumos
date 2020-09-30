@@ -16,6 +16,7 @@
 /obj/item/strangerock/Initialize()
 	icon_state = pick("strange","strange0","strange1","strange2","strange3")
 	roll_item()
+	dugdepth = rand(0,10)
 	..()
 
 /obj/item/strangerock/proc/roll_item()
@@ -65,6 +66,7 @@
 			qdel(src)
 			return
 		tryagain = FALSE
+		return
 	if(istype(W,/obj/item/xenoarch/clean/brush))
 		if(tryagain)
 			to_chat(user,"You are already mining this.")
@@ -92,6 +94,7 @@
 			to_chat(user,"You uncover an artifact!")
 			qdel(src)
 			return
+		return
 	if(istype(W,/obj/item/xenoarch/help/scanner))
 		var/obj/item/xenoarch/help/scanner/HM = W
 		playsound(loc, HM.usesound, 50, 1, -1)
@@ -99,8 +102,8 @@
 			to_chat(user,"You must stand still to scan.")
 			return
 		playsound(loc, HM.usesound, 50, 1, -1)
-		to_chat(user,"Base Depth: [itembasedepth] centimeters.")
-		to_chat(user,"Safe Depth: [itemsafedepth] centimeters.")
+		interact(user, tool_type = 0)
+		return
 	if(istype(W,/obj/item/xenoarch/help/scanneradv))
 		var/obj/item/xenoarch/help/scanneradv/HM = W
 		playsound(loc, HM.usesound, 50, 1, -1)
@@ -108,9 +111,8 @@
 			to_chat(user,"You must stand still to scan.")
 			return
 		playsound(loc, HM.usesound, 50, 1, -1)
-		to_chat(user,"Base Depth: [itembasedepth] centimeters.")
-		to_chat(user,"Safe Depth: [itemsafedepth] centimeters.")
-		to_chat(user,"Item Depth: [itemactualdepth] centimeters.")
+		interact(user, tool_type = 1)
+		return
 	if(istype(W,/obj/item/xenoarch/help/measuring))
 		var/obj/item/xenoarch/help/measuring/HM = W
 		playsound(loc, HM.usesound, 50, 1, -1)
@@ -121,9 +123,38 @@
 			to_chat(user,"This rock has not been touched.")
 			playsound(loc, HM.usesound, 50, 1, -1)
 			return
-		to_chat(user,"Current depth dug: [dugdepth] centimeters.")
+		interact(user, tool_type = 2)
 		playsound(loc, HM.usesound, 50, 1, -1)
-//
+		return
+
+/obj/item/strangerock/interact(mob/user, tool_type = 0)
+	var/dat = ""
+	switch(tool_type)
+		if(0)
+			dat += {"
+				<center>
+					Base Depth: [itembasedepth] centimeters<br>
+					Safe Depth: [itemsafedepth] centimeters
+				</center>
+				"}
+		if(1)
+			dat += {"
+				<center>
+					Base Depth: [itembasedepth] centimeters<br>
+					Safe Depth: [itemsafedepth] centimeters<br>
+					Item Depth: [itemactualdepth] centimeters
+				</center>
+				"}
+		if(2)
+			dat += {"
+				<center>
+					Current depth dug: [dugdepth] centimeters
+				</center>
+				"}
+	
+	var/datum/browser/popup = new(user, "xeno_strangerock", name, 225, 110)
+	popup.set_content(dat)
+	popup.open()
 
 /turf/closed/mineral/strange
 	mineralType = /obj/item/strangerock
