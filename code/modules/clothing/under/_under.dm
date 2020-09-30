@@ -16,7 +16,9 @@
 	var/alt_covers_chest = FALSE // for adjusted/rolled-down jumpsuits, FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/dummy_thick = FALSE // is able to hold accessories on its item
 	var/obj/item/clothing/accessory/attached_accessory
+	var/obj/item/clothing/accessory/attached_accessory_second
 	var/mutable_appearance/accessory_overlay
+	var/mutable_appearance/accessory_overlay_second
 
 /obj/item/clothing/under/worn_overlays(isinhands = FALSE, icon_file, used_state, style_flags = NONE)
 	. = ..()
@@ -28,6 +30,26 @@
 		. += mutable_appearance('icons/effects/blood.dmi', "uniformblood", color = blood_DNA_to_color())
 	if(accessory_overlay)
 		. += accessory_overlay
+	if(accessory_overlay_second)
+		. += accessory_overlay_second
+
+/obj/item/clothing/under/update_overlays()
+	. = ..()
+	cut_overlays()
+	if(attached_accessory)
+		var/image/i1 = image(icon = attached_accessory.icon, icon_state = attached_accessory.icon_state)
+		if(attached_accessory.minimize_when_attached)
+			i1.transform *= 0.5
+			i1.pixel_x += 8
+			i1.pixel_y -= 8
+		add_overlay(i1)
+	if(attached_accessory_second)
+		var/image/i2 = image(icon = attached_accessory_second.icon, icon_state = attached_accessory_second.icon_state)
+		if(attached_accessory_second.minimize_when_attached)
+			i2.transform *= 0.5
+			i2.pixel_x += -8
+			i2.pixel_y -= 8
+		add_overlay(i2)
 
 /obj/item/clothing/under/attackby(obj/item/I, mob/user, params)
 	if((has_sensor == BROKEN_SENSORS) && istype(I, /obj/item/stack/cable_coil))
@@ -36,8 +58,13 @@
 		has_sensor = HAS_SENSORS
 		to_chat(user,"<span class='notice'>You repair the suit sensors on [src] with [C].</span>")
 		return 1
-	if(!attach_accessory(I, user))
-		return ..()
+	if(istype(I, /obj/item/clothing/accessory))
+		if(!attached_accessory)
+			attach_accessory(I, user, primary = TRUE)
+			return
+		if(!attached_accessory_second)
+			attach_accessory(I, user, primary = FALSE)
+			return
 
 /obj/item/clothing/under/update_clothes_damaged_state() //skyrat edit
 	..()
@@ -67,6 +94,12 @@
 		if(attached_accessory.above_suit)
 			H.update_inv_wear_suit()
 
+	if(attached_accessory_second && slot != SLOT_HANDS && ishuman(user))
+		var/mob/living/carbon/human/H = user
+		attached_accessory_second.on_uniform_equip(src, user)
+		if(attached_accessory_second.above_suit)
+			H.update_inv_wear_suit()
+
 /obj/item/clothing/under/dropped(mob/user)
 	if(attached_accessory)
 		attached_accessory.on_uniform_dropped(src, user)
@@ -74,14 +107,19 @@
 			var/mob/living/carbon/human/H = user
 			if(attached_accessory.above_suit)
 				H.update_inv_wear_suit()
-
+	if(attached_accessory_second)
+		attached_accessory_second.on_uniform_dropped(src, user)
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			if(attached_accessory_second.above_suit)
+				H.update_inv_wear_suit()
 	..()
 
-/obj/item/clothing/under/proc/attach_accessory(obj/item/I, mob/user, notifyAttach = 1)
+/obj/item/clothing/under/proc/attach_accessory(obj/item/I, mob/user, notifyAttach = 1, primary = TRUE)
 	. = FALSE
 	if(istype(I, /obj/item/clothing/accessory))
 		var/obj/item/clothing/accessory/A = I
-		if(attached_accessory)
+		if(attached_accessory && attached_accessory_second)
 			if(user)
 				to_chat(user, "<span class='warning'>[src] already has an accessory.</span>")
 			return
@@ -92,7 +130,8 @@
 		else
 			if(user && !user.temporarilyRemoveItemFromInventory(I))
 				return
-			if(!A.attach(src, user))
+			var/primary_value = primary
+			if(!A.attach(src, user, primary = primary_value))
 				return
 
 			if(user && notifyAttach)
@@ -101,9 +140,15 @@
 			if((flags_inv & HIDEACCESSORY) || (A.flags_inv & HIDEACCESSORY))
 				return TRUE
 
-			accessory_overlay = mutable_appearance('icons/mob/clothing/accessories.dmi', attached_accessory.icon_state)
-			accessory_overlay.alpha = attached_accessory.alpha
-			accessory_overlay.color = attached_accessory.color
+			switch(primary)
+				if(TRUE)
+					accessory_overlay = mutable_appearance('icons/mob/clothing/accessories.dmi', attached_accessory.icon_state)
+					accessory_overlay.alpha = attached_accessory.alpha
+					accessory_overlay.color = attached_accessory.color
+				if(FALSE)
+					accessory_overlay_second = mutable_appearance('icons/mob/clothing/accessories.dmi', attached_accessory_second.icon_state)
+					accessory_overlay_second.alpha = attached_accessory_second.alpha
+					accessory_overlay_second.color = attached_accessory_second.color
 
 			if(ishuman(loc))
 				var/mob/living/carbon/human/H = loc
@@ -112,24 +157,27 @@
 
 			return TRUE
 
-/obj/item/clothing/under/proc/remove_accessory(mob/user)
+/obj/item/clothing/under/proc/remove_accessory(mob/user, primary = TRUE)
 	if(!isliving(user))
 		return
 	if(!can_use(user))
 		return
 
-	if(attached_accessory)
-		var/obj/item/clothing/accessory/A = attached_accessory
-		attached_accessory.detach(src, user)
-		if(user.put_in_hands(A))
-			to_chat(user, "<span class='notice'>You detach [A] from [src].</span>")
-		else
-			to_chat(user, "<span class='notice'>You detach [A] from [src] and it falls on the floor.</span>")
+	var/obj/item/clothing/accessory/A = primary ? attached_accessory : attached_accessory_second
+	switch(primary)
+		if(TRUE)
+			A.detach(src, user, primary = TRUE)
+		if(FALSE)
+			A.detach(src, user, primary = FALSE)
+	if(user.put_in_hands(A))
+		to_chat(user, "<span class='notice'>You detach [A] from [src].</span>")
+	else
+		to_chat(user, "<span class='notice'>You detach [A] from [src] and it falls on the floor.</span>")
 
-		if(ishuman(loc))
-			var/mob/living/carbon/human/H = loc
-			H.update_inv_w_uniform()
-			H.update_inv_wear_suit()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		H.update_inv_w_uniform()
+		H.update_inv_wear_suit()
 
 
 /obj/item/clothing/under/examine(mob/user)
@@ -230,7 +278,11 @@
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	if(attached_accessory)
-		remove_accessory(user)
+		remove_accessory(user, primary = TRUE)
+		return
+	if(attached_accessory_second)
+		remove_accessory(user, primary = FALSE)
+		return
 	else
 		rolldown()
 

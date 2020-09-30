@@ -10,22 +10,20 @@
 	var/minimize_when_attached = TRUE // TRUE if shown as a small icon in corner, FALSE if overlayed
 	var/datum/component/storage/detached_pockets
 
-/obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user, primary = TRUE)
 	var/datum/component/storage/storage = GetComponent(/datum/component/storage)
 	if(storage)
 		if(SEND_SIGNAL(U, COMSIG_CONTAINS_STORAGE))
 			return FALSE
 		U.TakeComponent(storage)
 		detached_pockets = storage
-	U.attached_accessory = src
+	switch(primary)
+		if(TRUE)
+			U.attached_accessory = src
+		if(FALSE)
+			U.attached_accessory_second = src
 	forceMove(U)
-	layer = FLOAT_LAYER
-	plane = FLOAT_PLANE
-	if(minimize_when_attached)
-		transform *= 0.5	//halve the size so it doesn't overpower the under
-		pixel_x += 8
-		pixel_y -= 8
-	U.add_overlay(src)
+	U.update_overlays()
 
 	if (islist(U.armor) || isnull(U.armor)) 										// This proc can run before /obj/Initialize has run for U and src,
 		U.armor = getArmor(arglist(U.armor))	// we have to check that the armor list has been transformed into a datum before we try to call a proc on it
@@ -40,7 +38,7 @@
 
 	return TRUE
 
-/obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/U, user, primary = TRUE)
 	if(detached_pockets && detached_pockets.parent == U)
 		TakeComponent(detached_pockets)
 
@@ -51,13 +49,20 @@
 
 	if(minimize_when_attached)
 		transform *= 2
-		pixel_x -= 8
-		pixel_y += 8
 	layer = initial(layer)
 	plane = initial(plane)
-	U.cut_overlays()
-	U.attached_accessory = null
-	U.accessory_overlay = null
+	switch(primary)
+		if(TRUE)
+			pixel_x -= 8
+			pixel_y += 8
+			U.attached_accessory = null
+			U.accessory_overlay = null
+		if(FALSE)
+			pixel_x += 8
+			pixel_y += 8
+			U.attached_accessory_second = null
+			U.accessory_overlay_second = null
+	U.update_overlays()
 
 /obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/U, user)
 	return

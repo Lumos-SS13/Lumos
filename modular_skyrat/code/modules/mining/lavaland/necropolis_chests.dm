@@ -659,7 +659,7 @@
 	var/stored_heat_protection = 0
 	var/stored_max_heat_protection_temperature = 0
 
-/obj/item/clothing/accessory/fireresist/attach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fireresist/attach(obj/item/clothing/under/U, user, primary = TRUE)
 	. = ..()
 	stored_name = U.name
 	stored_desc = U.desc
@@ -672,7 +672,7 @@
 	U.heat_protection = FULL_BODY
 	U.resistance_flags |= FIRE_PROOF
 
-/obj/item/clothing/accessory/fireresist/detach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/fireresist/detach(obj/item/clothing/under/U, user, primary = TRUE)
 	. = ..()
 	U.name = stored_name
 	U.desc = stored_desc
