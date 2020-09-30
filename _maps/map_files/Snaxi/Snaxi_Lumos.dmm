@@ -2089,6 +2089,9 @@
 /area/hallway/primary/port)
 "aBq" = (
 /obj/structure/trash_pile,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "aBw" = (
@@ -3360,7 +3363,7 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "aRp" = (
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "aRq" = (
 /obj/machinery/firealarm{
@@ -5261,7 +5264,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "bCC" = (
 /obj/machinery/door/airlock/external{
@@ -5271,7 +5274,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "bCD" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -7155,7 +7158,7 @@
 	req_access_txt = "10;13"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "ccG" = (
 /turf/open/floor/engine/air,
@@ -7773,12 +7776,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"con" = (
-/obj/machinery/mineral/stacking_unit_console{
-	machinedir = 4
-	},
-/turf/closed/wall,
-/area/maintenance/disposal)
 "coC" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 8
@@ -8372,8 +8369,9 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/secure_construction)
 "cCA" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -31
+/obj/machinery/mineral/stacking_unit_console{
+	machinedir = 1;
+	pixel_y = -34
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
@@ -8574,7 +8572,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "cJc" = (
 /obj/structure/cable{
@@ -9086,7 +9084,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/closed/wall,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/maintenance/disposal)
 "cUS" = (
 /obj/structure/closet/emcloset,
@@ -11519,6 +11518,9 @@
 /area/crew_quarters/fitness/recreation)
 "emH" = (
 /obj/effect/landmark/blobstart,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -31
+	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "enq" = (
@@ -21063,6 +21065,15 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/tcommsat/computer)
+"jlQ" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/disposal)
 "jmd" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white,
@@ -21905,7 +21916,7 @@
 /area/engine/engineering)
 "jLG" = (
 /obj/machinery/conveyor_switch/oneway{
-	dir = 8;
+	dir = 4;
 	id = "garbage";
 	name = "disposal conveyor"
 	},
@@ -23292,7 +23303,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "kBe" = (
 /obj/item/radio/intercom{
@@ -26251,7 +26262,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "mrM" = (
 /obj/machinery/newscaster,
@@ -46834,6 +46845,12 @@
 	name = "Holodeck Projector Floor"
 	},
 /area/holodeck/rec_center)
+"xAT" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/disposal)
 "xBi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -93134,7 +93151,7 @@ bBh
 avT
 cUP
 cTh
-con
+jlQ
 mQC
 cfp
 rDv
@@ -93391,7 +93408,7 @@ bBh
 avT
 aKf
 gLO
-cfp
+xAT
 evO
 cfp
 kBe
@@ -94392,7 +94409,7 @@ yhx
 yhx
 ydp
 ydp
-ydp
+avT
 avT
 avT
 bzc
@@ -94650,7 +94667,7 @@ yhx
 ydp
 ydp
 ydp
-ydp
+avT
 avT
 bzc
 avT
@@ -94906,8 +94923,8 @@ yhx
 yhx
 ydp
 ydp
-ydp
-ydp
+avT
+avT
 avT
 bzc
 avT
@@ -95163,7 +95180,7 @@ yhx
 yhx
 ydp
 ydp
-ydp
+avT
 avT
 avT
 bzc
@@ -95420,7 +95437,7 @@ yhx
 yhx
 ydp
 ydp
-ydp
+avT
 avT
 avT
 bzc
@@ -95677,7 +95694,7 @@ yhx
 yhx
 ydp
 ydp
-ydp
+avT
 avT
 avT
 bzh
@@ -95934,11 +95951,11 @@ yhx
 yhx
 ydp
 ydp
-ydp
 avT
 avT
-avT
-bmX
+bum
+bum
+bum
 avT
 avT
 ydp
@@ -96191,11 +96208,11 @@ yhx
 yhx
 ydp
 ydp
-ydp
-ydp
 avT
 avT
-avT
+bum
+bum
+bum
 avT
 ydp
 ydp
@@ -96448,13 +96465,13 @@ yhx
 yhx
 ydp
 ydp
-ydp
 avT
 avT
 avT
 avT
 avT
-ydp
+avT
+avT
 ydp
 ydp
 ydp
@@ -96705,8 +96722,8 @@ yhx
 yhx
 ydp
 ydp
-ydp
-ydp
+avT
+avT
 avT
 avT
 avT
