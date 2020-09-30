@@ -64,6 +64,8 @@
 		to_chat(user, "<span class='notice'>You start picking...</span>")
 
 		if(I.use_tool(src, user, 40, volume=50))
+			if(!I.digrange)
+				return
 			var/range = I.digrange //Store the current digrange so people don't cheese digspeed swapping for faster mining
 			var/list/dug_tiles = list()
 			if(ismineralturf(src))

@@ -182,7 +182,8 @@
 	LAZYCLEARLIST(round_end_events)
 	RollCredits()
 	for(var/client/C in GLOB.clients)
-		C.playtitlemusic(40)
+		if(C)
+			C.playtitlemusic(40)
 	CONFIG_SET(flag/suicide_allowed,TRUE) // EORG suicides allowed
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)

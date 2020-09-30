@@ -14,6 +14,7 @@
 	anchorable = FALSE
 	var/foldedbag_path = /obj/item/bodybag
 	var/tagged = 0 // so closet code knows to put the tag overlay back
+	door_anim_time = 0 // no animation LUMOS EDIT
 
 /obj/structure/closet/body_bag/attackby(obj/item/I, mob/user, params)
 	if (istype(I, /obj/item/pen) || istype(I, /obj/item/toy/crayon))
