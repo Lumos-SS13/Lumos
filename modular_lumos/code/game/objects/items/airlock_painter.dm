@@ -86,7 +86,7 @@
 		to_chat(user, "<span class='notice'>[src] is out of ink!</span>")
 		return FALSE
 
-	var/turf/open/floor/plasteel/F = A
+	var/turf/open/floor/F = A
 	if(!istype(F))
 		to_chat(user, "<span class='warning'>\The [src] can only be used on station flooring.</span>")
 		return

@@ -68,6 +68,8 @@
 		var/datum/space_level/D = A
 		if (D.linkage == CROSSLINKED)
 			possible_transtitons += D.z_value
+	if(possible_transtitons.len < 1)
+		return
 	var/_z = pick(possible_transtitons)
 
 	//now select coordinates for a border turf
