@@ -78,6 +78,7 @@
 	color = "#648363"
 	slowdown = 3
 
+
 /turf/open/floor/plating/smooth/dirt/lavaland_jungle/attackby(obj/item/C, mob/user, params)
 	if(busy)
 		return
@@ -105,4 +106,7 @@
 	else
 		busy = FALSE
 		return ..()
-	
+
+
+/turf/open/floor/plating/smooth/ReplaceWithLattice()
+	return
