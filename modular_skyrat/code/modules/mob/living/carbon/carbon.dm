@@ -22,3 +22,15 @@
 		var/dir = get_dir(get_turf(gunpointing.source),get_turf(gunpointing.target))
 		if(dir)
 			setDir(dir)
+
+/mob/living/carbon/fully_heal(admin_revive)
+	. = ..()
+	remove_all_embedded_objects()
+
+//TGUI info menu
+/mob/living/carbon/proc/item_info()
+	var/obj/item/holding = get_active_held_item()
+	if(istype(holding))
+		SEND_SIGNAL(holding, COMSIG_ITEM_ITEMINFO, src)
+	else
+		to_chat(src, "<span class='warning'>You need to hold an item in your active hand to open it's information menu!</span>")
