@@ -308,25 +308,3 @@
 	icon_state = "polyfemtankpantsu"
 	poly_states = 2
 	poly_colors = list("#808080", "#FF3535")
-
-/obj/item/clothing/under/yogs/cluwne
-	name = "clown suit"
-	desc = "<i>'HONK!'</i>"
-	alternate_screams = list('modular_lumos/sound/voice/cluwnelaugh1.ogg','modular_lumos/sound/voice/cluwnelaugh2.ogg','modular_lumos/sound/voice/cluwnelaugh3.ogg')
-	icon_state = "cluwne"
-	item_state = "cluwne"
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	item_flags = DROPDEL
-	can_adjust = 0
-
-/obj/item/clothing/under/yogs/cluwne/Initialize()
-	.=..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/under/yogs/cluwne/equipped(mob/living/carbon/user, slot)
-	if(!ishuman(user))
-		return
-	if(slot == SLOT_W_UNIFORM)
-		var/mob/living/carbon/human/H = user
-		H.dna.add_mutation(CLUWNEMUT)
-	return ..()
