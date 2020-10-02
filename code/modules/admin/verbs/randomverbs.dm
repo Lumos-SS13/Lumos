@@ -1353,7 +1353,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			target.turn_into_pickle()
 		if(ADMIN_PUNISHMENT_FRY)
 			target.fry()
-
+		
 		//skyrat punishments
 		if(ADMIN_PUNISHMENT_CRACK)
 			if(!iscarbon(target))
