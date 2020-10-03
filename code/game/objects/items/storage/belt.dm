@@ -577,7 +577,8 @@
 /obj/item/storage/belt/janitor/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 6
+	//STR.max_items = 6
+	STR.max_items = 7 // LUMOS EDIT
 	STR.max_w_class = WEIGHT_CLASS_BULKY // Set to this so the  light replacer can fit.
 	STR.can_hold = typecacheof(list(
 		/obj/item/grenade/chem_grenade,
@@ -596,7 +597,8 @@
 		/obj/item/paint/paint_remover,
 		/obj/item/assembly/mousetrap,
 		/obj/item/screwdriver,
-		/obj/item/stack/cable_coil
+		/obj/item/stack/cable_coil,
+		/obj/item/dustpan // LUMOS EDIT
 		))
 
 /obj/item/storage/belt/bandolier

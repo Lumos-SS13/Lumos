@@ -4,6 +4,8 @@
 	icon = 'modular_lumos/icons/obj/items_and_weapons.dmi'
 	icon_state = "dustpan"
 
+	w_class = WEIGHT_CLASS_SMALL
+
 	var/stored_dirt = 0
 
 	var/successful_cleaning = 0
