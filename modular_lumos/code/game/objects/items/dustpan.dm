@@ -70,7 +70,7 @@
 		dat += {"
 			<br><center>
 				<a href="?src=[UID()];choose_range=1">Range Upgrade</a><br>
-				This upgrade will allow the dustpan to clean in a [total_range+2]x[total_range+2], rather than the typical [total_range+1]x[total_range+1].<br>
+				This upgrade will allow the dustpan to clean in a larger radius.<br>
 			</center>"}
 	if(reach)
 		dat += {"
@@ -141,7 +141,6 @@
 	return FALSE
 
 /obj/item/dustpan/attack_self(mob/user)
-	. = ..()
 	for(var/i in 1 to 5)
 		if(stored_dirt < dirt_required)
 			break
