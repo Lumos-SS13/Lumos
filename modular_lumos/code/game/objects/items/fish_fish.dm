@@ -11,6 +11,8 @@
 	icon_state = "box"
 	desc = "A box that is storing a fish. Just open it up and get your two fishes. Random sexes!"
 
+	w_class = WEIGHT_CLASS_SMALL
+
 	var/obj/item/fishy/inside_fish
 
 /obj/item/fish_box/salmon
@@ -78,6 +80,8 @@
 	var/obj/item/fishy_egg/spawned_egg
 
 	var/meat
+
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/fishy/Initialize()
 	. = ..()
