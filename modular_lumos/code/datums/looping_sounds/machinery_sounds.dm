@@ -14,3 +14,10 @@
 	mid_length = 70
 	end_sound = 'modular_lumos/sound/machines/firealarmend.ogg'
 	volume = 25
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/cryotube
+	mid_sounds = list('modular_lumos/sound/machines/cryotube.ogg' = 1)
+	mid_length = 24
+	volume = 25
