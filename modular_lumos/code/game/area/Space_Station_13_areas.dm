@@ -10,5 +10,4 @@
 	power_environ = FALSE
 	valid_territory = FALSE
 	outdoors = TRUE
-	blob_allowed = FALSE //Eating up space doesn't count for victory as a blob.
-
+	blob_allowed = FALSE //Eating up a planet doesn't count for victory as a blob, even though a blobplanet sounds f-in' dope.
