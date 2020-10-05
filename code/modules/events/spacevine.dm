@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/spacevine
 	weight = 15
 	max_occurrences = 3
-	min_players = 10
+	min_players = 20
 
 /datum/round_event/spacevine
 	fakeable = FALSE
@@ -371,6 +371,7 @@
 			return
 		if(prob(10))
 			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+			to_chat(M, "<span class='warning'>You have been seeded!</span>")
 
 /datum/spacevine_mutation/seeding/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
 	if(isliving(hitter))
@@ -379,6 +380,7 @@
 			return
 		if(prob(10))
 			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+			to_chat(M, "<span class='warning'>You have been seeded!</span>")
 	. = expected_damage
 
 /datum/spacevine_mutation/electrify
@@ -579,7 +581,13 @@
 	var/list/vine_mutations_list
 	var/mutativeness = 1
 
+#define MINIMUM_SPACEVINES_EFFECTIVENESS 0.4 //Minimum multiplier that the effectivess of vines can reach
+#define MAXIMUM_SPACEVINES_EFFECTIVENESS 1.3 //Maximum multiplier
+#define SPACEVINES_PLAYER_BALANCED_NUMBER 70 //The multiplier is balanced around this, and will be 1 if amount of players is equal to this
+
 /datum/spacevine_controller/New(turf/location, list/muts, potency, production, datum/round_event/event = null)
+	spread_multiplier /= clamp((length(GLOB.joined_player_list) / SPACEVINES_PLAYER_BALANCED_NUMBER), MINIMUM_SPACEVINES_EFFECTIVENESS, MAXIMUM_SPACEVINES_EFFECTIVENESS)
+	spread_cap *= clamp((length(GLOB.joined_player_list) / SPACEVINES_PLAYER_BALANCED_NUMBER), MINIMUM_SPACEVINES_EFFECTIVENESS, MAXIMUM_SPACEVINES_EFFECTIVENESS)
 	vines = list()
 	growth_queue = list()
 	var/obj/structure/spacevine/SV = spawn_spacevine_piece(location, null, muts)
@@ -593,6 +601,10 @@
 	if(production != null)
 		spread_cap *= production / 5
 		spread_multiplier /= production / 5
+
+#undef MINIMUM_SPACEVINES_EFFECTIVENESS
+#undef MAXIMUM_SPACEVINES_EFFECTIVENESS
+#undef SPACEVINES_PLAYER_BALANCED_NUMBER
 
 /datum/spacevine_controller/vv_get_dropdown()
 	. = ..()
@@ -667,7 +679,7 @@
 			SM.process_mutation(SV)
 		if(SV.energy < 2) //If tile isn't fully grown
 			//if(prob(20)) // SKYRAT EDIT - VINES (ORIGINAL)
-			if(prob(50)) // SKYRAT EDIT - VINES
+			if(prob(35)) // SKYRAT EDIT - VINES
 				SV.grow()
 		else //If tile is fully grown
 			SV.entangle_mob()
@@ -763,4 +775,3 @@
 		if(istype(M, /mob/living/simple_animal/hostile/venus_human_trap))
 			return TRUE
 	return FALSE
-
