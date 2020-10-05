@@ -71,6 +71,16 @@
 		user.alien_talk(message)
 	return FALSE
 
+// LUMOS EDIT START - VINES
+/datum/saymode/venus
+	key = "v"
+	mode = MODE_VENUS
+
+/datum/saymode/venus/handle_message(mob/living/user, message, datum/language/language)
+	if(user.venuscheck())
+		user.venus_talk(message)
+	return FALSE
+// LUMOS EDIT STOP - VINES
 
 /datum/saymode/vocalcords
 	key = MODE_KEY_VOCALCORDS
@@ -99,15 +109,20 @@
 		var/mob/living/simple_animal/hostile/blob/B = user
 		B.blob_chat(message)
 		return FALSE
-	if(isdrone(user))
-		var/mob/living/simple_animal/drone/D = user
-		D.drone_chat(message)
-		return FALSE
 	if(user.binarycheck())
 		user.robot_talk(message)
 		return FALSE
 	return FALSE
 
+/datum/saymode/drone // Drones can use :b for binary, they now fall under binarycheck()
+	key = MODE_KEY_DRONE
+	mode = MODE_DRONE
+
+/datum/saymode/drone/handle_message(mob/living/user, message, datum/language/language)
+	if(isdrone(user))
+		var/mob/living/simple_animal/drone/D = user
+		D.drone_chat(message)
+		return FALSE
 
 /datum/saymode/holopad
 	key = "h"

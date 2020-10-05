@@ -290,11 +290,10 @@
 	. = 0
 	var/mob/living/M = A.affected_mob
 	if(M.reagents.has_reagent(/datum/reagent/consumable/ethanol))
-		var/list/currentreagents = M.reagents
 		var/list/boozereagents = list()
 		var/list/boozepowers = list(0)
 		var/multiplier = 0
-		for(var/datum/reagent/consumable/ethanol/E in currentreagents)
+		for(var/datum/reagent/consumable/ethanol/E in M.reagents.reagent_list)
 			boozereagents += E
 		for(var/datum/reagent/consumable/ethanol/E in boozereagents)
 			boozepowers += E.boozepwr
