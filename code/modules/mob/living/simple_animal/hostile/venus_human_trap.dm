@@ -55,7 +55,8 @@
 		var/mob/living/L = AM
 		if(isvineimmune(L))
 			return
-		L.adjustBruteLoss(10)
+		//L.adjustBruteLoss(10)
+		L.adjustBruteLoss(7) // LUMOS EDIT
 		to_chat(L, "<span class='alert'>You cut yourself on the thorny vines.</span>")
 
 /**
@@ -83,8 +84,8 @@
 	//SKYRAT EDIT START - VINES
 	//melee_damage_lower = 25 ORIGINAL
 	//melee_damage_upper = 25 ORIGINAL
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	melee_damage_lower = 7 // LUMOS EDIT
+	melee_damage_upper = 7 // LUMOS EDIT
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -120,7 +121,7 @@
 	if(!(locate(/obj/structure/spacevine) in source_turf))
 		adjustHealth(maxHealth*0.025) //take 2.5% of max health as damage when not near the vine
 		return
-	adjustHealth(-maxHealth*0.05)
+	adjustHealth(-maxHealth*0.025)
 	new /obj/effect/temp_visual/heal(source_turf)
 	//LUMOS EDIT STOP - VINES
 

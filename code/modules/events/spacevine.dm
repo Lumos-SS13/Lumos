@@ -371,6 +371,7 @@
 			return
 		if(prob(10))
 			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+			to_chat(M, "<span class='warning'>You have been seeded!</span>")
 
 /datum/spacevine_mutation/seeding/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
 	if(isliving(hitter))
@@ -379,6 +380,7 @@
 			return
 		if(prob(10))
 			addtimer(CALLBACK(M, /mob/living/proc/plant_kudzu), 1 MINUTES)
+			to_chat(M, "<span class='warning'>You have been seeded!</span>")
 	. = expected_damage
 
 /datum/spacevine_mutation/electrify
