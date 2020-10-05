@@ -52,3 +52,12 @@
 	//vis_flags = NONE // Skyrat edit -- 512 compatibility
 	var/unused = 0 //When detected to be unused it gets set to world.time, after a while it gets removed
 	var/cache_expiration = 2 MINUTES // overlays which go unused for 2 minutes get cleaned up
+
+// LUMOS EDIT START
+/obj/effect/overlay/closet_door
+	anchored = TRUE
+	plane = FLOAT_PLANE
+	layer = FLOAT_LAYER
+	vis_flags = VIS_INHERIT_ID
+	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE
+// LUMOS EDIT START

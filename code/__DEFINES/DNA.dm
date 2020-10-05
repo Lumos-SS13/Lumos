@@ -54,6 +54,8 @@
 #define CRYOKINESIS /datum/mutation/human/cryokinesis
 #define SPIDER_WEB	/datum/mutation/human/webbing
 
+#define CLUWNEMUT	/datum/mutation/human/cluwne
+
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"
 
