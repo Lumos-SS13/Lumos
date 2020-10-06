@@ -98,11 +98,9 @@
 
 /obj/machinery/sleeper/open_machine()
 	if(!state_open && !panel_open)
-		playsound(src, 'modular_lumos/sound/machines/openhiss.ogg', 25, 0)
 		..()
 
 /obj/machinery/sleeper/close_machine(mob/user)
-	playsound(src, 'modular_lumos/sound/machines/closehiss.ogg', 25, 0)
 	if((isnull(user) || istype(user)) && state_open && !panel_open)
 		..(user)
 		var/mob/living/mob_occupant = occupant
