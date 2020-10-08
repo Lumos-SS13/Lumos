@@ -250,7 +250,7 @@
 		else
 			despawn_world_time = world.time + time_till_despawn
 	icon_state = "cryopod"
-	playsound(src, 'modular_lumos/sound/machines/close.ogg', 25, 0)
+	playsound(src, 'modular_lumos/sound/machines/closehiss.ogg', 25, 0)
 
 /obj/machinery/cryopod/open_machine()
 	if(occupant)
