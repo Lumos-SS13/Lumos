@@ -77,12 +77,14 @@
 	//The last time we were tipped/righted and said a voice line, to avoid spam
 	var/last_tipping_action_voice = 0
 
+	//lumos edit
 	//The iv bag that stores blood and can drop the blood bag
 	var/obj/item/reagent_containers/blood/blood_bag = null
 	//Gives however many credits per blood donated
 	var/credits_per_unit = 3
 	//The amount of blood that can be withdrawn per transaction
 	var/max_withdraw = 20
+	//lumos edit
 
 /mob/living/simple_animal/bot/medbot/mysterious
 	name = "\improper Mysterious Medibot"
@@ -175,8 +177,10 @@
 	else
 		dat += "None Loaded"
 	dat += "<br>Behaviour controls are [locked ? "locked" : "unlocked"]<hr>"
+	//lumos edit
 	if(blood_bag)
 		dat += "<a href='?src=[REF(src)];donate_blood=1'>Donate Blood</a><hr>"
+	//lumos edit
 	if(!locked || hasSiliconAccessInArea(user) || IsAdminGhost(user))
 		dat += "<TT>Healing Threshold: "
 		dat += "<a href='?src=[REF(src)];adj_threshold=-10'>--</a> "
@@ -200,10 +204,10 @@
 		dat += "Critical Patient Alerts: <a href='?src=[REF(src)];critalerts=1'>[declare_crit ? "Yes" : "No"]</a><br>"
 		dat += "Patrol Station: <a href='?src=[REF(src)];operation=patrol'>[auto_patrol ? "Yes" : "No"]</a><br>"
 		dat += "Stationary Mode: <a href='?src=[REF(src)];stationary=1'>[stationary_mode ? "Yes" : "No"]</a><br>"
-
+		//lumos edit
 		if(blood_bag)
 			dat += "<a href='?src=[REF(src)];drop_bloodbag=1'>Remove Blood Bag</a><br>"
-
+		//lumos edit
 	return dat
 
 /mob/living/simple_animal/bot/medbot/Topic(href, href_list)
@@ -247,6 +251,7 @@
 	else if(href_list["virus"])
 		treat_virus = !treat_virus
 
+	//lumos edit
 	else if(href_list["donate_blood"])
 		for(var/mob/living/carbon/M in users)
 			if(M != usr)
@@ -256,10 +261,12 @@
 	else if(href_list["drop_bloodbag"])
 		blood_bag.forceMove(drop_location())
 		blood_bag = null
+	//lumos edit
 
 	update_controls()
 	return
 
+//lumos edit
 /mob/living/simple_animal/bot/medbot/proc/draw_blood(mob/living/carbon/target)
 	if(!in_range(src, target))
 		return
@@ -281,6 +288,7 @@
 	else
 		to_chat(target, "<span class='notice'>[src] fails to take blood!</span>")
 		return
+//lumos edit
 
 /mob/living/simple_animal/bot/medbot/attackby(obj/item/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/reagent_containers/blood))
