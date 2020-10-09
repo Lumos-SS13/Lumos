@@ -334,10 +334,10 @@
 	taste_description = "grossness"
 
 /datum/reagent/medicine/tchem/on_mob_life(mob/living/carbon/M)
-	M.adjustBruteLoss(1*REM, FALSE)
-	M.adjustFireLoss(1*REM, FALSE)
-	M.adjustOxyLoss(5*REM, FALSE)
-	M.adjustToxLoss(1*REM, FALSE)
+	M.adjustBruteLoss(0.5*REM, FALSE)
+	M.adjustFireLoss(0.5*REM, FALSE)
+	M.adjustOxyLoss(0.5*REM, FALSE)
+	M.adjustToxLoss(0.5*REM, FALSE)
 	M.jitteriness += 2
 	M.nutrition += 5
 	. = 1
