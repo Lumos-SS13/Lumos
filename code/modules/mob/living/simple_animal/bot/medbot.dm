@@ -271,26 +271,30 @@
 	if(!in_range(src, target))
 		return
 	if(blood_bag.reagents.total_volume >= blood_bag.reagents.maximum_volume - max_withdraw)
-		to_chat(target, "<span class='notice'>[src] is full of blood already!</span>")
+		to_chat(target, "<span class='warning'>[src] is full of blood already!</span>")
 		return
 	if(target.transfer_blood_to(blood_bag, max_withdraw, TRUE))
-		to_chat(target, "<span class='notice'>[src] takes blood successfully!</span>")
+		to_chat(target, "<span class='warning'>[src] takes blood successfully! [src] injects some iron and salglu to assist you.</span>")
 		if(target.get_active_held_item())
 			var/obj/obj = target.get_active_held_item()
 			if(istype(obj, /obj/item/holochip))
 				var/obj/item/holochip/holochip_already = obj
 				holochip_already.credits += max_withdraw * credits_per_unit
+				holochip_already.update_icon()
+				target.reagents.add_reagent_list(list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/iron = 2))
 				return
 		var/obj/item/holochip/holochip = new /obj/item/holochip(drop_location())
 		holochip.credits = max_withdraw * credits_per_unit
 		target.put_in_active_hand(holochip)
+		target.reagents.add_reagent_list(list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/iron = 2))
 		return
 	else
-		to_chat(target, "<span class='notice'>[src] fails to take blood!</span>")
+		to_chat(target, "<span class='warning'>[src] fails to take blood!</span>")
 		return
 //lumos edit
 
 /mob/living/simple_animal/bot/medbot/attackby(obj/item/W as obj, mob/user as mob, params)
+	//lumos edit
 	if(istype(W, /obj/item/reagent_containers/blood))
 		if(locked)
 			to_chat(user, "<span class='warning'>You cannot insert a blood bag because the panel is locked!</span>")
@@ -304,6 +308,7 @@
 		blood_bag = W
 		to_chat(user, "<span class='notice'>You insert [W].</span>")
 		show_controls(user)
+	//lumos edit
 
 	if(istype(W, /obj/item/reagent_containers/glass))
 		if(locked)
