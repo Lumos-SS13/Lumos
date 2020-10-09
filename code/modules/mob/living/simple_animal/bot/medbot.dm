@@ -77,6 +77,13 @@
 	//The last time we were tipped/righted and said a voice line, to avoid spam
 	var/last_tipping_action_voice = 0
 
+	//The iv bag that stores blood and can drop the blood bag
+	var/obj/item/reagent_containers/blood/blood_bag = null
+	//Gives however many credits per blood donated
+	var/credits_per_unit = 3
+	//The amount of blood that can be withdrawn per transaction
+	var/max_withdraw = 20
+
 /mob/living/simple_animal/bot/medbot/mysterious
 	name = "\improper Mysterious Medibot"
 	desc = "International Medibot of mystery."
@@ -168,6 +175,8 @@
 	else
 		dat += "None Loaded"
 	dat += "<br>Behaviour controls are [locked ? "locked" : "unlocked"]<hr>"
+	if(blood_bag)
+		dat += "<a href='?src=[REF(src)];donate_blood=1'>Donate Blood</a><hr>"
 	if(!locked || hasSiliconAccessInArea(user) || IsAdminGhost(user))
 		dat += "<TT>Healing Threshold: "
 		dat += "<a href='?src=[REF(src)];adj_threshold=-10'>--</a> "
@@ -191,6 +200,9 @@
 		dat += "Critical Patient Alerts: <a href='?src=[REF(src)];critalerts=1'>[declare_crit ? "Yes" : "No"]</a><br>"
 		dat += "Patrol Station: <a href='?src=[REF(src)];operation=patrol'>[auto_patrol ? "Yes" : "No"]</a><br>"
 		dat += "Stationary Mode: <a href='?src=[REF(src)];stationary=1'>[stationary_mode ? "Yes" : "No"]</a><br>"
+
+		if(blood_bag)
+			dat += "<a href='?src=[REF(src)];drop_bloodbag=1'>Remove Blood Bag</a><br>"
 
 	return dat
 
@@ -235,10 +247,56 @@
 	else if(href_list["virus"])
 		treat_virus = !treat_virus
 
+	else if(href_list["donate_blood"])
+		for(var/mob/living/carbon/M in users)
+			if(M != usr)
+				continue
+			draw_blood(M)
+
+	else if(href_list["drop_bloodbag"])
+		blood_bag.forceMove(drop_location())
+		blood_bag = null
+
 	update_controls()
 	return
 
+/mob/living/simple_animal/bot/medbot/proc/draw_blood(mob/living/carbon/target)
+	if(!in_range(src, target))
+		return
+	if(blood_bag.reagents.total_volume >= blood_bag.reagents.maximum_volume - max_withdraw)
+		to_chat(target, "<span class='notice'>[src] is full of blood already!</span>")
+		return
+	if(target.transfer_blood_to(blood_bag, max_withdraw, TRUE))
+		to_chat(target, "<span class='notice'>[src] takes blood successfully!</span>")
+		if(target.get_active_held_item())
+			var/obj/obj = target.get_active_held_item()
+			if(istype(obj, /obj/item/holochip))
+				var/obj/item/holochip/holochip_already = obj
+				holochip_already.credits += max_withdraw * credits_per_unit
+				return
+		var/obj/item/holochip/holochip = new /obj/item/holochip(drop_location())
+		holochip.credits = max_withdraw * credits_per_unit
+		target.put_in_active_hand(holochip)
+		return
+	else
+		to_chat(target, "<span class='notice'>[src] fails to take blood!</span>")
+		return
+
 /mob/living/simple_animal/bot/medbot/attackby(obj/item/W as obj, mob/user as mob, params)
+	if(istype(W, /obj/item/reagent_containers/blood))
+		if(locked)
+			to_chat(user, "<span class='warning'>You cannot insert a blood bag because the panel is locked!</span>")
+			return
+		if(!isnull(blood_bag))
+			to_chat(user, "<span class='warning'>There is already a blood bag loaded!</span>")
+			return
+		if(!user.transferItemToLoc(W, src))
+			return
+
+		blood_bag = W
+		to_chat(user, "<span class='notice'>You insert [W].</span>")
+		show_controls(user)
+
 	if(istype(W, /obj/item/reagent_containers/glass))
 		if(locked)
 			to_chat(user, "<span class='warning'>You cannot insert a beaker because the panel is locked!</span>")
