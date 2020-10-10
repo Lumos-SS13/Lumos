@@ -1,4 +1,4 @@
-Pu/datum/species/handle_digestion(mob/living/carbon/human/H)
+/datum/species/handle_digestion(mob/living/carbon/human/H)
 	. = ..()
 	switch(H.nutrition)
 		if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
