@@ -15,7 +15,7 @@
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-1*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -36,7 +36,7 @@
 /datum/reagent/medicine/megabicaridine/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-2.5*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -57,7 +57,7 @@
 /datum/reagent/medicine/ultrabicaridine/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-4*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -77,7 +77,7 @@
 /datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-1*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -101,7 +101,7 @@
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(-1*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -122,7 +122,7 @@
 /datum/reagent/medicine/megakelotane/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(-2.5*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -143,7 +143,7 @@
 /datum/reagent/medicine/ultrakelotane/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(-4*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	..()
 	. = 1
 
@@ -168,7 +168,7 @@
 /datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-1*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
 		M.reagents.remove_reagent(R.type,1)
 	..()
@@ -192,7 +192,7 @@
 /datum/reagent/medicine/megaantitoxin/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-2.5*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
 		M.reagents.remove_reagent(R.type,2)
 	..()
@@ -216,7 +216,7 @@
 /datum/reagent/medicine/ultraantitoxin/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-4*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
 		M.reagents.remove_reagent(R.type,4)
 	..()
@@ -257,7 +257,7 @@
 	M.adjustOxyLoss(-0.5*REM, FALSE)
 	M.adjustToxLoss(-0.5*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	. = 1
 	..()
 
@@ -284,7 +284,7 @@
 	M.adjustOxyLoss(-1.75*REM, FALSE)
 	M.adjustToxLoss(-1.75*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	. = 1
 	..()
 
@@ -311,7 +311,7 @@
 	M.adjustOxyLoss(-3*REM, FALSE)
 	M.adjustToxLoss(-3*REM, FALSE)
 	M.jitteriness += 1
-	M.nutrition -= 5
+	M.nutrition -= 3
 	. = 1
 	..()
 

@@ -1,3 +1,4 @@
+//Bicaridine
 /datum/chemical_reaction/megabicaridine
 	name = "megaBicaridine"
 	id = /datum/reagent/medicine/megabicaridine
@@ -12,6 +13,7 @@
 	required_reagents = list(/datum/reagent/medicine/megabicaridine = 1, /datum/reagent/medicine/tchem = 1, /datum/reagent/water = 1)
 	required_temp = 600
 
+//Kelotane
 /datum/chemical_reaction/megakelotane
 	name = "megaKelotane"
 	id = /datum/reagent/medicine/megakelotane
@@ -26,6 +28,7 @@
 	required_reagents = list(/datum/reagent/medicine/megakelotane = 1, /datum/reagent/medicine/tchem = 1, /datum/reagent/water = 1)
 	required_temp = 600
 
+//Anti-Toxin
 /datum/chemical_reaction/megaantitoxin
 	name = "megaAnti-Toxin"
 	id = /datum/reagent/medicine/megaantitoxin
@@ -40,6 +43,7 @@
 	required_reagents = list(/datum/reagent/medicine/megaantitoxin = 1, /datum/reagent/medicine/tchem = 1, /datum/reagent/water = 1)
 	required_temp = 600
 
+//Tricordrazine
 /datum/chemical_reaction/megatricordrazine
 	name = "megaTricordrazine"
 	id = /datum/reagent/medicine/megatricordrazine
@@ -54,9 +58,17 @@
 	required_reagents = list(/datum/reagent/medicine/megatricordrazine = 1, /datum/reagent/medicine/tchem = 1, /datum/reagent/water = 1)
 	required_temp = 600
 
+//tChem
 /datum/chemical_reaction/tchem
 	name = "tChem"
 	id = /datum/reagent/medicine/tchem
 	results = list(/datum/reagent/medicine/tchem = 3)
 	required_reagents = list(/datum/reagent/toxin/plasma = 1, /datum/reagent/toxin/formaldehyde = 1, /datum/reagent/toxin/mutagen = 1)
 	required_temp = 500
+
+//Dexalin
+/datum/chemical_reaction/dexalin
+	name = "Dexalin"
+	id = /datum/reagent/medicine/dexalin
+	results = list(/datum/reagent/medicine/dexalin = 3)
+	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/oxygen = 1, /datum/reagent/iron = 1)
