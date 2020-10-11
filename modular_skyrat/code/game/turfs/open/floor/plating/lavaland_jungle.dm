@@ -68,6 +68,9 @@
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 
+	var/compost_progress = 0
+	var/busy = FALSE
+
 /turf/open/water/lavaland_jungle
 	baseturfs = /turf/open/lava/smooth/lava_land_surface
 	icon = 'modular_skyrat/icons/turf/water.dmi'
@@ -75,5 +78,33 @@
 	color = "#648363"
 	slowdown = 3
 
+/turf/open/floor/plating/smooth/dirt/lavaland_jungle/attackby(obj/item/C, mob/user, params)
+	if(busy)
+		return
+	busy = TRUE
+	if(!isashwalker(user) && !ispodperson(user))
+		busy = FALSE
+		return ..()
+	if(istype(C, /obj/item/reagent_containers/food/snacks/grown/ash_flora))
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		qdel(C)
+		compost_progress += 25
+		if(compost_progress >= 100)
+			ChangeTurf(/turf/open/floor/plating/smooth/grass/lavaland_jungle)
+			return
+		busy = FALSE
+		return
+	else if(istype(C, /obj/item/shovel))
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		ChangeTurf(/turf/open/floor/plating/asteroid/basalt/lava_land_surface)
+		return
+	else
+		busy = FALSE
+		return ..()
+	
 /turf/open/floor/plating/smooth/ReplaceWithLattice()
 	return

@@ -17,15 +17,17 @@
 	var/harvest_message_high = "You harvest and collect shavings from several mushroom caps."
 	var/harvested = FALSE
 	var/base_icon
-	var/regrowth_time_low = 8 MINUTES
-	var/regrowth_time_high = 16 MINUTES
+	//var/regrowth_time_low = 8 MINUTES
+	//var/regrowth_time_high = 16 MINUTES
+	var/regrowth_time_low = 2 MINUTES
+	var/regrowth_time_high = 3 MINUTES
 
 /obj/structure/flora/ash/Initialize()
 	. = ..()
 	base_icon = "[icon_state][rand(1, 4)]"
 	icon_state = base_icon
 
-/obj/structure/flora/ash/proc/harvest(user)
+/obj/structure/flora/ash/proc/harvest(user, harvest_allow = TRUE) // LUMOS EDIT
 	if(harvested)
 		return 0
 
@@ -38,8 +40,9 @@
 			else if(rand_harvested == harvest_amount_high)
 				msg = harvest_message_high
 			to_chat(user, "<span class='notice'>[msg]</span>")
-		for(var/i in 1 to rand_harvested)
-			new harvest(get_turf(src))
+		if(harvest_allow) // LUMOS EDIT
+			for(var/i in 1 to rand_harvested)
+				new harvest(get_turf(src))
 
 	icon_state = "[base_icon]p"
 	name = harvested_name
@@ -72,7 +75,7 @@
 			harvest(user)
 
 /obj/structure/flora/ash/tall_shroom //exists only so that the spawning check doesn't allow these spawning near other things
-	regrowth_time_low = 4200
+	//regrowth_time_low = 4200
 
 /obj/structure/flora/ash/leaf_shroom
 	icon_state = "s_mushroom"
@@ -87,8 +90,8 @@
 	harvest_message_low = "You pluck a single, suitable leaf."
 	harvest_message_med = "You pluck a number of leaves, leaving a few unsuitable ones."
 	harvest_message_high = "You pluck quite a lot of suitable leaves."
-	regrowth_time_low = 2400
-	regrowth_time_high = 6000
+	//regrowth_time_low = 2400
+	//regrowth_time_high = 6000
 
 /obj/structure/flora/ash/cap_shroom
 	icon_state = "r_mushroom"
@@ -102,8 +105,8 @@
 	harvest_message_low = "You slice the cap off a mushroom."
 	harvest_message_med = "You slice off a few conks from the larger mushrooms."
 	harvest_message_high = "You slice off a number of caps and conks from these mushrooms."
-	regrowth_time_low = 3000
-	regrowth_time_high = 5400
+	//regrowth_time_low = 3000
+	//regrowth_time_high = 5400
 
 /obj/structure/flora/ash/stem_shroom
 	icon_state = "t_mushroom"
@@ -119,8 +122,8 @@
 	harvest_message_low = "You pick and slice the cap off a mushroom, leaving the stem."
 	harvest_message_med = "You pick and decapitate several mushrooms for their stems."
 	harvest_message_high = "You acquire a number of stems from these mushrooms."
-	regrowth_time_low = 3000
-	regrowth_time_high = 6000
+	//regrowth_time_low = 3000
+	//regrowth_time_high = 6000
 
 /obj/structure/flora/ash/cacti
 	icon_state = "cactus"
@@ -135,13 +138,30 @@
 	harvest_message_low = "You pick a cactus fruit."
 	harvest_message_med = "You pick several cactus fruit." //shouldn't show up, because you can't get more than two
 	harvest_message_high = "You pick a pair of cactus fruit."
-	regrowth_time_low = 4800
-	regrowth_time_high = 7200
+	//regrowth_time_low = 4800
+	//regrowth_time_high = 7200
 
 /obj/structure/flora/ash/cacti/Initialize(mapload)
 	. = ..()
 	// min dmg 3, max dmg 6, prob(70)
 	AddComponent(/datum/component/caltrop, 3, 6, 70)
+
+// LUMOS EDIT START
+/obj/structure/flora/ash/hard_mushroom
+	icon = 'modular_lumos/icons/obj/flora/ash_flora.dmi'
+	icon_state = "woodbranch"
+	name = "hardened mushrooms"
+	desc = "Long and extended mushrooms that look almost wooden."
+	harvested_name = "hardened mushrooms"
+	harvested_desc = "A bunch of mushrooms that have hardened over time."
+	harvest = /obj/item/grown/log
+	needs_sharp_harvest = FALSE
+	harvest_amount_high = 3
+	harvest_time = 10
+	harvest_message_low = "You pick a hardened mushroom."
+	harvest_message_med = "You pick several hardened mushrooms." //shouldn't show up, because you can't get more than two
+	harvest_message_high = "You pick a pair of hardened mushroom."
+// LUMOS EDIT STOP
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora
 	name = "mushroom shavings"
@@ -182,7 +202,8 @@
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem
 	name = "mushroom stem"
 	desc = "A long mushroom stem. It's slightly glowing."
-	list_reagents = list(/datum/reagent/consumable/tinlux = 2, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/drug/space_drugs = 1)
+	//list_reagents = list(/datum/reagent/consumable/tinlux = 2, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/drug/space_drugs = 1)
+	list_reagents = list(/datum/reagent/consumable/tinlux = 2, /datum/reagent/toxin/lipolicide = 1, /datum/reagent/drug/space_drugs = 1) // LUMOS EDIT
 	icon_state = "mushroom_stem"
 	seed = /obj/item/seeds/lavaland/ember
 	wine_power = 60
