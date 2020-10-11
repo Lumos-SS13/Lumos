@@ -108,5 +108,6 @@
 		return ..()
 
 
+
 /turf/open/floor/plating/smooth/ReplaceWithLattice()
 	return
