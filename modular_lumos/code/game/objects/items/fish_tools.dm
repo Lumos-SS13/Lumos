@@ -61,7 +61,7 @@
 		to_chat(user, "<span class='warning'>You are already fishing!</span>")
 		return
 	in_use = TRUE
-	if(istype(target, /turf/open/water))
+	if(istype(target, /turf/open/water) || istype(target, /turf/open/floor/plating/beach/water ))
 		if(!do_after(user, 5 SECONDS, target = target))
 			in_use = FALSE
 			return
