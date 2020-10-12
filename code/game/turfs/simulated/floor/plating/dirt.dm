@@ -14,6 +14,8 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
+	can_allow_icy = FALSE //lumos edit
+
 /turf/open/floor/plating/dirt/dark
 	icon_state = "greenerdirt"
 

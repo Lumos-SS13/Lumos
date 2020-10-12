@@ -24,6 +24,8 @@
 	/// Whether the turf has been dug or not
 	var/dug
 
+	can_allow_icy = FALSE //lumos edit
+
 /turf/open/floor/plating/asteroid/Initialize()
 	var/proper_name = name
 	. = ..()
