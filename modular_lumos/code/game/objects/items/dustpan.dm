@@ -60,7 +60,7 @@
 			<br>
 			Current Points: [successful_cleaning]<br>
 		</center>"}
-	if(successful_cleaning < 200)
+	if(successful_cleaning < 300)
 		dat += {"
 			<center>
 				<span class='warning'>You currently do not have enough points to upgrade!</span><br>
@@ -135,8 +135,8 @@
 	update_icon()
 
 /obj/item/dustpan/proc/can_we_upgrade()
-	if(successful_cleaning >= 200)
-		successful_cleaning -= 200
+	if(successful_cleaning >= 300)
+		successful_cleaning -= 300
 		return TRUE
 	return FALSE
 
