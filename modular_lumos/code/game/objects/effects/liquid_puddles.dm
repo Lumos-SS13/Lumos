@@ -4,26 +4,26 @@
 	icon = 'modular_lumos/icons/obj/puddle.dmi'
 	icon_state = "puddle_"
 
-/obj/effect/decal/cleanable/puddle/process()
+/obj/effect/decal/cleanable/puddle/proc/fake_process()
 	if(reagents.total_volume >= 50)
 		check_puddle_spread()
+	if(locate(/mob/living/carbon) in get_turf(src))
+		var/mob/living/carbon/C = locate(/mob/living/carbon) in get_turf(src)
+		reagents.trans_to(C, 1)
 	if(reagents.total_volume <= 0)
 		qdel(src)
 		return
-	if(!locate(/mob/living/carbon) in get_turf(src))
-		STOP_PROCESSING(SSobj, src)
-	var/mob/living/carbon/C = locate(/mob/living/carbon) in get_turf(src)
-	reagents.trans_to(C, 1)
 
 /obj/effect/decal/cleanable/puddle/Crossed(atom/movable/O)
 	. = ..()
-	START_PROCESSING(SSobj, src)
 	if(iscarbon(O))
 		var/mob/living/carbon/C = O
 		reagents.trans_to(C, 1)
+	if(isliving(O))
+		var/watersound = pick(list('sound/effects/footstep/water1.ogg', 'sound/effects/footstep/water2.ogg', 'sound/effects/footstep/water3.ogg', 'sound/effects/footstep/water4.ogg'))
+		playsound(src, watersound, 50, TRUE, -1)
 
 /obj/effect/decal/cleanable/puddle/Destroy(force)
-	STOP_PROCESSING(SSobj, src)
 	for(var/directions in GLOB.cardinals)
 		var/turf/step_turf = get_step(src, directions)
 		for(var/obj/effect/decal/cleanable/puddle/puddle in step_turf)
