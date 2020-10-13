@@ -156,7 +156,6 @@
 		reagents.reaction(target, TOUCH)
 		var/obj/effect/decal/cleanable/puddle/puddle = new /obj/effect/decal/cleanable/puddle(T)
 		reagents.trans_to(puddle, reagents.total_volume)
-		puddle.check_puddle_spread()
 		reagents.clear_reagents()
 
 //melts plastic beakers

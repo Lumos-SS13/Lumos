@@ -133,6 +133,5 @@
 		reagents.reaction(target, TOUCH)
 		var/obj/effect/decal/cleanable/puddle/puddle = new /obj/effect/decal/cleanable/puddle(get_turf(target))
 		reagents.trans_to(puddle, reagents.total_volume)
-		puddle.check_puddle_spread()
 		return
 
