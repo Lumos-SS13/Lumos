@@ -8,7 +8,7 @@
 	check_puddle_spread()
 	if(locate(/mob/living/carbon) in get_turf(src))
 		var/mob/living/carbon/C = locate(/mob/living/carbon) in get_turf(src)
-		reagents.trans_to(C, 1)
+		reagents.reaction(C, TOUCH)
 	if(reagents.total_volume <= 0)
 		qdel(src)
 		return
@@ -17,7 +17,7 @@
 	. = ..()
 	if(iscarbon(O))
 		var/mob/living/carbon/C = O
-		reagents.trans_to(C, 1)
+		reagents.reaction(C, TOUCH)
 	if(isliving(O))
 		var/watersound = pick(list('sound/effects/footstep/water1.ogg', 'sound/effects/footstep/water2.ogg', 'sound/effects/footstep/water3.ogg', 'sound/effects/footstep/water4.ogg'))
 		playsound(src, watersound, 50, TRUE, -1)
@@ -58,28 +58,31 @@
 	update_icon()
 
 /obj/effect/decal/cleanable/puddle/proc/check_puddle_spread()
-	if(!(src.reagents.total_volume >= 50))
+	update_icon()
+	if(src.reagents.total_volume < 50)
 		return
 	for(var/i in 1 to 10)
 		if(reagents.total_volume < 50)
 			break
-		if(src.reagents.total_volume >= 50)
-			for(var/directions in GLOB.cardinals)
-				var/turf/step_turf = get_step(src, directions)
-				if(isclosedturf(step_turf) || isspaceturf(step_turf))
-					continue
-				var/obj/machinery/door/door = locate(/obj/machinery/door) in step_turf
-				if(door?.density)
-					continue
-				var/obj/structure/window/window = locate(/obj/structure/window)
-				if(window?.anchored)
-					continue
-				var/obj/effect/decal/cleanable/puddle/puddle = locate(/obj/effect/decal/cleanable/puddle) in step_turf
-				if(!puddle)
-					puddle = new puddle(step_turf)
-					reagents.trans_to(puddle, 10)
-					continue
-				if(puddle.reagents.total_volume + 10 >= reagents.total_volume || puddle.reagents.total_volume >= reagents.total_volume)
-					continue
-				src.reagents.trans_to(puddle, 10)
+		for(var/directions in GLOB.cardinals)
+			var/turf/step_turf = get_step(src, directions)
+			if(isclosedturf(step_turf) || isspaceturf(step_turf))
+				continue
+			var/obj/machinery/door/door = locate(/obj/machinery/door) in step_turf
+			if(door?.density)
+				continue
+			var/obj/structure/window/window = locate(/obj/structure/window) in step_turf
+			if(window?.anchored)
+				continue
+			var/obj/effect/decal/cleanable/puddle/puddle = locate(/obj/effect/decal/cleanable/puddle) in step_turf
+			if(!puddle)
+				puddle = new /obj/effect/decal/cleanable/puddle(step_turf)
+				reagents.trans_to(puddle, 10)
+				puddle.update_icon()
+				continue
+			if(puddle.reagents.total_volume + 10 >= reagents.total_volume || puddle.reagents.total_volume >= reagents.total_volume)
+				continue
+			src.reagents.trans_to(puddle, 10)
+			puddle.update_icon()
+	update_icon()
 			
