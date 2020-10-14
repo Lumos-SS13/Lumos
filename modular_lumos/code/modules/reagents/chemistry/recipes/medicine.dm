@@ -77,7 +77,7 @@
 	name = "megaDexalin"
 	id = /datum/reagent/medicine/megadexalin
 	results = list(/datum/reagent/medicine/megadexalin = 3)
-	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/blood = 1, /datum/reagent/stable_plasma = 1)
+	required_reagents = list(/datum/reagent/medicine/dexalin = 1, /datum/reagent/blood = 1, /datum/reagent/stable_plasma = 1)
 	required_temp = 400
 
 /datum/chemical_reaction/ultradexalin
