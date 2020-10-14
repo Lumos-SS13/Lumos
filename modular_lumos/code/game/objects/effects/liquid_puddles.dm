@@ -9,6 +9,7 @@
 	if(locate(/mob/living/carbon) in get_turf(src))
 		var/mob/living/carbon/C = locate(/mob/living/carbon) in get_turf(src)
 		reagents.reaction(C, TOUCH)
+		reagents.trans_to(C, 1)
 	if(reagents.total_volume <= 0)
 		qdel(src)
 		return
