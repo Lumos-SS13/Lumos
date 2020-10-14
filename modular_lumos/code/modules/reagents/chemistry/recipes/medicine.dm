@@ -72,3 +72,17 @@
 	id = /datum/reagent/medicine/dexalin
 	results = list(/datum/reagent/medicine/dexalin = 3)
 	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/oxygen = 1, /datum/reagent/iron = 1)
+
+/datum/chemical_reaction/megadexalin
+	name = "megaDexalin"
+	id = /datum/reagent/medicine/megadexalin
+	results = list(/datum/reagent/medicine/megadexalin = 3)
+	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/blood = 1, /datum/reagent/stable_plasma = 1)
+	required_temp = 400
+
+/datum/chemical_reaction/ultradexalin
+	name = "ultraDexalin"
+	id = /datum/reagent/medicine/ultradexalin
+	results = list(/datum/reagent/medicine/ultradexalin = 3)
+	required_reagents = list(/datum/reagent/medicine/megadexalin = 1, /datum/reagent/medicine/tchem = 1, /datum/reagent/water = 1)
+	required_temp = 600

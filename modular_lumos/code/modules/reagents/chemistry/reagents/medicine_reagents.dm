@@ -66,6 +66,10 @@
 	..()
 	. = 1
 
+////////////////////
+///Oxygen Healing///
+////////////////////
+//Dexalin
 /datum/reagent/medicine/dexalin
 	name = "Dexalin"
 	description = "Restores oxygen loss. Overdose causes it instead."
@@ -82,6 +86,48 @@
 	. = 1
 
 /datum/reagent/medicine/dexalin/overdose_process(mob/living/M)
+	M.adjustOxyLoss(4*REM, FALSE)
+	..()
+	. = 1
+
+//megaDexalin
+/datum/reagent/medicine/megadexalin
+	name = "megaDexalin"
+	description = "Restores oxygen loss. Overdose causes it instead."
+	reagent_state = LIQUID
+	color = "#13d2f0"
+	overdose_threshold = 30
+	pH = 9.7
+
+/datum/reagent/medicine/megadexalin/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-2*REM, FALSE)
+	M.jitteriness += 1
+	M.nutrition -= 3
+	..()
+	. = 1
+
+/datum/reagent/medicine/megadexalin/overdose_process(mob/living/M)
+	M.adjustOxyLoss(4*REM, FALSE)
+	..()
+	. = 1
+
+//ultraDexalin
+/datum/reagent/medicine/ultradexalin
+	name = "ultraDexalin"
+	description = "Restores oxygen loss. Overdose causes it instead."
+	reagent_state = LIQUID
+	color = "#13d2f0"
+	overdose_threshold = 30
+	pH = 9.7
+
+/datum/reagent/medicine/ultradexalin/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-4*REM, FALSE)
+	M.jitteriness += 1
+	M.nutrition -= 3
+	..()
+	. = 1
+
+/datum/reagent/medicine/ultradexalin/overdose_process(mob/living/M)
 	M.adjustOxyLoss(4*REM, FALSE)
 	..()
 	. = 1
