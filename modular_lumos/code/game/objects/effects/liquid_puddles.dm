@@ -18,6 +18,8 @@
 	if(iscarbon(O))
 		var/mob/living/carbon/C = O
 		reagents.reaction(C, TOUCH)
+		if(C.m_intent == MOVE_INTENT_RUN)
+			C.slip(30)
 	if(isliving(O))
 		var/watersound = pick(list('sound/effects/footstep/water1.ogg', 'sound/effects/footstep/water2.ogg', 'sound/effects/footstep/water3.ogg', 'sound/effects/footstep/water4.ogg'))
 		playsound(src, watersound, 50, TRUE, -1)
