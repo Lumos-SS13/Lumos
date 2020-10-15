@@ -12,7 +12,6 @@
 		#include "map_files\PubbyStation\PubbyStation_Skyrat.dmm"
 		#include "map_files\BoxStation\BoxStation_Lumos.dmm"
 		#include "map_files\LambdaStation\lambda_Skyrat.dmm"
-		#include "map_files\FridgeStation\FridgeStation.dmm"
 
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
