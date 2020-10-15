@@ -17,8 +17,6 @@
 	clawfootstep = FOOTSTEP_LAVA
 	heavyfootstep = FOOTSTEP_LAVA
 
-	can_allow_icy = FALSE //lumos edit
-
 /turf/open/lava/ex_act(severity, target)
 	contents_explosion(severity, target)
 

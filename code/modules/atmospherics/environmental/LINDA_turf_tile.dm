@@ -242,7 +242,7 @@ GLOBAL_VAR(iceoverlaymaster) // LUMOS EDIT
 	SSair.add_to_react_queue(src)
 
 	// LUMOS EDIT START
-	if(air.temperature < T0C && air.return_pressure() > 0.1 && can_allow_icy)
+	if(air.temperature < T0C && air.return_pressure() > 0.1)
 		icy = TRUE
 	else
 		icy = FALSE
