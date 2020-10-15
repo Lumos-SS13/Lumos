@@ -614,6 +614,7 @@ SUBSYSTEM_DEF(ticker)
 		var/list/ded = SSblackbox.first_death
 		if(ded.len)
 			news_message += " NT Sanctioned Psykers picked up faint traces of someone near the station, allegedly having had died. Their name was: [ded["name"]], [ded["role"]], at [ded["area"]].[ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""]"
+		// this comment fixes formatting from the above line in vscode "
 		else
 			news_message += " NT Sanctioned Psykers proudly confirm reports that nobody died this shift!"
 
