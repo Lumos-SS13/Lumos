@@ -11,3 +11,4 @@
 	fitting = "bulb"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	invisibility = INVISIBILITY_MAXIMUM
+
