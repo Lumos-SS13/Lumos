@@ -24,6 +24,8 @@
 	/// Whether the turf has been dug or not
 	var/dug
 
+	can_allow_icy = FALSE //lumos edit
+
 /turf/open/floor/plating/asteroid/Initialize()
 	var/proper_name = name
 	. = ..()
@@ -98,6 +100,8 @@
 	environment_type = "basalt"
 	floor_variance = 15
 	digResult = /obj/item/stack/ore/glass/basalt
+
+	var/busy = FALSE //LUMOS EDIT
 
 /turf/open/floor/plating/asteroid/basalt/lava //lava underneath
 	baseturfs = /turf/open/lava/smooth
@@ -229,7 +233,7 @@
 	if (!megafauna_spawn_list)
 		megafauna_spawn_list = list(/mob/living/simple_animal/hostile/megafauna/dragon = 4, /mob/living/simple_animal/hostile/megafauna/colossus = 2, /mob/living/simple_animal/hostile/megafauna/bubblegum = SPAWN_BUBBLEGUM)
 	if (!flora_spawn_list)
-		flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2)
+		flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2, /obj/structure/flora/ash/hard_mushroom = 1) // LUMOS EDIT: hard_shrooms
 
 	. = ..()
 	if(!has_data)
@@ -458,3 +462,90 @@
 /turf/open/floor/plating/asteroid/snow/atmosphere
 	initial_gas_mix = FROZEN_ATMOS
 	planetary_atmos = FALSE
+
+// LUMOS EDIT START
+/turf/open/floor/plating/asteroid/basalt/attackby(obj/item/W, mob/user, params)
+	if(busy)
+		return
+	busy = TRUE
+	if(!isashwalker(user) && !ispodperson(user))
+		busy = FALSE
+		return ..()
+	if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return ..()
+		var/obj/structure/flora/ash/leaf_shroom/flora_ash = new /obj/structure/flora/ash/leaf_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_cap))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		var/obj/structure/flora/ash/cap_shroom/flora_ash = new /obj/structure/flora/ash/cap_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		var/obj/structure/flora/ash/stem_shroom/flora_ash = new /obj/structure/flora/ash/stem_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		var/obj/structure/flora/ash/cacti/flora_ash = new /obj/structure/flora/ash/cacti(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/reagent_containers/food/snacks/grown/ash_flora/shavings))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		var/obj/structure/flora/ash/tall_shroom/flora_ash = new /obj/structure/flora/ash/tall_shroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/grown/log))
+		to_chat(user, "<span class='notice'>You start planting [initial(W.name)] on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		var/obj/structure/flora/ash/hard_mushroom/flora_ash = new /obj/structure/flora/ash/hard_mushroom(get_turf(src))
+		flora_ash.harvest(harvest_allow = FALSE)
+		qdel(W)
+		busy = FALSE
+		return
+	else if(istype(W, /obj/item/stack/sheet/mineral/sandstone))
+		var/obj/item/stack/sheet/mineral/sandstone/sandstone = W
+		if(sandstone.amount < 5)
+			to_chat(user, "<span class='notice'>Five sandstone is required to create dirt on the floor!")
+			busy = FALSE
+			return
+		to_chat(user, "<span class='notice'>You start placing dirt on [src]")
+		if(!do_after(user, 4 SECONDS, FALSE, src))
+			busy = FALSE
+			return
+		sandstone.use(5)
+		ChangeTurf(/turf/open/floor/plating/smooth/dirt/lavaland_jungle)
+		busy = FALSE
+		return
+	else
+		busy = FALSE
+		return ..()
+// LUMOS EDIT STOP
