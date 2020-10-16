@@ -83,8 +83,8 @@
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	force = 10 //less force when it's off, cause it's just a beatstick
 	var/force_on = 30 //on par with energy sword
-	bonusdamage = 0
-	bonusdamage_on = 15
+	var/bonusdamage = 0
+	var/bonusdamage_on = 15
 	throwforce = 15
 	var/throwforce_on = 25
 	armour_penetration = 15
