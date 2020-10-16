@@ -79,7 +79,7 @@
 	var/throwforce_on = 25
 	armour_penetration = 15
 	var/armour_penetration_on = 30
-	var/list/attack_verb_off = list("bashes","hits","smashes")
+	var/list/attack_verb_off = list("bashed", "hit", "smashed")
 	var/list/attack_verb_on = list("chopped", "sliced", "cut", "reaped")
 	scythe_slash_angles = list(0, 45, -45, 90, -90, 135, -135, 180)
 	var/total_mass_on
