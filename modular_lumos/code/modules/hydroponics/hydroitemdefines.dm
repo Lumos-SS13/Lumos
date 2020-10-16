@@ -58,16 +58,96 @@
 
 /obj/item/scythe/super
 	name = "super scythe"
-	desc = "A scythe that deals moderately well with overgrown spacevines."
+	desc = "An advanced scythe that deals moderately well with overgrown spacevines."
 	icon_state = "scythe1"
-	force = 30
+	force = 20
 	armour_penetration = 30
 	scythe_slash_angles = list(0, 45, -45, 90, -90)
 
 /obj/item/scythe/ultra
-	name = "ultra scyth"
-	desc = "A scythe that boasts the best spacevine prevention."
+	name = "energy scythe"
+	desc = "An energy-based scythe that quickly burns through vines."
+	var/active = FALSE
+	var/hitsound_on = 'sound/weapons/blade1.ogg'
 	icon_state = "scythe2"
-	force = 45
-	armour_penetration = 40
+	var/icon_state_on = "scythe2_on"
+	w_class = WEIGHT_CLASS_NORMAL
+	var/w_class_on = WEIGHT_CLASS_BULKY
+	force = 15 //less force when it's off, cause it's just a beatstick
+	var/force_on = 30 //on par with energy sword
+	throwforce = 15
+	var/throwforce_on = 25
+	armour_penetration = 15
+	var/armour_penetration_on = 30
+	var/list/attack_verb_off = list("bashes","hits","smashes")
+	var/list/attack_verb_on = list("chopped", "sliced", "cut", "reaped")
 	scythe_slash_angles = list(0, 45, -45, 90, -90, 135, -135, 180)
+	var/total_mass_on
+	var/clumsy_check = TRUE
+
+/obj/item/scythe/ultra/Initialize()
+	. = ..()
+	if(active)
+		if(attack_verb_on.len)
+			attack_verb = attack_verb_on
+	else
+		if(attack_verb_off.len)
+			attack_verb = attack_verb_off
+		//skyrat edit
+		if(embedding)
+			updateEmbedding()
+		//
+
+/obj/item/scythe/ultra/attack_self(mob/living/carbon/user)
+	if(transform_weapon(user))
+		clumsy_transform_effect(user)
+
+/obj/item/scythe/ultra/proc/transform_weapon(mob/living/user, supress_message_text)
+	active = !active
+	if(active)
+		force = force_on
+		total_mass = total_mass_on
+		throwforce = throwforce_on
+		hitsound = hitsound_on
+		throw_speed = 4
+		armour_penetration = armour_penetration_on
+		if(attack_verb_on.len)
+			attack_verb = attack_verb_on
+		if(embedding)
+			updateEmbedding()
+		icon_state = icon_state_on
+		w_class = w_class_on
+		//skyrat edit
+		if(embedding)
+			updateEmbedding()
+		//
+	else
+		force = initial(force)
+		throwforce = initial(throwforce)
+		hitsound = initial(hitsound)
+		throw_speed = initial(throw_speed)
+		armour_penetration = initial(armour_penetration)
+		if(attack_verb_off.len)
+			attack_verb = attack_verb_off
+		if(embedding)
+			updateEmbedding()
+		icon_state = initial(icon_state)
+		w_class = initial(w_class)
+		total_mass = initial(total_mass)
+		//skyrat edit
+		if(embedding)
+			disableEmbedding()
+		//
+	transform_messages(user, supress_message_text)
+	add_fingerprint(user)
+	return TRUE
+
+/obj/item/scythe/ultra/proc/transform_messages(mob/living/user, supress_message_text)
+	playsound(user, active ? 'sound/weapons/saberon.ogg' : 'sound/weapons/saberoff.ogg', 35, 1)  //changed it from 50% volume to 35% because deafness
+	if(!supress_message_text)
+		to_chat(user, "<span class='notice'>[src] [active ? "is now active":"is now off"].</span>")
+
+/obj/item/scythe/ultra/proc/clumsy_transform_effect(mob/living/user)
+	if(clumsy_check && HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
+		to_chat(user, "<span class='warning'>You accidentally cut yourself with [src], like a doofus!</span>")
+		user.take_bodypart_damage(5,5)
