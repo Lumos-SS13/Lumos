@@ -6,6 +6,7 @@
 	name = "scythe"
 	desc = "A flimsy scythe. It has a somewhat dull metal head attached to a weak plastic pole."
 	force = 15
+	var/bonusdamage = 5 //bonus damage against kudzu
 	throwforce = 5
 	throw_speed = 2
 	throw_range = 3
@@ -39,9 +40,10 @@
 	return FALSE
 
 /obj/item/scythe/pre_attack(atom/A, mob/living/user, params)
-	if(swiping || !istype(A, /obj/structure/spacevine) || get_turf(A) == get_turf(user))
+	if(swiping || !istype(A, /obj/structure/spacevine) || get_turf(A) == get_turf(user) || !istype(A, /mob/living/simple_animal/hostile/venus_human_trap))
 		return ..()
 	else
+		force = force + bonusdamage
 		var/turf/user_turf = get_turf(user)
 		var/dir_to_target = get_dir(user_turf, get_turf(A))
 		var/stam_gain = 0
@@ -52,19 +54,25 @@
 				if(user.Adjacent(V))
 					melee_attack_chain(user, V)
 					stam_gain += 10					//should be hitcost
+			for(var/mob/living/simple_animal/hostile/venus_human_trap/V in T)
+				if(user.Adjacent(V))
+					melee_attack_chain(user, V)
+					stam_gain += 10
 			stam_gain += 5								//Initial hitcost
 			user.adjustStaminaLoss(-stam_gain)
 		swiping = FALSE
+		force = initial(force)
 
 /obj/item/scythe/super
 	name = "super scythe"
 	desc = "An advanced scythe that deals moderately well with overgrown spacevines."
 	icon_state = "scythe1"
 	force = 20
+	bonusdamage = 10
 	armour_penetration = 30
 	scythe_slash_angles = list(0, 45, -45, 90, -90)
 
-/obj/item/scythe/ultra
+/obj/item/scythe/ultra //most of this shit was taken from the transforming weapon item type
 	name = "energy scythe"
 	desc = "An energy-based scythe that quickly burns through vines."
 	var/active = FALSE
@@ -73,8 +81,10 @@
 	var/icon_state_on = "scythe2_on"
 	w_class = WEIGHT_CLASS_NORMAL
 	var/w_class_on = WEIGHT_CLASS_BULKY
-	force = 15 //less force when it's off, cause it's just a beatstick
+	force = 10 //less force when it's off, cause it's just a beatstick
 	var/force_on = 30 //on par with energy sword
+	bonusdamage = 0
+	bonusdamage_on = 15
 	throwforce = 15
 	var/throwforce_on = 25
 	armour_penetration = 15
@@ -121,6 +131,7 @@
 		if(embedding)
 			updateEmbedding()
 		//
+		bonusdamage = bonusdamage_on
 	else
 		force = initial(force)
 		throwforce = initial(throwforce)
@@ -138,6 +149,7 @@
 		if(embedding)
 			disableEmbedding()
 		//
+		bonusdamage = initial(bonusdamage)
 	transform_messages(user, supress_message_text)
 	add_fingerprint(user)
 	return TRUE
