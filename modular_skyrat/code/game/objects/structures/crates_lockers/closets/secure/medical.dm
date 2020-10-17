@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/psychologist
-	name = "psychologist's cabinent"
+	name = "psychologist's cabinet"
 	desc = "Used to hold sensitive personnel material."
 	req_access = list(ACCESS_PSYCHOLOGY)
 	icon_state = "cabinet"
