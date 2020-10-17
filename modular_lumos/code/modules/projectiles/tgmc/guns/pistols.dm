@@ -3,6 +3,8 @@
 /obj/item/gun/ballistic/automatic/pistol/tgmc
 	name = "TGMC Pistol Test"
 	icon = 'modular_lumos/icons/obj/tgmc/gun.dmi'
+	lefthand_file = 'modular_lumos/icons/mob/inhands/weapons/tgmc/items_lefthand_1.dmi'
+	righthand_file = 'modular_lumos/icons/mob/inhands/weapons/tgmc/items_righthand_1.dmi'
 	fire_sound = 'modular_lumos/sound/weapons/guns/fire/tgmc/pistol.ogg'
 
 //-------------------------------------------------------
