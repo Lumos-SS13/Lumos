@@ -491,6 +491,10 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/crew_quarters/cryopod)
+"apg" = (
+/obj/structure/bookcase/random/nonfiction,
+/turf/open/floor/wood,
+/area/library)
 "apv" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel,
@@ -692,7 +696,9 @@
 /area/engine/break_room)
 "avT" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 1
+	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "awa" = (
@@ -3129,6 +3135,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
 	},
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "Warehouse Door Control";
+	pixel_x = -1;
+	pixel_y = -24;
+	req_access_txt = "31"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
 "bQG" = (
@@ -4195,6 +4208,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/quartermaster/storage)
 "cvy" = (
@@ -8566,6 +8580,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel/white,
 /area/science/storage)
+"eOM" = (
+/obj/machinery/door/airlock/external{
+	name = "External Access";
+	req_access_txt = "13;7"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "ePb" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -8716,10 +8738,14 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "eUh" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -31
-	},
 /obj/machinery/recharge_station,
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "Warehouse Door Control";
+	pixel_x = -1;
+	pixel_y = -24;
+	req_access_txt = "31"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "eUu" = (
@@ -12036,6 +12062,9 @@
 /area/hallway/primary/starboard)
 "gUt" = (
 /obj/machinery/computer/cargo,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "gUu" = (
@@ -13069,6 +13098,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "hyK" = (
@@ -13512,15 +13542,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/power/apc/highcap/five_k{
-	areastring = "/area/tcommsat/server";
-	dir = 1;
-	name = "Telecomms Server APC";
-	pixel_y = 25
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
 "hMZ" = (
@@ -14831,6 +14856,7 @@
 /area/medical/virology)
 "iAW" = (
 /obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/primary/starboard)
 "iBp" = (
@@ -15690,6 +15716,7 @@
 /area/icemoon/surface/outdoors)
 "jgd" = (
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/fans/tiny,
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "jge" = (
@@ -16243,6 +16270,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "jrU" = (
@@ -17811,6 +17839,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = 20
+	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "kxg" = (
@@ -17904,6 +17936,7 @@
 	name = "Solar Maintenance";
 	req_access_txt = "10; 13"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "kzO" = (
@@ -19389,6 +19422,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/morgue)
+"lrl" = (
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "Warehouse Door Control";
+	pixel_x = -1;
+	pixel_y = 24;
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/warehouse)
 "lrw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -21387,6 +21430,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
+"mzU" = (
+/obj/machinery/door/unpowered/shuttle,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/icemoon/surface/outdoors)
 "mAb" = (
 /obj/machinery/door/airlock{
 	name = "Shower Room"
@@ -22049,6 +22097,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Arrivals Airlock"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "mTF" = (
@@ -22937,16 +22986,13 @@
 	dir = 1
 	},
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = 7;
-	pixel_y = 1
+	pixel_x = -6
 	},
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = -2;
-	pixel_y = 9
+	pixel_x = -6
 	},
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = -3;
-	pixel_y = 1
+	pixel_x = -6
 	},
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
@@ -26379,6 +26425,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "pop" = (
@@ -26799,6 +26846,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+/obj/machinery/recharger,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "pDB" = (
@@ -27001,11 +27049,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc/highcap/five_k{
-	areastring = "/area/ai_monitored/turret_protected/ai_upload";
-	name = "Upload APC";
-	pixel_y = 24
-	},
+/obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/circuit{
 	name = "Floor Data Lattice"
 	},
@@ -29414,6 +29458,7 @@
 	name = "Turbine Access";
 	req_access_txt = "24"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
 "rcg" = (
@@ -30135,6 +30180,7 @@
 	name = "Starboard Bow Solar Access";
 	req_access_txt = "10"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
 "rwk" = (
@@ -30246,9 +30292,6 @@
 "rym" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
 /turf/open/floor/plating,
 /area/hallway/primary/port)
 "ryK" = (
@@ -32821,6 +32864,9 @@
 	pixel_x = 24
 	},
 /obj/structure/table/glass,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -31
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "sZu" = (
@@ -33727,10 +33773,6 @@
 /turf/open/floor/plating,
 /area/medical/chemistry)
 "tyD" = (
-/obj/structure/table/wood,
-/obj/item/folder/blue,
-/obj/item/stamp/captain,
-/obj/machinery/recharger,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_x = -30
@@ -33738,6 +33780,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/vending/wardrobe/cap_wardrobe,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "tyZ" = (
@@ -34164,6 +34207,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/structure/fans/tiny,
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "tLC" = (
@@ -34260,8 +34304,12 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/machinery/newscaster{
-	pixel_y = 32
+/obj/machinery/button/door{
+	id = "qm_warehouse";
+	name = "Warehouse Door Control";
+	pixel_x = -1;
+	pixel_y = 24;
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -35485,6 +35533,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Arrivals Airlock"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/primary/starboard)
 "uyp" = (
@@ -37674,6 +37723,8 @@
 	pixel_y = 7
 	},
 /obj/item/hand_tele,
+/obj/item/stamp/captain,
+/obj/item/folder/blue,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "vPv" = (
@@ -38229,6 +38280,7 @@
 	name = "Solar Maintenance";
 	req_access_txt = "10; 13"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
 "wgj" = (
@@ -39008,6 +39060,11 @@
 /obj/structure/chair,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
+"wDW" = (
+/obj/structure/mineral_door/woodrustic,
+/obj/structure/fans/tiny,
+/turf/open/floor/wood,
+/area/icemoon/surface/outdoors)
 "wEf" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -73500,7 +73557,7 @@ rNe
 blZ
 oHm
 blZ
-eFG
+wDW
 roU
 roU
 roU
@@ -75043,11 +75100,11 @@ roU
 roU
 roU
 roU
-pfH
+mzU
 wgX
 wgX
 wgX
-pfH
+mzU
 roU
 roU
 roU
@@ -81615,7 +81672,7 @@ opO
 sws
 rLU
 rLU
-rLU
+kSg
 kSg
 kSg
 rLU
@@ -83148,7 +83205,7 @@ jki
 jki
 wOn
 jFX
-wOn
+eOM
 kSg
 kSg
 kSg
@@ -86940,8 +86997,8 @@ skT
 xgg
 xgg
 vwD
-rYC
-rYC
+apg
+apg
 skT
 gVc
 ckF
@@ -95924,7 +95981,7 @@ imT
 jde
 rKG
 xIv
-cvy
+lrl
 cvy
 cvy
 cvy
