@@ -22,13 +22,13 @@
 					moving_obj.forceMove(drop_location(src))
 					moving_obj.forceMove(used_tongs)
 			update_icon()
-			tong_obj.update_icon()
+			used_tongs.update_icon()
 			return
 		if(used_tongs.contents.len > 0)
 			for(var/obj/tong_obj in used_tongs.contents)
 				tong_obj.forceMove(src)
 			update_icon()
-			tong_obj.update_icon()
+			used_tongs.update_icon()
 			return
 	if(istype(I, /obj/item/forging/hammer))
 		if(!contents.len)
