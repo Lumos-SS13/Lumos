@@ -30,6 +30,7 @@
 			update_icon()
 			used_tongs.update_icon()
 			return
+
 	if(istype(I, /obj/item/forging/hammer))
 		if(!contents.len)
 			return
@@ -40,11 +41,13 @@
 			if(onesec_cooldown)
 				if(prob(50))
 					c_construct.mistakes++
-				c_construct.hammered++
-				brittle_unmistake_chance(c_construct)
+				hammer(c_construct, TRUE, user)
+				brittle_chance(c_construct)
+				unmistake_chance(c_construct)
 				return
-			c_construct.hammered++
-			brittle_unmistake_chance(c_construct)
+			hammer(c_construct, FALSE, user)
+			brittle_chance(c_construct)
+			unmistake_chance(c_construct)
 			addtimer(CALLBACK(src, .proc/come_off_cooldown), 1 SECONDS)
 		return
 	else
@@ -53,10 +56,28 @@
 /obj/structure/forging_anvil/proc/come_off_cooldown()
 	onesec_cooldown = FALSE
 
-/obj/structure/forging_anvil/proc/brittle_unmistake_chance(var/obj/item/forging/construct/C)
-	var/brittle_chance = (C.hammered / 2) + C.mistakes
-	if(prob(brittle_chance) && !C.brittle)
-		C.brittle = TRUE
-	var/unmistake_chance = max((C.hammered - 10) * 2, 0) 
-	if(prob(unmistake_chance) && C.mistakes >= -4)
-		C.mistakes--
+/obj/structure/forging_anvil/proc/hammer(obj/item/forging/construct/C, bad_beat = FALSE, mob/living/user)
+	if(!user)
+		return
+	if(bad_beat)
+		to_chat(user, "<span class='warning'>You hit the metal, but you hear an off-sound...</span>")
+	if(!bad_beat)
+		to_chat(user, "<span class='warning'>You hit the metal, the metal resounded wonderfully...</span>")
+	if(C.hammered >= C.required_hammered)
+		to_chat(user, "<span class='warning'>The metal is sounding ready...</span>")
+	if(C.brittle)
+		to_chat(user, "<span class='warning'>The metal starts cracking...</span>")
+	C.hammered++
+	playsound(src, 'modular_lumos/sound/effects/forge.ogg', 50, TRUE, -1)
+
+/obj/structure/forging_anvil/proc/brittle_chance(obj/item/forging/construct/C)
+	var/brittle_chance = (C.hammered / 10) + C.mistakes
+	if(brittle_chance > 1)
+		if(prob(brittle_chance) && !C.brittle)
+			C.brittle = TRUE
+
+/obj/structure/forging_anvil/proc/unmistake_chance(obj/item/forging/construct/C)
+	var/unmistake_chance = max((C.hammered - 10) * 2, 0)
+	if(unmistake_chance > 1)
+		if(prob(unmistake_chance) && C.mistakes >= -4)
+			C.mistakes--

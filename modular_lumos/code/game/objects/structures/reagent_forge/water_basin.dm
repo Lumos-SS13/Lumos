@@ -23,5 +23,7 @@
 						var/obj/item/forging/unfinished/spawned_unfinished = new spawning_unfinished(get_turf(src))
 						spawned_unfinished.create_force(in_construct.mistakes)
 						qdel(in_construct)
+						used_tong.update_icon()
+						playsound(src, 'modular_lumos/sound/effects/hot_hiss.ogg', 50, TRUE, -1)
 	else
 		return ..()
