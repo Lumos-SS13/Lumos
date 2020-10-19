@@ -325,6 +325,7 @@ The phone will be detected by this verb if it's carried by a mob or sitting on a
 	broken = 1
 	labeled = 0
 	
+//Cellphones edit, just a different look for phones.
 /obj/item/phone/cellphone
 	name = "cellphone"
 	desc = "A compact cellphone for making calls."
