@@ -1204,6 +1204,11 @@
 "aKl" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/obj/machinery/camera{
+	c_tag = "Robotics Lab - Surgical";
+	dir = 4;
+	network = list("ss13","rd")
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "aKn" = (
@@ -1772,11 +1777,12 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/kitchen)
 "bbx" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 10
+/mob/living/simple_animal/bot/secbot/beepsky{
+	desc = "It's Officer Nikolai. Supposedly powered by contempt of nudists and a potato.";
+	name = "Officer Nikolai"
 	},
-/turf/open/floor/plasteel/white,
-/area/science/mixing)
+/turf/open/floor/plating,
+/area/icemoon/surface/outdoors)
 "bbC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
@@ -2650,9 +2656,7 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "byy" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
-	},
+/obj/machinery/portable_atmospherics/canister,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "byA" = (
@@ -3525,12 +3529,13 @@
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "bWf" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 1
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/potato{
+	name = "\improper Beepsky's emergency battery"
 	},
-/obj/machinery/meter,
-/turf/open/floor/plasteel/white,
-/area/science/mixing)
+/turf/open/floor/plating,
+/area/icemoon/surface/outdoors)
 "bWg" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -4020,7 +4025,7 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "cjZ" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -5382,6 +5387,13 @@
 "cWJ" = (
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/security/execution/education)
+"cWL" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "cWQ" = (
 /obj/structure/table/wood/poker,
 /obj/item/cigbutt/cigarbutt{
@@ -5663,7 +5675,7 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "dcJ" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/structure/closet/bombcloset,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "ddx" = (
@@ -6703,6 +6715,10 @@
 	pixel_y = 5
 	},
 /obj/item/pen/blue,
+/obj/item/pen/red{
+	pixel_x = 8;
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "dFb" = (
@@ -7168,7 +7184,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "dPl" = (
 /obj/structure/cable{
@@ -8081,6 +8097,22 @@
 /area/security/vacantoffice)
 "epI" = (
 /obj/effect/turf_decal/tile/blue,
+/obj/structure/table,
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_y = 2
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -4;
+	pixel_y = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "epS" = (
@@ -8681,6 +8713,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"eDH" = (
+/obj/machinery/airalarm/unlocked{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "eDU" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /obj/effect/turf_decal/tile/purple{
@@ -10204,7 +10246,7 @@
 /area/security/prison)
 "fxu" = (
 /obj/effect/landmark/start/roboticist,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "fyh" = (
 /obj/structure/fence,
@@ -11144,7 +11186,7 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "gah" = (
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "gaj" = (
 /obj/structure/sign/warning/securearea{
@@ -13271,6 +13313,7 @@
 	pixel_x = 6;
 	pixel_y = -4
 	},
+/obj/item/pipe_dispenser,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "hiu" = (
@@ -13866,11 +13909,13 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "hzj" = (
-/obj/item/radio/intercom{
-	pixel_y = -26
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 6
 	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
+/obj/structure/chair/stool,
+/obj/effect/landmark/start/scientist,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
@@ -15419,7 +15464,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "iuu" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
@@ -19159,13 +19204,11 @@
 	},
 /area/icemoon/surface/outdoors)
 "kHx" = (
-/obj/structure/table/reinforced,
-/obj/item/analyzer,
-/obj/item/wrench,
 /obj/machinery/camera{
 	c_tag = "Testing Lab East";
 	network = list("ss13","rd")
 	},
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "kIj" = (
@@ -20680,24 +20723,10 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "lxN" = (
-/obj/structure/table/reinforced,
-/obj/item/transfer_valve,
-/obj/item/transfer_valve,
-/obj/item/transfer_valve{
-	pixel_x = -5
-	},
-/obj/item/transfer_valve{
-	pixel_x = -5
-	},
-/obj/item/transfer_valve{
-	pixel_x = 5
-	},
-/obj/item/transfer_valve{
-	pixel_x = 5
-	},
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/machinery/vending/assist,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "lxQ" = (
@@ -20765,6 +20794,13 @@
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den)
+"lAy" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/holopad,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "lAG" = (
 /obj/structure/fermenting_barrel,
 /obj/machinery/light/floor/fakeday,
@@ -21223,12 +21259,8 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "lOb" = (
-/obj/machinery/airalarm/unlocked{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 10
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
@@ -22029,10 +22061,10 @@
 /turf/open/floor/plasteel/white,
 /area/science/research)
 "mjv" = (
-/obj/machinery/light,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
 	dir = 1
 	},
+/obj/machinery/meter,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "mjy" = (
@@ -23773,6 +23805,12 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/mineral/titanium/blue,
 /area/bridge)
+"nkL" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "nla" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -25122,6 +25160,12 @@
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
+"nWS" = (
+/obj/item/paper/fluff/jobs/security/beepsky_mom{
+	name = "Note from Nikolai's Mom"
+	},
+/turf/open/floor/plating,
+/area/icemoon/surface/outdoors)
 "nXe" = (
 /turf/closed/wall/r_wall/rust,
 /area/icemoon/surface/outdoors)
@@ -25679,6 +25723,15 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/science/research)
+"onP" = (
+/obj/item/radio/intercom{
+	pixel_y = -26
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "onW" = (
 /obj/structure/table,
 /obj/item/book/manual/chef_recipes,
@@ -25717,16 +25770,8 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "ooJ" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 6
-	},
-/obj/structure/chair/stool,
-/obj/effect/landmark/start/scientist,
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
@@ -26286,7 +26331,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/dorms)
 "oDQ" = (
-/obj/machinery/portable_atmospherics/canister,
+/obj/machinery/atmospherics/components/unary/thermomachine/heater,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "oEf" = (
@@ -27135,7 +27180,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
+/obj/machinery/portable_atmospherics/canister,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "paY" = (
@@ -29597,6 +29642,9 @@
 /obj/structure/table/reinforced,
 /obj/item/integrated_circuit_printer,
 /obj/item/stock_parts/cell/high,
+/obj/machinery/computer/security/telescreen/circuitry{
+	pixel_y = 30
+	},
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
 "qpj" = (
@@ -31513,10 +31561,8 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "rsD" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/heater{
-	dir = 1
-	},
 /obj/machinery/light,
+/obj/structure/closet/bombcloset,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "rsL" = (
@@ -31834,7 +31880,20 @@
 /area/tcommsat/server)
 "rAJ" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/firstaid/toxin,
+/obj/item/transfer_valve{
+	pixel_x = -5
+	},
+/obj/item/transfer_valve{
+	pixel_x = -5
+	},
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve{
+	pixel_x = 5
+	},
+/obj/item/transfer_valve{
+	pixel_x = 5
+	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "rAX" = (
@@ -33406,6 +33465,17 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "stk" = (
+/obj/structure/table,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "stF" = (
@@ -36595,6 +36665,12 @@
 /area/icemoon/surface/outdoors)
 "ueb" = (
 /obj/effect/landmark/start/roboticist,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "ufj" = (
@@ -36850,7 +36926,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/north,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "ulK" = (
 /obj/machinery/atmospherics/pipe/simple/violet/hidden{
@@ -37147,7 +37223,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "uvO" = (
 /obj/structure/cable{
@@ -37823,6 +37899,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/research)
+"uMk" = (
+/obj/structure/plasticflaps,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "uMB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/reflector/double,
@@ -37966,6 +38046,15 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/disposal)
+"uRz" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "uRI" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -38925,7 +39014,11 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "vtF" = (
-/obj/structure/closet/bombcloset,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/toxin,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "vuf" = (
@@ -39062,7 +39155,7 @@
 	pixel_x = 6;
 	pixel_y = 24
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "vyX" = (
 /obj/machinery/firealarm{
@@ -39076,6 +39169,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
+/obj/item/stock_parts/cell/high/plus,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "vza" = (
@@ -40232,7 +40326,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "wgK" = (
 /obj/machinery/firealarm{
@@ -41089,7 +41183,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "wEL" = (
 /obj/machinery/field/generator,
@@ -42346,7 +42440,7 @@
 "xoE" = (
 /obj/machinery/recharge_station,
 /obj/effect/landmark/start/cyborg,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "xoI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -43303,9 +43397,6 @@
 /area/hallway/secondary/exit/departure_lounge)
 "xOq" = (
 /obj/machinery/portable_atmospherics/pump,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "xOy" = (
@@ -43619,27 +43710,9 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "xUS" = (
-/obj/structure/table/reinforced,
-/obj/item/assembly/prox_sensor{
-	pixel_y = 2
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
 	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 9;
-	pixel_y = -2
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 9;
-	pixel_y = -2
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 8;
-	pixel_y = 9
-	},
-/obj/item/pipe_dispenser,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "xUZ" = (
@@ -43876,7 +43949,7 @@
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/science/robotics/mechbay)
 "ybC" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -77779,9 +77852,9 @@ uxv
 pmV
 mpY
 xqf
-tgo
+uRz
 ueb
-xqf
+nkL
 dPZ
 qUI
 qUI
@@ -85493,7 +85566,7 @@ ybI
 okT
 ooJ
 hzj
-rPM
+onP
 wWq
 rLU
 jsJ
@@ -85748,9 +85821,9 @@ ulA
 wFk
 fcl
 fbq
-bWf
+mpU
 mjv
-rPM
+cWL
 wWq
 rLU
 jsJ
@@ -86005,9 +86078,9 @@ odX
 dBJ
 fiM
 fYw
-bbx
+mpU
 lOb
-rPM
+eDH
 wWq
 rLU
 jsJ
@@ -86259,12 +86332,12 @@ rLU
 rLU
 rPM
 lxN
-wFk
+mpU
 rkD
 piH
+mpU
 kxP
 kxP
-rPM
 wWq
 rLU
 jsJ
@@ -86518,10 +86591,10 @@ rPM
 kHx
 xUS
 mpU
-piH
+lAy
+mpU
 xOq
 xOq
-rPM
 wWq
 rLU
 rLU
@@ -86773,10 +86846,10 @@ rLU
 rLU
 rPM
 oDQ
-oDQ
+xUS
 mpU
 piH
-vtF
+mpU
 vtF
 rPM
 wWq
@@ -90309,7 +90382,7 @@ rLU
 rLU
 cyH
 kSg
-kSg
+cXC
 cXC
 cXC
 tIk
@@ -90566,10 +90639,10 @@ rLU
 rLU
 jsJ
 jsJ
-rLU
-rLU
-rLU
-tIk
+cXC
+bbx
+kgv
+uMk
 xzc
 aem
 dqb
@@ -90823,9 +90896,9 @@ rLU
 jsJ
 jsJ
 rLU
-rLU
-rLU
-rLU
+cXC
+bWf
+nWS
 tIk
 kIA
 fzH
