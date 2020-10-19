@@ -62,7 +62,7 @@
 					var/obj/item/forging/finished/finished = OB
 					if(finished.imbued_reagent)
 						in_use = FALSE
-						to_chat(user, "<span class='warning'>This metal has already been imbued by a reagent...</span>")
+						to_chat(user, "<span class='warning'>This metal has already been imbued with a reagent...</span>")
 						return
 					to_chat(user, "<span class='warning'>You start heating up the metal, attempting to imbue the metal with a reagent...</span>")
 					if(!do_after(user, 10 SECONDS, target = src))

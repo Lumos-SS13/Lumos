@@ -23,12 +23,14 @@
 					moving_obj.forceMove(used_tongs)
 			update_icon()
 			used_tongs.update_icon()
+			to_chat(user, "<span class='warning'>You pick up the metal from the anvil...</span>")
 			return
 		if(used_tongs.contents.len > 0)
 			for(var/obj/tong_obj in used_tongs.contents)
 				tong_obj.forceMove(src)
 			update_icon()
 			used_tongs.update_icon()
+			to_chat(user, "<span class='warning'>You place the metal onto the anvil...</span>")
 			return
 
 	if(istype(I, /obj/item/forging/hammer))
@@ -37,18 +39,24 @@
 		if(istype(contents[1], /obj/item/forging/construct))
 			var/obj/item/forging/construct/c_construct = contents[1]
 			if(!c_construct.on_fire)
+				to_chat(user, "<span class='warning'>The metal is too cool to hit it and make a change...</span>")
 				return
 			if(onesec_cooldown)
 				if(prob(50))
 					c_construct.mistakes++
 				hammer(c_construct, TRUE, user)
+				playsound(src, 'modular_lumos/sound/effects/forge.ogg', 50, TRUE, -1)
 				brittle_chance(c_construct)
 				unmistake_chance(c_construct)
 				return
+			onesec_cooldown = TRUE
 			hammer(c_construct, FALSE, user)
+			playsound(src, 'modular_lumos/sound/effects/forge.ogg', 50, TRUE, -1)
 			brittle_chance(c_construct)
 			unmistake_chance(c_construct)
 			addtimer(CALLBACK(src, .proc/come_off_cooldown), 1 SECONDS)
+		return
+	if(default_unfasten_wrench(user, I))
 		return
 	else
 		return ..()
@@ -68,7 +76,6 @@
 	if(C.brittle)
 		to_chat(user, "<span class='warning'>The metal starts cracking...</span>")
 	C.hammered++
-	playsound(src, 'modular_lumos/sound/effects/forge.ogg', 50, TRUE, -1)
 
 /obj/structure/forging_anvil/proc/brittle_chance(obj/item/forging/construct/C)
 	var/brittle_chance = (C.hammered / 10) + C.mistakes

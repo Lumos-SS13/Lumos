@@ -24,6 +24,8 @@
 						spawned_unfinished.create_force(in_construct.mistakes)
 						qdel(in_construct)
 						used_tong.update_icon()
-						playsound(src, 'modular_lumos/sound/effects/hot_hiss.ogg', 50, TRUE, -1)
+					playsound(src, 'modular_lumos/sound/effects/hot_hiss.ogg', 50, TRUE, -1)
+	if(default_unfasten_wrench(user, I))
+		return
 	else
 		return ..()

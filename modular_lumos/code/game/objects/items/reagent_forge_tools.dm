@@ -69,3 +69,23 @@
 		if(!choice)
 			return
 		reagents.remove_reagent(choice.type, 1000)
+
+/datum/crafting_recipe/forge_hammer
+	name = "forging hammer"
+	reqs = 	list(/obj/item/stack/sheet/metal = 2,
+				/obj/item/stack/sheet/mineral/wood = 2)
+	result = /obj/item/forging/hammer
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/forge_tongs
+	name = "forging tongs"
+	reqs = 	list(/obj/item/stack/sheet/metal = 2,
+				/obj/item/stack/sheet/mineral/wood = 2)
+	result = /obj/item/forging/tongs
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/primitive_chem_isolator
+	name = "primitive chemical isolator"
+	reqs = 	list(/obj/item/stack/sheet/ceramic_brick = 2)
+	result = /obj/item/reagent_containers/glass/primitive_chem_isolator
+	category = CAT_PRIMAL
