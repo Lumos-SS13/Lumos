@@ -67,6 +67,14 @@
 					to_chat(user, "<span class='notice'>You reinforce the floor.</span>")
 				return
 	else if(istype(C, /obj/item/stack/tile))
+		//lumos edit
+		if(istype(src, /turf/open/floor/plating/asteroid))
+			var/obj/item/stack/tile/W = C
+			if(!W.use(1))
+				return
+			ChangeTurf(/turf/open/floor/plating)
+			return
+		//lumos edit
 		if(!broken && !burnt)
 			for(var/obj/O in src)
 				if(O.level == 1) //ex. pipes laid underneath a tile
