@@ -15,5 +15,3 @@
 	barefootstep = FOOTSTEP_WATER
 	clawfootstep = FOOTSTEP_WATER
 	heavyfootstep = FOOTSTEP_WATER
-
-	can_allow_icy = FALSE //lumos edit
