@@ -92,7 +92,8 @@
 			user.visible_message("<span class='danger'>[user] splashes the contents of [src] onto [target]!</span>", \
 								"<span class='notice'>You splash the contents of [src] onto [target].</span>")
 			reagents.reaction(target, TOUCH)
-			reagents.clear_reagents()
+			var/obj/effect/decal/cleanable/puddle/puddle = new /obj/effect/decal/cleanable/puddle(get_turf(target))
+			reagents.trans_to(puddle, reagents.total_volume)
 
 /obj/item/reagent_containers/glass/attackby(obj/item/I, mob/user, params)
 	var/hotness = I.get_temperature()

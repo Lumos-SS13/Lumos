@@ -154,6 +154,8 @@
 		log_reagent("SPLASH - [src] object SplashReagents() onto [target] at [T] ([AREACOORD(T)])[throwerstring] - [reagents.log_list()]")
 		visible_message("<span class='notice'>[src] spills its contents all over [target].</span>")
 		reagents.reaction(target, TOUCH)
+		var/obj/effect/decal/cleanable/puddle/puddle = new /obj/effect/decal/cleanable/puddle(T)
+		reagents.trans_to(puddle, reagents.total_volume)
 		reagents.clear_reagents()
 
 //melts plastic beakers
