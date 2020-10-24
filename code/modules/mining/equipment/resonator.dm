@@ -1,3 +1,4 @@
+//lumos start
 /**********************Resonator**********************/
 /obj/item/resonator
 	name = "resonator"
@@ -8,10 +9,11 @@
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	desc = "A handheld device that creates small fields of energy that resonate until they detonate, crushing rock. It does increased damage in low pressure."
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 18
+	obj_flags = UNIQUE_RENAME
+	force = 15
 	throwforce = 10
 	var/burst_time = 30
-	var/fieldlimit = 6
+	var/fieldlimit = 4
 	var/list/fields = list()
 	var/quick_burst_mod = 0.8
 
@@ -20,8 +22,7 @@
 	desc = "An upgraded version of the resonator that can produce more fields at once, as well as having no damage penalty for bursting a resonance field early."
 	icon_state = "resonator_u"
 	item_state = "resonator_u"
-	force = 20
-	fieldlimit = 8
+	fieldlimit = 6
 	quick_burst_mod = 1
 
 /obj/item/resonator/attack_self(mob/user)
@@ -46,7 +47,7 @@
 /obj/item/resonator/pre_attack(atom/target, mob/user, params)
 	if(check_allowed_items(target, 1))
 		CreateResonance(target, user)
-	return ..()
+	return TRUE
 
 //resonance field, crushes rock, damages mobs
 /obj/effect/temp_visual/resonance
@@ -71,6 +72,7 @@
 	transform = matrix()*0.75
 	animate(src, transform = matrix()*1.5, time = duration)
 	deltimer(timerid)
+	addtimer(CALLBACK(src, .proc/replicate, get_turf(src), creator, duration), duration, TIMER_STOPPABLE)//yogs: adds field replication
 	timerid = addtimer(CALLBACK(src, .proc/burst), duration, TIMER_STOPPABLE)
 
 /obj/effect/temp_visual/resonance/Destroy()
@@ -115,3 +117,12 @@
 	. = ..()
 	transform = matrix()*1.5
 	animate(src, transform = matrix()*0.1, alpha = 50, time = 4)
+
+/obj/effect/temp_visual/resonance/proc/replicate(turf/closed/mineral/M, creator, timetoburst)	//yogs start: adds replication to resonator fields
+	if(!istype(M))
+		return
+	for(var/turf/closed/mineral/T in orange(1, M))
+		if(istype(T))
+			if(T.mineralType != null)
+				new /obj/effect/temp_visual/resonance(T, creator, null, timetoburst)	//yogs end
+//lumos stop
