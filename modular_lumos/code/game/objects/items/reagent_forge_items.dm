@@ -112,8 +112,9 @@
 		if(!do_after(user, 10 SECONDS, target = src))
 			return
 		qdel(I)
+		var/obj/item/forging/finished/sword/mSword = new /obj/item/forging/finished/sword(get_turf(src))
+		mSword.force = force
 		qdel(src)
-		new /obj/item/forging/finished/sword(get_turf(src))
 
 /obj/item/forging/unfinished/staff
 	name = "unfinished staff"
@@ -127,8 +128,9 @@
 		if(!do_after(user, 10 SECONDS, target = src))
 			return
 		qdel(I)
+		var/obj/item/forging/finished/staff/mStaff = new /obj/item/forging/finished/staff(get_turf(src))
+		mStaff.force = force
 		qdel(src)
-		new /obj/item/forging/finished/staff(get_turf(src))
 
 /obj/item/forging/finished
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
@@ -152,6 +154,7 @@
 	name = "sword"
 	icon_state = "blade_finished"
 	sharpness = SHARP_EDGED
+	force = 10
 
 /obj/item/forging/finished/staff
 	name = "staff"
