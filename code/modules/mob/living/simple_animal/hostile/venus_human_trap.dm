@@ -21,8 +21,14 @@
 	//var/growth_time = 1200
 	var/growth_time = 1 MINUTES //SKYRAT EDIT - VINES
 
+	/// Used by countdown to check time, this is when the timer will complete and the venus trap will spawn.
+	var/finish_time
+	/// The countdown ghosts see to when the plant will hatch
+	var/obj/effect/countdown/flower_bud/countdown
+
 /obj/structure/alien/resin/flower_bud_enemy/Initialize()
 	. = ..()
+	countdown = new(src)
 	var/list/anchors = list()
 	anchors += locate(x-2,y+2,z)
 	anchors += locate(x+2,y+2,z)
@@ -32,7 +38,9 @@
 	for(var/turf/T in anchors)
 		var/datum/beam/B = Beam(T, "vine", time=INFINITY, maxdistance=5, beam_type=/obj/effect/ebeam/vine)
 		B.sleep_time = 10 //these shouldn't move, so let's slow down updates to 1 second (any slower and the deletion of the vines would be too slow)
+	finish_time = world.time + growth_time
 	addtimer(CALLBACK(src, .proc/bear_fruit), growth_time)
+	countdown.start()
 
 /**
   * Spawns a venus human trap, then qdels itself.
@@ -160,6 +168,7 @@
 /mob/living/simple_animal/hostile/venus_human_trap/Login()
 	. = ..()
 	to_chat(src, "<span class='boldwarning'>You a venus human trap!  Protect the kudzu at all costs, and feast on those who oppose you!</span>")
+	name = "[initial(name)] [(rand(10000,99999))]"
 
 /mob/living/simple_animal/hostile/venus_human_trap/attack_ghost(mob/user)
 	. = ..()
@@ -223,7 +232,7 @@ mob/living/simple_animal/hostile/venus_human_trap/proc/remove_vine(datum/beam/vi
 		return
 
 	var/message_a = say_quote(message)
-	var/rendered = "<i><span class='nicegreen'>Hivemind, <span class='name'>[shown_name]</span> <span class='message'>[message_a]</span></span></i>"
+	var/rendered = "<i><span class='nicegreen'>Plant Hivemind, <span class='name'>[shown_name]: </span> <span class='message'>[message_a]</span></span></i>"
 	for(var/mob/S in GLOB.player_list)
 		if(!S.stat && S.venuscheck())
 			to_chat(S, rendered)
@@ -232,7 +241,7 @@ mob/living/simple_animal/hostile/venus_human_trap/proc/remove_vine(datum/beam/vi
 			to_chat(S, "[link] [rendered]")
 
 /mob/living/venuscheck()
-	if(istype(src, /mob/living/simple_animal/hostile/venus_human_trap))
+	if("vines" in src.faction)
 		return TRUE
 	return FALSE
 // LUMOS EDIT STOP - VINES
