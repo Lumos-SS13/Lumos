@@ -53,6 +53,7 @@
 						in_construct.on_fire = TRUE
 						addtimer(CALLBACK(in_construct, /obj/item/forging/construct.proc/remove_flames), 50 SECONDS)
 						if(in_construct.brittle)
+							in_use = FALSE
 							qdel(in_construct)
 							to_chat(user, "<span class='warning'>The metal snaps. All your progress is now gone...</span>")
 							used_tongs.update_icon()
