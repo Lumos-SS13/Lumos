@@ -17,6 +17,13 @@
 	.=..()
 	START_PROCESSING(SSprocessing, src)
 
+/obj/structure/lavaland/ash_walker/attackby(obj/item/I, mob/living/user, params)
+	. = ..()
+	if(istype(I, /obj/item/organ/regenerative_core/legion))
+		qdel(I)
+		var/obj/item/organ/regenerative_core/legion/spawnLegionCore = new /obj/item/organ/regenerative_core/legion(src)
+		spawnLegionCore.preserved()
+
 /obj/structure/lavaland/ash_walker/deconstruct(disassembled)
 	new /obj/item/assembly/signaler/anomaly (get_step(loc, pick(GLOB.alldirs)))
 	new /obj/effect/collapse(loc)
