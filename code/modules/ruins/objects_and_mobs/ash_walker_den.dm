@@ -23,6 +23,7 @@
 		qdel(I)
 		var/obj/item/organ/regenerative_core/legion/spawnLegionCore = new /obj/item/organ/regenerative_core/legion(src)
 		spawnLegionCore.preserved()
+		user.put_in_active_hand(spawnLegionCore)
 
 /obj/structure/lavaland/ash_walker/deconstruct(disassembled)
 	new /obj/item/assembly/signaler/anomaly (get_step(loc, pick(GLOB.alldirs)))
