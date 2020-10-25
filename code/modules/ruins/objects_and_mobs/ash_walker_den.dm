@@ -22,8 +22,10 @@
 	if(istype(I, /obj/item/organ/regenerative_core/legion))
 		qdel(I)
 		var/obj/item/organ/regenerative_core/legion/spawnLegionCore = new /obj/item/organ/regenerative_core/legion(src)
+		playsound(get_turf(src),'sound/magic/demon_consume.ogg', 50, 1)
 		spawnLegionCore.preserved()
 		user.put_in_active_hand(spawnLegionCore)
+		to_chat(user, "<span class='warning'>The tendril revitalizes the core...</span>")
 
 /obj/structure/lavaland/ash_walker/deconstruct(disassembled)
 	new /obj/item/assembly/signaler/anomaly (get_step(loc, pick(GLOB.alldirs)))
