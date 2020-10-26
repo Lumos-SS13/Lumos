@@ -72,19 +72,19 @@
 	if(!bad_beat)
 		to_chat(user, "<span class='warning'>You hit the metal, the metal resounded wonderfully...</span>")
 	if(C.hammered >= C.required_hammered)
-		to_chat(user, "<span class='warning'>The metal is sounding ready...</span>")
+		to_chat(user, "<span class='notice'>The metal is sounding ready...</span>")
 	if(C.brittle)
 		to_chat(user, "<span class='warning'>The metal starts cracking...</span>")
 	C.hammered++
 
 /obj/structure/forging_anvil/proc/brittle_chance(obj/item/forging/construct/C)
-	var/brittle_chance = (C.hammered / 10) + C.mistakes
-	if(brittle_chance > 1)
+	var/brittle_chance = C.mistakes
+	if(brittle_chance >= 1)
 		if(prob(brittle_chance) && !C.brittle)
 			C.brittle = TRUE
 
 /obj/structure/forging_anvil/proc/unmistake_chance(obj/item/forging/construct/C)
-	var/unmistake_chance = max((C.hammered - 10) * 2, 0)
-	if(unmistake_chance > 1)
+	var/unmistake_chance = max((C.hammered - 50) * 2, 0)
+	if(unmistake_chance >= 1)
 		if(prob(unmistake_chance) && C.mistakes >= -4)
 			C.mistakes--

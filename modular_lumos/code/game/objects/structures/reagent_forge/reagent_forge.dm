@@ -25,10 +25,10 @@
 			if(!do_after(user, 10 SECONDS, target = src))
 				in_use = FALSE
 				return
+			in_use = FALSE
 			used_tongs.has_sheet_metal = FALSE
 			used_tongs.update_icon()
 			new /obj/item/forging/hot_metal(get_turf(src))
-			in_use = FALSE
 			return
 		if(used_tongs.contents.len > 0)
 			for(var/obj/OB in used_tongs.contents)
@@ -38,11 +38,11 @@
 						if(!do_after(user, 10 SECONDS, target = src))
 							in_use = FALSE
 							return
+						in_use = FALSE
 						to_chat(user, "<span class='warning'>You start heating up the metal...</span>")
 						if(prob(25) && in_construct.mistakes >= 5)
 							to_chat(user, "<span class='warning'>You see less cracks in the metal...</span>")
 							in_construct.mistakes -= 1
-						in_use = FALSE
 						return
 					if(!in_construct.on_fire)
 						to_chat(user, "<span class='warning'>You start heating up the metal...</span>")
@@ -72,6 +72,7 @@
 					if(finished.reagents)
 						for(var/datum/reagent/chosen_reagent in finished.reagents.reagent_list)
 							if(chosen_reagent.volume > 50)
+								in_use = FALSE
 								finished.imbued_reagent = chosen_reagent.type
 								to_chat(user, "<span class='warning'>You have successfully imbued a chemical into the metal...</span>")
 								finished.name = "[chosen_reagent.name] [initial(finished.name)]"
@@ -79,6 +80,8 @@
 								break
 					in_use = FALSE
 					return
+		else
+			in_use = FALSE
 	if(istype(I, /obj/item/organ/regenerative_core))
 		var/obj/item/organ/regenerative_core/regen_core = I
 		if(!regen_core.inert && !hell)
