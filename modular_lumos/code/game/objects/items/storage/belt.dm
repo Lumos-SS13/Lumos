@@ -1,6 +1,6 @@
 /obj/item/storage/belt/hoskatana
 	name = "ZR-0 sheath"
-	desc = "An ornate sheath designed to hold an officer's blade."
+	desc = "An dark red and brown sheath designed to hold an experimental blade."
 	icon = 'modular_lumos/icons/obj/clothing/belts.dmi'
 	icon_state = "hossheath"
 	mob_overlay_icon = 'modular_lumos/icons/mob/clothing/belt.dmi'
