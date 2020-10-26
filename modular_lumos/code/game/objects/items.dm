@@ -76,6 +76,9 @@
 	plantable_flora = /obj/structure/flora/ash/lumos_planting/gaia_plant
 
 //existing lavaland mushrooms
+/obj/item/reagent_containers/food/snacks/grown/ash_flora/shavings
+	plantable_flora = /obj/structure/flora/ash
+
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf
 	plantable_flora = /obj/structure/flora/ash/leaf_shroom
 
