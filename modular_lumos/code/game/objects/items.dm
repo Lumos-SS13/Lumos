@@ -3,15 +3,18 @@
 
 /obj/item/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(istype(target, /turf/open/floor/plating/asteroid/basalt))
+		var/turf/open/floor/plating/asteroid/basalt/chosenBasalt = target
+		for(var/obj/structure/flora/ash/abortPlant in chosenBasalt)
+			return
 		if(!plantable_flora)
 			return
 		if(!isashwalker(user))
 			return
 		if(!proximity_flag)
 			return
-		if(!do_after(user, 4 SECONDS, target = target))
+		if(!do_after(user, 4 SECONDS, target = chosenBasalt))
 			return
-		var/obj/structure/flora/ash/planted_flora = new plantable_flora(get_turf(target))
+		var/obj/structure/flora/ash/planted_flora = new plantable_flora(get_turf(chosenBasalt))
 		planted_flora.harvest(harvest_allow = FALSE)
 		qdel(src)
 	else
