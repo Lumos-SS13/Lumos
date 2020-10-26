@@ -20,6 +20,8 @@
 /obj/structure/lavaland/ash_walker/attackby(obj/item/I, mob/living/user, params)
 	. = ..()
 	if(istype(I, /obj/item/organ/regenerative_core/legion))
+		if(!isashwalker(user))
+			return
 		qdel(I)
 		var/obj/item/organ/regenerative_core/legion/spawnLegionCore = new /obj/item/organ/regenerative_core/legion(src)
 		playsound(get_turf(src),'sound/magic/demon_consume.ogg', 50, 1)
