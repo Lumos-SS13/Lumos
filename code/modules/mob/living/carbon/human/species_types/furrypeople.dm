@@ -76,9 +76,3 @@
 //EXOTIC//
 //These races will likely include lots of downsides and upsides. Keep them relatively balanced.//
 
-//misc
-/mob/living/carbon/human/dummy
-	vore_flags = NO_VORE
-
-/mob/living/carbon/human/vore
-	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING

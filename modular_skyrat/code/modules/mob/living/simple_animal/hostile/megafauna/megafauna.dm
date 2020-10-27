@@ -165,16 +165,3 @@
 			slayer.heal_overall_damage(gloryhealth,gloryhealth)
 		else
 			to_chat(slayer, "<span class='danger'>You fail to glory kill [src]!</span>")
-
-/mob/living/simple_animal/hostile/megafauna/devour(mob/living/L)
-	if(!L)
-		return
-	visible_message(
-		"<span class='danger'>[src] devours [L]!</span>",
-		"<span class='userdanger'>You feast on [L], restoring your health!</span>")
-	if(!is_station_level(z) || client) //NPC monsters won't heal while on station
-		adjustBruteLoss(-L.maxHealth/2)
-	if(L?.client?.prefs?.toggles & SOUND_MEGAFAUNA)
-		L.stop_sound_channel(CHANNEL_JUKEBOX)
-	L.gib()
-	..()

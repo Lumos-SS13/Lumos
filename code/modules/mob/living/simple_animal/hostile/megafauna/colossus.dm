@@ -53,10 +53,6 @@ Difficulty: Very Hard
 	deathmessage = "disintegrates, leaving a glowing core in its wake."
 	death_sound = 'sound/magic/demon_dies.ogg'
 
-/mob/living/simple_animal/hostile/megafauna/colossus/devour(mob/living/L)
-	visible_message("<span class='colossus'>[src] disintegrates [L]!</span>")
-	L.dust()
-
 /mob/living/simple_animal/hostile/megafauna/colossus/OpenFire()
 	anger_modifier = clamp(((maxHealth - health)/50),0,20)
 	ranged_cooldown = world.time + 120

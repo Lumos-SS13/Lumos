@@ -204,7 +204,6 @@ obj/item/gps/internal/bubblegum/hard
 				var/turf/targetturf = get_step(src, dir)
 				L.forceMove(targetturf)
 				playsound(targetturf, 'sound/magic/exit_blood.ogg', 100, TRUE, -1)
-				addtimer(CALLBACK(src, .proc/devour, L), 2)
 	sleep(1)
 
 /mob/living/simple_animal/hostile/megafauna/bubblegum/hard/blood_warp()

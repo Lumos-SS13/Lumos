@@ -12,12 +12,6 @@
 								M, "<span class='notice'>You [response_help_simple] [src].</span>")
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
-		if(INTENT_GRAB)
-			if(grab_state >= GRAB_AGGRESSIVE && isliving(pulling))
-				vore_attack(M, pulling)
-			else
-				grabbedby(M)
-
 		if(INTENT_DISARM)
 			M.do_attack_animation(src, ATTACK_EFFECT_DISARM)
 			visible_message("<span class='danger'>[M] [response_disarm_continuous] [src]!</span>",\
