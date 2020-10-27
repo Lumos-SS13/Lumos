@@ -95,18 +95,35 @@
 		sleep(2)
 
 //shambling miner
-/obj/item/crusher_trophy/blaster_tubes/mask
+/obj/item/crusher_trophy/mask
 	name = "mask of a shambling miner"
 	desc = "It really doesn't seem like it could be worn. Suitable as a crusher trophy."
 	icon = 'modular_skyrat/icons/obj/lavaland/artefacts.dmi'
 	icon_state = "miner_mask"
 	bonus_value = 10
-	denied_type = /obj/item/crusher_trophy/blaster_tubes/mask
+	denied_type = /obj/item/crusher_trophy/mask
+	var/deadly_shot = FALSE
 
-/obj/item/crusher_trophy/blaster_tubes/mask/effect_desc()
+/obj/item/crusher_trophy/mask/effect_desc()
 	return "the crusher to deal <b>[bonus_value]</b> extra melee damage"
 
-/obj/item/crusher_trophy/blaster_tubes/mask/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
+/obj/item/crusher_trophy/mask/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
+	if(deadly_shot)
+		marker.name = "deadly [marker.name]"
+		marker.icon_state = "chronobolt"
+		marker.damage = bonus_value
+		marker.nodamage = FALSE
+		marker.pixels_per_second = TILES_TO_PIXELS(5)
+		deadly_shot = FALSE
+
+/obj/item/crusher_trophy/mask/on_mark_detonation(mob/living/target, mob/living/user)
+	deadly_shot = TRUE
+	addtimer(CALLBACK(src, .proc/reset_deadly_shot), 300, TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/item/crusher_trophy/mask/proc/reset_deadly_shot()
+	deadly_shot = FALSE
+
+/obj/item/crusher_trophy/mask/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
 	if(deadly_shot)
 		marker.name = "kinetic [marker.name]"
 		marker.icon_state = "ka_tracer"
@@ -114,31 +131,48 @@
 		marker.nodamage = FALSE
 		deadly_shot = FALSE
 
-/obj/item/crusher_trophy/blaster_tubes/mask/on_mark_application(mob/living/target, datum/status_effect/crusher_mark/mark, had_mark)
+/obj/item/crusher_trophy/mask/on_mark_application(mob/living/target, datum/status_effect/crusher_mark/mark, had_mark)
 	new /obj/effect/temp_visual/kinetic_blast(target)
 	playsound(target.loc, 'sound/weapons/kenetic_accel.ogg', 60, 0)
 
-/obj/item/crusher_trophy/blaster_tubes/mask/add_to(obj/item/kinetic_crusher/H, mob/living/user)
+/obj/item/crusher_trophy/mask/add_to(obj/item/kinetic_crusher/H, mob/living/user)
 	. = ..()
 	H.force += bonus_value
 
-/obj/item/crusher_trophy/blaster_tubes/mask/remove_from(obj/item/kinetic_crusher/H, mob/living/user)
+/obj/item/crusher_trophy/mask/remove_from(obj/item/kinetic_crusher/H, mob/living/user)
 	. = ..()
 	H.force -= bonus_value
 
 //lava imp
-/obj/item/crusher_trophy/blaster_tubes/impskull
+/obj/item/crusher_trophy/impskull
 	name = "imp skull"
 	desc = "Somebody got glory killed. Suitable as a trophy."
 	icon = 'modular_skyrat/icons/obj/lavaland/artefacts.dmi'
 	icon_state = "impskull"
 	bonus_value = 5
-	denied_type = /obj/item/crusher_trophy/blaster_tubes/impskull
+	denied_type = /obj/item/crusher_trophy/impskull
+	var/deadly_shot = FALSE
 
-/obj/item/crusher_trophy/blaster_tubes/impskull/effect_desc()
+/obj/item/crusher_trophy/impskull/effect_desc()
 	return "causes every marker to deal <b>[bonus_value]</b> damage."
 
-/obj/item/crusher_trophy/blaster_tubes/impskull/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
+/obj/item/crusher_trophy/impskull/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
+	if(deadly_shot)
+		marker.name = "deadly [marker.name]"
+		marker.icon_state = "chronobolt"
+		marker.damage = bonus_value
+		marker.nodamage = FALSE
+		marker.pixels_per_second = TILES_TO_PIXELS(5)
+		deadly_shot = FALSE
+
+/obj/item/crusher_trophy/impskull/on_mark_detonation(mob/living/target, mob/living/user)
+	deadly_shot = TRUE
+	addtimer(CALLBACK(src, .proc/reset_deadly_shot), 300, TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/item/crusher_trophy/impskull/proc/reset_deadly_shot()
+	deadly_shot = FALSE
+
+/obj/item/crusher_trophy/impskull/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
 	marker.name = "fiery [marker.name]"
 	marker.icon_state = "fireball"
 	marker.damage = bonus_value
