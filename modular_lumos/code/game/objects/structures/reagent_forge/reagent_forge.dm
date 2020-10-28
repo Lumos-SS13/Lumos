@@ -80,6 +80,27 @@
 								break
 					in_use = FALSE
 					return
+				if(istype(OB, /obj/item/clothing) && hell)
+					var/obj/item/clothing/finished = OB
+					if(finished.imbued_reagent)
+						in_use = FALSE
+						to_chat(user, "<span class='warning'>This metal has already been imbued with a reagent...</span>")
+						return
+					to_chat(user, "<span class='warning'>You start heating up the metal, attempting to imbue the metal with a reagent...</span>")
+					if(!do_after(user, 10 SECONDS, target = src))
+						in_use = FALSE
+						return
+					if(finished.reagents)
+						for(var/datum/reagent/chosen_reagent in finished.reagents.reagent_list)
+							if(chosen_reagent.volume > 50)
+								in_use = FALSE
+								finished.imbued_reagent = chosen_reagent.type
+								to_chat(user, "<span class='warning'>You have successfully imbued a chemical into the metal...</span>")
+								finished.name = "[chosen_reagent.name] [initial(finished.name)]"
+								finished.desc = "[initial(finished.desc)] It is imbued with [chosen_reagent.name]."
+								break
+					in_use = FALSE
+					return
 		else
 			in_use = FALSE
 	if(istype(I, /obj/item/organ/regenerative_core))

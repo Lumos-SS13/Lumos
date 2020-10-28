@@ -25,7 +25,7 @@
 /obj/item/forging/hot_metal/attackby(obj/item/I, mob/living/user, params)
 	. = ..()
 	if(istype(I, /obj/item/forging/hammer))
-		var/choice = input(user, "What would you like to craft") as null|anything in list("Sword", "Staff", "Baton", "Bokken")
+		var/choice = input(user, "What would you like to craft") as null|anything in list("Sword", "Staff", "Baton", "Bokken", "Chain-link")
 		if(!choice)
 			return
 		switch(choice)
@@ -45,6 +45,10 @@
 				var/obj/item/forging/construct/bokken/bokken = new /obj/item/forging/construct/bokken(get_turf(src))
 				bokken.on_fire = TRUE
 				addtimer(CALLBACK(bokken, /obj/item/forging/construct.proc/remove_flames), 50 SECONDS)
+			if("Chain-link")
+				var/obj/item/forging/construct/chainlink/chainlink = new /obj/item/forging/construct/chainlink(get_turf(src))
+				chainlink.on_fire = TRUE
+				addtimer(CALLBACK(chainlink, /obj/item/forging/construct.proc/remove_flames), 50 SECONDS)
 		qdel(src)
 
 /obj/item/forging/construct
@@ -57,13 +61,16 @@
 	//this is the current amount of times it has been hammered
 	var/hammered = 0
 
+	var/randomized_hammer = TRUE
+
 	var/on_fire = FALSE
 	var/brittle = FALSE
 	var/finished_product
 
 /obj/item/forging/construct/Initialize()
 	. = ..()
-	required_hammered += rand(-25,25)
+	if(randomized_hammer)
+		required_hammered += rand(-25,25)
 	
 /obj/item/forging/construct/attack_hand(mob/user)
 	if(!user)
@@ -109,6 +116,14 @@
 	desc = "A hot metal mass that resembles a bokken"
 	finished_product = /obj/item/forging/unfinished/bokken
 
+/obj/item/forging/construct/chainlink
+	name = "hot chain-link object"
+	icon_state = "hot_chain"
+	desc = "A hot metal mass that resembles a chain-link"
+	finished_product = /obj/item/forging/unfinished/chainlink
+	required_hammered = 10
+	randomized_hammer = FALSE
+
 /obj/item/forging/unfinished
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
 	var/finished_product
@@ -148,6 +163,11 @@
 	force = 5
 	starting_force = 5
 
+/obj/item/forging/unfinished/chainlink
+	name = "chain"
+	desc = "A single chain, link it with others to make things."
+	icon_state = "chain"
+
 /obj/item/forging/finished
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
 	//this is the reagent that the hell forge can add to the weapon
@@ -168,14 +188,11 @@
 
 /obj/item/forging/finished/pre_attack(atom/A, mob/living/user, params)
 	. = ..()
-	if(!istype(A, /mob/living/carbon))
-		return FALSE
-	var/mob/living/carbon/C = A
-	if(force <= 0)
-		if(!do_after(user, 3 SECONDS, target = C))
-			return TRUE
-	if(imbued_reagent)
-		C.reagents.add_reagent(imbued_reagent, 1)
+	if(iscarbon(A))
+		var/mob/living/carbon/C = A
+		if(imbued_reagent)
+			C.reagents.add_reagent(imbued_reagent, 1)
+	user.adjustStaminaLoss(-10)
 
 /obj/item/forging/finished/sword
 	name = "sword"
@@ -309,6 +326,143 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	item_flags = ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/bokken
+
+/obj/item/clothing
+	var/imbued_reagent
+	var/imbueable = FALSE
+
+/obj/item/clothing/suit/armor/forging
+	name = "chainmail armor"
+	desc = "When they come together, chains are quite strong."
+	icon = 'modular_lumos/icons/obj/clothing/suits.dmi'
+	icon_state = "chainarmor"
+	mob_overlay_icon = 'modular_lumos/icons/mob/clothing/suit.dmi'
+	item_state = "chainarmor"
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	imbueable = TRUE
+
+/obj/item/clothing/suit/armor/forging/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate, 5, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 3, "wound" = 2))
+	create_reagents(1000, NO_REACT)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/suit/armor/forging/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/item/clothing/suit/armor/forging/process()
+	if(!imbued_reagent)
+		return
+	if(istype(loc, /mob/living/carbon))
+		var/mob/living/carbon/C = loc
+		for(var/datum/reagent/in_reagent in C.reagents.reagent_list)
+			if(istype(in_reagent, imbued_reagent))
+				if((in_reagent.volume + 5) >= in_reagent.overdose_threshold)
+					return
+		C.reagents.add_reagent(imbued_reagent, 1)
+
+/obj/item/clothing/suit/armor/forging/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/reagent_containers))
+		if(imbued_reagent)
+			return
+		var/obj/item/reagent_containers/chosen_container = I
+		chosen_container.reagents.trans_to(src, 1000)
+	else
+		return ..()
+
+/obj/item/clothing/gloves/forging
+	name = "chainmail gloves"
+	desc = "When they come together, chains are quite strong."
+	icon = 'modular_lumos/icons/obj/clothing/gloves.dmi'
+	icon_state = "chainglove"
+	mob_overlay_icon = 'modular_lumos/icons/mob/clothing/hands.dmi'
+	item_state = "chainglove"
+	transfer_prints = TRUE
+	strip_delay = 40
+	equip_delay_other = 20
+	body_parts_covered = ARMS
+	cold_protection = ARMS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	resistance_flags = NONE
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	imbueable = TRUE
+
+/obj/item/clothing/gloves/forging/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate, 5, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 3, "wound" = 2))
+	create_reagents(1000, NO_REACT)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/gloves/forging/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/item/clothing/gloves/forging/process()
+	if(!imbued_reagent)
+		return
+	if(istype(loc, /mob/living/carbon))
+		var/mob/living/carbon/C = loc
+		for(var/datum/reagent/in_reagent in C.reagents.reagent_list)
+			if(istype(in_reagent, imbued_reagent))
+				if((in_reagent.volume + 5) >= in_reagent.overdose_threshold)
+					return
+		C.reagents.add_reagent(imbued_reagent, 1)
+
+/obj/item/clothing/gloves/forging/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/reagent_containers))
+		if(imbued_reagent)
+			return
+		var/obj/item/reagent_containers/chosen_container = I
+		chosen_container.reagents.trans_to(src, 1000)
+	else
+		return ..()
+
+/obj/item/clothing/head/helmet/forging
+	name = "chainmail helmet"
+	desc = "When they come together, chains are quite strong."
+	flags_inv = HIDEEARS|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	resistance_flags = FIRE_PROOF
+	icon = 'modular_lumos/icons/obj/clothing/head.dmi'
+	icon_state = "chainhelmet"
+	mob_overlay_icon = 'modular_lumos/icons/mob/clothing/head.dmi'
+	item_state = "chainhelmet"
+	strip_delay = 100
+	dog_fashion = null
+	imbueable = TRUE
+
+/obj/item/clothing/head/helmet/forging/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate, 5, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 3, "wound" = 2))
+	create_reagents(1000, NO_REACT)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/head/helmet/forging/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/item/clothing/head/helmet/forging/process()
+	if(!imbued_reagent)
+		return
+	if(istype(loc, /mob/living/carbon))
+		var/mob/living/carbon/C = loc
+		for(var/datum/reagent/in_reagent in C.reagents.reagent_list)
+			if(istype(in_reagent, imbued_reagent))
+				if((in_reagent.volume + 5) >= in_reagent.overdose_threshold)
+					return
+		C.reagents.add_reagent(imbued_reagent, 1)
+
+/obj/item/clothing/head/helmet/forging/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/reagent_containers))
+		if(imbued_reagent)
+			return
+		var/obj/item/reagent_containers/chosen_container = I
+		chosen_container.reagents.trans_to(src, 1000)
+	else
+		return ..()
 
 /obj/item/stack/sheet/bone_dust
 	name = "bone dust"
@@ -459,4 +613,22 @@
 	name = "anvil"
 	reqs = 	list(/obj/item/stack/sheet/metal = 10)
 	result = /obj/structure/forging_anvil
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chainarmor
+	name = "chain armor"
+	reqs = 	list(/obj/item/forging/unfinished/chainlink = 5)
+	result = /obj/item/clothing/suit/armor/forging
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chainglove
+	name = "chain gloves"
+	reqs = 	list(/obj/item/forging/unfinished/chainlink = 5)
+	result = /obj/item/clothing/gloves/forging
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chainhelmet
+	name = "chain helmet"
+	reqs = 	list(/obj/item/forging/unfinished/chainlink = 5)
+	result = /obj/item/clothing/head/helmet/forging
 	category = CAT_PRIMAL

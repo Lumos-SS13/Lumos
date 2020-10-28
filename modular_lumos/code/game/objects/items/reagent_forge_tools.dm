@@ -44,6 +44,15 @@
 		chosen_finished.forceMove(src)
 		update_icon()
 		return
+	if(istype(target, /obj/item/clothing))
+		if(contents.len > 0)
+			return
+		var/obj/item/clothing/chosen_finished = target
+		if(!chosen_finished.imbueable)
+			return
+		chosen_finished.forceMove(src)
+		update_icon()
+		return
 
 /obj/item/forging/hammer
 	name = "forging hammer"
@@ -53,7 +62,7 @@
 
 /obj/item/reagent_containers/glass/primitive_chem_isolator
 	name = "primitive chemical isolator"
-	desc = "A small cup that allows you to take out the chemicals you do not want. Ctrl + Shift + Click to take out chemicals."
+	desc = "A small cup that allows you to take out the chemicals you do not want. Alt + Click to take out chemicals."
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
 	icon_state = "prim_chem_iso"
 	amount_per_transfer_from_this = 10
@@ -62,8 +71,7 @@
 	reagent_flags = OPENCONTAINER
 	spillable = TRUE
 	
-/obj/item/reagent_containers/glass/primitive_chem_isolator/CtrlShiftClick(mob/user)
-	. = ..()
+/obj/item/reagent_containers/glass/primitive_chem_isolator/AltClick(mob/user)
 	if(reagents)
 		var/datum/reagent/choice = input(user, "Which chemical would you like to remove?") as null|anything in reagents.reagent_list
 		if(!choice)
