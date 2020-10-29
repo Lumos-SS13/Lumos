@@ -340,6 +340,8 @@
 	item_state = "chainarmor"
 	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
 	imbueable = TRUE
+	resistance_flags = FIRE_PROOF
+	mutantrace_variation = STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/suit/armor/forging/Initialize()
 	. = ..()
@@ -385,7 +387,7 @@
 	cold_protection = ARMS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-	resistance_flags = NONE
+	resistance_flags = FIRE_PROOF
 	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
 	imbueable = TRUE
 
