@@ -63,6 +63,8 @@
 	density = FALSE
 	opacity = FALSE
 
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
 	var/summoned_reward
 	var/list/the_prey = list()
 	var/list/the_hunters = list()
