@@ -16,6 +16,7 @@
 	speed = 2
 	attack_verb_continuous = "scratches"
 	attack_verb_simple = "scratch"
+	attack_sound = 'sound/weapons/bite.ogg'
 	melee_damage_lower = 5
 	melee_damage_upper = 15
 	speak_chance = 5
@@ -24,8 +25,8 @@
 	emote_hear = list("snuffles")
 	faction = ("mining")
 
-/mob/living/simple_animal/hostile/retaliate/diyaab
-	name = "diyaab"
+/mob/living/simple_animal/hostile/retaliate/simbu
+	name = "simbu"
 	desc = "A small pack animal. Although omnivorous, it will hunt meat on occasion."
 	icon = 'modular_lumos/icons/mob/simplemobs/retaliate/littlebois.dmi'
 	icon_state = "diyaab"
@@ -39,15 +40,16 @@
 	melee_damage_upper = 8
 	attack_verb_continuous = "scratches"
 	attack_verb_simple = "scratch"
+	attack_sound = 'sound/weapons/bite.ogg'
 	speak_chance = 5
 	speak = list("Awrr?","Aowrl!","Worrl")
 	emote_see = list("sniffs the air cautiously","looks around")
 	emote_hear = list("snuffles")
 	faction = ("mining")
 
-/mob/living/simple_animal/hostile/retaliate/shantak
-	name = "shantak"
-	desc = "A piglike creature with a bright iridiscent mane that sparkles as though lit by an inner light. Don't be fooled by its beauty though."
+/mob/living/simple_animal/hostile/retaliate/brahthani
+	name = "brahthani"
+	desc = "A stocky creature somewhat reminiscent of a wild boar. Its mane appears to be mildly iridescent."
 	icon = 'modular_lumos/icons/mob/simplemobs/retaliate/littlebois.dmi'
 	icon_state = "shantak"
 	icon_living = "shantak"
@@ -58,8 +60,9 @@
 	speed = 1
 	melee_damage_lower = 3
 	melee_damage_upper = 12
-	attack_verb_continuous = "scratches"
-	attack_verb_simple = "scratch"
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/weapons/bite.ogg'
 	speak_chance = 2
 	speak = list("Shuhn","Shrunnph?","Shunpf")
 	emote_see = list("scratches the ground","shakes out it's mane","tinkles gently")

@@ -3,7 +3,7 @@
 * Armalis (renamed Varyx) are sentient bird-people. They're a ruin mob.
 * Should attack with basic attack til horizontal, fairly dangerous.
 */
-mob/living/simple_animal/hostile/armalis
+mob/living/simple_animal/hostile/varyx
 	name = "Varyx"
 	desc = "A large humanoid avian, it doesn't look very happy to see you."
 	icon = 'modular_lumos/icons/mob/simplemobs/armalis.dmi'
@@ -28,7 +28,7 @@ mob/living/simple_animal/hostile/armalis
 	
 	pixel_x = -5
 
-/mob/living/simple_animal/hostile/armalis/armored
+/mob/living/simple_animal/hostile/varyx/armored
 	name = "Varyx Legionary"
 	desc = "A trained warrior, his purpose: To end you."
 	icon_state = "armalis_armored"

@@ -63,6 +63,8 @@
 	attack_verb_simple = "bludgeon"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	loot = list(/obj/item/broom)
+	speak_chance = 2
+	speak = list("B-Blyat!","BLYAT!","N-NYET!")
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -78,6 +80,8 @@
 	attack_verb_continuous = "bludgeons"
 	attack_verb_simple = "bludgeon"
 	attack_sound = 'sound/weapons/cqchit1.ogg'
+	speak_chance = 2
+	speak = list("Take him out!","Kept you waiting, huh?")
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -93,6 +97,8 @@
 	attack_verb_continuous = "bludgeons"
 	attack_verb_simple = "bludgeon"
 	attack_sound = 'sound/weapons/klonk.ogg'
+	speak_chance = 2
+	speak = list("Like it, da?")
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -108,6 +114,8 @@
 	attack_verb_continuous = "wrestles"
 	attack_verb_simple = "wrestle"
 	attack_sound = 'sound/weapons/thudswoosh.ogg'
+	speak_chance = 2
+	speak = list("Blyat you!","Oh, Vadim's shoulder!","Lube it up!")
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
