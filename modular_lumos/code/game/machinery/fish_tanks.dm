@@ -221,7 +221,8 @@
 		if(dirty >= 100)
 			fish.health--
 		age_dividor += fish.ageStatus
-	if(istype(fish1, fish2.type))
-		if(fish1.sex != fish2.sex)
-			if(prob(15 / age_dividor))
-				new fish1.spawned_egg(get_turf(src))
+	if(fish1 && fish2)
+		if(istype(fish1, fish2.type))
+			if(fish1.sex != fish2.sex)
+				if(prob(15 / age_dividor))
+					new fish1.spawned_egg(get_turf(src))
