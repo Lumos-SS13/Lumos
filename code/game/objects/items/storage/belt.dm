@@ -104,6 +104,14 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 
+/obj/item/storage/belt/utility/full/power/PopulateContents() // For ERTs
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/multitool(src)
+	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
+	new /obj/item/holosign_creator/combifan(src)
+	new /obj/item/analyzer/ranged(src)
 
 /obj/item/storage/belt/utility/atmostech/PopulateContents()
 	new /obj/item/screwdriver(src)
@@ -577,7 +585,8 @@
 /obj/item/storage/belt/janitor/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 6
+	//STR.max_items = 6
+	STR.max_items = 7 // LUMOS EDIT
 	STR.max_w_class = WEIGHT_CLASS_BULKY // Set to this so the  light replacer can fit.
 	STR.can_hold = typecacheof(list(
 		/obj/item/grenade/chem_grenade,
@@ -596,7 +605,8 @@
 		/obj/item/paint/paint_remover,
 		/obj/item/assembly/mousetrap,
 		/obj/item/screwdriver,
-		/obj/item/stack/cable_coil
+		/obj/item/stack/cable_coil,
+		/obj/item/dustpan // LUMOS EDIT
 		))
 
 /obj/item/storage/belt/bandolier

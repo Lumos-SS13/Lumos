@@ -20,6 +20,10 @@
 #define MODE_KEY_BINARY "b"
 #define MODE_TOKEN_BINARY ":b"
 
+#define MODE_DRONE "drone"
+#define MODE_KEY_DRONE "r"
+#define MODE_TOKEN_DRONE ":r"
+
 #define MODE_WHISPER "whisper"
 #define MODE_WHISPER_CRIT "whispercrit"
 
@@ -40,8 +44,14 @@
 
 //skyrat change start
 #define MODE_TERROR_SPIDER "terrortalk"
-#define MODE_KEY_TERROR_SPIDER "t"
+#define MODE_KEY_TERROR_SPIDER "w"
 //skyrat change stop
+
+// LUMOS CHANGE START - VINES
+#define MODE_VENUS "venustalk"
+#define MODE_KEY_VENUS "v"
+#define MODE_TOKEN_VENUS ":v"
+// LUMOS CHANGE STOP - VINES
 
 #define MODE_CHANGELING "changeling"
 #define MODE_KEY_CHANGELING "g"

@@ -1,7 +1,7 @@
 /obj/structure/closet
 	name = "closet"
 	desc = "It's a basic storage unit."
-	icon = 'icons/obj/closet.dmi'
+	icon = 'modular_lumos/icons/obj/closet.dmi'
 	icon_state = "generic"
 	density = TRUE
 	var/icon_door = null
@@ -37,6 +37,14 @@
 	var/lock_in_use = FALSE //Someone is doing some stuff with the lock here, better not proceed further
 	var/eigen_teleport = FALSE //If the closet leads to Mr Tumnus.
 	var/obj/structure/closet/eigen_target //Where you go to.
+	// LUMOS EDIT START
+	var/obj/effect/overlay/closet_door/door_obj
+	var/is_animating_door = FALSE
+	var/door_anim_squish = 0.12
+	var/door_anim_angle = 136
+	var/door_hinge_x = -6.5
+	var/door_anim_time = 2.5 // set to 0 to make the door not animate at all
+	// LUMOS EDIT STOP
 
 
 /obj/structure/closet/Initialize(mapload)
@@ -57,12 +65,233 @@
 	dump_contents(override = FALSE)
 	return ..()
 
+// LUMOS EDIT START
+/obj/structure/closet/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/toy/crayon))
+		var/list/locker_choice = list(
+			"generic",
+			"generic-blue",
+			"generic-green",
+			"generic-orange",
+			"generic-pink",
+			"generic-red",
+			"generic-white",
+			"generic-yellow",
+			"generic-black",
+			"generic-mixed",
+			"generic-atmos",
+			"generic-secure",
+			"bio",
+			"bio-viro",
+			"bio-sec",
+			"bio-jani",
+			"syndie",
+			"oxygen",
+			"goodies",
+			"med",
+			"med-chem",
+			"freezer",
+			"fire",
+			"eng-tool",
+			"eng-rad",
+			"eng-elec",
+			"eng-weld",
+			"eng-secure",
+			"mining",
+			"bomb",
+			"alien",
+			"ce",
+			"med-secure",
+			"science",
+			"cargo",
+			"qm",
+			"sec",
+			"warden",
+			"hos",
+			"armory",
+			"tactical",
+			"captain",
+			"hop",
+			"cmo",
+			"rd",
+			"hydro",
+			"atmos",
+			"prisoner"
+		)
+		var/input = input(user, "Choose a locker design", "Locker Design") as null|anything in locker_choice
+		if(!input)
+			return
+		icon_state = "generic"
+		icon_door = null
+		switch(input)
+			if("generic")
+			if("generic-blue")
+				icon_door = "blue"
+			if("generic-green")
+				icon_door = "green"
+			if("generic-orange")
+				icon_door = "orange"
+			if("generic-pink")
+				icon_door = "pink"
+			if("generic-red")
+				icon_door = "red"
+			if("generic-white")
+				icon_door = "white"
+			if("generic-yellow")
+				icon_door = "yellow"
+			if("generic-black")
+				icon_door = "black"
+			if("generic-mixed")
+				icon_door = "mixed"
+			if("generic-atmos")
+				icon_door = "atmos_wardrobe"
+			if("generic-secure")
+				icon_state = "secure"
+			if("bio")
+				icon_state = "bio"
+			if("bio-viro")
+				icon_state = "bio_viro"
+			if("bio-sec")
+				icon_state = "bio_sec"
+			if("bio-jani")
+				icon_state = "bio_jan"
+			if("syndie")
+				icon_state = "syndicate"
+			if("oxygen")
+				icon_state = "emergency"
+			if("goodies")
+				icon_state = "goodies"
+			if("med")
+				icon_state = "med"
+			if("med-chem")
+				icon_state = "med"
+				icon_door = "chemical"
+			if("freezer")
+				icon_state = "freezer"
+			if("fire")
+				icon_state = "fire"
+			if("eng-tool")
+				icon_state = "eng"
+				icon_door = "eng_tool"
+			if("eng-rad")
+				icon_state = "eng"
+				icon_door = "eng_rad"
+			if("eng-elec")
+				icon_state = "eng"
+				icon_door = "eng_elec"
+			if("eng-weld")
+				icon_state = "eng"
+				icon_door = "eng_weld"
+			if("eng-secure")
+				icon_state = "eng_secure"
+			if("mining")
+				icon_state = "mining"
+			if("bomb")
+				icon_state = "bomb"
+			if("alien")
+				icon_state = "alien"
+			if("ce")
+				icon_state = "ce"
+			if("med-secure")
+				icon_state = "med_secure"
+			if("science")
+				icon_state = "science"
+			if("cargo")
+				icon_state = "cargo"
+			if("qm")
+				icon_state = "qm"
+			if("sec")
+				icon_state = "sec"
+			if("warden")
+				icon_state = "warden"
+			if("hos")
+				icon_state = "hos"
+			if("armory")
+				icon_state = "armory"
+			if("tactical")
+				icon_state = "tac"
+			if("captain")
+				icon_state = "cap"
+			if("hop")
+				icon_state = "hop"
+			if("cmo")
+				icon_state = "cmo"
+			if("rd")
+				icon_state = "rd"
+			if("hydro")
+				icon_state = "hydro"
+			if("atmos")
+				icon_state = "atmos"
+			if("prisoner")
+				icon_state = "prisoner"
+		update_icon()
+	else
+		return ..()
+
 /obj/structure/closet/update_icon()
 	. = ..()
+	cut_overlays()
 	if(!opened)
 		layer = OBJ_LAYER
+		if(!is_animating_door)
+			if(icon_door)
+				add_overlay("[icon_door]_door")
+			else
+				add_overlay("[icon_state]_door")
+			if(welded)
+				add_overlay(icon_welded)
+			if(secure && !broken)
+				if(locked)
+					add_overlay("locked")
+				else
+					add_overlay("unlocked")
+
 	else
 		layer = BELOW_OBJ_LAYER
+		if(!is_animating_door)
+			if(icon_door_override)
+				add_overlay("[icon_door]_open")
+			else
+				add_overlay("[icon_state]_open")
+
+/obj/structure/closet/proc/animate_door(var/closing = FALSE)
+	if(!door_anim_time)
+		return
+	if(!door_obj) door_obj = new
+	vis_contents |= door_obj
+	door_obj.icon = icon
+	door_obj.icon_state = "[icon_door || icon_state]_door"
+	is_animating_door = TRUE
+	var/num_steps = door_anim_time / world.tick_lag
+	for(var/I in 0 to num_steps)
+		var/angle = door_anim_angle * (closing ? 1 - (I/num_steps) : (I/num_steps))
+		var/matrix/M = get_door_transform(angle)
+		var/door_state = angle >= 90 ? "[icon_door_override ? icon_door : icon_state]_back" : "[icon_door || icon_state]_door"
+		var/door_layer = angle >= 90 ? FLOAT_LAYER : ABOVE_MOB_LAYER
+
+		if(I == 0)
+			door_obj.transform = M
+			door_obj.icon_state = door_state
+			door_obj.layer = door_layer
+		else if(I == 1)
+			animate(door_obj, transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag, flags = ANIMATION_END_NOW)
+		else
+			animate(transform = M, icon_state = door_state, layer = door_layer, time = world.tick_lag)
+	addtimer(CALLBACK(src,.proc/end_door_animation),door_anim_time,TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/structure/closet/proc/end_door_animation()
+	is_animating_door = FALSE
+	vis_contents -= door_obj
+	update_icon()
+	COMPILE_OVERLAYS(src)
+
+/obj/structure/closet/proc/get_door_transform(angle)
+	var/matrix/M = matrix()
+	M.Translate(-door_hinge_x, 0)
+	M.Multiply(matrix(cos(angle), 0, 0, -sin(angle) * door_anim_squish, 1, 0))
+	M.Translate(door_hinge_x, 0)
+	return M
+// LUMOS EDIT STOP
 
 /obj/structure/closet/update_overlays()
 	. = ..()
@@ -193,6 +422,8 @@
 		density = FALSE
 	climb_time *= 0.5 //it's faster to climb onto an open thing
 	dump_contents()
+	if(!istype(src, /obj/structure/closet/crate))
+		animate_door(FALSE)
 	update_icon()
 	return 1
 
@@ -255,6 +486,8 @@
 	climb_time = initial(climb_time)
 	opened = FALSE
 	density = TRUE
+	if(!istype(src, /obj/structure/closet/crate))
+		animate_door(TRUE)
 	update_icon()
 	return TRUE
 
