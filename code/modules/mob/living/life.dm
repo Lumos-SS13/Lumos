@@ -43,6 +43,8 @@
   * Returns TRUE or FALSE based on if we were interrupted. This is used by overridden variants to check if they should stop.
   */
 /mob/living/proc/BiologicalLife(seconds, times_fired)
+	if(IS_IN_STASIS(src)) // lumos
+		return
 	handle_diseases()// DEAD check is in the proc itself; we want it to spread even if the mob is dead, but to handle its disease-y properties only if you're not.
 
 	// Everything after this shouldn't process while dead (as of the time of writing)
@@ -76,6 +78,8 @@
   * Returns TRUE or FALSE based on if we were interrupted. This is used by overridden variants to check if they should stop.
   */
 /mob/living/proc/PhysicalLife(seconds, times_fired)
+	if(IS_IN_STASIS(src)) // lumos
+		return
 	if(digitalinvis)
 		handle_diginvis() //AI becomes unable to see mob
 
