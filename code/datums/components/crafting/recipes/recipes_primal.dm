@@ -154,3 +154,11 @@
             /obj/item/shovel/spade = 1)
 	result = /obj/item/shovel/serrated
 	category = CAT_PRIMAL
+
+/datum/crafting_recipe/primal_fish_rod
+	name = "Primal Fishing Rod"
+	time = 20
+	reqs = list(/obj/item/stack/sheet/bone = 4,
+				 /obj/item/stack/sheet/sinew = 2)
+	result = /obj/item/fish_tool/fishing_rod/primal
+	category = CAT_PRIMAL
