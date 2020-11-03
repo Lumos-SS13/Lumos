@@ -37,12 +37,12 @@
 			if(prob(50))
 				qdel(targetKudzu)
 		return TRUE
-	if(istype(A, /mob/living/simple_animal/hostile/venus_human_trap))
-		qdel(A)
-		return TRUE
 	if(isvineimmune(A))
 		force = initial(force)
-		force *= 2
+		var/damage_dealing = 2
+		if(istype(A, /mob/living/simple_animal/hostile/venus_human_trap))
+			damage_dealing = 4
+		force *= damage_dealing
 
 /obj/item/scythe/super
 	name = "super scythe"
