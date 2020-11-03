@@ -180,3 +180,11 @@
 	materials = list(/datum/material/biomass = 300)
 	build_path = /obj/item/clothing/head/rice_hat
 	category = list("initial","Organic Materials")
+
+/datum/design/fish_foody
+	name = "Fish Food"
+	id = "fish_foody"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 300)
+	build_path = /obj/item/fish_tool/fish_food
+	category = list("initial","Organic Materials")

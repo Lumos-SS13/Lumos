@@ -6,13 +6,36 @@
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/bluespace_miner
 	layer = BELOW_OBJ_LAYER
-	var/list/ore_rates = list(/datum/material/iron = 0.3, /datum/material/glass = 0.3, /datum/material/plasma = 0.1,  /datum/material/silver = 0.1, /datum/material/gold = 0.05, /datum/material/titanium = 0.05, /datum/material/uranium = 0.05, /datum/material/diamond = 0.02)
+//lumos edit
+	var/list/ore_rates = list(
+		/datum/material/iron = 0.5, 
+		/datum/material/glass = 0.5, 
+		/datum/material/plasma = 0.2,  
+		/datum/material/silver = 0.2, 
+		/datum/material/gold = 0.1, 
+		/datum/material/titanium = 0.1, 
+		/datum/material/uranium = 0.1, 
+		/datum/material/diamond = 0.05)
+	
 	var/datum/component/remote_materials/materials
+
+	var/efficiency
 
 /obj/machinery/mineral/bluespace_miner/Initialize(mapload)
 	. = ..()
 	materials = AddComponent(/datum/component/remote_materials, "bsm", mapload)
 
+/obj/machinery/mineral/bluespace_miner/RefreshParts()
+	efficiency = 0
+	for(var/obj/item/stock_parts/scanning_module/S in component_parts)
+		efficiency += S.rating
+	for(var/obj/item/stock_parts/manipulator/P in component_parts)
+		efficiency += P.rating
+	for(var/obj/item/stock_parts/micro_laser/L in component_parts)
+		efficiency += L.rating
+	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
+		efficiency += M.rating
+//lumos edit
 /obj/machinery/mineral/bluespace_miner/Destroy()
 	materials = null
 	return ..()
@@ -37,7 +60,23 @@
 	if(!mat_container || panel_open || !powered())
 		return
 	var/datum/material/ore = pick(ore_rates)
-	mat_container.bsm_insert((ore_rates[ore] * 1000), ore)
+	//lumos edit
+	if(!check_temperature())
+		return
+	mat_container.bsm_insert((ore_rates[ore] * 1000) * (efficiency / 20), ore)
+
+/obj/machinery/mineral/bluespace_miner/proc/check_temperature()
+	var/turf/T = get_turf(src)
+	if(!T)
+		return
+	var/datum/gas_mixture/env = T.return_air()
+	if(!env)
+		return
+	if(env.temperature >= 300 || env.volume <= BREATH_VOLUME)
+		return FALSE
+	atmos_spawn_air("co2=100;TEMP=600")
+	return TRUE
+	//lumos edit
 
 /datum/component/material_container/proc/bsm_insert(amt, var/datum/material/mat)
 	if(!istype(mat))

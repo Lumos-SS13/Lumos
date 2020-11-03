@@ -17,6 +17,18 @@
 	.=..()
 	START_PROCESSING(SSprocessing, src)
 
+/obj/structure/lavaland/ash_walker/attackby(obj/item/I, mob/living/user, params)
+	. = ..()
+	if(istype(I, /obj/item/organ/regenerative_core/legion))
+		if(!isashwalker(user))
+			return
+		qdel(I)
+		var/obj/item/organ/regenerative_core/legion/spawnLegionCore = new /obj/item/organ/regenerative_core/legion(src)
+		playsound(get_turf(src),'sound/magic/demon_consume.ogg', 50, 1)
+		spawnLegionCore.preserved()
+		user.put_in_active_hand(spawnLegionCore)
+		to_chat(user, "<span class='warning'>The tendril revitalizes the core...</span>")
+
 /obj/structure/lavaland/ash_walker/deconstruct(disassembled)
 	new /obj/item/assembly/signaler/anomaly (get_step(loc, pick(GLOB.alldirs)))
 	new /obj/effect/collapse(loc)

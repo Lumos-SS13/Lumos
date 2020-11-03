@@ -324,12 +324,27 @@ The phone will be detected by this verb if it's carried by a mob or sitting on a
 /obj/item/phone/broken
 	broken = 1
 	labeled = 0
+	
+//Cellphones edit, just a different look for phones.
+/obj/item/phone/cellphone
+	name = "cellphone"
+	desc = "A compact cellphone for making calls."
+	icon =  'modular_lumos/icons/obj/cellphone.dmi'
+	icon_state = "cellphone"
+
+/obj/item/phone/cellphone/broken
+	broken = 1
+	labeled = 0
 
 /datum/supply_pack/misc/phones
-	name = "Phones"
-	cost = 1000
+	name = "Surplus Phones"
+	desc = "Contains six phones for communication; half red phones, half cellphones."
+	cost = 1250
 	contains = list(
 		/obj/item/phone/broken,
 		/obj/item/phone/broken,
-		/obj/item/phone/broken)
-	crate_name = "phone crate"
+		/obj/item/phone/broken,
+		/obj/item/phone/cellphone/broken,
+		/obj/item/phone/cellphone/broken,
+		/obj/item/phone/cellphone/broken)
+	crate_name = "surplus phones crate"
