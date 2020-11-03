@@ -74,6 +74,8 @@
 	var/tier = BDM_TIER
 	var/summoned_tier = NONE_TIER
 
+	var/meat_count = 0
+
 /obj/structure/summoning_altar/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
@@ -118,9 +120,18 @@
 			continue
 		L.forceMove(get_turf(src))
 
+/obj/structure/summoning_altar/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/meat))
+		qdel(I)
+		playsound(get_turf(src),'sound/magic/demon_consume.ogg', 50, 1)
+		meat_count++
+
 /obj/structure/summoning_altar/attack_hand(mob/user)
 	if(the_hunters.len > 0)
 		to_chat(user, "<span class='warning'>There are already summoned creatures, defeat them before using this again.</span>")
+		return
+	if(meat_count <= 4)
+		to_chat(user, "<span class='warning'>There is not enough material to summon creatures. There needs to be five materials. Sacrifice any kind of meat.</span>")
 		return
 	var/choice = input(user, "Which class would you like?") as null|anything in list("Normal", "Elite", "Megafauna")
 	if(!choice)
@@ -134,9 +145,9 @@
 				if("Goliath")
 					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/goliath/beast, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
 				if("Watcher")
-					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/basilisk/watcher, special = TRUE, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
+					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/basilisk/watcher, special = 1, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
 				if("Legion")
-					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/hivelord/legion, special = TRUE, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
+					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/hivelord/legion, special = 2, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
 				if("Shambling")
 					summon_mob_type(/mob/living/simple_animal/hostile/asteroid/miner, reward_chest = /obj/structure/closet/crate/necropolis/tendril, spawn_amount = 4)
 				if("Imp")
@@ -256,7 +267,7 @@ mob/living/simple_animal/hostile/proc/check_altar()
 	if(summon_altar)
 		summon_altar.the_hunters += src
 
-/obj/structure/summoning_altar/proc/summon_mob_type(mob/living/simple_animal/hostile/choice, special = FALSE, obj/reward_chest, spawn_amount = 1)
+/obj/structure/summoning_altar/proc/summon_mob_type(mob/living/simple_animal/hostile/choice, special = 0, obj/reward_chest, spawn_amount = 1)
 	if(!choice)
 		return
 	for(var/mob/living/L in range(10, src))
@@ -267,17 +278,18 @@ mob/living/simple_animal/hostile/proc/check_altar()
 		spawning_choice.check_altar()
 	if(reward_chest)
 		summoned_reward = reward_chest
-	if(special)
-		if(istype(choice, /mob/living/simple_animal/hostile/asteroid/basilisk/watcher))
+	switch(special)
+		if(1)
 			if(prob(25))
 				new /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing(get_turf(src))
 			else if(prob(25))
 				new /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing(get_turf(src))
-		if(istype(choice, /mob/living/simple_animal/hostile/asteroid/hivelord/legion))
+		if(2)
 			if(prob(25))
 				new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf(get_turf(src))
 			else if(prob(25))
 				new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/beegion(get_turf(src))
+	meat_count -= 5
 
 #undef NONE_TIER
 #undef BDM_TIER		
