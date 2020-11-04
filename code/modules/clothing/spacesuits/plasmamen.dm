@@ -42,6 +42,7 @@
 	strip_delay = 80
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 0, "fire" = 100, "acid" = 75, "wound" = 2)
 	resistance_flags = FIRE_PROOF
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT // lumos
 	var/brightness_on = 4 //luminosity when the light is on
 	var/on = FALSE
 	var/light_overlay = "envirohelm-light"
