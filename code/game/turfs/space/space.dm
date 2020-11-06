@@ -19,6 +19,8 @@
 	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 	bullet_bounce_sound = null
 
+	can_allow_icy = FALSE //lumos edit
+
 
 /turf/open/space/basic/New()	//Do not convert to Initialize
 	//This is used to optimize the map loader
