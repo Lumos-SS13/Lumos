@@ -2,6 +2,8 @@
 	if(!(. = ..()))
 		return
 	// GROW!
+	if(IS_IN_STASIS(src)) // lumos
+		return
 	if(amount_grown < max_grown)
 		amount_grown++
 		update_icons()

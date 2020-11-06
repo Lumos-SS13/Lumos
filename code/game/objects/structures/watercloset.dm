@@ -732,10 +732,24 @@
 /obj/structure/sink/puddle/deconstruct(disassembled = TRUE)
 	qdel(src)
 
+//lumos edit
 /obj/structure/sink/greyscale
+	icon = 'modular_lumos/icons/obj/watercloset.dmi'
 	icon_state = "sink_greyscale"
 	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR
 	buildstacktype = null
+
+/obj/structure/sink/greyscale/Initialize()
+	. = ..()
+	spawn(1)
+		switch(dir)
+			if(NORTH)
+				pixel_y = 28
+			if(EAST)
+				pixel_x = 12
+			if(WEST)
+				pixel_x = -12
+//lumos edit
 
 //Shower Curtains//
 //Defines used are pre-existing in layers.dm//

@@ -501,3 +501,14 @@
 				/obj/item/clothing/under/rank/security/officer = 1)
 	subcategory = CAT_FURNITURE
 	category = CAT_MISC
+
+/datum/crafting_recipe/normal_fish_rod
+	name = "Fishing Rod"
+	result = /obj/item/fish_tool/fishing_rod
+	tools = list(/obj/item/weldingtool,
+				 /obj/item/screwdriver)
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/stack/cable_coil = 5)
+	time = 5
+	subcategory = CAT_TOOL
+	category = CAT_MISC
