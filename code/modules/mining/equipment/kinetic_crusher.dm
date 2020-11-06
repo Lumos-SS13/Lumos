@@ -294,17 +294,26 @@
 				H.ranged_cooldown = bonus_value + world.time
 
 //magmawing watcher
-/obj/item/crusher_trophy/blaster_tubes/magma_wing
+/obj/item/crusher_trophy/magma_wing
 	name = "magmawing watcher wing"
 	desc = "A still-searing wing from a magmawing watcher. Suitable as a trophy for a kinetic crusher."
 	icon_state = "magma_wing"
 	gender = NEUTER
+	denied_type = /obj/item/crusher_trophy/magma_wing
 	bonus_value = 5
+	var/deadly_shot = FALSE
 
-/obj/item/crusher_trophy/blaster_tubes/magma_wing/effect_desc()
+/obj/item/crusher_trophy/magma_wing/effect_desc()
 	return "mark detonation to make the next destabilizer shot deal <b>[bonus_value]</b> damage"
 
-/obj/item/crusher_trophy/blaster_tubes/magma_wing/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
+/obj/item/crusher_trophy/magma_wing/on_mark_detonation(mob/living/target, mob/living/user)
+	deadly_shot = TRUE
+	addtimer(CALLBACK(src, .proc/reset_deadly_shot), 300, TIMER_UNIQUE|TIMER_OVERRIDE)
+
+/obj/item/crusher_trophy/magma_wing/proc/reset_deadly_shot()
+	deadly_shot = FALSE
+
+/obj/item/crusher_trophy/magma_wing/on_projectile_fire(obj/item/projectile/destabilizer/marker, mob/living/user)
 	if(deadly_shot)
 		marker.name = "heated [marker.name]"
 		marker.icon_state = "lava"
@@ -313,11 +322,24 @@
 		deadly_shot = FALSE
 
 //icewing watcher
-/obj/item/crusher_trophy/watcher_wing/ice_wing
+/obj/item/crusher_trophy/ice_wing
 	name = "icewing watcher wing"
 	desc = "A carefully preserved frozen wing from an icewing watcher. Suitable as a trophy for a kinetic crusher."
 	icon_state = "ice_wing"
+	denied_type = /obj/item/crusher_trophy/ice_wing
 	bonus_value = 8
+
+/obj/item/crusher_trophy/ice_wing/effect_desc()
+	return "mark detonation to prevent certain creatures from using certain attacks for <b>[bonus_value*0.1]</b> second\s"
+
+/obj/item/crusher_trophy/ice_wing/on_mark_detonation(mob/living/target, mob/living/user)
+	if(ishostile(target))
+		var/mob/living/simple_animal/hostile/H = target
+		if(H.ranged) //briefly delay ranged attacks
+			if(H.ranged_cooldown >= world.time)
+				H.ranged_cooldown += bonus_value
+			else
+				H.ranged_cooldown = bonus_value + world.time
 
 //legion
 /obj/item/crusher_trophy/legion_skull
