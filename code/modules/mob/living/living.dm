@@ -430,8 +430,8 @@
 		to_chat(src, "<span class='notice'>You have given up life and succumbed to death.</span>")
 		death()
 
-/mob/living/incapacitated(ignore_restraints = FALSE, ignore_grab = FALSE, check_immobilized = FALSE)
-	if(stat || IsUnconscious() || IsStun() || IsParalyzed() || (combat_flags & COMBAT_FLAG_HARD_STAMCRIT) || (check_immobilized && IsImmobilized()) || (!ignore_restraints && restrained(ignore_grab)))
+/mob/living/incapacitated(ignore_restraints = FALSE, ignore_grab = FALSE, ignore_stasis = FALSE, check_immobilized = FALSE) //lumos
+	if(stat || IsUnconscious() || IsStun() || IsParalyzed() || (combat_flags & COMBAT_FLAG_HARD_STAMCRIT) || (check_immobilized && IsImmobilized()) || (!ignore_restraints && restrained(ignore_grab)) || (!ignore_stasis && IS_IN_STASIS(src))) //lumos
 		return TRUE
 
 /mob/living/canUseStorage()
@@ -710,7 +710,7 @@
 		..(pressure_difference, direction, pressure_resistance_prob_delta)
 
 /mob/living/can_resist()
-	return !((next_move > world.time) || !CHECK_MOBILITY(src, MOBILITY_RESIST))
+	return !((next_move > world.time) || incapacitated(ignore_restraints = TRUE, ignore_stasis = TRUE) || !CHECK_MOBILITY(src, MOBILITY_RESIST)) //lumos
 
 /// Resist verb for attempting to get out of whatever is restraining your motion. Gives you resist clickdelay if do_resist() returns true.
 /mob/living/verb/resist()
