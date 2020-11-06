@@ -21,5 +21,3 @@
 				H.eye_blurry += 1
 			H.adjustStaminaLoss(4)
 			H.hallucination += 2
-			H.adjustToxLoss(0.5)
-			H.adjustBruteLoss(0.5)
