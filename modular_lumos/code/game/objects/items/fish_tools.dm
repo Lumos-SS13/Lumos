@@ -72,6 +72,7 @@
 		new chosen_fish(get_turf(target))
 		in_use = FALSE
 		return
+	in_use = FALSE
 
 /obj/item/paper/fluff/stations/chef/fishing
 	name = "fishing manual"
