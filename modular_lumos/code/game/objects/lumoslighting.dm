@@ -1,4 +1,4 @@
-/obj/machinery/light/floor/fakeday
+/obj/machinery/light/floor/fakeday // Effectively a floorlight, but unbreakable and invisible. A really crappy workaround for my poor coding.
 	name = "sunlight"
 	desc = "Where the sun is hitting the planet. You shouldn't see this!"
 	icon = 'modular_lumos/icons/obj/fakeoutdoorlight.dmi'
