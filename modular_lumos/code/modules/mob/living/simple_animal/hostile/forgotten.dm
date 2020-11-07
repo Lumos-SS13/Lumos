@@ -1,4 +1,4 @@
-/mob/living/simple_animal/hostile/forgotten
+/mob/living/simple_animal/hostile/faithless/forgotten
 	name = "The Forgotten"
 	desc = "Cast from the world of light, rejected by the dark."
 	icon = 'modular_lumos/icons/mob/simplemobs/forgotten.dmi'
@@ -8,8 +8,10 @@
 	threat = 1
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	gender = MALE
-	speak_chance = 0
+	speak_chance = 1
+	speak = list("Raaagh...","Light...","Burning...")
 	turns_per_move = 5
+	see_in_dark = 6
 	response_help_continuous = "passes through"
 	response_help_simple = "pass through"
 	response_disarm_continuous = "shoves"
@@ -25,6 +27,8 @@
 	stat_attack = UNCONSCIOUS
 	robust_searching = 1
 	blood_volume = 0
+	wander = TRUE
+
 
 	harm_intent_damage = 10
 	obj_damage = 50

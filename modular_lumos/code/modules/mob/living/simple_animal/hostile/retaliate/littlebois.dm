@@ -1,9 +1,9 @@
 /*
 * More Baycode mobs, repurposed for later projects, credit to the dmis and some of the original dm elements go to them
 * Mostly these are either basic run-attack, but some will be modified later.
-* toes jam on toast
+* toe jam on toast
 */
-/mob/living/simple_animal/hostile/retaliate/samak
+/mob/living/simple_animal/hostile/retaliate/samak // The Pokemon boi, intended to later be a peaceful-ish monster, don't get too close!
 	name = "samak"
 	desc = "A fast, armoured predator accustomed to hiding and ambushing in cold terrain."
 	icon = 'modular_lumos/icons/mob/simplemobs/retaliate/littlebois.dmi'
@@ -25,7 +25,7 @@
 	emote_hear = list("snuffles")
 	faction = ("mining")
 
-/mob/living/simple_animal/hostile/retaliate/simbu
+/mob/living/simple_animal/hostile/retaliate/simbu // The fluff-beast! Later intended to be used in insulation and duraweave collection!
 	name = "simbu"
 	desc = "A small pack animal. Although omnivorous, it will hunt meat on occasion."
 	icon = 'modular_lumos/icons/mob/simplemobs/retaliate/littlebois.dmi'
@@ -47,7 +47,7 @@
 	emote_hear = list("snuffles")
 	faction = ("mining")
 
-/mob/living/simple_animal/hostile/retaliate/brahthani
+/mob/living/simple_animal/hostile/retaliate/brahthani // The strange dog-pig! Later intended to be a tamable mining pet!
 	name = "brahthani"
 	desc = "A stocky creature somewhat reminiscent of a wild boar. Its mane appears to be mildly iridescent."
 	icon = 'modular_lumos/icons/mob/simplemobs/retaliate/littlebois.dmi'
@@ -68,7 +68,7 @@
 	emote_see = list("scratches the ground","shakes out it's mane","tinkles gently")
 	faction = ("mining")
 
-/mob/living/simple_animal/hostile/thinbug
+/mob/living/simple_animal/hostile/thinbug // WILL be repurposed later, intended to spit corrosive acid!
 	name = "taki"
 	desc = "It looks like a bunch of legs."
 	icon_state = "thinbug"
@@ -78,7 +78,7 @@
 	emote_hear = list("scratches the ground","chitters")
 	faction = ("mining")
 
-/mob/living/simple_animal/yithian
+/mob/living/simple_animal/yithian // A cute boy, later on will be a very collectable pet, or a source of gubbock-like milk!
 	name = "yithian"
 	desc = "A friendly creature vaguely resembling an oversized snail without a shell."
 	icon_state = "yithian"
@@ -86,7 +86,7 @@
 	icon_dead = "yithian_dead"
 	faction = ("mining")
 
-/mob/living/simple_animal/tindalos
+/mob/living/simple_animal/tindalos // A scavenger, later going to be used as vermin that eat plants
 	name = "tindalos"
 	desc = "It looks like a large, flightless grasshopper."
 	icon_state = "tindalos"

@@ -25,6 +25,7 @@ mob/living/simple_animal/hostile/varyx
 	emote_see = list("shakes its head.", "shivers.")
 	faction = ("mining")
 	speed = 2
+	wander = TRUE
 	
 	pixel_x = -5
 
@@ -35,7 +36,7 @@ mob/living/simple_animal/hostile/varyx
 	icon_living = "armalis_armored"
 	icon_dead = "armalis_armored_dead"
 	faction = ("mining")
-
+	wander = TRUE
 
 	health = 275
 	maxHealth = 275

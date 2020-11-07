@@ -29,7 +29,7 @@
 
 	speed = 2
 
-/mob/living/simple_animal/hostile/shafra/wild
+/mob/living/simple_animal/hostile/shafra/urksani
 	name = "urksani"
 	desc = "A huge and hostile canine-like creature that hunts alone. Their name means 'Flesh Ripper' in Uthani speak."
 	icon = 'modular_lumos/icons/mob/simplemobs/shafra.dmi'
@@ -57,7 +57,7 @@
 	maxbodytemp = 1000
 	robust_searching = 1
 	wander = TRUE
-	faction = list("hostile")
+	faction = list("mining")
 
 
 	speed = 2

@@ -24,7 +24,7 @@
 	icon_living = "vadimclone"
 	icon_dead = "vadimclone_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	speak_chance = 0
+	speak_chance = 5
 	turns_per_move = 5
 	response_help_continuous = "pushes"
 	response_help_simple = "push"
@@ -32,7 +32,6 @@
 	speed = 0
 	maxHealth = 115
 	health = 115
-	spacewalk = TRUE
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -58,15 +57,15 @@
 	icon_state = "vadimclonecrazed"
 	icon_living = "vadimclonecrazed"
 	icon_dead = "vadimclonecrazed_dead"
-	melee_damage_lower = 30
-	melee_damage_upper = 30
-	armour_penetration = 35
+	melee_damage_lower = 25
+	melee_damage_upper = 20
 	attack_verb_continuous = "bludgeons"
 	attack_verb_simple = "bludgeon"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	loot = list(/obj/item/broom)
-	speak_chance = 2
+	speak_chance = 10
 	speak = list("B-Blyat!","BLYAT!","N-NYET!")
+	wander = TRUE
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -78,12 +77,12 @@
 	icon_dead = "vadimclonedemon_dead"
 	melee_damage_lower = 10
 	melee_damage_upper = 15
-	armour_penetration = 25
-	attack_verb_continuous = "bludgeons"
-	attack_verb_simple = "bludgeon"
+	attack_verb_continuous = "eliminates"
+	attack_verb_simple = "eliminate"
 	attack_sound = 'sound/weapons/cqchit1.ogg'
-	speak_chance = 2
+	speak_chance = 5
 	speak = list("Take him out!","Kept you waiting, huh?")
+	wander = TRUE
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -95,12 +94,12 @@
 	icon_dead = "vadimclonepp_dead"
 	melee_damage_lower = 10
 	melee_damage_upper = 10
-	armour_penetration = 5
 	attack_verb_continuous = "bludgeons"
 	attack_verb_simple = "bludgeon"
 	attack_sound = 'sound/weapons/klonk.ogg'
-	speak_chance = 2
+	speak_chance = 5
 	speak = list("Like it, da?")
+	wander = TRUE
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -110,14 +109,14 @@
 	icon_state = "vadimclonegachi"
 	icon_living = "vadimclonegachi"
 	icon_dead = "vadimclonegachi_dead"
-	melee_damage_lower = 2
-	melee_damage_upper = 2
-	armour_penetration = 5
+	melee_damage_lower = 0
+	melee_damage_upper = 0
 	attack_verb_continuous = "wrestles"
 	attack_verb_simple = "wrestle"
 	attack_sound = 'sound/weapons/thudswoosh.ogg'
 	speak_chance = 2
 	speak = list("Blyat you!","Oh, Vadim's shoulder!","Lube it up!")
+	wander = TRUE
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -127,9 +126,8 @@
 	icon_state = "vadimcloneundies"
 	icon_living = "vadimcloneundies"
 	icon_dead = "vadimcloneundies_dead"
-	melee_damage_lower = 1
-	melee_damage_upper = 1
-	armour_penetration = 5
+	melee_damage_lower = 0
+	melee_damage_upper = 0
 	attack_verb_continuous = "wrestles"
 	attack_verb_simple = "wrestle"
 	attack_sound = 'modular_lumos/sound/voice/vadimask.ogg'
