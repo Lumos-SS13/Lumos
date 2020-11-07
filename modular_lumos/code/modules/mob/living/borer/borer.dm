@@ -569,6 +569,7 @@ var/total_borer_hosts_needed = 10
 	RemoveInfestActions()
 
 	forceMove(get_turf(victim))
+	log_game("[src]/([src.ckey]) has left their host [victim]/([victim.ckey])")
 
 	reset_perspective(null)
 	machine = null
