@@ -80,6 +80,9 @@
 				stat("Chemical Storage", "[changeling.chem_charges]/[changeling.chem_storage]")
 				stat("Absorbed DNA", changeling.absorbedcount)
 
+		var/mob/living/simple_animal/borer/B = has_brain_worms() //lumos
+		if(B && B.controlling) //lumos
+			stat("Chemicals", B.chemicals) //lumos
 
 	//NINJACODE
 	if(istype(wear_suit, /obj/item/clothing/suit/space/space_ninja)) //Only display if actually a ninja.
