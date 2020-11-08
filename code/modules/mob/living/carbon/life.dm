@@ -1,4 +1,6 @@
 /mob/living/carbon/BiologicalLife(seconds, times_fired)
+	if(IS_IN_STASIS(src)) // lumos
+		return
 	//Reagent processing needs to come before breathing, to prevent edge cases.
 	handle_organs()
 	handle_changeling()
@@ -30,6 +32,8 @@
 
 /mob/living/carbon/PhysicalLife(seconds, times_fired)
 	if(!(. = ..()))
+		return
+	if(IS_IN_STASIS(src))
 		return
 	if(damageoverlaytemp)
 		damageoverlaytemp = 0

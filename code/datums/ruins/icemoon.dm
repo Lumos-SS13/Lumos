@@ -37,6 +37,18 @@
 	description = "The fountain has a warning on the side. DANGER: May have undeclared side effects that only become obvious when implemented."
 	prefix = "_maps/RandomRuins/AnywhereRuins/"
 	suffix = "fountain_hall.dmm"
+	
+/datum/map_template/ruin/icemoon/gasstation
+	name = "Gas Station"
+	id = "gasstation"
+	description = "The place that your father supposed went, perhaps you'll find him now."
+	suffix = "icemoon_store.dmm"
+
+/datum/map_template/ruin/icemoon/militaryshipwreck
+	name = "Crashed Military Ship"
+	id = "shipwreck"
+	description = "What remains of a Nanotrasen Navy ship and its uncomfortable landing."
+	suffix = "icemoon_wreckship.dmm"
 
 // above and below ground together
 

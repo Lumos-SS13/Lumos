@@ -21,6 +21,8 @@
 /mob/living/carbon/human/BiologicalLife(seconds, times_fired)
 	if(!(. = ..()))
 		return
+	if(IS_IN_STASIS(src)) // lumos
+		return
 	handle_active_genes()
 	//heart attack stuff
 	handle_heart()
@@ -29,6 +31,8 @@
 
 /mob/living/carbon/human/PhysicalLife(seconds, times_fired)
 	if(!(. = ..()))
+		return
+	if(IS_IN_STASIS(src)) // lumos
 		return
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()
