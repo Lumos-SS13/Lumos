@@ -99,6 +99,8 @@
 	floor_variance = 15
 	digResult = /obj/item/stack/ore/glass/basalt
 
+	var/busy = FALSE //LUMOS EDIT
+
 /turf/open/floor/plating/asteroid/basalt/lava //lava underneath
 	baseturfs = /turf/open/lava/smooth
 

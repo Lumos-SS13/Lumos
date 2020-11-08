@@ -32,7 +32,7 @@
 	aggro_vision_range = 15
 	retreat_distance = 5
 	gold_core_spawnable = HOSTILE_SPAWN
-	crusher_loot = /obj/item/crusher_trophy/blaster_tubes/impskull
+	crusher_loot = /obj/item/crusher_trophy/impskull
 	loot = list()
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2, /obj/item/stack/sheet/bone = 3, /obj/item/stack/sheet/sinew = 2)
 	robust_searching = FALSE
