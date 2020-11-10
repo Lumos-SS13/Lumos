@@ -76,6 +76,10 @@
 	if(image_popup)
 		flick_emote_popup_on_mob(user, image_popup, 40)
 	//End of skyrat changes
+	//lumos change
+	user.emote_cooldown = TRUE
+	addtimer(CALLBACK(user, /mob.proc/remove_emote_cooldown), 2 SECONDS)
+	//lumos edit
 
 /datum/emote/proc/replace_pronoun(mob/user, message)
 	if(findtext(message, "their"))
@@ -142,6 +146,13 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_EMOTEMUTE))
 			return FALSE
+	//lumos edit
+	if(user.emote_cooldown)
+		to_chat(user, "<span_class='warning'>Slow down on emoting!</span>")
+		message_admins("[key_name(user)] is trying to spam emotes.")
+		log_game("[key_name(user)] is trying to spam emotes.")
+		return FALSE
+	//lumos edit
 
 /datum/emote/sound
 	var/sound //Sound to play when emote is called
