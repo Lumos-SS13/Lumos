@@ -22,15 +22,10 @@
 		return
 	//lumos
 	if(isliving(src))
-		var/mob/living/LivingMob = src
-		var/list/check_gamer_words = splittext(message, " ")
-		for(var/checked_text in check_gamer_words)
-			var/lower_checked_text = lowertext(checked_text)
-			if(lower_checked_text in GLOB.gamer_words)
-				to_chat(LivingMob, "<span class='warning'>You feel embarrassed that you were going to say [lower_checked_text].</span>")
-				log_game("[key_name(LivingMob)] tried to say [lower_checked_text].")
-				LivingMob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20, 100)
-				return
+		if(findtext(message, config.ic_filter_regex))
+			// let's try to be a bit more informative!
+			to_chat(src, "A splitting spike of headache prevents you from saying whatever vile words you planned to say! You think better of saying such nonsense again.")
+			return
 	//lumos
 	//SKYRAT EDIT
 	set_typing_indicator(FALSE)
