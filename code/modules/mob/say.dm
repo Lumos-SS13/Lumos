@@ -21,14 +21,17 @@
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
 	//lumos
-	var/list/check_gamer_words = splittext(message, " ")
-	for(var/checked_text in check_gamer_words)
-		if(checked_text in GLOB.gamer_words)
-			to_chat(src, "<span class='warning'>You feel embarrassed that you were going to say [checked_text].</span>")
-			if(isliving(src))
-				var/mob/living/LivingMob = src
-				LivingMob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
-			return
+	if(isliving(src))
+		var/mob/living/LivingMob = src
+		var/list/check_gamer_words = splittext(message, " ")
+		for(var/checked_text in check_gamer_words)
+			var/lower_checked_text = lowertext(checked_text)
+			if(lower_checked_text in GLOB.gamer_words)
+				to_chat(LivingMob, "<span class='warning'>You feel embarrassed that you were going to say [lower_checked_text].</span>")
+				message_admins("[key_name(LivingMob)] tried to say [lower_checked_text].")
+				log_game("[key_name(LivingMob)] tried to say [lower_checked_text].")
+				LivingMob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20, 100)
+				return
 	//lumos
 	//SKYRAT EDIT
 	set_typing_indicator(FALSE)
