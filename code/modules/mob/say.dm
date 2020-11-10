@@ -20,6 +20,16 @@
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
+	//lumos
+	var/list/check_gamer_words = splittext(message, " ")
+	for(var/checked_text in check_gamer_words)
+		if(checked_text in GLOB.gamer_words)
+			to_chat(src, "<span class='warning'>You feel embarrassed that you were going to say [checked_text].</span>")
+			if(isliving(src))
+				var/mob/living/LivingMob = src
+				LivingMob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+			return
+	//lumos
 	//SKYRAT EDIT
 	set_typing_indicator(FALSE)
 	//END OF SKYRAT EDIT
