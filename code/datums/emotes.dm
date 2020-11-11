@@ -147,7 +147,7 @@
 		if(HAS_TRAIT(L, TRAIT_EMOTEMUTE))
 			return FALSE
 	//lumos edit
-	if(user.emote_cooldown)
+	if(user.emote_cooldown && intentional)
 		to_chat(user, "<span_class='warning'>Slow down on emoting!</span>")
 		log_game("[key_name(user)] is trying to spam emotes.")
 		return FALSE
