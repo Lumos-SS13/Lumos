@@ -90,3 +90,51 @@
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit
 	plantable_flora = /obj/structure/flora/ash/cacti
+
+//plus divers, vivre l'esclavage des marcheurs de cendres
+//more variety, live the enslavement of the walkers of ashes.
+
+/obj/item/reagent_containers/food/snacks/grown/pineapple
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/pineapple
+
+/obj/item/reagent_containers/food/snacks/grown/blumpkin
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/blumpkin
+
+/obj/item/reagent_containers/food/snacks/grown/tea
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/tea
+
+/obj/item/reagent_containers/food/snacks/grown/tea/astra
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/astraltea
+
+/obj/item/reagent_containers/food/snacks/grown/coffee
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/coffee
+
+/obj/item/reagent_containers/food/snacks/grown/coffee/robusta
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/robustcoffee
+
+/obj/item/reagent_containers/food/snacks/grown/tobacco
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/tobacco
+
+/obj/item/reagent_containers/food/snacks/grown/tobacco/space
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/spacetobacco
+
+/obj/item/reagent_containers/food/snacks/grown/cocoapod
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/cocoa
+
+/obj/item/reagent_containers/food/snacks/grown/vanillapod
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/vanilla
+
+/obj/item/reagent_containers/food/snacks/grown/meatwheat
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/meatwheat
+
+/obj/item/reagent_containers/food/snacks/grown/wheat
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/wheat
+
+/obj/item/reagent_containers/food/snacks/grown/grass
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/grass
+
+/obj/item/reagent_containers/food/snacks/grown/aloe
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/aloe
+
+/obj/item/reagent_containers/food/snacks/grown/whitebeet
+	plantable_flora = /obj/structure/flora/ash/lumos_planting/beet
