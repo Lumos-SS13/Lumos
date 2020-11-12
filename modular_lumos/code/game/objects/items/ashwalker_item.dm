@@ -79,3 +79,10 @@
 			if(istype(target, /mob/living/carbon/human))
 				var/mob/living/carbon/human/targetHuman = target
 				targetHuman.set_species(/datum/species/lizard/ashwalker)
+
+/obj/mecha/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(istype(W, /obj/item/ashwalker/priest_staff))
+		if(!do_after(user, 2 SECONDS, target = src))
+			return
+		qdel(src)
