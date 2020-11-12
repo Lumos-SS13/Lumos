@@ -133,7 +133,7 @@
 
 /obj/item/clothing/shoes/jackboots/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/squeak, list('modular_lumos/sound/effects/jackboot1.ogg'=1,'modular_lumos/sound/effects/jackboot2.ogg'=1), 40)
+	AddComponent(/datum/component/squeak, list('modular_lumos/sound/effects/jackboot1.ogg'=1,'modular_lumos/sound/effects/jackboot2.ogg'=1), 20)
 
 // yeah nah i cant figure out how the fuck to properly remove the component
 /*
