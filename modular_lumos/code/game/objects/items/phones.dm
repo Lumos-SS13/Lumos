@@ -1,20 +1,21 @@
 /obj/item/phone
 	flags_1 = HEAR_1
-	var/broken = 0 //broken phones can be fixed by adding 2 wires, and made broken by using a wirecutter. Cutting its wires yields 2 wires on the floor below your mob.
+	var/broken = FALSE //broken phones can be fixed by adding 2 wires, and made broken by using a wirecutter. Cutting its wires yields 2 wires on the floor below your mob.
 	var/phonenumber = 0 //The phones number, 4 digits. If left 0 then a random number is selected in New(). This allows you to create static numbers when mapping by replacing 0 with any 4 digit number.
 	var/obj/item/phone/linkedphone = null
 	var/ringing = 0
 	var/area/label_text = "" //This is the phones label that appears in the list when making a call. When left empty the phone copies the area name in New(), but only if label var is enabled.
 	var/list/multivoice_list = list()
-	var/labeled = 1 //having this start set to 0 allows someone to label the phone to whatever they want with a pen.
+	var/labeled = TRUE //having this start set to false allows someone to label the phone to whatever they want with a pen.
 	var/can_call_out = 1 //setting this to 0 makes it so the phone cannot make calls, only recieve calls. Good for prison cells and things like that. Can be toggled with a multitool.
 
-/obj/item/phone/Destroy()
+obj/item/phone/Destroy()
 	disconnect()
-	return ..()
+	. = ..()
 
 //New() attempts to generate a random phonenumber if no phonenumber is given and copies the areas name for the label if not flagged as labeled. This will create a phone named something like (5398 - Captain's Office Phone.)
-/obj/item/phone/New()
+/obj/item/phone/Initialize()
+	. = ..()
 	desc = "It's a Telephone."
 	if(!labeled)
 		label_text = "Unknown"
@@ -38,30 +39,29 @@
 				phonenumber = rand(1000,9999)
 			else
 				duplicate = 0
-	..()
 
 /obj/item/phone/examine()
-	..()
+	. = ..()
 	if(broken)
-		to_chat(usr,"<span class='warning'>It appears to be broken!</span>")
+		. += "<span class='warning'>It appears to be broken!</span>"
 	else
-		to_chat(usr,"<span class='notice'>The phone number is '<b>[phonenumber]</b>'.</span>")
+		. += "<span class='notice'>The phone number is '<b>[phonenumber]</b>'.</span>"
 		if(linkedphone && !ringing)
-			to_chat(usr,"\red The line is open with number <B>[linkedphone.phonenumber]</B>.</span>")
+			. +="<span class='notice'>The line is open with number <B>[linkedphone.phonenumber]</B>.</span>"
 
-/obj/item/phone/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/item/phone/attackby(obj/item/O, mob/user)
 	if(istype(O,/obj/item/stack/cable_coil) && broken)
 		var/obj/item/stack/cable_coil/coil = O
 		if(coil.amount >= 2)
 			coil.use(2)
-			broken = 0
+			broken = FALSE
 			to_chat(user,"<span class='notice'>You wire the [src].</span>")
 		else
 			to_chat(user,"<span class='warning'>You need two wires!</span>")
 		return
 	if(istype(O, /obj/item/wirecutters) && !broken)
 		var/obj/item/stack/cable_coil/coil = new(get_turf(src))
-		broken = 1
+		broken = TRUE
 		coil.amount = 2
 		coil.update_icon()
 		to_chat(user,"<span class='notice'>You cut the wires out of the [src].</span>")
@@ -69,26 +69,26 @@
 		return
 	if(istype(O,/obj/item/pen))
 		if(labeled)
-			to_chat(user,"\red This already has a label.")
+			to_chat(user,"<span class='warning'>This already has a label.</span>")
 			return
 		var/thelabel
 		var/new_label = input(user, thelabel, "Phone Label")
 		if(length(new_label) > 32)
-			to_chat(user,"\red That label is too long. 32 characters max.")
+			to_chat(user,"<span class='warning'That label is too long. 32 characters max.</span>")
 			return
 		if(get_dist(get_turf(src),get_turf(user)) > 1)
 			return
 		new_label = strip_html_simple(new_label, 32)
 		label_text = new_label
-		to_chat(user,"\blue You label the [src.name].")
+		to_chat(user,"<span class='notice'>You label the [src.name].</span>")
 		name = "[label_text] phone"
-		labeled = 1
+		labeled = TRUE
 		return
 	if(istype(O,/obj/item/multitool))
 		if(!can_call_out)
-			to_chat(user,"\blue This phone can now call out.")
+			to_chat(user,"<span class='notice'>This phone can now call out.</span>")
 		else
-			to_chat(user,"\blue You disable this phones ability to call out.")
+			to_chat(user,"<span class='warning'>You disable this phones ability to call out.</span>")
 		can_call_out = !can_call_out
 		return
 
@@ -112,7 +112,7 @@
 		while(A.loc && !istype(A,/mob) && !istype(A,/turf))
 			A = A.loc
 		if(istype(A,/mob))
-			to_chat(A,"\red <I>No one can hear you on the phone while it is in the [S.name].</I>")
+			to_chat(A,"<span class='warning'><I>No one can hear you on the phone while it is in the [S.name].</I></span>")
 	return ..()
 
 /obj/item/phone/attack_self(mob/user as mob)
@@ -143,7 +143,7 @@
 		if(selected.linkedphone)
 			to_chat(user,"<span class='warning'>The line is busy.</span>")
 			return
-		to_chat(user,"\blue Calling number [selected.phonenumber].")
+		to_chat(user,"<span class='notice'>Calling number [selected.phonenumber].</span>")
 		Call_Phone(selected)
 		return
 	else
@@ -160,13 +160,13 @@
 			disconnect()
 			return
 
-/obj/item/phone/proc/Call_Phone(var/obj/item/phone/phone)
+/obj/item/phone/proc/Call_Phone(obj/item/phone/phone)
 	if(((!phone)|(phone.linkedphone)|(phone.ringing)|(ringing)))
 		return
 	if(phone.Receive_Call(src))
 		linkedphone = phone
 
-/obj/item/phone/proc/Receive_Call(var/obj/item/phone/phone)
+/obj/item/phone/proc/Receive_Call(obj/item/phone/phone)
 	if(!phone)
 		return 0
 	if(linkedphone)
@@ -186,7 +186,7 @@
 		while(ringing && linkedphone)
 			playsound(loc, 'sound/weapons/ring.ogg', 50, 0)
 			for(var/mob/M in viewers(7,get_turf(src)))
-				to_chat(M,"\red [name] is ringing.")
+				to_chat(M,"<span class='warning'>[name] rings!</span>")
 			spawn(0)
 				for(var/i=5,i>0,i--)
 					pixel_x = rand(-1,1)
@@ -198,7 +198,7 @@
 	return 1
 
 
-/obj/item/phone/proc/disconnect(var/alert_linkedphone = 0)
+/obj/item/phone/proc/disconnect(alert_linkedphone = 0)
 	if(!linkedphone)
 		return
 	ringing = 0
@@ -217,7 +217,7 @@
 		message = raw_message
 	send_voice(user, message)
 
-/obj/item/phone/proc/send_voice(var/mob/user, var/message)//The phone has its own hear proc to be called by Hear(). This prevents any issues caused when an admin uses the phonesay verb as a ghost.
+/obj/item/phone/proc/send_voice(mob/user, message)//The phone has its own hear proc to be called by Hear(). This prevents any issues caused when an admin uses the phonesay verb as a ghost.
 	if(((!user)|(!message)))
 		return
 	if(linkedphone && !ringing && !linkedphone.ringing)
@@ -288,7 +288,7 @@ Adminverb allowing an admin to use a phone as a ghost. Giving no message will ca
 Typing a message will send the message typed to the phone. To use this, hover your ghost over a phone and type phonesay.
 The phone will be detected by this verb if it's carried by a mob or sitting on a turf under your ghost.
 */
-/client/proc/phonesay(var/message as text)
+/client/proc/phonesay(message as text)
 	set name = "phonesay"
 	set category = "Fun"
 	//Verb is hidden. You can change this if that is your preference
@@ -322,8 +322,8 @@ The phone will be detected by this verb if it's carried by a mob or sitting on a
 
 //A phone that spawns broken and unlabeled. This could be used for things like cargo crate orders.
 /obj/item/phone/broken
-	broken = 1
-	labeled = 0
+	broken = TRUE
+	labeled = FALSE
 	
 //Cellphones edit, just a different look for phones.
 /obj/item/phone/cellphone
@@ -333,8 +333,8 @@ The phone will be detected by this verb if it's carried by a mob or sitting on a
 	icon_state = "cellphone"
 
 /obj/item/phone/cellphone/broken
-	broken = 1
-	labeled = 0
+	broken = TRUE
+	labeled = FALSE
 
 /datum/supply_pack/misc/phones
 	name = "Surplus Phones"
