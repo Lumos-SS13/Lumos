@@ -126,10 +126,11 @@
 	icon_state = "vadimcloneundies"
 	icon_living = "vadimcloneundies"
 	icon_dead = "vadimcloneundies_dead"
-	melee_damage_lower = 0
+	melee_damage_lower = 1
 	melee_damage_upper = 0
 	attack_verb_continuous = "wrestles"
 	attack_verb_simple = "wrestle"
 	attack_sound = 'modular_lumos/sound/voice/vadimask.ogg'
+	speak = list("Is crazy, but Vadim is not remember ask.")
 
 	footstep_type = FOOTSTEP_MOB_SHOE
