@@ -291,8 +291,6 @@ The phone will be detected by this verb if it's carried by a mob or sitting on a
 /client/proc/phonesay(message as text)
 	set name = "phonesay"
 	set category = "Fun"
-	//Verb is hidden. You can change this if that is your preference
-	set hidden = 1
 	if(!holder)
 		return
 	if(!istype(mob, /mob/dead/observer))
