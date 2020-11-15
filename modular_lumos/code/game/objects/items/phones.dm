@@ -3,11 +3,17 @@
 	var/broken = FALSE //broken phones can be fixed by adding 2 wires, and made broken by using a wirecutter. Cutting its wires yields 2 wires on the floor below your mob.
 	var/phonenumber = 0 //The phones number, 4 digits. If left 0 then a random number is selected in New(). This allows you to create static numbers when mapping by replacing 0 with any 4 digit number.
 	var/obj/item/phone/linkedphone = null
-	var/ringing = 0
+	var/ringing = FALSE
 	var/area/label_text = "" //This is the phones label that appears in the list when making a call. When left empty the phone copies the area name in New(), but only if label var is enabled.
 	var/list/multivoice_list = list()
 	var/labeled = TRUE //having this start set to false allows someone to label the phone to whatever they want with a pen.
 	var/can_call_out = 1 //setting this to 0 makes it so the phone cannot make calls, only recieve calls. Good for prison cells and things like that. Can be toggled with a multitool.
+	var/ringtone = 'sound/weapons/ring.ogg'
+	/* TODO
+	var/can_change_ringtone = FALSE
+	var/silent = FALSE
+	var/can_set_silent = FALSE
+	*/
 
 obj/item/phone/Destroy()
 	disconnect()
@@ -121,7 +127,7 @@ obj/item/phone/Destroy()
 		to_chat(user,"<span class='warning'>This phone appears to be broken!</b>.</span>")
 		return
 	if(!linkedphone)
-		ringing = 0
+		ringing = FALSE
 		var/list/phone_list = list()
 		for(var/obj/item/phone/P in world)
 			if(((P == src)|(P.broken)))
@@ -148,7 +154,7 @@ obj/item/phone/Destroy()
 		return
 	else
 		if(ringing)
-			ringing = 0
+			ringing = FALSE
 			to_chat(user,"<span class='notice'>You answer the phone. The caller id reads [linkedphone.phonenumber].</span>")
 			to_chat(user,"<I></B>Anyone on the other end can now hear your voice.</B></I>")
 			linkedphone.message_user("Someone has answered on the other end of the line.")
@@ -172,11 +178,11 @@ obj/item/phone/Destroy()
 	if(linkedphone)
 		return 0
 	linkedphone = phone
-	ringing = 1
+	ringing = TRUE
 	var/phonesave = phone
 	spawn(150)
 		if(linkedphone && ringing && phonesave == linkedphone)
-			ringing = 0
+			ringing = FALSE
 			linkedphone.message_user("No answer from [phonenumber].")
 			disconnect()
 			return
@@ -184,7 +190,7 @@ obj/item/phone/Destroy()
 		var/xsave = pixel_x
 		var/ysave = pixel_y
 		while(ringing && linkedphone)
-			playsound(loc, 'sound/weapons/ring.ogg', 50, 0)
+			playsound(loc, ringtone, 50, 0)
 			for(var/mob/M in viewers(7,get_turf(src)))
 				to_chat(M,"<span class='warning'>[name] rings!</span>")
 			spawn(0)
@@ -201,7 +207,7 @@ obj/item/phone/Destroy()
 /obj/item/phone/proc/disconnect(alert_linkedphone = 0)
 	if(!linkedphone)
 		return
-	ringing = 0
+	ringing = FALSE
 	multivoice_list = list()
 	if(alert_linkedphone)
 		linkedphone.message_user("Line abruptly disconnected.")
