@@ -62,4 +62,4 @@
 /datum/looping_sound/gasmask
 	mid_sounds = list('modular_lumos/sound/items/gasmask.ogg')
 	mid_length = 3 SECONDS
-	volume = 30
+	volume = 15
