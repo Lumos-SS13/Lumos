@@ -502,29 +502,41 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 	var/obj/spawnObj = pick(mineral_types)
 	new spawnObj(src_turf)
 
+GLOBAL_LIST_EMPTY(rainbow_rune)
+GLOBAL_LIST_EMPTY(rainbow_room)
+
 /obj/effect/slime_rune/rainbow
 	colour = "rainbow"
 
-	var/obj/effect/slime_rune/rainbow_room/linked_room
+/obj/effect/slime_rune/rainbow/Initialize()
+	. = ..()
+	GLOB.rainbow_rune += src
+
+/obj/effect/slime_rune/rainbow/Destroy(force)
+	GLOB.rainbow_rune -= src
+	. = ..()
 
 /obj/effect/slime_rune/rainbow/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	if(!linked_room)
-		linked_room = locate(/obj/effect/slime_rune/rainbow_room)
-	AM.forceMove(get_turf(linked_room))
+	var/room_pick = pick(GLOB.rainbow_room)
+	AM.forceMove(get_turf(room_pick))
 
 /obj/effect/slime_rune/rainbow_room
 	colour = "rainbow"
 
+/obj/effect/slime_rune/rainbow_room/Initialize()
+	. = ..()
+	GLOB.rainbow_room += src
+
+/obj/effect/slime_rune/rainbow_room/Destroy(force)
+	GLOB.rainbow_room -= src
+	. = ..()
+
 /obj/effect/slime_rune/rainbow_room/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	var/obj/effect/slime_rune/rainbow/homeRune = locate(/obj/effect/slime_rune/rainbow) in world
-	if(!homeRune)
-		var/turf/safeTurf = find_safe_turf()
-		AM.forceMove(safeTurf)
-		return
-	var/turf/rune_turf = get_turf(homeRune)
-	AM.forceMove(rune_turf)
+	var/turf/safeTurf = find_safe_turf()
+	AM.forceMove(safeTurf)
+	return
 
 /obj/effect/slime_rune/attackby(obj/item/I, mob/user, params)
 	if(I == parent_extract && istype(I, /obj/item/slimecross/warping))
