@@ -407,10 +407,14 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 /obj/effect/slime_rune/oil
 	colour = "oil"
 
+	var/triggered = FALSE
+
 /obj/effect/slime_rune/oil/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	explosion(get_turf(src), -1, -1, 10, 0)
 	parent_extract.child_rune = null
+	if(!triggered)
+		explosion(get_turf(src), -1, -1, 5, 0)
+	triggered = TRUE
 	qdel(src)
 
 /obj/effect/slime_rune/black
