@@ -95,29 +95,31 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 /obj/effect/slime_rune/grey
 	colour = "grey"
 	process_rune = TRUE
-	var/list/slime_count = list(
-		0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0
-	)
-	var/list/slime_type = list(
-		"grey", "orange", "purple", "blue", "metal", "yellow", "dark purple", "dark blue", "silver", "bluespace", "sepia",
-		"cerulean", "pyrite", "red", "green", "pink", "gold", "oil", "black", "light pink", "adamantine", "rainbow"
-	)
+	var/slime_count = 0
+	var/current_type
+	var/current_color
 
 /obj/effect/slime_rune/grey/process()
 	var/turf/src_turf = get_turf(src)
 	for(var/obj/O in src_turf)
 		if(!istype(O, /obj/item/slime_extract))
 			continue
-		var/obj/item/slime_extract/chosen_extract = O
-		slime_count[chosen_extract.warping_array]++
-		qdel(O)
-	for(var/N in slime_count)
-		if(N < 5)
+		var/obj/item/slime_extract/newO = O
+		if(!current_type)
+			current_type = newO.type
+		if(!current_color)
+			current_color = newO.slime_color
+		if(!istype(newO, current_type))
 			continue
-		slime_count[N] -= 5
-		var/mob/living/simple_animal/slime/spawn_slime = new /mob/living/simple_animal/slime(src_turf)
-		spawn_slime.set_colour(slime_type[N])
+		slime_count++
+		qdel(newO)
+	if(slime_count >= 5)
+		slime_count -=5
+		var/mob/living/simple_animal/slime/spawnSlime = new /mob/living/simple_animal/slime(src_turf)
+		spawnSlime.set_colour(current_color)
+		if(slime_count == 0)
+			current_type = null
+			current_color = null
 
 /obj/effect/slime_rune/orange
 	colour = "orange"
@@ -407,10 +409,14 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 /obj/effect/slime_rune/oil
 	colour = "oil"
 
+	var/triggered = FALSE
+
 /obj/effect/slime_rune/oil/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	explosion(get_turf(src), -1, -1, 10, 0)
 	parent_extract.child_rune = null
+	if(!triggered)
+		explosion(get_turf(src), -1, -1, 5, 0)
+	triggered = TRUE
 	qdel(src)
 
 /obj/effect/slime_rune/black
@@ -498,29 +504,41 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 	var/obj/spawnObj = pick(mineral_types)
 	new spawnObj(src_turf)
 
+GLOBAL_LIST_EMPTY(rainbow_rune)
+GLOBAL_LIST_EMPTY(rainbow_room)
+
 /obj/effect/slime_rune/rainbow
 	colour = "rainbow"
 
-	var/obj/effect/slime_rune/rainbow_room/linked_room
+/obj/effect/slime_rune/rainbow/Initialize()
+	. = ..()
+	GLOB.rainbow_rune += src
+
+/obj/effect/slime_rune/rainbow/Destroy(force)
+	GLOB.rainbow_rune -= src
+	. = ..()
 
 /obj/effect/slime_rune/rainbow/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	if(!linked_room)
-		linked_room = locate(/obj/effect/slime_rune/rainbow_room)
-	AM.forceMove(get_turf(linked_room))
+	var/room_pick = pick(GLOB.rainbow_room)
+	AM.forceMove(get_turf(room_pick))
 
 /obj/effect/slime_rune/rainbow_room
 	colour = "rainbow"
 
+/obj/effect/slime_rune/rainbow_room/Initialize()
+	. = ..()
+	GLOB.rainbow_room += src
+
+/obj/effect/slime_rune/rainbow_room/Destroy(force)
+	GLOB.rainbow_room -= src
+	. = ..()
+
 /obj/effect/slime_rune/rainbow_room/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	var/obj/effect/slime_rune/rainbow/homeRune = locate(/obj/effect/slime_rune/rainbow) in world
-	if(!homeRune)
-		var/turf/safeTurf = find_safe_turf()
-		AM.forceMove(safeTurf)
-		return
-	var/turf/rune_turf = get_turf(homeRune)
-	AM.forceMove(rune_turf)
+	var/turf/safeTurf = find_safe_turf()
+	AM.forceMove(safeTurf)
+	return
 
 /obj/effect/slime_rune/attackby(obj/item/I, mob/user, params)
 	if(I == parent_extract && istype(I, /obj/item/slimecross/warping))
