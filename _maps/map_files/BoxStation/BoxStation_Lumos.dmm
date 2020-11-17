@@ -12961,6 +12961,10 @@
 	pixel_y = 22;
 	specialfunctions = 4
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#ffc1c1"
+	},
 /turf/open/floor/mineral/titanium/blue,
 /area/crew_quarters/toilet)
 "aBy" = (
@@ -13991,6 +13995,10 @@
 	pixel_y = 22;
 	specialfunctions = 4
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#ffc1c1"
+	},
 /turf/open/floor/mineral/titanium/blue,
 /area/crew_quarters/toilet)
 "aDQ" = (
@@ -14017,10 +14025,6 @@
 /turf/open/floor/plasteel/white,
 /area/security/prison)
 "aDT" = (
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "#ffc1c1"
-	},
 /obj/machinery/door/airlock{
 	desc = "A small bathroom with a sink, toilet and shower.";
 	id_tag = "Bath1";
@@ -15930,12 +15934,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/security/prison)
-"aHV" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/crew_quarters/toilet)
 "aHW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -28643,10 +28641,10 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "bor" = (
-/obj/structure/table,
 /obj/item/clothing/gloves/color/latex,
 /obj/item/surgical_drapes,
 /obj/item/razor,
+/obj/structure/table/reinforced,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bos" = (
@@ -28744,22 +28742,19 @@
 /turf/closed/wall,
 /area/science/lab)
 "boD" = (
-/obj/structure/table,
-/obj/item/circular_saw,
-/obj/item/scalpel{
-	pixel_y = 12
-	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table/optable{
+	name = "Robotics Operating Table"
+	},
+/obj/item/tank/internals/anesthetic,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "boE" = (
-/obj/structure/table,
-/obj/item/hemostat,
-/obj/item/cautery{
-	pixel_x = 4
-	},
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/structure/table/reinforced,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "boF" = (
@@ -28778,13 +28773,12 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "boG" = (
-/obj/structure/table,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
+/obj/structure/sink{
+	pixel_y = 30
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "boH" = (
@@ -28821,8 +28815,9 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "boL" = (
-/obj/structure/table,
-/obj/item/retractor,
+/obj/machinery/computer/operating{
+	name = "Robotics Operating Computer"
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "boM" = (
@@ -29326,9 +29321,14 @@
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "bpS" = (
-/obj/structure/table,
-/obj/item/storage/box/bodybags,
-/obj/item/pen,
+/obj/structure/table/reinforced,
+/obj/item/mmi{
+	pixel_y = 8
+	},
+/obj/item/mmi{
+	pixel_y = 4
+	},
+/obj/item/mmi,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bpT" = (
@@ -30394,22 +30394,16 @@
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsP" = (
-/obj/structure/table/optable{
-	name = "Robotics Operating Table"
-	},
 /obj/effect/landmark/event_spawn,
-/obj/item/tank/internals/anesthetic,
-/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsQ" = (
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsR" = (
-/obj/machinery/computer/operating{
-	dir = 1;
-	name = "Robotics Operating Computer"
-	},
+/obj/structure/table/reinforced,
+/obj/item/storage/box/bodybags,
+/obj/item/pen,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bsS" = (
@@ -52852,14 +52846,10 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -14
-	},
+/obj/structure/closet,
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "cIf" = (
-/obj/structure/reagent_dispensers/fueltank,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -97509,7 +97499,7 @@ aAh
 aAh
 dtx
 aAh
-aHV
+aAh
 aDM
 aAh
 aVZ
@@ -107558,8 +107548,8 @@ blv
 bls
 bfT
 boD
-bsQ
 bsP
+bsQ
 box
 btw
 buT
