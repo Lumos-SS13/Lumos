@@ -95,29 +95,31 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 /obj/effect/slime_rune/grey
 	colour = "grey"
 	process_rune = TRUE
-	var/list/slime_count = list(
-		0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0
-	)
-	var/list/slime_type = list(
-		"grey", "orange", "purple", "blue", "metal", "yellow", "dark purple", "dark blue", "silver", "bluespace", "sepia",
-		"cerulean", "pyrite", "red", "green", "pink", "gold", "oil", "black", "light pink", "adamantine", "rainbow"
-	)
+	var/slime_count = 0
+	var/current_type
+	var/current_color
 
 /obj/effect/slime_rune/grey/process()
 	var/turf/src_turf = get_turf(src)
 	for(var/obj/O in src_turf)
 		if(!istype(O, /obj/item/slime_extract))
 			continue
-		var/obj/item/slime_extract/chosen_extract = O
-		slime_count[chosen_extract.warping_array]++
-		qdel(O)
-	for(var/N in slime_count)
-		if(N < 5)
+		var/obj/item/slime_extract/newO = O
+		if(!current_type)
+			current_type = newO.type
+		if(!current_color)
+			current_color = newO.slime_color
+		if(!istype(newO, current_type))
 			continue
-		slime_count[N] -= 5
-		var/mob/living/simple_animal/slime/spawn_slime = new /mob/living/simple_animal/slime(src_turf)
-		spawn_slime.set_colour(slime_type[N])
+		slime_count++
+		qdel(newO)
+	if(slime_count >= 5)
+		slime_count -=5
+		var/mob/living/simple_animal/slime/spawnSlime = new /mob/living/simple_animal/slime(src_turf)
+		spawnSlime.set_colour(current_color)
+		if(slime_count == 0)
+			current_type = null
+			current_color = null
 
 /obj/effect/slime_rune/orange
 	colour = "orange"
