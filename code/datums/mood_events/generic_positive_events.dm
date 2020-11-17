@@ -109,6 +109,16 @@
 /datum/mood_event/besthug/add_effects(mob/friend)
 	description = "<span class='nicegreen'>[friend.name] is great to be around, [friend.p_they()] makes me feel so happy!</span>\n"
 
+//lumos
+/datum/mood_event/bestesthug
+	description = "<span class='nicegreen'>Someone is alway wonderful to me, they make me feel so very joyful!</span>\n"
+	mood_change = 7
+	timeout = 5000
+
+/datum/mood_event/bestesthug/add_effects(mob/friend)
+	description = "<span class='nicegreen'>[friend.name] is always wonderful to me, [friend.p_they()] makes me feel so very joyful!</span>\n"
+//lumos
+
 /datum/mood_event/happy_empath
 	description = "<span class='warning'>Someone seems happy!</span>\n"
 	mood_change = 3
