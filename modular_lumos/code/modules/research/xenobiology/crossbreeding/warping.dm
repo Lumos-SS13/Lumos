@@ -521,7 +521,9 @@ GLOBAL_LIST_EMPTY(rainbow_room)
 /obj/effect/slime_rune/rainbow/Crossed(atom/movable/AM, oldloc)
 	. = ..()
 	var/room_pick = pick(GLOB.rainbow_room)
-	AM.forceMove(get_turf(room_pick))
+	var/choose_dir = pick(NORTH, SOUTH, EAST, WEST)
+	var/turf/choose_turf = get_step(get_turf(room_pick), choose_dir)
+	AM.forceMove(choose_turf)
 
 /obj/effect/slime_rune/rainbow_room
 	colour = "rainbow"
@@ -536,9 +538,10 @@ GLOBAL_LIST_EMPTY(rainbow_room)
 
 /obj/effect/slime_rune/rainbow_room/Crossed(atom/movable/AM, oldloc)
 	. = ..()
-	var/turf/safeTurf = find_safe_turf()
+	var/turf/safeTurf = get_turf(pick(GLOB.rainbow_rune))
+	if(!safeTurf)
+		safeTurf = get_safe_random_station_turf()
 	AM.forceMove(safeTurf)
-	return
 
 /obj/effect/slime_rune/attackby(obj/item/I, mob/user, params)
 	if(I == parent_extract && istype(I, /obj/item/slimecross/warping))
