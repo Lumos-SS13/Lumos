@@ -89,5 +89,3 @@
 		'modular_lumos/sound/effects/fart2.ogg' = 30,
 		'modular_lumos/sound/effects/fart3.ogg' = 5,
 		'modular_lumos/sound/effects/fart4.ogg' = 10)), 50, FALSE)
-    var/brap = rand(1,5)
-    user.atmos_spawn_air("miasma=[brap];TEMP=310.15")
