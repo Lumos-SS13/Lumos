@@ -149,11 +149,12 @@
 	name = "Emergency Shuttle Airlock"
 	},
 /obj/docking_port/mobile/emergency{
-<<<<<<< HEAD
-	name = "fridge chadmergency shuttle"
-=======
-	dir = 8
->>>>>>> parent of 454c493a29... toying with shuttle crud, fixes SOON
+	dir = 8;
+	height = 9;
+	name = "Fridge emergency shuttle";
+	port_direction = 4;
+	preferred_direction = 2;
+	width = 21
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -262,6 +263,16 @@
 /obj/structure/table/optable,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
+"HF" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Emergency Shuttle Cockpit";
+	req_access_txt = "19"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/shuttle/escape)
 "HP" = (
 /obj/machinery/status_display/evac,
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -339,6 +350,7 @@
 	name = "Emergency Shuttle Cockpit";
 	req_access_txt = "19"
 	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/escape)
 "Vs" = (
@@ -523,7 +535,7 @@ SU
 Xm
 KB
 KB
-SU
+HF
 wi
 wi
 wi
