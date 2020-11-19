@@ -100,7 +100,7 @@
 	muzzle_ignore = FALSE
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
 
-/datum/emote/living/caw/run_emote(mob/living/user, params)
+/datum/emote/living/achitter/run_emote(mob/living/user, params)
 	if(!(. = ..()))
 		return
 	if(user.nextsoundemote >= world.time)
