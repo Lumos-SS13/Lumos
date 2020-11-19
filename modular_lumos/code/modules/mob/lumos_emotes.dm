@@ -85,11 +85,12 @@
 
     user.nextsoundemote = world.time + 20
     playsound(user, pickweight(list(
-		'modular_lumos/sound/effects/fart.ogg' = 50, 
+		'modular_lumos/sound/effects/fart.ogg' = 50,
 		'modular_lumos/sound/effects/fart2.ogg' = 30,
 		'modular_lumos/sound/effects/fart3.ogg' = 5,
 		'modular_lumos/sound/effects/fart4.ogg' = 10)), 50, FALSE)
-		mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+    var/brap = rand(1,5)
+    user.atmos_spawn_air("miasma=[brap];TEMP=310.15")
 
 /datum/emote/living/achitter
 	key = "achitter"
@@ -133,7 +134,7 @@
 	emote_type = EMOTE_AUDIBLE
 	muzzle_ignore = FALSE
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
-	
+
 /datum/emote/living/manditwitch
 	key = "mandible_twitch"
 	key_third_person = "mandible_twitches"
@@ -142,7 +143,7 @@
 	emote_type = EMOTE_AUDIBLE
 	muzzle_ignore = FALSE
 	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
-	
+
 /datum/emote/living/engilaugh
 	key = "engilaugh"
 	key_third_person = "engilaughs"
