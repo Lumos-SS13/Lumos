@@ -89,7 +89,7 @@
 		'modular_lumos/sound/effects/fart2.ogg' = 30,
 		'modular_lumos/sound/effects/fart3.ogg' = 5,
 		'modular_lumos/sound/effects/fart4.ogg' = 10)), 50, FALSE)
-			mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
+		mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
 
 /datum/emote/living/achitter
 	key = "achitter"
