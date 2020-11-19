@@ -84,6 +84,7 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 		if("adamantine")
 			itemcolor = "#008B8B"
 	add_atom_colour(itemcolor, FIXED_COLOUR_PRIORITY)
+	AddComponent(/datum/component/overlay_lighting, itemcolor, 2, 1, TRUE)
 
 /obj/effect/slime_rune/Destroy(force)
 	if(process_rune)
@@ -389,10 +390,15 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 
 	var/coin_amount = 0
 
+/obj/effect/slime_rune/gold/examine(mob/user)
+	. = ..()
+	. +=  "<span class='info'>\The [src] currently has <b>[coin_amount]</b> coins.</span>"
+
 /obj/effect/slime_rune/gold/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/coin))
 		var/obj/item/coin/chosenCoin = I
 		coin_amount += chosenCoin.value
+		to_chat(user, "<span class='info'>\The [src] accepts your \The [I]. It now has <b>[coin_amount]</b> coins.</span>")
 		qdel(chosenCoin)
 	else
 		..()
@@ -400,11 +406,59 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 /obj/effect/slime_rune/gold/attack_hand(mob/living/user)
 	var/turf/src_turf = get_turf(src)
 	if(coin_amount < 50)
-		to_chat(user, "You need more coin traveller")
+		to_chat(user, "<span class='warning'>Why don't you come back when you're a little more.... Mmmm richer?</span>")
 		return
-	coin_amount -= 50
-	var/obj/item/spawnItem = pick(subtypesof(/obj/item))
-	new spawnItem(src_turf)
+	for(var/A in src_turf)
+		if(A == src)
+			visible_message("<span class='warning'>Nothing happens!</span>")
+			continue
+		else if(istype(A, /obj/item))
+			var/obj/item/O = A
+			if(O.GetComponent(/datum/component/midas_touch))
+				visible_message("<span class='warning'>Nothing happens!</span>")
+				return
+			O.midas_touch()
+			playsound(src, 'modular_lumos/sound/effects/kaching.ogg', 20, TRUE)
+			coin_amount -= 50
+
+/datum/component/midas_touch
+	var/atom/owner //the atom it is owned by
+	var/stored_name //name of the owner when the component was first added
+
+/datum/component/midas_touch/Initialize()
+	if(!isatom(parent))
+		return COMPONENT_INCOMPATIBLE
+	
+	RegisterSignal(parent, COMSIG_COMPONENT_CLEAN_ACT, .proc/restore)
+
+	owner = parent
+	stored_name = owner.name
+
+	setup_golden_item()
+
+/atom/proc/midas_touch()
+	if(isitem(src))
+		var/obj/item/gold_item = src
+		if(gold_item.resistance_flags & INDESTRUCTIBLE)
+			return
+	if(!GetComponent(/datum/component/midas_touch) && (!reagents || ismob(src)))
+		AddComponent(/datum/component/midas_touch)
+
+/datum/component/midas_touch/proc/setup_golden_item()
+	var/colour_priority = FIXED_COLOUR_PRIORITY
+	owner.name = "golden [owner.name]"
+	owner.add_atom_colour(rgb(201, 179, 57), colour_priority)
+	owner.AddComponent(/datum/component/overlay_lighting, LIGHT_COLOR_YELLOW, 2, 1, TRUE)
+
+/datum/component/midas_touch/proc/restore()
+	var/datum/component/overlay_lighting/OL = GetComponent(/datum/component/overlay_lighting)
+	OL.UnregisterFromParent()
+	restore_name()
+	RemoveComponent()
+
+/datum/component/midas_touch/proc/restore_name()
+	if(copytext(owner.name,1,7) == "golden ")
+		owner.name = copytext(owner.name,8)
 
 /obj/effect/slime_rune/oil
 	colour = "oil"
