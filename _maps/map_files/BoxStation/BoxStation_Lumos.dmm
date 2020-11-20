@@ -15266,9 +15266,6 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "aGH" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -15276,6 +15273,9 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/junction/flip{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
@@ -20258,7 +20258,8 @@
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole/bookmanagement,
 /obj/machinery/light_switch{
-	pixel_y = 28
+	pixel_x = 2;
+	pixel_y = 26
 	},
 /turf/open/floor/wood,
 /area/library)
@@ -22803,10 +22804,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "aZd" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /obj/item/kirbyplants{
 	icon_state = "plant-08"
 	},
@@ -24803,6 +24800,12 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/machinery/button/door{
+	id = "Skynet_launch";
+	name = "Mech Bay Door Control";
+	pixel_x = 6;
+	pixel_y = -24
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "beD" = (
@@ -25486,23 +25489,21 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "bgo" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/vr_sleeper,
+/obj/effect/turf_decal/tile/green{
+	dir = 1
 	},
-/obj/machinery/power/apc{
-	areastring = "/area/science/robotics/mechbay";
-	dir = 4;
-	name = "Mech Bay APC";
-	pixel_x = 26
+/obj/effect/turf_decal/tile/green{
+	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/turf/open/floor/plating,
-/area/maintenance/department/medical/morgue)
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white/corner,
+/area/crew_quarters/fitness)
 "bgr" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -27441,13 +27442,17 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "blt" = (
-/obj/machinery/recharge_station,
-/obj/structure/sign/poster/official/state_laws{
-	pixel_y = -32
+/obj/machinery/button/door{
+	desc = "Bolts the doors to the Private Study.";
+	id = "PrivateStudy";
+	name = "Private Study Lock";
+	pixel_x = 25;
+	pixel_y = 25;
+	req_access_txt = "";
+	req_one_access_txt = "28;63"
 	},
-/obj/effect/landmark/start/cyborg,
-/turf/open/floor/plasteel,
-/area/science/robotics/mechbay)
+/turf/open/floor/wood,
+/area/library)
 "blu" = (
 /obj/machinery/computer/mech_bay_power_console{
 	dir = 4
@@ -39155,7 +39160,6 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/machinery/droneDispenser/preloaded,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -45423,11 +45427,17 @@
 /turf/open/floor/plasteel,
 /area/science/misc_lab)
 "ceR" = (
-/obj/effect/landmark/blobstart,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
 /area/maintenance/starboard/aft)
 "ceS" = (
-/obj/item/stack/sheet/cardboard,
+/obj/effect/landmark/blobstart,
+/obj/structure/rack,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/head/wizard/fake,
+/obj/item/clothing/head/fedora,
+/obj/item/clothing/head/christmashat,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "ceT" = (
@@ -47666,9 +47676,17 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
 "ckS" = (
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating,
-/area/maintenance/starboard/aft)
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/open/floor/wood,
+/area/library)
 "ckT" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/yellow{
@@ -52592,6 +52610,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
 "cHK" = (
@@ -52662,6 +52684,9 @@
 "cHQ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
+	},
+/obj/structure/sign/poster/official/state_laws{
+	pixel_y = -32
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
@@ -53010,6 +53035,8 @@
 /area/maintenance/port/aft)
 "cOx" = (
 /obj/structure/closet,
+/obj/item/stack/sheet/cardboard,
+/obj/item/stack/sheet/plastic/five,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "cOy" = (
@@ -55091,7 +55118,7 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "gfr" = (
-/obj/structure/bed,
+/obj/structure/chair/sofa/corp/left,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "gfC" = (
@@ -56627,6 +56654,10 @@
 	},
 /turf/open/floor/engine,
 /area/science/mixing)
+"iQp" = (
+/obj/machinery/droneDispenser/preloaded,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "iQR" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -58342,11 +58373,10 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "lZl" = (
-/obj/structure/closet,
-/obj/item/coin/gold,
-/obj/item/coin/gold,
-/obj/item/coin/gold,
-/turf/open/floor/plating,
+/obj/structure/table,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
 /area/maintenance/starboard/aft)
 "lZR" = (
 /obj/structure/sign/plaques/golden{
@@ -59996,17 +60026,9 @@
 /turf/open/floor/plating,
 /area/security/processing)
 "pem" = (
-/obj/machinery/button/door{
-	desc = "Bolts the doors to the Private Study.";
-	id = "PrivateStudy";
-	name = "Private Study Lock";
-	pixel_x = 25;
-	pixel_y = 25;
-	req_access_txt = "";
-	req_one_access_txt = "28;63"
-	},
-/turf/open/floor/wood,
-/area/library)
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/plating,
+/area/maintenance/port)
 "pgf" = (
 /turf/open/floor/mineral/titanium/blue,
 /area/crew_quarters/dorms)
@@ -60064,6 +60086,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/mixing)
+"pod" = (
+/obj/structure/closet,
+/obj/item/stack/sheet/mineral/wood/fifty{
+	amount = 20
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "pou" = (
 /obj/machinery/light{
 	dir = 4;
@@ -60493,7 +60522,7 @@
 	name = "Private Study Privacy Shutters"
 	},
 /obj/effect/spawner/structure/window,
-/turf/open/floor/wood,
+/turf/open/floor/plating,
 /area/library)
 "qif" = (
 /obj/structure/cable{
@@ -63655,6 +63684,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
+"wiN" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/twenty,
+/obj/item/stack/sheet/rglass{
+	amount = 50
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "wjo" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -81527,7 +81564,7 @@ bbL
 aPz
 bdJ
 txm
-aSg
+pem
 aPz
 hew
 bkF
@@ -83099,7 +83136,7 @@ aaa
 aaa
 aaa
 aag
-aaa
+gXs
 aaf
 bVz
 aaf
@@ -101292,7 +101329,7 @@ axh
 fHG
 fHG
 hWd
-aKq
+bgo
 sci
 sEi
 alP
@@ -106457,7 +106494,7 @@ bcb
 bdl
 cTJ
 cHD
-bgo
+cTS
 cTS
 cTS
 blq
@@ -108002,7 +108039,7 @@ cHJ
 cHL
 blw
 bjP
-blt
+bnb
 bfT
 boG
 bqa
@@ -109015,7 +109052,7 @@ aFu
 aPf
 aQq
 aRP
-pem
+aIt
 aIt
 aIt
 aYW
@@ -109534,7 +109571,7 @@ aIt
 aLg
 aYW
 aYW
-aUD
+ckS
 aFu
 aYV
 aXq
@@ -109786,7 +109823,7 @@ xEE
 aYW
 aYW
 aRQ
-aIt
+blt
 aUF
 aLg
 aYW
@@ -113435,8 +113472,8 @@ saK
 saK
 saK
 bSl
-bNB
-cNW
+wiN
+iQp
 lZl
 cNW
 chC
@@ -113692,9 +113729,9 @@ saK
 sSW
 saK
 bSl
+ceR
 cOe
-cNW
-mJo
+cOe
 cNW
 uVS
 cOe
@@ -113949,7 +113986,7 @@ saK
 pjp
 wvX
 bSl
-cOe
+cNW
 ceS
 cae
 cNW
@@ -114464,8 +114501,8 @@ aOv
 saK
 bSl
 cOx
-cOx
-ckS
+pod
+mJo
 cNW
 uVS
 cds
