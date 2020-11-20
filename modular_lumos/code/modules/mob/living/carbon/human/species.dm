@@ -1,23 +1,19 @@
 /datum/species/handle_digestion(mob/living/carbon/human/H)
 	. = ..()
+	if(H.nutrition > NUTRITION_LEVEL_HUNGRY)
+		H.remove_movespeed_modifier(MOVESPEED_ID_MOB_HUNGER)
 	if(H.nutrition <= NUTRITION_LEVEL_HUNGRY)
-		if(prob(50))
-			if(H.eye_blurry <= 120)
-				H.eye_blurry += 1
+		if(prob(10))
+			to_chat(H, "<span class='warning'>You are feeling quite hungry...</span>")
 	if(H.nutrition <= NUTRITION_LEVEL_STARVING)
 		if(prob(50))
-			if(H.eye_blurry <= 120)
-				H.eye_blurry += 1
 			H.adjustStaminaLoss(4)
+		H.add_movespeed_modifier(/datum/movespeed_modifier/hunger/small)
 	if(H.nutrition <= NUTRITION_LEVEL_CRAVING)
 		if(prob(50))
-			if(H.eye_blurry <= 120)
-				H.eye_blurry += 1
 			H.adjustStaminaLoss(4)
-			H.hallucination += 2
+		H.add_movespeed_modifier(/datum/movespeed_modifier/hunger/medium)
 	if(H.nutrition <= 0)
 		if(prob(50))
-			if(H.eye_blurry <= 120)
-				H.eye_blurry += 1
 			H.adjustStaminaLoss(4)
-			H.hallucination += 2
+		H.add_movespeed_modifier(/datum/movespeed_modifier/hunger/large)
