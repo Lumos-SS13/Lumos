@@ -13,6 +13,7 @@
 	var/calibrating
 	var/turf/target
 	var/obj/item/implant/imp_t
+	connectable = FALSE
 
 /obj/machinery/computer/teleporter/Initialize()
 	. = ..()
