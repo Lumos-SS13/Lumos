@@ -327,6 +327,12 @@
 	name = "Abductor Replication Lab"
 	description = "Some scientists tried and almost succeeded to recreate abductor tools. Somewhat slower and a bit less modern than their originals, these tools are the best you can get if you aren't an alien."
 
+/datum/map_template/ruin/space/spacehotellumos // Lumos edit, epic version of spacehotel
+	id = "spacehotellumos"
+	suffix = "spacehotel_lumos.dmm"
+	name = "The Twin-Nexus Hotel"
+	description = "An interstellar hotel, where the weary spaceman can rest their head and relax, assured that the residental staff will not murder them in their sleep. Probably."
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
