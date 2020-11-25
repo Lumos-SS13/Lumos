@@ -135,3 +135,6 @@
 
 /datum/movespeed_modifier/hunger/large
 	multiplicative_slowdown = 2.0
+
+/datum/movespeed_modifier/hunger/xlarge
+	multiplicative_slowdown = 2.5
