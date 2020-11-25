@@ -3,7 +3,7 @@
 	if(H.nutrition > NUTRITION_LEVEL_HUNGRY)
 		H.remove_movespeed_modifier(MOVESPEED_ID_MOB_HUNGER)
 	if(H.nutrition <= NUTRITION_LEVEL_HUNGRY)
-		if(prob(10))
+		if(prob(2))
 			to_chat(H, "<span class='warning'>You are feeling quite hungry...</span>")
 	if(H.nutrition <= NUTRITION_LEVEL_STARVING)
 		if(prob(50))
