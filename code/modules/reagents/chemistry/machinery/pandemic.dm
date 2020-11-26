@@ -14,6 +14,7 @@
 	var/wait
 	var/datum/symptom/selected_symptom
 	var/obj/item/reagent_containers/beaker
+	connectable = FALSE
 
 /obj/machinery/computer/pandemic/Initialize()
 	. = ..()
