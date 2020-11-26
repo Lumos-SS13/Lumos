@@ -510,6 +510,7 @@
 	. = ..()
 	if(.)
 		user.visible_message("<span class='notice'>[user] cracks and shakes [src].</span>", "<span class='notice'>You crack and shake [src], turning it on!</span>")
+		playsound(src, 'modular_lumos/sound/items/glowstick.ogg', 25, 0)
 		activate()
 
 /obj/item/flashlight/glowstick/proc/activate()
