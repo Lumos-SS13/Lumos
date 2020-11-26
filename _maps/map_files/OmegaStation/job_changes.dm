@@ -156,6 +156,7 @@
 	MAP_JOB_CHECK
 	supervisors = "nobody but yourself" //Honk
 
+/* LUMOS EDIT - OMEGA REWORK
 MAP_REMOVE_JOB(hos)
 MAP_REMOVE_JOB(chief_engineer)
 MAP_REMOVE_JOB(qm)
@@ -166,3 +167,4 @@ MAP_REMOVE_JOB(rd)
 MAP_REMOVE_JOB(warden)
 MAP_REMOVE_JOB(lawyer)
 MAP_REMOVE_JOB(chemist)
+*/
