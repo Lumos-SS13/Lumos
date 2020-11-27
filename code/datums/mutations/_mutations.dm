@@ -55,6 +55,9 @@
 /datum/mutation/human/proc/on_acquiring(mob/living/carbon/human/H)
 	if(!H || !istype(H) || H.stat == DEAD || (src in H.dna.mutations))
 		return TRUE
+	if(H.has_brain_worms()) //lumos
+		to_chat(owner, "<span class='warning'>You feel something strongly clinging to your humanity!</span>")
+		return //lumos
 	if(species_allowed.len && !species_allowed.Find(H.dna.species.id))
 		return TRUE
 	if(health_req && H.health < health_req)

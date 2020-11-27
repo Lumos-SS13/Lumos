@@ -71,6 +71,9 @@
 
 	if((!QDELETED(src) || C) && !no_id_transfer)
 		transfer_identity(C)
+	var/mob/living/simple_animal/borer/B = C.has_brain_worms()
+	if(B) //lumos
+		B.leave_victim() //Should remove borer if the brain is removed - RR LUMOS
 	if(C)
 		REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/brain_damage, null, C)
 		REMOVE_SKILL_MODIFIER_BODY(/datum/skill_modifier/heavy_brain_damage, null, C)

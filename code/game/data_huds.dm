@@ -171,9 +171,12 @@
 /mob/living/proc/med_hud_set_status()
 	var/image/holder = hud_list[STATUS_HUD]
 	var/icon/I = icon(icon, icon_state, dir)
+	var/mob/living/simple_animal/borer/B = has_brain_worms()
 	holder.pixel_y = I.Height() - world.icon_size
 	if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		holder.icon_state = "huddead"
+	else if(has_brain_worms() && B != null && B.controlling)
+		holder.icon_state = "hudbrainworm"
 	else
 		holder.icon_state = "hudhealthy"
 

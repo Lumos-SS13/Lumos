@@ -1013,7 +1013,11 @@
 			dat += "<td width='20%'><a href='?src=[REF(src)];[HrefToken()];jobban3=bloodsucker;jobban4=[REF(M)]'><font color=red>Bloodsucker</font></a></td>"
 		else
 			dat += "<td width='20%'><a href='?src=[REF(src)];[HrefToken()];jobban3=bloodsucker;jobban4=[REF(M)]'>Bloodsucker</a></td>"
-
+		//Borer
+		if(jobban_isbanned(M, ROLE_BORER) || isbanned_dept) //lumos
+			dat += "<td width='20%'><a href='?src=\ref[src];jobban3=borer;jobban4=\ref[M]'><font color=red>Borer</font></a></td>" //lumos
+		else //lumos
+			dat += "<td width='20%'><a href='?src=\ref[src];jobban3=borer;jobban4=\ref[M]'>Borer</a></td>" //lumos
 
 	//Other Roles (black)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
