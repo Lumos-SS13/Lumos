@@ -158,3 +158,6 @@
 	var/typing_indicator_timerid
 	/// Current state of our typing indicator. Used for cut overlay, DO NOT RUNTIME ASSIGN OTHER THAN FROM SHOW/CLEAR. Used to absolutely ensure we do not get stuck overlays.
 	var/typing_indicator_current
+
+	//lumos defines
+	var/emote_cooldown = FALSE //False means that you can emote
