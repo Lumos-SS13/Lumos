@@ -32,6 +32,7 @@
 	var/list/theft_cache = list()
 
 	var/allow_items = TRUE
+	connectable = FALSE
 
 /obj/machinery/computer/cryopod/attack_ai()
 	attack_hand()
@@ -250,6 +251,7 @@
 		else
 			despawn_world_time = world.time + time_till_despawn
 	icon_state = "cryopod"
+	playsound(src, 'modular_lumos/sound/machines/closehiss.ogg', 25, 0)
 
 /obj/machinery/cryopod/open_machine()
 	if(occupant)
@@ -258,6 +260,7 @@
 	icon_state = "cryopod-open"
 	density = TRUE
 	name = initial(name)
+	playsound(src, 'modular_lumos/sound/machines/openhiss.ogg', 25, 0)
 
 /obj/machinery/cryopod/container_resist(mob/living/user)
 	investigate_log("Cryogenics machine container resisted by [key_name(user)] with occupant [key_name(occupant)].", INVESTIGATE_CRYOGENICS)

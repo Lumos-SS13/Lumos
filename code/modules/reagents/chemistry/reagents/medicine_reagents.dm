@@ -1100,6 +1100,7 @@
 	..()
 
 //Trek Chems, used primarily by medibots. Only heals a specific damage type, but is very efficient.
+/* lumos modular change start
 /datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
 	description = "Restores bruising. Overdose causes it instead."
@@ -1211,7 +1212,7 @@
 	M.adjustFireLoss(2*REM, FALSE)
 	..()
 	. = 1
-
+lumos modular change stop */
 /datum/reagent/medicine/regen_jelly
 	name = "Regenerative Jelly"
 	description = "Gradually regenerates all types of damage, without harming slime anatomy."

@@ -216,6 +216,8 @@
 
 /obj/machinery/suit_storage_unit/proc/cook()
 	var/mob/living/mob_occupant = occupant
+	if(!uv)
+		playsound(src, 'modular_lumos/sound/machines/flushrad.ogg', 50, 0)
 	if(uv_cycles)
 		uv_cycles--
 		uv = TRUE
@@ -456,3 +458,11 @@
 					I.forceMove(loc)
 			. = TRUE
 	update_icon()
+
+/obj/machinery/suit_storage_unit/open_machine(drop = TRUE)
+	. = ..()
+	playsound(src, 'modular_lumos/sound/machines/openhiss.ogg', 25, 0)
+
+/obj/machinery/suit_storage_unit/close_machine()
+	. = ..()
+	playsound(src, 'modular_lumos/sound/machines/closehiss.ogg', 25, 0)
