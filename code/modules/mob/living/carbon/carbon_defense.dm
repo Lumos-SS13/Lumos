@@ -365,14 +365,17 @@
 				"<span class='notice'>[M] shakes [src]'s hand.</span>", \
 				"<span class='notice'>You shake [src]'s hand.</span>", target = src,
 				target_message = "<span class='notice'>[M] shakes your hand.</span>")
-		
+		//lumos
 		else
-			M.visible_message("<span class='notice'>[M] hugs [src] to make [p_them()] feel better!</span>", \
-						"<span class='notice'>You hug [src] to make [p_them()] feel better!</span>", target = src,\
-						target_message = "<span class='notice'>[M] hugs you to make you feel better!</span>")
-			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/hug)
-			friendly_check = TRUE
-
+			if(locate(/obj/effect/slime_rune/pink) in get_turf(src))
+				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "friendly_hug", /datum/mood_event/bestesthug, M)
+			else
+				M.visible_message("<span class='notice'>[M] hugs [src] to make [p_them()] feel better!</span>", \
+							"<span class='notice'>You hug [src] to make [p_them()] feel better!</span>", target = src,\
+							target_message = "<span class='notice'>[M] hugs you to make you feel better!</span>")
+				SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/hug)
+				friendly_check = TRUE
+		//lumos
 		if(friendly_check && HAS_TRAIT(M, TRAIT_FRIENDLY))
 			var/datum/component/mood/mood = M.GetComponent(/datum/component/mood)
 			if(mood)

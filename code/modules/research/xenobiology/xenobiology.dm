@@ -17,6 +17,9 @@
 	var/list/activate_reagents = list() //Reagents required for activation
 	var/recurring = FALSE
 
+	var/warping_array = 0
+	var/slime_color
+
 /obj/item/slime_extract/examine(mob/user)
 	. = ..()
 	if(Uses > 1)
@@ -80,6 +83,9 @@
 	effectmod = "reproductive"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma,/datum/reagent/water)
 
+	warping_array = 1
+	slime_color = "grey"
+
 /obj/item/slime_extract/grey/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -104,6 +110,9 @@
 	icon_state = "gold slime extract"
 	effectmod = "symbiont"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma,/datum/reagent/water)
+
+	warping_array = 17
+	slime_color = "gold"
 
 /obj/item/slime_extract/gold/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -134,6 +143,9 @@
 	effectmod = "consuming"
 	activate_reagents = list(/datum/reagent/toxin/plasma,/datum/reagent/water)
 
+	warping_array = 9
+	slime_color = "silver"
+
 /obj/item/slime_extract/silver/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -159,6 +171,9 @@
 	effectmod = "industrial"
 	activate_reagents = list(/datum/reagent/toxin/plasma,/datum/reagent/water)
 
+	warping_array = 5
+	slime_color = "metal"
+
 /obj/item/slime_extract/metal/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -183,6 +198,9 @@
 	effectmod = "regenerative"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma)
 
+	warping_array = 3
+	slime_color = "purple"
+
 /obj/item/slime_extract/purple/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -201,6 +219,9 @@
 	icon_state = "dark purple slime extract"
 	effectmod = "self-sustaining"
 	activate_reagents = list(/datum/reagent/toxin/plasma)
+
+	warping_array = 7
+	slime_color = "darkpurple"
 
 /obj/item/slime_extract/darkpurple/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -225,6 +246,9 @@
 	effectmod = "burning"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma,/datum/reagent/water)
 
+	warping_array = 2
+	slime_color = "orange"
+
 /obj/item/slime_extract/orange/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -244,6 +268,9 @@
 	icon_state = "yellow slime extract"
 	effectmod = "charged"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma,/datum/reagent/water)
+
+	warping_array = 6
+	slime_color = "yellow"
 
 /obj/item/slime_extract/yellow/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -268,6 +295,9 @@
 	effectmod = "sanguine"
 	activate_reagents = list(/datum/reagent/blood,/datum/reagent/toxin/plasma,/datum/reagent/water)
 
+	warping_array = 14
+	slime_color = "red"
+
 /obj/item/slime_extract/red/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -287,6 +317,9 @@
 	icon_state = "blue slime extract"
 	effectmod = "stabilized"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma, /datum/reagent/water)
+
+	warping_array = 4
+	slime_color = "blue"
 
 /obj/item/slime_extract/blue/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -312,6 +345,9 @@
 	effectmod = "chilling"
 	activate_reagents = list(/datum/reagent/toxin/plasma, /datum/reagent/water)
 
+	warping_array = 8
+	slime_color = "darkblue"
+
 /obj/item/slime_extract/darkblue/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -335,6 +371,9 @@
 	effectmod = "gentle"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma)
 
+	warping_array = 16
+	slime_color = "pink"
+
 /obj/item/slime_extract/pink/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -357,6 +396,9 @@
 	icon_state = "green slime extract"
 	effectmod = "mutative"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma, /datum/reagent/radium)
+
+	warping_array = 15
+	slime_color = "green"
 
 /obj/item/slime_extract/green/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -382,6 +424,9 @@
 	effectmod = "loyal"
 	activate_reagents = list(/datum/reagent/toxin/plasma)
 
+	warping_array = 20
+	slime_color = "lightpink"
+
 /obj/item/slime_extract/lightpink/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -406,6 +451,9 @@
 	effectmod = "transformative"
 	activate_reagents = list(/datum/reagent/toxin/plasma)
 
+	warping_array = 19
+	slime_color = "black"
+
 /obj/item/slime_extract/black/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -426,6 +474,9 @@
 	icon_state = "oil slime extract"
 	effectmod = "detonating"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma)
+
+	warping_array = 18
+	slime_color = "oil"
 
 /obj/item/slime_extract/oil/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -449,6 +500,9 @@
 	icon_state = "adamantine slime extract"
 	effectmod = "crystalline"
 	activate_reagents = list(/datum/reagent/toxin/plasma)
+
+	warping_array = 21
+	slime_color = "adamantine"
 
 /obj/item/slime_extract/adamantine/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -483,6 +537,9 @@
 	var/teleport_y = 0
 	var/teleport_z = 0
 
+	warping_array = 10
+	slime_color = "bluespace"
+
 /obj/item/slime_extract/bluespace/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -515,6 +572,9 @@
 	effectmod = "prismatic"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma)
 
+	warping_array = 13
+	slime_color = "pyrite"
+
 /obj/item/slime_extract/pyrite/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -542,6 +602,9 @@
 	effectmod = "recurring"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma)
 
+	warping_array = 12
+	slime_color = "cerulean"
+
 /obj/item/slime_extract/cerulean/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
 		if(SLIME_ACTIVATE_MINOR)
@@ -561,6 +624,9 @@
 	icon_state = "sepia slime extract"
 	effectmod = "lengthened"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma, /datum/reagent/water)
+
+	warping_array = 11
+	slime_color = "sepia"
 
 /obj/item/slime_extract/sepia/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)
@@ -583,6 +649,9 @@
 	icon_state = "rainbow slime extract"
 	effectmod = "hyperchromatic"
 	activate_reagents = list(/datum/reagent/blood, /datum/reagent/toxin/plasma,"lesser plasma", /datum/reagent/toxin/slimejelly,"holy water and uranium") //Curse this snowflake reagent list.
+
+	warping_array = 22
+	slime_color = "rainbow"
 
 /obj/item/slime_extract/rainbow/activate(mob/living/carbon/human/user, datum/species/jelly/luminescent/species, activation_type)
 	switch(activation_type)

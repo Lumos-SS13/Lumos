@@ -1607,6 +1607,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_datums)
 			damage *= 0.8
 		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
 			damage *= 0.8
+		//lumos
+		var/turf/src_turf = get_turf(src)
+		if(locate(/obj/effect/slime_rune/red) in src_turf)
+			damage *= 2
+		//lumos
 		//END OF CITADEL CHANGES
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
