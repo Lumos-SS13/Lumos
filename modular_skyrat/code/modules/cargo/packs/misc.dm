@@ -82,7 +82,7 @@
 
 /datum/supply_pack/misc/carpet_premium
 	name = "Premium Carpet Crate"
-	desc = "Plasteel floor tiles getting on your nerves? These stacks of extra soft carpet will tie any room together. Contains some classic carpet, along with black, red, and monochrome varients."
+	desc = "Plasteel floor tiles getting on your nerves? These stacks of extra soft carpet will tie any room together. Contains some classic carpet, along with black, red, and monochrome variants."
 	cost = 1350
 	contains = list(/obj/item/stack/tile/carpet/fifty,
 					/obj/item/stack/tile/carpet/fifty,
