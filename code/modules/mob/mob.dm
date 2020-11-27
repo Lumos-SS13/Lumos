@@ -1175,3 +1175,7 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	if(is_face_visible() && SEND_SIGNAL(examined_mob, COMSIG_MOB_EYECONTACT, src, FALSE) != COMSIG_BLOCK_EYECONTACT)
 		var/msg = "<span class='smallnotice'>[src] makes eye contact with you.</span>"
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/to_chat, examined_mob, msg), 3)
+
+//lumos
+/mob/proc/remove_emote_cooldown()
+	emote_cooldown = FALSE
