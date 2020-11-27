@@ -56,7 +56,7 @@
 	if(!H || !istype(H) || H.stat == DEAD || (src in H.dna.mutations))
 		return TRUE
 	if(H.has_brain_worms()) //lumos
-		owner << "<span class='warning'>You feel something strongly clinging to your humanity!</span>" //lumos
+		to_chat(owner, "<span class='warning'>You feel something strongly clinging to your humanity!</span>")
 		return //lumos
 	if(species_allowed.len && !species_allowed.Find(H.dna.species.id))
 		return TRUE
