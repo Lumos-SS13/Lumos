@@ -20,7 +20,22 @@
 	var/list/mode_false_report_weight
 
 	var/motd
+//lumos
+	var/static/regex/ic_filter_regex //For the cringe filter.
 
+/datum/controller/configuration/proc/LoadChatFilter()
+	GLOB.gamer_words = list()
+
+	for(var/line in world.file2list("config/gamer_words.txt"))
+		if(!line)
+			continue
+		if(findtextEx(line,"#",1,2))
+			continue
+		GLOB.gamer_words += line
+
+	if(!ic_filter_regex && GLOB.gamer_words.len)
+		ic_filter_regex = regex("\\b([jointext(GLOB.gamer_words, "|")])\\b", "i")
+//lumos
 /datum/controller/configuration/proc/admin_reload()
 	if(IsAdminAdvancedProcCall())
 		return
@@ -49,6 +64,7 @@
 				break
 	loadmaplist(CONFIG_MAPS_FILE)
 	LoadMOTD()
+	LoadChatFilter() //lumos
 
 /datum/controller/configuration/proc/full_wipe()
 	if(IsAdminAdvancedProcCall())

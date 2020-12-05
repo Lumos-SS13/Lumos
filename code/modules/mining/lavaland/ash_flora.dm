@@ -138,7 +138,7 @@
 	harvest_amount_high = 2
 	harvest_time = 10
 	harvest_message_low = "You pick a cactus fruit."
-	harvest_message_med = "You pick several cactus fruit." //shouldn't show up, because you can't get more than two
+	harvest_message_med = "You pick several cactus fruit."  
 	harvest_message_high = "You pick a pair of cactus fruit."
 	//regrowth_time_low = 4800
 	//regrowth_time_high = 7200

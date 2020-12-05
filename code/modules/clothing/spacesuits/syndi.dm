@@ -75,7 +75,7 @@
 	icon_state = "syndicate-black"
 	item_state = "syndicate-black"
 
-//Black-red syndicate contract varient
+//Black-red syndicate contract variant
 /obj/item/clothing/head/helmet/space/syndicate/contract
 	name = "contractor helmet"
 	desc = "A specialised black and gold helmet that's more compact than its standard Syndicate counterpart. Can be ultra-compressed into even the tightest of spaces."

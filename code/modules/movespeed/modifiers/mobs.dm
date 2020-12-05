@@ -123,3 +123,18 @@
 /datum/movespeed_modifier/active_block
 	variable = TRUE
 	flags = IGNORE_NOSLOW
+
+/datum/movespeed_modifier/hunger
+	id = MOVESPEED_ID_MOB_HUNGER
+
+/datum/movespeed_modifier/hunger/small
+	multiplicative_slowdown = 1.0
+
+/datum/movespeed_modifier/hunger/medium
+	multiplicative_slowdown = 1.5
+
+/datum/movespeed_modifier/hunger/large
+	multiplicative_slowdown = 2.0
+
+/datum/movespeed_modifier/hunger/xlarge
+	multiplicative_slowdown = 2.5
