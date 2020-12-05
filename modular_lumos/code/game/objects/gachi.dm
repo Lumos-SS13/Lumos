@@ -9,9 +9,4 @@
 	desc = "A poster depicting a muscular man in a seductive pose."
 	icon = 'modular_lumos/icons/obj/gachimuchi.dmi'
 	icon_state = "billyposter2"
-
-/obj/structure/sign/poster/contraband/vad
-	name = "The Hell?"
-	desc = "This guy again? For fucksake..."
-	icon = 'modular_lumos/icons/obj/gachimuchi.dmi'
-	icon_state = "vadposter"
+	
