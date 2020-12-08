@@ -1035,3 +1035,22 @@
 		to_chat(M, "<span class='notice'>Ah, what was that? You thought you heard something...</span>")
 		M.confused += 5
 	return ..()
+	
+/datum/reagent/toxin/piss
+	name = "Piss"
+	description = "Piss."
+	taste_description = "piss"
+	specific_heat = SPECIFIC_HEAT_PLASMA
+	taste_mult = 1.5
+	color = "#FFF378"
+	toxpwr = 6
+	pH = 4
+	
+/datum/reagent/toxin/piss/on_mob_life(mob/living/carbon/M)
+	if(prob(50))
+		M.gain_trauma_type(BRAIN_TRAUMA_MILD)
+	else if(prob(50))
+		M.gain_trauma_type(BRAIN_TRAUMA_SEVERE)
+	else
+		M.gain_trauma_type(BRAIN_TRAUMA_SPECIAL)
+	..()
