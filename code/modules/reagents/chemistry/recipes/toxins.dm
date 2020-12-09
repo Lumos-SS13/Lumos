@@ -131,5 +131,5 @@
 	name = "piss"
 	id = /datum/reagent/toxin/piss
 	results = list(/datum/reagent/toxin/piss = 1)
-	required_reagents = list(/datum/reagent/holywater = 50)
+	required_reagents = list(/datum/reagent/toxin/fentanyl = 25)
 	required_temp = 800
