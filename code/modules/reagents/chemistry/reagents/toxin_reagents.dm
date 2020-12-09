@@ -1047,6 +1047,12 @@
 	pH = 4
 	
 /datum/reagent/toxin/piss/on_mob_life(mob/living/carbon/M)
+	.=..()
+	if(current_cycle >=11 && prob(min(50,current_cycle)))
+		C.vomit(10, prob(10), prob(50), rand(0,4), TRUE, prob(30))
+		for(var/datum/reagent/toxin/R in C.reagents.reagent_list)
+			if(R != src)
+				C.reagents.remove_reagent(R.type,1)
 	if(prob(50))
 		M.gain_trauma_type(BRAIN_TRAUMA_MILD)
 	else if(prob(50))
