@@ -299,6 +299,9 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 30
 	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "adA" = (
@@ -13597,8 +13600,10 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "fgp" = (
-/obj/machinery/smartfridge/organ/preloaded,
-/turf/closed/wall,
+/obj/machinery/light_switch{
+	pixel_y = -23
+	},
+/turf/open/floor/plasteel/freezer,
 /area/medical/surgery)
 "fgM" = (
 /obj/structure/cable{
@@ -17919,9 +17924,11 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "hui" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/medical/psych)
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "huA" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/carbon_input{
 	dir = 8
@@ -24764,6 +24771,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "psyshu";
+	name = "psy shutters"
+	},
 /turf/open/floor/plating,
 /area/medical/psych)
 "kUy" = (
@@ -30118,9 +30129,6 @@
 "nOj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
-	},
-/obj/machinery/light_switch{
-	pixel_y = -23
 	},
 /turf/open/floor/plasteel/freezer,
 /area/medical/surgery)
@@ -37807,17 +37815,6 @@
 /area/maintenance/department/electrical)
 "rFk" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/door/airlock/medical{
-	name = "Operating Theatre";
-	req_access_txt = "45"
-	},
-/obj/machinery/door/firedoor/border_only{
-	name = "south facing firelock"
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/freezer,
 /area/medical/surgery)
 "rFB" = (
@@ -40139,13 +40136,18 @@
 /area/security/prison)
 "sTe" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
+/obj/machinery/door/airlock/medical{
+	name = "Operating Theatre";
+	req_access_txt = "45"
+	},
+/obj/machinery/door/firedoor/border_only{
+	name = "south facing firelock"
 	},
 /obj/effect/turf_decal/tile/blue{
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/plasteel/white,
+/obj/effect/turf_decal/tile/blue,
+/turf/open/floor/plasteel/freezer,
 /area/medical/medbay/central)
 "sTq" = (
 /turf/open/openspace/icemoon,
@@ -45360,6 +45362,16 @@
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel/dark,
 /area/storage/eva)
+"vBT" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "vBV" = (
 /turf/closed/wall,
 /area/chapel/office)
@@ -49302,10 +49314,8 @@
 /turf/open/floor/plating,
 /area/construction)
 "xHU" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
+/obj/machinery/smartfridge/organ/preloaded,
+/turf/closed/wall,
 /area/medical/medbay/central)
 "xIJ" = (
 /obj/structure/cable{
@@ -49934,6 +49944,10 @@
 /obj/machinery/light,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
@@ -64738,7 +64752,7 @@ avT
 avT
 fDi
 fDi
-hui
+fGi
 fWo
 kUo
 fDi
@@ -66276,7 +66290,7 @@ dML
 hIe
 kYE
 nOj
-oto
+fgp
 ash
 adw
 anm
@@ -66533,9 +66547,9 @@ eut
 pED
 oKr
 abZ
-fgp
+xgq
 xHU
-anm
+hui
 anm
 anJ
 uXB
@@ -66792,7 +66806,7 @@ xgq
 poT
 rFk
 sTe
-jih
+vBT
 jih
 wkM
 uUk
