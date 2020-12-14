@@ -13227,7 +13227,6 @@
 /turf/open/floor/plating,
 /area/security/warden)
 "aBd" = (
-/obj/machinery/computer/prisoner/management,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching Prison Wing holding areas.";
 	name = "Prison Monitor";
@@ -13243,6 +13242,9 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+	},
+/obj/machinery/computer/prisoner/management{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
@@ -13265,7 +13267,6 @@
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aBg" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/requests_console{
 	department = "Security";
 	departmentType = 5;
@@ -13275,44 +13276,35 @@
 /obj/structure/sign/poster/official/twelve_gauge{
 	pixel_y = 32
 	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -1;
-	pixel_y = 10
-	},
+/obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aBh" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "WardenShutters";
-	name = "Warden's Shutters"
+/obj/structure/closet/crate/large,
+/obj/effect/spawner/lootdrop/gloves,
+/obj/item/clothing/glasses/welding,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 8;
+	name = "8maintenance loot spawner"
 	},
 /turf/open/floor/plating,
-/area/security/warden)
+/area/maintenance/fore)
 "aBi" = (
-/obj/structure/closet/secure_closet/warden,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/glasses/sunglasses,
-/obj/machinery/button/door{
-	id = "WardenShutters";
-	name = "Warden's Office Shutters";
-	pixel_x = 7;
-	pixel_y = 24;
-	req_access_txt = "63"
+/obj/structure/rack,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
 	},
-/obj/item/clothing/head/beret/sec/navywarden,
-/obj/item/clothing/head/warden/drill,
-/obj/item/clothing/head/warden,
-/obj/item/gun/energy/laser,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/turf/open/floor/carpet,
+/obj/item/multitool{
+	pixel_x = 4
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 2;
+	pixel_y = -2
+	},
+/turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aBj" = (
-/turf/open/floor/carpet,
-/area/security/warden)
-"aBk" = (
-/obj/item/bedsheet/nanotrasen,
-/obj/structure/bed,
 /turf/open/floor/carpet,
 /area/security/warden)
 "aBl" = (
@@ -13339,10 +13331,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
-"aBm" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/carpet,
-/area/security/detectives_office)
 "aBn" = (
 /turf/open/floor/carpet,
 /area/security/detectives_office)
@@ -13893,47 +13881,34 @@
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aCs" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/carpet,
 /area/security/warden)
 "aCt" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aCu" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
+/obj/machinery/space_heater,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating,
+/area/maintenance/fore)
+"aCv" = (
+/obj/structure/closet/secure_closet/warden,
+/obj/item/gun/energy/laser,
+/obj/item/clothing/head/warden,
+/obj/item/clothing/head/warden/drill,
+/obj/item/clothing/head/beret/sec/navywarden,
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/machinery/camera{
+	c_tag = "Security - Warden Office";
+	dir = 8;
+	network = list("ss13","prison")
 	},
 /turf/open/floor/carpet,
-/area/security/warden)
-"aCv" = (
-/obj/machinery/door/airlock/security/glass{
-	glass = 0;
-	name = "Warden's Quarters";
-	req_access_txt = "3"
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
 /area/security/warden)
 "aCw" = (
 /obj/structure/disposalpipe/segment{
@@ -13947,10 +13922,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
-"aCx" = (
-/obj/structure/curtain,
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "aCy" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -14064,12 +14035,6 @@
 /obj/item/clothing/under/suit/navy,
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
-"aCL" = (
-/obj/structure/bed,
-/obj/item/bedsheet/nanotrasen,
-/obj/effect/landmark/start/detective,
-/turf/open/floor/carpet,
-/area/security/detectives_office)
 "aCM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -14683,13 +14648,7 @@
 /turf/closed/wall,
 /area/crew_quarters/toilet/restrooms)
 "aDX" = (
-/obj/structure/closet/crate/large,
-/obj/effect/spawner/lootdrop/gloves,
-/obj/item/clothing/glasses/welding,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
+/obj/effect/spawner/blocker,
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "aDY" = (
@@ -15775,8 +15734,8 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aGb" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/detectives_office)
@@ -19001,10 +18960,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
-"aMp" = (
-/obj/machinery/light/small,
-/turf/open/floor/carpet,
-/area/security/warden)
 "aMq" = (
 /obj/structure/window/reinforced,
 /turf/open/space,
@@ -28780,11 +28735,6 @@
 	dir = 4;
 	pixel_x = 40
 	},
-/obj/machinery/camera{
-	c_tag = "Security - Warden Office";
-	dir = 8;
-	network = list("ss13","prison")
-	},
 /turf/open/floor/carpet,
 /area/security/warden)
 "bgv" = (
@@ -36482,15 +36432,6 @@
 	},
 /turf/open/floor/plasteel/white/corner,
 /area/hallway/secondary/entry)
-"bvM" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 9
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
-	dir = 8
-	},
-/turf/open/floor/carpet,
-/area/security/warden)
 "bvN" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -76642,12 +76583,9 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/toilet/auxiliary)
 "emQ" = (
-/obj/structure/closet/secure_closet/detective,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/carpet,
-/area/security/detectives_office)
+/obj/structure/trash_pile,
+/turf/open/floor/plating,
+/area/maintenance/fore)
 "enL" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -76718,18 +76656,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft)
-"eyi" = (
-/obj/structure/mirror{
-	pixel_y = 32
-	},
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/structure/sink{
-	pixel_y = 28
-	},
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "eCC" = (
 /obj/structure/sign/warning/biohazard,
 /turf/closed/wall/r_wall,
@@ -76808,10 +76734,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft)
-"eXt" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/carpet,
-/area/security/detectives_office)
 "eZe" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -77114,15 +77036,6 @@
 	},
 /turf/open/floor/grass,
 /area/maintenance/starboard/aft)
-"gxV" = (
-/obj/structure/closet/crate,
-/obj/effect/decal/cleanable/cobweb,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 8;
-	name = "8maintenance loot spawner"
-	},
-/turf/open/floor/plating,
-/area/maintenance/fore)
 "gCh" = (
 /obj/structure/curtain{
 	color = "#ffffff";
@@ -77460,12 +77373,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"iNg" = (
-/obj/machinery/shower{
-	dir = 8
-	},
-/turf/open/floor/plasteel/showroomfloor,
-/area/security/warden)
 "iNi" = (
 /obj/structure/chair/sofa/left{
 	dir = 1
@@ -78061,10 +77968,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
-"lQK" = (
-/obj/structure/fireplace,
-/turf/open/floor/carpet,
-/area/security/warden)
 "lSm" = (
 /obj/structure/chair/sofa/right{
 	dir = 1
@@ -79340,6 +79243,10 @@
 	},
 /turf/open/floor/plasteel/white/corner,
 /area/hallway/secondary/entry)
+"trP" = (
+/obj/structure/closet/secure_closet/detective,
+/turf/open/floor/carpet,
+/area/security/detectives_office)
 "tsk" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 8
@@ -79889,15 +79796,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
-"wow" = (
-/obj/machinery/door/airlock/security{
-	name = "Detective's Office";
-	req_access_txt = "4"
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/dark,
-/area/security/detectives_office)
 "wxc" = (
 /obj/machinery/door/airlock/external{
 	name = "Atmospherics External Airlock";
@@ -108254,7 +108152,7 @@ ayU
 asl
 azT
 aBf
-aCt
+aBj
 aBj
 aDP
 aEU
@@ -108511,7 +108409,7 @@ uoT
 ajm
 ayY
 aBg
-aCu
+aBj
 bgu
 aEs
 ayY
@@ -108767,8 +108665,8 @@ aLA
 doR
 cYl
 ayY
-aBh
-aCv
+aCt
+aBj
 ayY
 ayY
 ayY
@@ -109025,8 +108923,8 @@ aLC
 vmL
 ayY
 aBi
-bvM
-ayY
+aCv
+ckz
 aEu
 asI
 aFb
@@ -109281,9 +109179,9 @@ ayv
 ayv
 ayv
 ayY
-lQK
-aMp
 ayY
+ayY
+ckz
 aEC
 aEX
 aFk
@@ -109537,10 +109435,10 @@ ajD
 ayw
 azD
 azD
-ayY
-aBk
-aBj
-ayY
+aBx
+aCu
+aje
+ckz
 aML
 aBn
 aFy
@@ -109794,11 +109692,11 @@ jPE
 qBn
 djV
 aLM
-ayY
-ayY
-aCx
-ayY
-aBn
+aBx
+emQ
+aje
+ckz
+trP
 cta
 ctp
 ctI
@@ -110051,10 +109949,10 @@ ajD
 fQM
 oTw
 lte
-ayY
-eyi
-iNg
-ayY
+aBx
+aje
+aje
+ckz
 ayJ
 aGB
 ayJ
@@ -110308,9 +110206,9 @@ ajD
 ajD
 ajD
 ajD
-ckz
-ckz
-ckz
+aBx
+aje
+qzh
 ckz
 csG
 ctk
@@ -110565,10 +110463,10 @@ djT
 pJY
 tWg
 azG
+aBx
+aje
+aje
 ckz
-aBm
-eXt
-wow
 aGb
 cto
 ayJ
@@ -110822,10 +110720,10 @@ piA
 ryX
 ajD
 ajD
-ckz
+aBx
 emQ
-aCL
-ayJ
+aje
+ckz
 bij
 aeR
 ayJ
@@ -111079,10 +110977,10 @@ djT
 qko
 tWg
 oEb
+aBx
+aBh
+aje
 ckz
-ayJ
-ayJ
-ayJ
 ayJ
 ayJ
 ayJ
@@ -111337,9 +111235,9 @@ aBx
 aBx
 aBx
 aBx
-gxV
+qzh
 aDX
-agq
+aBx
 aGm
 bvR
 aHu
