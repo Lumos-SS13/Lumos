@@ -338,14 +338,14 @@
 	icon_state = "chainarmor"
 	mob_overlay_icon = 'modular_lumos/icons/mob/clothing/suit.dmi'
 	item_state = "chainarmor"
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
 	imbueable = TRUE
 	resistance_flags = FIRE_PROOF
 	mutantrace_variation = STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/suit/armor/forging/Initialize()
 	. = ..()
-	AddComponent(/datum/component/armor_plate, 5, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 3, "wound" = 2))
+	AddComponent(/datum/component/armor_plate, 20, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 2, "wound" = 2))
 	create_reagents(1000, NO_REACT)
 	START_PROCESSING(SSobj, src)
 
@@ -388,7 +388,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 10)
 	imbueable = TRUE
 
 /obj/item/clothing/gloves/forging/Initialize()
@@ -462,6 +462,44 @@
 		if(imbued_reagent)
 			return
 		var/obj/item/reagent_containers/chosen_container = I
+		chosen_container.reagents.trans_to(src, 1000)
+	else
+		return ..()
+
+/obj/item/clothing/wrists/forging
+	name = "chainlink bracelet"
+	desc = "a bracelet made out of multiple chains"
+	icon = 'modular_lumos/icons/obj/clothing/wrist.dmi'
+	icon_state = "chain_bracelet"
+	resistance_flags = FIRE_PROOF
+	imbueable = TRUE
+
+/obj/item/clothing/wrists/forging/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate, 5, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 3, "wound" = 2))
+	create_reagents(1000, NO_REACT)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/wrists/forging/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+	
+/obj/item/clothing/wrists/forging/process()
+	if(!imbued_reagent)
+		return
+	if(istype(loc, /mob/living/carbon))
+		var/mob/living/carbon/C = loc
+		for(var/datum/reagent/in_reagent in C.reagents.reagent_list)
+			if(istype(in_reagent, imbued_reagent))
+				if((in_reagent.volume + 5) >= in_reagent.overdose_threshold)
+					return
+		C.reagents.add_reagent(imbued_reagent, 1)
+
+/obj/item/clothing/wrists/forging/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/reagent_containers))
+		if(imbued_reagent)
+			return
+		var/obj/item/reagent_containers/chosen_container = W
 		chosen_container.reagents.trans_to(src, 1000)
 	else
 		return ..()
@@ -633,4 +671,10 @@
 	name = "chain helmet"
 	reqs = 	list(/obj/item/forging/unfinished/chainlink = 5)
 	result = /obj/item/clothing/head/helmet/forging
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chainbracelet
+	name = "chain bracelet"
+	reqs = 	list(/obj/item/forging/unfinished/chainlink = 2)
+	result = /obj/item/clothing/wrists/forging
 	category = CAT_PRIMAL

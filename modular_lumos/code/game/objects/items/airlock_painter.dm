@@ -36,7 +36,7 @@
 		"splin", "splincorner", "splinu", "splino",
 		"splon", "sploncorner", "splonu", "splono",
 		"bord", "bordcorner", "bordercolor", "bordercolorcorner", "edge",
-		"delivery", "bot", "loading", "caution", "standclear", "arrows", 
+		"delivery", "bot", "loading", "caution", "standclear", "arrows",
 		"box", "boxcorner", "botright", "botleft", "checker"
 		)
 
@@ -207,7 +207,7 @@
 /obj/item/airlock_painter/floor_painter
 	name = "floor painter"
 	icon = 'icons/obj/objects.dmi'
-	icon_state = "decal_sprayer"
+	icon_state = "floor_painter"
 	desc = "An airlock painter, reprogramed to use a different style of paint in order to apply decals for floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed. Use it inhand to change the design, and Ctrl-Click to switch to decal-painting mode."
 
 	var/floor_icon

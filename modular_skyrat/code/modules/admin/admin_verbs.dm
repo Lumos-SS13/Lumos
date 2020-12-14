@@ -60,7 +60,8 @@
 	/client/proc/stop_sounds,
 	/client/proc/hide_verbs,			/*hides all our adminverbs*/
 	/datum/admins/proc/open_borgopanel,
-	/client/proc/respawn_blacklist // LUMOS EDIT - RESPAWNREQUEST
+	/client/proc/respawn_blacklist, // LUMOS EDIT - RESPAWNREQUEST
+	/client/proc/phonesay //LUMOS EDIT - PHONES
 	)
 
 GLOBAL_LIST_INIT(admin_verbs_fun, list(

@@ -20,6 +20,13 @@
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
+	//lumos
+	if(isliving(src))
+		if(findtext(message, config.ic_filter_regex))
+			// let's try to be a bit more informative!
+			to_chat(src, "A splitting spike of headache prevents you from saying whatever vile words you planned to say! You think better of saying such nonsense again.")
+			return
+	//lumos
 	//SKYRAT EDIT
 	set_typing_indicator(FALSE)
 	//END OF SKYRAT EDIT

@@ -4,6 +4,7 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
+		#include "map_files\Mining\AsteroidMining.dmm"
 		#include "map_files\Mining\Lavaland_Skyrat.dmm"
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\Deltastation\DeltaStation2_Skyrat.dmm"
@@ -12,6 +13,7 @@
 		#include "map_files\PubbyStation\PubbyStation_Skyrat.dmm"
 		#include "map_files\BoxStation\BoxStation_Lumos.dmm"
 		#include "map_files\LambdaStation\lambda_Skyrat.dmm"
+		#include "map_files\FridgeStation\FridgeStation.dmm"
 
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"

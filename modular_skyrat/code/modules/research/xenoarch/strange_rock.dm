@@ -171,6 +171,10 @@
 	initial_gas_mix = FROZEN_ATMOS
 	defer_change = TRUE
 
+/turf/closed/mineral/random/New(loc, ...)
+	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 15)
+	. = ..()
+
 /turf/closed/mineral/random/volcanic/New()
 	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 15)
 	. = ..()

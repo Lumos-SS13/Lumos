@@ -173,6 +173,11 @@ GENETICS SCANNER
 		if(advanced && H.has_dna())
 			msg += "\n<span class='info'>Genetic Stability: [H.dna.stability]%.</span>"
 
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		if(C.has_brain_worms())
+			msg += "\n<span class='info'>Foreign organism detected in subject's cranium. Recommended treatment: Dosage of sucrose solution and removal of object via surgery.</span>"
+
 	to_chat(user, msg)
 	msg = ""
 

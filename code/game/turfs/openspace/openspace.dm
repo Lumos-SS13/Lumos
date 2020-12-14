@@ -21,6 +21,8 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	var/can_cover_up = TRUE
 	var/can_build_on = TRUE
 
+	can_allow_icy = FALSE //lumos edit
+
 /turf/open/openspace/debug/update_multiz()
 	..()
 	return TRUE

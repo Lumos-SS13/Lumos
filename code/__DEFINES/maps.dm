@@ -91,6 +91,8 @@ require only minor tweaks.
 	ZTRAIT_UP = 1, \
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
 
+#define ZTRAITS_ASTEROID list(ZTRAIT_MINING = TRUE, ZTRAIT_LINKAGE = UNAFFECTED)
+
 #define ZTRAITS_REEBE list(ZTRAIT_REEBE = TRUE, ZTRAIT_BOMBCAP_MULTIPLIER = 0.5)
 #define ZTRAITS_VR list(ZTRAIT_VIRTUAL_REALITY = TRUE, ZTRAIT_AWAY = TRUE)
 

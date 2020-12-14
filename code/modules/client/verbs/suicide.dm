@@ -230,4 +230,6 @@
 	if(restrained())
 		to_chat(src, "You can't commit suicide while restrained! ((You can type Ghost instead however.))")
 		return
+	if(has_brain_worms()) //lumos
+		return //lumos
 	return TRUE
