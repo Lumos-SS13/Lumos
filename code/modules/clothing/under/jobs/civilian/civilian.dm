@@ -62,16 +62,6 @@
 	item_state = "b_suit"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/skirt
-	name = "head of personnel's jumpskirt"
-	desc = "It's a jumpskirt worn by someone who works in the position of \"Head of Personnel\"."
-	icon_state = "hop_skirt"
-	item_state = "b_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
 /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
 	name = "head of personnel's suit"
 	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
@@ -96,30 +86,11 @@
 	item_state = "g_suit"
 	permeability_coefficient = 0.5
 
-/obj/item/clothing/under/rank/civilian/hydroponics/skirt
-	name = "botanist's jumpskirt"
-	desc = "It's a jumpskirt designed to protect against minor plant-related hazards."
-	icon_state = "hydroponics_skirt"
-	item_state = "g_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
 /obj/item/clothing/under/rank/civilian/janitor
 	desc = "It's the official uniform of the station's janitor. It has minor protection from biohazards."
 	name = "janitor's jumpsuit"
 	icon_state = "janitor"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/under/rank/civilian/janitor/skirt
-	name = "janitor's jumpskirt"
-	desc = "It's the official skirt of the station's janitor. It has minor protection from biohazards."
-	icon_state = "janitor_skirt"
-	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/rank/civilian/janitor/maid
 	name = "maid uniform"

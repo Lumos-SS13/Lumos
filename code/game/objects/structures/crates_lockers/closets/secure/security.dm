@@ -32,7 +32,6 @@
 	//SKYRAT EDIT END
 	new /obj/item/clothing/neck/cloak/hop(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel(src)
-	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt(src)
 	new /obj/item/clothing/head/hopcap(src)
 	new /obj/item/clothing/head/hopcap/beret(src)
 	new /obj/item/cartridge/hop(src)
@@ -71,7 +70,6 @@
 	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
 	new /obj/item/clothing/suit/armor/vest/leather(src)
 	new /obj/item/clothing/suit/armor/hos(src)
-	new /obj/item/clothing/under/rank/security/head_of_security/skirt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
 	new /obj/item/clothing/head/HoS(src)
@@ -311,6 +309,5 @@
 	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/head/helmet/sec(src)
 	new /obj/item/clothing/under/rank/security/officer(src)
-	new /obj/item/clothing/under/rank/security/officer/skirt(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/flashlight/seclite(src)
