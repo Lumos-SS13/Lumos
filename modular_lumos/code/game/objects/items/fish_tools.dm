@@ -6,33 +6,33 @@
 
 /obj/item/fish_tool/brush
 	name = "brush"
-	desc = "A tool to clean dirty tanks."
+	desc = "A scrubber for removing algae from fish tank siding."
 	icon_state = "brush"
 
 /obj/item/fish_tool/clippers
 	name = "clippers"
-	desc = "A tool to cut back the seaweed."
+	desc = "A pair of sheers for trimming tank-grown seaweed."
 	icon_state = "clipper"
 
 /obj/item/fish_tool/egg_killer
 	name = "egg neutralizer"
-	desc = "A tool to euthanize fertilized fish eggs."
+	desc = "A specialized tool designed to euthanize fertilized fish eggs."
 	icon_state = "egg_scoop"
 
 /obj/item/fish_tool/analyzer
 	name = "fish analyzer"
-	desc = "A tool to analyze fish, or the tank."
-	icon_state = "fish_analyzer"
+	desc = "A little gadget designed to catalog statistics of fish in a tank."
+	icon_state = "fish_analy"
 
 /obj/item/fish_tool/fish_food
 	name = "fish food"
-	desc = "Food meant for fish, you can't eat... don't even try."
+	desc = "A little canister of flakes made from god knows what. Gives your fish the nutriment they need."
 	icon_state = "fish_food"
 	var/food_left = 100
 
 /obj/item/fish_tool/fishing_rod
 	name = "fishing rod"
-	desc = "A rod used to fish fish."
+	desc = "The middle aged father's cherished weapon of choice."
 	icon_state = "norm_rod"
 
 	var/fishing_chance = 60
@@ -41,14 +41,14 @@
 
 /obj/item/fish_tool/fishing_rod/primal
 	name = "primal fishing rod"
-	desc = "A rod that is quite durable, but the look is quite primal."
+	desc = "A primitive fishing rod. Sturdy and effective, and that's all that counts."
 	icon_state = "prim_rod"
 
 	fishing_chance = 40
 
 /obj/item/fish_tool/fishing_rod/advanced
 	name = "advanced fishing rod"
-	desc = "A rod that is the top of the line."
+	desc = "Women want me, fish fear me."
 	icon_state = "adv_rod"
 
 	fishing_chance = 80
@@ -98,7 +98,7 @@
 			3) Fish Egg Neutralizer - Used to kill fish eggs so you can use them for food.<br>
 			4) Fish Analyzer - Used on the tanks or the fish to analyze their health, hunger, age, etc.<br>
 			<br>
-			So that is the tools you can get, but I never explain the eggs, did I?<br>
+			So that is the tools you can get, but I never explained the eggs, did I?<br>
 			--------------------<br>
 			So fish eggs... if they are not euthanized, they will spawn their adult forms after two minutes.<br>
 			At birth is the sex designated for the fishes. Currently, they will not change their sex, so pray.<br>
@@ -112,7 +112,7 @@
 
 /obj/structure/closet/crate/wooden/fish_learning
 	name = "fish contents"
-	desc = "A crate that contains the manual to aquaculture, as well as some materials to start fishing."
+	desc = "A crate that contains a manual and some materials to start fishing."
 
 /obj/structure/closet/crate/wooden/fish_learning/PopulateContents()
 	. = ..()

@@ -17,18 +17,22 @@
 
 /obj/item/fish_box/salmon
 	name = "salmon box"
+	icon_state = "box_salmon"
 	inside_fish = /obj/item/fishy/salmon
 
 /obj/item/fish_box/shrimp
 	name = "shrimp box"
+	icon_state = "box_shrimp"
 	inside_fish = /obj/item/fishy/shrimp
 
 /obj/item/fish_box/lobster
 	name = "lobster box"
+	icon_state = "box_lobster"
 	inside_fish = /obj/item/fishy/lobster
 
 /obj/item/fish_box/catfish
 	name = "catfish box"
+	icon_state = "box_catfish"
 	inside_fish = /obj/item/fishy/catfish
 
 /obj/item/fish_box/attack_self(mob/user)
@@ -178,28 +182,28 @@
 	
 /obj/item/fishy/salmon
 	name = "salmon"
-	desc = "A salmon... fish that love to swim back to home."
+	desc = "More specifically a Sockeye Salmon, cherished for its rich taste by spacefarers and space bears alike."
 	spawned_egg = /obj/item/fishy_egg/salmon
 	icon_state = "salmon"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw)
 
 /obj/item/fishy/shrimp
 	name = "shrimp"
-	desc = "A shrimp... look at it's beady little eyes!"
+	desc = "Technically speaking... This is like, the cockroach of the sea."
 	spawned_egg = /obj/item/fishy_egg/shrimp
 	icon_state = "shrimp_raw"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
 
 /obj/item/fishy/lobster
 	name = "lobster"
-	desc = "A lobster... look at it's beady little eyes!"
+	desc = "Rest assured, this one won't talk. Usually."
 	spawned_egg = /obj/item/fishy_egg/lobster
 	icon_state = "lobster"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail)
 
 /obj/item/fishy/catfish
 	name = "catfish"
-	desc = "A catfish... careful, it can hurt you."
+	desc = "Real men catch them by hand."
 	spawned_egg = /obj/item/fishy_egg/catfish
 	icon_state = "catfish"
 	meat = list(/obj/item/reagent_containers/food/snacks/catfish_raw)
