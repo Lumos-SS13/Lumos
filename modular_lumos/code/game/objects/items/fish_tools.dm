@@ -53,6 +53,13 @@
 
 	fishing_chance = 80
 
+/obj/item/fish_tool/fishing_rod/wired
+	name = "makeshift fishing rod"
+	desc = "A haphazardly constructed fishing rod, not very effective but easy to create."
+	icon_state = "wire_rod"
+
+	fishing_chance = 30
+
 /obj/item/fish_tool/fishing_rod/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	if(!proximity_flag)
@@ -111,8 +118,8 @@
 			"}
 
 /obj/structure/closet/crate/wooden/fish_learning
-	name = "fish contents"
-	desc = "A crate that contains a manual and some materials to start fishing."
+	name = "aquaculture crate"
+	desc = "A crate that contains a manual and some materials for aquaculture."
 
 /obj/structure/closet/crate/wooden/fish_learning/PopulateContents()
 	. = ..()
