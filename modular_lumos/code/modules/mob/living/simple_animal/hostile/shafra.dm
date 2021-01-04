@@ -37,8 +37,8 @@
 	icon_living = "shafra"
 	icon_dead = "shafra_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	maxHealth = 200
-	health = 200
+	maxHealth = 85
+	health = 85
 	attack_verb_continuous = "pulverizes"
 	attack_verb_simple = "pulverize"
 	attack_sound = 'modular_lumos/sound/weapons/biteheavy.ogg'
@@ -53,6 +53,7 @@
 	a_intent = INTENT_HARM
 	vision_range = 4
 	aggro_vision_range = 7
+	see_in_dark = 6
 	minbodytemp = 90
 	maxbodytemp = 1000
 	robust_searching = 1
