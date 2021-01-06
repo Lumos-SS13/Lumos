@@ -46,9 +46,11 @@
 	options["Gemstone Eye"] = "gemeye"
 	options["Golden Skull"] = "skull"
 	options["Goatman"] = "devil"
+	options["Lightbulb"] = "lumos"
 	options["Sun Gem"] = "sun"
 	options["Moon Gem"] = "moon"
-	options["Uthani Figure"] = "lizrobe"
+	options["Racial - Uthani Figure"] = "lizrobe"
+	options["Racial - Plasmaman Figure"] = "plasmeme"
 
 	var/choice = input(M,"Choose your icon!","Customize Figure") in options
 	if(src && choice && !M.stat && in_range(M,src))
@@ -109,12 +111,17 @@
 			desc = "A golden holy figure of a humanoid skull."
 		else if(options[choice] == "devil")
 			desc = "A painted holy figure of a seated humanoid goat with wings."
+		else if(options[choice] == "lumos")
+			desc = "A holy figure of a lightbulb."
 		else if(options[choice] == "sun")
 			desc = "A holy figure of a star."
 		else if(options[choice] == "moon")
 			desc = "A holy figure of a small planetoid."
 		else if(options[choice] == "lizrobe")
-			desc = "A painted holy figure of a plain looking Uthani in a robe."
+			desc = "A painted holy figure of a plain looking Uthani in a robe. Hiss!"
+		else if(options[choice] == "plasmeme")
+			desc = "A painted holy figure of a plain looking Plasma Skeleton. Rattle!"
 
-		to_chat(M, "The religious icon is now a [choice]. All hail!")
+
+		to_chat(M, "The religious icon is now a [choice]. Praise be!")
 		return 1
