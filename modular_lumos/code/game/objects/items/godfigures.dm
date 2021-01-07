@@ -4,13 +4,55 @@
 	//description_info = "Right click to select a new sprite to fit your needs."
 	icon = 'modular_lumos/icons/obj/godfigures.dmi'
 	icon_state = "mrobe"
-	force = 10
+	force = 0
 	throw_speed = 1
 	throw_range = 4
-	throwforce = 10
+	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/godfig/frobe
+	name = "Painted - Robed Human Female"
+	desc = "A painted holy figure of a plain looking human woman in a robe."
+	icon_state = "frobe"
 
+/obj/item/godfig/mrobe
+	name = "Painted - Robed Human Male (Pale)"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "mrobe"
+
+/obj/item/godfig/mrobedark
+	name = "Painted - Robed Human Male (Dark)"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "mrobedark"
+
+// /obj/item/choice_beacon/godfig
+// 	name = "religious icon"
+// 	desc = "A painted holy figure of a plain looking human man in a robe."
+// 	icon = 'modular_lumos/icons/obj/godfigures.dmi'
+// 	icon_state = "mrobe"
+
+/obj/item/choice_beacon/box/godfig
+	name = "choice box (religious icons)"
+	desc = "Think really hard about what you want, and then rip it open!"
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "deliverypackage3"
+	item_state = "deliverypackage3"
+
+// yoinked from plushie box code
+/obj/item/choice_beacon/box/godfig/generate_display_names()
+	var/list/fig_list = list()
+	var/list/fig_set = subtypesof(/obj/item/godfig)
+	for(var/V in fig_set)
+		var/atom/A = V
+		fig_list[initial(A.name)] = A
+	return fig_list
+
+/obj/item/choice_beacon/box/godfig/spawn_option(choice,mob/living/M)
+	M.temporarilyRemoveItemFromInventory(src, TRUE)
+	M.put_in_hands(new choice)
+	qdel(src)
+
+/*
 /obj/item/godfig/verb/resprite_figure()
 	set name = "Customize Figure"
 	set category = "Object"
@@ -133,3 +175,4 @@
 
 		to_chat(M, "The religious icon is now a [choice]. Praise be!")
 		return 1
+*/
