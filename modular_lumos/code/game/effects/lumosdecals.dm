@@ -9,6 +9,8 @@
 	icon = 'modular_lumos/icons/turf/lumosdecals.dmi'
 	icon_state = "baddecal"
 	name = "Bad Decal"
+	layer = TURF_PLATING_DECAL_LAYER
+	alpha = 110
 
 /obj/effect/turf_decal/lumos/shower
 	icon_state = "shower"
