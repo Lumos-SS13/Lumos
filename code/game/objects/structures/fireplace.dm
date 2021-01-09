@@ -1,14 +1,15 @@
 #define LOG_BURN_TIMER 150
 #define PAPER_BURN_TIMER 5
-#define MAXIMUM_BURN_TIMER 3000
+#define MAXIMUM_BURN_TIMER 6000
 
 /obj/structure/fireplace
 	name = "fireplace"
-	desc = "A large stone brick fireplace."
+	desc = "A large fireplace."
 	icon = 'icons/obj/fireplace.dmi'
 	icon_state = "fireplace"
 	density = FALSE
 	anchored = TRUE
+	max_integrity = 70
 	pixel_x = -16
 	resistance_flags = FIRE_PROOF
 	var/lit = FALSE
@@ -38,7 +39,20 @@
 		return TRUE
 
 /obj/structure/fireplace/attackby(obj/item/T, mob/user)
-	if(istype(T, /obj/item/stack/sheet/mineral/wood))
+	if(istype(T,/obj/item/wrench))
+		to_chat(user, "<span class='notice'>You begin to [anchored ? "unwrench" : "wrench"] [src].</span>")
+		if(T.use_tool(src, user, 20, volume=50))
+			to_chat(user, "<span class='notice'>You successfully [anchored ? "unwrench" : "wrench"] [src].</span>")
+			setAnchored(!anchored)
+	else if (istype(T,/obj/item/screwdriver))
+		if(!T.tool_start_check(user, amount=0))
+			return FALSE
+			user.visible_message("[user] is taking apart the [name].", "<span class='notice'>You are disassembling the [name]...</span>")
+		if(T.use_tool(src, user, 40, volume=50))
+			user.visible_message("[user] takes apart the [name].", "<span class='notice'>You disassemble the [name].</span>")
+			deconstruct(TRUE)
+		return
+	else if (istype(T, /obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/wood = T
 		var/space_remaining = MAXIMUM_BURN_TIMER - burn_time_remaining()
 		var/space_for_logs = round(space_remaining / LOG_BURN_TIMER)
@@ -74,15 +88,15 @@
 	if(!lit)
 		return
 	switch(burn_time_remaining())
-		if(0 to 500)
+		if(0 to 1500)
 			. += "fireplace_fire0"
-		if(500 to 1000)
+		if(1500 to 2500)
 			. += "fireplace_fire1"
-		if(1000 to 1500)
+		if(2500 to 3500)
 			. += "fireplace_fire2"
-		if(1500 to 2000)
+		if(3500 to 4000)
 			. += "fireplace_fire3"
-		if(2000 to MAXIMUM_BURN_TIMER)
+		if(4000 to MAXIMUM_BURN_TIMER)
 			. += "fireplace_fire4"
 	. += "fireplace_glow"
 
@@ -92,15 +106,15 @@
 		return
 
 	switch(burn_time_remaining())
-		if(0 to 500)
+		if(0 to 1500)
 			set_light(1)
-		if(500 to 1000)
+		if(1500 to 2500)
 			set_light(2)
-		if(1000 to 1500)
+		if(2500 to 3500)
 			set_light(3)
-		if(1500 to 2000)
+		if(3500 to 4000)
 			set_light(4)
-		if(2000 to MAXIMUM_BURN_TIMER)
+		if(4000 to MAXIMUM_BURN_TIMER)
 			set_light(6)
 
 /obj/structure/fireplace/process()
@@ -140,7 +154,7 @@
 
 /obj/structure/fireplace/proc/ignite()
 	lit = TRUE
-	desc = "A large stone brick fireplace, warm and cozy."
+	desc = "A large fireplace, warm and cozy."
 	flame_expiry_timer = world.time + fuel_added
 	fuel_added = 0
 	update_icon()
@@ -151,3 +165,9 @@
 	update_icon()
 	adjust_light()
 	desc = initial(desc)
+
+/obj/structure/fireplace_metal
+	icon = 'icons/obj/fireplace.dmi'
+	icon_state = "fireplace_metal"
+	name = "metal fireplace"
+	desc = "A large fireplace."
