@@ -41,8 +41,8 @@
 /obj/structure/fireplace/attackby(obj/item/T, mob/user)
 	if (istype(T,/obj/item/screwdriver))
 		if(!T.tool_start_check(user, amount=0))
-			return FALSE
 			user.visible_message("[user] is taking apart the [name].", "<span class='notice'>You are disassembling the [name]...</span>")
+			return FALSE
 		if(T.use_tool(src, user, 40, volume=50))
 			user.visible_message("[user] takes apart the [name].", "<span class='notice'>You disassemble the [name].</span>")
 			deconstruct(TRUE)
