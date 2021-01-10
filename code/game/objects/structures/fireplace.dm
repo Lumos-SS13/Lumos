@@ -39,12 +39,7 @@
 		return TRUE
 
 /obj/structure/fireplace/attackby(obj/item/T, mob/user)
-	if(istype(T,/obj/item/wrench))
-		to_chat(user, "<span class='notice'>You begin to [anchored ? "unwrench" : "wrench"] [src].</span>")
-		if(T.use_tool(src, user, 20, volume=50))
-			to_chat(user, "<span class='notice'>You successfully [anchored ? "unwrench" : "wrench"] [src].</span>")
-			setAnchored(!anchored)
-	else if (istype(T,/obj/item/screwdriver))
+	if (istype(T,/obj/item/screwdriver))
 		if(!T.tool_start_check(user, amount=0))
 			return FALSE
 			user.visible_message("[user] is taking apart the [name].", "<span class='notice'>You are disassembling the [name]...</span>")
