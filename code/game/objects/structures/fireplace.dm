@@ -161,7 +161,7 @@
 	adjust_light()
 	desc = initial(desc)
 
-/obj/structure/fireplace_metal
+/obj/structure/fireplace/fireplace_metal
 	icon = 'icons/obj/fireplace.dmi'
 	icon_state = "fireplace_metal"
 	name = "metal fireplace"
