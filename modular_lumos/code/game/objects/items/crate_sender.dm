@@ -106,9 +106,13 @@ GLOBAL_LIST_EMPTY(crate_receiver_pads)
 		to_chat(user, "<span class='warning'>There is already a receiver pad...</span>")
 		playsound(loc, 'sound/machines/DeniedBeep.ogg', 50, 1)
 		return
+	var/area/src_area = get_area(src)
+	if(!is_station_level(src_area.z))
+		to_chat(user, "<span class='warning'>Reciever pad's can only be deployed on station...</span>")
+		playsound(loc, 'sound/machines/DeniedBeep.ogg', 50, 1)
+		return
 	to_chat(user, "<span class='warning'>You create a new receiver pad.</span>")
 	playsound(loc, 'sound/machines/chime.ogg', 50, 1)
-	var/area/src_area = get_area(src)
 	name = "[src_area.name] crate sender"
 	var/obj/effect/decal/crate_receiver_pad/CP = new /obj/effect/decal/crate_receiver_pad(get_turf(src))
 	linked_receiver_pad = CP
