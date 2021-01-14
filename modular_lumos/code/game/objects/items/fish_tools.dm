@@ -37,7 +37,7 @@
 
 /obj/item/fish_tool/fish_food/huge
 	name = "huge fish food"
-	desc = "Sometimes, you just need alittle more fish food."
+	desc = "Sometimes, you just need a little more fish food."
 	icon_state = "fish_food_huge"
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = 400)
