@@ -228,9 +228,9 @@
 /obj/item/fishy/seadevil
 	name = "sea devil"
 	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
-	spawned_egg = /obj/item/fishy_egg/minicarp
+	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "seadevil"
-	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
 
 /obj/item/fishy_egg
 	name = "fish egg"
@@ -278,3 +278,7 @@
 /obj/item/fishy_egg/minicarp
 	fish_parent = /obj/item/fishy/minicarp
 	icon_state = "eggs_tinycarp"
+
+/obj/item/fishy_egg/devil
+	fish_parent = /obj/item/fishy/seadevil
+	icon_state = "eggs_devil"
