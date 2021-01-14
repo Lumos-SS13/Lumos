@@ -39,7 +39,7 @@
 	name = "raw catfish"
 	desc = "Catfish meat, ready to be eaten."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "fishfillet"
+	icon_state = "catfishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/catfish
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("catfish" = 15, "salt" = 3)
@@ -58,7 +58,7 @@
 	name = "raw salmon"
 	desc = "Salmon meat, ready to be eaten."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "fishfillet"
+	icon_state = "salmonfishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/salmon
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("salmon" = 15, "salt" = 3)

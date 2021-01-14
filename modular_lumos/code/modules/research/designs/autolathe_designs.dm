@@ -11,7 +11,7 @@
 	name = "Fish Tank Brush"
 	id = "fish_brush"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/fish_tool/brush
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
@@ -20,7 +20,7 @@
 	name = "Fish Tank Clipper"
 	id = "fish_clipper"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/fish_tool/clippers
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
@@ -29,7 +29,7 @@
 	name = "Fish Analyzer"
 	id = "fish_analyzer"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/fish_tool/analyzer
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
@@ -38,8 +38,17 @@
 	name = "Fish Egg Killer"
 	id = "fish_egg_killer"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/fish_tool/egg_killer
+	category = list("initial","Tools","Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+
+/datum/design/normal_fish_rod
+	name = "Normal Fishing Rod"
+	id = "fish_rod_normal"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 300, /datum/material/glass = 50)
+	build_path = /obj/item/fish_tool/fishing_rod
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
@@ -47,7 +56,7 @@
 	name = "Advanced Fishing Rod"
 	id = "fish_rod_adv"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 600)
+	materials = list(/datum/material/iron = 600, /datum/material/glass = 200)
 	build_path = /obj/item/fish_tool/fishing_rod/advanced
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE

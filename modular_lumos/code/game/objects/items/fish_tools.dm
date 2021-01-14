@@ -3,6 +3,7 @@
 	desc = "parent fish tool, do not use"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/iron = 200)
 
 /obj/item/fish_tool/brush
 	name = "brush"
@@ -13,6 +14,10 @@
 	name = "clippers"
 	desc = "A pair of sheers for trimming tank-grown seaweed."
 	icon_state = "clipper"
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	sharpness = SHARP_EDGED
+	tool_behaviour = TOOL_SCALPEL
+	toolspeed = 2
 
 /obj/item/fish_tool/egg_killer
 	name = "egg neutralizer"
@@ -30,9 +35,17 @@
 	icon_state = "fish_food"
 	var/food_left = 100
 
+/obj/item/fish_tool/fish_food/huge
+	name = "huge fish food"
+	desc = "Sometimes, you just need alittle more fish food."
+	icon_state = "fish_food_huge"
+	w_class = WEIGHT_CLASS_NORMAL
+	custom_materials = list(/datum/material/iron = 400)
+	food_left = 300
+	
 /obj/item/fish_tool/fishing_rod
 	name = "fishing rod"
-	desc = "The middle aged father's cherished weapon of choice."
+	desc = "They call me a master baiter."
 	icon_state = "norm_rod"
 
 	var/fishing_chance = 60
@@ -44,7 +57,7 @@
 	desc = "A primitive fishing rod. Sturdy and effective, and that's all that counts."
 	icon_state = "prim_rod"
 
-	fishing_chance = 40
+	fishing_chance = 50
 
 /obj/item/fish_tool/fishing_rod/advanced
 	name = "advanced fishing rod"
@@ -53,7 +66,7 @@
 
 	fishing_chance = 80
 
-/obj/item/fish_tool/fishing_rod/wired
+/obj/item/fish_tool/fishing_rod/makeshift
 	name = "makeshift fishing rod"
 	desc = "A haphazardly constructed fishing rod, not very effective but easy to create."
 	icon_state = "wire_rod"
@@ -109,9 +122,7 @@
 			--------------------<br>
 			So fish eggs... if they are not euthanized, they will spawn their adult forms after two minutes.<br>
 			At birth is the sex designated for the fishes. Currently, they will not change their sex, so pray.<br>
-			Fish eggs also taste pretty good. Imagine little balls that pop in your mouth that are a bit salty, mmmm.<br>
-			<br>
-			P.S. I will hurt you if you take that sexually.<br>
+			Fish eggs also taste pretty good.<br>
 			<br>
 			with much love,<br>
 			<i>Kobe Ivanov</i>

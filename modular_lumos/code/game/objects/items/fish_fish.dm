@@ -208,6 +208,13 @@
 	icon_state = "catfish"
 	meat = list(/obj/item/reagent_containers/food/snacks/catfish_raw)
 
+/obj/item/fishy/minicarp
+	name = "lesser space carp"
+	desc = "A small sub-species of space carp. Just as toxic, but alot less likely to take a chunk out of you."
+	spawned_egg = /obj/item/fishy_egg/minicarp
+	icon_state = "tinycarp"
+	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+
 /obj/item/fishy_egg
 	name = "fish egg"
 	desc = "A fertilized fish egg waiting to hatch."
@@ -250,3 +257,7 @@
 /obj/item/fishy_egg/catfish
 	fish_parent = /obj/item/fishy/catfish
 	icon_state = "catfish_eggs"
+
+/obj/item/fishy_egg/minicarp
+	fish_parent = /obj/item/fishy/minicarp
+	icon_state = "eggs_tinycarp"
