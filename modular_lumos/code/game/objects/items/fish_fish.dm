@@ -20,6 +20,11 @@
 	icon_state = "box_salmon"
 	inside_fish = /obj/item/fishy/salmon
 
+/obj/item/fish_box/salmon/steelhead
+	name = "steelhead box"
+	icon_state = "box_steelhead"
+	inside_fish = /obj/item/fishy/salmon/steelhead
+
 /obj/item/fish_box/shrimp
 	name = "shrimp box"
 	icon_state = "box_shrimp"
@@ -29,6 +34,11 @@
 	name = "lobster box"
 	icon_state = "box_lobster"
 	inside_fish = /obj/item/fishy/lobster
+
+/obj/item/fish_box/lobster/rock
+	name = "rock lobster box"
+	icon_state = "box_lobster_rock"
+	inside_fish = /obj/item/fishy/lobster/rock
 
 /obj/item/fish_box/catfish
 	name = "catfish box"
@@ -44,6 +54,16 @@
 	name = "sea devil box"
 	icon_state = "box_devil"
 	inside_fish = /obj/item/fishy/seadevil
+
+/obj/item/fish_box/shark
+	name = "shark box"
+	icon_state = "box_shark"
+	inside_fish = /obj/item/fishy/shark
+
+/obj/item/fish_box/asteroid_worm
+	name = "asteroid worm box"
+	icon_state = "box_asterworm"
+	inside_fish = /obj/item/fishy/asteroid_worm
 
 /obj/item/fish_box/attack_self(mob/user)
 	if(inside_fish)
@@ -209,7 +229,7 @@
 
 /obj/item/fishy/shrimp
 	name = "shrimp"
-	desc = "Technically speaking... This is like, the cockroach of the sea."
+	desc = "Technically speaking... This is like the cockroach of the sea."
 	spawned_egg = /obj/item/fishy_egg/shrimp
 	icon_state = "shrimp_raw"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
@@ -223,10 +243,10 @@
 
 /obj/item/fishy/lobster/rock
 	name = "rock lobster"
-	desc = "Found under piers, often to a suprising capacity."
+	desc = "Found under space piers, often to a suprising capacity."
 	spawned_egg = /obj/item/fishy_egg/lobster
 	icon_state = "lobster_rock"
-	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
+	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw = 1, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
 
 /obj/item/fishy/catfish
 	name = "catfish"
@@ -254,6 +274,13 @@
 	desc = "A small species of shark capable of reproducing fast enough for aquaculture."
 	spawned_egg = /obj/item/fishy_egg/shark
 	icon_state = "shark"
+	meat = list(/obj/item/reagent_containers/food/snacks/shark_raw = 2, /obj/item/reagent_containers/food/snacks/shark_raw_fin)
+
+/obj/item/fishy/asteroid_worm
+	name = "asteroid worm"
+	desc = "A toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
+	spawned_egg = /obj/item/fishy_egg/devil
+	icon_state = "asteroid_worm"
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
 
 /obj/item/fishy_egg
@@ -316,3 +343,7 @@
 /obj/item/fishy_egg/shark
 	fish_parent = /obj/item/fishy/shark
 	icon_state = "shark_eggs_new"
+
+/obj/item/fishy_egg/asteroid_worm
+	fish_parent = /obj/item/fishy/asteroid_worm
+	icon_state = "worm_eggs"
