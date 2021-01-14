@@ -16,6 +16,8 @@
 	tastes = list("fish" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
+/// RAW MEAT (Lesser Carp use real carp meat) ///
+
 /obj/item/reagent_containers/food/snacks/shrimp_raw
 	name = "raw shrimp"
 	desc = "A raw shrimp, not recommended for consumption."
@@ -25,15 +27,6 @@
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shrimp" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
-
-/obj/item/reagent_containers/food/snacks/shrimp
-	name = "cooked shrimp"
-	desc = "A small shrimp, ready to be eaten."
-	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "shrimp_cooked"
-	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	tastes = list("shrimp" = 15, "salt" = 3)
-	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/catfish_raw
 	name = "raw catfish"
@@ -45,15 +38,6 @@
 	tastes = list("catfish" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
-/obj/item/reagent_containers/food/snacks/catfish
-	name = "cooked catfish"
-	desc = "Catfish meat, ready to be eaten."
-	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "friedcatfish"
-	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	tastes = list("catfish" = 15, "salt" = 3)
-	foodtype = MEAT
-
 /obj/item/reagent_containers/food/snacks/salmon_raw
 	name = "raw salmon"
 	desc = "Raw salmon, not recommended for consumption."
@@ -64,15 +48,6 @@
 	tastes = list("salmon" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
-/obj/item/reagent_containers/food/snacks/salmon
-	name = "cooked salmon"
-	desc = "Salmon meat, ready to be eaten."
-	icon = 'modular_lumos/icons/obj/seafood.dmi'
-	icon_state = "smokedsalmon"
-	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	tastes = list("salmon" = 15, "salt" = 3)
-	foodtype = MEAT
-
 /obj/item/reagent_containers/food/snacks/lobster_raw
 	name = "raw lobster"
 	desc = "Raw lobster, not recommended for consumption."
@@ -82,6 +57,64 @@
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/lobster_raw_tail
+	name = "raw lobster tail"
+	desc = "Raw lobster tail, not recommended for consumption."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "raw_lobster_tail"
+	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("lobster" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/seadevil_raw
+	name = "raw sea devil meat"
+	desc = "Raw sea devil, even in death it taunts you."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "devilfillet"
+	cooked_type = /obj/item/reagent_containers/food/snacks/seadevil
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("annoyance" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
+/// COOKED AND SUSHI ///
+
+/obj/item/reagent_containers/food/snacks/shrimp
+	name = "cooked shrimp"
+	desc = "A small shrimp, ready to be eaten."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "shrimp_cooked"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("shrimp" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/catfish
+	name = "cooked catfish"
+	desc = "Catfish meat, ready to be eaten."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "friedcatfish"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("catfish" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/salmon
+	name = "cooked salmon"
+	desc = "Salmon meat, ready to be eaten."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "smokedsalmon"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("salmon" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/seadevil
+	name = "cooked sea devil"
+	desc = "Little fucker deserved it."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "cooked_devil"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("relief" = 15, "salt" = 3)
+	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/basic_lobster
 	name = "steamed lobster"
@@ -100,16 +133,6 @@
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 5)
 	tastes = list("lobster" = 15, "salt" = 3, "lemon" = 3, "greens" = 3)
 	foodtype = MEAT | FRUIT | VEGETABLES
-
-/obj/item/reagent_containers/food/snacks/lobster_raw_tail
-	name = "raw lobster tail"
-	desc = "Raw lobster tail, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
-	icon_state = "raw_lobster_tail"
-	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
-	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
-	tastes = list("lobster" = 15, "salt" = 3)
-	foodtype = MEAT | RAW
 
 /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	name = "baked lobster tail"

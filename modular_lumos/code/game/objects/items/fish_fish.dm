@@ -9,7 +9,7 @@
 	name = "fish box"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "box"
-	desc = "A box that is storing a fish. Just open it up and get your two fishes. Random sexes!"
+	desc = "A box that is storing fish. Just open it up and get your two fishes. Random sexes!"
 
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -34,6 +34,16 @@
 	name = "catfish box"
 	icon_state = "box_catfish"
 	inside_fish = /obj/item/fishy/catfish
+
+/obj/item/fish_box/minicarp
+	name = "lesser carp box"
+	icon_state = "box_minicarp"
+	inside_fish = /obj/item/fishy/minicarp
+
+/obj/item/fish_box/devil
+	name = "sea devil box"
+	icon_state = "box_devil"
+	inside_fish = /obj/item/fishy/seadevil
 
 /obj/item/fish_box/attack_self(mob/user)
 	if(inside_fish)
@@ -213,6 +223,13 @@
 	desc = "A small sub-species of space carp. Just as toxic, but alot less likely to take a chunk out of you."
 	spawned_egg = /obj/item/fishy_egg/minicarp
 	icon_state = "tinycarp"
+	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+
+/obj/item/fishy/seadevil
+	name = "sea devil"
+	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
+	spawned_egg = /obj/item/fishy_egg/minicarp
+	icon_state = "seadevil"
 	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
 
 /obj/item/fishy_egg

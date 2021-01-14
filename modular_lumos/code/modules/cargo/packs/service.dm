@@ -49,3 +49,11 @@
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "fish food crate"
 
+/datum/supply_pack/service/exoticfish_box
+	name = "Exotic Fish Crate"
+	desc = "New from Gene-Tak! Gene-modded Fish are now capable of breeding in non-terrestrial habitats! This crate features two boxes of rare creatures!"
+	cost = 3500
+	contains = list(/obj/item/fish_box/minicarp,
+					/obj/item/fish_box/devil)
+	crate_type = /obj/structure/closet/crate/wooden
+	crate_name = "exotic fish crate"
