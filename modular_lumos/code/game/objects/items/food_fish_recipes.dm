@@ -31,6 +31,15 @@
 	result = /obj/item/reagent_containers/food/snacks/devilburger
 	subcategory = CAT_SEAFOOD
 
+/datum/crafting_recipe/food/shrimpskewer
+	name = "Shrimp Skewer"
+	reqs = list(
+		/obj/item/stack/rods = 1,
+		/obj/item/reagent_containers/food/snacks/shrimp = 4
+	)
+	result = /obj/item/reagent_containers/food/snacks/shrimpskewer
+	subcategory = CAT_SEAFOOD
+
 /// SUSHI ///
 
 /datum/crafting_recipe/food/masago_sushi

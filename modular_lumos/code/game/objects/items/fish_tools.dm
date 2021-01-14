@@ -28,6 +28,7 @@
 	name = "fish analyzer"
 	desc = "A little gadget designed to catalog statistical data of fish in a tank."
 	icon_state = "fish_analy"
+	custom_materials = list(/datum/material/iron = 200, /datum/material/glass = 50)
 
 /obj/item/fish_tool/fish_food
 	name = "fish food"

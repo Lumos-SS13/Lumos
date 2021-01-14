@@ -29,13 +29,13 @@
 	name = "Fish Analyzer"
 	id = "fish_analyzer"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 200)
+	materials = list(/datum/material/iron = 200, /datum/material/glass = 50)
 	build_path = /obj/item/fish_tool/analyzer
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
 /datum/design/fish_egg_killer
-	name = "Fish Egg Killer"
+	name = "Fish Egg Neutralizer"
 	id = "fish_egg_killer"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 200)

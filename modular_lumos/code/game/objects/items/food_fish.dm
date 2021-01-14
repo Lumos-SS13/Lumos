@@ -81,6 +81,26 @@
 	tastes = list("annoyance" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
+/obj/item/reagent_containers/food/snacks/shark_raw // Don't eat shark IRL, it's bad for the environment
+	name = "raw shark meat"
+	desc = "Raw shark meat, not recommended for consumption."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "fishfillet"
+	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("shark" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/shark_raw_fin
+	name = "raw shark fin"
+	desc = "Raw shark fin, not recommended for consumption."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "shark_fin"
+	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("shark" = 5, "salt" = 1)
+	foodtype = MEAT | RAW
+
 /// COOKED SEAFOOD (NON-SUSHI) ///
 
 /obj/item/reagent_containers/food/snacks/shrimp
@@ -90,6 +110,15 @@
 	icon_state = "shrimp_cooked"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shrimp" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/shrimpskewer
+	name = "shrimp skewer"
+	desc = "Four Shrimp stuck on a rod. Peak dining."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "shrimpskewer"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 10, /datum/reagent/consumable/nutriment = 20, /datum/reagent/consumable/nutriment/vitamin = 8)
+	tastes = list("shrimp" = 30, "salt" = 1)
 	foodtype = MEAT
 
 /obj/item/reagent_containers/food/snacks/catfish
@@ -153,6 +182,24 @@
 	icon_state = "lobster_tail_baked"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/shark
+	name = "pan-seared shark meat"
+	desc = "Cooked shark meat. Ecologist are crying."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "sharkfillet"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("shark" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/shark_fin
+	name = "dried shark fin"
+	desc = "Dried shark fin, for soups and grinding into gelatin."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "shark_fin_dry"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("shark" = 5, "salt" = 1)
 	foodtype = MEAT
 
 /// SUSHI ///

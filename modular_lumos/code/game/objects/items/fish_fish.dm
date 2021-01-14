@@ -37,7 +37,7 @@
 
 /obj/item/fish_box/minicarp
 	name = "lesser carp box"
-	icon_state = "box_minicarp"
+	icon_state = "box_carp"
 	inside_fish = /obj/item/fishy/minicarp
 
 /obj/item/fish_box/devil
@@ -200,6 +200,13 @@
 	icon_state = "salmon"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw)
 
+/obj/item/fishy/salmon/steelhead
+	name = "steelhead salmon"
+	desc = "A sub-species of salmon. Their skull is comprised of a organic stone-like substance."
+	spawned_egg = /obj/item/fishy_egg/salmon/steelhead
+	icon_state = "steelhead"
+	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw, /obj/item/stack/ore/iron)
+
 /obj/item/fishy/shrimp
 	name = "shrimp"
 	desc = "Technically speaking... This is like, the cockroach of the sea."
@@ -213,6 +220,13 @@
 	spawned_egg = /obj/item/fishy_egg/lobster
 	icon_state = "lobster"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail)
+
+/obj/item/fishy/lobster/rock
+	name = "rock lobster"
+	desc = "Found under piers, often to a suprising capacity."
+	spawned_egg = /obj/item/fishy_egg/lobster
+	icon_state = "lobster_rock"
+	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
 
 /obj/item/fishy/catfish
 	name = "catfish"
@@ -233,6 +247,13 @@
 	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "seadevil"
+	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
+
+/obj/item/fishy/shark
+	name = "space shark"
+	desc = "A small species of shark capable of reproducing fast enough for aquaculture."
+	spawned_egg = /obj/item/fishy_egg/shark
+	icon_state = "shark"
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
 
 /obj/item/fishy_egg
@@ -266,6 +287,9 @@
 	fish_parent = /obj/item/fishy/salmon
 	icon_state = "salmon_eggs"
 
+/obj/item/fishy_egg/salmon/steelhead
+	fish_parent = /obj/item/fishy/salmon/steelhead
+
 /obj/item/fishy_egg/shrimp
 	fish_parent = /obj/item/fishy/shrimp
 	icon_state = "shrimp_eggs"
@@ -274,6 +298,9 @@
 	fish_parent = /obj/item/fishy/lobster
 	icon_state = "salmon_eggs"
 
+/obj/item/fishy_egg/lobster/rock
+	fish_parent = /obj/item/fishy/lobster/rock
+	
 /obj/item/fishy_egg/catfish
 	fish_parent = /obj/item/fishy/catfish
 	icon_state = "catfish_eggs"
@@ -285,3 +312,7 @@
 /obj/item/fishy_egg/devil
 	fish_parent = /obj/item/fishy/seadevil
 	icon_state = "eggs_devil"
+
+/obj/item/fishy_egg/shark
+	fish_parent = /obj/item/fishy/shark
+	icon_state = "shark_eggs_new"
