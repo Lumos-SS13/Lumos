@@ -9,7 +9,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish_eggs
 	name = "fish eggs"
-	desc = "A small group of fish eggs."
+	desc = "A sticky little clump of roe."
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "eggs"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -18,7 +18,7 @@
 
 /obj/item/reagent_containers/food/snacks/shrimp_raw
 	name = "raw shrimp"
-	desc = "A small shrimp, ready to be eaten."
+	desc = "A raw shrimp, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "shrimp_raw"
 	cooked_type = /obj/item/reagent_containers/food/snacks/shrimp
@@ -37,7 +37,7 @@
 
 /obj/item/reagent_containers/food/snacks/catfish_raw
 	name = "raw catfish"
-	desc = "Catfish meat, ready to be eaten."
+	desc = "Raw catfish, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "catfishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/catfish
@@ -56,7 +56,7 @@
 
 /obj/item/reagent_containers/food/snacks/salmon_raw
 	name = "raw salmon"
-	desc = "Salmon meat, ready to be eaten."
+	desc = "Raw salmon, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "salmonfishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/salmon
@@ -75,7 +75,7 @@
 
 /obj/item/reagent_containers/food/snacks/lobster_raw
 	name = "raw lobster"
-	desc = "Lobster meat, ready to be eaten."
+	desc = "Raw lobster, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "raw_lobster_meat"
 	cooked_type = /obj/item/reagent_containers/food/snacks/basic_lobster
@@ -85,7 +85,7 @@
 
 /obj/item/reagent_containers/food/snacks/basic_lobster
 	name = "steamed lobster"
-	desc = "Lobster that has been simply cooked."
+	desc = "Uniformly steamed lobster."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "lobster_steamed_simple"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -94,7 +94,7 @@
 
 /obj/item/reagent_containers/food/snacks/deluxe_lobster
 	name = "deluxe steamed lobster"
-	desc = "Lobster that has been cooked to perfection, drizzled with some lemon to increase the flavor."
+	desc = "Lobster boiled to perfection and garnished with lemon juice and greens. A proper meal for a king."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "lobster_steamed_deluxe"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 5)
@@ -103,7 +103,7 @@
 
 /obj/item/reagent_containers/food/snacks/lobster_raw_tail
 	name = "raw lobster tail"
-	desc = "Lobster tail meat, ready to be eaten."
+	desc = "Raw lobster tail, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "raw_lobster_tail"
 	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
@@ -113,7 +113,7 @@
 
 /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	name = "baked lobster tail"
-	desc = "Lobster tail meat that has been baked to crispyness."
+	desc = "Lobster tail baked to a satisfying crispness."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "lobster_tail_baked"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -122,7 +122,7 @@
 
 /obj/item/reagent_containers/food/snacks/lobster_sushi
 	name = "lobster sushi"
-	desc = "Can you consider this sushi? Rice served with lobster on top..."
+	desc = "An inexpensive and fairly common form of sushi, often favored for its mild sweetness."
 	icon = 'modular_lumos/icons/obj/food.dmi'
 	icon_state = "lobster_sushi"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 7, /datum/reagent/consumable/nutriment/vitamin = 4)
@@ -131,7 +131,7 @@
 
 /obj/item/reagent_containers/food/snacks/masago_sushi
 	name = "masago sushi"
-	desc = "Rice with roe... mmm, fish eggs."
+	desc = "A clump of roe sat in a roll of seaweed. A staple of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_Masago"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -140,7 +140,7 @@
 
 /obj/item/reagent_containers/food/snacks/ikura_sushi
 	name = "ikura sushi"
-	desc = "Rice with roe... mmm, fish eggs."
+	desc = "A clump of usually salmon roe in a roll of seaweed. A very common type of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_Ikura"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -149,7 +149,7 @@
 
 /obj/item/reagent_containers/food/snacks/ebi_sushi
 	name = "ebi sushi"
-	desc = "Rice with shrimp... mmm, shrimp."
+	desc = "A simple shrimp set on a bed of rice. A staple of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_Ebi"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -158,7 +158,7 @@
 
 /obj/item/reagent_containers/food/snacks/tamago_sushi
 	name = "tamago sushi"
-	desc = "Rice with egg... mmm, egg."
+	desc = "A small rolled omelette set on a bed of rice. A staple of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_Tamago"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -167,7 +167,7 @@
 
 /obj/item/reagent_containers/food/snacks/sake_sushi
 	name = "sake sushi"
-	desc = "Rice with raw salmon... mmm, fish."
+	desc = "A delicate filet of salmon set on a bed of rice. A staple of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_Sake"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -176,7 +176,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked_salmon_sushi
 	name = "cooked salmon sushi"
-	desc = "Rice with cooked salmon... mmm, fish."
+	desc = "Cooked salmon set on a bed or rice with a seaweed wrap. A common form of sushi."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sushi_SmokedSalmon"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
