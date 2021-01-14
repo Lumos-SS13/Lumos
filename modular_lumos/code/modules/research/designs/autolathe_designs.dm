@@ -44,7 +44,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 
 /datum/design/normal_fish_rod
-	name = "Normal Fishing Rod"
+	name = "Fishing Rod"
 	id = "fish_rod_normal"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 300, /datum/material/glass = 50)
