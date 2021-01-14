@@ -9,7 +9,7 @@
 	name = "fish box"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "box"
-	desc = "A box that is storing fish. Just open it up and get your two fishes. Random sexes!"
+	desc = "A box that stores fish. It has a breeding pair of Fish/Crustaceans inside to get your aquaculture farm tanks started."
 
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -48,7 +48,11 @@
 /obj/item/fish_box/attack_self(mob/user)
 	if(inside_fish)
 		for(var/i in 1 to 2)
-			new inside_fish(get_turf(user))
+			var/obj/item/fishy/f = inside_fish(get_turf(user))
+			if(i == 1) // This is awful and will need to get changed sooner or later, effectively makes the boxes have a set male and female in them.
+				f.sex = MALE_FISH
+			else
+				f.sex = FEMALE_FISH
 		qdel(src)
 
 /obj/item/fishy

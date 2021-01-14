@@ -22,6 +22,15 @@
 	result = /obj/item/reagent_containers/food/snacks/deluxe_lobster
 	subcategory = CAT_SEAFOOD
 
+/datum/crafting_recipe/food/devilburger
+	name = "Sea Devil Burger"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/seadevil = 1,
+		/obj/item/reagent_containers/food/snacks/bun = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/devilburger
+	subcategory = CAT_SEAFOOD
+
 /// SUSHI ///
 
 /datum/crafting_recipe/food/masago_sushi
@@ -88,4 +97,14 @@
 		/obj/item/reagent_containers/food/snacks/lobster_raw = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/lobster_sushi
+	subcategory = CAT_SEAFOOD
+
+/datum/crafting_recipe/food/devilsashimi
+	name = "Sea Devil Sashimi"
+	reqs = list(
+		/datum/reagent/consumable/soysauce = 5,
+		/obj/item/reagent_containers/food/snacks/fish_eggs = 1,
+		/obj/item/reagent_containers/food/snacks/seadevil_raw = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/devilsashimi
 	subcategory = CAT_SEAFOOD

@@ -1,3 +1,6 @@
+
+/// SPECIAL SEAFOOD ///
+
 /obj/item/reagent_containers/food/snacks/fish_bones
 	name = "fish bones"
 	desc = "Fish bones, aren't you glad these are out here?"
@@ -78,7 +81,7 @@
 	tastes = list("annoyance" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
-/// COOKED AND SUSHI ///
+/// COOKED SEAFOOD (NON-SUSHI) ///
 
 /obj/item/reagent_containers/food/snacks/shrimp
 	name = "cooked shrimp"
@@ -116,6 +119,15 @@
 	tastes = list("relief" = 15, "salt" = 3)
 	foodtype = MEAT
 
+/obj/item/reagent_containers/food/snacks/devilburger
+	name = "Sea Devil Burger"
+	desc = "Not as tasty as you'd think."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "devilburger"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 5)
+	tastes = list("relief" = 15, "salt" = 3)
+	foodtype = MEAT
+
 /obj/item/reagent_containers/food/snacks/basic_lobster
 	name = "steamed lobster"
 	desc = "Uniformly steamed lobster."
@@ -142,6 +154,8 @@
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
 	foodtype = MEAT
+
+/// SUSHI ///
 
 /obj/item/reagent_containers/food/snacks/lobster_sushi
 	name = "lobster sushi"
@@ -205,3 +219,12 @@
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("salmon" = 15, "salt" = 3, "rice" = 3, "seaweed" = 3)
 	foodtype = MEAT | GRAIN | VEGETABLES
+
+/obj/item/reagent_containers/food/snacks/devilsashimi
+	name = "sea devil sashimi"
+	desc = "A very colorful plate of sea devil sashimi, with a dipping cup of soy sauce."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "devilsashimi"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("relief" = 10, "annoyance" = 10, "salt" = 3)
+	foodtype = MEAT
