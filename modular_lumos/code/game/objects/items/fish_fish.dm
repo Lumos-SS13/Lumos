@@ -223,7 +223,7 @@
 
 /obj/item/fishy/minicarp
 	name = "lesser space carp"
-	desc = "A small sub-species of space carp. Just as toxic, but alot less likely to take a chunk out of you."
+	desc = "A small sub-species of space carp. Just as toxic, but a lot less likely to take a chunk out of you."
 	spawned_egg = /obj/item/fishy_egg/minicarp
 	icon_state = "tinycarp"
 	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
