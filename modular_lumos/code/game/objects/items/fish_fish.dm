@@ -57,7 +57,6 @@
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 
 	///Sex: either male or female
-	//Im sorry, but only male and female fish can breed together
 	var/sex = MALE_FISH
 
 	///Age: how old the fish is.

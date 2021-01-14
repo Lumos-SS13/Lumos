@@ -17,7 +17,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SCALPEL
-	toolspeed = 2
+	toolspeed = 4
 
 /obj/item/fish_tool/egg_killer
 	name = "egg neutralizer"
