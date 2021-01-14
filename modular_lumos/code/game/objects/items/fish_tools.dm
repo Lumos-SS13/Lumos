@@ -26,12 +26,12 @@
 
 /obj/item/fish_tool/analyzer
 	name = "fish analyzer"
-	desc = "A little gadget designed to catalog statistics of fish in a tank."
+	desc = "A little gadget designed to catalog statistical data of fish in a tank."
 	icon_state = "fish_analy"
 
 /obj/item/fish_tool/fish_food
 	name = "fish food"
-	desc = "A little canister of flakes made from god knows what. Gives your fish the nutriment they need."
+	desc = "A little canister of flaked fish food. Gives your fish the nutriment they need."
 	icon_state = "fish_food"
 	var/food_left = 100
 
@@ -68,7 +68,7 @@
 
 /obj/item/fish_tool/fishing_rod/makeshift
 	name = "makeshift fishing rod"
-	desc = "A haphazardly constructed fishing rod, not very effective but easy to create."
+	desc = "A haphazardly constructed fishing rod, not very effective but easy to produce."
 	icon_state = "wire_rod"
 
 	fishing_chance = 30
@@ -130,7 +130,7 @@
 
 /obj/structure/closet/crate/wooden/fish_learning
 	name = "aquaculture crate"
-	desc = "A crate that contains a manual and some materials for aquaculture."
+	desc = "A crate that contains a manual and some starter materials for aquaculture."
 
 /obj/structure/closet/crate/wooden/fish_learning/PopulateContents()
 	. = ..()
