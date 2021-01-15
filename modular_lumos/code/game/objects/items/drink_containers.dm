@@ -4,7 +4,7 @@
 	name = "glass pitcher"
 	desc = "A large glass container for communal drink dispensing or hardcore alcoholism."
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,70)
+	possible_transfer_amounts = list(5,10,15,20,25,30,50,70,75)
 	volume = 75
 	spillable = TRUE
 	resistance_flags = ACID_PROOF
@@ -15,8 +15,8 @@
 /obj/item/reagent_containers/glass/canteen
 	icon = 'modular_lumos/icons/obj/drink_containers.dmi'
 	icon_state = "canteen"
-	name = "Canteen"
-	desc = "A robust metal canteen for long treks or jaded veterans."
+	name = "mining canteen"
+	desc = "A robust metal canteen for long treks, jaded veterans, or booze hounds."
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5,10,15,20,25)
 	volume = 50
