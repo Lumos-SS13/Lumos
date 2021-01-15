@@ -19,6 +19,15 @@
 	tastes = list("fish" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
+/obj/item/reagent_containers/food/snacks/toxic_spines
+	name = "toxic spines"
+	desc = "The flexible spines of an Asteroid Worm, often used in producing ghetto neurotoxins."
+	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon_state = "toxicspine"
+	list_reagents = list(/datum/reagent/toxin/cyanide = 0.15, /datum/reagent/toxin/staminatoxin = 0.2, /datum/reagent/consumable/nutriment = 0.3)
+	tastes = list("bitter" = 15, "muck" = 3)
+	foodtype = GROSS | TOXIC
+
 /// RAW MEAT (Lesser Carp use real carp meat) ///
 
 /obj/item/reagent_containers/food/snacks/shrimp_raw
@@ -99,6 +108,16 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 5, "salt" = 1)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/asteroid_worm_raw
+	name = "despined asteroid slug"
+	desc = "Raw asteroid slug is actually considered a delicacy to Vox. If the smell already didn't put you off, imagine one hundred and fifty of these at a Vox banquet."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "worm_dead"
+	cooked_type = /obj/item/reagent_containers/food/snacks/asteroid_worm
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("sickly-sweet" = 15, "dirt" = 3)
 	foodtype = MEAT | RAW
 
 /// COOKED SEAFOOD (NON-SUSHI) ///
@@ -200,6 +219,15 @@
 	icon_state = "shark_fin_dry"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 5, "salt" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/asteroid_worm
+	name = "baked asteroid worm"
+	desc = "Baked evenly and throughout. Still smells abit off, and it doesn't look much better."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "worm_dead_cooked"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("berries" = 5, "dirt" = 1)
 	foodtype = MEAT
 
 /// SUSHI ///

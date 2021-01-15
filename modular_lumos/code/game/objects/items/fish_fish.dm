@@ -278,7 +278,7 @@
 
 /obj/item/fishy/asteroid_worm
 	name = "asteroid worm"
-	desc = "A toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
+	desc = "A repulsive toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "asteroid_worm"
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
