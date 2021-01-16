@@ -14,12 +14,12 @@
 			H.adjustStaminaLoss(2)
 		H.add_movespeed_modifier(/datum/movespeed_modifier/hunger/medium)
 		if(vore_delay < world.time)
-			vore_delay = world.time + rand(5 SECONDS, 20 SECONDS)
+			vore_delay = world.time + rand(1 MINUTES, 3 MINUTES)
 			var/pick_sound = pick(list(	'modular_lumos/sound/effects/hungry1.ogg',
 										'modular_lumos/sound/effects/hungry2.ogg',
 										'modular_lumos/sound/effects/hungry3.ogg',
 										'modular_lumos/sound/effects/hungry4.ogg'))
-			playsound(H.loc, pick_sound, 50)
+			playsound(H.loc, pick_sound, 20, FALSE, -4)
 	if(H.nutrition <= NUTRITION_LEVEL_CRAVING)
 		if(prob(50))
 			H.adjustStaminaLoss(2)
