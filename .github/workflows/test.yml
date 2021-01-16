@@ -76,7 +76,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update
-          sudo apt install libssl1.1:i386 libc6-dev build-essential g++-multilib
+          sudo apt install libssl1.1:i386 libc6-dev build-essential gcc-multilib g++-multilib
           bash tools/ci/install_rust_g.sh
           bash tools/ci/build_bsql.sh
       - name: Compile and run tests
