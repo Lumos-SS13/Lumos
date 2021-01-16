@@ -1,14 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-tools/deploy.sh travis_test
-mkdir travis_test/config
+tools/deploy.sh ci_test
+mkdir ci_test/config
 
 #test config
-cp tools/travis/travis_config.txt travis_test/config/config.txt
+cp tools/ci/ci_config.txt ci_test/config/config.txt
 
-cd travis_test
-ln -s $HOME/libmariadb/libmariadb.so libmariadb.so
-DreamDaemon tgstation.dmb -close -trusted -verbose -params "test-run&log-directory=travis"
+cd ci_test
+DreamDaemon tgstation.dmb -close -trusted -verbose -params "log-directory=ci"
 cd ..
-cat travis_test/data/logs/travis/clean_run.lk
+cat ci_test/data/logs/ci/clean_run.lk
