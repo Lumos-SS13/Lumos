@@ -15,7 +15,7 @@
 		#include "map_files\LambdaStation\lambda_Skyrat.dmm"
 		#include "map_files\FridgeStation\FridgeStation.dmm"
 
-		#ifdef TRAVISBUILDING
+		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
 	#endif
