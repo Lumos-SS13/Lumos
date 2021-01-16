@@ -19,7 +19,7 @@
 										'modular_lumos/sound/effects/hungry2.ogg',
 										'modular_lumos/sound/effects/hungry3.ogg',
 										'modular_lumos/sound/effects/hungry4.ogg'))
-			playsound(H.loc, pick_sound, 20, FALSE, -3)
+			playsound(H.loc, pick_sound, 20, FALSE, -4)
 	if(H.nutrition <= NUTRITION_LEVEL_CRAVING)
 		if(prob(50))
 			H.adjustStaminaLoss(2)
