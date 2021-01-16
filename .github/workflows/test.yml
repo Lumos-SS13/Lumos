@@ -86,6 +86,12 @@ jobs:
           source $HOME/BYOND/byond/bin/byondsetup
           bash tools/ci/dm.sh -DCIBUILDING tgstation.dme
           bash tools/ci/run_server.sh
+      - name: upload artifact
+      - uses: actions/upload-artifact@v2
+        with:
+          name: data
+          path: data/ # or path/to/artifact
+          retention-days: 5
   test_windows:
     runs-on: windows-latest
     steps:
