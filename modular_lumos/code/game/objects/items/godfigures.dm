@@ -25,6 +25,166 @@
 	desc = "A painted holy figure of a plain looking human man in a robe."
 	icon_state = "mrobedark"
 
+/obj/item/godfig/janirobe
+	name = "Painted - Robed Human Male (Janitor)"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "mrobejani"
+
+/obj/item/godfig/beardman
+	name = "Painted - Bearded Human"
+	desc = "A painted holy figure of a rather grandiose bearded human."
+	icon_state = "mpose"
+
+/obj/item/godfig/mwarrior
+	name = "Painted - Human Male Warrior"
+	desc = "A painted holy figure of a powerful human male warrior."
+	icon_state = "mwarrior"
+
+/obj/item/godfig/fwarrior
+	name = "Painted - Human Female Warrior"
+	desc = "A painted holy figure of a powerful human female warrior."
+	icon_state = "fwarrior"
+
+/obj/item/godfig/hammer
+	name = "Painted - Human Male Hammer"
+	desc = "A painted holy figure of a human holding a hammer aloft."
+	icon_state = "hammer"
+
+/obj/item/godfig/horned
+	name = "Painted - Horned God"
+	desc = "A painted holy figure of a human man crowned with antlers."
+	icon_state = "horned"
+
+/obj/item/godfig/onyxking
+	name = "Onyx - Human Male"
+	desc = "An onyx holy figure of a human man wearing a grand hat."
+	icon_state = "onyxking"
+
+/obj/item/godfig/onyxqueen
+	name = "Onyx - Human Female"
+	desc = "An onyx holy figure of a human woman wearing a grand hat."
+	icon_state = "onyxqueen"
+
+/obj/item/godfig/onyxanimalm
+	name = "Onyx - Animal Headed Male"
+	desc = "An onyx holy figure of a human man with the head of an animal."
+	icon_state = "onyxanimalm"
+
+/obj/item/godfig/onyxanimalf
+	name = "Onyx - Animal Headed Female"
+	desc = "An onyx holy figure of a human woman with the head of an animal."
+	icon_state = "onyxanimalf"
+
+/obj/item/godfig/onyxbird
+	name = "Onyx - Bird Headed Figure"
+	desc = "An onyx holy figure of a human with the head of a bird."
+	icon_state = "onyxbird"
+
+/obj/item/godfig/stoneseat
+	name = "Stone - Seated Figure"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "stoneseat"
+
+/obj/item/godfig/stonedwarf
+	name = "Stone - Dwarf"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "stonedwarf"
+
+/obj/item/godfig/stoneanimal
+	name = "Stone - Animal"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "stoneanimal"
+
+/obj/item/godfig/stonevenus
+	name = "Stone - Fertility"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "stonevenus"
+
+/obj/item/godfig/stonesnake
+	name = "Stone - Snake"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "stonesnake"
+
+/obj/item/godfig/elephant
+	name = "Bronze - Elephantine"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "elephant"
+
+/obj/item/godfig/bronzearms
+	name = "Bronze - Many-armed"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "bronzearms"
+
+/obj/item/godfig/robot
+	name = "Robot"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "robot"
+
+/obj/item/godfig/singularity
+	name = "Singularity"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "singularity"
+
+/obj/item/godfig/meteor
+	name = "Meteor"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "meteor"
+
+/obj/item/godfig/gemeye
+	name = "Gemstone"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "gemeye"
+
+/obj/item/godfig/skull
+	name = "Gilded Skull"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "skull"
+
+/obj/item/godfig/devil
+	name = "Goatman"
+	desc = "A painted holy figure of a plain looking human man in a robe."
+	icon_state = "devil"
+
+/obj/item/godfig/lumos
+	name = "Lightbulb"
+	desc = "A holy figure of a lightbulb."
+	icon_state = "lumos"
+
+/obj/item/godfig/sun
+	name = "Sun Gem"
+	desc = "A holy figure of a star."
+	icon_state = "sun"
+
+/obj/item/godfig/moon
+	name = "Moon Gem"
+	desc = "A holy figure of a small planetoid."
+	icon_state = "moon"
+
+/obj/item/godfig/lizrobe
+	name = "Racial - Uthani Figure"
+	desc = "A painted holy figure of a plain looking Uthani in a robe."
+	icon_state = "lizrobe"
+
+/obj/item/godfig/plasmeme
+	name = "Racial - Plasmaman Figure"
+	desc = "A painted holy figure of a plain looking Plasma Skeleton."
+	icon_state = "plasmeme"
+
+/obj/item/godfig/dwarf
+	name = "Racial - Dwarf Figure"
+	desc = "A painted holy figure of a Dwarf brandishing a gilded hammer. Rock and Stone!"
+	icon_state = "dorf"
+
+/obj/item/godfig/ipc
+	name = "Racial - IPC Figure"
+	desc = "A painted holy figure of a plain looking IPC."
+	icon_state = "robobitch"
+
+/obj/item/godfig/mothman
+	name = "Racial - Mothman Figure"
+	desc = "A painted holy figure of a plain looking Moth brandishing a torch."
+	icon_state = "retardbug"
+
 // /obj/item/choice_beacon/godfig
 // 	name = "religious icon"
 // 	desc = "A painted holy figure of a plain looking human man in a robe."
@@ -53,81 +213,6 @@
 	qdel(src)
 
 /*
-/obj/item/godfig/verb/resprite_figure()
-	set name = "Customize Figure"
-	set category = "Object"
-	set desc = "Click to choose an appearance for your icon."
-
-	var/mob/M = usr
-	var/list/options = list()
-	options["Painted - Robed Human Female"] = "frobe"
-	options["Painted - Robed Human Male (Pale)"] = "mrobe"
-	options["Painted - Robed Human Male (Dark)"] = "mrobedark"
-	options["Painted - Robed Human Male (Janitor)"] = "mrobejani"
-	options["Painted - Bearded Human"] = "mpose"
-	options["Painted - Human Male Warrior"] = "mwarrior"
-	options["Painted - Human Female Warrior"] = "fwarrior"
-	options["Painted - Human Male Hammer"] = "hammer"
-	options["Painted - Horned God"] = "horned"
-	options["Obsidian - Human Male"] = "onyxking"
-	options["Obsidian - Human Female"] = "onyxqueen"
-	options["Obsidian - Animal Headed Male"] = "onyxanimalm"
-	options["Obsidian - Animal Headed Female"] = "onyxanimalf"
-	options["Obsidian - Bird Headed Figure"] = "onyxbird"
-	options["Stone - Seated Figure"] = "stoneseat"
-	options["Stone - Head"] = "stonehead"
-	options["Stone - Dwarf"] = "stonedwarf"
-	options["Stone - Animal"] = "stoneanimal"
-	options["Stone - Fertility"] = "stonevenus"
-	options["Stone - Snake"] = "stonesnake"
-	options["Bronze - Elephantine"] = "elephant"
-	options["Bronze - Many-armed"] = "bronzearms"
-	options["Robot"] = "robot"
-	options["Singularity"] = "singularity"
-	options["Meteor"] = "meteor"
-	options["Gemstone Eye"] = "gemeye"
-	options["Golden Skull"] = "skull"
-	options["Goatman"] = "devil"
-	options["Lightbulb"] = "lumos"
-	options["Sun Gem"] = "sun"
-	options["Moon Gem"] = "moon"
-	options["Racial - Uthani Figure"] = "lizrobe"
-	options["Racial - Plasmaman Figure"] = "plasmeme"
-	options["Racial - Dwarf Figure"] = "dorf"
-	options["Racial - IPC Figure"] = "robobitch"
-	options["Racial - Mothman Figure"] = "retardbug"
-
-	var/choice = input(M,"Choose your icon!","Customize Figure") in options
-	if(src && choice && !M.stat && in_range(M,src))
-		icon_state = options[choice]
-		if(options[choice] == "frobe")
-			desc = "A painted holy figure of a plain looking human woman in a robe."
-		else if(options[choice] == "mrobe")
-			desc = "A painted holy figure of a plain looking human man in a robe."
-		else if(options[choice] == "mrobedark")
-			desc = "A painted holy figure of a plain looking human man in a robe."
-		else if(options[choice] == "mrobejani")
-			desc = "A painted holy figure of a plain looking human man in a robe."
-		else if(options[choice] == "mpose")
-			desc = "A painted holy figure of a rather grandiose bearded human."
-		else if(options[choice] == "mwarrior")
-			desc = "A painted holy figure of a powerful human male warrior."
-		else if(options[choice] == "fwarrior")
-			desc = "A painted holy figure of a powerful human female warrior."
-		else if(options[choice] == "hammer")
-			desc = "A painted holy figure of a human holding a hammer aloft."
-		else if(options[choice] == "horned")
-			desc = "A painted holy figure of a human man crowned with antlers."
-		else if(options[choice] == "onyxking")
-			desc = "An obsidian holy figure of a human man wearing a grand hat."
-		else if(options[choice] == "onyxqueen")
-			desc = "An obsidian holy figure of a human woman wearing a grand hat."
-		else if(options[choice] == "onyxanimalm")
-			desc = "An obsidian holy figure of a human man with the head of an animal."
-		else if(options[choice] == "onyxanimalf")
-			desc = "An obsidian holy figure of a human woman with the head of an animal."
-		else if(options[choice] == "onyxbird")
-			desc = "An obsidian holy figure of a human with the head of a bird."
 		else if(options[choice] == "stoneseat")
 			desc = "A stone holy figure of a cross-legged human."
 		else if(options[choice] == "stonehead")
@@ -162,17 +247,4 @@
 			desc = "A holy figure of a star."
 		else if(options[choice] == "moon")
 			desc = "A holy figure of a small planetoid."
-		else if(options[choice] == "lizrobe")
-			desc = "A painted holy figure of a plain looking Uthani in a robe."
-		else if(options[choice] == "plasmeme")
-			desc = "A painted holy figure of a plain looking Plasma Skeleton."
-		else if(options[choice] == "dorf")
-			desc = "A painted holy figure of a Dwarf brandishing a gilded hammer."
-		else if(options[choice] == "robobitch")
-			desc = "A painted holy figure of a plain looking IPC."
-		else if(options[choice] == "retardbug")
-			desc = "A painted holy figure of a plain looking Moth brandishing a torch."
-
-		to_chat(M, "The religious icon is now a [choice]. Praise be!")
-		return 1
 */
