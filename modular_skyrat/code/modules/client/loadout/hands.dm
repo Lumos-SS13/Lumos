@@ -14,7 +14,7 @@
 	name = "Cellphone"
 	description =  "A compact cellphone for making calls."
 	category = SLOT_HANDS
-	path = /obj/item/phone/cellphone/broken
+	path = /obj/item/phone/cellphone
 	restricted_roles = NOPRISON_ROLES
 	restricted_desc = "All, barring Prisoners"
 	cost = 2
