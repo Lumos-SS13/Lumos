@@ -63,6 +63,7 @@
 	H.say("Unit [H.real_name] is fully functional. Have a nice day.")
 	H.dna.features["ipc_screen"] = saved_screen
 	H.update_body()
+	playsound(H, pick('modular_lumos/sound/effects/95.ogg', 'modular_lumos/sound/effects/xp.ogg'), 50, FALSE)
 	return 
 
 /datum/species/ipc/on_species_loss(mob/living/carbon/human/C)
