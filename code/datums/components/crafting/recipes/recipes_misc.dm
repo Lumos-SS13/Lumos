@@ -502,9 +502,9 @@
 	subcategory = CAT_FURNITURE
 	category = CAT_MISC
 
-/datum/crafting_recipe/normal_fish_rod
-	name = "Fishing Rod"
-	result = /obj/item/fish_tool/fishing_rod
+/datum/crafting_recipe/makeshift_fish_rod
+	name = "Makeshift Fishing Rod"
+	result = /obj/item/fish_tool/fishing_rod/makeshift
 	tools = list(/obj/item/weldingtool,
 				 /obj/item/screwdriver)
 	reqs = list(/obj/item/stack/rods = 2,

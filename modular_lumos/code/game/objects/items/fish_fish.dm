@@ -9,7 +9,7 @@
 	name = "fish box"
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "box"
-	desc = "A box that is storing a fish. Just open it up and get your two fishes. Random sexes!"
+	desc = "A box that stores fish. It has a breeding pair of Fish/Crustaceans inside to get your aquaculture farm tanks started."
 
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -19,6 +19,11 @@
 	name = "salmon box"
 	icon_state = "box_salmon"
 	inside_fish = /obj/item/fishy/salmon
+
+/obj/item/fish_box/salmon/steelhead
+	name = "steelhead box"
+	icon_state = "box_steelhead"
+	inside_fish = /obj/item/fishy/salmon/steelhead
 
 /obj/item/fish_box/shrimp
 	name = "shrimp box"
@@ -30,15 +35,44 @@
 	icon_state = "box_lobster"
 	inside_fish = /obj/item/fishy/lobster
 
+/obj/item/fish_box/lobster/rock
+	name = "rock lobster box"
+	icon_state = "box_lobster_rock"
+	inside_fish = /obj/item/fishy/lobster/rock
+
 /obj/item/fish_box/catfish
 	name = "catfish box"
 	icon_state = "box_catfish"
 	inside_fish = /obj/item/fishy/catfish
 
+/obj/item/fish_box/minicarp
+	name = "lesser carp box"
+	icon_state = "box_carp"
+	inside_fish = /obj/item/fishy/minicarp
+
+/obj/item/fish_box/devil
+	name = "sea devil box"
+	icon_state = "box_devil"
+	inside_fish = /obj/item/fishy/seadevil
+
+/obj/item/fish_box/shark
+	name = "shark box"
+	icon_state = "box_shark"
+	inside_fish = /obj/item/fishy/shark
+
+/obj/item/fish_box/asteroid_worm
+	name = "asteroid worm box"
+	icon_state = "box_asterworm"
+	inside_fish = /obj/item/fishy/asteroid_worm
+
 /obj/item/fish_box/attack_self(mob/user)
 	if(inside_fish)
 		for(var/i in 1 to 2)
-			new inside_fish(get_turf(user))
+			var/obj/item/fishy/f = new inside_fish(get_turf(user))
+			if(i == 1) // This is awful and will need to get changed sooner or later, effectively makes the boxes have a set male and female in them.
+				f.sex = MALE_FISH
+			else
+				f.sex = FEMALE_FISH
 		qdel(src)
 
 /obj/item/fishy
@@ -47,7 +81,6 @@
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 
 	///Sex: either male or female
-	//Im sorry, but only male and female fish can breed together
 	var/sex = MALE_FISH
 
 	///Age: how old the fish is.
@@ -187,9 +220,16 @@
 	icon_state = "salmon"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw)
 
+/obj/item/fishy/salmon/steelhead
+	name = "steelhead salmon"
+	desc = "A sub-species of salmon. Their skull is comprised of a organic stone-like substance."
+	spawned_egg = /obj/item/fishy_egg/salmon/steelhead
+	icon_state = "steelhead"
+	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw, /obj/item/stack/ore/iron)
+
 /obj/item/fishy/shrimp
 	name = "shrimp"
-	desc = "Technically speaking... This is like, the cockroach of the sea."
+	desc = "Technically speaking... This is like the cockroach of the sea."
 	spawned_egg = /obj/item/fishy_egg/shrimp
 	icon_state = "shrimp_raw"
 	meat = list(/obj/item/reagent_containers/food/snacks/shrimp_raw)
@@ -201,12 +241,47 @@
 	icon_state = "lobster"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw, /obj/item/reagent_containers/food/snacks/lobster_raw_tail)
 
+/obj/item/fishy/lobster/rock
+	name = "rock lobster"
+	desc = "Found under space piers, often to a suprising capacity."
+	spawned_egg = /obj/item/fishy_egg/lobster
+	icon_state = "lobster_rock"
+	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw = 1, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
+
 /obj/item/fishy/catfish
 	name = "catfish"
 	desc = "Real men catch them by hand."
 	spawned_egg = /obj/item/fishy_egg/catfish
 	icon_state = "catfish"
 	meat = list(/obj/item/reagent_containers/food/snacks/catfish_raw)
+
+/obj/item/fishy/minicarp
+	name = "lesser space carp"
+	desc = "A small sub-species of space carp. Just as toxic, but a lot less likely to take a chunk out of you."
+	spawned_egg = /obj/item/fishy_egg/minicarp
+	icon_state = "tinycarp"
+	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+
+/obj/item/fishy/seadevil
+	name = "sea devil"
+	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
+	spawned_egg = /obj/item/fishy_egg/devil
+	icon_state = "seadevil"
+	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
+
+/obj/item/fishy/shark
+	name = "space shark"
+	desc = "A small species of shark capable of reproducing fast enough for aquaculture."
+	spawned_egg = /obj/item/fishy_egg/shark
+	icon_state = "shark"
+	meat = list(/obj/item/reagent_containers/food/snacks/shark_raw = 2, /obj/item/reagent_containers/food/snacks/shark_raw_fin)
+
+/obj/item/fishy/asteroid_worm
+	name = "asteroid worm"
+	desc = "A repulsive toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
+	spawned_egg = /obj/item/fishy_egg/devil
+	icon_state = "asteroid_worm"
+	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
 
 /obj/item/fishy_egg
 	name = "fish egg"
@@ -239,6 +314,9 @@
 	fish_parent = /obj/item/fishy/salmon
 	icon_state = "salmon_eggs"
 
+/obj/item/fishy_egg/salmon/steelhead
+	fish_parent = /obj/item/fishy/salmon/steelhead
+
 /obj/item/fishy_egg/shrimp
 	fish_parent = /obj/item/fishy/shrimp
 	icon_state = "shrimp_eggs"
@@ -247,6 +325,25 @@
 	fish_parent = /obj/item/fishy/lobster
 	icon_state = "salmon_eggs"
 
+/obj/item/fishy_egg/lobster/rock
+	fish_parent = /obj/item/fishy/lobster/rock
+	
 /obj/item/fishy_egg/catfish
 	fish_parent = /obj/item/fishy/catfish
 	icon_state = "catfish_eggs"
+
+/obj/item/fishy_egg/minicarp
+	fish_parent = /obj/item/fishy/minicarp
+	icon_state = "eggs_tinycarp"
+
+/obj/item/fishy_egg/devil
+	fish_parent = /obj/item/fishy/seadevil
+	icon_state = "eggs_devil"
+
+/obj/item/fishy_egg/shark
+	fish_parent = /obj/item/fishy/shark
+	icon_state = "shark_eggs_new"
+
+/obj/item/fishy_egg/asteroid_worm
+	fish_parent = /obj/item/fishy/asteroid_worm
+	icon_state = "worm_eggs"
