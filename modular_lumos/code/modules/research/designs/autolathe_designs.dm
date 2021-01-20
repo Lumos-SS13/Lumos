@@ -51,3 +51,12 @@
 	build_path = /obj/item/fish_tool/fishing_rod/advanced
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+
+/datum/design/pitcher
+	name = "glass pitcher"
+	id = "pitcher_glass"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/glass=1000)
+	build_path = /obj/item/reagent_containers/glass/pitcher
+	category = list("initial","Tools","Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
