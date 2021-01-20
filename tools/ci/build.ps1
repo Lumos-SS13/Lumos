@@ -4,7 +4,8 @@ if(!(Test-Path -Path "C:/byond")){
     Remove-Item C:/byond.zip
 }
 
-Set-Location $env:APPVEYOR_BUILD_FOLDER
+bash tools/ci/install_node.sh
+bash tgui/bin/tgui --build
 
 &"C:/byond/bin/dm.exe" -max_errors 0 tgstation.dme
 exit $LASTEXITCODE
