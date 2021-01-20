@@ -82,67 +82,67 @@
 
 /obj/item/godfig/stoneseat
 	name = "Stone - Seated Figure"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A stone holy figure of a cross-legged human."
 	icon_state = "stoneseat"
 
 /obj/item/godfig/stonedwarf
 	name = "Stone - Dwarf"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A stone holy figure of a somewhat ugly dwarf."
 	icon_state = "stonedwarf"
 
 /obj/item/godfig/stoneanimal
 	name = "Stone - Animal"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A stone holy figure of a four-legged animal of some sort."
 	icon_state = "stoneanimal"
 
 /obj/item/godfig/stonevenus
 	name = "Stone - Fertility"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A stone holy figure of an ancient Human fertility spirit."
 	icon_state = "stonevenus"
 
 /obj/item/godfig/stonesnake
 	name = "Stone - Snake"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A stone holy figure of a coiled snake ready to strike. No step!"
 	icon_state = "stonesnake"
 
 /obj/item/godfig/elephant
 	name = "Bronze - Elephantine"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A bronze holy figure of a dancing human with the head of an elephant."
 	icon_state = "elephant"
 
 /obj/item/godfig/bronzearms
 	name = "Bronze - Many-armed"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A bronze holy figure of a human with four arms."
 	icon_state = "bronzearms"
 
 /obj/item/godfig/robot
 	name = "Robot"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A titanium holy figure of a generic synthetic humanoid."
 	icon_state = "robot"
 
 /obj/item/godfig/singularity
 	name = "Singularity"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A holy figure of a gravitational singularity."
 	icon_state = "singularity"
 
 /obj/item/godfig/meteor
 	name = "Meteor"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A holy figure of an ominous meteor."
 	icon_state = "meteor"
 
 /obj/item/godfig/gemeye
 	name = "Gemstone"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A gemstone holy figure of a sparkling eye."
 	icon_state = "gemeye"
 
 /obj/item/godfig/skull
 	name = "Gilded Skull"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A golden holy figure of a humanoid skull."
 	icon_state = "skull"
 
 /obj/item/godfig/devil
 	name = "Goatman"
-	desc = "A painted holy figure of a plain looking human man in a robe."
+	desc = "A painted holy figure of a seated humanoid goat with wings."
 	icon_state = "devil"
 
 /obj/item/godfig/lumos
@@ -161,27 +161,27 @@
 	icon_state = "moon"
 
 /obj/item/godfig/lizrobe
-	name = "Racial - Uthani Figure"
+	name = "Uthani Figure"
 	desc = "A painted holy figure of a plain looking Uthani in a robe."
 	icon_state = "lizrobe"
 
 /obj/item/godfig/plasmeme
-	name = "Racial - Plasmaman Figure"
+	name = "Plasmaman Figure"
 	desc = "A painted holy figure of a plain looking Plasma Skeleton."
 	icon_state = "plasmeme"
 
 /obj/item/godfig/dwarf
-	name = "Racial - Dwarf Figure"
+	name = "Dwarf Figure"
 	desc = "A painted holy figure of a Dwarf brandishing a gilded hammer. Rock and Stone!"
 	icon_state = "dorf"
 
 /obj/item/godfig/ipc
-	name = "Racial - IPC Figure"
+	name = "IPC Figure"
 	desc = "A painted holy figure of a plain looking IPC."
 	icon_state = "robobitch"
 
 /obj/item/godfig/mothman
-	name = "Racial - Mothman Figure"
+	name = "Mothman Figure"
 	desc = "A painted holy figure of a plain looking Moth brandishing a torch."
 	icon_state = "retardbug"
 
@@ -212,39 +212,3 @@
 	M.put_in_hands(new choice)
 	qdel(src)
 
-/*
-		else if(options[choice] == "stoneseat")
-			desc = "A stone holy figure of a cross-legged human."
-		else if(options[choice] == "stonehead")
-			desc = "A stone holy figure of an imposing crowned head."
-		else if(options[choice] == "stonedwarf")
-			desc = "A stone holy figure of a somewhat ugly dwarf."
-		else if(options[choice] == "stoneanimal")
-			desc = "A stone holy figure of a four-legged animal of some sort."
-		else if(options[choice] == "stonevenus")
-			desc = "A stone holy figure of a lovingly rendered pregnant woman."
-		else if(options[choice] == "stonesnake")
-			desc = "A stone holy figure of a coiled snake ready to strike."
-		else if(options[choice] == "elephant")
-			desc = "A bronze holy figure of a dancing human with the head of an elephant."
-		else if(options[choice] == "bronzearms")
-			desc = "A bronze holy figure of a human.with four arms."
-		else if(options[choice] == "robot")
-			desc = "A titanium holy figure of a synthetic humanoid."
-		else if(options[choice] == "singularity")
-			desc = "A holy figure of some kind of energy formation."
-		else if(options[choice] == "meteor")
-			desc = "A holy figure of an ominous meteor."
-		else if(options[choice] == "gemeye")
-			desc = "A gemstone holy figure of a sparkling eye."
-		else if(options[choice] == "skull")
-			desc = "A golden holy figure of a humanoid skull."
-		else if(options[choice] == "devil")
-			desc = "A painted holy figure of a seated humanoid goat with wings."
-		else if(options[choice] == "lumos")
-			desc = "A holy figure of a lightbulb."
-		else if(options[choice] == "sun")
-			desc = "A holy figure of a star."
-		else if(options[choice] == "moon")
-			desc = "A holy figure of a small planetoid."
-*/
