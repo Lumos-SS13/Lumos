@@ -21,7 +21,7 @@
 
 /obj/item/reagent_containers/food/snacks/toxic_spines
 	name = "toxic spines"
-	desc = "The flexible spines of an Asteroid Worm, often used in producing ghetto neurotoxins."
+	desc = "The flexible spines of an Asteroid Worm, still filled with poison."
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "toxicspine"
 	list_reagents = list(/datum/reagent/toxin/cyanide = 0.15, /datum/reagent/toxin/staminatoxin = 0.2, /datum/reagent/consumable/nutriment = 0.3)
@@ -112,7 +112,7 @@
 
 /obj/item/reagent_containers/food/snacks/asteroid_worm_raw
 	name = "despined asteroid slug"
-	desc = "Raw asteroid slug is actually considered a delicacy to Vox. If the smell already didn't put you off, imagine one hundred and fifty of these at a Vox banquet."
+	desc = "Raw asteroid slug is actually considered a delicacy to Vox. If the smell already didn't put you off, imagine hundreds of these at a Vox banquet."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "worm_dead"
 	cooked_type = /obj/item/reagent_containers/food/snacks/asteroid_worm
@@ -225,7 +225,7 @@
 	name = "baked asteroid worm"
 	desc = "Baked evenly and throughout. Still smells abit off, and it doesn't look much better."
 	icon = 'modular_lumos/icons/obj/food.dmi'
-	icon_state = "worm_dead_cooked"
+	icon_state = "cooked_worm"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("berries" = 5, "dirt" = 1)
 	foodtype = MEAT
