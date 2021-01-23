@@ -311,7 +311,9 @@
 					/obj/item/storage/book/bible/booze,
 					/obj/item/storage/book/bible/booze,
 					/obj/item/clothing/suit/hooded/chaplain_hoodie,
-					/obj/item/clothing/suit/hooded/chaplain_hoodie)
+					/obj/item/clothing/suit/hooded/chaplain_hoodie,
+					/obj/item/choice_beacon/box/godfig, // lumos edit - adds godfigs for chaplain bois
+					/obj/item/choice_beacon/box/godfig)
 	crate_name = "religious supplies crate"
 
 /datum/supply_pack/misc/shower
