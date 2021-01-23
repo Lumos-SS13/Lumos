@@ -18,6 +18,8 @@ LINEN BINS
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
 	dying_key = DYE_REGISTRY_BEDSHEET
+	var/can_be_flipped = TRUE
+	var/flipped = FALSE
 
 	dog_fashion = /datum/dog_fashion/head/ghost
 	var/list/dream_messages = list("white")
@@ -49,6 +51,17 @@ LINEN BINS
 		to_chat(user, "<span class='notice'>You tear [src] up.</span>")
 	else
 		return ..()
+
+/obj/item/bedsheet/AltClick(mob/user)
+	. = ..()
+	if(can_be_flipped)
+		if(flipped)
+			icon_state = initial(icon_state)
+			flipped = FALSE
+		else
+			icon_state = initial(icon_state)+"_flip"
+			flipped = TRUE
+		to_chat(user, "<span class='notice'>You flip [src] around.</span>")
 
 /obj/item/bedsheet/blue
 	icon_state = "sheetblue"
@@ -212,6 +225,7 @@ LINEN BINS
 	name = "gondola bedsheet"
 	desc = "A precious bedsheet made from the hide of a rare and peculiar critter."
 	icon_state = "sheetgondola"
+	can_be_flipped = FALSE
 	var/g_mouth
 	var/g_eyes
 
