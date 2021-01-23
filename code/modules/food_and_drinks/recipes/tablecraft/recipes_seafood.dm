@@ -1,22 +1,13 @@
 // see code/module/crafting/table.dm
 
-///////////////////////Sushi Components///////////////////////////
-
-/datum/crafting_recipe/food/sushi_rice
-	name = "Sushi Rice"
-	reqs = list(
-		/datum/reagent/water  = 40,
-		/datum/reagent/consumable/rice = 10
-	)
-	result = /obj/item/reagent_containers/food/snacks/sushi_rice
-	subcategory = CAT_SEAFOOD
+///////////////////////Sushi Components/////////////////////////// Lumos Edit - Removed Sushi Rice for crafting simplicity
 
 /datum/crafting_recipe/food/sea_weed
 	name = "Sea Weed Sheet"
 	reqs = list(
 		/datum/reagent/water = 30,
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/grown/kudzupod = 1,
+		/obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris = 1,
 	)
 	result = /obj/item/reagent_containers/food/snacks/sea_weed
 	subcategory = CAT_SEAFOOD
@@ -38,7 +29,7 @@
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 1,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1
+		/datum/reagent/consumable/rice = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/riceball
 	subcategory = CAT_SEAFOOD
@@ -57,7 +48,7 @@
 	name = "Funa Hosomaki"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 3,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 1,
 		/obj/item/reagent_containers/food/snacks/carpmeat = 2,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 3,
 	)
@@ -68,7 +59,7 @@
 	name = "Funa Nigiri"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 1,
 		/obj/item/reagent_containers/food/snacks/carpmeat = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/sushie_adv
@@ -78,7 +69,7 @@
 	name = "Well made Funa Nigiri"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 10,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 2,
+		/datum/reagent/consumable/rice = 2,
 		/obj/item/reagent_containers/food/snacks/carpmeat = 5,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1
 	)
