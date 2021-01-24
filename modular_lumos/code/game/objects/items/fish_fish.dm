@@ -264,7 +264,7 @@
 
 /obj/item/fishy/seadevil
 	name = "sea devil"
-	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
+	desc = "A small vaugely humanoid astroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "seadevil"
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
