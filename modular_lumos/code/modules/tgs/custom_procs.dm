@@ -1,5 +1,5 @@
 /proc/tgswho()
-	var/list/message = list("Players: \n")
+	var/list/message = list("[GLOB.clients.len] Players: \n")
 	var/list/player_keys = list()
 	for(var/player in GLOB.clients)
 		var/client/C = player
@@ -11,7 +11,7 @@
 	return jointext(message, "")
 
 /proc/tgsadminwho()
-	var/list/full_message = list("Connected clients: \n")
+	var/list/full_message = list("[GLOB.clients.len] Connected clients: \n")
 	var/list/message = list("Players: \n")
 	var/list/message_admin = list("Admins: \n")
 	var/list/player_keys = list()
