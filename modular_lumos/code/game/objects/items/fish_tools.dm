@@ -122,8 +122,7 @@
 			So that is the tools you can get, but I never explained the eggs, did I?<br>
 			--------------------<br>
 			So fish eggs... if they are not euthanized, they will spawn their adult forms after two minutes.<br>
-			At birth is the sex designated for the fishes. Currently, they will not change their sex, so pray.<br>
-			Fish eggs also taste pretty good.<br>
+			At birth is the sex designated for the fishes. Fish eggs also taste pretty good.<br>
 			<br>
 			with much love,<br>
 			<i>Kobe Ivanov</i>

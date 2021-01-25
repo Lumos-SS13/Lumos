@@ -78,7 +78,8 @@
 /obj/item/fishy
 	name = "fish"
 	desc = "parent fish, do not use"
-	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon = 'modular_lumos/icons/obj/fish.dmi'
+	icon_state = "fish"
 
 	///Sex: either male or female
 	var/sex = MALE_FISH
@@ -286,7 +287,7 @@
 /obj/item/fishy_egg
 	name = "fish egg"
 	desc = "A fertilized fish egg waiting to hatch."
-	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon = 'modular_lumos/icons/obj/fish.dmi'
 
 	var/killed = FALSE
 
@@ -323,7 +324,7 @@
 
 /obj/item/fishy_egg/lobster
 	fish_parent = /obj/item/fishy/lobster
-	icon_state = "salmon_eggs"
+	icon_state = "eggs_lobster"
 
 /obj/item/fishy_egg/lobster/rock
 	fish_parent = /obj/item/fishy/lobster/rock
