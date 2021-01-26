@@ -245,7 +245,7 @@
 /obj/item/fishy/lobster/rock
 	name = "rock lobster"
 	desc = "Found under space piers, often to a suprising capacity."
-	spawned_egg = /obj/item/fishy_egg/lobster
+	spawned_egg = /obj/item/fishy_egg/lobster/rock
 	icon_state = "lobster_rock"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw = 1, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
 
