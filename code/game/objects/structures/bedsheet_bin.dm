@@ -63,6 +63,11 @@ LINEN BINS
 			flipped = TRUE
 		to_chat(user, "<span class='notice'>You flip [src] around.</span>")
 
+/obj/item/bedsheet/examine(mob/user)
+    . = ..()
+    if(can_be_flipped)
+        . += "<span class='notice'>Alt-click to flip the bedsheet.</span>"
+
 /obj/item/bedsheet/blue
 	icon_state = "sheetblue"
 	dream_messages = list("blue")
