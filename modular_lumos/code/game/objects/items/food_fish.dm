@@ -120,6 +120,16 @@
 	tastes = list("sickly-sweet" = 15, "dirt" = 3)
 	foodtype = MEAT | RAW
 
+/obj/item/reagent_containers/food/snacks/lavafish_raw
+	name = "raw shark meat"
+	desc = "Raw shark meat, not recommended for consumption."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lavafishfillet"
+	cooked_type = /obj/item/reagent_containers/food/snacks/lavafish
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("endurance" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
 /// COOKED SEAFOOD (NON-SUSHI) ///
 
 /obj/item/reagent_containers/food/snacks/shrimp
@@ -228,6 +238,15 @@
 	icon_state = "cooked_worm"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("berries" = 5, "dirt" = 1)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/lavafish
+	name = "smoked lavafish fillet"
+	desc = "It takes almost too much effort to cook, but it's worth it."
+	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon_state = "lavafishfillet_smoked"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("endurance" = 15, "salt" = 3)
 	foodtype = MEAT
 
 /// SUSHI ///

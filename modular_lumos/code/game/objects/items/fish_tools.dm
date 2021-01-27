@@ -82,18 +82,15 @@
 		to_chat(user, "<span class='warning'>You are already fishing!</span>")
 		return
 	in_use = TRUE
-	if(istype(target, /turf/open/water) || istype(target, /turf/open/water/lavaland/lavaland_jungle))
+	if(istype(target, /turf/open/water))
 		if(!do_after(user, 10 SECONDS, target = target))
 			in_use = FALSE
 			return
 		if(!prob(fishing_chance))
 			in_use = FALSE
 			return
-		var/chosen_fish = pickweight(list(
-			/obj/item/fishy/lobster/rock = 30,
-			/obj/item/fishy/asteroid_worm = 20,
-			/obj/item/fishy/minicarp = 20,
-			/obj/item/fishy/salmon = 30))
+		var/turf/open/water/W = target
+		var/chosen_fish = pickweight(W.fishing_loot)
 		new chosen_fish(get_turf(target))
 		in_use = FALSE
 		return

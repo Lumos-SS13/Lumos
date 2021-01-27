@@ -14,9 +14,31 @@
 	clawfootstep = FOOTSTEP_WATER
 	heavyfootstep = FOOTSTEP_WATER
 
-	can_allow_icy = FALSE //lumos edit
+	can_allow_icy = FALSE //lumos edit V V V ALL OF THIS TOO V V V
+
+	var/list/fishing_loot = list(
+			/obj/item/fishy/catfish = 25,
+			/obj/item/fishy/shrimp = 25,
+			/obj/item/fishy/lobster = 25,
+			/obj/item/fishy/salmon = 25)
 
 /turf/open/water/lavaland
 	baseturfs = /turf/open/chasm/lavaland
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
+
+	fishing_loot = list(
+			/obj/item/fishy/lobster/rock = 30,
+			/obj/item/fishy/asteroid_worm = 20,
+			/obj/item/fishy/minicarp = 20,
+			/obj/item/fishy/salmon = 30)
+
+/turf/open/water/asteroid
+	name = "asteroid pond"
+	desc = "Shallow water found in some asteroids, often used by astroforms and extremophiles."
+
+	fishing_loot = list(
+			/obj/item/fishy/lobster/rock = 30,
+			/obj/item/fishy/asteroid_worm = 20,
+			/obj/item/fishy/minicarp = 20,
+			/obj/item/fishy/seadevil = 30)
