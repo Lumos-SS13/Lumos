@@ -23,22 +23,29 @@
 			/obj/item/fishy/salmon = 25)
 
 /turf/open/water/lavaland
+	name = "jungle water"
+	desc = "Water found throughout the subterranean jungle of NT8248-B."
 	baseturfs = /turf/open/chasm/lavaland
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 
 	fishing_loot = list(
 			/obj/item/fishy/lobster/rock = 30,
-			/obj/item/fishy/asteroid_worm = 20,
-			/obj/item/fishy/minicarp = 20,
-			/obj/item/fishy/salmon = 30)
+			/obj/item/fishy/asteroid_worm = 10,
+			/obj/item/fishy/lavacrab = 30,
+			/obj/item/fishy/lavafish = 30)
 
 /turf/open/water/asteroid
 	name = "asteroid pond"
 	desc = "Shallow water found in some asteroids, often used by astroforms and extremophiles."
+	baseturfs = /turf/open/floor/plating/asteroid
 
 	fishing_loot = list(
-			/obj/item/fishy/lobster/rock = 30,
-			/obj/item/fishy/asteroid_worm = 20,
-			/obj/item/fishy/minicarp = 20,
-			/obj/item/fishy/seadevil = 30)
+			/obj/item/fishy/space_eel = 25,
+			/obj/item/fishy/asteroid_worm = 35,
+			/obj/item/fishy/minicarp = 35,
+			/obj/item/fishy/seadevil = 5)
+
+/turf/open/water/asteroid/airless
+	initial_gas_mix = AIRLESS_ATMOS
+	baseturfs = /turf/open/floor/plating/asteroid/airless

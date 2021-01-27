@@ -63,7 +63,7 @@
 /obj/item/reagent_containers/food/snacks/lobster_raw
 	name = "raw lobster"
 	desc = "Raw lobster, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "raw_lobster_meat"
 	cooked_type = /obj/item/reagent_containers/food/snacks/basic_lobster
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -73,7 +73,7 @@
 /obj/item/reagent_containers/food/snacks/lobster_raw_tail
 	name = "raw lobster tail"
 	desc = "Raw lobster tail, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "raw_lobster_tail"
 	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -93,7 +93,7 @@
 /obj/item/reagent_containers/food/snacks/shark_raw // Don't eat shark IRL, it's bad for the environment
 	name = "raw shark meat"
 	desc = "Raw shark meat, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "fishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -103,7 +103,7 @@
 /obj/item/reagent_containers/food/snacks/shark_raw_fin
 	name = "raw shark fin"
 	desc = "Raw shark fin, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "shark_fin"
 	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -123,11 +123,31 @@
 /obj/item/reagent_containers/food/snacks/lavafish_raw
 	name = "raw shark meat"
 	desc = "Raw shark meat, not recommended for consumption."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lavafishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/lavafish
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("endurance" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/space_eel_raw
+	name = "rock eel fillet"
+	desc = "Seeing this makes asteroid worms almost appetizing."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "catfishfillet"
+	cooked_type = /obj/item/reagent_containers/food/snacks/space_eel
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("sand" = 15, "salt" = 3)
+	foodtype = MEAT | RAW
+
+/obj/item/reagent_containers/food/snacks/lavacrab_raw
+	name = "stone turner meat"
+	desc = "The meat of a botton-feeder. Hopefully flavor is heavier than water!"
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "raw_lobster_meat"
+	cooked_type = /obj/item/reagent_containers/food/snacks/lavacrab
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("crab" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
 
 /// COOKED SEAFOOD (NON-SUSHI) ///
@@ -189,7 +209,7 @@
 /obj/item/reagent_containers/food/snacks/basic_lobster
 	name = "steamed lobster"
 	desc = "Uniformly steamed lobster."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lobster_steamed_simple"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
@@ -198,7 +218,7 @@
 /obj/item/reagent_containers/food/snacks/deluxe_lobster
 	name = "deluxe steamed lobster"
 	desc = "Lobster boiled to perfection and garnished with lemon juice and greens. A proper meal for a king."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lobster_steamed_deluxe"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/nutriment/vitamin = 5)
 	tastes = list("lobster" = 15, "salt" = 3, "lemon" = 3, "greens" = 3)
@@ -207,7 +227,7 @@
 /obj/item/reagent_containers/food/snacks/baked_lobster_tail
 	name = "baked lobster tail"
 	desc = "Lobster tail baked to a satisfying crispness."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lobster_tail_baked"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("lobster" = 15, "salt" = 3)
@@ -216,7 +236,7 @@
 /obj/item/reagent_containers/food/snacks/shark
 	name = "pan-seared shark meat"
 	desc = "Cooked shark meat. Ecologist are crying."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "sharkfillet"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 15, "salt" = 3)
@@ -225,7 +245,7 @@
 /obj/item/reagent_containers/food/snacks/shark_fin
 	name = "dried shark fin"
 	desc = "Dried shark fin, for soups and grinding into gelatin."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "shark_fin_dry"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 5, "salt" = 1)
@@ -234,7 +254,7 @@
 /obj/item/reagent_containers/food/snacks/asteroid_worm
 	name = "baked asteroid worm"
 	desc = "Baked evenly and throughout. Still smells abit off, and it doesn't look much better."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "cooked_worm"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("berries" = 5, "dirt" = 1)
@@ -243,10 +263,28 @@
 /obj/item/reagent_containers/food/snacks/lavafish
 	name = "smoked lavafish fillet"
 	desc = "It takes almost too much effort to cook, but it's worth it."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lavafishfillet_smoked"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("endurance" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/space_eel
+	name = "seared rock eel"
+	desc = "It takes almost too much effort to cook, and wasn't worth it."
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "eel_fillet_cooked"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("sand" = 15, "salt" = 3)
+	foodtype = MEAT
+
+/obj/item/reagent_containers/food/snacks/lavacrab
+	name = "steamed stone turner"
+	desc = "For a bottom-feeder, this tastes pretty dang good!"
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
+	icon_state = "crab_meat_cooked"
+	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("crab" = 15, "salt" = 3)
 	foodtype = MEAT
 
 /// SUSHI ///
@@ -254,7 +292,7 @@
 /obj/item/reagent_containers/food/snacks/lobster_sushi
 	name = "lobster sushi"
 	desc = "An inexpensive and fairly common form of sushi, often favored for its mild sweetness."
-	icon = 'modular_lumos/icons/obj/food.dmi'
+	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lobster_sushi"
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 7, /datum/reagent/consumable/nutriment/vitamin = 4)
 	tastes = list("lobster" = 15, "salt" = 3, "rice" = 3, "seaweed" = 3)
