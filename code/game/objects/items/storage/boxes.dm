@@ -102,6 +102,10 @@
 		new /obj/item/disk/nanite_program(src)
 
 // Ordinary survival box
+/obj/item/storage/box/survival/
+	name = "emergency internals box"
+	illustration = "O2"
+
 /obj/item/storage/box/survival/PopulateContents()
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/reagent_containers/hypospray/medipen(src)
