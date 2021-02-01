@@ -268,7 +268,7 @@
 	desc = "A small sub-species of space carp. Just as toxic, but a lot less likely to take a chunk out of you."
 	spawned_egg = /obj/item/fishy_egg/minicarp
 	icon_state = "tinycarp"
-	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat = 1)
 
 /obj/item/fishy/seadevil
 	name = "sea devil"
@@ -289,7 +289,7 @@
 	desc = "A repulsive toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "asteroid_worm"
-	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
+	meat = list(/obj/item/reagent_containers/food/snacks/asteroid_worm = 1, /obj/item/reagent_containers/food/snacks/toxic_spines = 1)
 
 /obj/item/fishy/space_eel
 	name = "rock eel"
