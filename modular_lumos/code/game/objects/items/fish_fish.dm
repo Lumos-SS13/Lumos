@@ -78,7 +78,8 @@
 /obj/item/fishy
 	name = "fish"
 	desc = "parent fish, do not use"
-	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon = 'modular_lumos/icons/obj/fish.dmi'
+	icon_state = "fish"
 
 	///Sex: either male or female
 	var/sex = MALE_FISH
@@ -227,6 +228,13 @@
 	icon_state = "steelhead"
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw, /obj/item/stack/ore/iron)
 
+/obj/item/fishy/lavafish
+	name = "lava hopper"
+	desc = "A creature unique to NT8248-B, it has a thick, scaly dermis impregnated with iron throughout. A very tough fish."
+	spawned_egg = /obj/item/fishy_egg/lavafish
+	icon_state = "lava_fish"
+	meat = list(/obj/item/reagent_containers/food/snacks/lavafish_raw, /obj/item/stack/ore/iron)
+
 /obj/item/fishy/shrimp
 	name = "shrimp"
 	desc = "Technically speaking... This is like the cockroach of the sea."
@@ -244,7 +252,7 @@
 /obj/item/fishy/lobster/rock
 	name = "rock lobster"
 	desc = "Found under space piers, often to a suprising capacity."
-	spawned_egg = /obj/item/fishy_egg/lobster
+	spawned_egg = /obj/item/fishy_egg/lobster/rock
 	icon_state = "lobster_rock"
 	meat = list(/obj/item/reagent_containers/food/snacks/lobster_raw = 1, /obj/item/reagent_containers/food/snacks/lobster_raw_tail, /obj/item/stack/ore/iron)
 
@@ -260,11 +268,11 @@
 	desc = "A small sub-species of space carp. Just as toxic, but a lot less likely to take a chunk out of you."
 	spawned_egg = /obj/item/fishy_egg/minicarp
 	icon_state = "tinycarp"
-	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat)
+	meat = list(/obj/item/reagent_containers/food/snacks/carpmeat = 1)
 
 /obj/item/fishy/seadevil
 	name = "sea devil"
-	desc = "A small vaugely humanoid arthroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
+	desc = "A small vaugely humanoid astroform, supposedly gathered from asteroid ponds. It keeps twitching annoyingly."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "seadevil"
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
@@ -281,12 +289,26 @@
 	desc = "A repulsive toxic slug found often in aquatic pools of orbital asteroids and occasionally hitching rides on larger astroforms."
 	spawned_egg = /obj/item/fishy_egg/devil
 	icon_state = "asteroid_worm"
-	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
+	meat = list(/obj/item/reagent_containers/food/snacks/asteroid_worm = 1, /obj/item/reagent_containers/food/snacks/toxic_spines = 1)
+
+/obj/item/fishy/space_eel
+	name = "rock eel"
+	desc = "A leathery predatory astroform often found in asteroid pools, mega-astroforms, or up the Head of Security's rear."
+	spawned_egg = /obj/item/fishy_egg/space_eel
+	icon_state = "space_eel"
+	meat = list(/obj/item/reagent_containers/food/snacks/space_eel_raw)
+
+/obj/item/fishy/lavacrab
+	name = "stone turner"
+	desc = "A small pseudo-crustatcean native to exclusively to the subterranean jungles of NT8248-B. They eat small inverabrates, namely the ones under stones."
+	spawned_egg = /obj/item/fishy_egg/lavacrab
+	icon_state = "rock_crab"
+	meat = list(/obj/item/reagent_containers/food/snacks/lavacrab_raw)
 
 /obj/item/fishy_egg
 	name = "fish egg"
 	desc = "A fertilized fish egg waiting to hatch."
-	icon = 'modular_lumos/icons/obj/fish_items.dmi'
+	icon = 'modular_lumos/icons/obj/fish.dmi'
 
 	var/killed = FALSE
 
@@ -317,17 +339,22 @@
 /obj/item/fishy_egg/salmon/steelhead
 	fish_parent = /obj/item/fishy/salmon/steelhead
 
+/obj/item/fishy_egg/lavafish
+	fish_parent = /obj/item/fishy/lavafish
+	icon_state = "lava_eggs"
+
 /obj/item/fishy_egg/shrimp
 	fish_parent = /obj/item/fishy/shrimp
 	icon_state = "shrimp_eggs"
 
 /obj/item/fishy_egg/lobster
 	fish_parent = /obj/item/fishy/lobster
-	icon_state = "salmon_eggs"
+	icon_state = "eggs_lobster"
 
 /obj/item/fishy_egg/lobster/rock
 	fish_parent = /obj/item/fishy/lobster/rock
-	
+	icon_state = "lava_eggs"
+
 /obj/item/fishy_egg/catfish
 	fish_parent = /obj/item/fishy/catfish
 	icon_state = "catfish_eggs"
@@ -347,3 +374,11 @@
 /obj/item/fishy_egg/asteroid_worm
 	fish_parent = /obj/item/fishy/asteroid_worm
 	icon_state = "worm_eggs"
+
+/obj/item/fishy_egg/space_eel
+	fish_parent = /obj/item/fishy/space_eel
+	icon_state = "space_eel_eggs"
+
+/obj/item/fishy_egg/lavacrab
+	fish_parent = /obj/item/fishy/lavacrab
+	icon_state = "lava_eggs"

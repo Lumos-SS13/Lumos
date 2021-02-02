@@ -68,7 +68,7 @@
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 
-/turf/open/water/lavaland_jungle
+/turf/open/water/lavaland/lavaland_jungle
 	baseturfs = /turf/open/lava/smooth/lava_land_surface
 	icon = 'modular_skyrat/icons/turf/water.dmi'
 	icon_state = "shallow"

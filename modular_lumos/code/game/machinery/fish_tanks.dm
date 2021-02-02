@@ -86,7 +86,21 @@
 				new /obj/item/reagent_containers/food/snacks/sea_weed(get_turf(src))
 		update_icon()
 		return
+	else if(istype(I, /obj/item/wirecutters/power))
+		if(seaweed_grow >= 50)
+			seaweed_grow -= 50
+			if(prob(50))
+				new /obj/item/reagent_containers/food/snacks/sea_weed(get_turf(src))
+		update_icon()
+		return
 	else if(istype(I, /obj/item/wrench))
+		I.play_tool_sound(src, 50)
+		if(!do_after(user, 2 SECONDS, FALSE, src))
+			return
+		I.play_tool_sound(src, 50)
+		anchored = !anchored
+		return
+	else if(istype(I, /obj/item/wrench/power))
 		I.play_tool_sound(src, 50)
 		if(!do_after(user, 2 SECONDS, FALSE, src))
 			return
@@ -103,7 +117,25 @@
 		glass.amount = 5
 		qdel(src)
 		return
+	else if(istype(I, /obj/item/crowbar/power))
+		I.play_tool_sound(src, 50)
+		if(!do_after(user, 2 SECONDS, FALSE, src))
+			return
+		I.play_tool_sound(src, 50)
+		new /obj/structure/fish_tank_base(get_turf(src))
+		var/obj/item/stack/sheet/glass/glass = new /obj/item/stack/sheet/glass(get_turf(src))
+		glass.amount = 5
+		qdel(src)
+		return
 	else if(istype(I, /obj/item/fish_tool/fish_food))
+		var/obj/item/fish_tool/fish_food/food = I
+		if(food.food_left >= 5)
+			food.food_left -= 5
+			current_food += 5
+			food.desc = "[initial(food.desc)] Food Remaining: [food.food_left]"
+			playsound(src.loc, 'sound/machines/chime.ogg', 50, TRUE, -1)
+		return
+	else if(istype(I, /obj/item/fish_tool/fish_food/huge))
 		var/obj/item/fish_tool/fish_food/food = I
 		if(food.food_left >= 5)
 			food.food_left -= 5

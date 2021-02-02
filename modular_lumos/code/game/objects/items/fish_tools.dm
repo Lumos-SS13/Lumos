@@ -82,14 +82,15 @@
 		to_chat(user, "<span class='warning'>You are already fishing!</span>")
 		return
 	in_use = TRUE
-	if(istype(target, /turf/open/water) || istype(target, /turf/open/floor/plating/beach/water))
-		if(!do_after(user, 5 SECONDS, target = target))
+	if(istype(target, /turf/open/water))
+		if(!do_after(user, 10 SECONDS, target = target))
 			in_use = FALSE
 			return
 		if(!prob(fishing_chance))
 			in_use = FALSE
 			return
-		var/chosen_fish = pick(list(/obj/item/fishy/catfish, /obj/item/fishy/lobster, /obj/item/fishy/shrimp, /obj/item/fishy/salmon))
+		var/turf/open/water/W = target
+		var/chosen_fish = pickweight(W.fishing_loot)
 		new chosen_fish(get_turf(target))
 		in_use = FALSE
 		return
@@ -122,8 +123,7 @@
 			So that is the tools you can get, but I never explained the eggs, did I?<br>
 			--------------------<br>
 			So fish eggs... if they are not euthanized, they will spawn their adult forms after two minutes.<br>
-			At birth is the sex designated for the fishes. Currently, they will not change their sex, so pray.<br>
-			Fish eggs also taste pretty good.<br>
+			At birth is the sex designated for the fishes. Fish eggs also taste pretty good.<br>
 			<br>
 			with much love,<br>
 			<i>Kobe Ivanov</i>

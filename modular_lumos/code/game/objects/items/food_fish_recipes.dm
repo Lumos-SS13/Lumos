@@ -5,7 +5,7 @@
 	name = "Cooked Salmon Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/salmon = 1
 	)
@@ -46,7 +46,7 @@
 	name = "Masago Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/fish_eggs = 2
 	)
@@ -57,7 +57,7 @@
 	name = "Ikura Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/fish_eggs = 3
 	)
@@ -68,7 +68,7 @@
 	name = "Ebi Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/shrimp_raw = 2
 	)
@@ -79,7 +79,7 @@
 	name = "Tamago Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/egg = 1
 	)
@@ -90,7 +90,7 @@
 	name = "Sake Sushi"
 	reqs = list(
 		/datum/reagent/consumable/ethanol/sake = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/salmon_raw = 1
 	)
@@ -101,7 +101,7 @@
 	name = "Lobster Sushi"
 	reqs = list(
 		/datum/reagent/consumable/soysauce = 5,
-		/obj/item/reagent_containers/food/snacks/sushi_rice = 1,
+		/datum/reagent/consumable/rice = 3,
 		/obj/item/reagent_containers/food/snacks/sea_weed = 1,
 		/obj/item/reagent_containers/food/snacks/lobster_raw = 1
 	)
