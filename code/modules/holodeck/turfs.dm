@@ -43,6 +43,10 @@
 	name = "coastline"
 	icon_state = "sandwater_t"
 
+/turf/open/floor/holofloor/beach/coast_t/sandwater_inner
+	icon_state = "sandwater_inner"
+	baseturfs = /turf/open/floor/holofloor/beach/coast_t/sandwater_inner
+
 /turf/open/floor/holofloor/beach/coast_b
 	gender = NEUTER
 	name = "coastline"
