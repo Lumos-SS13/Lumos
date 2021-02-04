@@ -127,30 +127,44 @@
 	gender = PLURAL
 	name = "sand"
 	desc = "Surf's up."
-	icon_state = "sand"
+	icon_state = "desert"
 	baseturfs = /turf/open/floor/plating/beach/sand
 
 /turf/open/floor/plating/beach/coastline_t
 	name = "coastline"
 	desc = "Tide's high tonight. Charge your batons."
-	icon_state = "sandwater_t"
+	icon_state = "beach"
 	baseturfs = /turf/open/floor/plating/beach/coastline_t
 
-/turf/open/floor/plating/beach/coastline_b
+/turf/open/floor/plating/beach/coastline_b // Depreciated for simply shallow
 	name = "coastline"
 	icon_state = "sandwater_b"
 	baseturfs = /turf/open/floor/plating/beach/coastline_b
 
 /turf/open/floor/plating/beach/water
 	gender = PLURAL
-	name = "water"
+	name = "sea water"
 	desc = "You get the feeling that nobody's bothered to actually make this water functional..."
-	icon_state = "water"
+	icon_state = "seadeep"
+	baseturfs = /turf/open/floor/plating/beach/water
+
+/turf/open/floor/plating/beach/water/shallow
+	gender = PLURAL
+	name = "shallow sea water"
+	desc = "You get the feeling that nobody's bothered to actually make this water functional..."
+	icon_state = "seashallow"
 	baseturfs = /turf/open/floor/plating/beach/water
 
 /turf/open/floor/plating/beach/coastline_t/sandwater_inner
-	icon_state = "sandwater_inner"
+	icon_state = "beachcorner"
 	baseturfs = /turf/open/floor/plating/beach/coastline_t/sandwater_inner
+
+/turf/open/indestructible/binary/deepwater
+	name = "deep ocean water"
+	desc = "You're definitely not gonna swim in this."
+	icon = 'icons/misc/beach.dmi'
+	icon_state = "seadeep"
+	density = 1
 
 /turf/open/floor/plating/ironsand
 	gender = PLURAL
