@@ -57,3 +57,15 @@
 					/obj/item/fish_box/devil)
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "exotic fish crate"
+
+/datum/supply_pack/service/lawnmower
+	name = "John Dearest's Lawnmover"
+	desc = "Be the king of your lawn, cultivate your land, and ride upon your green and yellow steed. Comes with a complementary can of Monkey Energy. Ride on."
+	cost = 10000
+	access = ACCESS_HYDROPONICS
+	contains = list(
+		/obj/vehicle/ridden/lawnmower,
+		/obj/item/key/lawnmower,
+		/obj/item/reagent_containers/food/drinks/soda_cans/monkey_energy
+	)
+	crate_name = "mower crate"
