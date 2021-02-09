@@ -289,7 +289,7 @@ SUBSYSTEM_DEF(mapping)
 
 	// load mining
 	if(config.minetype == "lavaland")
-		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland_Skyrat.dmm", traits = list(ZTRAITS_LAVALAND_JUNGLE, ZTRAITS_LAVALAND), default_traits = ZTRAITS_LAVALAND)
+		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland_Lumos.dmm", traits = list(ZTRAITS_LAVALAND_JUNGLE, ZTRAITS_LAVALAND), default_traits = ZTRAITS_LAVALAND)
 	if(config.minetype == "asteroid")
 		LoadGroup(FailedZs, "Asteroid", "map_files/Mining", "AsteroidMining.dmm", traits = list(ZTRAITS_ASTEROID), default_traits = ZTRAITS_ASTEROID)
 	else if (!isnull(config.minetype) && config.minetype != "none")
