@@ -40,6 +40,13 @@
 				/obj/item/stack/sheet/animalhide/ashdrake = 5)
 	category = CAT_PRIMAL
 
+/datum/crafting_recipe/shamanhat
+	name = "Shaman Headdress"
+	result = /obj/item/clothing/head/helmet/shaman
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 4)
+	category = CAT_PRIMAL
+
 /datum/crafting_recipe/bonebag
 	name = "Bone Satchel"
 	result = /obj/item/storage/backpack/satchel/bone

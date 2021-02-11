@@ -257,6 +257,13 @@
 	strip_delay = 100
 	mutantrace_variation = STYLE_MUZZLE
 
+/obj/item/clothing/head/helmet/shaman
+	name = "ritual headress"
+	desc = "Carved from bone, a headress that denotes devotion to a higher power."
+	icon_state = "shamanhat"
+	item_state = "shamanhat"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 5, "rad" = 20, "fire" = 40, "acid" = 20)
+
 /obj/item/clothing/head/helmet/infiltrator
 	name = "insidious helmet"
 	desc = "An insidious armored combat helmet signed with Syndicate insignia. The visor is coated with a resistant paste guaranteed to withstand bright flashes perfectly."
