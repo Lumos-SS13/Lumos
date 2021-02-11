@@ -18,3 +18,9 @@
 	suffix = "goldnugget.dmm"
 	name = "The Gold Nugget"
 	description = "Not to be confused with the 21st century casino."
+
+/datum/map_template/ruin/spacenearstation/gone_fishin
+	id = "fishinstroid"
+	suffix = "gone_fishin.dmm"
+	name = "Fishable Asteroid"
+	description = "An asteroid with ample space for fishing, if you can beat away the locals."

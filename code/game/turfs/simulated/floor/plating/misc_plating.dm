@@ -116,6 +116,7 @@
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	gender = PLURAL
 
 /turf/open/floor/plating/beach/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
@@ -127,8 +128,12 @@
 	gender = PLURAL
 	name = "sand"
 	desc = "Surf's up."
-	icon_state = "desert"
+	icon_state = "desert0"
 	baseturfs = /turf/open/floor/plating/beach/sand
+
+/turf/open/floor/plating/beach/sand/Initialize()
+	. = ..()
+	icon_state = "desert[rand(0,6)]"
 
 /turf/open/floor/plating/beach/coastline_t
 	name = "coastline"
@@ -142,14 +147,12 @@
 	baseturfs = /turf/open/floor/plating/beach/coastline_b
 
 /turf/open/floor/plating/beach/water
-	gender = PLURAL
 	name = "sea water"
 	desc = "You get the feeling that nobody's bothered to actually make this water functional..."
 	icon_state = "seadeep"
 	baseturfs = /turf/open/floor/plating/beach/water
 
 /turf/open/floor/plating/beach/water/shallow
-	gender = PLURAL
 	name = "shallow sea water"
 	desc = "You get the feeling that nobody's bothered to actually make this water functional..."
 	icon_state = "seashallow"
