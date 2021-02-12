@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(dwarf_last, world.file2list("strings/names/dwarf_last.txt")) //
 			if(last_alcohol_spam + 8 SECONDS < world.time)
 				to_chat(owner, "<span class='userdanger'>DAMNATION INCARNATE, WHY AM I CURSED WITH THIS DRY-SPELL? I MUST DRINK.</span>")
 				last_alcohol_spam = world.time
-			owner.adjustToxLoss(6)
+			owner.adjustToxLoss(8)
 		if(25 to 50)
 			if(last_alcohol_spam + 20 SECONDS < world.time)
 				to_chat(owner, "<span class='danger'>Oh DAMN, I need some brew!</span>")
