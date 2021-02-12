@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(dwarf_last, world.file2list("strings/names/dwarf_last.txt")) //
 	icon_state = "liver"
 	desc = "A dwarven liver, theres something magical about seeing one of these up close."
 	alcohol_tolerance = 0 //dwarves really shouldn't be dying to alcohol.
-	toxTolerance = 6 //Shrugs off 5 units of toxins damage.
+	toxTolerance = 5 //Shrugs off 5 units of toxins damage.
 	maxHealth = 150 //More health than the average liver, as you aren't going to be replacing this.
 	//If it does need replaced with a standard human liver, prepare for hell.
 
