@@ -4,7 +4,7 @@
 	desc = "Shallow water."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater_motion"
-	baseturfs = /turf/open/floor/grass
+	baseturfs = /turf/open/water
 	slowdown = 1
 	bullet_sizzle = TRUE
 	bullet_bounce_sound = null //needs a splashing sound one day.
@@ -22,6 +22,10 @@
 			/obj/item/fishy/lobster = 25,
 			/obj/item/fishy/salmon = 25)
 
+/turf/open/water/airless
+	initial_gas_mix = AIRLESS_ATMOS
+	baseturfs = /turf/open/water/airless
+
 /turf/open/water/lavaland
 	name = "jungle water"
 	desc = "Water found throughout the subterranean jungle of NT8248-B."
@@ -34,6 +38,10 @@
 			/obj/item/fishy/asteroid_worm = 10,
 			/obj/item/fishy/lavacrab = 30,
 			/obj/item/fishy/lavafish = 30)
+
+/turf/open/water/lavaland/airless
+	initial_gas_mix = AIRLESS_ATMOS
+	baseturfs = /turf/open/water/lavaland/airless
 
 /turf/open/water/asteroid
 	name = "asteroid pond"
@@ -49,3 +57,17 @@
 /turf/open/water/asteroid/airless
 	initial_gas_mix = AIRLESS_ATMOS
 	baseturfs = /turf/open/floor/plating/asteroid/airless
+
+/turf/open/water/seawater
+	name = "sea water"
+	desc = "Deep blue water absolutely brimming with life."
+	icon = 'icons/misc/beach.dmi'
+	icon_state = "seadeep"
+	baseturfs = /turf/open/water/seawater
+
+	fishing_loot = list(
+			/obj/item/fishy/shark = 10,
+			/obj/item/fishy/shrimp = 25,
+			/obj/item/fishy/lobster = 25,
+			/obj/item/fishy/lobster/rock = 10,
+			/obj/item/fishy/salmon = 30)

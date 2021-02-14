@@ -21,3 +21,10 @@
 	description = "A large cargo pod, often used in Nanotrasen freighters, appears to have fallen here."
 	suffix = "lavaland_surface_cargopod.dmm"
 	cost = 5
+
+/datum/map_template/ruin/lavaland/jungle_pond
+	name = "Surface Jungle Pond"
+	id = "surface_pond"
+	description = "A small pond somehow above the jungles it originates from."
+	suffix = "lavaland_surface_jungle_pond.dmm"
+	cost = 5
