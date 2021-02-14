@@ -47,11 +47,19 @@
 
 /datum/design/smeat
 	name = "Biomass Meat Slab"
-	id = "smeat"
+	id = "smeat" // there I was, beatin my smeat
 	build_type = BIOGENERATOR
 	materials = list(/datum/material/biomass = 175)
 	build_path = /obj/item/reagent_containers/food/snacks/meat/slab/synthmeat
 	category = list("initial", "Food")
+
+/datum/design/rollingpapers
+	name = "Rolling Papers"
+	id = "rollingpapers"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 50)
+	build_path = /obj/item/storage/fancy/rollingpapers
+	category = list("initial", "Organic Materials")
 
 /datum/design/ez_nut
 	name = "10u E-Z Nutrient"
