@@ -86,3 +86,19 @@
 		if(!do_after(user, 2 SECONDS, target = src))
 			return
 		qdel(src)
+
+
+/obj/item/flashlight/flare/torch
+	name = "torch"
+	desc = "A torch fashioned from some leaves and a log."
+	w_class = WEIGHT_CLASS_BULKY
+	brightness_on = 6 //When on were like a lantern
+	light_color = "#FAA44B"
+	icon_state = "torch"
+	item_state = "torch"
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	light_color = LIGHT_COLOR_ORANGE
+	total_mass = TOTAL_MASS_NORMAL_ITEM
+	on_damage = 12 //Its a log thats on fire
+	slot_flags = null

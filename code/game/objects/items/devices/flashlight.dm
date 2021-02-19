@@ -330,6 +330,7 @@
 /obj/item/flashlight/flare/get_temperature()
 	return on * heat
 
+/*  LUMOS EDIT - REPLACED IN ashwalker_item.dm FOR SHODDY WELDER ALTERNATIVE
 /obj/item/flashlight/flare/torch
 	name = "torch"
 	desc = "A torch fashioned from some leaves and a log."
@@ -344,7 +345,7 @@
 	total_mass = TOTAL_MASS_NORMAL_ITEM
 	on_damage = 12 //Its a log thats on fire
 	slot_flags = null
-
+*/
 /obj/item/flashlight/lantern
 	name = "lantern"
 	icon_state = "lantern"
