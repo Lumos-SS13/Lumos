@@ -183,7 +183,7 @@
 	RollCredits()
 	for(var/client/C in GLOB.clients)
 		if(C)
-			C.playtitlemusic(40)
+			C.playtitlemusic(30) //lumos edit: turn that music DOWN
 	CONFIG_SET(flag/suicide_allowed,TRUE) // EORG suicides allowed
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)
