@@ -180,11 +180,6 @@
 			if(istype(dicc) && dicc.is_exposed())
 				. |= dicc.genital_examine(user)
 
-	var/cursed_stuff = attempt_vr(src,"examine_bellies",args) //vore Code
-	if(cursed_stuff)
-		. += cursed_stuff
-	//END OF CIT CHANGES
-
 	//Jitters
 	if(!screwy_self)
 		switch(jitteriness)

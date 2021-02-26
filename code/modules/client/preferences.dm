@@ -495,8 +495,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 				dat += "[TextPreview(skyrat_ooc_notes)]..."
 			dat +=	"<h2>ERP Preferences</h2>"
 			dat += 	"<b>ERP :</b> <a href='?_src_=prefs;preference=erp_pref'>[erppref]</a> "
-			// dat += 	"<b>Non-Con :</b> <a href='?_src_=prefs;preference=noncon_pref'>[nonconpref]</a> " //lumos change
-			dat += 	"<b>Vore :</b> <a href='?_src_=prefs;preference=vore_pref'>[vorepref]</a><br>"
 			dat += 	"<h2>Records</h2>"
 			dat += 	"<a href='?_src_=prefs;preference=general_records;task=input'><b>General</b></a><br>"
 			if(length(general_records) <= 40)
@@ -3217,22 +3215,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 							erppref = "No"
 						if("No")
 							erppref = "Yes"
-				if("noncon_pref")
-					switch(nonconpref)
-						if("Yes")
-							nonconpref = "Ask"
-						if("Ask")
-							nonconpref = "No"
-						if("No")
-							nonconpref = "Yes"
-				if("vore_pref")
-					switch(vorepref)
-						if("Yes")
-							vorepref = "Ask"
-						if("Ask")
-							vorepref = "No"
-						if("No")
-							vorepref = "Yes"
 				//Skyrat edit - *someone* offered me actual money for this shit
 				if("extremepref") //i hate myself for doing this
 					switch(extremepref) //why the fuck did this need to use cycling instead of input from a list
