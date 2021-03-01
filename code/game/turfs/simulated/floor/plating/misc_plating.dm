@@ -130,10 +130,12 @@
 	desc = "Surf's up."
 	icon_state = "desert0"
 	baseturfs = /turf/open/floor/plating/beach/sand
+	can_allow_icy = FALSE // Hot sands don't get frosty
 
 /turf/open/floor/plating/beach/sand/Initialize()
 	. = ..()
-	icon_state = "desert[rand(0,6)]"
+	if(prob(15))
+		icon_state = "desert[rand(0,6)]"
 
 /turf/open/floor/plating/beach/coastline_t
 	name = "coastline"
