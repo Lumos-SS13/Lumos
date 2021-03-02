@@ -93,7 +93,7 @@
 
 /datum/species/pod
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Podpeople are a race of sapient humanoid plants, oftentimes the result of genetic experimentation or botanical research gone awry. While most podpeople within Nanotrasen-controlled space are the result of experimental revival techniques involving a species of large cabbage, plant-based lifeforms can take a wide variety of shapes and sizes within the galaxy."
+	fluff_desc = "Podmen are largely products of adding the DNA of a Human in a Podplant in a emergency revival proceedure. However there is the occasional amalgam plant being of indeterminate origin, although theorized to come from Quetzal."
 
 /datum/species/shadow
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
