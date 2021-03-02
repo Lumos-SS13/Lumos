@@ -18,7 +18,7 @@
 
 /datum/species/lizard
 	screamsounds = list('modular_citadel/sound/voice/scream_lizard.ogg')
-	fluff_desc = "Lizardperson is an umbrella term for reptile-like sapient species. It is common for on-station lizardpeople to be civilized ashwalkers, but this is not true for all of them, as reptile-like species come from all sectors of space."
+	fluff_desc = "Named Uthani in their native tongue of Draconic, Lizardmen are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going where they can get work."
 
 /datum/species/skeleton
 	screamsounds = list('modular_citadel/sound/voice/scream_skeleton.ogg')
@@ -30,7 +30,7 @@
 
 /datum/species/insect
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
-	fluff_desc = "Insectoid is an umbrella term used to describe a type of alien one might encounter within the galaxy. They take a wide form of creeds and appearances, with backgrounds varying wildly."
+	fluff_desc = "Insectoids are a collection of species hailing from Ocellus-4, a world covered in marshes and opalescent oceans. They're diverse in both body and mind, making it hard to get a definitive summary of their personalities."
 
 /datum/species/insect/moth
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
