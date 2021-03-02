@@ -52,18 +52,6 @@
  	path = /obj/item/clothing/under/rank/security/warden/formal
  	restricted_roles = list("Warden")
 
-/datum/gear/secskirt
-	name = "Security skirt"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/rank/security/officer/skirt
-	restricted_roles = list("Security Officer", "Warden", "Head of Security")
-
-/datum/gear/hosskirt
-	name = "Head of security's skirt"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/rank/security/head_of_security/skirt
-	restricted_roles = list("Head of Security")
-
 /datum/gear/sechud
 	name = "Security Hud"
 	category = SLOT_GLASSES
