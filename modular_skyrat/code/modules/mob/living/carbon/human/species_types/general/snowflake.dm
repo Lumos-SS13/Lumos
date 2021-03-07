@@ -9,7 +9,7 @@
 
 /datum/species/android
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
-	fluff_desc = "Androids are simply put, fully augmented humans. Many of them did it for the sake of near-immortality, or just because of rampant technophilia. As such, most of them are extremist transhumanists, and due to the cost of being augmented most of them are of higher class."
+	fluff_desc = "Some may accidentally assume Androids are some form of IPC, but infact all androids are or were human at some point. Most androids arise from rampant technophilia or massive bodily repair."
 
 /datum/species/ipc
 	name = "I.P.C"
@@ -18,7 +18,7 @@
 
 /datum/species/lizard
 	screamsounds = list('modular_citadel/sound/voice/scream_lizard.ogg')
-	fluff_desc = "Named Uthani in their native tongue of Draconic, Lizardmen are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going where they can get work."
+	fluff_desc = "Named Uthani in their native tongue of Draconic, Lizardmen are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going wherever they can get work."
 
 /datum/species/skeleton
 	screamsounds = list('modular_citadel/sound/voice/scream_skeleton.ogg')
@@ -93,7 +93,7 @@
 
 /datum/species/pod
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Podmen are largely products of adding the DNA of a Human in a Podplant in a emergency revival proceedure. However there is the occasional amalgam plant being of indeterminate origin, although theorized to come from the Lizardpeople's jungle homeworld; Quetzal."
+	fluff_desc = "Podmen are largely products of adding the DNA of a Human in a Podplant in a emergency revival procedure. However there is the occasional amalgam plant being of indeterminate origin, although theorized to come from the Lizardpeople's jungle homeworld; Quetzal."
 
 /datum/species/shadow
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
