@@ -1,7 +1,7 @@
 /obj/structure/chair
 	name = "chair"
 	desc = "You sit in this. Either by will or force."
-	icon = 'icons/obj/chairs.dmi'
+	icon = 'icons/obj/structures/chairs.dmi'
 	icon_state = "chair"
 	anchored = TRUE
 	can_buckle = 1
@@ -196,7 +196,7 @@
 	return ..()
 
 /obj/structure/chair/comfy/proc/GetArmrest()
-	return mutable_appearance('icons/obj/chairs.dmi', "comfychair_armrest")
+	return mutable_appearance('icons/obj/structures/chairs.dmi', "comfychair_armrest")
 
 /obj/structure/chair/comfy/Destroy()
 	QDEL_NULL(armrest)
@@ -246,7 +246,7 @@
 	buildstackamount = 4
 
 /obj/structure/chair/comfy/plywood/GetArmrest()
-	return mutable_appearance('icons/obj/chairs.dmi', "plywood_chair_armrest")
+	return mutable_appearance('icons/obj/structures/chairs.dmi', "plywood_chair_armrest")
 
 /obj/structure/chair/comfy/shuttle
 	name = "shuttle seat"
@@ -254,7 +254,7 @@
 	icon_state = "shuttle_chair"
 
 /obj/structure/chair/comfy/shuttle/GetArmrest()
-	return mutable_appearance('icons/obj/chairs.dmi', "shuttle_chair_armrest")
+	return mutable_appearance('icons/obj/structures/chairs.dmi', "shuttle_chair_armrest")
 
 /obj/structure/chair/office
 	anchored = FALSE
@@ -309,7 +309,7 @@
 /obj/item/chair
 	name = "chair"
 	desc = "Bar brawl essential."
-	icon = 'icons/obj/chairs.dmi'
+	icon = 'icons/obj/structures/chairs.dmi'
 	icon_state = "chair_toppled"
 	item_state = "chair"
 	lefthand_file = 'icons/mob/inhands/misc/chairs_lefthand.dmi'
