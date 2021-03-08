@@ -1,7 +1,7 @@
 /obj/item/papercutter
 	name = "paper cutter"
 	desc = "Standard office equipment. Precisely cuts paper using a large blade."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/items/bureaucracy.dmi'
 	icon_state = "papercutter"
 	force = 5
 	throwforce = 5
@@ -111,7 +111,7 @@
 	name = "paper slip"
 	desc = "A little slip of paper left over after a larger piece was cut. Whoa."
 	icon_state = "paperslip"
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/items/bureaucracy.dmi'
 	resistance_flags = FLAMMABLE
 	max_integrity = 50
 
@@ -124,7 +124,7 @@
 /obj/item/hatchet/cutterblade
 	name = "paper cutter"
 	desc = "The blade of a paper cutter. Most likely removed for polishing or sharpening."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/items/bureaucracy.dmi'
 	icon_state = "cutterblade"
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'

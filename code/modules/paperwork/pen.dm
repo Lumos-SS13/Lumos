@@ -13,7 +13,7 @@
 /obj/item/pen
 	desc = "It's a normal black ink pen."
 	name = "pen"
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/items/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_EARS
@@ -233,7 +233,7 @@
 /obj/item/pen/survival
 	name = "survival pen"
 	desc = "The latest in portable survival technology, this pen was designed as a miniature diamond pickaxe. Watchers find them very desirable for their diamond exterior."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/items/bureaucracy.dmi'
 	icon_state = "digging_pen"
 	item_state = "pen"
 	force = 3
