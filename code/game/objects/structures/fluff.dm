@@ -117,7 +117,7 @@
 /obj/structure/fluff/paper
 	name = "dense lining of papers"
 	desc = "A lining of paper scattered across the bottom of a wall."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/structures/fluff/fluff.dmi'
 	icon_state = "paper"
 	deconstructible = FALSE
 
@@ -172,13 +172,13 @@
 /obj/structure/fluff/fokoff_sign
 	name = "crude sign"
 	desc = "A crudely-made sign with the words 'fok of' written in some sort of red paint."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/structures/fluff/fluff.dmi'
 	icon_state = "fokof"
 
 /obj/structure/fluff/snowlegion
 	name = "snowlegion"
 	desc = "Looks like that weird kid with the tiger plushie has been round here again."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/structures/fluff/fluff.dmi'
 	icon_state = "snowlegion"
 	anchored = TRUE
 	deconstructible = FALSE
@@ -196,7 +196,7 @@
 /obj/structure/fluff/beach_towel
 	name = "beach towel"
 	desc = "A towel decorated in various beach-themed designs."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/structures/fluff/fluff.dmi'
 	icon_state = "railing"
 	density = FALSE
 	anchored = TRUE
@@ -205,7 +205,7 @@
 /obj/structure/fluff/beach_umbrella
 	name = "beach umbrella"
 	desc = "A fancy umbrella designed to keep the sun off beach-goers."
-	icon = 'icons/obj/fluff.dmi'
+	icon = 'icons/obj/structures/fluff/fluff.dmi'
 	icon_state = "brella"
 	density = FALSE
 	anchored = TRUE
