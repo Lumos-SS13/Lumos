@@ -12,7 +12,7 @@
 /obj/item/card
 	name = "card"
 	desc = "Does card things."
-	icon = 'icons/obj/card.dmi'
+	icon = 'icons/obj/items/card.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
 	var/list/files = list()
@@ -42,7 +42,7 @@
 	. = ..()
 	if(detail_color == COLOR_FLOORTILE_GRAY)
 		return
-	var/mutable_appearance/detail_overlay = mutable_appearance('icons/obj/card.dmi', "[icon_state]-color")
+	var/mutable_appearance/detail_overlay = mutable_appearance('icons/obj/items/card.dmi', "[icon_state]-color")
 	detail_overlay.color = detail_color
 	. += detail_overlay
 
@@ -817,7 +817,7 @@
 
 /obj/item/card/id/knight
 	name = "knight badge"
-	icon = 'icons/obj/card.dmi' //Skyrat change
+	icon = 'icons/obj/items/card.dmi' //Skyrat change
 	icon_state = "knight"
 	desc = "A badge denoting the owner as a knight! It has a strip for swiping like an ID"
 	var/id_color = "#00FF00" //defaults to green

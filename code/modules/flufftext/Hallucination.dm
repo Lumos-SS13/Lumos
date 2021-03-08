@@ -1029,7 +1029,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 					target.halitem.icon_state = "stunbaton"
 					target.halitem.name = "Stun Baton"
 				if(5) //emag
-					target.halitem.icon = 'icons/obj/card.dmi'
+					target.halitem.icon = 'icons/obj/items/card.dmi'
 					target.halitem.icon_state = "emag"
 					target.halitem.name = "Cryptographic Sequencer"
 				if(6) //flashbang

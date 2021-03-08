@@ -153,7 +153,7 @@
 /obj/item/ammo_box/shotgun
 	name = "stripper clip (shotgun shells)"
 	desc = "A stripper clip, designed to help with loading a shotgun slightly faster."
-	icon = 'icons/obj/ammo.dmi'
+	icon = 'icons/obj/guns/ammo.dmi'
 	icon_state = "shotgunclip"
 	caliber = "shotgun" // slapped in to allow shell mix n match
 	ammo_type = /obj/item/ammo_casing/shotgun
