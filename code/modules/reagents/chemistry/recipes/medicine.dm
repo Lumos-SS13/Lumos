@@ -334,3 +334,19 @@
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
 		new /obj/item/stack/medical/mesh/advanced(location)
+
+/datum/chemical_reaction/shaman_tincture // Mushroom stem + ash from an ash pile + cactus fruit + heat the bowl with a welder
+	name = "shamans tincture"
+	id = /datum/reagent/medicine/shaman_tincture
+	required_temp = 420
+	mix_message = "The mixture binds together from the heat, releasing a pleasant smelling smoke."
+	results = list(/datum/reagent/medicine/shaman_tincture = 10) // Pretty intensive to get this, so this amount is fair. That and this chem isn't very good.
+	required_reagents = list(/datum/reagent/ash = 5, /datum/reagent/consumable/vitfro = 2, /datum/reagent/consumable/tinlux = 1)
+
+/datum/chemical_reaction/tribaldetox // Mushroom cap + ash from an ash pile + heat the bowl with a welder
+	name = "Cap Mix"
+	id = /datum/reagent/medicine/tribaldetox
+	required_temp = 420
+	mix_message = "The mixture binds together from the heat, releasing a disgusting smelling smoke."
+	results = list(/datum/reagent/medicine/tribaldetox = 10)
+	required_reagents = list(/datum/reagent/ash = 10, /datum/reagent/consumable/entpoly = 1)

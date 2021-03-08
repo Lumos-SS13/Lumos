@@ -62,7 +62,7 @@ Difficulty: Hard
 /obj/item/gps/internal/bubblegum
 	icon_state = null
 	gpstag = "Bloody Signal"
-	desc = "You're not quite sure how a signal can be bloody."
+	desc = "A sharp pain, blood and vicera, calling."
 	invisibility = 100
 
 /mob/living/simple_animal/hostile/megafauna/bubblegum/BiologicalLife(seconds, times_fired)
