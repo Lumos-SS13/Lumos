@@ -32,7 +32,7 @@
 /mob/living/simple_animal/jacq
 	name = "Jacqueline the Pumpqueen"
 	real_name = "Jacqueline"
-	icon = 'icons/obj/halloween_items.dmi'
+	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "jacqueline"
 	maxHealth = 25
 	health = 25
@@ -451,7 +451,7 @@
 //Potions
 /obj/item/reagent_containers/potion_container
 	name = "potion"
-	icon = 'icons/obj/halloween_items.dmi'
+	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "jacq_potion"
 	desc = "A potion with a strange concoction within. Be careful, as if it's thrown it explodes in a puff of smoke like Jacqueline."
 
@@ -472,7 +472,7 @@
 //Candies
 /obj/item/reagent_containers/food/snacks/special_candy
 	name = "Magic candy"
-	icon = 'icons/obj/halloween_items.dmi'
+	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "jacq_candy"
 	desc = "A candy with strange magic within. Be careful, as the magic isn't always helpful."
 

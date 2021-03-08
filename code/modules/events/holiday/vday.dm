@@ -100,7 +100,7 @@
 
 /obj/item/reagent_containers/food/snacks/candyheart
 	name = "candy heart"
-	icon = 'icons/obj/holiday_misc.dmi'
+	icon = 'icons/obj/holiday/holiday_misc.dmi'
 	icon_state = "candyheart"
 	desc = "A heart-shaped candy that reads: "
 	list_reagents = list(/datum/reagent/consumable/sugar = 2)

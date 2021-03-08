@@ -3,7 +3,7 @@
 
 /obj/item/barthpot
 	name = "Bartholomew"
-	icon = 'icons/obj/halloween_items.dmi'
+	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "barthpot"
 	anchored = TRUE
 	var/items_list = list()
