@@ -81,7 +81,7 @@
 /obj/structure/fluff/bus
 	name = "bus"
 	desc = "GO TO SCHOOL. READ A BOOK."
-	icon = 'icons/obj/bus.dmi'
+	icon = 'icons/obj/structures/fluff/bus.dmi'
 	density = TRUE
 	anchored = TRUE
 	deconstructible = FALSE

@@ -1,7 +1,7 @@
 /obj/structure/sign/barsign // All Signs are 64 by 64 pixels, though most of them are made to fit 64 x 32 and only take the two lowermost tiles.
 	name = "Bar Sign"
 	desc = "A bar sign with no writing on it."
-	icon = 'icons/obj/barsigns.dmi'
+	icon = 'icons/obj/structures/fluff/barsigns.dmi'
 	icon_state = "empty"
 	req_access = list(ACCESS_BAR)
 	max_integrity = 500
