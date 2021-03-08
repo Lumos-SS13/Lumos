@@ -10,7 +10,7 @@
 /obj/structure/femur_breaker
 	name = "femur breaker"
 	desc = "A large structure used to break the femurs of traitors and treasonists."
-	icon = 'icons/obj/femur_breaker.dmi'
+	icon = 'icons/obj/structures/femur_breaker.dmi'
 	icon_state = "breaker_raised"
 	can_buckle = TRUE
 	anchored = TRUE
