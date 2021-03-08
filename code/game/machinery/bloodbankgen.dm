@@ -1,7 +1,7 @@
 /obj/machinery/bloodbankgen
 	name = "blood bank generator"
 	desc = "Generates universally applicable synthetics for all blood types. Add regular blood to convert."
-	icon = 'icons/obj/bloodbank.dmi'
+	icon = 'icons/obj/machines/bloodbank.dmi'
 	icon_state = "bloodbank-off"
 	density = TRUE
 	use_power = IDLE_POWER_USE
