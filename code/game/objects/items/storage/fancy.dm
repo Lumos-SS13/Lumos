@@ -129,7 +129,7 @@
 /obj/item/storage/fancy/cigarettes
 	name = "\improper Space Cigarettes packet"
 	desc = "The most popular brand of cigarettes, sponsors of the Space Olympics."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "cig"
 	item_state = "cigpacket"
 	w_class = WEIGHT_CLASS_TINY
@@ -292,7 +292,7 @@
 	name = "rolling paper pack"
 	desc = "A pack of Nanotrasen brand rolling papers."
 	w_class = WEIGHT_CLASS_TINY
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "cig_paper_pack"
 ///The value in here has NOTHING to do with icons. It needs to be this for the proper examine.
 	icon_type = "rolling paper"
@@ -321,7 +321,7 @@
 /obj/item/storage/fancy/cigarettes/cigars
 	name = "\improper premium cigar case"
 	desc = "A case of premium cigars. Very expensive."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "cigarcase"
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_type = "premium cigar"

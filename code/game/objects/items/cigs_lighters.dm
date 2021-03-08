@@ -21,7 +21,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/match
 	name = "match"
 	desc = "A simple match stick, used for lighting fine smokables."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "match_unlit"
 	var/lit = FALSE
 	var/burnt = FALSE
@@ -492,7 +492,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/lighter
 	name = "\improper Zippo lighter"
 	desc = "The zippo."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "zippo"
 	item_state = "zippo"
 	w_class = WEIGHT_CLASS_TINY
@@ -686,7 +686,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/rollingpaper
 	name = "rolling paper"
 	desc = "A thin piece of paper used to make fine smokeables."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'icons/obj/items/cigarettes.dmi'
 	icon_state = "cig_paper"
 	w_class = WEIGHT_CLASS_TINY
 
