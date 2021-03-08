@@ -604,7 +604,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/statuebust
 	name = "bust"
 	desc = "A priceless ancient marble bust, the kind that belongs in a museum." //or you can hit people with it
-	icon = 'icons/obj/statue.dmi'
+	icon = 'icons/obj/structures/fluff/statue.dmi'
 	icon_state = "bust"
 	force = 15
 	throwforce = 10
