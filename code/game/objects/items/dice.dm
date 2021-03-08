@@ -1,7 +1,7 @@
 /obj/item/storage/pill_bottle/dice
 	name = "bag of dice"
 	desc = "Contains all the luck you'll ever need."
-	icon = 'icons/obj/dice.dmi'
+	icon = 'icons/obj/items/dice.dmi'
 	icon_state = "dicebag"
 
 /obj/item/storage/pill_bottle/dice/Initialize()
@@ -37,7 +37,7 @@
 /obj/item/dice //depreciated d6, use /obj/item/dice/d6 if you actually want a d6
 	name = "die"
 	desc = "A die with six sides. Basic and serviceable."
-	icon = 'icons/obj/dice.dmi'
+	icon = 'icons/obj/items/dice.dmi'
 	icon_state = "d6"
 	w_class = WEIGHT_CLASS_TINY
 	var/sides = 6
