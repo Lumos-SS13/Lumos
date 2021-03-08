@@ -1,7 +1,7 @@
 /obj/item/grenade/smokebomb
 	name = "smoke grenade"
 	desc = "The word 'Dank' is scribbled on it in crayon."
-	icon = 'icons/obj/grenade.dmi'
+	icon = 'icons/obj/weapons/grenade.dmi'
 	icon_state = "smokewhite"
 	det_time = 20
 	item_state = "flashbang"

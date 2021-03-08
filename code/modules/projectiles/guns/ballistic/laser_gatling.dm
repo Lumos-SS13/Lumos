@@ -4,7 +4,7 @@
 /obj/item/minigunpack
 	name = "backpack power source"
 	desc = "The massive external power source for the laser gatling gun."
-	icon = 'icons/obj/guns/minigun.dmi'
+	icon = 'icons/obj/weapons/minigun.dmi'
 	icon_state = "holstered"
 	item_state = "backpack"
 	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
@@ -96,7 +96,7 @@
 /obj/item/gun/ballistic/minigun
 	name = "laser gatling gun"
 	desc = "An advanced laser cannon with an incredible rate of fire. Requires a bulky backpack power source to use."
-	icon = 'icons/obj/guns/minigun.dmi'
+	icon = 'icons/obj/weapons/minigun.dmi'
 	icon_state = "minigun_spin"
 	item_state = "minigun"
 	flags_1 = CONDUCT_1

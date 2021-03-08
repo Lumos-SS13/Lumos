@@ -9,7 +9,7 @@
 /obj/item/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
-	icon = 'icons/obj/guns/projectile.dmi'
+	icon = 'icons/obj/weapons/projectile.dmi'
 	icon_state = "detective"
 	item_state = "gun"
 	flags_1 =  CONDUCT_1
@@ -433,9 +433,9 @@
 		to_chat(user, "<span class='notice'>You attach \the [K] to the front of \the [src].</span>")
 		bayonet = K
 		var/state = "bayonet"							//Generic state.
-		if(bayonet.icon_state in icon_states('icons/obj/guns/bayonets.dmi'))		//Snowflake state?
+		if(bayonet.icon_state in icon_states('icons/obj/weapons/bayonets.dmi'))		//Snowflake state?
 			state = bayonet.icon_state
-		var/icon/bayonet_icons = 'icons/obj/guns/bayonets.dmi'
+		var/icon/bayonet_icons = 'icons/obj/weapons/bayonets.dmi'
 		knife_overlay = mutable_appearance(bayonet_icons, state)
 		knife_overlay.pixel_x = knife_x_offset
 		knife_overlay.pixel_y = knife_y_offset
@@ -487,9 +487,9 @@
 		else
 			OL.turn_off()
 		cut_overlays(flashlight_overlay, TRUE)
-		var/icon2use = 'icons/obj/guns/flashlights.dmi'
+		var/icon2use = 'icons/obj/weapons/flashlights.dmi'
 		var/state = "flight[gun_light.on? "_on":""]"	//Generic state.
-		if(gun_light.icon_state in icon_states('icons/obj/guns/flashlights.dmi'))	//Snowflake state?
+		if(gun_light.icon_state in icon_states('icons/obj/weapons/flashlights.dmi'))	//Snowflake state?
 			state = gun_light.icon_state
 		if(custom_light_state)
 			state = "[custom_light_state][gun_light.on? "_on":""]"

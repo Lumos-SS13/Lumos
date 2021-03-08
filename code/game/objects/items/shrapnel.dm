@@ -15,7 +15,7 @@
 
 /obj/item/shrapnel/bullet // bullets
 	name = "bullet"
-	icon = 'icons/obj/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "s-casing"
 	item_flags = NONE
 

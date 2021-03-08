@@ -1011,11 +1011,11 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.halitem.plane = ABOVE_HUD_PLANE
 			switch(rand(1,6))
 				if(1) //revolver
-					target.halitem.icon = 'icons/obj/guns/projectile.dmi'
+					target.halitem.icon = 'icons/obj/weapons/projectile.dmi'
 					target.halitem.icon_state = "revolver"
 					target.halitem.name = "Revolver"
 				if(2) //c4
-					target.halitem.icon = 'icons/obj/grenade.dmi'
+					target.halitem.icon = 'icons/obj/weapons/grenade.dmi'
 					target.halitem.icon_state = "plastic-explosive0"
 					target.halitem.name = "C4"
 					if(prob(25))
@@ -1033,7 +1033,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 					target.halitem.icon_state = "emag"
 					target.halitem.name = "Cryptographic Sequencer"
 				if(6) //flashbang
-					target.halitem.icon = 'icons/obj/grenade.dmi'
+					target.halitem.icon = 'icons/obj/weapons/grenade.dmi'
 					target.halitem.icon_state = "flashbang1"
 					target.halitem.name = "Flashbang"
 			feedback_details += "Type: [target.halitem.name]"

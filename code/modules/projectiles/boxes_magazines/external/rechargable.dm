@@ -18,7 +18,7 @@
 	name = "microbattery magazine"
 	desc = "A microbattery holder for the 'Big Iron'"
 
-	icon = 'icons/obj/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "mws_mag"
 	caliber = "mws"
 	ammo_type = /obj/item/ammo_casing/mws_batt
@@ -52,7 +52,7 @@
 /obj/item/ammo_casing/mws_batt
 	name = "\'MWS\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	icon = 'icons/obj/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "mws_batt"
 	slot_flags = SLOT_BELT | SLOT_EARS_LEFT | SLOT_EARS_RIGHT //skyrat edit
 	throwforce = 1

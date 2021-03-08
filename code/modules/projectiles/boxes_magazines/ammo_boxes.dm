@@ -131,7 +131,7 @@
 
 /obj/item/ammo_box/foambox
 	name = "ammo box (Foam Darts)"
-	icon = 'icons/obj/guns/toy.dmi'
+	icon = 'icons/obj/weapons/toy.dmi'
 	icon_state = "foambox"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart
 	max_ammo = 40
@@ -139,7 +139,7 @@
 
 /obj/item/ammo_box/foambox/mag
 	name = "ammo box (Magnetic Foam Darts)"
-	icon = 'icons/obj/guns/toy.dmi'
+	icon = 'icons/obj/weapons/toy.dmi'
 	icon_state = "foambox"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/mag
 	max_ammo = 42
@@ -153,7 +153,7 @@
 /obj/item/ammo_box/shotgun
 	name = "stripper clip (shotgun shells)"
 	desc = "A stripper clip, designed to help with loading a shotgun slightly faster."
-	icon = 'icons/obj/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "shotgunclip"
 	caliber = "shotgun" // slapped in to allow shell mix n match
 	ammo_type = /obj/item/ammo_casing/shotgun

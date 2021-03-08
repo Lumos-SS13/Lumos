@@ -391,7 +391,7 @@
 	name = "MWS-01 'Big Iron'"
 	desc = "Modular Weapons System"
 
-	icon = 'icons/obj/guns/projectile.dmi'
+	icon = 'icons/obj/weapons/projectile.dmi'
 	icon_state = "mws"
 
 	fire_sound = 'sound/weapons/Taser.ogg'

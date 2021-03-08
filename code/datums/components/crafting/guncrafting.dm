@@ -20,7 +20,7 @@ k// PARTS //
 /obj/item/weaponcrafting/improvised_parts
 	name = "Eerie bunch of coloured dots."
 	desc = "You feel the urge to report to Central that the parent type of guncrafting, which should never appear in this reality, has appeared. Whatever that means."
-	icon = 'icons/obj/guns/gun_parts.dmi'
+	icon = 'icons/obj/weapons/gun_parts.dmi'
 	icon_state = "palette"
 
 // RECEIVERS
