@@ -1,7 +1,7 @@
 /obj/structure/life_candle
 	name = "life candle"
 	desc = "You are dead. Insert quarter to continue."
-	icon = 'icons/obj/candle.dmi'
+	icon = 'icons/obj/items/candle.dmi'
 	icon_state = "candle1"
 	light_color = LIGHT_COLOR_FIRE
 

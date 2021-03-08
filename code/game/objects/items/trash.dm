@@ -63,7 +63,7 @@
 
 /obj/item/trash/candle
 	name = "candle"
-	icon = 'icons/obj/candle.dmi'
+	icon = 'icons/obj/items/candle.dmi'
 	icon_state = "candle4"
 
 /obj/item/trash/can

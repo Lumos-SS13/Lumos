@@ -3,7 +3,7 @@
 	name = "red candle"
 	desc = "In Greek myth, Prometheus stole fire from the Gods and gave it to \
 		humankind. The jewelry he kept for himself."
-	icon = 'icons/obj/candle.dmi'
+	icon = 'icons/obj/items/candle.dmi'
 	icon_state = "candle1"
 	item_state = "candle1"
 	w_class = WEIGHT_CLASS_TINY

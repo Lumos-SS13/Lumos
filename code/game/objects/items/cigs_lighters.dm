@@ -883,7 +883,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/bong
 	name = "bong"
 	desc = "A water bong used for smoking dried plants."
-	icon = 'icons/obj/bongs.dmi'
+	icon = 'icons/obj/items/bongs.dmi'
 	icon_state = null
 	item_state = null
 	w_class = WEIGHT_CLASS_NORMAL
