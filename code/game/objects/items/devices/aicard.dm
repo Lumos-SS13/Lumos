@@ -1,7 +1,7 @@
 /obj/item/aicard
 	name = "intelliCard"
 	desc = "A storage device for AIs. Patent pending."
-	icon = 'icons/obj/aicards.dmi'
+	icon = 'icons/obj/items/aicards.dmi'
 	icon_state = "aicard" // aicard-full
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

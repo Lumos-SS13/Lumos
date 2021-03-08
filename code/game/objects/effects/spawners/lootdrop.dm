@@ -32,7 +32,7 @@
 	return INITIALIZE_HINT_QDEL
 
 /obj/effect/spawner/lootdrop/bedsheet
-	icon = 'icons/obj/bedsheets.dmi'
+	icon = 'icons/obj/items/bedsheets.dmi'
 	icon_state = "random_bedsheet"
 	name = "random dorms bedsheet"
 	loot = list(/obj/item/bedsheet = 8, /obj/item/bedsheet/blue = 8, /obj/item/bedsheet/green = 8,

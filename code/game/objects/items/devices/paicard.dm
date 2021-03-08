@@ -1,6 +1,6 @@
 /obj/item/paicard
 	name = "personal AI device"
-	icon = 'icons/obj/aicards.dmi'
+	icon = 'icons/obj/items/aicards.dmi'
 	icon_state = "pai"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

@@ -61,7 +61,7 @@
 	name = "broken AI"
 	desc = "It used to control a mecha, now it's just trash. Suitable as a trophy for a kinetic crusher."
 	denied_type = /obj/item/crusher_trophy/brokentech
-	icon = 'icons/obj/aicards.dmi'
+	icon = 'icons/obj/items/aicards.dmi'
 	icon_state = "pai"
 	var/range = 4
 	var/cooldowntime = 50
