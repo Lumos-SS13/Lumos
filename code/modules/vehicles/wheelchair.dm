@@ -1,7 +1,7 @@
 /obj/vehicle/ridden/wheelchair //ported from Hippiestation (by Jujumatic) Then ported by Fermis from tg!
 	name = "wheelchair"
 	desc = "A chair with big wheels. It looks like you can move in this on your own."
-	icon = 'icons/obj/vehicles.dmi'
+	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "wheelchair"
 	layer = OBJ_LAYER
 	max_integrity = 100

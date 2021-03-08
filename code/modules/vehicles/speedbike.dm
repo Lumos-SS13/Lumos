@@ -9,7 +9,7 @@
 
 /obj/vehicle/ridden/space/speedbike
 	name = "Speedbike"
-	icon = 'icons/obj/bike.dmi'
+	icon = 'icons/obj/vehicles/bike.dmi'
 	icon_state = "speedbike_blue"
 	layer = LYING_MOB_LAYER
 	var/overlay_state = "cover_blue"
@@ -41,7 +41,7 @@
 /obj/vehicle/ridden/space/speedwagon
 	name = "BM Speedwagon"
 	desc = "Push it to the limit, walk along the razor's edge."
-	icon = 'icons/obj/car.dmi'
+	icon = 'icons/obj/vehicles/car.dmi'
 	icon_state = "speedwagon"
 	layer = LYING_MOB_LAYER
 	var/static/mutable_appearance/overlay = mutable_appearance(icon, "speedwagon_cover", ABOVE_MOB_LAYER)

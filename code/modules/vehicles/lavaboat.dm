@@ -17,7 +17,7 @@
 
 /obj/item/oar
 	name = "oar"
-	icon = 'icons/obj/vehicles.dmi'
+	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "oar"
 	item_state = "oar"
 	lefthand_file = 'icons/mob/inhands/misc/lavaland_lefthand.dmi'

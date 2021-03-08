@@ -25,7 +25,7 @@
 /obj/item/janiupgrade
 	name = "floor buffer upgrade"
 	desc = "An upgrade for mobile janicarts."
-	icon = 'icons/obj/vehicles.dmi'
+	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "upgrade"
 
 /obj/vehicle/ridden/janicart/examine(mob/user)

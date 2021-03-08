@@ -1,7 +1,7 @@
 /obj/vehicle
 	name = "generic vehicle"
 	desc = "Yell at coderbus."
-	icon = 'icons/obj/vehicles.dmi'
+	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "fuckyou"
 	max_integrity = 300
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 0, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
