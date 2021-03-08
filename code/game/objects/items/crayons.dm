@@ -19,7 +19,7 @@
 /obj/item/toy/crayon
 	name = "crayon"
 	desc = "A colourful crayon. Looks tasty. Mmmm..."
-	icon = 'icons/obj/crayons.dmi'
+	icon = 'icons/obj/items/crayons.dmi'
 	icon_state = "crayonred"
 
 	var/icon_capped
@@ -579,7 +579,7 @@
 /obj/item/storage/crayons
 	name = "box of crayons"
 	desc = "A box of crayons for all your rune drawing needs."
-	icon = 'icons/obj/crayons.dmi'
+	icon = 'icons/obj/items/crayons.dmi'
 	icon_state = "crayonbox"
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -603,7 +603,7 @@
 /obj/item/storage/crayons/update_overlays()
 	. = ..()
 	for(var/obj/item/toy/crayon/crayon in contents)
-		add_overlay(mutable_appearance('icons/obj/crayons.dmi', crayon.crayon_color))
+		add_overlay(mutable_appearance('icons/obj/items/crayons.dmi', crayon.crayon_color))
 
 /obj/item/storage/crayons/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/toy/crayon))
@@ -758,7 +758,7 @@
 /obj/item/toy/crayon/spraycan/update_overlays()
 	. = ..()
 	if(use_overlays)
-		var/mutable_appearance/spray_overlay = mutable_appearance('icons/obj/crayons.dmi', "[is_capped ? "spraycan_cap_colors" : "spraycan_colors"]")
+		var/mutable_appearance/spray_overlay = mutable_appearance('icons/obj/items/crayons.dmi', "[is_capped ? "spraycan_cap_colors" : "spraycan_colors"]")
 		spray_overlay.color = paint_color
 		. += spray_overlay
 

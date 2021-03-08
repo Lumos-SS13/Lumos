@@ -5,7 +5,7 @@
 /obj/item/storage/daki
 	name = "dakimakura"
 	desc = "A large pillow depicting a girl in a compromising position. Featuring as many dimensions as you."
-	icon = 'icons/obj/daki.dmi'
+	icon = 'icons/obj/items/daki.dmi'
 	icon_state = "daki_base"
 	slot_flags = ITEM_SLOT_BACK
 	var/cooldowntime = 20
