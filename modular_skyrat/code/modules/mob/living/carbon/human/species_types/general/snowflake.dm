@@ -9,20 +9,20 @@
 
 /datum/species/android
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
-	fluff_desc = "Androids are simply put, fully augmented humans. Many of them did it for the sake of near-immortality, or just because of rampant technophilia. As such, most of them are extremist transhumanists, and due to the cost of being augmented most of them are of higher class."
+	fluff_desc = "Some may accidentally assume Androids are some form of IPC, but infact all androids are or were human at some point. Most androids arise from rampant technophilia or massive bodily repair."
 
 /datum/species/ipc
 	name = "I.P.C"
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
-	fluff_desc = "IPCs were originally manufactured by NanoTrasen to cheaply replace humanoid workers. This backfired, as IPCs started to revolt and demand human rights throughout various protests, their degrees of violence varying - To this day, IPCs suffer with a lot of prejudice for being considered lesser than organics and a tool to replace them, even if they did win many of the rights of other sapients."
+	fluff_desc = "IPCs are produced by Takyon Data Lattices LLC. and are considered sapient manufactured being. Usually they are owned directly by their employers, however are legally and socially treated as organics."
 
 /datum/species/lizard
 	screamsounds = list('modular_citadel/sound/voice/scream_lizard.ogg')
-	fluff_desc = "Lizardperson is an umbrella term for reptile-like sapient species. It is common for on-station lizardpeople to be civilized ashwalkers, but this is not true for all of them, as reptile-like species come from all sectors of space."
+	fluff_desc = "Named Uthani in their native tongue of Draconic, Lizardmen are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going wherever they can get work."
 
 /datum/species/skeleton
 	screamsounds = list('modular_citadel/sound/voice/scream_skeleton.ogg')
-	fluff_desc = "The bones inside of you, unleashed! Skeletons are animated piles of bones that walk around and chatter about. Nobody knows how or why these beings exist, or how they survive without any internal organs to speak of. ACK ACK."
+	fluff_desc = "IT'S TOO LATE THE SKELETON ALREADY IS INSIDE OF YOU."
 
 /datum/species/fly
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
@@ -30,30 +30,30 @@
 
 /datum/species/insect
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
-	fluff_desc = "Insectoid is an umbrella term used to describe a type of alien one might encounter within the galaxy. They take a wide form of creeds and appearances, with backgrounds varying wildly."
+	fluff_desc = "Insectoids are a collection of species hailing from Ocellus-4, a world covered in marshes and opalescent oceans. They're diverse in both body and mind, making it hard to get a definitive summary of their personalities."
 
 /datum/species/insect/moth
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
-	fluff_desc = "Mothpeople are a variant of Insectoids, and are extremely similar in biology and overall appearance, but they most commonly resemble the moths found on old human Earth."
+	fluff_desc = "Mothpeople are a variant of Insectoids, however they're considered the dominant species of Ocellus-4, their homeworld. Covergently similar to old Terra moths, they have a strange facination with bright lights."
 
 /datum/species/human
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Homo Sapiens Sapiens - Humans. The dominant species in the galaxy, Humanity originated from the Sol system and have quickly spread their race across the stars in the form of the vast, extraordinarily powerful Solar Federation star-state. They are the commanding species of NanoTrasen and the Solar Federation, and benefit from the highest social and economical status on both of them. While most Humans have since become welcoming of their alien comrades, they encompass a wide variety of cultures and creeds; no one Human is exactly alike."
+	fluff_desc = "Homo Sapiens Sapiens - Humans. They are the most widespread and abundant species throughout the galaxy, often considered the dominant species (mostly by themselves). After The Collapse, their old governments are a shadow of their former selves and corporations like Nanotrasen are the dominant governing bodies. Humans come in all shapes and sizes, and with the advent of genemodding even more so."
 
 /datum/species/human/felinid
-	fluff_desc = "Felinid is simply a popular name for genemodded humans with animal-like features, most commonly resembling that of a house cat."
+	fluff_desc = "Felinids are a subtype of genemodded humans, often colloquially (and pejoratively) called catpeople. They're on the lighter end of genemodding, usually having only tails and ears."
 
 /datum/species/human/humanoid
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Humanoid is an umbrella term for sapient beings that share many physical similarities with humans, more so than anthropomorphs. They come from very wildly varying backgrounds, and their existence is sometimes used as religious proof for the existance of a \"great architect\" behind the known universe."
+	fluff_desc = "Humanoid is an umbrella term for sapient beings that share many physical similarities with humans, more so than anthropomorphs. Virtually all of them are genemodded humans."
 
 /datum/species/human/humanoid/dunmer
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Ashlanders come from lavaland, and are considered a cheap workforce by NanoTrasen and SolGov. Most of them quickly adapted to their colonization and greatly appreciated the new technology, though dunmeri tradionalists might feel unsatisfied with how they are treated as inferior and how their culture and religion is slowly being abandoned."
+	fluff_desc = "Dunmeri are native to the volcanic planet of Fumarole, a planet incredibly similar to NT8248-B. Due to the similarity, many freelance Dunmeri naturally seek out employment in this sector."
 
 /datum/species/angel
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Little to nothing is known about Angels as a species. While sharing remarkable similarities with those found within Christian Mythology, the culture of Angels is almost entirely separate from that of Humanity. Conspiracy theories abound within the Solar Federation of if these \"Angels\" had in some way influenced early development of Human Civilization."
+	fluff_desc = "Some humans, either due to fanatic devotion to a religious doctrine or highly overestimated self worth, choose to genemod themselves to obtain a vestigial pair of wings."
 
 /datum/species/corporate
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
@@ -93,11 +93,11 @@
 
 /datum/species/pod
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Podpeople are a race of sapient humanoid plants, oftentimes the result of genetic experimentation or botanical research gone awry. While most podpeople within Nanotrasen-controlled space are the result of experimental revival techniques involving a species of large cabbage, plant-based lifeforms can take a wide variety of shapes and sizes within the galaxy."
+	fluff_desc = "Podmen are largely products of adding the DNA of a Human in a Podplant in a emergency revival procedure. However there is the occasional amalgam plant being of indeterminate origin, although theorized to come from the Lizardpeople's jungle homeworld; Quetzal."
 
 /datum/species/shadow
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Shadowpeople are by and large, mostly unknown. Their origins are a mystery to almost all of civilized space - and with mystery, comes myths. The most popular of these myths is that shadowpeople were once a religious sect of ashlanders on lavaland, who lived in harmony with the dark forces who controlled the underground of the planet. One day, however it may have happened, that these people angered the dark gods of the molten hellscape, whom cursed them to forever live in eternal darkness, lest their forms waste away to the ash they had been born from. Most shadowpeople suffer extreme prejudice, as rumors are largely spread around the frontier about shadowpeople with bladelike appendages that live in the darkness, waiting to prey on the blood of the innocent and to curse everything with unending darkness."
+	fluff_desc = "Not much is known about Shadowpeople. Shadowfolk themselves don't know their origin, assuming that at some point they were themselves humans or similar."
 
 /datum/species/synthliz
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
@@ -109,7 +109,7 @@
 
 /datum/species/vox
 	screamsounds = list('modular_skyrat/sound/emotes/voxscream.ogg')
-	fluff_desc = "Vox are an avian-like species found mostly in the frontier of civilized space or some distance outside of it. Their original culture and planets are long lost to history, replaced nowadays by roaming bands of raiders, traders, and refugees seeking a place to call home. Many reject them and despise them, on account of their reputation as violent pirates and slavers, as well as their... peculiar biology. Vox require pure N2 gas to breathe."
+	fluff_desc = "Vox are a widespread avian species that require pure nitrogen gas to breath. They've lost much of their culture and homeworlds during The Collapse, most have taken to trading and piracy as a means to get by. What little of their old governments that exist are brutal bands of mercenaries and ritualist warriors. Amoungst other species, they're hardly popular."
 
 /datum/species/xeno
 	screamsounds = list('sound/voice/hiss6.ogg')
