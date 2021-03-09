@@ -173,7 +173,7 @@
 /obj/item/choice_beacon/box/plushie
 	name = "choice box (plushie)"
 	desc = "Using the power of quantum entanglement, this box contains every plush, until the moment it is opened!"
-	icon = 'icons/obj/plushes.dmi'
+	icon = 'icons/obj/items/plushes.dmi'
 	icon_state = "box"
 	item_state = "box"
 

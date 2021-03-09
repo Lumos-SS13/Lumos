@@ -2,7 +2,7 @@
 /mob/living/simple_animal/pet/plushie
 	name = "Plushie"
 	desc = "A living plushie!"
-	icon = 'icons/obj/plushes.dmi'
+	icon = 'icons/obj/items/plushes.dmi'
 	icon_state = "debug"
 	icon_living = "debug"
 	icon_dead = "debug"
@@ -38,7 +38,7 @@
 /obj/item/toy/plushie_shell
 	name = "Plushie Shell"
 	desc = "A plushie. Its eyes seem to be staring right back at you. Something isn't quite right."
-	icon = 'icons/obj/plushes.dmi'
+	icon = 'icons/obj/items/plushes.dmi'
 	icon_state = "debug"
 	var/obj/item/toy/plush/stored_plush = null
 

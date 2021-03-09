@@ -1,6 +1,6 @@
 k// PARTS //
 /obj/item/weaponcrafting
-	icon = 'icons/obj/improvised.dmi'
+	icon = 'icons/obj/weapons/improvised.dmi'
 
 /obj/item/weaponcrafting/stock
 	name = "rifle stock"
