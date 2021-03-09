@@ -19,7 +19,7 @@
 
 /obj/singularity/narsie/large
 	name = "Nar'Sie"
-	icon = 'icons/obj/narsie.dmi'
+	icon = 'icons/obj/antagonists/cults/narsie.dmi'
 	// Pixel stuff centers Narsie.
 	pixel_x = -236
 	pixel_y = -256
@@ -209,7 +209,7 @@
 
 
 /obj/singularity/narsie/proc/narsie_spawn_animation()
-	icon = 'icons/obj/narsie_spawn_anim.dmi'
+	icon = 'icons/obj/antagonists/cults/narsie_spawn_anim.dmi'
 	setDir(SOUTH)
 	move_self = 0
 	flick("narsie_spawn_anim",src)
