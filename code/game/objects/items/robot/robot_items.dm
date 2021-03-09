@@ -268,7 +268,7 @@
 /obj/item/harmalarm
 	name = "\improper Sonic Harm Prevention Tool"
 	desc = "Releases a harmless blast that confuses most organics. For when the harm is JUST TOO MUCH."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "megaphone"
 	var/cooldown = 0
 
@@ -540,7 +540,7 @@
 /obj/item/borg/projectile_dampen
 	name = "\improper Hyperkinetic Dampening projector"
 	desc = "A device that projects a dampening field that weakens kinetic energy above a certain threshold. <span class='boldnotice'>Projects a field that drains power per second while active, that will weaken and slow damaging projectiles inside its field.</span> Still being a prototype, it tends to induce a charge on ungrounded metallic surfaces."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "shield"
 	var/maxenergy = 1500
 	var/energy = 1500
@@ -748,7 +748,7 @@
 /obj/item/weapon/gripper
 	name = "engineering gripper"
 	desc = "A simple grasping tool for interacting with various engineering related items, such as circuits, gas tanks, conveyer belts and more. Alt click to drop instead of use."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "gripper"
 
 	item_flags = NOBLUDGEON

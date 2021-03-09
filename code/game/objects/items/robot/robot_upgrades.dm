@@ -617,7 +617,7 @@
 /obj/item/borg/upgrade/pinpointer
 	name = "medical cyborg crew pinpointer"
 	desc = "A crew pinpointer module for the medical cyborg."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "pinpointer_crew"
 	require_module = TRUE
 	module_type = list(/obj/item/robot_module/medical,

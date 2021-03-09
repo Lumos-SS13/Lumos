@@ -10,7 +10,7 @@ GLOBAL_VAR_INIT(war_declared, FALSE)
 
 /obj/item/nuclear_challenge
 	name = "Declaration of War (Challenge Mode)"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "gangtool-red"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

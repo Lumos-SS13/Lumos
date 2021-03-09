@@ -50,7 +50,7 @@
 /obj/screen/alert/status_effect/agent_pinpointer
 	name = "Internal Affairs Integrated Pinpointer"
 	desc = "Even stealthier than a normal implant."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "pinon"
 
 /datum/status_effect/agent_pinpointer/proc/point_to_target() //If we found what we're looking for, show the distance and direction

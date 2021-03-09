@@ -19,7 +19,7 @@
 
 /obj/item/assault_pod
 	name = "Assault Pod Targeting Device"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "gangtool-red"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

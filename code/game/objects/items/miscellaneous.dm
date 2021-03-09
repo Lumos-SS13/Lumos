@@ -15,7 +15,7 @@
 /obj/item/choice_beacon
 	name = "choice beacon"
 	desc = "Hey, why are you viewing this?!! Please let Centcom know about this odd occurance."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "gangtool-blue"
 	item_state = "radio"
 	var/list/stored_options

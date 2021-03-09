@@ -1,7 +1,7 @@
 /obj/machinery/ai_slipper
 	name = "foam dispenser"
 	desc = "A remotely-activatable dispenser for crowd-controlling foam."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "ai-slipper0"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 	plane = FLOOR_PLANE

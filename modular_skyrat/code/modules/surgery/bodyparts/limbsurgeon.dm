@@ -3,7 +3,7 @@
 /obj/item/limbsurgeon //autosurgeon is shit and does not support limbs, i had to do it to 'em
 	name = "limb autosurgeon"
 	desc = "A device that automatically removes an old limb and inserts a new one into the user without the hassle of extensive surgery. It has a slot to insert limbs and a screwdriver slot for removing accidentally added items."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "autoimplanter"
 	item_state = "nothing"
 	w_class = WEIGHT_CLASS_SMALL

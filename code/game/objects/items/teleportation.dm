@@ -14,7 +14,7 @@
 /obj/item/locator
 	name = "bluespace locator"
 	desc = "Used to track portable teleportation beacons and targets with embedded tracking implants."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "locator"
 	var/temp = null
 	flags_1 = CONDUCT_1
@@ -116,7 +116,7 @@
 /obj/item/hand_tele
 	name = "hand tele"
 	desc = "A portable item using blue-space technology."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "hand_tele"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

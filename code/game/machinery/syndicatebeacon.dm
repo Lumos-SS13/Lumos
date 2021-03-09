@@ -133,7 +133,7 @@ GLOBAL_VAR_INIT(singularity_counter, 0)
 // SINGULO BEACON SPAWNER
 /obj/item/sbeacondrop
 	name = "suspicious beacon"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "beacon"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'

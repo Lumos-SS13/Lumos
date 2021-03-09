@@ -101,7 +101,7 @@
 /obj/item/antag_spawner/nuke_ops
 	name = "syndicate operative teleporter"
 	desc = "A single-use teleporter designed to quickly reinforce operatives in the field."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "locator"
 	var/borg_to_spawn
 
@@ -173,7 +173,7 @@
 /obj/item/antag_spawner/nuke_ops/borg_tele
 	name = "syndicate cyborg teleporter"
 	desc = "A single-use teleporter designed to quickly reinforce operatives in the field."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "locator"
 
 /obj/item/antag_spawner/nuke_ops/borg_tele/assault

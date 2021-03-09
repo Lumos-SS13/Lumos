@@ -1,6 +1,6 @@
 /obj/item/borg_shapeshifter
 	name = "cyborg chameleon projector"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "shield0"
 	flags_1 = CONDUCT_1
 	item_flags = NOBLUDGEON

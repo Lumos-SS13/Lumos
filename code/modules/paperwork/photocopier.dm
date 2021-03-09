@@ -332,7 +332,7 @@
  */
 /obj/item/toner
 	name = "toner cartridge"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "tonercartridge"
 	//grind_results = list(/datum/reagent/iodine = 40, /datum/reagent/iron = 10) // Skyrat change
 	var/charges = 5

@@ -1,7 +1,7 @@
 /obj/item/supplypod_beacon
 	name = "Supply Pod Beacon"
 	desc = "A device that can be linked to an Express Supply Console for precision supply pod deliveries. Alt-click to remove link."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "supplypod_beacon"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

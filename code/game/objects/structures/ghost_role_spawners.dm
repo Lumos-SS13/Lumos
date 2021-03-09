@@ -387,7 +387,7 @@
 	desc = "Oh boy! Oh boy! A friend!"
 	mob_name = "Demonic friend"
 	job_description = "Demonic Friend"
-	icon = 'icons/obj/cardboard_cutout.dmi'
+	icon = 'icons/obj/items/cardboard_cutout.dmi'
 	icon_state = "cutout_basic"
 	outfit = /datum/outfit/demonic_friend
 	death = FALSE

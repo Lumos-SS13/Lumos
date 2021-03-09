@@ -1,7 +1,7 @@
 /obj/item/ttsdevice
 	name = "TTS Device"
 	desc = "A small device with a keyboard attached. Anything entered on the keyboard is played out the speaker. \n <span class='notice'>Alt-click the device to make it beep.</span>"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "gangtool-purple"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'

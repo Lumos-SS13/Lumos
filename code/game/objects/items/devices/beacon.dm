@@ -1,7 +1,7 @@
 /obj/item/beacon
 	name = "\improper tracking beacon"
 	desc = "A beacon used by a teleporter."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "beacon"
 	item_state = "beacon"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'

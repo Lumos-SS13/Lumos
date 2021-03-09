@@ -1109,7 +1109,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/item/price_tagger
 	name = "price tagger"
 	desc = "This tool is used to set a price for items used in custom vendors."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "pricetagger"
 	custom_premium_price = 25
 	///the price of the item

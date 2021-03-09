@@ -268,7 +268,7 @@
 /obj/item/musicaltuner
 	name = "musical tuner"
 	desc = "A device for tuning musical instruments both manual and electronic alike."
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/items/device.dmi'
 	icon_state = "musicaltuner"
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
