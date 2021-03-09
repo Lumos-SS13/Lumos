@@ -1,6 +1,7 @@
 //Added by Jack Rost
 /obj/item/trash
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'icons/obj/items/trash.dmi'
+	icon_state = "candy"
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	desc = "This is rubbish."
@@ -46,7 +47,7 @@
 
 /obj/item/trash/plate/alt
 	desc = "Still some dip left. Sadly still just trash..."
-	icon_state = "plate1"
+	icon_state = "plate2"
 
 /obj/item/trash/pistachios
 	name = "pistachios pack"

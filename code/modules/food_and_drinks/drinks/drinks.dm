@@ -481,7 +481,7 @@
 	spillable = FALSE
 	isGlass = FALSE
 	//skyrat edit - makes crushed cans able to use other icon states and icon files
-	var/crushed_icon = 'icons/obj/janitor.dmi'
+	var/crushed_icon = 'icons/obj/items/trash.dmi'
 	var/crushed_state
 	//
 	custom_price = PRICE_CHEAP_AS_FREE
@@ -500,7 +500,7 @@
 		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
 		//Skyrat edit
 		if(!crushed_icon)
-			crushed_can.icon = 'icons/obj/janitor.dmi'
+			crushed_can.icon = 'icons/obj/items/trash.dmi'
 		else
 			crushed_can.icon = crushed_icon
 		if(!crushed_state)

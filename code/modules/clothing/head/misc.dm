@@ -239,7 +239,7 @@
 /obj/item/clothing/head/cone
 	desc = "This cone is trying to warn you of something!"
 	name = "warning cone"
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'icons/obj/items/janitor.dmi'
 	icon_state = "cone"
 	item_state = "cone"
 	force = 1
