@@ -1,7 +1,7 @@
 /obj/item/stock_parts/cell
 	name = "power cell"
 	desc = "A rechargeable electrochemical power cell."
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/machines/power.dmi'
 	icon_state = "cell"
 	item_state = "cell"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -61,7 +61,7 @@
 /obj/item/stock_parts/cell/update_overlays()
 	. = ..()
 	if(grown_battery)
-		. += image('icons/obj/power.dmi',"grown_wires")
+		. += image('icons/obj/machines/power.dmi',"grown_wires")
 	if(charge < 0.01)
 		return
 	else if(charge/maxcharge >=0.995)

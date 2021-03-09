@@ -1,7 +1,7 @@
 /obj/machinery/power/deck_relay //This bridges powernets
 	name = "Multi-deck power adapter"
 	desc = "A huge bundle of double insulated cabling which seems to run up into the ceiling."
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/machines/power.dmi'
 	icon_state = "cablerelay-off"
 	var/obj/machinery/power/deck_relay/below ///The relay that's below us (for bridging powernets)
 	var/obj/machinery/power/deck_relay/above ///The relay that's above us (for bridging powernets)

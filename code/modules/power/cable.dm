@@ -490,7 +490,7 @@ By design, d1 is the smallest direction and d2 is the highest
 	name = "cable coil"
 	custom_price = PRICE_CHEAP_AS_FREE
 	gender = NEUTER //That's a cable coil sounds better than that's some cable coils
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/machines/power.dmi'
 	icon_state = "coil"
 	item_state = "coil"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
