@@ -87,7 +87,7 @@
 /obj/structure/destructible/clockwork/trap/brass_skewer/post_buckle_mob(mob/living/L)
 	if(L in buckled_mobs)
 		L.pixel_y = 3
-		impale_overlay = mutable_appearance('icons/obj/clockwork_objects.dmi', "brass_skewer_pokeybit", ABOVE_MOB_LAYER)
+		impale_overlay = mutable_appearance('icons/obj/antagonists/cults/clockwork_objects.dmi', "brass_skewer_pokeybit", ABOVE_MOB_LAYER)
 		add_overlay(impale_overlay)
 	else
 		L.pixel_y = initial(L.pixel_y)

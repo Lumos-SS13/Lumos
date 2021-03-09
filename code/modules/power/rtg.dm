@@ -58,7 +58,7 @@
 
 /obj/machinery/power/rtg/abductor
 	name = "Void Core"
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "core"
 	desc = "An alien power source that produces energy seemingly out of nowhere."
 	circuit = /obj/item/circuitboard/machine/abductor/core

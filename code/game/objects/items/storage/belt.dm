@@ -422,7 +422,7 @@
 /obj/item/storage/belt/military/abductor
 	name = "agent belt"
 	desc = "A belt used by abductor agents."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "belt"
 	item_state = "security"
 

@@ -9,7 +9,7 @@
 /obj/item/clothing/suit/armor/abductor/vest
 	name = "agent vest"
 	desc = "A vest outfitted with advanced stealth technology. It has two modes - combat and stealth."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "vest_stealth"
 	item_state = "armor"
 	blood_overlay_type = "armor"
@@ -134,7 +134,7 @@
 
 
 /obj/item/abductor
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	lefthand_file = 'icons/mob/inhands/antag/abductor_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/antag/abductor_righthand.dmi'
 
@@ -633,7 +633,7 @@
 /obj/item/radio/headset/abductor
 	name = "alien headset"
 	desc = "An advanced alien headset designed to monitor communications of human space stations. Why does it have a microphone? No one knows."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "abductor_headset"
 	item_state = "abductor_headset"
 	keyslot2 = new /obj/item/encryptionkey/heads/captain
@@ -651,7 +651,7 @@
 /obj/item/abductor_machine_beacon
 	name = "machine beacon"
 	desc = "A beacon designed to instantly tele-construct abductor machinery."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "beacon"
 	w_class = WEIGHT_CLASS_TINY
 	var/obj/machinery/spawned_machine
@@ -686,38 +686,38 @@
 /obj/item/scalpel/alien
 	name = "alien scalpel"
 	desc = "It's a gleaming sharp knife made out of silvery-green metal."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/hemostat/alien
 	name = "alien hemostat"
 	desc = "You've never seen this before."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/retractor/alien
 	name = "alien retractor"
 	desc = "You're not sure if you want the veil pulled back."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/circular_saw/alien
 	name = "alien saw"
 	desc = "Do the aliens also lose this, and need to find an alien hatchet?"
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/surgicaldrill/alien
 	name = "alien drill"
 	desc = "Maybe alien surgeons have finally found a use for the drill."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/cautery/alien
 	name = "alien cautery"
 	desc = "Why would bloodless aliens have a tool to stop bleeding? \
 		Unless..."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	toolspeed = 0.25
 
 /obj/item/clothing/head/helmet/abductor
@@ -733,7 +733,7 @@
 /obj/structure/bed/abductor
 	name = "resting contraption"
 	desc = "This looks similar to contraptions from Earth. Could aliens be stealing our technology?"
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	buildstacktype = /obj/item/stack/sheet/mineral/abductor
 	icon_state = "bed"
 
@@ -796,7 +796,7 @@
 	framestack = /obj/item/stack/sheet/mineral/abductor
 	buildstackamount = 1
 	framestackamount = 1
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "bed"
 	can_buckle = 1
 

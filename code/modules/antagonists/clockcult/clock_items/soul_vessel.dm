@@ -4,7 +4,7 @@
 	desc = "A heavy brass cube, three inches to a side, with a single protruding cogwheel."
 	var/clockwork_desc = "A soul vessel, an ancient relic that can attract the souls of the damned or simply rip a mind from an unconscious or dead human.\n\
 	<span class='brass'>If active, can serve as a positronic brain, placable in cyborg shells or clockwork construct shells.</span>"
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'icons/obj/antagonists/cults/clockwork_objects.dmi'
 	icon_state = "soul_vessel"
 	req_access = list()
 	braintype = "Servant"

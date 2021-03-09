@@ -1,7 +1,7 @@
 /obj/machinery/abductor/pad
 	name = "Alien Telepad"
 	desc = "Use this to transport to and from the humans' habitat."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "alien-pad-idle"
 	var/turf/teleport_target
 
@@ -45,7 +45,7 @@
 
 /obj/effect/temp_visual/teleport_abductor
 	name = "Huh"
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "teleport"
 	duration = 80
 

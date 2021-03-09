@@ -335,7 +335,7 @@
 /obj/item/weldingtool/abductor
 	name = "alien welding tool"
 	desc = "An alien welding tool. Whatever fuel it uses, it never runs out."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "welder"
 	toolspeed = 0.1
 	light_intensity = 0

@@ -1250,7 +1250,7 @@ GLOBAL_LIST_INIT(valid_mechtoy_paths, valid_mechtoy_paths())
 /obj/item/toy/clockwork_watch
 	name = "steampunk watch"
 	desc = "A stylish steampunk watch made out of thousands of tiny cogwheels."
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'icons/obj/antagonists/cults/clockwork_objects.dmi'
 	icon_state = "dread_ipad"
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL

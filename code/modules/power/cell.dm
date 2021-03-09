@@ -280,7 +280,7 @@
 /obj/item/stock_parts/cell/infinite/abductor
 	name = "void core"
 	desc = "An alien power cell that produces energy seemingly out of nowhere."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "cell"
 	maxcharge = 50000
 	ratingdesc = FALSE

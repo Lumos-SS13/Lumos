@@ -79,7 +79,7 @@
 /obj/item/wirecutters/abductor
 	name = "alien wirecutters"
 	desc = "Extremely sharp wirecutters, made out of a silvery-green metal."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "cutters"
 	toolspeed = 0.1
 	random_color = FALSE

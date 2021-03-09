@@ -11,7 +11,7 @@
 	var/obj/machinery/abductor/console/console
 	lock_override = TRUE
 
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "camera"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 

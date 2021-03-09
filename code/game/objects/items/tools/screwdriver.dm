@@ -98,7 +98,7 @@
 /obj/item/screwdriver/abductor
 	name = "alien screwdriver"
 	desc = "An ultrasonic screwdriver."
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "screwdriver_a"
 	item_state = "screwdriver_nuke"
 	usesound = 'sound/items/pshoom.ogg'

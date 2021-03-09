@@ -257,7 +257,7 @@
 /turf/open/floor/bronze
 	name = "bronze floor"
 	desc = "Some heavy bronze tiles."
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'icons/obj/antagonists/cults/clockwork_objects.dmi'
 	icon_state = "clockwork_floor"
 	floor_tile = /obj/item/stack/tile/bronze
 

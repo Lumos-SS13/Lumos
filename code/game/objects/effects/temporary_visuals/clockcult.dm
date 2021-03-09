@@ -64,7 +64,7 @@
 
 /obj/effect/temp_visual/ratvar/belligerent
 	layer = ABOVE_MOB_LAYER
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'icons/obj/antagonists/cults/clockwork_objects.dmi'
 	icon_state = "belligerent_eye"
 	pixel_y = 20
 	duration = 20
@@ -179,7 +179,7 @@
 	icon_state = "geisbinding_top"
 
 /obj/effect/temp_visual/ratvar/component
-	icon = 'icons/obj/clockwork_objects.dmi'
+	icon = 'icons/obj/antagonists/cults/clockwork_objects.dmi'
 	icon_state = "belligerent_eye"
 	layer = ABOVE_MOB_LAYER
 	duration = 10

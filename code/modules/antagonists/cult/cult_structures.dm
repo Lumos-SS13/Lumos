@@ -1,7 +1,7 @@
 /obj/structure/destructible/cult
 	density = TRUE
 	anchored = TRUE
-	icon = 'icons/obj/cult.dmi'
+	icon = 'icons/obj/antagonists/cults/cult.dmi'
 	light_power = 2
 	var/cooldowntime = 0
 	break_sound = 'sound/hallucinations/veryfar_noise.ogg'
@@ -260,8 +260,8 @@
 	break_message = "<span class='warning'>The books and tomes of the archives burn into ash as the desk shatters!</span>"
 
 	var/static/image/radial_blindfold = image(icon = 'icons/obj/clothing/glasses.dmi', icon_state = "blindfold")
-	var/static/image/radial_curse = image(icon = 'icons/obj/cult.dmi', icon_state ="shuttlecurse")
-	var/static/image/radial_veilwalker = image(icon = 'icons/obj/cult.dmi', icon_state ="shifter")
+	var/static/image/radial_curse = image(icon = 'icons/obj/antagonists/cults/cult.dmi', icon_state ="shuttlecurse")
+	var/static/image/radial_veilwalker = image(icon = 'icons/obj/antagonists/cults/cult.dmi', icon_state ="shifter")
 
 /obj/structure/destructible/cult/tome/ui_interact(mob/user)
 	. = ..()
@@ -302,7 +302,7 @@
 /obj/effect/gateway
 	name = "gateway"
 	desc = "You're pretty sure that abyss is staring back."
-	icon = 'icons/obj/cult.dmi'
+	icon = 'icons/obj/antagonists/cults/cult.dmi'
 	icon_state = "hole"
 	density = TRUE
 	anchored = TRUE

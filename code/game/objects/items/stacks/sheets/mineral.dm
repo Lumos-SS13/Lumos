@@ -424,7 +424,7 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/abductor
 	name = "alien alloy"
-	icon = 'icons/obj/abductor.dmi'
+	icon = 'icons/obj/antagonists/abductor.dmi'
 	icon_state = "sheet-abductor"
 	item_state = "sheet-abductor"
 	singular_name = "alien alloy sheet"
