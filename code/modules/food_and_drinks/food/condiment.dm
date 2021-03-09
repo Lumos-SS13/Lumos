@@ -8,7 +8,7 @@
 /obj/item/reagent_containers/food/condiment
 	name = "condiment container"
 	desc = "Just your average condiment container."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "emptycondiment"
 	reagent_flags = OPENCONTAINER
 	possible_transfer_amounts = list(1, 5, 10, 15, 20, 25, 30, 50)

@@ -8,7 +8,7 @@
 
 	charge_max = 30
 	cooldown_min = 30
-	action_icon = 'icons/obj/food/piecake.dmi'
+	action_icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	action_icon_state = "pie"
 	antimagic_allowed = TRUE
 
@@ -81,7 +81,7 @@
 	cooldown_min = 450
 	antimagic_allowed = TRUE
 
-	action_icon = 'icons/obj/food/piecake.dmi'
+	action_icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	action_icon_state = "frostypie"
 
 

@@ -4,7 +4,7 @@
 /obj/item/reagent_containers/food/drinks
 	name = "drink"
 	desc = "yummy"
-	icon = 'icons/obj/drinks.dmi'
+	icon = 'icons/obj/food_and_drinks/drinks.dmi'
 	icon_state = null
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
@@ -116,7 +116,7 @@
 		return
 	var/obj/item/broken_bottle/B = new (loc)
 	B.icon_state = icon_state
-	var/icon/I = new('icons/obj/drinks.dmi', src.icon_state)
+	var/icon/I = new('icons/obj/food_and_drinks/drinks.dmi', src.icon_state)
 	I.Blend(B.broken_outline, ICON_OVERLAY, rand(5), 1)
 	I.SwapColor(rgb(255, 0, 220, 255), rgb(0, 0, 0, 0))
 	B.icon = I
@@ -262,7 +262,7 @@
 /obj/item/reagent_containers/food/drinks/coffee/type2
 	name = "\improper Coffee, instant (type 2)"
 	desc = "Coffee that's been blow dried into a granulated powder. This packet includes self heating water for your nutritional pleasure."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "condi_cornoil"
 
 /obj/item/reagent_containers/food/drinks/ice

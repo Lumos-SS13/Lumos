@@ -360,7 +360,7 @@
 /obj/item/reagent_containers/glass/beaker/waterbottle
 	name = "bottle of water"
 	desc = "A bottle of water filled at an old Earth bottling facility."
-	icon = 'icons/obj/drinks.dmi'
+	icon = 'icons/obj/food_and_drinks/drinks.dmi'
 	icon_state = "smallbottle"
 	item_state = "bottle"
 	custom_price = PRICE_CHEAP_AS_FREE
@@ -391,7 +391,7 @@
 /obj/item/reagent_containers/glass/beaker/waterbottle/wataur
 	name = "Bottled Wataur"
 	desc = "Finally, a bottle as proportionate as you."
-	icon = 'icons/obj/drinks.dmi'
+	icon = 'icons/obj/food_and_drinks/drinks.dmi'
 	icon_state = "wataur"
 	custom_materials = list(/datum/material/plastic=0)
 	list_reagents = list(/datum/reagent/water = 100)

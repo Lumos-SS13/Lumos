@@ -288,7 +288,7 @@
 /obj/item/reagent_containers/food/snacks/tortilla
 	name = "tortilla"
 	desc = "The base for all your burritos."
-	icon = 'icons/obj/food/food_ingredients.dmi'
+	icon = 'icons/obj/food_and_drinks/food_ingredients.dmi'
 	icon_state = "tortilla"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 1)
 	filling_color = "#FFEFD5"

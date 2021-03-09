@@ -1,7 +1,7 @@
 //this category is very little but I think that it has great potential to grow
 ////////////////////////////////////////////SALAD////////////////////////////////////////////
 /obj/item/reagent_containers/food/snacks/salad
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = 'icons/obj/food_and_drinks/soupsalad.dmi'
 	trash = /obj/item/reagent_containers/glass/bowl
 	bitesize = 3
 	w_class = WEIGHT_CLASS_NORMAL

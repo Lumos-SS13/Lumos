@@ -46,7 +46,7 @@ Consuming extracts:
 /obj/item/slime_cookie //While this technically acts like food, it's so removed from it that I made it its' own type.
 	name = "error cookie"
 	desc = "A weird slime cookie. You shouldn't see this."
-	icon = 'icons/obj/food/slimecookies.dmi'
+	icon = 'icons/obj/food_and_drinks/slimecookies.dmi'
 	var/taste = "error"
 	var/nutrition = 5
 	icon_state = "base"

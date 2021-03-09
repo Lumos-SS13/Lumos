@@ -1,6 +1,6 @@
 
 /obj/item/reagent_containers/food/snacks/store/bread
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	volume = 80
 	slices_num = 5
 	tastes = list("bread" = 10)
@@ -8,7 +8,7 @@
 	dunkable = TRUE
 
 /obj/item/reagent_containers/food/snacks/breadslice
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	bitesize = 2
 	custom_food_type = /obj/item/reagent_containers/food/snacks/customizable/sandwich
 	filling_color = "#FFA500"
@@ -170,7 +170,7 @@
 /obj/item/reagent_containers/food/snacks/baguette
 	name = "baguette"
 	desc = "Bon appetit!"
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	icon_state = "baguette"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 1)
@@ -182,7 +182,7 @@
 /obj/item/reagent_containers/food/snacks/garlicbread
 	name = "garlic bread"
 	desc = "Alas, it is limited."
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	icon_state = "garlicbread"
 	item_state = "garlicbread"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
@@ -194,7 +194,7 @@
 /obj/item/reagent_containers/food/snacks/butteredtoast
 	name = "buttered toast"
 	desc = "Butter lightly spread over a piece of toast."
-	icon = 'icons/obj/food/food.dmi'
+	icon = 'icons/obj/food_and_drinks/food.dmi'
 	icon_state = "butteredtoast"
 	bitesize = 3
 	filling_color = "#FFA500"
@@ -206,7 +206,7 @@
 /obj/item/reagent_containers/food/snacks/butterbiscuit
 	name = "butter biscuit"
 	desc = "Well butter my biscuit!"
-	icon = 'icons/obj/food/food.dmi'
+	icon = 'icons/obj/food_and_drinks/food.dmi'
 	icon_state = "butterbiscuit"
 	filling_color = "#F0E68C"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
@@ -217,7 +217,7 @@
 /obj/item/reagent_containers/food/snacks/butterdog
 	name = "butterdog"
 	desc = "Made from exotic butters."
-	icon = 'icons/obj/food/food.dmi'
+	icon = 'icons/obj/food_and_drinks/food.dmi'
 	icon_state = "butterdog"
 	bitesize = 1
 	filling_color = "#F1F49A"

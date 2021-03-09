@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////PIZZA////////////////////////////////////////
 
 /obj/item/reagent_containers/food/snacks/pizza
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	slices_num = 6
 	volume = 80
@@ -22,7 +22,7 @@
 	return ..()
 
 /obj/item/reagent_containers/food/snacks/pizzaslice
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	foodtype = GRAIN | DAIRY | VEGETABLES
 

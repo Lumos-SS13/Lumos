@@ -163,7 +163,7 @@
 	name = "burger"
 	desc = "A timeless classic."
 	ingredients_placement = INGREDIENTS_STACKPLUSTOP
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	icon_state = "custburg"
 	foodtype = GRAIN
 
@@ -173,7 +173,7 @@
 	ingMax = 6
 	slice_path = /obj/item/reagent_containers/food/snacks/breadslice/custom
 	slices_num = 5
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	icon_state = "tofubread"
 	foodtype = GRAIN
 
@@ -183,7 +183,7 @@
 	ingMax = 6
 	slice_path = /obj/item/reagent_containers/food/snacks/cakeslice/custom
 	slices_num = 5
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "plaincake"
 	foodtype = GRAIN | DAIRY
 
@@ -202,7 +202,7 @@
 	desc = "Noodles. With stuff. Delicious."
 	ingredients_placement = INGREDIENTS_SCATTER
 	ingMax = 6
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "spaghettiboiled"
 	foodtype = GRAIN
 
@@ -210,7 +210,7 @@
 /obj/item/reagent_containers/food/snacks/customizable/pie
 	name = "pie"
 	ingMax = 6
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "pie"
 	foodtype = GRAIN | DAIRY
 
@@ -222,7 +222,7 @@
 	ingMax = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/pizzaslice/custom
 	slices_num = 6
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "pizzamargherita"
 	foodtype = GRAIN | DAIRY
 
@@ -232,7 +232,7 @@
 	desc = "Very tasty."
 	trash = /obj/item/reagent_containers/glass/bowl
 	ingMax = 6
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = 'icons/obj/food_and_drinks/soupsalad.dmi'
 	icon_state = "bowl"
 
 
@@ -240,7 +240,7 @@
 	name = "toast"
 	desc = "A timeless classic."
 	ingredients_placement = INGREDIENTS_STACK
-	icon = 'icons/obj/food/burgerbread.dmi'
+	icon = 'icons/obj/food_and_drinks/burgerbread.dmi'
 	icon_state = "breadslice"
 	var/finished = 0
 	foodtype = GRAIN
@@ -278,7 +278,7 @@
 	desc = "A bowl with liquid and... stuff in it."
 	trash = /obj/item/reagent_containers/glass/bowl
 	ingMax = 8
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = 'icons/obj/food_and_drinks/soupsalad.dmi'
 	icon_state = "wishsoup"
 
 /obj/item/reagent_containers/food/snacks/customizable/soup/Initialize()
@@ -294,7 +294,7 @@
 /obj/item/reagent_containers/glass/bowl
 	name = "bowl"
 	desc = "A simple bowl, used for soups and salads."
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = 'icons/obj/food_and_drinks/soupsalad.dmi'
 	icon_state = "bowl"
 	reagent_flags = OPENCONTAINER
 	custom_materials = list(/datum/material/glass = 500)
@@ -330,7 +330,7 @@
 /obj/item/reagent_containers/glass/bowl/update_overlays()
 	. = ..()
 	if(reagents && reagents.total_volume)
-		var/mutable_appearance/filling = mutable_appearance('icons/obj/food/soupsalad.dmi', "fullbowl")
+		var/mutable_appearance/filling = mutable_appearance('icons/obj/food_and_drinks/soupsalad.dmi', "fullbowl")
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		. += filling
 

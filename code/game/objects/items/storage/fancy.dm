@@ -16,7 +16,7 @@
  */
 
 /obj/item/storage/fancy
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "donutbox6"
 	name = "donut box"
 	desc = "Mmm. Donuts."
@@ -64,7 +64,7 @@
  */
 
 /obj/item/storage/fancy/donut_box
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "donutbox6"
 	icon_type = "donut"
 	name = "donut box"
@@ -83,7 +83,7 @@
  */
 
 /obj/item/storage/fancy/egg_box
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	item_state = "eggbox"
 	icon_state = "eggbox"
 	icon_type = "egg"
@@ -370,7 +370,7 @@
 /obj/item/storage/fancy/heart_box
 	name = "heart-shaped box"
 	desc = "A heart-shaped box for holding tiny chocolates."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	item_state = "chocolatebox"
 	icon_state = "chocolatebox"
 	icon_type = "chocolate"
@@ -387,7 +387,7 @@
 /obj/item/storage/fancy/nugget_box
 	name = "nugget box"
 	desc = "A cardboard box used for holding chicken nuggies."
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "nuggetbox"
 	icon_type = "nugget"
 	spawn_type = /obj/item/reagent_containers/food/snacks/nugget
@@ -401,7 +401,7 @@
 /obj/item/storage/fancy/cracker_pack
 	name = "cracker pack"
 	desc = "A pack of delicious crackers. Keep away from parrots!"
-	icon = 'icons/obj/food/containers.dmi'
+	icon = 'icons/obj/food_and_drinks/containers.dmi'
 	icon_state = "crackerbox"
 	icon_type = "cracker"
 	spawn_type = /obj/item/reagent_containers/food/snacks/cracker

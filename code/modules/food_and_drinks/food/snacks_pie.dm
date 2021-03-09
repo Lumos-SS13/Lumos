@@ -1,6 +1,6 @@
 
 /obj/item/reagent_containers/food/snacks/pie
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	trash = /obj/item/trash/plate
 	bitesize = 3
 	w_class = WEIGHT_CLASS_NORMAL
@@ -115,7 +115,7 @@
 
 /obj/item/reagent_containers/food/snacks/pie/burek
 	name = "Burek"
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "burek"
 	desc = "If you know, you know."
 	slice_path = /obj/item/reagent_containers/food/snacks/pie/burekslice
@@ -128,7 +128,7 @@
 
 /obj/item/reagent_containers/food/snacks/pie/burekslice
 	name = "Burek Slice"
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "burekslice"
 	desc = "A slice of Burek, watch out for oil stains!"
 	tastes = list("meat" = 1, "oil" = 1)
@@ -215,7 +215,7 @@
 /obj/item/reagent_containers/food/snacks/pumpkinpieslice
 	name = "pumpkin pie slice"
 	desc = "A slice of pumpkin pie, with whipped cream on top. Perfection."
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "pumpkinpieslice"
 	trash = /obj/item/trash/plate
 	filling_color = "#FFA500"
@@ -281,7 +281,7 @@
 /obj/item/reagent_containers/food/snacks/blumpkinpieslice
 	name = "blumpkin pie slice"
 	desc = "A slice of blumpkin pie, with whipped cream on top. Is this edible?"
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "blumpkinpieslice"
 	trash = /obj/item/trash/plate
 	filling_color = "#1E90FF"
@@ -302,7 +302,7 @@
 /obj/item/reagent_containers/food/snacks/dulcedebatataslice
 	name = "dulce de batata slice"
 	desc = "A slice of sweet dulce de batata jelly."
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "dulcedebatataslice"
 	trash = /obj/item/trash/plate
 	filling_color = "#8B4513"
@@ -331,7 +331,7 @@
 /obj/item/reagent_containers/food/snacks/baklavaslice
 	name = "baklava dish"
 	desc = "A portion delightful healthy snake made of nut layers with thin bread"
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "baklavaslice"
 	trash = /obj/item/trash/plate
 	filling_color = "#1E90FF"

@@ -142,7 +142,7 @@
 	name = "\improper bluespace pie"
 	desc = "A thing you can barely comprehend as you hold it in your hand. You're fairly sure you could fit an entire body inside."
 	on_use_sound = 'sound/magic/demon_consume.ogg'
-	icon = 'icons/obj/food/piecake.dmi'
+	icon = 'icons/obj/food_and_drinks/piecake.dmi'
 	icon_state = "frostypie"
 	color = "#000077"
 

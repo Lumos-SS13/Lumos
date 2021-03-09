@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/food/snacks/icecreamsandwich
 	name = "icecream sandwich"
 	desc = "Portable Ice-cream in its own packaging."
-	icon = 'icons/obj/food/food.dmi'
+	icon = 'icons/obj/food_and_drinks/food.dmi'
 	icon_state = "icecreamsandwich"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/ice = 2)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/ice = 2)
@@ -88,7 +88,7 @@
 /obj/item/reagent_containers/food/snacks/snowcones //We use this as a base for all other snowcones
 	name = "flavorless snowcone"
 	desc = "It's just shaved ice. Still fun to chew on."
-	icon = 'icons/obj/food/snowcones.dmi'
+	icon = 'icons/obj/food_and_drinks/snowcones.dmi'
 	icon_state = "flavorless_sc"
 	trash = /obj/item/reagent_containers/food/drinks/sillycup //We dont eat paper cups
 	bonus_reagents = list(/datum/reagent/water = 10) //Base line will always give water

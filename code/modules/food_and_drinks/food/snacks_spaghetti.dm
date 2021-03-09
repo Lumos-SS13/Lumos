@@ -2,7 +2,7 @@
 /obj/item/reagent_containers/food/snacks/spaghetti
 	name = "spaghetti"
 	desc = "Now that's a nic'e pasta!"
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "spaghetti"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
 	cooked_type = /obj/item/reagent_containers/food/snacks/boiledspaghetti
@@ -13,7 +13,7 @@
 /obj/item/reagent_containers/food/snacks/boiledspaghetti
 	name = "boiled spaghetti"
 	desc = "A plain dish of noodles, this needs more ingredients."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "spaghettiboiled"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2)
@@ -26,7 +26,7 @@
 /obj/item/reagent_containers/food/snacks/pastatomato
 	name = "spaghetti"
 	desc = "Spaghetti and crushed tomatoes. Just like your abusive father used to make!"
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "pastatomato"
 	trash = /obj/item/trash/plate
 	bitesize = 4
@@ -39,7 +39,7 @@
 /obj/item/reagent_containers/food/snacks/copypasta
 	name = "copypasta"
 	desc = "You probably shouldn't try this, you always hear people talking about how bad it is..."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "copypasta"
 	trash = /obj/item/trash/plate
 	bitesize = 4
@@ -52,7 +52,7 @@
 /obj/item/reagent_containers/food/snacks/meatballspaghetti
 	name = "spaghetti and meatballs"
 	desc = "Now that's a nic'e meatball!"
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "meatballspaghetti"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 4)
@@ -64,7 +64,7 @@
 /obj/item/reagent_containers/food/snacks/spesslaw
 	name = "spesslaw"
 	desc = "A lawyers favourite."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "spesslaw"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 6)
@@ -76,7 +76,7 @@
 /obj/item/reagent_containers/food/snacks/chowmein
 	name = "chow mein"
 	desc = "A nice mix of noodles and fried vegetables."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "chowmein"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 4)
@@ -87,7 +87,7 @@
 /obj/item/reagent_containers/food/snacks/beefnoodle
 	name = "beef noodle"
 	desc = "Nutritious, beefy and noodly."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "beefnoodle"
 	trash = /obj/item/reagent_containers/glass/bowl
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 6, /datum/reagent/liquidgibs = 3)
@@ -97,7 +97,7 @@
 /obj/item/reagent_containers/food/snacks/butternoodles
 	name = "butter noodles"
 	desc = "Noodles covered in savory butter. Simple and slippery, but delicious."
-	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon = 'icons/obj/food_and_drinks/pizzaspaghetti.dmi'
 	icon_state = "butternoodles"
 	trash = /obj/item/trash/plate
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/nutriment/vitamin = 1)

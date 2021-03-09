@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/food/snacks/soup
 	w_class = WEIGHT_CLASS_NORMAL
-	icon = 'icons/obj/food/soupsalad.dmi'
+	icon = 'icons/obj/food_and_drinks/soupsalad.dmi'
 	trash = /obj/item/reagent_containers/glass/bowl
 	bitesize = 5
 	volume = 80

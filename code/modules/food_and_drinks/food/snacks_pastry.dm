@@ -5,7 +5,7 @@
 /obj/item/reagent_containers/food/snacks/donut
 	name = "donut"
 	desc = "Goes great with robust coffee."
-	icon = 'icons/obj/food/donut.dmi'
+	icon = 'icons/obj/food_and_drinks/donut.dmi'
 	icon_state = "donut"
 	bitesize = 5
 	bonus_reagents = list(/datum/reagent/consumable/sugar = 1)
