@@ -1,7 +1,7 @@
 /obj/item/teleportation_scroll
 	name = "scroll of teleportation"
 	desc = "A scroll for moving around."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "scroll"
 	var/uses = 4
 	w_class = WEIGHT_CLASS_SMALL

@@ -178,7 +178,7 @@ Difficulty: Hard
 /obj/item/wendigo_blood
 	name = "bottle of wendigo blood"
 	desc = "You're not actually going to drink this, are you?"
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "vial"
 
 /obj/item/wendigo_blood/attack_self(mob/living/user)

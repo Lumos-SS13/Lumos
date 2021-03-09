@@ -6,7 +6,7 @@
 /obj/item/veilrender
 	name = "veil render"
 	desc = "A wicked curved blade of alien origin, recovered from the ruins of a vast city."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "render"
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -166,7 +166,7 @@
 /obj/item/necromantic_stone
 	name = "necromantic stone"
 	desc = "A shard capable of resurrecting humans as skeleton thralls."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "necrostone"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -240,7 +240,7 @@
 /obj/item/voodoo
 	name = "wicker doll"
 	desc = "Something creepy about it."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "voodoo"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -363,7 +363,7 @@
 /obj/item/warpwhistle
 	name = "warp whistle"
 	desc = "One toot on this whistle will send you to a far away land!"
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "whistle"
 	var/on_cooldown = 0 //0: usable, 1: in use, 2: on cooldown
 	var/mob/living/carbon/last_user
@@ -436,7 +436,7 @@
 	return ..()
 
 /obj/effect/temp_visual/tornado
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "tornado"
 	name = "tornado"
 	desc = "This thing sucks!"

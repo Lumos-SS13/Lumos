@@ -1,6 +1,6 @@
 /obj/item/soulstone
 	name = "soulstone shard"
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "soulstone"
 	item_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -97,7 +97,7 @@
 ///////////////////////////Transferring to constructs/////////////////////////////////////////////////////
 /obj/structure/constructshell
 	name = "empty shell"
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "construct-cult"
 	desc = "A wicked machine used by those skilled in magical arts. It is inactive."
 

@@ -265,7 +265,7 @@
 /obj/item/bloodcrawlbottle
 	name = "bloodlust in a bottle"
 	desc = "Drinking this will give you unimaginable powers... and mildly disgust you because of it's metallic taste."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "vial"
 
 /obj/item/bloodcrawlbottle/attack_self(mob/user)

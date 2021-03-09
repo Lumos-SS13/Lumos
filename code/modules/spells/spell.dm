@@ -137,7 +137,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	var/player_lock = 1 //If it can be used by simple mobs
 
 	var/overlay = 0
-	var/overlay_icon = 'icons/obj/wizard.dmi'
+	var/overlay_icon = 'icons/obj/antagonists/wizard.dmi'
 	var/overlay_icon_state = "spell"
 	var/overlay_lifespan = 0
 

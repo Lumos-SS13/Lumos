@@ -128,7 +128,7 @@
 	desc = "A humanoid shape, empty, lifeless, and full of potential."
 	mob_name = "a free golem"
 	job_description = "Free Golem"
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "construct"
 	mob_species = /datum/species/golem
 	roundstart = FALSE

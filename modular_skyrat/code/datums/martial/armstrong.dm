@@ -373,7 +373,7 @@ var/horse_stance_effects = FALSE // ensures the horse stance gains it effect
 /obj/item/armstrong_scroll
 	name = "balding scroll"
 	desc = "An ancient looking scroll, bearing a picture of an overweight man wearing a poncho. Has a strong stench of alcohol and drugs."
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state ="scroll2"
 	var/used = 0
 

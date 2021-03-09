@@ -285,7 +285,7 @@ Difficulty: Medium
 
 
 /obj/effect/temp_visual/fireball
-	icon = 'icons/obj/wizard.dmi'
+	icon = 'icons/obj/antagonists/wizard.dmi'
 	icon_state = "fireball"
 	name = "fireball"
 	desc = "Get out of the way!"
