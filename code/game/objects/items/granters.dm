@@ -528,8 +528,9 @@
 	remarks = list("Looks like these would sell much better in a plasma fire...", "Using glass bowls rather then cones?", "Mixing soda and ice-cream?", "Tall glasses with of liquids and solids...", "Just add a bit of icecream and cherry on top?")
 
 /obj/item/book/granter/crafting_recipe/bone_bow //Bow crafting for non-ashwalkers
-	name = "bowyery sandstone slab" // this is an actual word
-	desc = "A sandstone slab with inscriptions describing the Ash Walkers of Lavaland's bowyery."
+	name = "bowyery stone slab" // this is an actual word
+	desc = "A stone slab with inscriptions that teach basic bow fabrication."
+	ashwalker_desc = "Long ago, he bestowed up us knowledge to defend the Necropolis and ourselves from afar. These inscriptions tell us so."
 	crafting_recipe_types = list(/datum/crafting_recipe/bone_arrow, /datum/crafting_recipe/bone_bow, /datum/crafting_recipe/ashen_arrow, /datum/crafting_recipe/quiver, /datum/crafting_recipe/bow_tablet)
 	icon_state = "stone_tablet"
 	oneuse = FALSE

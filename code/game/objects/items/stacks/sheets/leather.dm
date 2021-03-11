@@ -198,6 +198,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 /obj/item/stack/sheet/animalhide/goliath_hide
 	name = "goliath hide plates"
 	desc = "Pieces of a goliath's rocky hide, these might be able to make your suit a bit more durable to attack from the local fauna."
+	ashwalker_desc = "The hide of noble beasts, to adorn it upon your armor would be honoring their strength."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "goliath_hide"
 	singular_name = "hide plate"
@@ -216,6 +217,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 /obj/item/stack/sheet/animalhide/ashdrake
 	name = "ash drake hide"
 	desc = "The strong, scaled hide of an ash drake."
+	ashwalker_desc = "The scales of a giant. Strong as the Necropolis and enduring as time."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "dragon_hide"
 	singular_name = "drake plate"

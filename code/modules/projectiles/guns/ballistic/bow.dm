@@ -53,6 +53,7 @@
 /obj/item/gun/ballistic/bow/ashen
 	name = "bone bow"
 	desc = "Some sort of primitive projectile weapon made of bone and sinew. Used to fire arrows."
+	ashwalker_desc = "The hunt is a test of will and cunning, and this weapon shall prove both."
 	icon_state = "ashenbow"
 	item_state = "ashenbow"
 	force = 8
