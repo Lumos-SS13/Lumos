@@ -34,6 +34,7 @@ GLOBAL_LIST_INIT(sandstone_recipes, list ( \
 /obj/item/stack/sheet/mineral/sandstone
 	name = "sandstone brick"
 	desc = "This appears to be a combination of both sand and stone."
+	ashwalker_desc = "Just as they built the Necropolis with godstone, you shall build a domain of sandstone."
 	singular_name = "sandstone brick"
 	icon_state = "sheet-sandstone"
 	item_state = "sheet-sandstone"
@@ -201,6 +202,8 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/gold
 	name = "gold"
+	desc = "Gold greases palms, builds empires and instigates murder."
+	ashwalker_desc = "Stands against time just as the Necropolis."
 	icon_state = "sheet-gold"
 	item_state = "sheet-gold"
 	singular_name = "gold bar"
@@ -232,6 +235,7 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/silver
 	name = "silver"
+	desc = "Naturally antibiotic and self-cleaning, plus a fairly good conductor."
 	icon_state = "sheet-silver"
 	item_state = "sheet-silver"
 	singular_name = "silver bar"

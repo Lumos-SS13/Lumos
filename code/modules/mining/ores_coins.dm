@@ -64,6 +64,8 @@
 
 /obj/item/stack/ore/uranium
 	name = "uranium ore"
+	desc = "The funny green cancer rock."
+	ashwalker_desc = "We have little use for this stone."
 	icon_state = "Uranium ore"
 	item_state = "Uranium ore"
 	singular_name = "uranium ore chunk"
@@ -73,6 +75,8 @@
 
 /obj/item/stack/ore/iron
 	name = "iron ore"
+	desc = "Before steel and after bronze, came iron."
+	ashwalker_desc = "Just as bronze endures, iron conquers."
 	icon_state = "Iron ore"
 	item_state = "Iron ore"
 	singular_name = "iron ore chunk"
@@ -82,6 +86,8 @@
 
 /obj/item/stack/ore/glass
 	name = "sand pile"
+	desc = "It's coarse, it's rough, it gets everywhere."
+	ashwalker_desc = "Compress it and make sandstone."
 	icon_state = "Glass ore"
 	item_state = "Glass ore"
 	singular_name = "sand pile"
@@ -141,12 +147,16 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/glass/basalt
 	name = "volcanic ash"
+	desc = "It's coarse, it's rough, it gets everywhere."
+	ashwalker_desc = "Compress it and make sandstone."
 	icon_state = "volcanic_sand"
 	icon_state = "volcanic_sand"
 	singular_name = "volcanic ash pile"
 
 /obj/item/stack/ore/plasma
 	name = "plasma ore"
+	desc = "Raw, unrefined plasma. In centuries past it was fossil fuels and gold, and now it's plasma."
+	ashwalker_desc = "Glimmering purple crystals hide a powerful dragonfire."
 	icon_state = "Plasma ore"
 	item_state = "Plasma ore"
 	singular_name = "plasma ore chunk"
@@ -160,6 +170,8 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/silver
 	name = "silver ore"
+	desc = "Raw silver sounds like the name of a metal band."
+	ashwalker_desc = "Soft as gold, pale as iron."
 	icon_state = "Silver ore"
 	item_state = "Silver ore"
 	singular_name = "silver ore chunk"
@@ -169,6 +181,8 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/gold
 	name = "gold ore"
+	desc = "Raw gold, unreactive and unyielding."
+	ashwalker_desc = "Sought after for its beauty and time-resistance."
 	icon_state = "Gold ore"
 	icon_state = "Gold ore"
 	singular_name = "gold ore chunk"
@@ -178,6 +192,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/diamond
 	name = "diamond ore"
+	desc = "Little bits of a greater whole."
 	icon_state = "Diamond ore"
 	item_state = "Diamond ore"
 	singular_name = "diamond ore chunk"
@@ -187,6 +202,8 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/bananium
 	name = "bananium ore"
+	desc = "Oh god no, how do I put ore BACK into the earth?"
+	ashwalker_desc = "A curious stone, bright and sweet-smelling."
 	icon_state = "Bananium ore"
 	item_state = "Bananium ore"
 	singular_name = "bananium ore chunk"
@@ -196,6 +213,8 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/titanium
 	name = "titanium ore"
+	desc = "Not bulletproof, yet."
+	ashwalker_desc = "Brittle and dark, but a strong ally to other metals."
 	icon_state = "Titanium ore"
 	item_state = "Titanium ore"
 	singular_name = "titanium ore chunk"
@@ -213,6 +232,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 /obj/item/gibtonite
 	name = "gibtonite ore"
 	desc = "Extremely explosive if struck with mining equipment, Gibtonite is often used by miners to speed up their work by using it as a mining charge. This material is illegal to possess by unauthorized personnel under space law."
+	ashwalker_desc = "Leave it alone, as it still contains a heart of rage."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "Gibtonite ore"
 	item_state = "Gibtonite ore"
