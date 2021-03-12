@@ -202,7 +202,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/bananium
 	name = "bananium ore"
-	desc = "Oh god no, how do I put ore BACK into the earth?"
+	desc = "Oh god no, how do I this BACK into the earth?"
 	ashwalker_desc = "A curious stone, bright and sweet-smelling."
 	icon_state = "Bananium ore"
 	item_state = "Bananium ore"

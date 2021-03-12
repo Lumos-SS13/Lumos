@@ -236,6 +236,7 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
 /obj/item/stack/sheet/mineral/silver
 	name = "silver"
 	desc = "Naturally antibiotic and self-cleaning, plus a fairly good conductor."
+	ashwalker_desc = "Radiant and cleasing."
 	icon_state = "sheet-silver"
 	item_state = "sheet-silver"
 	singular_name = "silver bar"
@@ -267,6 +268,8 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/bananium
 	name = "bananium"
+	desc = "Don't let the clown get this, god please."
+	ashwalker_desc = "A sweet-smelling crystal, avoid the temptation to eat it."
 	icon_state = "sheet-bananium"
 	item_state = "sheet-bananium"
 	singular_name = "bananium sheet"
