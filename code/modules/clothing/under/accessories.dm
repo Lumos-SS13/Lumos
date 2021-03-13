@@ -369,7 +369,7 @@
 /obj/item/clothing/accessory/talisman
 	name = "bone talisman"
 	desc = "A bone charm, dedicated to luck on the hunt."
-	ashwalker_desc = "Even if they are prey, never forget they are living just as us. Respect for your opponent."
+	ashwalker_desc = "Even if they are prey, never forget they are world-kin. Respect them as any egg-brother."
 	icon_state = "talisman"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 20, "rad" = 5, "fire" = 0, "acid" = 25, "wound" = 5)
 
@@ -384,7 +384,7 @@
 /obj/item/clothing/accessory/skullcodpiece/fake
 	name = "false codpiece"
 	desc = "A plastic ornament, intended to protect the important things in life. It's not very good at it."
-	ashwalker_desc = "The truest way to confuse an enemy is to give the illusion of two heads. This spears to lack even that."
+	ashwalker_desc = "The truest way to confuse an enemy is to give the illusion of two heads. This appears to lack even that."
 	icon_state = "skull"
 	above_suit = TRUE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)

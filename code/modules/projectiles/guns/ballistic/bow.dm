@@ -61,6 +61,7 @@
 /obj/item/gun/ballistic/bow/pipe
 	name = "pipe bow"
 	desc = "Some sort of pipe-based projectile weapon made of string and lots of bending. Used to fire arrows."
+	ashwalker_desc = "A laughable attempt by outsiders to recreate our weapons. They should most definitely stick with their staves."
 	icon_state = "pipebow"
 	item_state = "pipebow"
 	force = 2

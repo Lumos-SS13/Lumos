@@ -174,6 +174,7 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	name = "watcher sinew"
 	icon = 'icons/obj/mining.dmi'
 	desc = "Long stringy filaments which presumably came from a watcher's wings."
+	ashwalker_desc = "Strong as steel, soft as gubbuck shell."
 	singular_name = "watcher sinew"
 	icon_state = "sinew"
 	novariants = TRUE
