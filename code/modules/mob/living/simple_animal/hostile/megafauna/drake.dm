@@ -33,6 +33,7 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/dragon
 	name = "ash drake"
 	desc = "Guardians of the necropolis."
+	ashwalker_desc = "Once the pets and guardians of the Necropolis, now reduced to feral predators of all that occupy the ashen mountain."
 	threat = 30
 	health = 2500
 	maxHealth = 2500

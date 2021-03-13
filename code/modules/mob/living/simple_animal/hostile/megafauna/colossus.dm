@@ -24,6 +24,7 @@ Difficulty: Very Hard
 /mob/living/simple_animal/hostile/megafauna/colossus
 	name = "colossus"
 	desc = "A monstrous creature protected by heavy shielding."
+	ashwalker_desc = "An aberration of pure horror."
 	threat = 40
 	health = 2500
 	maxHealth = 2500

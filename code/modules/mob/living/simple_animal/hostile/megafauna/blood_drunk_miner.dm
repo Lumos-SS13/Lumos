@@ -23,6 +23,7 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner
 	name = "blood-drunk miner"
 	desc = "A miner destined to wander forever, engaged in an endless hunt."
+	ashwalker_desc = "An outsider who has become addicted to a unhonorable hunt. Treat lightly and avoid as much as possible."
 	threat = 15
 	health = 900
 	maxHealth = 900

@@ -2,6 +2,7 @@
 /mob/living/simple_animal/hostile/asteroid/gutlunch
 	name = "gutlunch"
 	desc = "A scavenger that eats raw meat, often found alongside ash walkers. Produces a thick, nutritious milk."
+	ashwalker_desc = "One of the few companions we've been granted. They eat carrion to produce a satisfying remedy."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "gutlunch"
 	icon_living = "gutlunch"
@@ -129,6 +130,8 @@
 //Gutlunch udder
 /obj/item/udder/gutlunch
 	name = "nutrient sac"
+	desc = "The business end of a guthen, makes a thick milk."
+	ashwalker_desc = "The sac of our guthens, no longer producing their remedy."
 
 /obj/item/udder/gutlunch/Initialize()
 	. = ..()
