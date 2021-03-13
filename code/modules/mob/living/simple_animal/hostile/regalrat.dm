@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/regalrat
 	name = "regal rat"
-	desc = "An evolved rat, created through some strange science. It leads nearby rats with deadly efficiency to protect its kingdom. Not technically a king."
+	desc = "He's the big rat who makes all the rules, now let's see what trouble he gets himself into."
 	icon_state = "regalrat"
 	icon_living = "regalrat"
 	icon_dead = "regalrat_dead"

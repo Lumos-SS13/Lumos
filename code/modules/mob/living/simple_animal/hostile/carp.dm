@@ -2,7 +2,8 @@
 
 /mob/living/simple_animal/hostile/carp
 	name = "space carp"
-	desc = "A ferocious, fang-bearing creature that resembles a fish."
+	desc = "A hostile astroform common to areas in space not frequented by spaceships."
+	ashwalker_desc = "A massive fish, a bounty all the more sweetened by battle."
 	icon_state = "carp"
 	icon_living = "carp"
 	icon_dead = "carp_dead"
