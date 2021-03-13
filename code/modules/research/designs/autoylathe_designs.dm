@@ -427,12 +427,14 @@
 	materials = list(/datum/material/plastic = 500, /datum/material/iron = 50)
 	build_path = /obj/item/toy/figure/warden
 
+/* Retconning Death Squads for l o r e
 /datum/design/autoylathe/figure/dsquad
 	name = "Deathsquad"
 	id = "dsqfigure"
 	materials = list(/datum/material/plastic = 500, /datum/material/iron = 50)
 	build_path = /obj/item/toy/figure/dsquad
 	category = list("hacked", "Figurines")
+*/
 
 /datum/design/autoylathe/figure/ian
 	name = "Ian"

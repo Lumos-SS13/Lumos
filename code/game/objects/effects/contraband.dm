@@ -589,9 +589,9 @@
 	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
 	icon_state = "poster28_legit"
 
-/obj/structure/sign/poster/official/enlist
-	name = "Enlist" // but I thought deathsquad was never acknowledged
-	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
+/obj/structure/sign/poster/official/enlist // Instead of Death Squad, we're NT Navy
+	name = "Enlist"
+	desc = "Nanotrasen Naval Academy - Pilots wanted!"
 	icon_state = "poster29_legit"
 
 /obj/structure/sign/poster/official/nanomichi_ad
@@ -601,7 +601,7 @@
 
 /obj/structure/sign/poster/official/twelve_gauge
 	name = "12 Gauge"
-	desc = "A poster boasting about the superiority of 12 gauge shotgun shells."
+	desc = "A poster boasting about the superiority of 12 gauge shotgun shells; because they don't miss."
 	icon_state = "poster31_legit"
 
 /obj/structure/sign/poster/official/high_class_martini
@@ -846,35 +846,10 @@
 	desc = "A poster telling of the dangers of the Supermatter Crystal."
 	icon_state = "vgposter5"
 
-/obj/structure/sign/poster/contraband/anime1
-	name = "Skull"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter1"
-
-/obj/structure/sign/poster/contraband/anime2
-	name = "Ninja"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter2"
-
 /obj/structure/sign/poster/contraband/anime3
 	name = "Blood"
 	desc = "A poster advertising an anime."
 	icon_state = "animeposter3"
-
-/obj/structure/sign/poster/contraband/anime4
-	name = "Boom"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter4"
-
-/obj/structure/sign/poster/contraband/anime5
-	name = "River"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter5"
-
-/obj/structure/sign/poster/contraband/anime6
-	name = "Pink"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter6"
 
 /obj/structure/sign/poster/contraband/apc
 	name = "APC"
@@ -925,35 +900,5 @@
 	name = "Earth"
 	desc = "A poster of our home planet... maybe?"
 	icon_state = "poster115"
-
-/obj/structure/sign/poster/contraband/bigboom
-	name = "Nuke"
-	desc = "A poster showing a mushroom cloud."
-	icon_state = "poster116"
-
-/obj/structure/sign/poster/contraband/iceland
-	name = "Iceland"
-	desc = "A poster showing a cold planet."
-	icon_state = "poster117"
-
-/obj/structure/sign/poster/contraband/pantsdown
-	name = "Pants Down"
-	desc = "A poster with a person's pants down."
-	icon_state = "poster118"
-
-/obj/structure/sign/poster/contraband/trianglesus
-	name = "Suspicious Triangle"
-	desc = "A poster with a suspicious looking triangle."
-	icon_state = "poster119"
-
-/obj/structure/sign/poster/contraband/penguin
-	name = "Penguin"
-	desc = "A poster with a penguin."
-	icon_state = "poster120"
-
-/obj/structure/sign/poster/contraband/leftvalve
-	name = "Valve"
-	desc = "A poster with a man who has a valve on the back... how detailed."
-	icon_state = "poster121"
 
 #undef PLACE_SPEED
