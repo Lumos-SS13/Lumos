@@ -117,7 +117,7 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/bow_tablet
-	name = "Sandstone Bow Making Manual"
+	name = "Bow Making Tablet"
 	result = /obj/item/book/granter/crafting_recipe/bone_bow
 	time = 200 //Scribing // don't care
 	always_availible = FALSE

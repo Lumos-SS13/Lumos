@@ -53,6 +53,7 @@
 /obj/item/gun/ballistic/bow/ashen
 	name = "bone bow"
 	desc = "Some sort of primitive projectile weapon made of bone and sinew. Used to fire arrows."
+	ashwalker_desc = "The hunt is a test of will and cunning, and this weapon shall prove both."
 	icon_state = "ashenbow"
 	item_state = "ashenbow"
 	force = 8
@@ -60,6 +61,7 @@
 /obj/item/gun/ballistic/bow/pipe
 	name = "pipe bow"
 	desc = "Some sort of pipe-based projectile weapon made of string and lots of bending. Used to fire arrows."
+	ashwalker_desc = "A laughable attempt by outsiders to recreate our weapons. They should most definitely stick with their staves."
 	icon_state = "pipebow"
 	item_state = "pipebow"
 	force = 2

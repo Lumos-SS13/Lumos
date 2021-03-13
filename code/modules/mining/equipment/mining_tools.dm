@@ -1,6 +1,8 @@
 /*****************Pickaxes & Drills & Shovels****************/
 /obj/item/pickaxe
 	name = "pickaxe"
+	desc = "Diggy diggy hole."
+	ashwalker_desc = "Be it the hands of an outsider or of kin, all know the humble pickaxe."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe"
 	flags_1 = CONDUCT_1
@@ -41,6 +43,7 @@
 /obj/item/pickaxe/mini
 	name = "compact pickaxe"
 	desc = "A smaller, compact version of the standard pickaxe."
+	ashwalker_desc = "A smaller pickaxe, cute as a guthen."
 	icon_state = "minipick"
 	force = 10
 	throwforce = 7
@@ -99,6 +102,7 @@
 	usesound = 'sound/weapons/drill.ogg'
 	hitsound = 'sound/weapons/drill.ogg'
 	desc = "An electric mining drill for the especially scrawny."
+	ashwalker_desc = "A large metal tooth that chews through stone with a deafening roar."
 
 /obj/item/pickaxe/drill/cyborg
 	name = "cyborg mining drill"
@@ -186,12 +190,13 @@
 
 /obj/item/shovel/serrated
 	name = "serrated bone shovel"
-	desc = "A wicked tool that cleaves through dirt just as easily as it does flesh. The design was styled after ancient lavaland tribal designs."
+	desc = "A shovel assembled from bone and wood. From looks, getting jabbed by this wouldn't be fun."
+	ashwalker_desc = "Even our tools may serve as weapons in unforgiving times."
 	icon_state = "shovel_bone"
 	item_state = "shovel_bone"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
-	force = 15
+	force = 13
 	throwforce = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	toolspeed = 0.7

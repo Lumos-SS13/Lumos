@@ -56,6 +56,7 @@
 /obj/item/fish_tool/fishing_rod/primal
 	name = "primal fishing rod"
 	desc = "A primitive fishing rod. Sturdy and effective, and that's all that counts."
+	ashwalker_desc = "Never underestimate one who relies on patience to feed himself."
 	icon_state = "prim_rod"
 
 	fishing_chance = 50

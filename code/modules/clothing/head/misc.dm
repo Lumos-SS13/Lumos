@@ -276,6 +276,7 @@
 /obj/item/clothing/head/lizard
 	name = "lizardskin cloche hat"
 	desc = "How many lizards died to make this hat? Not enough."
+	ashwalker_desc = "A grizzly reminder that even outsiders can be treated with unjust hatred."
 	icon_state = "lizard"
 
 /obj/item/clothing/head/papersack

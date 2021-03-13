@@ -90,10 +90,11 @@
 	name = "Ash Walker"
 	id = "ashlizard"
 	limbs_id = "lizard"
-	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,DIGITIGRADE)
+	species_traits = list(MUTCOLORS,NO_UNDERWEAR,EYECOLOR,LIPS,DIGITIGRADE,NOAROUSAL)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS)
 	mutantlungs = /obj/item/organ/lungs/ashwalker
-	burnmod = 0.9
+	fixed_mut_color = "#636463"
+	burnmod = 0.8
 	brutemod = 0.9
 	species_language_holder = /datum/language_holder/lizard/ash
 

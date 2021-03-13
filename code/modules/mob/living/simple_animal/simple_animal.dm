@@ -149,6 +149,10 @@
 	var/sharpness = SHARP_NONE
 	//
 
+	// Lumos edit - Ashwalker desc
+	var/ashwalker_desc = null // desc for Ashies for flavour
+	//
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	GLOB.simple_animals[AIStatus] += src
@@ -638,3 +642,9 @@
 	if (AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
+
+/mob/living/simple_animal/examine(mob/user)
+	if((isashwalker(user) || isobserver(user)) && ashwalker_desc)
+		desc = ashwalker_desc
+	. = ..()
+	desc = initial(desc)

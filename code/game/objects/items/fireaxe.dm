@@ -62,6 +62,7 @@
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
+	ashwalker_desc = "Just as our ancestors cleaved the basalt pillars of the silt wastes, we shall cleave the beast-bones of the ashen mountains."
 
 /obj/item/fireaxe/boneaxe/update_icon_state()
 	icon_state = "bone_axe0"

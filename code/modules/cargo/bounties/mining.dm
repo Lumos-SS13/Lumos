@@ -59,7 +59,7 @@
 
 /datum/bounty/item/mining/fruit
 	name = "Cactus Fruit"
-	description = "Central Command's Ash Walker habitat needs more fauna, send us some local fruit seeds!"
+	description = "Central Command's Ash Walker habitat needs more flora, send us some local fruit seeds!"
 	reward = 1000
 	required_count = 1
 	wanted_types = list(/obj/item/seeds/lavaland/cactus)

@@ -182,6 +182,7 @@
 /obj/item/clothing/head/helmet/gladiator
 	name = "gladiator helmet"
 	desc = "Ave, Imperator, morituri te salutant."
+	ashwalker_desc = "Let it be your second skull, but not your second mind."
 	icon_state = "gladiator"
 	item_state = "gladiator"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
@@ -248,7 +249,8 @@
 
 /obj/item/clothing/head/helmet/skull
 	name = "skull helmet"
-	desc = "An intimidating tribal helmet, it doesn't look very comfortable."
+	desc = "An intimidating vestige cleaved from an unknown animal."
+	ashwalker_desc = "Hunting and war are not just tests of the body, but of the mind."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 5, "rad" = 20, "fire" = 40, "acid" = 20, "wound" = 6)
@@ -260,6 +262,7 @@
 /obj/item/clothing/head/helmet/shaman
 	name = "ritual headress"
 	desc = "Carved from bone, a headress that denotes devotion to a higher power."
+	ashwalker_desc = "His mind was always clear, his will resolute."
 	icon_state = "shamanhat"
 	item_state = "shamanhat"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 5, "rad" = 20, "fire" = 40, "acid" = 20)
