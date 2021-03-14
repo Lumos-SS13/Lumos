@@ -42,7 +42,7 @@
 //nuke core box, for carrying the core
 /obj/item/nuke_core_container
 	name = "nuke core container"
-	desc = "Solid container for radioactive objects."
+	desc = "A lead container for radioactive objects."
 	icon = 'icons/obj/nuke_tools.dmi'
 	icon_state = "core_container_empty"
 	item_state = "tile"
@@ -91,7 +91,7 @@
 
 //snowflake screwdriver, works as a key to start nuke theft, traitor only
 /obj/item/screwdriver/nuke
-	name = "screwdriver"
+	name = "kalchep's screwdriver"
 	desc = "A screwdriver with an ultra thin tip."
 	icon = 'icons/obj/nuke_tools.dmi'
 	icon_state = "screwdriver_nuke"
@@ -100,7 +100,7 @@
 	random_color = FALSE
 
 /obj/item/screwdriver/nuke/nt
-	desc = "A screwdriver with an ultra thin diamon tip."
+	desc = "A screwdriver with an ultra thin diamond tip."
 	toolspeed = 0.25
 	icon_state = "screwdriver_nt"
 
