@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/carp
 	name = "space carp"
-	desc = "A ferocious, fang-bearing creature that resembles a fish."
+	desc = "A hostile astroform frequently seen in frontier systems."
 	icon_state = "carp"
 	icon_living = "carp"
 	icon_dead = "carp_dead"
@@ -69,7 +69,7 @@
 /mob/living/simple_animal/hostile/carp/megacarp
 	icon = 'icons/mob/broadMobs.dmi'
 	name = "Mega Space Carp"
-	desc = "A ferocious, fang bearing creature that resembles a shark. This one seems especially ticked off."
+	desc = "The patriach of most Space Carp schools, if you think space carp are deadly he'll show you that they're the lowest on the pecking order."
 	icon_state = "megacarp"
 	icon_living = "megacarp"
 	icon_dead = "megacarp_dead"
