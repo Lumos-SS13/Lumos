@@ -25,6 +25,7 @@ Difficulty: Medium
 	icon_state = "legion"
 	icon_living = "legion"
 	desc = "One of many."
+	ashwalker_desc = "Run, and hope he may forgive you."
 	icon = 'icons/mob/lavaland/legion.dmi'
 	attack_verb_continuous = "chomps"
 	attack_verb_simple = "chomp"

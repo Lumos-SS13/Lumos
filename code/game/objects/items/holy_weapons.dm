@@ -139,6 +139,7 @@
 /obj/item/clothing/head/helmet/chaplain/ancient
 	name = "ancient helmet"
 	desc = "None may pass!"
+	ashwalker_desc = "His face was never seen, but his voice was never muffled."
 	icon_state = "knight_ancient"
 	item_state = "knight_ancient"
 

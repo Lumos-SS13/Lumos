@@ -3,8 +3,9 @@
 	desc = "you shouldn't see this"
 	
 /obj/item/ashwalker/priest_staff
-	name = "ashwalker priest staff"
-	desc = "A staff that is used to channel the Ash God's power."
+	name = "blessed staff"
+	desc = "A staff revered by Ashwalkers, its purpose unknown."
+	ashwalker_desc = "A relic of our people, incantations carved upon it reveal the stave can bestow blessings."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "asclepius_dormant"
 

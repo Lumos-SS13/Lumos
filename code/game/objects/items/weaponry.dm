@@ -621,6 +621,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/tailclub
 	name = "tail club"
 	desc = "For the beating to death of lizards with their own tails."
+	ashwalker_desc = "Never forget the strength of your own scales."
 	icon_state = "tailclub"
 	force = 14
 	throwforce = 1 // why are you throwing a club do you even weapon
@@ -631,6 +632,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/melee/chainofcommand/tailwhip
 	name = "liz o' nine tails"
 	desc = "A whip fashioned from the severed tails of lizards."
+	ashwalker_desc = "Just staring at this is nauseating."
 	icon_state = "tailwhip"
 	item_flags = NONE
 

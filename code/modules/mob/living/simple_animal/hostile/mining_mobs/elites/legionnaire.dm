@@ -18,7 +18,8 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
 	name = "legionnaire"
-	desc = "A towering skeleton, embodying the terrifying power of Legion."
+	desc = "An advanced strain of the Legion infection, capable of forming a body without the need of a host."
+	ashwalker_desc = "A massive beast of sickness and bile."
 	icon_state = "legionnaire"
 	icon_living = "legionnaire"
 	icon_aggro = "legionnaire"

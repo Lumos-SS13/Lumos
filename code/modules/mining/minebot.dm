@@ -4,7 +4,7 @@
 
 /mob/living/simple_animal/hostile/mining_drone
 	name = "nanotrasen minebot"
-	desc = "The instructions printed on the side read: This is a small robot used to support miners, can be set to search and collect loose ore, or to help fend off wildlife."
+	desc = "A small robot used to support miners, can be set to search and collect loose ore, or to help fend off wildlife."
 	gender = NEUTER
 	icon = 'icons/mob/aibots.dmi'
 	icon_state = "mining_drone"

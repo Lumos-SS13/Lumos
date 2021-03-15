@@ -265,6 +265,7 @@
 /obj/item/storage/backpack/satchel/bone
 	name = "bone satchel"
 	desc = "A grotesque satchel made of sinews and bones."
+	ashwalker_desc = "From explorers, shamans, or smiths, a place to store your valuables is always welcome."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "goliath_saddle"
 	slot_flags = ITEM_SLOT_BACK
