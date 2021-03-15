@@ -132,8 +132,8 @@
 	inner_outfits = list(/obj/item/clothing/under/rank/civilian/chef)
 	outer_outfits = list(/obj/item/clothing/suit/apron/chef)
 
-/datum/team/gang/weed
-	name = "Weed"
-	color = "#6cd648"
+/datum/team/gang/pluton
+	name = "Pluton"
+	color = "#99b62f"
 	inner_outfits = list(/obj/item/clothing/under/color/darkgreen)
-	outer_outfits = list(/obj/item/clothing/suit/vapeshirt)
+	outer_outfits = list(/obj/item/clothing/suit/jacket/miljacket)

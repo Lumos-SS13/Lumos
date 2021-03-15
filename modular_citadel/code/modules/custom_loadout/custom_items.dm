@@ -40,13 +40,6 @@
 	item_state = "infcollar"
 	tagname = null
 
-/obj/item/clothing/accessory/medal/steele
-	name = "Insignia Of Steele"
-	desc = "An intricate pendant given to those who help a key member of the Steele Corporation."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "steele"
-	medaltype = "medal-silver"
-
 /obj/item/toy/darksabre
 	name = "Kiara's Sabre"
 	desc = "This blade looks as dangerous as its owner."
@@ -74,19 +67,6 @@
 	fitting_swords = list(/obj/item/toy/darksabre)
 	starting_sword = /obj/item/toy/darksabre
 
-/obj/item/clothing/suit/armor/vest/darkcarapace
-	name = "Dark Armor"
-	desc = "A dark, non-functional piece of armor sporting a red and black finish."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darkcarapace"
-	item_state = "darkcarapace"
-	blood_overlay_type = "armor"
-	dog_fashion = /datum/dog_fashion/back
-	mutantrace_variation = NONE
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-
 /obj/item/lighter/gold
 	name = "\improper Engraved Zippo"
 	desc = "A shiny and relatively expensive zippo lighter. There's a small etched in verse on the bottom that reads, 'No Gods, No Masters, Only Man.'"
@@ -100,32 +80,6 @@
 	resistance_flags = FIRE_PROOF
 	light_color = LIGHT_COLOR_FIRE
 
-/obj/item/clothing/neck/scarf/zomb
-	name = "A special scarf"
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "zombscarf"
-	desc = "A fashionable collar"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	dog_fashion = /datum/dog_fashion/head
-
-/obj/item/clothing/suit/toggle/labcoat/mad/red
-	name = "\improper The Mad's labcoat"
-	desc = "An oddly special looking coat."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "labred"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "labred"
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/toggle/labcoat/labredblack
-	name = "Black and Red Coat"
-	desc = "An oddly special looking coat."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "labredblack"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "labredblack"
-	mutantrace_variation = NONE
-
 /obj/item/toy/plush/carrot
 	name = "carrot plushie"
 	desc = "While a normal carrot would be good for your eyes, this one seems a bit more for hugging then eating."
@@ -137,28 +91,6 @@
 	resistance_flags = FLAMMABLE
 	squeak_override = list('sound/items/bikehorn.ogg'= 1)
 
-/obj/item/clothing/neck/cloak/carrot
-	name = "carrot cloak"
-	desc = "A cloak in the shape and color of a carrot!"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "carrotcloak"
-	item_state = "carrotcloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-
-/obj/item/storage/backpack/satchel/carrot
-	name = "carrot satchel"
-	desc = "An satchel that is designed to look like an carrot"
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "satchel_carrot"
-	item_state = "satchel_carrot"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-
-/obj/item/storage/backpack/satchel/carrot/Initialize()
-	. = ..()
-	AddComponent(/datum/component/squeak, list('sound/items/toysqueak1.ogg'=1), 50)
-
 /obj/item/toy/plush/tree
 	name = "christmass tree plushie"
 	desc = "A festive plush that squeeks when you squeeze it!"
@@ -169,23 +101,6 @@
 	attack_verb = list("slapped")
 	resistance_flags = FLAMMABLE
 	squeak_override = list('sound/misc/server-ready.ogg'= 1)
-
-/obj/item/clothing/neck/cloak/festive
-	name = "Celebratory Cloak of Morozko"
-	desc = " It probably will protect from snow, charcoal or elves."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "festive"
-	item_state = "festive"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-
-/obj/item/clothing/mask/luchador/zigfie
-	name = "Alboroto Rosa mask"
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "lucharzigfie"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "lucharzigfie"
 
 /obj/item/clothing/head/hardhat/reindeer/fluff
 	name = "novelty reindeer hat"
@@ -213,55 +128,12 @@
 	item_state = "santa"
 	slowdown = 0
 
-/obj/item/clothing/mask/hheart
-	name = "The Hollow heart"
-	desc = "Sometimes things are too much to hide."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "hheart"
-	item_state = "hheart"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR
-/* Moved to modular_skyrat
-/obj/item/clothing/suit/trenchcoat/green
-	name = "Reece's Great Coat"
-	desc = "You would swear this was in your nightmares after eating too many veggies."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "hos-g"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "hos-g"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	mutantrace_variation = NONE
-*/
-/obj/item/reagent_containers/food/drinks/flask/russian
-	name = "russian flask"
-	desc = "Every good russian spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "russianflask"
-	volume = 60
-
-/obj/item/clothing/mask/gas/stalker
-	name = "S.T.A.L.K.E.R. mask"
-	desc = "Smells like reactor four."
-	icon = 'icons/obj/custom.dmi'
-	item_state = "stalker"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "stalker"
-
 /obj/item/reagent_containers/food/drinks/flask/steel
 	name = "The End"
 	desc = "A plain steel flask, sealed by lock and key. The front is inscribed with The End."
 	icon = 'icons/obj/custom.dmi'
 	icon_state = "steelflask"
 	volume = 60
-
-/obj/item/clothing/neck/petcollar/stripe //don't really wear this though please c'mon seriously guys
-	name = "collar"
-	desc = "It's a collar..."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "petcollar-stripe"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "petcollar-stripe"
-	tagname = null
 
 /obj/item/clothing/under/costume/singer/yellow/custom
 	name = "bluish performer's outfit"
@@ -273,40 +145,6 @@
 	fitted = NO_FEMALE_UNIFORM
 	alternate_worn_layer = ABOVE_SHOES_LAYER
 	can_adjust = 0
-	mutantrace_variation = NONE
-
-/obj/item/clothing/shoes/sneakers/pink
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "pink"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "pink"
-	mutantrace_variation = NONE
-
-/obj/item/clothing/neck/tie/bloodred
-	name = "Blood Red Tie"
-	desc = "A neosilk clip-on tie. This one has a black S on the tipping and looks rather unique."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "bloodredtie"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-
-/obj/item/clothing/suit/puffydress
-	name = "Puffy Dress"
-	desc = "A formal puffy black and red Victorian dress."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "puffydress"
-	item_state = "puffydress"
-	body_parts_covered = CHEST|GROIN|LEGS
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/vermillion
-	name = "vermillion clothing"
-	desc = "Some clothing."
-	icon_state = "vermillion"
-	item_state = "vermillion"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	mutantrace_variation = NONE
 
 /obj/item/clothing/under/sweater/black/naomi
@@ -334,66 +172,22 @@
 	icon_state = "paperhat"
 	item_state = "paperhat"
 
-/obj/item/clothing/suit/toggle/labcoat/mad/techcoat
-	name = "Techomancers Labcoat"
-	desc = "An oddly special looking coat."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "rdcoat"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "rdcoat"
-	mutantrace_variation = NONE
-
-/obj/item/custom/leechjar
-	name = "Jar of Leeches"
-	desc = "A dubious cure-all. The cork seems to be sealed fairly well, and the glass impossible to break."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "leechjar"
-	item_state = "leechjar"
-
-/obj/item/clothing/neck/devilwings
-	name = "Strange Wings"
-	desc = "These strange wings look like they once attached to something... or someone...? Whatever the case, their presence makes you feel uneasy.."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "devilwings"
-	mob_overlay_icon = 'modular_citadel/icons/mob/clothing/devilwings64x64.dmi'
-	item_state = "devilwings"
-	worn_x_dimension = 64
-	worn_y_dimension = 34
-
 /obj/item/clothing/neck/flagcape
-	name = "Flag Cape"
-	desc = "A truly patriotic form of heroic attire."
+	name = "banner of patriots"
+	desc = "A idealistic relic of an era when humans on other planets was a mere dream."
 	icon = 'icons/obj/custom.dmi'
 	resistance_flags = FLAMMABLE
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	icon_state = "flagcape"
 	item_state = "flagcape"
 
-/obj/item/clothing/shoes/lucky
-	name = "Lucky Jackboots"
+/obj/item/clothing/shoes/gold_trim
+	name = "parade jackboots"
 	icon = 'icons/obj/custom.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	desc = "Comfy Lucky Jackboots with the word Luck on them."
+	desc = "They lack literally all the benefits of standard jackboots, but damn do they look nice."
 	item_state = "luckyjack"
 	icon_state = "luckyjack"
-	mutantrace_variation = NONE
-
-/obj/item/clothing/under/custom/lunasune
-	name = "Divine Robes"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	desc = "Heavenly robes of the kitsune Luna Pumpkin,you can feel radiance coming from them."
-	item_state = "Divine_robes"
-	icon_state = "Divine_robes"
-	mutantrace_variation = NONE
-
-/obj/item/clothing/under/custom/leoskimpy
-	name = "Leon's Skimpy Outfit"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	desc =  "A rather skimpy outfit."
-	item_state = "shark_cloth"
-	icon_state = "shark_cloth"
 	mutantrace_variation = NONE
 
 /obj/item/clothing/under/custom/mimeoveralls
@@ -405,101 +199,6 @@
 	icon_state = "moveralls"
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/hooded/cloak/zuliecloak
-	name = "Project: Zul-E"
-	desc = "A standard version of a prototype cloak given out by Nanotrasen higher ups. It's surprisingly thick and heavy for a cloak despite having most of it's tech stripped. It also comes with a bluespace trinket which calls it's accompanying hat onto the user. A worn inscription on the inside of the cloak reads 'Fleuret' ...the rest is faded away."
-	icon_state = "zuliecloak"
-	item_state = "zuliecloak"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/zuliecloak
-	body_parts_covered = CHEST|GROIN|ARMS
-	slot_flags = SLOT_WEAR_SUIT | ITEM_SLOT_NECK //it's a cloak. it's cosmetic. so why the hell not? what could possibly go wrong?
-	mutantrace_variation = NONE
-
-/obj/item/clothing/head/hooded/cloakhood/zuliecloak
-	name = "NT Special Issue"
-	desc = "This hat is unquestionably the best one, bluespaced to and from CentComm. It smells of Fish and Tea with a hint of antagonism"
-	icon_state = "zuliecap"
-	item_state = "zuliecap"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	flags_inv = HIDEEARS|HIDEHAIR
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/blackredgold
-	name = "Multicolor Coat"
-	desc = "An oddly special looking coat with black, red, and gold"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "redgoldjacket"
-	item_state = "redgoldjacket"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/kimono
-	name = "Blue Kimono"
-	desc = "A traditional kimono, this one is blue with purple flowers."
-	icon_state = "kimono"
-	item_state = "kimono"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/commjacket
-	name = "Dusty Commisar's Cloak"
-	desc = "An Imperial Commisar's Coat, straight from the frontline of battle, filled with dirt, bulletholes, and dozens of little pockets. Alongside a curious golden eagle sitting on it's left breast, the marking '200th Venoland' is clearly visible on the inner workings of the coat. It certainly holds an imposing flair, however."
-	icon_state = "commjacket"
-	item_state = "commjacket"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	mutantrace_variation = NONE
-
-/obj/item/clothing/under/custom/mw2_russian_para
-	name = "Russian Paratrooper Jumper"
-	desc = "A Russian made old paratrooper jumpsuit, has many pockets for easy storage of gear from a by gone era. As bulky as it looks, its shockingly light!"
-	icon_state = "mw2_russian_para"
-	item_state = "mw2_russian_para"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-
-/obj/item/clothing/gloves/longblackgloves
-	name = "Luna's Gauntlets"
-	desc = "These gloves seem to have a coating of slime fluid on them, you should possibly return them to their rightful owner."
-	icon_state = "longblackgloves"
-	item_state = "longblackgloves"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-
-/obj/item/clothing/under/custom/trendy_fit
-	name = "Trendy Fitting Clothing"
-	desc = "An outfit straight from the boredom of space, its the type of thing only someone trying to entertain themselves on the way to their next destination would wear."
-	icon_state = "trendy_fit"
-	item_state = "trendy_fit"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-
-/obj/item/clothing/head/blueberet
-	name = "Atmos Beret"
-	desc = "A fitted beret designed to be worn by Atmos Techs."
-	icon_state = "blueberet"
-	item_state = "blueberet"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	dynamic_hair_suffix = ""
-
-/obj/item/clothing/head/flight
-	name = "flight goggles"
-	desc = "Old style flight goggles with a leather cap attached."
-	icon_state = "flight-g"
-	item_state = "flight-g"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-
 /obj/item/clothing/neck/necklace/onion
 	name = "Onion Necklace"
 	desc = "A string of onions sequenced together to form a necklace."
@@ -508,48 +207,11 @@
 	item_state = "onion"
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 
-/obj/item/clothing/under/custom/mikubikini
-	name = "starlight singer bikini"
-	desc = " "
+/obj/item/clothing/under/custom/white_bikini
+	name = "white bikini"
+	desc = "Riske!"
 	icon_state = "mikubikini"
 	item_state = "mikubikini"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-
-/obj/item/clothing/suit/mikujacket
-	name = "starlight singer jacket"
-	desc = " "
-	icon_state = "mikujacket"
-	item_state = "mikujacket"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-
-/obj/item/clothing/head/mikuhair
-	name = "starlight singer hair"
-	desc = " "
-	icon_state = "mikuhair"
-	item_state = "mikuhair"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-	flags_inv = HIDEHAIR
-
-/obj/item/clothing/gloves/mikugloves
-	name = "starlight singer gloves"
-	desc = " "
-	icon_state = "mikugloves"
-	item_state = "mikugloves"
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	mutantrace_variation = NONE
-
-/obj/item/clothing/shoes/sneakers/mikuleggings
-	name = "starlight singer leggings"
-	desc = " "
-	icon_state = "mikuleggings"
-	item_state = "mikuleggings"
 	icon = 'icons/obj/custom.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	mutantrace_variation = NONE
@@ -568,3 +230,5 @@
 	desc = "A fancy cloak embroidered with polychromatic thread in a pattern that reminds one of the wielders of unlimited power."
 	icon_state = "polyce"
 	poly_colors = list("#808080", "#8CC6FF", "#FF3535")
+
+/obj/item/clothing/mask/luchador/zigfie // Stub-code - was causing errors with maint loot for some weird reason.
