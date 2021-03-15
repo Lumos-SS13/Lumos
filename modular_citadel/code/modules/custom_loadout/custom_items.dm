@@ -129,23 +129,11 @@
 	slowdown = 0
 
 /obj/item/reagent_containers/food/drinks/flask/steel
-	name = "The End"
-	desc = "A plain steel flask, sealed by lock and key. The front is inscribed with The End."
+	name = "steel flask"
+	desc = "A plain steel flask, because alcoholism is to spacemen as STDs are to Felinids; All of them have it."
 	icon = 'icons/obj/custom.dmi'
 	icon_state = "steelflask"
 	volume = 60
-
-/obj/item/clothing/under/costume/singer/yellow/custom
-	name = "bluish performer's outfit"
-	desc = "Just looking at this makes you want to sing."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "singer"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "singer"
-	fitted = NO_FEMALE_UNIFORM
-	alternate_worn_layer = ABOVE_SHOES_LAYER
-	can_adjust = 0
-	mutantrace_variation = NONE
 
 /obj/item/clothing/under/sweater/black/naomi
 	name = "worn black sweater"
