@@ -177,7 +177,7 @@ GLOBAL_LIST_INIT(transit_tube_recipes, list(
 // SKYRAT CHANGE: Made BSRPD into a subtype of RPD, additionally made it work at range.
 /obj/item/pipe_dispenser
 	name = "Rapid Piping Device (RPD)"
-	desc = "A device used to rapidly pipe things."
+	desc = "A Beta-Tech RPD. Allows user to pipe rapidly. Warranty void if exposed to oxygen."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "rpd"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'

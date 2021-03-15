@@ -91,8 +91,8 @@
 
 //snowflake screwdriver, works as a key to start nuke theft, traitor only
 /obj/item/screwdriver/nuke
-	name = "kalchep's screwdriver"
-	desc = "A screwdriver with an ultra thin tip."
+	name = "kalchep's head screwdriver"
+	desc = "A screwdriver with an oddly-shaped tip."
 	icon = 'icons/obj/nuke_tools.dmi'
 	icon_state = "screwdriver_nuke"
 	item_state = "screwdriver_nuke"
@@ -100,7 +100,7 @@
 	random_color = FALSE
 
 /obj/item/screwdriver/nuke/nt
-	desc = "A screwdriver with an ultra thin diamond tip."
+	desc = "A screwdriver with an oddly-shaped diamond tip."
 	toolspeed = 0.25
 	icon_state = "screwdriver_nt"
 
