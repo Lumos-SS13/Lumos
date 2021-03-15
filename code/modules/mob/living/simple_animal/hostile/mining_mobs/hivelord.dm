@@ -99,7 +99,8 @@
 //Legion
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 	name = "legion"
-	desc = "You can still see what was once a human under the shifting mass of corruption."
+	desc = "A humanoid figure completely succumbed to the Legion infection, now controlled by the festering mass of disease."
+	ashwalker_desc = "The grey thorns and chattering skulls are all signs of the plauge that consumed this land eons ago."
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion"
 	icon_living = "legion"
@@ -132,7 +133,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf
 	name = "dwarf legion"
-	desc = "You can still see what was once a rather small human under the shifting mass of corruption."
+	desc = "A small humanoid figure completely succumbed to the Legion infection, now controlled by the festering mass of disease."
 	icon_state = "dwarf_legion"
 	icon_living = "dwarf_legion"
 	icon_aggro = "dwarf_legion"

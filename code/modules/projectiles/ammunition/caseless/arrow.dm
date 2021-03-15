@@ -1,6 +1,7 @@
 /obj/item/ammo_casing/caseless/arrow
 	name = "arrow of questionable material"
 	desc = "You shouldn't be seeing this arrow."
+	ashwalker_desc = "Small as a knife, strong as a spear."
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow
 	caliber = "arrow"
 	icon_state = "arrow"

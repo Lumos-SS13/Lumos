@@ -113,7 +113,9 @@
 
 /obj/item/clothing/under/costume/gladiator/ash_walker
 	desc = "This gladiator uniform appears to be covered in ash and fairly dated."
+	ashwalker_desc = "Let is be your second skin, but not your second heart."
 	has_sensor = NO_SENSORS
+	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30) // Taken from Security Jumpsuits
 
 /obj/item/clothing/under/costume/maid
 	name = "maid costume"
