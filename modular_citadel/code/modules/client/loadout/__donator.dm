@@ -18,24 +18,6 @@
 	path = /obj/item/bikehorn/airhorn
 	ckeywhitelist = list("kevinz000")
 
-/datum/gear/cebusoap
-	name = "Cebutris' soap"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/custom/ceb_soap
-	ckeywhitelist = list("cebutris")
-
-/datum/gear/kiaracloak
-	name = "Kiara's cloak"
-	category = SLOT_NECK
-	path = /obj/item/clothing/neck/cloak/inferno
-	ckeywhitelist = list("inferno707")
-
-/datum/gear/kiaracollar
-	name = "Kiara's collar"
-	category = SLOT_NECK
-	path = /obj/item/clothing/neck/petcollar/inferno
-	ckeywhitelist = list("inferno707")
-
 /datum/gear/engravedzippo
 	name = "Engraved zippo"
 	category = SLOT_HANDS
@@ -84,29 +66,11 @@
 	path = /obj/item/clothing/under/misc/stripper/mankini
 	ckeywhitelist = list("zigfie")
 
-/datum/gear/performersoutfit
-	name = "Bluish performer's outfit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/costume/singer/yellow/custom
-	ckeywhitelist = list("killer402402")
-
 /datum/gear/AM4B
 	name = "Foam Force AM4-B"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/gun/ballistic/automatic/AM4B
 	ckeywhitelist = list("zeronetalpha")
-
-/datum/gear/naomisweater
-	name = "worn black sweater"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/sweater/black/naomi
-	ckeywhitelist = list("technicalmagi")
-
-/datum/gear/naomicollar
-	name = "worn pet collar"
-	category = SLOT_NECK
-	path = /obj/item/clothing/neck/petcollar/naomi
-	ckeywhitelist = list("technicalmagi")
 
 /datum/gear/torisword
 	name = "Rainbow Zweihander"
@@ -114,42 +78,12 @@
 	path = /obj/item/dualsaber/hypereutactic/toy/rainbow
 	ckeywhitelist = list("annoymous35")
 
-/datum/gear/darksabre
-	name = "Dark Sabre"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/toy/darksabre
-	ckeywhitelist = list("inferno707")
-
-datum/gear/darksabresheath
-	name = "Dark Sabre Sheath"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/storage/belt/sabre/darksabre
-	ckeywhitelist = list("inferno707")
-
-/datum/gear/izzyball
-	name = "Katlin's Ball"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/toy/tennis/rainbow/izzy
-	ckeywhitelist = list("izzyinbox")
-
-/datum/gear/cloak
-	name = "Green Cloak"
-	category = SLOT_NECK
-	path = /obj/item/clothing/neck/cloak/green
-	ckeywhitelist = list("killer402402")
-
 /datum/gear/steelflask
 	name = "Steel Flask"
 	category = SLOT_IN_BACKPACK
 	path = /obj/item/reagent_containers/food/drinks/flask/steel
 	cost = 2
 	ckeywhitelist = list("nik707")
-
-/datum/gear/cloakce
-	name = "Polychromic CE Cloak"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/clothing/neck/cloak/polychromic/polyce
-	ckeywhitelist = list("worksbythesea", "blakeryan")
 
 /datum/gear/ssk
 	name = "Stun Sword Kit"
@@ -217,12 +151,6 @@ datum/gear/darksabresheath
 	category = SLOT_HEAD
 	path = /obj/item/clothing/head/frenchberet
 	ckeywhitelist = list("notazoltan")
-
-/datum/gear/fritzplush
-	name = "Fritz Plushie"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/toy/plush/mammal/dog/fritz
-	ckeywhitelist = list("analwerewolf")
 
 /datum/gear/onionneck
 	name = "Onion Necklace"

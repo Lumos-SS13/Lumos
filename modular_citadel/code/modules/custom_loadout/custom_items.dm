@@ -4,68 +4,7 @@
 // Unless there's a digitigrade version make sure you add mutantrace_variation = NONE to all clothing/under and shoes - Pooj
 // Digitigrade stuff is uniform_digi.dmi and digishoes.dmi in icons/mob
 
-/obj/item/custom/ceb_soap
-	name = "Cebutris' Soap"
-	desc = "A generic bar of soap that doesn't really seem to work right."
-	gender = PLURAL
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "cebu"
-	w_class = WEIGHT_CLASS_TINY
-	item_flags = NOBLUDGEON
-
-/obj/item/soap/cebu //real versions, for admin shenanigans. Adminspawn only
-	desc = "A bright blue bar of soap that smells of wolves"
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "cebu"
-
-/obj/item/soap/cebu/fast //speedyquick cleaning version. Still not as fast as Syndiesoap. Adminspawn only.
-	cleanspeed = 15
-
-/obj/item/clothing/neck/cloak/inferno
-	name = "Kiara's Cloak"
-	desc = "The design on this seems a little too familiar."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "infcloak"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "infcloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-
-/obj/item/clothing/neck/petcollar/inferno
-	name = "Kiara's Collar"
-	desc = "A soft black collar that seems to stretch to fit whoever wears it."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "infcollar"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "infcollar"
-	tagname = null
-
-/obj/item/toy/darksabre
-	name = "Kiara's Sabre"
-	desc = "This blade looks as dangerous as its owner."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darksabre"
-	item_state = "darksabre"
-	lefthand_file = 'modular_citadel/icons/mob/inhands/stunsword_left.dmi'
-	righthand_file = 'modular_citadel/icons/mob/inhands/stunsword_right.dmi'
-	attack_verb = list("attacked", "struck", "hit")
-
-/obj/item/toy/darksabre/get_belt_overlay()
-	return mutable_appearance('icons/obj/custom.dmi', "darksheath-darksabre")
-
-/obj/item/toy/darksabre/get_worn_belt_overlay(icon_file)
-	return mutable_appearance(icon_file, "darksheath-darksabre")
-
-/obj/item/storage/belt/sabre/darksabre
-	name = "Ornate Sheathe"
-	desc = "An ornate and rather sinister looking sabre sheathe."
-	icon = 'icons/obj/custom.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	icon_state = "darksheath"
-	item_state = "darksheath"
-	fitting_swords = list(/obj/item/toy/darksabre)
-	starting_sword = /obj/item/toy/darksabre
+// I've cleared alot of the crud in here. Don't undo that. - Faj
 
 /obj/item/lighter/gold
 	name = "\improper Engraved Zippo"
@@ -92,8 +31,8 @@
 	squeak_override = list('sound/items/bikehorn.ogg'= 1)
 
 /obj/item/toy/plush/tree
-	name = "christmass tree plushie"
-	desc = "A festive plush that squeeks when you squeeze it!"
+	name = "christmas tree plushie"
+	desc = "An incredibly festive plush, has a tiny bell in it!"
 	icon = 'icons/obj/custom.dmi'
 	icon_state = "pine_c"
 	item_state = "pine_c"
@@ -130,29 +69,10 @@
 
 /obj/item/reagent_containers/food/drinks/flask/steel
 	name = "steel flask"
-	desc = "A plain steel flask, because alcoholism is to spacemen as STDs are to Felinids; All of them have it."
+	desc = "A plain steel flask, because alcoholism is to spacemen as STDs are to Felinids."
 	icon = 'icons/obj/custom.dmi'
 	icon_state = "steelflask"
 	volume = 60
-
-/obj/item/clothing/under/sweater/black/naomi
-	name = "worn black sweater"
-	mutantrace_variation = NONE
-	desc = "A well-loved sweater, showing signs of several cleanings and re-stitchings. And a few stains. Is that cat fur?"
-
-/obj/item/clothing/neck/petcollar/naomi
-	name = "worn pet collar"
-	desc = "a pet collar that looks well used."
-
-/obj/item/clothing/neck/cloak/green
-	name = "Generic Green Cloak"
-	desc = "This cloak doesn't seem too special."
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "wintergreencloak"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
-	item_state = "wintergreencloak"
-	w_class = WEIGHT_CLASS_SMALL
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/head/paperhat
 	name = "paperhat"
@@ -203,20 +123,5 @@
 	icon = 'icons/obj/custom.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	mutantrace_variation = NONE
-
-/obj/item/toy/plush/mammal/dog/fritz
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "fritz"
-	item_state = "fritz"
-	attack_verb = list("barked", "boofed", "shotgun'd")
-	obj_flags = UNIQUE_RENAME
-	unique_reskin = list("Goodboye" = "fritz", "Badboye" = "fritz_bad")
-	mutantrace_variation = NONE
-
-/obj/item/clothing/neck/cloak/polychromic/polyce
-	name = "polychromic embroidered cloak"
-	desc = "A fancy cloak embroidered with polychromatic thread in a pattern that reminds one of the wielders of unlimited power."
-	icon_state = "polyce"
-	poly_colors = list("#808080", "#8CC6FF", "#FF3535")
 
 /obj/item/clothing/mask/luchador/zigfie // Stub-code - was causing errors with maint loot for some weird reason.
