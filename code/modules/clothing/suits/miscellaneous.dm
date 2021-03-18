@@ -335,23 +335,6 @@
 	body_parts_covered = CHEST|ARMS
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/suit/ran
-	name = "shikigami costume"
-	desc = "A costume that looks like a certain shikigami, is super fluffy."
-	icon_state = "ran_suit"
-	item_state = "ran_suit"
-	body_parts_covered = CHEST|GROIN|LEGS
-	flags_inv = HIDEJUMPSUIT|HIDETAUR
-	heat_protection = CHEST|GROIN|LEGS //fluffy tails!
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
-/obj/item/clothing/head/ran
-	name = "shikigami hat"
-	desc = "A hat that looks like it keeps any fluffy ears contained super warm, has little charms over it."
-	icon_state = "ran_hat"
-	item_state = "ran_hat"
-	flags_inv = HIDEEARS
-
 /*
  * Misc
  */
