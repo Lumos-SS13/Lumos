@@ -335,23 +335,6 @@
 	body_parts_covered = CHEST|ARMS
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/suit/ran
-	name = "shikigami costume"
-	desc = "A costume that looks like a certain shikigami, is super fluffy."
-	icon_state = "ran_suit"
-	item_state = "ran_suit"
-	body_parts_covered = CHEST|GROIN|LEGS
-	flags_inv = HIDEJUMPSUIT|HIDETAUR
-	heat_protection = CHEST|GROIN|LEGS //fluffy tails!
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
-/obj/item/clothing/head/ran
-	name = "shikigami hat"
-	desc = "A hat that looks like it keeps any fluffy ears contained super warm, has little charms over it."
-	icon_state = "ran_hat"
-	item_state = "ran_hat"
-	flags_inv = HIDEEARS
-
 /*
  * Misc
  */
@@ -380,14 +363,6 @@
 	desc = "A baggy shirt with vintage game character Phanic the Weasel. Why would anyone wear this?"
 	icon_state = "nerdshirt"
 	item_state = "nerdshirt"
-	body_parts_covered = CHEST|GROIN
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
-/obj/item/clothing/suit/vapeshirt //wearing this is asking to get beat.
-	name = "Vape Naysh shirt"
-	desc = "A cheap white T-shirt with a big tacky \"VN\" on the front, Why would you wear this unironically?"
-	icon_state = "vapeshirt"
-	item_state = "vapeshirt"
 	body_parts_covered = CHEST|GROIN
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
@@ -501,7 +476,7 @@
 
 /obj/item/clothing/suit/hooded/wintercoat
 	name = "winter coat"
-	desc = "A heavy jacket made from 'synthetic' animal furs."
+	desc = "A heavy jacket made from 'synthetic' 'animal furs'."
 	icon_state = "coatwinter"
 	item_state = "coatwinter"
 	body_parts_covered = CHEST|GROIN|ARMS

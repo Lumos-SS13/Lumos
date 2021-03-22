@@ -16,7 +16,7 @@
 
 /mob/living/simple_animal/hostile/syndicate
 	name = "Syndicate Operative"
-	desc = "Death to Nanotrasen."
+	desc = "This death brought to you by Gorlex Marauders."
 	icon = 'icons/mob/simple_human.dmi'
 	icon_state = "syndicate"
 	icon_living = "syndicate"
@@ -285,7 +285,7 @@
 
 /mob/living/simple_animal/hostile/viscerator
 	name = "viscerator"
-	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations."
+	desc = "A widely banned simple silicon due to propensity for non-computationally hacking men."
 	icon_state = "viscerator_attack"
 	icon_living = "viscerator_attack"
 	pass_flags = PASSTABLE | PASSMOB

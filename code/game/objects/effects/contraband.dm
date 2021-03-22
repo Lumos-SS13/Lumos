@@ -294,7 +294,7 @@
 
 /obj/structure/sign/poster/contraband/borg_fancy_1
 	name = "Borg Fancy"
-	desc = "Being fancy can be for any borg, just need a suit."
+	desc = "An advertisement for the popular magazine of the same name."
 	icon_state = "poster20"
 
 /obj/structure/sign/poster/contraband/borg_fancy_2
@@ -369,8 +369,8 @@
 	icon_state = "poster34"
 
 /obj/structure/sign/poster/contraband/free_drone
-	name = "Free Drone"
-	desc = "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentCom."
+	name = "Lost Drone"
+	desc = "A faded missing poster looking for an outdated drone model. Wonder if the owner is still looking for it..."
 	icon_state = "poster35"
 
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6
@@ -414,7 +414,7 @@
 	icon_state = "poster43"
 
 /obj/structure/sign/poster/contraband/masked_men
-	name = "Masked Men"
+	name = "Bumba"
 	desc = "A poster advertising a movie about some masked men."
 	icon_state = "poster44"
 
@@ -456,7 +456,7 @@
 
 /obj/structure/sign/poster/official/nanotrasen_logo
 	name = "Nanotrasen Logo"
-	desc = "A poster depicting the Nanotrasen logo."
+	desc = "From transport, to defense - Nanotrasen is there."
 	icon_state = "poster2_legit"
 
 /obj/structure/sign/poster/official/cleanliness
@@ -501,17 +501,17 @@
 
 /obj/structure/sign/poster/official/state_laws
 	name = "State Laws"
-	desc = "A poster instructing cyborgs to state their laws."
+	desc = "Ionospheric interference is a constant threat! Ask your cyborgs and AIs to state laws!"
 	icon_state = "poster11_legit"
 
 /obj/structure/sign/poster/official/love_ian
-	name = "Love Ian"
-	desc = "Ian is love, Ian is life."
+	name = "Love Corgis!"
+	desc = "Just because they're genetically engineered to be cute doesn't mean they're NOT cute!"
 	icon_state = "poster12_legit"
 
 /obj/structure/sign/poster/official/space_cops
 	name = "Space Cops."
-	desc = "A poster advertising the television show Space Cops."
+	desc = "A poster advertising the holovision show: Space Cops. Whatcha gonna do when they come for you?"
 	icon_state = "poster13_legit"
 
 /obj/structure/sign/poster/official/ue_no
@@ -531,7 +531,7 @@
 
 /obj/structure/sign/poster/official/work_for_a_future
 	name = "Work For A Future"
-	desc = " A poster encouraging you to work for your future."
+	desc = "Even after The Collapse, we must forge onward."
 	icon_state = "poster17_legit"
 
 /obj/structure/sign/poster/official/soft_cap_pop_art
@@ -589,24 +589,24 @@
 	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
 	icon_state = "poster28_legit"
 
-/obj/structure/sign/poster/official/enlist
-	name = "Enlist" // but I thought deathsquad was never acknowledged
-	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
+/obj/structure/sign/poster/official/enlist // Instead of Death Squad, we're NT Navy
+	name = "Enlist"
+	desc = "Nanotrasen Naval Academy - Pilots wanted!"
 	icon_state = "poster29_legit"
 
 /obj/structure/sign/poster/official/nanomichi_ad
 	name = "Nanomichi Ad"
-	desc = " A poster advertising Nanomichi brand audio cassettes."
+	desc = " A poster advertising Nanomichi brand audio cassettes. Cutting edge audio recording!"
 	icon_state = "poster30_legit"
 
 /obj/structure/sign/poster/official/twelve_gauge
 	name = "12 Gauge"
-	desc = "A poster boasting about the superiority of 12 gauge shotgun shells."
+	desc = "A poster boasting about the superiority of 12 gauge shotgun shells; because they don't miss."
 	icon_state = "poster31_legit"
 
 /obj/structure/sign/poster/official/high_class_martini
 	name = "High-Class Martini"
-	desc = "I told you to shake it, no stirring."
+	desc = "Shake it, baby."
 	icon_state = "poster32_legit"
 
 /obj/structure/sign/poster/official/the_owl
@@ -616,22 +616,22 @@
 
 /obj/structure/sign/poster/official/no_erp
 	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
+	desc = "This poster reminds the crew that Eroticism, Rape, and Pornography are banned on Nanotrasen stations."
 	icon_state = "poster34_legit"
 
 /obj/structure/sign/poster/official/wtf_is_co2
 	name = "Carbon Dioxide"
-	desc = "This informational poster teaches the viewer what carbon dioxide is."
+	desc = "CO2, best known for its fire/life-reducing properties."
 	icon_state = "poster35_legit"
 
 /obj/structure/sign/poster/official/spiderlings
 	name = "Spiderlings"
-	desc = "This poster informs the crew of the dangers of spiderlings."
+	desc = "Report all sightings of Spiderlings! If left unchecked, they can overtake entire stations!"
 	icon_state = "poster36_legit"
 
 /obj/structure/sign/poster/official/duelshotgun
 	name = "Cycler Shotgun Ad"
-	desc = "A poster advertising an advanced dual magazine tubes shotgun, boasting about how easy it is to swap between the two tubes."
+	desc = "A poster advertising an advanced dual magazine tube-shotgun, boasting about how easy it is to swap between the two tubes."
 	icon_state = "poster37_legit"
 
 /obj/structure/sign/poster/official/fashion
@@ -661,12 +661,12 @@
 
 /obj/structure/sign/poster/official/nt_storm_officer
 	name = "NT Storm Ad"
-	desc = "An advertisement for NanoTrasen Storm. A premium infantry helmet, This is the officer variant. I comes with a better radio, better HUD software and better targeting sensors."
+	desc = "An advertisement for a NanoTrasen Paratrooper Division. This poster features an Officer's helmet."
 	icon_state = "poster43_legit"
 
 /obj/structure/sign/poster/official/nt_storm
 	name = "NT Storm Ad"
-	desc = "An advertisement for NanoTrasen Storm. A premium infantry helmet, It contains a rebreather and full head coverage for use on harsh environments where the air isn't always safe to breathe."
+	desc = "An advertisement for a NanoTrasen Paratrooper Division. This poster features a Private's helmet."
 	icon_state = "poster44_legit"
 
 // SKYRAT EDIT: More Posters.
@@ -676,145 +676,20 @@
 	desc = "A poster of a golden star."
 	icon_state = "goldstar"
 
-/obj/structure/sign/poster/contraband/heythere
-	name = "Hey"
-	desc = "A poster with a man saying hey, who is he?"
-	icon_state = "bsposter1"
-
-/obj/structure/sign/poster/contraband/sorryhal
-	name = "Sorry"
-	desc = "A poster with a familar robot, sorry?"
-	icon_state = "bsposter2"
-
-/obj/structure/sign/poster/contraband/eyesman
-	name = "Watching"
-	desc = "A poster with someone watching, creepy."
-	icon_state = "bsposter3"
-
-/obj/structure/sign/poster/contraband/damnmeme
-	name = "Keep Calm"
-	desc = "A poster that features an outdated meme, keep calm?"
-	icon_state = "bsposter4"
-
-/obj/structure/sign/poster/contraband/ayyok
-	name = "Alien"
-	desc = "a poster that has an alien... Marvin?"
-	icon_state = "bsposter5"
-
-/obj/structure/sign/poster/contraband/triangle
-	name = "Pyramid"
-	desc = "A poster that shows a pyramid... what is it?"
-	icon_state = "bsposter6"
-
-/obj/structure/sign/poster/contraband/fallout
-	name = "Fallout"
-	desc = "A poster advertising a game. What is a vault?"
-	icon_state = "bsposter7"
-
-/obj/structure/sign/poster/contraband/mama1
-	name = "Poster Girl"
-	desc = "A poster with a beautiful lady."
-	icon_state = "bsposter8"
-
-/obj/structure/sign/poster/contraband/mama2
-	name = "Poster Girl"
-	desc = "A poster with a beautiful lady."
-	icon_state = "bsposter9"
-
 /obj/structure/sign/poster/contraband/panik
 	name = "Panic"
 	desc = "A poster that says... Don't panic?"
 	icon_state = "bsposter10"
-
-/obj/structure/sign/poster/contraband/camp
-	name = "Campfire"
-	desc = "A poster with a campfire, better be safe."
-	icon_state = "bsposter11"
 
 /obj/structure/sign/poster/contraband/lady1
 	name = "Staring"
 	desc = "A poster with an interesting woman on the front."
 	icon_state = "bsposter12"
 
-/obj/structure/sign/poster/contraband/wiz
-	name = "Wiz"
-	desc = "A poster with the words Wiz written on it."
-	icon_state = "bsposter13"
-
-/obj/structure/sign/poster/contraband/skelie
-	name = "Skeleton"
-	desc = "A poster with a skeleton on front."
-	icon_state = "bsposter14"
-
-/obj/structure/sign/poster/contraband/weirdshit
-	name = "Blue"
-	desc = "A poster with shit on it, what the hell?"
-	icon_state = "bsposter15"
-
 /obj/structure/sign/poster/contraband/sncrash
 	name = "Crash"
 	desc = "A poster that says Snow Crash."
 	icon_state = "bsposter16"
-
-/obj/structure/sign/poster/contraband/hottie
-	name = "Office"
-	desc = "A poster with a woman in office clothes."
-	icon_state = "bsposter17"
-
-/obj/structure/sign/poster/contraband/donuuuuts
-	name = "Donut"
-	desc = "A poster with a man intoxicated with donuts."
-	icon_state = "bsposter18"
-
-/obj/structure/sign/poster/contraband/thegang
-	name = "Gang"
-	desc = "A poster with three beings gathered around."
-	icon_state = "bsposter19"
-
-/obj/structure/sign/poster/contraband/home
-	name = "Home"
-	desc = "A poster with a beautiful picture of home."
-	icon_state = "bsposter20"
-
-/obj/structure/sign/poster/contraband/tempt
-	name = "Temptation"
-	desc = "A poster with someone trying to tempt."
-	icon_state = "bsposter21"
-
-/obj/structure/sign/poster/contraband/purp
-	name = "Purple Office"
-	desc = "A poster advertising the color purple."
-	icon_state = "bsposter22"
-
-/obj/structure/sign/poster/contraband/egirl
-	name = "Long Hair"
-	desc = "A poster advertising for you to get your hair cut."
-	icon_state = "bsposter23"
-
-/obj/structure/sign/poster/contraband/docta
-	name = "Doctors"
-	desc = "A poster showing that doctors care for you!"
-	icon_state = "bsposter24"
-
-/obj/structure/sign/poster/contraband/manly
-	name = "Man"
-	desc = "A poster advertising some kind of medicine. Be a bigger man!"
-	icon_state = "bsposter25"
-
-/obj/structure/sign/poster/contraband/machine
-	name = "Machines"
-	desc = "A poster telling of the rise of machines... it's over."
-	icon_state = "bsposter26"
-
-/obj/structure/sign/poster/contraband/reddy
-	name = "Red"
-	desc = "A poster advertising the color red."
-	icon_state = "bsposter27"
-
-/obj/structure/sign/poster/contraband/movie
-	name = "Movie"
-	desc = "A poster advertising a movie, but which one?"
-	icon_state = "bsposter28"
 
 /obj/structure/sign/poster/contraband/wintaaa
 	name = "Winter"
@@ -823,12 +698,12 @@
 
 /obj/structure/sign/poster/contraband/beach
 	name = "Beach"
-	desc = "A poster of a better place than here."
+	desc = "A poster of a planet better place than this rust-bucket."
 	icon_state = "vgposter1"
 
 /obj/structure/sign/poster/contraband/grilbeach
 	name = "Beach"
-	desc = "A poster of a better place than here."
+	desc = "A poster of a sexy babe on a planet better than this rust-bucket."
 	icon_state = "vgposter2"
 
 /obj/structure/sign/poster/contraband/antifurry
@@ -840,41 +715,6 @@
 	name = "Nuke"
 	desc = "A poster detailing how the nuke works... why is this here?!"
 	icon_state = "vgposter4"
-
-/obj/structure/sign/poster/contraband/smshards
-	name = "Shards"
-	desc = "A poster telling of the dangers of the Supermatter Crystal."
-	icon_state = "vgposter5"
-
-/obj/structure/sign/poster/contraband/anime1
-	name = "Skull"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter1"
-
-/obj/structure/sign/poster/contraband/anime2
-	name = "Ninja"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter2"
-
-/obj/structure/sign/poster/contraband/anime3
-	name = "Blood"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter3"
-
-/obj/structure/sign/poster/contraband/anime4
-	name = "Boom"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter4"
-
-/obj/structure/sign/poster/contraband/anime5
-	name = "River"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter5"
-
-/obj/structure/sign/poster/contraband/anime6
-	name = "Pink"
-	desc = "A poster advertising an anime."
-	icon_state = "animeposter6"
 
 /obj/structure/sign/poster/contraband/apc
 	name = "APC"
@@ -901,59 +741,14 @@
 	desc = "A poster saying No Smoking."
 	icon_state = "poster-nosmoking"
 
-/obj/structure/sign/poster/contraband/ayyyyysecond
-	name = "Ayyliens"
-	desc = "A poster with an alien on front."
-	icon_state = "poster111"
-
-/obj/structure/sign/poster/contraband/spongers
-	name = "Sponge"
-	desc = "A poster dealing with goofy goobers."
-	icon_state = "poster112"
-
 /obj/structure/sign/poster/contraband/hangers
 	name = "Catgirls"
-	desc = "A poster with a catgirl on it."
+	desc = "A poster with a catgirl on it. Gross."
 	icon_state = "poster113"
-
-/obj/structure/sign/poster/contraband/dooom
-	name = "Doom"
-	desc = "A poster of a man who has a mission."
-	icon_state = "poster114"
 
 /obj/structure/sign/poster/contraband/earthhh
 	name = "Earth"
 	desc = "A poster of our home planet... maybe?"
 	icon_state = "poster115"
-
-/obj/structure/sign/poster/contraband/bigboom
-	name = "Nuke"
-	desc = "A poster showing a mushroom cloud."
-	icon_state = "poster116"
-
-/obj/structure/sign/poster/contraband/iceland
-	name = "Iceland"
-	desc = "A poster showing a cold planet."
-	icon_state = "poster117"
-
-/obj/structure/sign/poster/contraband/pantsdown
-	name = "Pants Down"
-	desc = "A poster with a person's pants down."
-	icon_state = "poster118"
-
-/obj/structure/sign/poster/contraband/trianglesus
-	name = "Suspicious Triangle"
-	desc = "A poster with a suspicious looking triangle."
-	icon_state = "poster119"
-
-/obj/structure/sign/poster/contraband/penguin
-	name = "Penguin"
-	desc = "A poster with a penguin."
-	icon_state = "poster120"
-
-/obj/structure/sign/poster/contraband/leftvalve
-	name = "Valve"
-	desc = "A poster with a man who has a valve on the back... how detailed."
-	icon_state = "poster121"
 
 #undef PLACE_SPEED

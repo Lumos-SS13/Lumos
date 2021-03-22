@@ -103,14 +103,12 @@
 						/obj/item/clothing/suit/hooded/bee_costume = 1,
 						/obj/item/clothing/suit/snowman = 1,
 						/obj/item/clothing/head/snowman = 1,
-						/obj/item/clothing/mask/joy = 1,
 						/obj/item/clothing/head/cueball = 1,
 						/obj/item/clothing/under/suit/white_on_white = 1,
 						/obj/item/clothing/under/costume/sailor = 1,
+						/obj/item/clothing/under/custom/white_bikini = 2,
 						/obj/item/clothing/ears/headphones = 2,
-						/obj/item/clothing/head/wig/random = 3,
-						/obj/item/clothing/suit/ran = 2,
-						/obj/item/clothing/head/ran = 2)
+						/obj/item/clothing/head/wig/random = 3)
 	contraband = list(/obj/item/clothing/suit/judgerobe = 1,
 						/obj/item/clothing/head/powdered_wig = 1,
 						/obj/item/gun/magic/wand = 2,

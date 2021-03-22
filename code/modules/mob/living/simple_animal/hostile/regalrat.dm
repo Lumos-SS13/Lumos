@@ -157,7 +157,7 @@
 
 /mob/living/simple_animal/hostile/rat
 	name = "rat"
-	desc = "It's a nasty, ugly, evil, disease-ridden rodent with anger issues."
+	desc = "Rats, rats, we're the rats."
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"

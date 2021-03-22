@@ -63,13 +63,13 @@
 	ADD_TRAIT(src, TRAIT_NODROP, DROPDEL)
 /obj/item/clothing/under/color/grey
 	name = "grey jumpsuit"
-	desc = "A tasteful grey jumpsuit that reminds you of the good old days."
+	desc = "A utilitarian grey jumpsuit. A cheap hand-me-down, found practically everywhere."
 	icon_state = "grey"
 	item_state = "gy_suit"
 
 /obj/item/clothing/under/color/jumpskirt/grey
 	name = "grey jumpskirt"
-	desc = "A tasteful grey jumpskirt that reminds you of the good old days."
+	desc = "A utilitarian grey jumpsuit. A cheap hand-me-down, found practically everywhere."
 	icon_state = "grey_skirt"
 	item_state = "gy_suit"
 
