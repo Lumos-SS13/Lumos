@@ -22,7 +22,7 @@ Based and maintained from /tg/station.
 * **Wiki:** <https://citadel-station.net/wiki/index.php?title=Main_Page>
 * **Forums:** <http://citadel-station.net/forum>
 * **Ban Appeals:** <http://citadel-station.net/forum/forumdisplay.php?fid=8>
-* **Discord:**  <https://discord.gg/FdyA49SqXz>
+* **Discord:**  <https://discord.gg/pYmPBqBgcT>
   
 ## DOWNLOADING
 
