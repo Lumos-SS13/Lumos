@@ -95,31 +95,31 @@
 /obj/item/forging/construct/sword
 	name = "hot sword object"
 	icon_state = "blade"
-	desc = "A hot metal mass that resembles a sword"
+	desc = "A sharp bit of hot metal that resembles the makings of a sword."
 	finished_product = /obj/item/forging/unfinished/sword
 
 /obj/item/forging/construct/staff
 	name = "hot staff object"
 	icon_state = "staff"
-	desc = "A hot metal mass that resembles a staff"
+	desc = "A long piece of hot metal that resembles the makings of a staff."
 	finished_product = /obj/item/forging/unfinished/staff
 
 /obj/item/forging/construct/baton
 	name = "hot baton object"
 	icon_state = "telebaton"
-	desc = "A hot metal mass that resembles a baton"
+	desc = "A short piece of hot metal that resembles the makings of a baton."
 	finished_product = /obj/item/forging/unfinished/baton
 
 /obj/item/forging/construct/bokken
 	name = "hot bokken object"
 	icon_state = "bokken"
-	desc = "A hot metal mass that resembles a bokken"
+	desc = "A long piece of hot metal that resembles the makings of a bokken."
 	finished_product = /obj/item/forging/unfinished/bokken
 
 /obj/item/forging/construct/chainlink
 	name = "hot chain-link object"
 	icon_state = "hot_chain"
-	desc = "A hot metal mass that resembles a chain-link"
+	desc = "A tiny piece of hot metal that resembles the makings of a chainlink."
 	finished_product = /obj/item/forging/unfinished/chainlink
 	required_hammered = 10
 	randomized_hammer = FALSE
