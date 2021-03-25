@@ -29,7 +29,12 @@
 	var/breakout_time = 300
 
 /obj/machinery/suit_storage_unit/standard_unit
-	suit_type = /obj/item/clothing/suit/space/commando // LUMOS CHANGE: Replaces the default EVA suit with a new one
+	suit_type = /obj/item/clothing/suit/space/eva
+	helmet_type = /obj/item/clothing/head/helmet/space/eva
+	mask_type = /obj/item/clothing/mask/breath
+
+/obj/machinery/suit_storage_unit/commando
+	suit_type = /obj/item/clothing/suit/space/commando // Fajetti - Think it'd be better to just split it to a separate obj
 	helmet_type = /obj/item/clothing/head/helmet/space/commando
 	mask_type = /obj/item/clothing/mask/breath
 
