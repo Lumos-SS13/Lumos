@@ -19,7 +19,7 @@
 /mob/living/simple_animal/hostile/poison/giant_spider
 	threat = 1
 	name = "giant spider"
-	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."
+	desc = "Must. Resist. Urge. To. Beatbox."
 	icon_state = "guard"
 	icon_living = "guard"
 	icon_dead = "guard_dead"

@@ -5,6 +5,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
+	ashwalker_desc = "It appears to be an outsider's best attempt at copying our superior weapons."
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
@@ -166,8 +167,9 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "bone spear"
-	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
-	force = 11
+	desc = "A spear constructed from battered bone and dry sinew."
+	ashwalker_desc = "The revered weapon of our people, plentiful and reliable."
+	force = 16
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	reach = 2

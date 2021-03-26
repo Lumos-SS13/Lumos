@@ -1,6 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/ghost
 	name = "ghost"
 	desc = "A soul of the dead, spooky."
+	ashwalker_desc = "The dead are restless!"
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "ghost"
 	icon_living = "ghost"

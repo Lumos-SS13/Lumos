@@ -670,3 +670,15 @@
 	name ="Cydonian Knight Captain"
 	l_pocket = /obj/item/dualsaber/hypereutactic
 	id = /obj/item/card/id/knight/captain
+
+/obj/effect/mob_spawn/human/corpse/commando
+	name = "Obliterated Commando"
+	outfit = /datum/outfit/ror_commando
+
+/datum/outfit/ror_commando
+	name = "Commando"
+	uniform = /obj/item/clothing/under/color/black
+	back = /obj/item/tank/internals/oxygen/yellow
+	shoes = /obj/item/clothing/shoes/jackboots/fast
+	suit = /obj/item/clothing/suit/space/commando
+	head = /obj/item/clothing/head/helmet/space/commando

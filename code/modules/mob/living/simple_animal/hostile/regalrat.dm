@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/regalrat
 	name = "regal rat"
-	desc = "An evolved rat, created through some strange science. It leads nearby rats with deadly efficiency to protect its kingdom. Not technically a king."
+	desc = "He's the big rat who makes all the rules, now let's see what trouble he gets himself into."
 	icon_state = "regalrat"
 	icon_living = "regalrat"
 	icon_dead = "regalrat_dead"
@@ -157,7 +157,7 @@
 
 /mob/living/simple_animal/hostile/rat
 	name = "rat"
-	desc = "It's a nasty, ugly, evil, disease-ridden rodent with anger issues."
+	desc = "Rats, rats, we're the rats."
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"

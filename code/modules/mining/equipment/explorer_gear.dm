@@ -2,6 +2,7 @@
 /obj/item/clothing/suit/hooded/explorer
 	name = "explorer suit"
 	desc = "An armoured suit for exploring harsh environments."
+	ashwalker_desc = "Weak creatures need plentiful armor."
 	icon_state = "explorer"
 	item_state = "explorer"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -43,6 +44,7 @@
 /obj/item/clothing/mask/gas/explorer
 	name = "explorer gas mask"
 	desc = "A military-grade gas mask that can be connected to an air supply."
+	ashwalker_desc = "Outsiders are sickly, needing to breath sweet winds to survive."
 	icon_state = "gas_mining"
 	visor_flags = BLOCK_GAS_SMOKE_EFFECT | ALLOWINTERNALS
 	visor_flags_inv = HIDEFACIALHAIR

@@ -40,6 +40,13 @@
 				/obj/item/stack/sheet/animalhide/ashdrake = 5)
 	category = CAT_PRIMAL
 
+/datum/crafting_recipe/shamanhat
+	name = "Shaman Headdress"
+	result = /obj/item/clothing/head/helmet/shaman
+	time = 30
+	reqs = list(/obj/item/stack/sheet/bone = 4)
+	category = CAT_PRIMAL
+
 /datum/crafting_recipe/bonebag
 	name = "Bone Satchel"
 	result = /obj/item/storage/backpack/satchel/bone
@@ -110,7 +117,7 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/bow_tablet
-	name = "Sandstone Bow Making Manual"
+	name = "Bow Making Tablet"
 	result = /obj/item/book/granter/crafting_recipe/bone_bow
 	time = 200 //Scribing // don't care
 	always_availible = FALSE

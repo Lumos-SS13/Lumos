@@ -161,6 +161,7 @@ RLD
 
 /obj/item/construction/rcd
 	name = "rapid-construction-device (RCD)"
+	desc = "A Beta-Tech RCD. Expensive as hell, and the warranty is most definitely void by now."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "rcd"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'

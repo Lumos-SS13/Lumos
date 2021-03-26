@@ -171,6 +171,9 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/hide_underwear_examine = FALSE
 	//
 
+	// LUMOS
+	var/ashwalker_desc = null // desc for Ashies for flavour
+	//
 /obj/item/Initialize()
 
 	if(attack_verb)
@@ -1048,3 +1051,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		pain_stam_pct = (!isnull(embedding["pain_stam_pct"]) ? embedding["pain_stam_pct"] : EMBEDDED_PAIN_STAM_PCT)) //skyrat edit
 		//embed_chance_turf_mod = (!isnull(embedding["embed_chance_turf_mod"]) ? embedding["embed_chance_turf_mod"] : EMBED_CHANCE_TURF_MOD)) //skyrat edit
 	return TRUE
+
+// Lumos edit - Ashwalker desc
+/obj/item/examine(mob/user)
+	if((isashwalker(user) || isobserver(user)) && ashwalker_desc)
+		desc = ashwalker_desc
+	. = ..()
+	desc = initial(desc)

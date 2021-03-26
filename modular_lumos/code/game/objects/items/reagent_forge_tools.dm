@@ -1,8 +1,13 @@
 /obj/item/forging/tongs
 	name = "forging tongs"
-	desc = "A tool used to hold really hot metal."
+	desc = "Tongs for holding hot metal, and pinching hot ass."
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
-	icon_state = "tong"
+	icon_state = "tongs"
+	w_class = WEIGHT_CLASS_SMALL
+	attack_verb = list("pinched", "nipped", "clamped")
+	force = 5
+	throwforce = 6
+	resistance_flags = FIRE_PROOF | ACID_PROOF
 	//this var specifically is only for metal, the rest will be used in the contents
 	var/has_sheet_metal = FALSE
 
@@ -55,16 +60,21 @@
 		return
 
 /obj/item/forging/hammer
-	name = "forging hammer"
-	desc = "A tool used to beat really hot metal."
+	name = "blacksmithing hammer"
+	desc = "A hammer of the blacksmith variety. Hit hot metal, create heavy metal. Metal."
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
-	icon_state = "hammer"
+	icon_state = "hammer_new"
+	force = 5
+	throwforce = 6
+	w_class = WEIGHT_CLASS_SMALL
+	attack_verb = list("bashed", "battered", "hammered", "smithed")
+	resistance_flags = ACID_PROOF
 
 /obj/item/reagent_containers/glass/primitive_chem_isolator
 	name = "primitive chemical isolator"
 	desc = "A small cup that allows you to take out the chemicals you do not want. Alt + Click to take out chemicals."
 	icon = 'modular_lumos/icons/obj/forge_items.dmi'
-	icon_state = "prim_chem_iso"
+	icon_state = "crucible"
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50)
 	item_flags = NO_MAT_REDEMPTION
@@ -79,7 +89,7 @@
 		reagents.remove_reagent(choice.type, 1000)
 
 /datum/crafting_recipe/forge_hammer
-	name = "forging hammer"
+	name = "blacksmithing hammer"
 	reqs = 	list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/mineral/wood = 2)
 	result = /obj/item/forging/hammer

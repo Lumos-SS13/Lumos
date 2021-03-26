@@ -26,6 +26,7 @@ Difficulty: Hard
 /mob/living/simple_animal/hostile/megafauna/bubblegum
 	name = "bubblegum"
 	desc = "In what passes for a hierarchy among slaughter demons, this one is king."
+	ashwalker_desc = "He treads the lands as king of death. No attempts at slaying him have persisted, he is unending."
 	threat = 35
 	health = 2500
 	maxHealth = 2500
@@ -62,7 +63,7 @@ Difficulty: Hard
 /obj/item/gps/internal/bubblegum
 	icon_state = null
 	gpstag = "Bloody Signal"
-	desc = "You're not quite sure how a signal can be bloody."
+	desc = "A sharp pain, blood and vicera, calling."
 	invisibility = 100
 
 /mob/living/simple_animal/hostile/megafauna/bubblegum/BiologicalLife(seconds, times_fired)

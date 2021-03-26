@@ -1085,6 +1085,43 @@
 		. = 1
 	..()
 
+/datum/reagent/medicine/shaman_tincture // ported from Yogstation - renamed from tribalordrazine, but code is the same mostly
+	name = "shamans tincture" //tribal version of tricord. Slightly less effective than the real stuff, and doesn't heal toxins. Doesn't heal toxins since capmix should do that.
+	description = "Has a high chance to heal brute, burn, and oxygen damage. Overdose instead causes it."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+	taste_description = "gubbuck milk"
+
+/datum/reagent/medicine/shaman_tincture/on_mob_life(mob/living/carbon/M)
+	if(prob(60))
+		M.adjustBruteLoss(-1*REM, 0)
+		M.adjustFireLoss(-1*REM, 0)
+		M.adjustOxyLoss(-1*REM, 0)
+		. = 1
+	..()
+
+/datum/reagent/medicine/shaman_tincture/overdose_process(mob/living/M)
+	M.adjustOxyLoss(2*REM, 0)
+	M.adjustBruteLoss(2*REM, FALSE, FALSE, BODYPART_ORGANIC)
+	M.adjustFireLoss(2*REM, FALSE, FALSE, BODYPART_ORGANIC)
+	..()
+	. = 1
+
+/datum/reagent/medicine/tribaldetox
+	name = "Cap Mix"
+	description = "Heals toxin damage and removes toxins in the bloodstream via vomit. Can't overdose."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	taste_description = "poison"
+
+/datum/reagent/medicine/tribaldetox/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-2*REM, 0)
+	if(prob(10))
+		M.vomit(20)
+	. = 1
+
+
 /datum/reagent/medicine/insulin
 	name = "Insulin"
 	description = "Increases sugar depletion rates."

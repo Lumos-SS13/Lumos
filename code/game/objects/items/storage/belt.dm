@@ -643,6 +643,7 @@
 /obj/item/storage/belt/quiver
 	name = "leather quiver"
 	desc = "A quiver made from the hide of some animal. Used to hold arrows."
+	ashwalker_desc = "Aim true, aim strong."
 	icon_state = "quiver"
 	item_state = "quiver"
 

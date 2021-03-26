@@ -63,7 +63,8 @@
 //Watcher
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher
 	name = "watcher"
-	desc = "A levitating, eye-like creature held aloft by winglike formations of sinew. A sharp spine of crystal protrudes from its body."
+	desc = "A levitating, skull-like creature held aloft by winglike formations of sinew. A crystal lining inside their eyes focus freezing-energy bolts at their prey. A group of Watchers is called a Vigil."
+	ashwalker_desc = "Skulls of hatred borne from those who've fell into the godblood. Beware their gaze, for it is fills even the greatest warriors with cold, petrifying fear."
 	icon = 'icons/mob/lavaland/watcher.dmi'
 	icon_state = "watcher"
 	icon_living = "watcher"
@@ -124,6 +125,7 @@
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing
 	name = "magmawing watcher"
 	desc = "When raised very close to lava, some watchers adapt to the extreme heat and use lava as both a weapon and wings."
+	ashwalker_desc = "Skulls of hatred, imbued with a heart of godblood. Beware, for they are far more deadly."
 	icon_state = "watcher_magmawing"
 	icon_living = "watcher_magmawing"
 	icon_aggro = "watcher_magmawing"
@@ -140,6 +142,7 @@
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing
 	name = "icewing watcher"
 	desc = "Very rarely, some watchers will eke out an existence far from heat sources. In the absence of warmth, they become icy and fragile but fire much stronger freezing blasts."
+	ashwalker_desc = "A strange variation of the typical skull, this one appearing to lack any godblood. Perhaps we are wrong about their origin?"
 	icon_state = "watcher_icewing"
 	icon_living = "watcher_icewing"
 	icon_aggro = "watcher_icewing"

@@ -164,6 +164,7 @@
 	icon_state = "survivalknife"
 	item_state = "knife"
 	desc = "A hunting grade survival knife."
+	ashwalker_desc = "The outsider blades are a respectable imitation of our own."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
 	force = 15
 	throwforce = 15
@@ -178,7 +179,8 @@
 	icon_state = "bone_dagger"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	desc = "A sharpened bone. The bare minimum in survival."
+	desc = "A sharpened bone. Grizzly, but certainly useful."
+	ashwalker_desc = "Not all edges cut to kill, but to clean and skin."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
 	force = 15
 	throwforce = 15
@@ -189,7 +191,7 @@
 
 /obj/item/kitchen/knife/combat/bone/plastic
 	name = "plastic knife"
-	desc = "A plastic knife. Rather harmless to anything."
+	desc = "A plastic knife. Practically harmless."
 	force = 1
 	throwforce = 1
 	bayonet = FALSE

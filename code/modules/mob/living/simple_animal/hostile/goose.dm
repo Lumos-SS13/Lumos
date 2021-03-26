@@ -3,6 +3,7 @@
 /mob/living/simple_animal/hostile/retaliate/goose
 	name = "goose"
 	desc = "It's loose"
+	ashwalker_desc = "What a facinating creature."
 	icon_state = "goose" // sprites by cogwerks from goonstation, used with permission
 	icon_living = "goose"
 	icon_dead = "goose_dead"

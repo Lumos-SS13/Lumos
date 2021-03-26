@@ -165,7 +165,6 @@
 					/obj/item/storage/belt/fannypack/black = 3,
 					/obj/item/clothing/suit/jacket/letterman_syndie = 5,
 					/obj/item/clothing/under/costume/jabroni = 2,
-					/obj/item/clothing/suit/vapeshirt = 2,
 					/obj/item/clothing/under/costume/geisha = 4,
 					/obj/item/clothing/under/misc/keyholesweater = 3,
 					/obj/item/clothing/under/misc/staffassistant = 5)
