@@ -2,7 +2,7 @@
 /obj/structure/closet/body_bag
 	name = "body bag"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
+	icon = 'icons/obj/items/bodybag.dmi'
 	icon_state = "bodybag"
 	density = FALSE
 	mob_storage_capacity = 2
@@ -14,7 +14,7 @@
 	anchorable = FALSE
 	var/foldedbag_path = /obj/item/bodybag
 	var/tagged = 0 // so closet code knows to put the tag overlay back
-	door_anim_time = 0 // no animation LUMOS EDIT
+	door_anim_time = 0 // no closing animation LUMOS EDIT
 
 /obj/structure/closet/body_bag/attackby(obj/item/I, mob/user, params)
 	if (istype(I, /obj/item/pen) || istype(I, /obj/item/toy/crayon))
@@ -74,7 +74,7 @@
 /obj/structure/closet/body_bag/bluespace
 	name = "bluespace body bag"
 	desc = "A bluespace body bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
+	icon = 'icons/obj/items/bodybag.dmi'
 	icon_state = "bluebodybag"
 	foldedbag_path = /obj/item/bodybag/bluespace
 	mob_storage_capacity = 15
@@ -104,8 +104,8 @@
 
 /obj/structure/closet/body_bag/containment
 	name = "containment body bag"
-	desc = "A folded heavy body bag designed for the storage and transportation of cadavers with heavy radiation."
-	icon = 'icons/obj/bodybag.dmi'
+	desc = "A folded heavy body bag designed for the storage and transportation of cadavers with heavy radiation exposure."
+	icon = 'icons/obj/items/bodybag.dmi'
 	icon_state = "radbodybag"
 	mob_storage_capacity = 1
 	foldedbag_path = /obj/item/bodybag/containment

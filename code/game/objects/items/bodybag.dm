@@ -2,7 +2,7 @@
 /obj/item/bodybag
 	name = "body bag"
 	desc = "A folded bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
+	icon = 'icons/obj/items/bodybag.dmi'
 	icon_state = "bodybag_folded"
 	var/unfoldedbag_path = /obj/structure/closet/body_bag
 	w_class = WEIGHT_CLASS_SMALL
