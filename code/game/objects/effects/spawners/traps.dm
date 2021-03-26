@@ -1,6 +1,6 @@
 /obj/effect/spawner/trap
 	name = "random trap"
-	icon = 'icons/obj/hand_of_god_structures.dmi'
+	icon = 'icons/obj/antagonists/hand_of_god_structures.dmi'
 	icon_state = "trap_rand"
 
 /obj/effect/spawner/trap/Initialize(mapload)

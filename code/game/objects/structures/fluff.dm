@@ -132,7 +132,7 @@
 
 /obj/structure/fluff/divine
 	name = "Miracle"
-	icon = 'icons/obj/hand_of_god_structures.dmi'
+	icon = 'icons/obj/antagonists/hand_of_god_structures.dmi'
 	anchored = TRUE
 	density = TRUE
 
