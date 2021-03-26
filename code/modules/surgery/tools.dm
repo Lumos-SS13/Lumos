@@ -313,7 +313,7 @@
 /obj/item/organ_storage //allows medical cyborgs to manipulate organs without hands
 	name = "organ storage bag"
 	desc = "A container for holding body parts."
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "evidenceobj"
 	item_flags = SURGICAL_TOOL
 

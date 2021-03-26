@@ -255,7 +255,7 @@
 
 /obj/effect/spawner/lootdrop/mre
 	name = "random MRE"
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "mre"
 
 /obj/effect/spawner/lootdrop/mre/Initialize()

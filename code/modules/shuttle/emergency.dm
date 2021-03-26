@@ -614,7 +614,7 @@
 	name = "emergency space suits"
 	desc = "A wall mounted safe containing space suits. Will only open in emergencies."
 	anchored = TRUE
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "safe"
 	integrity_failure = 0.2
 	component_type = /datum/component/storage/concrete/emergency

@@ -159,7 +159,7 @@
 /obj/item/choice_beacon/box
 	name = "choice box (default)"
 	desc = "Think really hard about what you want, and then rip it open!"
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	icon_state = "deliverypackage3"
 	item_state = "deliverypackage3"
 

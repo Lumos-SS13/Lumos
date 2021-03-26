@@ -390,7 +390,7 @@
 	name = "Organ Storage"
 	desc = "A compact box that helps hold massive amounts of implants, organs, and some tools. Has a belt clip for easy carrying"
 	w_class = WEIGHT_CLASS_BULKY
-	icon = 'icons/obj/mysterybox.dmi'
+	icon = 'icons/obj/items/mysterybox.dmi'
 	icon_state = "organbox_open"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'

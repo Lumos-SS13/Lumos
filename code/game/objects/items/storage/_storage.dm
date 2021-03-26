@@ -1,7 +1,7 @@
 
 /obj/item/storage
 	name = "storage"
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/items/storage.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	var/component_type = /datum/component/storage/concrete
 

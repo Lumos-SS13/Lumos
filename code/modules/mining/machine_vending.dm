@@ -148,12 +148,12 @@
 	return ..()
 
 /obj/machinery/mineral/equipment_vendor/proc/RedeemVoucher(obj/item/mining_voucher/voucher, mob/redeemer)
-	var/items = list(	"Survival Capsule and Explorer's Webbing" = image(icon = 'icons/obj/storage.dmi', icon_state = "explorerpack"),
+	var/items = list(	"Survival Capsule and Explorer's Webbing" = image(icon = 'icons/obj/items/storage.dmi', icon_state = "explorerpack"),
 						"Resonator Kit" = image(icon = 'icons/obj/mining.dmi', icon_state = "resonator"),
 						"Minebot Kit" = image(icon = 'icons/mob/aibots.dmi', icon_state = "mining_drone"),
 						"Extraction and Rescue Kit" = image(icon = 'icons/obj/fulton.dmi', icon_state = "extraction_pack"),
 						"Crusher Kit" = image(icon = 'icons/obj/mining.dmi', icon_state = "crusher"),
-						"Mining Conscription Kit" = image(icon = 'icons/obj/storage.dmi', icon_state = "duffel"))
+						"Mining Conscription Kit" = image(icon = 'icons/obj/items/storage.dmi', icon_state = "duffel"))
 
 	var/selection = show_radial_menu(redeemer, src, items, require_near = TRUE, tooltips = TRUE)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)

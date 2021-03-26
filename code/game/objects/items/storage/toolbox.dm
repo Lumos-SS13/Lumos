@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 /obj/item/storage/toolbox/update_overlays()
 	. = ..()
 	if(has_latches)
-		var/icon/I = icon('icons/obj/storage.dmi', latches)
+		var/icon/I = icon('icons/obj/items/storage.dmi', latches)
 		. += I
 
 
@@ -347,7 +347,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/proc/generate_rubber_toolbox_icon()
 	var/icon/new_icon = icon(icon, icon_state)
-	var/icon/smooth = icon('icons/obj/storage.dmi', "rubber_toolbox_blend")
+	var/icon/smooth = icon('icons/obj/items/storage.dmi', "rubber_toolbox_blend")
 	new_icon.Blend(smooth, ICON_MULTIPLY)
 	new_icon = fcopy_rsc(new_icon)
 	GLOB.rubber_toolbox_icons[icon_state] = new_icon
