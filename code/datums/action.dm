@@ -546,7 +546,7 @@
 /datum/action/item_action/removeAPCs
 	name = "Relinquish APC"
 	desc = "Let go of an APC, relinquish control back to the station."
-	icon_icon = 'icons/obj/implants.dmi'
+	icon_icon = 'icons/effects/implants.dmi'
 	button_icon_state = "hijackx"
 
 /datum/action/item_action/removeAPCs/Trigger()
@@ -568,7 +568,7 @@
 /datum/action/item_action/accessAPCs
 	name = "Access APC Interface"
 	desc = "Open the APC's interface."
-	icon_icon = 'icons/obj/implants.dmi'
+	icon_icon = 'icons/effects/implants.dmi'
 	button_icon_state = "hijacky"
 
 /datum/action/item_action/accessAPCs/Trigger()
@@ -587,7 +587,7 @@
 /datum/action/item_action/stealthmodetoggle
 	name = "Toggle Stealth Mode"
 	desc = "Toggles the stealth mode on the hijack implant."
-	icon_icon = 'icons/obj/implants.dmi'
+	icon_icon = 'icons/effects/implants.dmi'
 	button_icon_state = "hijackz"
 
 /datum/action/item_action/stealthmodetoggle/Trigger()

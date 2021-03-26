@@ -333,7 +333,7 @@
 /obj/structure/ladder/unbreakable/rune
 	name = "\improper Teleportation Rune"
 	desc = "Could lead anywhere."
-	icon = 'icons/obj/rune.dmi'
+	icon = 'icons/effects/rune.dmi'
 	icon_state = "1"
 	color = rgb(0,0,255)
 

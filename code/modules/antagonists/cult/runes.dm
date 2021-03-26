@@ -19,7 +19,7 @@ Runes can either be invoked by one's self or with many different cultists. Each 
 	desc = "An odd collection of symbols drawn in what seems to be blood."
 	var/cultist_desc = "a basic rune with no function." //This is shown to cultists who examine the rune in order to determine its true purpose.
 	anchored = TRUE
-	icon = 'icons/obj/rune.dmi'
+	icon = 'icons/effects/rune.dmi'
 	icon_state = "1"
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	layer = SIGIL_LAYER

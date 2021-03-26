@@ -1,6 +1,6 @@
 /obj/item/implant
 	name = "implant"
-	icon = 'icons/obj/implants.dmi'
+	icon = 'icons/effects/implants.dmi'
 	icon_state = "generic" //Shows up as the action button icon
 	actions_types = list(/datum/action/item_action/hands_free/activate)
 	var/activated = TRUE //1 for implant types that can be activated, 0 for ones that are "always on" like mindshield implants
