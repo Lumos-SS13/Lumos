@@ -19,6 +19,12 @@
 	name = "The Gold Nugget"
 	description = "Not to be confused with the 21st century casino."
 
+/datum/map_template/ruin/space/lostbrig
+	id = "lostboxbrig"
+	suffix = "lostbrig_box.dmm"
+	name = "Ejected Brig"
+	description = "Sometimes to save money and time, stations will simply slice off outdated sections. This one appears to have not been properly evacuated beforehand."
+
 /datum/map_template/ruin/spacenearstation/gone_fishin
 	id = "fishinstroid"
 	suffix = "gone_fishin.dmm"
