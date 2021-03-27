@@ -185,8 +185,8 @@
 	item_state = "white_envirohelm"
 
 /obj/item/clothing/head/helmet/space/plasmaman/hop
-	name = "head of personell's plasma envirosuit helmet"
-	desc = "A finely tailored azure envirohelm designed for head of personell."
+	name = "head of personel's plasma envirosuit helmet"
+	desc = "A finely tailored azure envirohelm designed for head of personel."
 	icon_state = "hop_envirohelm"
 	item_state = "hop_envirohelm"
 
