@@ -17,7 +17,6 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65, "wound" = 1)
 
 // For Paramedics - Distinctive coloration
-
 /obj/item/clothing/suit/space/eva/paramedic
 	name = "paramedic EVA suit"
 	icon_state = "paramedic-eva"
