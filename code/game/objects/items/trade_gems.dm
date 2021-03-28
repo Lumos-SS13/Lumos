@@ -31,4 +31,8 @@
 
 /obj/item/trade_gem/emerald
 	name = "emerald gem"
-	desc = "Should be worth something in trade."
+	desc = "A big gem of emerald. Cargo could use this for trade."
+
+/obj/item/trade_gem/ruby
+	name = "ruby gem"
+	desc = "Hardy lump of corundum. Often used in electronics and lasers, so it should be worth something."
