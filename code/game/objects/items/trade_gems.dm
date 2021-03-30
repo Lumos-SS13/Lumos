@@ -20,6 +20,8 @@
 	custom_price = 200
 	icon_state = "uhoh"
 
+// Rare //
+
 /obj/item/trade_gem/obsidian
 	name = "obsidian shard"
 	desc = "A beautiful shard formed from the volcanic heart of a planet. Prized for their naturally occuring monofilament edge."
@@ -31,6 +33,8 @@
 	desc = "A valuable fragment of helixite, a durable key material in high-tension combat plating. Sadly, it's useless outside of a fat stack of credits for Cargo."
 	custom_price = 800
 	icon_state = "helixite"
+
+// Super Rare like how the hell did you find this //
 
 /obj/item/trade_gem/peridot
 	name = "peridot fragment"
