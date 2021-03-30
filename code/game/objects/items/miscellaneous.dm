@@ -104,8 +104,8 @@
 	name = "First Man on the Moon - 1960's."
 
 /obj/item/storage/box/hero/astronaut/PopulateContents()
-	new /obj/item/clothing/suit/space/nasavoid(src)
-	new /obj/item/clothing/head/helmet/space/nasavoid(src)
+	new /obj/item/clothing/suit/space/voidsuit/og_spessman(src)
+	new /obj/item/clothing/head/helmet/space/voidsuit/og_spessman(src)
 	new /obj/item/tank/internals/emergency_oxygen/double(src)
 	new /obj/item/gps(src)
 
@@ -117,6 +117,15 @@
 	new /obj/item/claymore/weak/ceremonial(src)
 	new /obj/item/toy/crayon/spraycan(src)
 	new /obj/item/clothing/shoes/sandal(src)
+
+/obj/item/storage/box/hero/commando
+	name = "Old Terra Commando - 2470's."
+
+/obj/item/storage/box/hero/scottish/PopulateContents()
+	new /obj/item/clothing/suit/space/commando(src)
+	new /obj/item/clothing/head/helmet/space/commando(src)
+	new /obj/item/instrument/guitar(src)
+	new /obj/item/tank/internals/oxygen/yellow(src)
 
 /obj/item/choice_beacon/hosgun
 	name = "personal weapon beacon"

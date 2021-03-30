@@ -76,8 +76,8 @@
 	access = ACCESS_ENGINE
 	contains = list(/obj/item/tank/internals/air,
 					/obj/item/clothing/mask/gas,
-					/obj/item/clothing/suit/space/rad,
-					/obj/item/clothing/head/helmet/space/rad)
+					/obj/item/clothing/suit/space/voidsuit/rad,
+					/obj/item/clothing/head/helmet/space/voidsuit/rad)
 	crate_name = "radiation hardsuit"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
