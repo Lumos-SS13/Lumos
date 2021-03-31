@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	ashwalker_desc = "Compress it and make sandstone."
 	icon_state = "volcanic_sand"
 	icon_state = "volcanic_sand"
-	singular_name = "volcanic ash pile"
+	singular_name = "volcanic sand pile"
 
 /obj/item/stack/ore/plasma
 	name = "plasma ore"

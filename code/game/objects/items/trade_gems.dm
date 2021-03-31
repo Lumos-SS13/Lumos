@@ -41,7 +41,7 @@
 	icon_state = "ruby"
 
 /obj/item/trade_gem/helixite
-	name = "helixite shard"
+	name = "helixite fragment"
 	desc = "A valuable fragment of helixite, a durable key material in high-tension combat plating. Sadly, it's useless outside of a fat stack of credits for Cargo."
 	icon_state = "helixite"
 

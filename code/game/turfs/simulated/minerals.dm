@@ -890,3 +890,23 @@
 
 /turf/closed/mineral/strong/ex_act(severity, target)
 	return
+
+// Trade gem turfs //
+
+/turf/closed/mineral/zircon
+	mineralType = /obj/item/trade_gem/zircon
+	spreadChance = 0
+	spread = 1
+	scan_state = "rock_Diamond"
+
+/turf/closed/mineral/quartz
+	mineralType = /obj/item/trade_gem/quartz
+	spreadChance = 0
+	spread = 1
+	scan_state = "rock_Diamond"
+
+/turf/closed/mineral/obsidian
+	mineralType = /obj/item/trade_gem/obsidian
+	spreadChance = 0
+	spread = 1
+	scan_state = "rock_Diamond"
