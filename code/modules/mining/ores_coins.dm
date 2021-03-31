@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	qdel(src)
 
 /obj/item/stack/ore/glass/basalt
-	name = "volcanic ash"
+	name = "volcanic sand"
 	desc = "It's coarse, it's rough, it gets everywhere."
 	ashwalker_desc = "Compress it and make sandstone."
 	icon_state = "volcanic_sand"
@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 
 /obj/item/stack/ore/slag
 	name = "slag"
-	desc = "Completely useless."
+	desc = "Useless byproduct of improper smelting."
 	icon_state = "slag"
 	item_state = "slag"
 	singular_name = "slag chunk"

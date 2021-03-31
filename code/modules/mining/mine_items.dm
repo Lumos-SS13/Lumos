@@ -87,9 +87,9 @@
 		return
 	. = ..()
 
-/**********************Mining car (Crate like thing, not the rail car)**************************/
+/**********************Mining wagon (Crate like thing, not the rail car)**************************/
 
 /obj/structure/closet/crate/miningcar
-	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
-	name = "Mining car (not for rails)"
+	desc = "A mining wagon, designed for lugging ore and stones. Not for rails."
+	name = "Mining wagon"
 	icon_state = "miningcar"
