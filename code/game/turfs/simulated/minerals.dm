@@ -910,3 +910,15 @@
 	spreadChance = 0
 	spread = 1
 	scan_state = "rock_Diamond"
+
+/turf/closed/mineral/obsidian
+	mineralType = /obj/item/trade_gem/obsidian
+	spreadChance = 0
+	spread = 1
+	scan_state = "rock_Diamond"
+
+/turf/closed/mineral/emerald
+	mineralType = /obj/item/trade_gem/emerald
+	spreadChance = 0
+	spread = 1
+	scan_state = "rock_Diamond"
