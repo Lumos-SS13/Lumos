@@ -104,7 +104,7 @@
 
 /obj/item/storage/bag/ore
 	name = "mining satchel"
-	desc = "This little bugger can be used to store and transport ores."
+	desc = "A durable rubberized linen bag for transporting ores."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_POCKET

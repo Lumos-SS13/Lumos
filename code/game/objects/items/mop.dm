@@ -1,5 +1,5 @@
 /obj/item/mop
-	desc = "And those that tasted the swab of his mop named him... THE COOMSLAYER."
+	desc = "The world of Janitalia would not be complete without it."
 	name = "mop"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "mop"
