@@ -158,11 +158,11 @@
 	item_state = "seva"
 	resistance_flags = FIRE_PROOF
 
-/****************Exo-Suit and Mask****************/
+/**************** PALU Exoskeleton and Mask****************/
 
 /obj/item/clothing/suit/hooded/explorer/exo
-	name = "Exo-suit"
-	desc = "A robust suit for fighting dangerous animals. Its design and material make it harder for a Goliath to keep their grip on the wearer."
+	name = "P.A.L.U. Exoskeleton"
+	desc = "A Personal Assisted Loading Unit. Meant for help with lugging heavy materials and equipment long distances."
 	icon_state = "exo"
 	item_state = "exo"
 	w_class = WEIGHT_CLASS_BULKY
@@ -172,8 +172,8 @@
 	resistance_flags = FIRE_PROOF | GOLIATH_RESISTANCE
 
 /obj/item/clothing/head/hooded/explorer/exo
-	name = "Exo-hood"
-	desc = "A robust helmet for fighting dangerous animals. Its design and material make it harder for a Goliath to keep their grip on the wearer."
+	name = "P.A.L.U. Integrated Helmet"
+	desc = "A heavy-duty helmet integrated into a P.A.L.U. to prevent head trauma."
 	icon_state = "exo"
 	item_state = "exo"
 	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
