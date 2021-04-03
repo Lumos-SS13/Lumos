@@ -38,6 +38,11 @@
 	helmet_type = /obj/item/clothing/head/helmet/space/commando
 	mask_type = /obj/item/clothing/mask/breath
 
+/obj/machinery/suit_storage_unit/voidsuit
+	suit_type = /obj/item/clothing/suit/space/voidsuit
+	helmet_type = /obj/item/clothing/head/helmet/space/voidsuit
+	mask_type = /obj/item/clothing/mask/breath
+
 /obj/machinery/suit_storage_unit/captain
 	suit_type = /obj/item/clothing/suit/space/hardsuit/captain
 	mask_type = /obj/item/clothing/mask/gas/sechailer
