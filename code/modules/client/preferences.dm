@@ -32,6 +32,12 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 		"Fatal Conflict" ='modular_skyrat/sound/music/fatal_conflict.ogg',
 		"Get Them" ='modular_skyrat/sound/music/get_them.ogg',
 		"One Eyed Dancer" ='modular_skyrat/sound/music/one_eyed_dancer.ogg',
+		"Flirt With Bomb" ='modular_skyrat/sound/music/flirt_with_bomb.ogg',
+		"Sleeping Dogs Theme" ='modular_skyrat/sound/music/sleeping_dogs.ogg',
+		"RUN THE SPIKES" ='modular_skyrat/sound/music/dg_spikes_mashup.ogg',
+		"Spikes" ='modular_skyrat/sound/music/dg_spikes.ogg',
+		"Bubbles Buried in This Jungle" ='modular_skyrat/sound/music/dg_bubbles.ogg',
+		"Two Trucks" ='modular_skyrat/sound/music/twotrucks.ogg'
 	))
 
 /datum/preferences
