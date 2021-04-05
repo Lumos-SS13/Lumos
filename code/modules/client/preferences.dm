@@ -26,6 +26,12 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 		"Hot Plates" = 'modular_skyrat/sound/music/hot_plates.ogg',
 		"Thunderdome" = 'modular_skyrat/sound/music/thunderdome.ogg',
 		"Death Squad" ='modular_skyrat/sound/music/deathsquads.ogg',
+		"Robocop Gameboy Theme" ='modular_skyrat/sound/music/robocop_theme.ogg',
+		"Brawlin" ='modular_skyrat/sound/music/brawlin.ogg',
+		"War Season" ='modular_skyrat/sound/music/war_season.ogg',
+		"Fatal Conflict" ='modular_skyrat/sound/music/fatal_conflict.ogg',
+		"Get Them" ='modular_skyrat/sound/music/get_them.ogg',
+		"One Eyed Dancer" ='modular_skyrat/sound/music/one_eyed_dancer.ogg',
 	))
 
 /datum/preferences
