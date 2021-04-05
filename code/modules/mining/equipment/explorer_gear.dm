@@ -168,16 +168,16 @@
 	w_class = WEIGHT_CLASS_BULKY
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	hoodtype = /obj/item/clothing/head/hooded/explorer/exo
-	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
-	resistance_flags = FIRE_PROOF | GOLIATH_RESISTANCE
+	armor = list("melee" = 15, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 15, "wound" = 15)
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS // Formerly GOLIATH_RESISTANCE, but this is more for non-combatifying mining
 
 /obj/item/clothing/head/hooded/explorer/exo
 	name = "P.A.L.U. Integrated Helmet"
-	desc = "A heavy-duty helmet integrated into a P.A.L.U. to prevent head trauma."
+	desc = "A heavy-duty helmet integrated into a P.A.L.U. to prevent head trauma of users."
 	icon_state = "exo"
 	item_state = "exo"
 	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
-	resistance_flags = FIRE_PROOF | GOLIATH_RESISTANCE
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
 /obj/item/clothing/mask/gas/exo
 	name = "Exosuit Mask"
