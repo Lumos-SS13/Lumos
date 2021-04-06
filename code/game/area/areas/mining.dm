@@ -97,7 +97,7 @@
 	power_equip = FALSE
 	power_light = FALSE
 	requires_power = TRUE
-	ambientsounds = MINING
+	ambientsounds = LAVALAND
 
 /area/lavaland/underground
 	name = "Lavaland Caves"
@@ -149,7 +149,7 @@
 	power_equip = FALSE
 	power_light = FALSE
 	requires_power = TRUE
-	ambientsounds = MINING
+	ambientsounds = ICEMOON
 
 /area/icemoon/underground
 	name = "Icemoon Caves"

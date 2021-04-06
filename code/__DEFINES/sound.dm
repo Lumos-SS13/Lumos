@@ -42,7 +42,7 @@
 										'sound/ambience/ambicha4.ogg', 'sound/ambience/ambiholy.ogg', 'sound/ambience/ambiholy2.ogg',\
 										'sound/ambience/ambiholy3.ogg')
 
-#define HIGHSEC list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg')
+#define HIGHSEC list('sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambi_borged.ogg')
 
 #define RUINS list('sound/ambience/ambimine.ogg', 'sound/ambience/ambicave.ogg', 'sound/ambience/ambiruin.ogg',\
 									'sound/ambience/ambiruin2.ogg',  'sound/ambience/ambiruin3.ogg',  'sound/ambience/ambiruin4.ogg',\
@@ -55,34 +55,40 @@
 
 #define MINING list('sound/ambience/ambimine.ogg', 'sound/ambience/ambicave.ogg', 'sound/ambience/ambiruin.ogg',\
 											'sound/ambience/ambiruin2.ogg',  'sound/ambience/ambiruin3.ogg',  'sound/ambience/ambiruin4.ogg',\
-											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg',  'sound/ambience/ambiruin7.ogg',\
-											'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint1.ogg',\
-											 'sound/ambience/ambilava.ogg', 'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
+											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg',  'sound/ambience/ambimaint7.ogg',\
+											'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambi_spoop.ogg',\
+											'sound/ambience/ambilava.ogg', 'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
 
 #define ASTEROID list('sound/ambience/ambiruin2.ogg', 'sound/ambience/ambiruin3.ogg', 'sound/ambience/ambiruin4.ogg',\
-											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg',  'sound/ambience/ambiruin7.ogg',\
-											'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint1.ogg',\
-											 'sound/ambience/ambilava.ogg', 'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
+											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg', 'sound/ambience/ambi_choir.ogg',\
+											'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambi_hellnoise1.ogg', 'sound/ambience/ambilava.ogg',\
+											'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg', 'sound/ambience/ambi_creeper.ogg')
 
-#define LAVALAND list('sound/ambience/ambicave.ogg', 'sound/ambience/ambiruin.ogg',\
-											'sound/ambience/ambiruin2.ogg',  'sound/ambience/ambiruin3.ogg',  'sound/ambience/ambiruin4.ogg',\
-											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg',  'sound/ambience/ambiruin7.ogg',\
-											'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint1.ogg',\
-											 'sound/ambience/ambilava.ogg', 'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
+#define LAVALAND list('sound/ambience/ambicave.ogg', 'sound/ambience/ambiruin.ogg', 'sound/ambience/ambilava.ogg',\
+											'sound/ambience/ambiruin2.ogg',  'sound/ambience/ambiruin3.ogg',  'sound/ambience/ambi_rumble2.ogg',\
+											'sound/ambience/ambiruin5.ogg',  'sound/ambience/ambiruin6.ogg',  'sound/ambience/ambimaint7.ogg',\
+											'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambi_rumble1.ogg',\
+											'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
 
-#define ICEMOON list('sound/ambience/ambimo2.ogg', 'sound/ambience/ambicave.ogg', 'sound/ambience/ambidorf1.ogg', 'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg')
+#define ICEMOON list('sound/ambience/ambimo2.ogg', 'sound/ambience/ambicave.ogg', 'sound/ambience/ambidorf1.ogg',\
+											'sound/ambience/ambidorf2.ogg', 'sound/ambience/ambidorf3.ogg', 'sound/ambience/ambi_ice1.ogg',\
+											'sound/ambience/ambi_ice2.ogg', 'sound/ambience/ambi_ice3.ogg', 'sound/ambience/ambi_ice4.ogg',\
+											'sound/ambience/ambi_ice5.ogg', 'sound/ambience/ambi_ice6.ogg', 'sound/ambience/ambi_winds.ogg', 'sound/ambience/ambiruin6.ogg')
 
-#define DESERT list('sound/ambience/ambireebe1.ogg', 'sound/ambience/ambireebe2.ogg', 'sound/ambience/ambireebe3.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambicha2.ogg')
+#define DESERT list('sound/ambience/ambireebe1.ogg', 'sound/ambience/ambireebe2.ogg', 'sound/ambience/ambireebe3.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambicha2.ogg') // placeholders for later
+
+#define JUNGLE list('sound/ambience/ambi_thunder1.ogg', 'sound/ambience/ambi_thunder2.ogg')
 
 #define MEDICAL list('sound/ambience/ambinice.ogg', 'sound/ambience/ambiodd.ogg')
 
-#define SPOOKY list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/ambience/ambiruin7.ogg','sound/ambience/ambiruin6.ogg',\
-										'sound/ambience/ambiodd.ogg', 'sound/ambience/ambimystery.ogg')
+#define SPOOKY list('sound/ambience/ambimo1.ogg','sound/ambience/ambimo2.ogg','sound/ambience/ambiruin7.ogg',\
+										'sound/ambience/ambiruin6.ogg', 'sound/ambience/ambiodd.ogg', 'sound/ambience/ambimystery.ogg')
 
-#define SPACE list('sound/ambience/ambispace.ogg', 'sound/ambience/ambispace2.ogg', 'sound/ambience/title2.ogg',  'sound/ambience/ambiatmos.ogg',  'sound/ambience/signal.ogg')
+#define SPACE list('sound/ambience/ambispace.ogg', 'sound/ambience/ambispace2.ogg', 'sound/ambience/title2.ogg',  'sound/ambience/ambiatmos.ogg',  'sound/ambience/signal.ogg', 'sound/ambience/ambi_trans6.ogg')
 
-#define MAINTENANCE list('sound/ambience/ambimaint1.ogg', 'sound/ambience/ambimaint2.ogg', 'sound/ambience/ambimaint3.ogg', 'sound/ambience/ambimaint4.ogg',\
-											'sound/ambience/ambimaint5.ogg', 'sound/voice/lowHiss2.ogg', 'sound/voice/lowHiss3.ogg', 'sound/voice/lowHiss4.ogg', 'sound/ambience/ambitech2.ogg' )
+#define MAINTENANCE list('sound/ambience/ambimaint1.ogg', 'sound/ambience/ambimaint2.ogg', 'sound/ambience/ambimaint3.ogg',\
+											'sound/ambience/ambimaint4.ogg', 'sound/ambience/ambimaint5.ogg', 'sound/voice/lowHiss2.ogg',\
+											'sound/voice/lowHiss3.ogg', 'sound/voice/lowHiss4.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambi_slaves.ogg')
 
 #define AWAY_MISSION list('sound/ambience/ambitech.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambiruin.ogg',\
 									'sound/ambience/ambiruin2.ogg',  'sound/ambience/ambiruin3.ogg',  'sound/ambience/ambiruin4.ogg',\
@@ -90,7 +96,7 @@
 									'sound/ambience/ambidanger.ogg', 'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint.ogg',\
 									'sound/ambience/ambiatmos.ogg', 'sound/ambience/ambiatmos2.ogg', 'sound/ambience/ambiodd.ogg')
 
-#define REEBE list('sound/ambience/ambireebe1.ogg', 'sound/ambience/ambireebe2.ogg', 'sound/ambience/ambireebe3.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambicha2.ogg')
+#define REEBE list('sound/ambience/ambireebe1.ogg', 'sound/ambience/ambireebe2.ogg', 'sound/ambience/ambireebe3.ogg', 'sound/ambience/ambireebe4.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambicha2.ogg')
 
 #define CREEPY_SOUNDS list('sound/effects/ghost.ogg', 'sound/effects/ghost2.ogg', 'sound/effects/heart_beat.ogg', 'sound/effects/screech.ogg',\
 	'sound/hallucinations/behind_you1.ogg', 'sound/hallucinations/behind_you2.ogg', 'sound/hallucinations/far_noise.ogg', 'sound/hallucinations/growl1.ogg', 'sound/hallucinations/growl2.ogg',\

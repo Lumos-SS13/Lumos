@@ -5,6 +5,7 @@
 	has_gravity = STANDARD_GRAVITY
 	flags_1 = NONE
 	flora_allowed = FALSE
+	ambientsounds = ASTEROID
 
 /area/mining_asteroid/no_caves
 	name = "Asteroid"
@@ -16,7 +17,6 @@
 	power_equip = FALSE
 	power_light = FALSE
 	requires_power = TRUE
-	ambientsounds = MINING
 
 /area/mining_asteroid/caves
 	name = "Asteroid Caves"
@@ -28,7 +28,6 @@
 	power_environ = FALSE
 	power_equip = FALSE
 	power_light = FALSE
-	ambientsounds = MINING
 
 /area/mining_asteroid/caves/unexplored //monsters and ruins spawn here
 	icon_state = "unexplored"
