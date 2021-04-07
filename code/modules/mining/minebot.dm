@@ -24,8 +24,8 @@
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	check_friendly_fire = TRUE
 	stop_automated_movement_when_pulled = TRUE
-	attack_verb_continuous = "drills"
-	attack_verb_simple = "drill"
+	attack_verb_continuous = "claws"
+	attack_verb_simple = "claw"
 	attack_sound = 'sound/weapons/circsawhit.ogg'
 	sentience_type = SENTIENCE_MINEBOT
 	speak_emote = list("states")
@@ -265,9 +265,9 @@
 //Melee
 
 /obj/item/mine_bot_upgrade
-	name = "minebot melee upgrade"
-	desc = "A minebot upgrade."
-	icon_state = "door_electronics"
+	name = "minebot melee attack upgrade"
+	desc = "An upgrade for a minebot. Increases damage for their titanium claw."
+	icon_state = "beaker_holder"
 	icon = 'icons/obj/module.dmi'
 
 /obj/item/mine_bot_upgrade/afterattack(mob/living/simple_animal/hostile/mining_drone/M, mob/user, proximity)

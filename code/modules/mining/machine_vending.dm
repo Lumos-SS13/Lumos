@@ -221,7 +221,7 @@
 
 /obj/item/suit_voucher
 	name = "suit voucher"
-	desc = "A token to redeem a new suit. Use it on a mining equipment vendor."
+	desc = "A token to redeem a new mining suit. Use it on a mining equipment vendor."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "mining_voucher"
 	w_class = WEIGHT_CLASS_TINY
@@ -326,20 +326,20 @@
 	new /obj/item/clothing/glasses/meson/prescription(src)
 
 /obj/machinery/mineral/equipment_vendor/proc/RedeemSVoucher(obj/item/suit_voucher/voucher, mob/redeemer)
-	var/items = list(	"Exo-suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "exo"),
-						"SEVA suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "seva"))
+	var/items = list(	"PALU Exoskeleton" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "exo"),
+						"HEAP suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "bombsuit"))
 
 	var/selection = show_radial_menu(redeemer, src, items, require_near = TRUE, tooltips = TRUE)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
 		return
 	var/drop_location = drop_location()
 	switch(selection)
-		if("Exo-suit")
+		if("PALU Exoskeleton")
 			new /obj/item/clothing/suit/hooded/explorer/exo(drop_location)
-			new /obj/item/clothing/mask/gas/exo(drop_location)
-		if("SEVA suit")
-			new /obj/item/clothing/suit/hooded/explorer/seva(drop_location)
-			new /obj/item/clothing/mask/gas/seva(drop_location)
+			new /obj/item/clothing/mask/gas/explorer(drop_location)
+		if("HEAP suit")
+			new /obj/item/clothing/suit/hooded/heapsuit(drop_location)
+			new /obj/item/clothing/mask/gas/explorer(drop_location)
 
 	SSblackbox.record_feedback("tally", "suit_voucher_redeemed", 1, selection)
 	qdel(voucher)

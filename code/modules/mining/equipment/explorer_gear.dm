@@ -118,13 +118,6 @@
 	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
 	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
-/obj/item/clothing/mask/gas/exo
-	name = "Exosuit Mask"
-	desc = "A face-covering mask that can be connected to an air supply. Intended for use with the Exosuit."
-	icon_state = "exo"
-	item_state = "exo"
-	resistance_flags = FIRE_PROOF
-
 // H.E.A.P. Suit - For pure AoE miners. //
 
 /obj/item/clothing/suit/hooded/heapsuit
