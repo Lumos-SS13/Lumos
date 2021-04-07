@@ -1106,6 +1106,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/science/robotics
 	name = "Robotics"
 	icon_state = "medresearch"
+	ambientsounds = list('sound/ambience/ambitech.ogg', 'sound/ambience/ambitech2.ogg', 'sound/ambience/ambi_radio1.ogg')
 
 /area/science/robotics/mechbay
 	name = "Mech Bay"
