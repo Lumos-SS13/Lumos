@@ -77,6 +77,11 @@
 	suit_type = /obj/item/clothing/suit/hooded/explorer/standard
 	mask_type = /obj/item/clothing/mask/gas/explorer
 
+/obj/machinery/suit_storage_unit/campsuit
+	suit_type = /obj/item/clothing/suit/hooded/explorer/campsuit
+	mask_type = /obj/item/clothing/mask/gas/campsuit
+	storage_type = /obj/item/tank/internals/oxygen
+
 /obj/machinery/suit_storage_unit/old_voidsuit
 	suit_type = /obj/item/clothing/head/helmet/space/voidsuit/nasa
 	helmet_type = /obj/item/clothing/suit/space/voidsuit/nasa
