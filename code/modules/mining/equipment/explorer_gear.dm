@@ -1,7 +1,9 @@
-/****************Explorer's Suit and Mask****************/
+
+// Explorer suit - Your basic mining suit //
+
 /obj/item/clothing/suit/hooded/explorer
 	name = "explorer suit"
-	desc = "An armoured suit for exploring harsh environments."
+	desc = "A standard issue armored exploration suit. Used primarily by light-equipment miners."
 	ashwalker_desc = "Weak creatures need plentiful armor."
 	icon_state = "explorer"
 	item_state = "explorer"
@@ -19,7 +21,7 @@
 
 /obj/item/clothing/head/hooded/explorer
 	name = "explorer hood"
-	desc = "An armoured hood for exploring harsh environments."
+	desc = "The attached hood of the explorer suit. Integrated hardhat, but sadly no headlamp."
 	icon_state = "explorer"
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
@@ -43,7 +45,7 @@
 
 /obj/item/clothing/mask/gas/explorer
 	name = "explorer gas mask"
-	desc = "A military-grade gas mask that can be connected to an air supply."
+	desc = "Standard issue gasmask for mining personnel. Provides modest facial trauma protection."
 	ashwalker_desc = "Outsiders are sickly, needing to breath sweet winds to survive."
 	icon_state = "gas_mining"
 	visor_flags = BLOCK_GAS_SMOKE_EFFECT | ALLOWINTERNALS
@@ -63,6 +65,109 @@
 /obj/item/clothing/mask/gas/explorer/folded/Initialize()
 	. = ..()
 	adjustmask()
+
+// C.A.M.P. Suit - Civilian mining suit for prospective prospectors. //
+
+/obj/item/clothing/suit/hooded/explorer/campsuit
+	name = "C.A.M.P. Suit"
+	desc = "The Civilian Assisting Mining Personnel Suit is designed to provide bare minimum life support and protection for non-qualified mining personnel."
+	icon_state = "seva"
+	item_state = "seva"
+	w_class = WEIGHT_CLASS_BULKY
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	hoodtype = /obj/item/clothing/head/hooded/explorer/campsuit
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 15, "bio" = 50, "rad" = 25, "fire" = 20, "acid" = 25, "wound" = 5) //skyrat edit
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/hooded/explorer/campsuit
+	name = "C.A.M.P. Hood"
+	desc = "A lightweight hood, giving minor physical protection and minimum life support."
+	icon_state = "seva"
+	item_state = "seva"
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 15, "bio" = 50, "rad" = 25, "fire" = 20, "acid" = 25, "wound" = 5) //skyrat edit
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/mask/gas/campsuit
+	name = "C.A.M.P. Mask"
+	desc = "A basic rubber gasmask faceplate, designed for use with the C.A.M.P. Suit."
+	icon_state = "seva"
+	item_state = "seva"
+	resistance_flags = FIRE_PROOF
+
+// P.A.L.U. Exoskeleton - For the construction miners to lug materials and resources around more //
+
+/obj/item/clothing/suit/hooded/explorer/exo
+	name = "P.A.L.U. Exoskeleton"
+	desc = "A Personal Assisted Loading Unit. Meant for help with lugging heavy materials and equipment long distances."
+	icon_state = "exo"
+	item_state = "exo"
+	slowdown = 1
+	w_class = WEIGHT_CLASS_BULKY
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	hoodtype = /obj/item/clothing/head/hooded/explorer/exo
+	armor = list("melee" = 15, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 15, "wound" = 15)
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS // Formerly GOLIATH_RESISTANCE, but this is more for non-combatifying mining
+
+/obj/item/clothing/head/hooded/explorer/exo
+	name = "P.A.L.U. Integrated Helmet"
+	desc = "A heavy-duty helmet integrated into a P.A.L.U. to prevent head trauma of users."
+	icon_state = "exo"
+	item_state = "exo"
+	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
+
+/obj/item/clothing/mask/gas/exo
+	name = "Exosuit Mask"
+	desc = "A face-covering mask that can be connected to an air supply. Intended for use with the Exosuit."
+	icon_state = "exo"
+	item_state = "exo"
+	resistance_flags = FIRE_PROOF
+
+// H.E.A.P. Suit - For pure AoE miners. //
+
+/obj/item/clothing/suit/hooded/heapsuit
+	name = "H.E.A.P. Suit"
+	desc = "Heavy Explosive Application Personnel Suit. A padded suit designed to protect mining personnel when using detonation charges."
+	icon_state = "bombsuit"
+	item_state = "bombsuit"
+	w_class = WEIGHT_CLASS_BULKY
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	clothing_flags = THICKMATERIAL
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	slowdown = 2
+	armor = list("melee" = 20, "bullet" = 0, "laser" = 20,"energy" = 10, "bomb" = 90, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 50, "wound" = 5)
+	hoodtype = /obj/item/clothing/head/hooded/heapsuit
+	flags_inv = HIDEJUMPSUIT|HIDETAUR
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
+	strip_delay = 70
+	equip_delay_other = 70
+	resistance_flags = NONE
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
+
+/obj/item/clothing/head/hooded/heapsuit
+	name = "H.E.A.P. Helmet"
+	desc = "The integrated helmet for a H.E.A.P. suit. Warranty void if exposed to a 'rapid increase in volume and release of energy in an extreme manner'."
+	icon_state = "bombsuit"
+	clothing_flags = THICKMATERIAL
+	armor = list("melee" = 20, "bullet" = 0, "laser" = 20,"energy" = 10, "bomb" = 100, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 50, "wound" = 5)
+	flags_inv = HIDEFACE|HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = NONE
+	mutantrace_variation = STYLE_MUZZLE
+
+// H.E.C.K. Suit - Dropped by bubblegum for *those* miners. //
 
 /obj/item/clothing/suit/space/hostile_environment
 	name = "H.E.C.K. suit"
@@ -124,64 +229,3 @@
 		var/mutable_appearance/M = mutable_appearance('icons/mob/clothing/head.dmi', "hostile_env_glass")
 		M.appearance_flags = RESET_COLOR
 		. += M
-
-
-// CITADEL ADDITIONS BELOW
-
-/****************SEVA Suit and Mask****************/
-
-/obj/item/clothing/suit/hooded/explorer/seva
-	name = "SEVA Suit"
-	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
-	icon_state = "seva"
-	item_state = "seva"
-	w_class = WEIGHT_CLASS_BULKY
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/head/hooded/explorer/seva
-	armor = list("melee" = 15, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 35, "bio" = 50, "rad" = 25, "fire" = 100, "acid" = 25, "wound" = 5) //skyrat edit
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
-
-/obj/item/clothing/head/hooded/explorer/seva
-	name = "SEVA Hood"
-	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
-	icon_state = "seva"
-	item_state = "seva"
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 35, "bio" = 50, "rad" = 25, "fire" = 100, "acid" = 25, "wound" = 5) //skyrat edit
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
-
-/obj/item/clothing/mask/gas/seva
-	name = "SEVA Mask"
-	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
-	icon_state = "seva"
-	item_state = "seva"
-	resistance_flags = FIRE_PROOF
-
-/**************** PALU Exoskeleton and Mask****************/
-
-/obj/item/clothing/suit/hooded/explorer/exo
-	name = "P.A.L.U. Exoskeleton"
-	desc = "A Personal Assisted Loading Unit. Meant for help with lugging heavy materials and equipment long distances."
-	icon_state = "exo"
-	item_state = "exo"
-	w_class = WEIGHT_CLASS_BULKY
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	hoodtype = /obj/item/clothing/head/hooded/explorer/exo
-	armor = list("melee" = 15, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 15, "wound" = 15)
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS // Formerly GOLIATH_RESISTANCE, but this is more for non-combatifying mining
-
-/obj/item/clothing/head/hooded/explorer/exo
-	name = "P.A.L.U. Integrated Helmet"
-	desc = "A heavy-duty helmet integrated into a P.A.L.U. to prevent head trauma of users."
-	icon_state = "exo"
-	item_state = "exo"
-	armor = list("melee" = 55, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 40, "bio" = 25, "rad" = 10, "fire" = 0, "acid" = 0, "wound" = 13) //skyrat edit
-	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
-
-/obj/item/clothing/mask/gas/exo
-	name = "Exosuit Mask"
-	desc = "A face-covering mask that can be connected to an air supply. Intended for use with the Exosuit."
-	icon_state = "exo"
-	item_state = "exo"
-	resistance_flags = FIRE_PROOF
