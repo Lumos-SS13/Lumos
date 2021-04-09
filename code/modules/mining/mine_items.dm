@@ -98,7 +98,7 @@
 
 /obj/item/stack/flag
 	name = "flags"
-	desc = "Some colourful flags."
+	desc = "Small flags, commonly used for basic landmark tracking in lieu of GPS."
 	singular_name = "flag"
 	amount = 10
 	max_amount = 10
@@ -149,8 +149,8 @@
 
 	var/obj/item/stack/flag/F = locate() in get_turf(src)
 
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T,/turf/simulated/mineral))
+	var/turf/T = get_turf(src) // Turf you can't and/or shouldn't be putting flags on
+	if(!T || !istype(T,/turf/open/water)) && (!istype(T,/turf/open/chasm)) && (!istype(T,/turf/open/space)) && (!istype(T,/turf/open/openspace)) && (!istype(T,/turf/open/lava)))
 		to_chat(user, "The flag won't stand up in this terrain.")
 		return
 
