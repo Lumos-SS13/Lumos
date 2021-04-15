@@ -150,7 +150,7 @@
 	var/obj/item/stack/flag/F = locate() in get_turf(src)
 
 	var/turf/T = get_turf(src) // Turf you can't and/or shouldn't be putting flags on
-	if(!T || !istype(T,/turf/open/water)) && (!istype(T,/turf/open/chasm)) && (!istype(T,/turf/open/space)) && (!istype(T,/turf/open/openspace)) && (!istype(T,/turf/open/lava)))
+	if(!T || !istype(T,/turf/open/water) && (!istype(T,/turf/open/chasm)) && (!istype(T,/turf/open/space)) && (!istype(T,/turf/open/openspace)) && (!istype(T,/turf/open/lava)))
 		to_chat(user, "The flag won't stand up in this terrain.")
 		return
 
