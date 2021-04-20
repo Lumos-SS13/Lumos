@@ -34,10 +34,6 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
 	},
@@ -145,6 +141,7 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "cp" = (
+/obj/structure/reagent_dispensers/keg/mead,
 /turf/open/floor/wood{
 	icon_state = "wood-broken6"
 	},
@@ -223,8 +220,11 @@
 /area/icemoon/underground/unexplored/rivers)
 "ex" = (
 /obj/effect/turf_decal/lumos/tile/bar/checker,
-/obj/effect/landmark/start/shaft_miner,
-/obj/structure/chair,
+/obj/structure/table,
+/obj/item/storage/box/donkpockets{
+	pixel_x = 5;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "eS" = (
@@ -433,6 +433,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
 	},
+/obj/effect/turf_decal/lumos/tile/purple/half{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "lg" = (
@@ -476,14 +479,9 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "lQ" = (
-/obj/effect/turf_decal/lumos/tile/bar/checker,
-/obj/structure/table,
-/obj/item/storage/box/donkpockets{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/obj/structure/rack,
+/turf/open/floor/wood,
+/area/maintenance/starboard/fore)
 "mh" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply,
 /obj/structure/cable{
@@ -496,11 +494,8 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "mi" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
 /obj/effect/turf_decal/lumos/tile/bar/checker,
+/obj/structure/closet/secure_closet/freezer/kitchen/mining,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "mn" = (
@@ -515,9 +510,6 @@
 /obj/structure/table,
 /obj/machinery/microwave{
 	pixel_y = 6
-	},
-/obj/machinery/airalarm{
-	pixel_y = 24
 	},
 /obj/effect/turf_decal/lumos/tile/bar/checker,
 /turf/open/floor/plasteel,
@@ -536,8 +528,10 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "mT" = (
-/obj/effect/turf_decal/lumos/tile/bar/checker,
-/obj/structure/closet/secure_closet/freezer/kitchen/mining,
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "mU" = (
@@ -551,11 +545,10 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "ni" = (
-/obj/effect/turf_decal/lumos/tile/bar/checker,
-/obj/structure/chair{
-	dir = 8
+/obj/structure/table,
+/obj/item/godfig/dwarf{
+	pixel_y = 7
 	},
-/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "nj" = (
@@ -565,6 +558,9 @@
 	},
 /obj/machinery/airalarm{
 	pixel_y = 24
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -599,7 +595,11 @@
 /area/mine/living_quarters)
 "oc" = (
 /obj/effect/turf_decal/lumos/tile/bar/checker,
-/obj/structure/table,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "oe" = (
@@ -632,17 +632,13 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "pq" = (
-/obj/structure/table,
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 1
 	},
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "pu" = (
@@ -711,11 +707,11 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "qY" = (
-/obj/structure/tank_dispenser/oxygen,
 /obj/effect/turf_decal/trimline/purple/filled/corner,
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 4
 	},
+/obj/machinery/suit_storage_unit/mining,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "rc" = (
@@ -734,7 +730,7 @@
 	pixel_y = 32
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
@@ -755,9 +751,8 @@
 /turf/closed/mineral/random/snow,
 /area/mine/living_quarters)
 "tb" = (
-/obj/structure/table,
-/obj/item/godfig/dwarf{
-	pixel_y = 7
+/obj/structure/chair{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -775,6 +770,9 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/security/execution/education)
 "ts" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "tu" = (
@@ -839,7 +837,7 @@
 /area/icemoon/surface/outdoors)
 "tK" = (
 /obj/structure/chair{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -911,7 +909,9 @@
 /area/mine/production)
 "uP" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate,
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
 /turf/open/floor/plasteel,
 /area/mine/production)
 "uS" = (
@@ -954,7 +954,6 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "vb" = (
-/obj/machinery/suit_storage_unit/mining,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
@@ -983,11 +982,12 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "wg" = (
-/obj/structure/reagent_dispensers/keg/mead,
-/turf/open/floor/wood{
-	icon_state = "wood-broken7"
+/obj/structure/chair{
+	dir = 8
 	},
-/area/maintenance/starboard/fore)
+/obj/effect/landmark/start/shaft_miner,
+/turf/open/floor/plasteel,
+/area/mine/living_quarters)
 "wt" = (
 /obj/structure/table,
 /obj/machinery/light,
@@ -1027,9 +1027,12 @@
 /turf/open/floor/mech_bay_recharge_floor,
 /area/mine/production)
 "xq" = (
-/obj/structure/ore_box,
-/turf/open/floor/plasteel,
-/area/mine/production)
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/mine/living_quarters)
 "xv" = (
 /obj/structure/closet/wardrobe/miner,
 /turf/open/floor/plasteel,
@@ -1112,10 +1115,10 @@
 /turf/open/floor/plating,
 /area/mine/production)
 "zM" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/structure/cable{
-	icon_state = "2-8"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
 	},
+/obj/machinery/meter,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "zR" = (
@@ -1174,6 +1177,9 @@
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "Cb" = (
@@ -1187,6 +1193,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/table,
 /turf/open/floor/carpet,
 /area/mine/living_quarters)
 "CC" = (
@@ -1280,6 +1287,9 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/structure/chair{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "DX" = (
@@ -1300,13 +1310,7 @@
 /turf/open/floor/carpet,
 /area/mine/living_quarters)
 "Ek" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
-/obj/machinery/meter,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/machinery/atmospherics/components/binary/pump/on,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "Es" = (
@@ -1334,7 +1338,7 @@
 /area/mine/living_quarters)
 "EI" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 1
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
@@ -1358,11 +1362,7 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "FI" = (
-/obj/machinery/atmospherics/components/binary/pump/on,
-/obj/structure/cable,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "FT" = (
@@ -1375,11 +1375,10 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "Gh" = (
-/obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate,
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},
+/obj/machinery/mineral/mint,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "Gj" = (
@@ -1388,9 +1387,11 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "Gk" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -1494,12 +1495,7 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/security/execution/education)
 "Io" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "Iq" = (
@@ -1508,6 +1504,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 28
 	},
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "It" = (
@@ -1527,9 +1524,6 @@
 	req_access_txt = "48"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "IN" = (
@@ -1613,23 +1607,9 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "JZ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "Mining Station Port Wing APC";
-	pixel_x = 1;
-	pixel_y = 23
-	},
+/obj/effect/turf_decal/loading_area,
 /turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/area/mine/production)
 "Ke" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1683,6 +1663,9 @@
 "KQ" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -1776,9 +1759,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "My" = (
@@ -1843,6 +1823,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
+/obj/machinery/suit_storage_unit/mining,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "OJ" = (
@@ -1850,7 +1831,11 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "OK" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8;
+	name = "Connector Port (Air Supply)"
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "ON" = (
@@ -1862,9 +1847,6 @@
 "Pp" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 1
-	},
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
@@ -1938,10 +1920,6 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/security/execution/education)
-"Rs" = (
-/obj/machinery/mineral/mint,
-/turf/open/floor/plasteel,
-/area/mine/production)
 "RB" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2022,9 +2000,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
@@ -2334,9 +2309,7 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "XJ" = (
-/obj/effect/turf_decal/loading_area{
-	dir = 1
-	},
+/obj/structure/ore_box,
 /turf/open/floor/plasteel,
 /area/mine/production)
 "XM" = (
@@ -52552,7 +52525,7 @@ uh
 xH
 dA
 cp
-lg
+lQ
 xH
 xI
 hl
@@ -52809,7 +52782,7 @@ xH
 xH
 fm
 lg
-lg
+lQ
 xH
 xI
 xI
@@ -53064,7 +53037,7 @@ uh
 xI
 xH
 Do
-wg
+fm
 lg
 VX
 xH
@@ -53080,9 +53053,9 @@ JI
 rh
 ts
 ts
-JI
+xq
 KQ
-Io
+JM
 ON
 EQ
 EQ
@@ -53852,7 +53825,7 @@ OK
 FA
 FA
 JI
-ON
+Io
 GQ
 TD
 EQ
@@ -54367,7 +54340,7 @@ JI
 Cl
 pu
 JI
-JZ
+PE
 ON
 TV
 Rk
@@ -54629,7 +54602,7 @@ ON
 Sj
 pn
 RH
-XG
+Mr
 CU
 lL
 TV
@@ -54871,7 +54844,7 @@ hl
 hl
 uh
 sv
-JI
+sv
 JI
 JI
 JI
@@ -55128,11 +55101,11 @@ hl
 hl
 uh
 sv
+sv
 JI
-lQ
 ex
 oc
-tb
+ON
 ON
 ON
 ON
@@ -55385,13 +55358,13 @@ hl
 hl
 uh
 sv
+sv
 JI
 mp
 Nl
-ni
+ON
+mT
 tK
-ON
-ON
 ON
 IO
 JI
@@ -55642,13 +55615,13 @@ hl
 hl
 uh
 sv
+sv
 JI
-mT
 mi
 Nl
 ON
-ON
-ON
+ni
+Ds
 ON
 Es
 JI
@@ -55904,8 +55877,8 @@ JI
 JI
 nj
 ON
-ON
-ON
+tb
+wg
 ON
 Es
 JI
@@ -58478,14 +58451,14 @@ CC
 tY
 Mp
 uP
-zR
+JZ
 Ln
 Va
-Pp
-Rs
-XJ
 Va
-xq
+Va
+XJ
+Pp
+zR
 Mp
 uh
 xI
@@ -58735,13 +58708,13 @@ qz
 wL
 Mp
 Gh
-zR
+Va
 HN
 Jc
 Us
 Va
 Va
-Va
+Pp
 zR
 Mp
 uh
