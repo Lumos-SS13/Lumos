@@ -446,42 +446,43 @@
  * Soda & Beer Six Packs
  */
 
+/obj/item/storage/fancy/sixpack
+	name = "wacky no-function pack"
+	desc = "A six pack of nothing. Report this immediately."
+	icon_state = "beerpack0"
+
 /obj/item/storage/fancy/sixpack/beer
-	icon = 'icons/obj/food/containers.dmi'
-	item_state = "beerpack6"
-	icon_state = "beerpack6"
-	icon_type = "beer"
-	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space beer carrier"
 	desc = "A six pack of Space Beer. The best (priced) pisswater!"
+	icon_state = "beerpack6"
+	icon_type = "beer"
+	item_state = "beerpack6"
+	throwforce = 2
 	spawn_type = /obj/item/reagent_containers/food/drinks/beer
 	fancy_open = TRUE
-	custom_price = PRICE_NORMAL
 
-/obj/item/storage/fancy/sixpack_beer/ComponentInitialize()
+/obj/item/storage/fancy/sixpack/beer/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
 
 /obj/item/storage/fancy/sixpack/beer/attack_self(mob_user)
 	return
 
 /obj/item/storage/fancy/sixpack/cola
-	icon = 'icons/obj/food/containers.dmi'
-	item_state = "colapack6"
-	icon_state = "colapack6"
-	icon_type = "cola"
-	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space cola carrier"
 	desc = "A six pack of Space Cola - in a tasteful and memorable glass bottle!"
+	icon_state = "colapack6"
+	icon_type = "cola"
+	item_state = "colapack6"
+	throwforce = 2
 	spawn_type = /obj/item/reagent_containers/food/drinks/cola
-	custom_price = PRICE_NORMAL
+	fancy_open = TRUE
 
 /obj/item/storage/fancy/sixpack/cola/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/cola))
+
+/obj/item/storage/fancy/sixpack/cola/attack_self(mob_user)
+	return
