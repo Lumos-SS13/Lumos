@@ -18,7 +18,8 @@
  *		Ammo types,
  *		Action Figure Boxes,
  *		Various paper bags,
- *		Colored boxes
+ *		Colored boxes,
+ *		Soda 12 Packs
  *
  *		For syndicate call-ins see uplink_kits.dm
  */

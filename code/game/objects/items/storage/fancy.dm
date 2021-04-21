@@ -14,7 +14,6 @@
  *		Heart Shaped Box w/ Chocolates
  *		Ring Box
  *		Beer/Soda Six Packs
- *		12-Pack Can Boxes
  */
 
 /obj/item/storage/fancy
@@ -286,7 +285,7 @@
 
 /obj/item/storage/fancy/cigarettes/cigpack_mindbreaker
 	name = "\improper Leary's Delight packet"
-	desc = "Banned in over 36 galaxies."
+	desc = "Banned in over 36 sectors."
 	icon_state = "shadyjim"
 	spawn_type = /obj/item/clothing/mask/cigarette/rollie/mindbreaker
 
@@ -447,27 +446,18 @@
  * Soda & Beer Six Packs
  */
 
-/obj/item/storage/fancy/sixpack
-	icon = 'icons/obj/food/containers.dmi'
-	item_state = "beerpack"
-	icon_state = "beerpack"
-	icon_type = "beer"
-	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
-	name = "six pack"
-	desc = "A carrier for bottled drinks."
-	spawn_type = /obj/item/reagent_containers/food/drinks/beer
-
 /obj/item/storage/fancy/sixpack/beer
 	icon = 'icons/obj/food/containers.dmi'
-	item_state = "beerpack"
-	icon_state = "beerpack"
+	item_state = "beerpack6"
+	icon_state = "beerpack6"
 	icon_type = "beer"
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space beer carrier"
 	desc = "A six pack of Space Beer. The best (priced) pisswater!"
 	spawn_type = /obj/item/reagent_containers/food/drinks/beer
+	fancy_open = TRUE
+	custom_price = PRICE_NORMAL
 
 /obj/item/storage/fancy/sixpack_beer/ComponentInitialize()
 	. = ..()
@@ -475,18 +465,22 @@
 	STR.max_items = 6
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
 
+/obj/item/storage/fancy/sixpack/beer/attack_self(mob_user)
+	return
+
 /obj/item/storage/fancy/sixpack/cola
 	icon = 'icons/obj/food/containers.dmi'
-	item_state = "colapack"
-	icon_state = "colapack"
+	item_state = "colapack6"
+	icon_state = "colapack6"
 	icon_type = "cola"
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space cola carrier"
 	desc = "A six pack of Space Cola - in a tasteful and memorable glass bottle!"
 	spawn_type = /obj/item/reagent_containers/food/drinks/cola
+	custom_price = PRICE_NORMAL
 
-/obj/item/storage/fancy/sixpack_soda/ComponentInitialize()
+/obj/item/storage/fancy/sixpack/cola/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
