@@ -1490,3 +1490,25 @@ obj/item/storage/box/stingbangs
 /obj/item/storage/box/strange_seeds_5pack/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/seeds/random(src)
+
+/obj/item/storage/box/spacecola_twelvepack
+	name = "Space Cola 12 pack"
+	desc = "A sizable box for holding 12 cans of soda."
+	icon_state = "hugbox"
+	illustration = null
+
+/obj/item/storage/box/soda_twelvepack/PopulateContents() // I'm so sorry
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+
+/obj/item/storage/box/spacecola_twelvepack/

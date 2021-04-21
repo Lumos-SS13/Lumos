@@ -13,6 +13,8 @@
  *		Cigar Case
  *		Heart Shaped Box w/ Chocolates
  *		Ring Box
+ *		Beer/Soda Six Packs
+ *		12-Pack Can Boxes
  */
 
 /obj/item/storage/fancy
@@ -441,3 +443,51 @@
 	icon_type = "silver ring"
 	spawn_type = /obj/item/clothing/gloves/ring/silver
 
+/*
+ * Soda & Beer Six Packs
+ */
+
+/obj/item/storage/fancy/sixpack
+	icon = 'icons/obj/food/containers.dmi'
+	item_state = "beerpack"
+	icon_state = "beerpack"
+	icon_type = "beer"
+	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
+	name = "six pack"
+	desc = "A carrier for bottled drinks."
+	spawn_type = /obj/item/reagent_containers/food/drinks/beer
+
+/obj/item/storage/fancy/sixpack/beer
+	icon = 'icons/obj/food/containers.dmi'
+	item_state = "beerpack"
+	icon_state = "beerpack"
+	icon_type = "beer"
+	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
+	name = "space beer carrier"
+	desc = "A six pack of Space Beer. The best (priced) pisswater!"
+	spawn_type = /obj/item/reagent_containers/food/drinks/beer
+
+/obj/item/storage/fancy/sixpack_beer/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 6
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
+
+/obj/item/storage/fancy/sixpack/soda
+	icon = 'icons/obj/food/containers.dmi'
+	item_state = "beerpack"
+	icon_state = "beerpack"
+	icon_type = "beer"
+	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
+	name = "space cola carrier"
+	desc = "A six pack of Space Cola - in a tasteful and memorable glass bottle!"
+	spawn_type = /obj/item/reagent_containers/food/drinks/beer
+
+/obj/item/storage/fancy/sixpack_soda/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 6
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))

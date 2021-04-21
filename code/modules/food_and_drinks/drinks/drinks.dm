@@ -631,3 +631,10 @@
 	icon_state = "monkey_energy"
 	list_reagents = list(/datum/reagent/consumable/monkey_energy = 50)
 	foodtype = SUGAR | JUNKFOOD
+
+/obj/item/reagent_containers/food/drinks/soda_cans/blood
+	name = "Blood"
+	desc = "Popular with vampires and corporate leaders."
+	icon_state = "blood"
+	list_reagents = list(/datum/reagent/blood = 30)
+	foodtype = MEAT | GROSS
