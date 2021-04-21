@@ -1499,39 +1499,19 @@ obj/item/storage/box/stingbangs
 	icon_state = "colabox"
 	illustration = null
 
-/obj/item/storage/box/soda_twelvepack/PopulateContents() // I'm so sorry
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
+/obj/item/storage/box/spacecola_twelvepack/PopulateContents()
+	for(var/i in 1 to 12)
+		new /obj/item/reagent_containers/food/drinks/soda_cans/cola(src)
 
 /obj/item/storage/box/spacecola_twelvepack/starkist
-	name = "Sun-kist 12 pack"
-	desc = "Sun-kist - Taste the stars (Not liable for attempts to taste actual celestial bodies)!"
+	name = "star-kist 12 pack"
+	desc = "Star-kist - Taste the stars (Not liable for attempts to taste actual celestial bodies)!"
 	icon_state = "sunkistbox"
 	illustration = null
 
-/obj/item/storage/box/soda_twelvepack/starkist/PopulateContents()
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
+/obj/item/storage/box/spacecola_twelvepack/starkist/PopulateContents()
+	for(var/i in 1 to 12)
+		new /obj/item/reagent_containers/food/drinks/soda_cans/starkist(src)
 
 /obj/item/storage/box/spacecola_twelvepack/space_up
 	name = "Space-Up! 12 pack"
@@ -1539,16 +1519,7 @@ obj/item/storage/box/stingbangs
 	icon_state = "spaceupbox"
 	illustration = null
 
-/obj/item/storage/box/soda_twelvepack/space_up/PopulateContents()
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
-	new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
+/obj/item/storage/box/spacecola_twelvepack/starkist/PopulateContents()
+	for(var/i in 1 to 12)
+		new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
+

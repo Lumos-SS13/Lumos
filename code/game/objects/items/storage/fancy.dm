@@ -475,11 +475,11 @@
 	STR.max_items = 6
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
 
-/obj/item/storage/fancy/sixpack/soda
+/obj/item/storage/fancy/sixpack/cola
 	icon = 'icons/obj/food/containers.dmi'
-	item_state = "beerpack"
-	icon_state = "beerpack"
-	icon_type = "beer"
+	item_state = "colapack"
+	icon_state = "colapack"
+	icon_type = "cola"
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space cola carrier"
