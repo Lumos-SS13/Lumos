@@ -484,10 +484,10 @@
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
 	name = "space cola carrier"
 	desc = "A six pack of Space Cola - in a tasteful and memorable glass bottle!"
-	spawn_type = /obj/item/reagent_containers/food/drinks/beer
+	spawn_type = /obj/item/reagent_containers/food/drinks/cola
 
 /obj/item/storage/fancy/sixpack_soda/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/cola))

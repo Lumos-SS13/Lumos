@@ -1496,7 +1496,7 @@ obj/item/storage/box/stingbangs
 /obj/item/storage/box/spacecola_twelvepack
 	name = "Space Cola 12 pack"
 	desc = "Space Cola - Not liable for acid reflux!"
-	icon_state = "hugbox"
+	icon_state = "colabox"
 	illustration = null
 
 /obj/item/storage/box/soda_twelvepack/PopulateContents() // I'm so sorry
@@ -1516,7 +1516,7 @@ obj/item/storage/box/stingbangs
 /obj/item/storage/box/spacecola_twelvepack/starkist
 	name = "Sun-kist 12 pack"
 	desc = "Sun-kist - Taste the stars (Not liable for attempts to taste actual celestial bodies)!"
-	icon_state = "hugbox"
+	icon_state = "sunkistbox"
 	illustration = null
 
 /obj/item/storage/box/soda_twelvepack/starkist/PopulateContents()
@@ -1536,7 +1536,7 @@ obj/item/storage/box/stingbangs
 /obj/item/storage/box/spacecola_twelvepack/space_up
 	name = "Space-Up! 12 pack"
 	desc = "Taste the pressure differential!"
-	icon_state = "hugbox"
+	icon_state = "spaceupbox"
 	illustration = null
 
 /obj/item/storage/box/soda_twelvepack/space_up/PopulateContents()

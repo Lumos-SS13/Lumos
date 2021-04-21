@@ -363,6 +363,14 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/ale = 30)
 	foodtype = GRAIN | ALCOHOL
 
+/obj/item/reagent_containers/food/drinks/cola
+	name = "space cola"
+	desc = "Cola. In space. And in a nice bottle."
+	icon_state = "colaglass"
+	list_reagents = list(/datum/reagent/consumable/space_cola = 30)
+	foodtype = SUGAR
+	custom_price = PRICE_CHEAP
+
 /obj/item/reagent_containers/food/drinks/sillycup
 	name = "paper cup"
 	desc = "A paper water cup."
