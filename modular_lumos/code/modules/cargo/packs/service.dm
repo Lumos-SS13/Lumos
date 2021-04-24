@@ -58,7 +58,7 @@
 	crate_type = /obj/structure/closet/crate/wooden
 	crate_name = "exotic fish crate"
 
-/datum/supply_pack/service/lawnmower
+/datum/supply_pack/service/lawnmower // Thx Whitesands!
 	name = "John Dearest's Lawnmover"
 	desc = "Be the king of your lawn, cultivate your land, and ride upon your green and yellow steed. Comes with a complementary can of Monkey Energy. Ride on."
 	cost = 10000

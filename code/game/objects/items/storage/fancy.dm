@@ -23,8 +23,8 @@
 	desc = "Mmm. Donuts."
 	resistance_flags = FLAMMABLE
 	var/icon_type = "donut"
-	var/spawn_type = null
-	var/fancy_open = FALSE
+	var/spawn_type = null // What item is populated inside, such /food/snacks/donut for donut boxes
+	var/fancy_open = FALSE // If the item container has a lid, such as the lid on the donut box or cigarette packs
 
 /obj/item/storage/fancy/PopulateContents()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -449,22 +449,24 @@
 /obj/item/storage/fancy/sixpack
 	name = "wacky no-function pack"
 	desc = "A six pack of nothing. Report this immediately."
-	icon_state = "beerpack0"
+	icon_state = "beerbox0"
+	custom_price = PRICE_ABOVE_NORMAL
+	fancy_open = TRUE
 
 /obj/item/storage/fancy/sixpack/beer
 	name = "space beer carrier"
 	desc = "A six pack of Space Beer. The best (priced) pisswater!"
-	icon_state = "beerpack6"
+	icon_state = "beerbox6"
 	icon_type = "beer"
-	item_state = "beerpack6"
+	item_state = "beerbox6"
 	throwforce = 2
 	spawn_type = /obj/item/reagent_containers/food/drinks/beer
-	fancy_open = TRUE
 
 /obj/item/storage/fancy/sixpack/beer/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/beer))
 
 /obj/item/storage/fancy/sixpack/beer/attack_self(mob_user)
 	return
@@ -472,17 +474,17 @@
 /obj/item/storage/fancy/sixpack/cola
 	name = "space cola carrier"
 	desc = "A six pack of Space Cola - in a tasteful and memorable glass bottle!"
-	icon_state = "colapack6"
+	icon_state = "colabox6"
 	icon_type = "cola"
-	item_state = "colapack6"
+	item_state = "colabox6"
 	throwforce = 2
 	spawn_type = /obj/item/reagent_containers/food/drinks/cola
-	fancy_open = TRUE
 
 /obj/item/storage/fancy/sixpack/cola/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/drinks/cola))
 
 /obj/item/storage/fancy/sixpack/cola/attack_self(mob_user)
 	return
