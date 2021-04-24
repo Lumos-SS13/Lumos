@@ -1054,7 +1054,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 // Lumos edit - Ashwalker desc
 /obj/item/examine(mob/user)
-	if((isashwalker(user) || isobserver(user)) && ashwalker_desc)
+	if((isashwalker(user) || ashwalker_desc))
 		desc = ashwalker_desc
 	. = ..()
 	desc = initial(desc)

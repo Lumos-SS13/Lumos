@@ -5,7 +5,7 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox"
 	name = "ore box"
-	desc = "A heavy wooden box, which can be filled with a lot of ores."
+	desc = "A large wooden crate for hauling ore."
 	density = TRUE
 	pressure_resistance = 5*ONE_ATMOSPHERE
 

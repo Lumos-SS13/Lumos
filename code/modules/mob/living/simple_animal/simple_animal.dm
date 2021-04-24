@@ -644,7 +644,7 @@
 		toggle_ai(initial(AIStatus))
 
 /mob/living/simple_animal/examine(mob/user)
-	if((isashwalker(user) || isobserver(user)) && ashwalker_desc)
+	if((isashwalker(user) || ashwalker_desc))
 		desc = ashwalker_desc
 	. = ..()
 	desc = initial(desc)

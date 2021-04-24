@@ -1,5 +1,5 @@
 //seva shit
-/obj/item/clothing/suit/hooded/explorer/seva
+/obj/item/clothing/suit/hooded/explorer/campsuit
 	icon = 'modular_skyrat/icons/obj/clothing/suits.dmi'
 	icon_state = "seva"
 	mob_overlay_icon = 'modular_skyrat/icons/mob/clothing/suit.dmi'
@@ -21,7 +21,7 @@
 	"Improved" = "seva"
 	)
 
-/obj/item/clothing/head/hooded/explorer/seva
+/obj/item/clothing/head/hooded/explorer/campsuit
 	icon = 'modular_skyrat/icons/obj/clothing/hats.dmi'
 	icon_state = "seva"
 	mob_overlay_icon = 'modular_skyrat/icons/mob/clothing/head.dmi'
@@ -43,15 +43,15 @@
 	"Improved" = "seva"
 	)
 
-/obj/item/clothing/suit/hooded/explorer/seva/Initialize()
+/obj/item/clothing/suit/hooded/explorer/campsuit/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate, 3, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 5, "wound" = 3.5))
 
-/obj/item/clothing/head/hooded/explorer/seva/Initialize()
+/obj/item/clothing/head/hooded/explorer/campsuit/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate, 3, /obj/item/stack/sheet/animalhide/goliath_hide, list("melee" = 5, "wound" = 3.5))
 
-/obj/item/clothing/mask/gas/seva
+/obj/item/clothing/mask/gas/campsuit
 	icon = 'modular_skyrat/icons/obj/clothing/masks.dmi'
 	icon_state = "seva"
 	mob_overlay_icon = 'modular_skyrat/icons/mob/clothing/mask.dmi'
