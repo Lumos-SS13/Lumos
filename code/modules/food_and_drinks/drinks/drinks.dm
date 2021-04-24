@@ -363,6 +363,14 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/ale = 30)
 	foodtype = GRAIN | ALCOHOL
 
+/obj/item/reagent_containers/food/drinks/cola
+	name = "space cola"
+	desc = "Cola. In space. And in a nice bottle."
+	icon_state = "glass"
+	list_reagents = list(/datum/reagent/consumable/space_cola = 45)
+	foodtype = SUGAR
+	custom_price = PRICE_REALLY_CHEAP
+
 /obj/item/reagent_containers/food/drinks/sillycup
 	name = "paper cup"
 	desc = "A paper water cup."
@@ -631,3 +639,10 @@
 	icon_state = "monkey_energy"
 	list_reagents = list(/datum/reagent/consumable/monkey_energy = 50)
 	foodtype = SUGAR | JUNKFOOD
+
+/obj/item/reagent_containers/food/drinks/soda_cans/blood
+	name = "Blood"
+	desc = "Popular with vampires and corporate leaders."
+	icon_state = "blood"
+	list_reagents = list(/datum/reagent/blood = 30)
+	foodtype = MEAT | GROSS

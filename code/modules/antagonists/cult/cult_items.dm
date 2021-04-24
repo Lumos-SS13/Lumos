@@ -532,7 +532,7 @@
 /obj/item/shuttle_curse
 	name = "cursed orb"
 	desc = "You peer within this smokey orb and glimpse terrible fates befalling the escape shuttle."
-	icon = 'icons/obj/cult.dmi'
+	icon = 'icons/obj/antagonists/cults/cult.dmi'
 	icon_state ="shuttlecurse"
 	var/static/curselimit = 0
 
@@ -599,7 +599,7 @@
 /obj/item/cult_shift
 	name = "veil shifter"
 	desc = "This relic instantly teleports you, and anything you're pulling, forward by a moderate distance."
-	icon = 'icons/obj/cult.dmi'
+	icon = 'icons/obj/antagonists/cults/cult.dmi'
 	icon_state ="shifter"
 	var/uses = 4
 

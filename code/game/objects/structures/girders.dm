@@ -350,7 +350,7 @@
 /obj/structure/girder/cult
 	name = "runed girder"
 	desc = "Framework made of a strange and shockingly cold metal. It doesn't seem to have any bolts."
-	icon = 'icons/obj/cult.dmi'
+	icon = 'icons/obj/antagonists/cults/cult.dmi'
 	icon_state= "cultgirder"
 	can_displace = FALSE
 
