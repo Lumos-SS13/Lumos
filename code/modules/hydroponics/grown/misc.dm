@@ -101,7 +101,7 @@
 // Cabbage
 /obj/item/seeds/cabbage
 	name = "pack of cabbage seeds"
-	desc = "These seeds grow into cabbages."
+	desc = "Healthy and tasty! You gotta grow them first though."
 	icon_state = "seed-cabbage"
 	species = "cabbage"
 	plantname = "Cabbages"
@@ -120,7 +120,7 @@
 /obj/item/reagent_containers/food/snacks/grown/cabbage
 	seed = /obj/item/seeds/cabbage
 	name = "cabbage"
-	desc = "Ewwwwwwwwww. Cabbage."
+	desc = "Brussel sprouts bigger and tastier cousin."
 	icon_state = "cabbage"
 	filling_color = "#90EE90"
 	bitesize_mod = 2
@@ -147,7 +147,7 @@
 /obj/item/reagent_containers/food/snacks/grown/sugarcane
 	seed = /obj/item/seeds/sugarcane
 	name = "sugarcane"
-	desc = "Sickly sweet."
+	desc = "All natural tooth rot."
 	icon_state = "sugarcane"
 	filling_color = "#FFD700"
 	bitesize_mod = 2
@@ -157,7 +157,7 @@
 // Gatfruit
 /obj/item/seeds/gatfruit
 	name = "pack of gatfruit seeds"
-	desc = "These seeds grow into .357 revolvers."
+	desc = "An illegal, genetically altered plant. They grow revolvers."
 	icon_state = "seed-gatfruit"
 	species = "gatfruit"
 	plantname = "Gatfruit Tree"
@@ -177,7 +177,7 @@
 /obj/item/reagent_containers/food/snacks/grown/shell/gatfruit
 	seed = /obj/item/seeds/gatfruit
 	name = "gatfruit"
-	desc = "It smells like burning."
+	desc = "The one fruit you definitely shouldn't put in your mouth."
 	icon_state = "gatfruit"
 	trash = /obj/item/gun/ballistic/revolver
 	bitesize_mod = 2
@@ -252,7 +252,7 @@
 /obj/item/reagent_containers/food/snacks/grown/coconut
 	seed = /obj/item/seeds/coconut
 	name = "coconut"
-	desc = "Hard shell of a nut containing delicious milk inside. Perhaps try using something sharp?"
+	desc = "A hard shelled drupe, filled with a delicious milk. Maybe something sharp can grant you access to its bounty?"
 	icon_state = "coconut"
 	item_state = "coconut"
 	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50)
@@ -372,7 +372,7 @@
 	if(M && user.a_intent == INTENT_HARM && !spillable)
 		var/obj/item/bodypart/affecting = user.zone_selected //Find what the player is aiming at
 		if (affecting == BODY_ZONE_HEAD && prob(15))
-			//smash the nut open
+			//smash the nut open // bust a nut
 			var/armor_block = min(90, M.run_armor_check(affecting, "melee", null, null,armour_penetration)) // For normal attack damage
 			M.apply_damage(force, BRUTE, affecting, armor_block)
 
@@ -510,10 +510,10 @@
 
 /obj/item/seeds/aloe
 	name = "pack of aloe seeds"
-	desc = "These seeds grow into aloe."
+	desc = "These seeds grow into an Aloe Vera succulent."
 	icon_state = "seed-aloe"
 	species = "aloe"
-	plantname = "Aloe"
+	plantname = "Aloe Vera"
 	product = /obj/item/reagent_containers/food/snacks/grown/aloe
 	lifespan = 60
 	endurance = 25
@@ -527,7 +527,7 @@
 /obj/item/reagent_containers/food/snacks/grown/aloe
 	seed = /obj/item/seeds/aloe
 	name = "aloe"
-	desc = "Cut leaves from the aloe plant."
+	desc = "Cut petals of the aloe vera plant. Edible, fermentable, and even medical!"
 	icon_state = "aloe"
 	filling_color = "#90EE90"
 	bitesize_mod = 5

@@ -1,7 +1,7 @@
 // Watermelon
 /obj/item/seeds/watermelon
 	name = "pack of watermelon seeds"
-	desc = "These seeds grow into watermelon plants."
+	desc = "These seeds grow into watermelons."
 	icon_state = "seed-watermelon"
 	species = "watermelon"
 	plantname = "Watermelon Vines"
@@ -24,7 +24,7 @@
 /obj/item/reagent_containers/food/snacks/grown/watermelon
 	seed = /obj/item/seeds/watermelon
 	name = "watermelon"
-	desc = "It's full of watery goodness."
+	desc = "The rind is the best part."
 	icon_state = "watermelon"
 	slice_path = /obj/item/reagent_containers/food/snacks/watermelonslice
 	slices_num = 5

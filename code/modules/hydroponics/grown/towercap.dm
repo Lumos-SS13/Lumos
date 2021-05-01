@@ -1,6 +1,6 @@
 /obj/item/seeds/tower
 	name = "pack of tower-cap mycelium"
-	desc = "This mycelium grows into tower-cap mushrooms."
+	desc = "This mycelium grows into tower-cap mushrooms. A very common wood substitute."
 	icon_state = "mycelium-tower"
 	species = "towercap"
 	plantname = "Tower Caps"
@@ -20,7 +20,7 @@
 
 /obj/item/seeds/tower/steel
 	name = "pack of steel-cap mycelium"
-	desc = "This mycelium grows into steel logs."
+	desc = "This mycelium grows into steel-cap mushrooms, a mutated strain of tower-cap with high iron content. "
 	icon_state = "mycelium-steelcap"
 	species = "steelcap"
 	plantname = "Steel Caps"
@@ -32,7 +32,7 @@
 /obj/item/grown/log
 	seed = /obj/item/seeds/tower
 	name = "tower-cap log"
-	desc = "It's better than bad, it's good!"
+	desc = "A common wood substitute. Used practically everywhere."
 	icon_state = "logs"
 	force = 5
 	throwforce = 5
@@ -84,12 +84,12 @@
 /obj/item/grown/log/tree
 	seed = null
 	name = "wood log"
-	desc = "TIMMMMM-BERRRRRRRRRRR!"
+	desc = "Some real, godforsaken wood."
 
 /obj/item/grown/log/steel
 	seed = /obj/item/seeds/tower/steel
 	name = "steel-cap log"
-	desc = "It's made of metal."
+	desc = "A tower-cap relative that naturally is impregnated with iron."
 	icon_state = "steellogs"
 	plank_type = /obj/item/stack/rods
 	plank_name = "rods"

@@ -75,7 +75,7 @@
 /obj/item/reagent_containers/food/snacks/grown/citrus/orange
 	seed = /obj/item/seeds/orange
 	name = "orange"
-	desc = "It's a tangy fruit."
+	desc = "Prevent Astro-HyperScorbutus, otherwise known as Space Scurvy."
 	icon_state = "orange"
 	filling_color = "#FFA500"
 	juice_results = list(/datum/reagent/consumable/orangejuice = 0)

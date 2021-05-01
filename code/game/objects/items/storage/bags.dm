@@ -223,6 +223,7 @@
 
 /obj/item/storage/bag/plants
 	name = "plant bag"
+	desc = "A bag for holding lots of plants. Lots."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	w_class = WEIGHT_CLASS_TINY
@@ -234,6 +235,36 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_combined_w_class = 100
 	STR.max_items = 100
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
+
+/obj/item/storage/bag/plants/holding
+	name = "plant bag"
+	desc = "A bag for holding lots of plants. Lots."
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon_state = "plantbag_bspace"
+
+/obj/item/storage/bag/plants/holding/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = INFINITY
+	STR.max_combined_w_class = INFINITY
+	STR.max_items = INFINITY
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
+
+/obj/item/storage/bag/plants/pigtail
+	name = "plant bag"
+	desc = "A primitive plant bag woven from pig-tail cloth."
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon_state = "plantbag"
+	w_class = WEIGHT_CLASS_TINY
+	resistance_flags = FLAMMABLE
+
+/obj/item/storage/bag/plants/pigtail/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 40
+	STR.max_items = 40
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
 
 ////////
