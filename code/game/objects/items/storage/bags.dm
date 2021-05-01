@@ -255,7 +255,7 @@
 	name = "plant bag"
 	desc = "A primitive plant bag woven from pig-tail cloth."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
-	icon_state = "plantbag"
+	icon_state = "plantbag_pigtail"
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
 
