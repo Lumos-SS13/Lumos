@@ -1,6 +1,6 @@
 /obj/item/seeds/pig_tails
-	name = "handful of pig-tail seeds"
-	desc = "A couple of round pig-tail seeds. Found often in underground environments and can be spun into a primitive cloth material."
+	name = "pack of pig-tail seeds"
+	desc = "A pack of pig-tail seeds. A fiberous plant used to make primitive textiles."
 	icon_state = "seed-pigtail"
 	species = "pigtail"
 	plantname = "Pigtail"
@@ -16,6 +16,11 @@
 	growing_icon = 'icons/obj/hydroponics/growing.dmi'
 	icon_dead = "pigtail-dead"
 	mutatelist = list(/obj/item/seeds/cotton/durathread)
+
+/obj/item/seeds/pig_tails
+	name = "handful of pig-tail seeds"
+	desc = "A couple of round pig-tail seeds. Found often in underground environments and can be spun into a primitive pig-tail cloth."
+	icon_state = "seed-pigtailwild"
 
 /obj/item/grown/cotton/pigtail
 	seed = /obj/item/seeds/cotton
