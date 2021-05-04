@@ -19,10 +19,10 @@
 
 /obj/item/seeds/pig_tails
 	name = "handful of pig-tail seeds"
-	desc = "A couple of round pig-tail seeds. Found often in underground environments and can be spun into a primitive pig-tail cloth."
+	desc = "A couple of round pig-tail seeds. Found often in underground environments and can be spun into a primitive cloth."
 	icon_state = "seed-pigtailwild"
 
-/obj/item/grown/cotton/pigtail
+/obj/item/grown/cotton/pigtails
 	seed = /obj/item/seeds/cotton
 	name = "pig-tail bundle"
 	desc = "A bundle of curly pig-tails, a fiberous plant."
@@ -32,4 +32,4 @@
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 2
 	throw_range = 3
-	attack_verb = list("whipped", "whacked")
+	attack_verb = list("whipped", "whacked", "pig-tailed")

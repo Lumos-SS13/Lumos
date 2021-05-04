@@ -251,9 +251,15 @@ LINEN BINS
 	name = "cosmic space bedsheet"
 	desc = "Made from the dreams of those who wonder at the stars."
 	icon_state = "sheetcosmos"
-	dream_messages = list("the infinite cosmos", "Hans Zimmer music", "a flight through space", "the galaxy", "being fabulous", "shooting stars")
+	dream_messages = list("the infinite cosmos", "Hans Zimmer music", "the dark side of a moon", "the galaxy", "being fabulous", "shooting stars")
 	light_power = 2
 	light_range = 1.4
+
+/obj/item/bedsheet/pigtail
+	name = "pigtail bedsheet"
+	desc = "A scratchy, itchy, and overall roughspun bedsheet made from pig-tails."
+	icon_state = "sheetpigtail"
+	dream_messages = list("ashen wastes", "rituals of blood and bronze", "itchy fibers", "tendrils of flesh")
 
 /obj/item/bedsheet/random
 	icon_state = "random_bedsheet"
