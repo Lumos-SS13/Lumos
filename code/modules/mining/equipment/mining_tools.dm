@@ -175,17 +175,32 @@
 	user.visible_message("<span class='suicide'>[user] couldn't do it!</span>")
 	return SHAME
 
-/obj/item/shovel/serrated
-	name = "serrated bone shovel"
-	desc = "A shovel assembled from bone and wood. From looks, getting jabbed by this wouldn't be fun."
-	ashwalker_desc = "Even our tools may serve as weapons in unforgiving times."
+/obj/item/shovel/bone
+	name = "bone shovel"
+	desc = "A crude shovel for moving dirt, ash, and sand."
+	ashwalker_desc = "Simple tools make complex works."
 	icon_state = "shovel_bone"
 	item_state = "shovel_bone"
+	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	force = 8
+	throwforce = 4
+	w_class = WEIGHT_CLASS_NORMAL
+	toolspeed = 0.5
+	attack_verb = list("slashed", "impaled", "stabbed", "sliced")
+	sharpness = SHARP_EDGED
+
+/obj/item/shovel/bone/serrated
+	name = "serrated bone shovel"
+	desc = "A crude shovel for moving dirt, ash, and sand. From looks, getting jabbed by this wouldn't be fun."
+	ashwalker_desc = "Even our tools may serve as weapons in unforgiving times."
+	icon_state = "shovel_bone_serrated"
+	item_state = "shovel_bone_serrated"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	force = 13
 	throwforce = 12
 	w_class = WEIGHT_CLASS_NORMAL
-	toolspeed = 0.7
-	attack_verb = list("slashed", "impaled", "stabbed", "sliced")
+	toolspeed = 0.8 // A touch slower cause serration gets caught on stuff
+	attack_verb = list("slashed", "stabbed", "sliced")
 	sharpness = SHARP_EDGED

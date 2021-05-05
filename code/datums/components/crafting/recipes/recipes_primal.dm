@@ -1,3 +1,37 @@
+// Crafting recipes for primatives.
+// Used predominantly for Ashwalkers or similar ghostroles
+
+// Structures //
+
+/datum/crafting_recipe/bonfire
+	name = "Bonfire"
+	time = 60
+	reqs = list(/obj/item/grown/log = 5)
+	result = /obj/structure/bonfire
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/headpike
+	name = "Spike Head (Glass Spear)"
+	time = 65
+	reqs = list(/obj/item/spear = 1,
+				/obj/item/bodypart/head = 1)
+	parts = list(/obj/item/bodypart/head = 1,
+			/obj/item/spear = 1)
+	result = /obj/structure/headpike
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/headpikebone
+	name = "Spike Head (Bone Spear)"
+	time = 65
+	reqs = list(/obj/item/spear/bonespear = 1,
+				/obj/item/bodypart/head = 1)
+	parts = list(/obj/item/bodypart/head = 1,
+			/obj/item/spear/bonespear = 1)
+	result = /obj/structure/headpike/bone
+	category = CAT_PRIMAL
+
+// Clothing & Armor //
+
 /datum/crafting_recipe/bonetalisman
 	name = "Bone Talisman"
 	result = /obj/item/clothing/accessory/talisman
@@ -55,6 +89,37 @@
 				/obj/item/stack/sheet/sinew = 2)
 	category = CAT_PRIMAL
 
+// Tools //
+
+/datum/crafting_recipe/boneshovel
+	name = "Bone Shovel"
+	always_availible = FALSE
+	reqs = list(
+			/obj/item/stack/sheet/bone = 3,
+			/obj/item/grown/log = 3)
+	result = /obj/item/shovel/bone
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/boneshovelserrated
+	name = "Serrated Bone Shovel"
+	always_availible = FALSE
+	reqs = list(
+            /obj/item/stack/sheet/bone = 1,
+            /datum/reagent/oil = 5,
+            /obj/item/shovel/bone = 1)
+	result = /obj/item/shovel/bone/serrated
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/primal_fish_rod
+	name = "Primal Fishing Rod"
+	time = 20
+	reqs = list(/obj/item/stack/sheet/bone = 4,
+				 /obj/item/stack/sheet/sinew = 2)
+	result = /obj/item/fish_tool/fishing_rod/primal
+	category = CAT_PRIMAL
+
+// Weapons //
+
 /datum/crafting_recipe/bonespear
 	name = "Bone Spear"
 	result = /obj/item/spear/bonespear
@@ -71,31 +136,13 @@
 				 /obj/item/stack/sheet/sinew = 3)
 	category = CAT_PRIMAL
 
-/datum/crafting_recipe/bonfire
-	name = "Bonfire"
-	time = 60
-	reqs = list(/obj/item/grown/log = 5)
-	result = /obj/structure/bonfire
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/headpike
-	name = "Spike Head (Glass Spear)"
-	time = 65
-	reqs = list(/obj/item/spear = 1,
-				/obj/item/bodypart/head = 1)
-	parts = list(/obj/item/bodypart/head = 1,
-			/obj/item/spear = 1)
-	result = /obj/structure/headpike
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/headpikebone
-	name = "Spike Head (Bone Spear)"
-	time = 65
-	reqs = list(/obj/item/spear/bonespear = 1,
-				/obj/item/bodypart/head = 1)
-	parts = list(/obj/item/bodypart/head = 1,
-			/obj/item/spear/bonespear = 1)
-	result = /obj/structure/headpike/bone
+/datum/crafting_recipe/bow_tablet
+	name = "Bow Making Tablet"
+	result = /obj/item/book/granter/crafting_recipe/bone_bow
+	time = 200 //Scribing // don't care
+	always_availible = FALSE
+	reqs = list(/obj/item/stack/rods = 1,
+				 /obj/item/stack/sheet/mineral/sandstone = 4)
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/quiver
@@ -116,14 +163,9 @@
 				 /obj/item/stack/sheet/sinew = 4)
 	category = CAT_PRIMAL
 
-/datum/crafting_recipe/bow_tablet
-	name = "Bow Making Tablet"
-	result = /obj/item/book/granter/crafting_recipe/bone_bow
-	time = 200 //Scribing // don't care
-	always_availible = FALSE
-	reqs = list(/obj/item/stack/rods = 1,
-				 /obj/item/stack/sheet/mineral/sandstone = 4)
-	category = CAT_PRIMAL
+
+// Bone Statues
+// Learned with boneyard_notes recipe book
 
 /datum/crafting_recipe/rib
 	name = "Collosal Rib"
@@ -150,22 +192,4 @@
             /obj/item/stack/sheet/bone = 3,
             /datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/skull/half
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/boneshovel
-	name = "Serrated Bone Shovel"
-	always_availible = FALSE
-	reqs = list(
-            /obj/item/stack/sheet/bone = 4,
-            /datum/reagent/oil = 5,
-            /obj/item/shovel/spade = 1)
-	result = /obj/item/shovel/serrated
-	category = CAT_PRIMAL
-
-/datum/crafting_recipe/primal_fish_rod
-	name = "Primal Fishing Rod"
-	time = 20
-	reqs = list(/obj/item/stack/sheet/bone = 4,
-				 /obj/item/stack/sheet/sinew = 2)
-	result = /obj/item/fish_tool/fishing_rod/primal
 	category = CAT_PRIMAL
