@@ -457,6 +457,43 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	. += GLOB.durathread_recipes
 
 /*
+ * Woven Pig-Tails
+ */
+
+GLOBAL_LIST_INIT(pigtail_recipes, list ( \
+	new/datum/stack_recipe("plant bag", /obj/item/storage/bag/plants/pigtail, 4),
+	new/datum/stack_recipe("mining satchel", /obj/item/storage/bag/ore/pigtail, 4), \
+	null, \
+	new/datum/stack_recipe("improvised gauze", /obj/item/stack/medical/gauze/improvised, 1, 2, 6), \
+	new/datum/stack_recipe("bedsheet", /obj/item/bedsheet/pigtail, 3,), \
+	new/datum/stack_recipe("woven cot", /obj/structure/bed/pigtail, 10, time = 10), \
+	null, \
+	new/datum/stack_recipe("blindfold", /obj/item/clothing/glasses/sunglasses/blindfold, 2), \
+	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2), \
+	))
+
+/obj/item/stack/sheet/pigtail_cloth
+	name = "pigtail cloth"
+	desc = "Scratchy and itchy, but it works."
+	singular_name = "pigtail cloth roll"
+	icon_state = "sheet-durathread"
+	item_state = "sheet-durathread"
+	resistance_flags = FLAMMABLE
+	force = 0
+	throwforce = 0
+	merge_type = /obj/item/stack/sheet/pigtail_cloth
+
+/obj/item/stack/sheet/cloth/get_main_recipes()
+	. = ..()
+	. += GLOB.pigtail_recipes
+
+/obj/item/stack/sheet/pigtail_cloth/ten
+	amount = 10
+
+/obj/item/stack/sheet/pigtail_cloth/thirty
+	amount = 30
+
+/*
  * Cardboard
  */
 GLOBAL_LIST_INIT(cardboard_recipes, list ( \
@@ -866,6 +903,15 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	merge_type = /obj/item/stack/sheet/cotton/durathread
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/durathread
+
+/obj/item/stack/sheet/cotton/pigtail
+	name = "raw pigtail bundle"
+	desc = "A bundle of raw durathread ready to be spun on the loom."
+	singular_name = "raw pigtail fiber"
+	icon_state = "sheet-pigtailraw"
+	merge_type = /obj/item/stack/sheet/cotton/pigtail
+	pull_effort = 70
+	loom_result = /obj/item/stack/sheet/pigtail_cloth
 
 /obj/item/stack/sheet/meat
 	name = "meat sheets"

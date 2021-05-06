@@ -181,6 +181,21 @@
 				"<span class='notice'>You scoop up the ores beneath you with your [name].</span>")
 	spam_protection = FALSE
 
+/obj/item/storage/bag/ore/pigtail
+	name = "woven mining satchel"
+	desc = "A fairly durable pigtail cloth bag for transporting ores."
+	icon_state = "satchel_pigtail"
+	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = FLAMMABLE
+
+/obj/item/storage/bag/ore/pigtail/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/concrete/stack/STR = GetComponent(/datum/component/storage/concrete/stack)
+	STR.allow_quick_empty = TRUE
+	STR.can_hold = typecacheof(list(/obj/item/stack/ore))
+	STR.max_w_class = WEIGHT_CLASS_HUGE
+	STR.max_combined_stack_amount = 35
+
 /obj/item/storage/bag/ore/cyborg
 	name = "cyborg mining satchel"
 	range = 1

@@ -183,6 +183,7 @@
 	item_state = "shovel_bone"
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	custom_materials = list(/datum/material/bone=350)
 	force = 8
 	throwforce = 4
 	w_class = WEIGHT_CLASS_NORMAL

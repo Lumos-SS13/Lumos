@@ -28,7 +28,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 ///Has no special properties. Could be good against vampires in the future perhaps.
 /datum/material/silver
 	name = "silver"
-	desc = "Silver"
+	desc = "Space Werewolves hate him! See how this doctor staves lycanthropy with this one weird trick!"
 	color = list(255/255, 284/255, 302/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/silver
@@ -38,7 +38,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 ///Slight force increase
 /datum/material/gold
 	name = "gold"
-	desc = "Gold"
+	desc = "You see... I love gooooooold."
 	color = list(340/255, 240/255, 50/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0) //gold is shiny, but not as bright as bananium
 	strength_modifier = 1.2
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
@@ -62,7 +62,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 ///Is slightly radioactive
 /datum/material/uranium
 	name = "uranium"
-	desc = "Uranium"
+	desc = "The yummy green rock."
 	color = rgb(48, 237, 26)
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/uranium
@@ -84,7 +84,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 ///Adds firestacks on hit (Still needs support to turn into gas on destruction)
 /datum/material/plasma
 	name = "plasma"
-	desc = "Isn't plasma a state of matter? Oh whatever."
+	desc = "The substance you're most likely here for."
 	color = list(298/255, 46/255, 352/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/plasma

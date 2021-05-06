@@ -48,6 +48,7 @@
 /obj/item/cultivator
 	name = "cultivator"
 	desc = "It's used for removing weeds or scratching your back."
+	ashwalker_desc = "Just like our own."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "cultivator"
 	item_state = "cultivator"
@@ -64,6 +65,14 @@
 /obj/item/cultivator/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is scratching [user.p_their()] back as hard as [user.p_they()] can with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
+
+/obj/item/cultivator/wooden
+	ashwalker_desc = "Proper plants require proper protection."
+	icon_state = "cultivator_wooden"
+	item_state = "cultivator_wooden"
+	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
+	custom_materials = list(/datum/material/wood=50,/datum/material/iron=50)
 
 /obj/item/hatchet
 	name = "hatchet"
