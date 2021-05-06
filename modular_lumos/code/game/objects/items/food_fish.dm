@@ -25,7 +25,7 @@
 	icon = 'modular_lumos/icons/obj/fish_items.dmi'
 	icon_state = "toxicspine"
 	list_reagents = list(/datum/reagent/toxin/cyanide = 0.15, /datum/reagent/toxin/staminatoxin = 0.2, /datum/reagent/consumable/nutriment = 0.3)
-	tastes = list("bitter" = 15, "muck" = 3)
+	tastes = list("almonds" = 15, "muck" = 3)
 	foodtype = GROSS | TOXIC
 
 /// RAW MEAT (Lesser Carp use real carp meat) ///
@@ -95,7 +95,7 @@
 	desc = "Raw shark meat, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "fishfillet"
-	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	cooked_type = /obj/item/reagent_containers/food/snacks/shark
 	list_reagents = list(/datum/reagent/consumable/sodiumchloride = 5, /datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 15, "salt" = 3)
 	foodtype = MEAT | RAW
@@ -105,7 +105,7 @@
 	desc = "Raw shark fin, not recommended for consumption."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "shark_fin"
-	cooked_type = /obj/item/reagent_containers/food/snacks/baked_lobster_tail
+	cooked_type = /obj/item/reagent_containers/food/snacks/shark_fin
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 2)
 	tastes = list("shark" = 5, "salt" = 1)
 	foodtype = MEAT | RAW
@@ -121,8 +121,8 @@
 	foodtype = MEAT | RAW
 
 /obj/item/reagent_containers/food/snacks/lavafish_raw
-	name = "raw shark meat"
-	desc = "Raw shark meat, not recommended for consumption."
+	name = "raw lava-hopper meat"
+	desc = "Raw meat of a lava-hopper. Orange as the magma vents it swam in."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
 	icon_state = "lavafishfillet"
 	cooked_type = /obj/item/reagent_containers/food/snacks/lavafish
@@ -152,7 +152,7 @@
 
 /// COOKED SEAFOOD (NON-SUSHI) ///
 
-/obj/item/reagent_containers/food/snacks/shrimp
+/obj/item/reagent_containers/food/snacks/shrimp // suck the head
 	name = "cooked shrimp"
 	desc = "A small shrimp, ready to be eaten."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'
@@ -161,7 +161,7 @@
 	tastes = list("shrimp" = 15, "salt" = 3)
 	foodtype = MEAT
 
-/obj/item/reagent_containers/food/snacks/shrimpskewer
+/obj/item/reagent_containers/food/snacks/shrimpskewer // suck the heads 
 	name = "shrimp skewer"
 	desc = "Four Shrimp stuck on a rod. Peak dining."
 	icon = 'modular_lumos/icons/obj/seafood.dmi'

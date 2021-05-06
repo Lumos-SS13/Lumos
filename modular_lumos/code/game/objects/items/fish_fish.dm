@@ -229,7 +229,7 @@
 	meat = list(/obj/item/reagent_containers/food/snacks/salmon_raw, /obj/item/stack/ore/iron)
 
 /obj/item/fishy/lavafish
-	name = "lava hopper"
+	name = "lava-hopper"
 	desc = "A creature unique to NT8248-B, it has a thick, scaly dermis impregnated with iron throughout. A very tough fish."
 	spawned_egg = /obj/item/fishy_egg/lavafish
 	icon_state = "lava_fish"
@@ -278,8 +278,8 @@
 	meat = list(/obj/item/reagent_containers/food/snacks/seadevil_raw)
 
 /obj/item/fishy/shark
-	name = "space shark"
-	desc = "A small species of shark capable of reproducing fast enough for aquaculture."
+	name = "assitant shark"
+	desc = "A small species of shark capable of reproducing fast enough for aquaculture. Beware the greytide."
 	spawned_egg = /obj/item/fishy_egg/shark
 	icon_state = "shark"
 	meat = list(/obj/item/reagent_containers/food/snacks/shark_raw = 2, /obj/item/reagent_containers/food/snacks/shark_raw_fin)
@@ -293,14 +293,14 @@
 
 /obj/item/fishy/space_eel
 	name = "rock eel"
-	desc = "A leathery predatory astroform often found in asteroid pools, mega-astroforms, or up the Head of Security's rear."
+	desc = "A leathery predatory astroform often found in asteroid pools, mega-astroform's dermis, or up the Head of Security's rear."
 	spawned_egg = /obj/item/fishy_egg/space_eel
 	icon_state = "space_eel"
 	meat = list(/obj/item/reagent_containers/food/snacks/space_eel_raw)
 
 /obj/item/fishy/lavacrab
 	name = "stone turner"
-	desc = "A small pseudo-crustatcean native to exclusively to the subterranean jungles of NT8248-B. They eat small inverabrates, namely the ones under stones."
+	desc = "A small pseudo-crustatcean native to exclusively to the subterranean jungles of NT8248-B. They eat small invertebrates, namely the ones under stones."
 	spawned_egg = /obj/item/fishy_egg/lavacrab
 	icon_state = "rock_crab"
 	meat = list(/obj/item/reagent_containers/food/snacks/lavacrab_raw)
