@@ -238,8 +238,8 @@
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
 
 /obj/item/storage/bag/plants/holding
-	name = "plant bag"
-	desc = "A bag for holding lots of plants. Lots."
+	name = "plant bag of holding"
+	desc = "A bag for holding lots of plants. Alot of lots."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag_bspace"
 
@@ -248,7 +248,7 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = INFINITY
 	STR.max_combined_w_class = INFINITY
-	STR.max_items = INFINITY
+	STR.max_items = 500
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
 
 /obj/item/storage/bag/plants/pigtail

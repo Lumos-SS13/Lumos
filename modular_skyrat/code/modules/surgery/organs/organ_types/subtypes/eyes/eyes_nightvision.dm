@@ -40,7 +40,7 @@
 	name = "fung-eye"
 	desc = "While on the outside they look inert and dead, the eyes of mushroom people are actually very advanced."
 
-/obj/item/organ/eyes/nightvision_ashwalker // This is my wacky attempt at circumventing the current NV eyeballs - sorry
+/obj/item/organ/eyes/basic_night_vision/ashwalker // This is my wacky attempt at circumventing the current NV eyeballs - sorry
 	name = "low-light eyes"
 	desc = "A pair of eyes common to subterranean species. Can see a limited degree in the dark."
 	see_in_dark = 8
@@ -49,7 +49,7 @@
 	icon_state = "eyeballs_lizard"
 	var/night_vision = TRUE
 
-/obj/item/organ/eyes/nightvision_ashwalker/ui_action_click()
+/obj/item/organ/eyes/basic_night_vision/ashwalker/ui_action_click()
 	sight_flags = initial(sight_flags)
 	switch(lighting_alpha)
 		if (LIGHTING_PLANE_ALPHA_VISIBLE)
