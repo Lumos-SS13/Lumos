@@ -34,4 +34,4 @@
 	throw_range = 3
 	attack_verb = list("whipped", "whacked", "pig-tailed")
 	cotton_type = /obj/item/stack/sheet/cotton/pigtail
-	cotton_name = "raw cotton"
+	cotton_name = "raw pigtail fiber"

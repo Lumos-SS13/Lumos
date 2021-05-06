@@ -904,11 +904,13 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/durathread
 
+// pigtails raw //
+
 /obj/item/stack/sheet/cotton/pigtail
 	name = "raw pigtail bundle"
 	desc = "A bundle of raw durathread ready to be spun on the loom."
 	singular_name = "raw pigtail fiber"
-	icon_state = "sheet-pigtailraw"
+	icon_state = "sheet-pigtail"
 	merge_type = /obj/item/stack/sheet/cotton/pigtail
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/pigtail_cloth
