@@ -907,8 +907,8 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 // pigtails raw //
 
 /obj/item/stack/sheet/cotton/pigtail
-	name = "raw pigtail bundle"
-	desc = "A bundle of raw durathread ready to be spun on the loom."
+	name = "raw pig-tail bundle"
+	desc = "A bundle of raw pig-tail fiber ready to be spun on the loom."
 	singular_name = "raw pigtail fiber"
 	icon_state = "sheet-pigtail"
 	merge_type = /obj/item/stack/sheet/cotton/pigtail

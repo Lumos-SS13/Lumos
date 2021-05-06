@@ -17,7 +17,7 @@
 	icon_dead = "pigtail-dead"
 	mutatelist = null
 
-/obj/item/seeds/pigtails
+/obj/item/seeds/pigtails/wild
 	name = "handful of pig-tail seeds"
 	desc = "A couple of round pig-tail seeds. Found often in underground environments and can be spun into a primitive cloth."
 	icon_state = "seed-pigtailwild"

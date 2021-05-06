@@ -39,7 +39,7 @@
 	mutanthands = /obj/item/zombie_hand
 	armor = 20 // 120 damage to KO a zombie, which kills it
 	//speedmod = 1.6      SKYRAT CHANGE - Fast Zombies
-	mutanteyes = /obj/item/organ/eyes/night_vision/zombie
+	mutanteyes = /obj/item/organ/eyes/night_vision/advanced/zombie
 	var/heal_rate = 1
 	var/regen_cooldown = 0
 

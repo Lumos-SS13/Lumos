@@ -92,6 +92,7 @@
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,NO_UNDERWEAR,EYECOLOR,LIPS,DIGITIGRADE,NOAROUSAL)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS)
+	dangerous_existence = 1 // Due to them not breathing station air
 	mutantlungs = /obj/item/organ/lungs/ashwalker
 	default_color = "#636463"
 	fixed_mut_color = "#636463"
