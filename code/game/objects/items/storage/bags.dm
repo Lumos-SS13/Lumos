@@ -267,7 +267,7 @@
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
 
 /obj/item/storage/bag/plants/pigtail
-	name = "plant bag"
+	name = "woven plant bag"
 	desc = "A primitive plant bag woven from pig-tail cloth."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag_pigtail"

@@ -1,4 +1,4 @@
-/obj/item/godfig
+/obj/item/godfig // Credit to Vorestation for most of the sprites + bassal code
 	name = "religious icon"
 	desc = "A painted holy figure of a plain looking human man in a robe."
 	//description_info = "Right click to select a new sprite to fit your needs."
