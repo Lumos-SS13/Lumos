@@ -25,9 +25,9 @@
 /obj/item/grown/cotton/pigtails
 	seed = /obj/item/seeds/pigtails
 	name = "pig-tail bundle"
-	desc = "Curly pig-tails, a fiberous plant. It needs to be processed before being turned into textile."
+	desc = "A curly pig-tail bundle. Its fibers need to be processed before being turned into textile."
 	icon_state = "pigtail"
-	force = 1 // like a really crappy whip
+	force = 1 // owie
 	throwforce = 0
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 2

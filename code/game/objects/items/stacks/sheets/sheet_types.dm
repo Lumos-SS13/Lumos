@@ -476,14 +476,14 @@ GLOBAL_LIST_INIT(pigtail_recipes, list ( \
 	name = "pigtail cloth"
 	desc = "Scratchy and itchy, but it works."
 	singular_name = "pigtail cloth roll"
-	icon_state = "sheet-durathread"
-	item_state = "sheet-durathread"
+	icon_state = "sheet-pigtail"
+	item_state = "sheet-pigtail"
 	resistance_flags = FLAMMABLE
 	force = 0
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/pigtail_cloth
 
-/obj/item/stack/sheet/cloth/get_main_recipes()
+/obj/item/stack/sheet/pigtail_cloth/get_main_recipes()
 	. = ..()
 	. += GLOB.pigtail_recipes
 
@@ -910,7 +910,7 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	name = "raw pig-tail bundle"
 	desc = "A bundle of raw pig-tail fiber ready to be spun on the loom."
 	singular_name = "raw pigtail fiber"
-	icon_state = "sheet-pigtail"
+	icon_state = "sheet-pigtailraw"
 	merge_type = /obj/item/stack/sheet/cotton/pigtail
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/pigtail_cloth
