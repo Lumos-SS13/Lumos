@@ -183,7 +183,7 @@
 
 /obj/item/storage/bag/ore/pigtail
 	name = "woven mining satchel"
-	desc = "A fairly durable pigtail cloth bag for transporting ores."
+	desc = "A fairly durable pig-tail cloth bag for transporting ores."
 	icon_state = "satchel_pigtail"
 	w_class = WEIGHT_CLASS_NORMAL
 	resistance_flags = FLAMMABLE
