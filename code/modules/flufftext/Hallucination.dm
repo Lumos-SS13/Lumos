@@ -1011,7 +1011,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.halitem.plane = ABOVE_HUD_PLANE
 			switch(rand(1,6))
 				if(1) //revolver
-					target.halitem.icon = 'icons/obj/guns/projectile.dmi'
+					target.halitem.icon = 'icons/obj/weaponry/ranged/projectile.dmi'
 					target.halitem.icon_state = "revolver"
 					target.halitem.name = "Revolver"
 				if(2) //c4
