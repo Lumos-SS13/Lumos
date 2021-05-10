@@ -9,3 +9,7 @@
 	desc = "A flat, woven cushion. Better than dirt."
 	icon = 'modular_lumos/icons/obj/ashwalker_obj.dmi'
 	icon_state = "pigtail_bed"
+	can_buckle = FALSE
+	buckle_lying = FALSE
+	buildstacktype = /obj/item/stack/sheet/pigtail_cloth
+	buildstackamount = 10

@@ -467,9 +467,6 @@ GLOBAL_LIST_INIT(pigtail_recipes, list ( \
 	new/datum/stack_recipe("improvised gauze", /obj/item/stack/medical/gauze/improvised, 1, 2, 6), \
 	new/datum/stack_recipe("bedsheet", /obj/item/bedsheet/pigtail, 3,), \
 	new/datum/stack_recipe("woven cot", /obj/structure/bed/pigtail, 10, time = 10), \
-	null, \
-	new/datum/stack_recipe("blindfold", /obj/item/clothing/glasses/sunglasses/blindfold, 2), \
-	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2), \
 	))
 
 /obj/item/stack/sheet/pigtail_cloth
