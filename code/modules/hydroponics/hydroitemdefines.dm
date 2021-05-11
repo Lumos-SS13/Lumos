@@ -66,7 +66,7 @@
 	user.visible_message("<span class='suicide'>[user] is scratching [user.p_their()] back as hard as [user.p_they()] can with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
 
-/obj/item/cultivator/wooden
+/obj/item/cultivator/wooden // Wooden handled, for ashwalkers or fashionable botanist
 	ashwalker_desc = "Proper plants require proper protection."
 	icon_state = "cultivator_wooden"
 	item_state = "cultivator_wooden"
@@ -114,6 +114,15 @@
 	throwforce = 7
 	custom_materials = list(/datum/material/iron=50)
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/flail
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	name = "threshing flail"
+	desc = "A tool designed for extracting seeds from plant products."
+	icon_state = "flail"
+	item_state = "flail"
+	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 
 /* LUMOS EDIT START - VINES
 /obj/item/scythe
