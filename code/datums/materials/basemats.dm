@@ -204,7 +204,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 /datum/material/adamantine
 	name = "adamantine"
 	desc = "A powerful material made out of magic, I mean science!"
-	color = "#6d7e8e"
+	color = "#4ed"
 	strength_modifier = 1.5
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/adamantine

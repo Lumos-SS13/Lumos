@@ -110,6 +110,14 @@
 	result = /obj/item/shovel/bone/serrated
 	category = CAT_PRIMAL
 
+/datum/crafting_recipe/primal_flail
+	name = "Threshing Flail"
+	time = 20
+	reqs = list(/obj/item/grown/log = 3,
+				 /obj/item/forging/unfinished/chainlink = 1)
+	result = /obj/item/flail
+	category = CAT_PRIMAL
+
 /datum/crafting_recipe/primal_fish_rod
 	name = "Primal Fishing Rod"
 	time = 20
