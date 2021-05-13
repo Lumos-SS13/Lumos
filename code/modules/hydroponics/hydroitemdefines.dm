@@ -118,12 +118,17 @@
 /obj/item/flail
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	name = "threshing flail"
-	desc = "A tool designed for extracting seeds from plant products."
+	desc = "A tool designed for extracting seeds from plant products." // "Isn't this only good for grains IRL" Yes, shut up.
 	icon_state = "flail"
 	item_state = "flail"
 	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	custom_materials = list(/datum/material/wood=50)
+
+/obj/item/flail/attack_obj(obj/O, mob/living/user)
+	. = ..()
+	if(istype(O, /obj/item/grown))
+		seedify(O, 1)
 
 /* LUMOS EDIT START - VINES
 /obj/item/scythe

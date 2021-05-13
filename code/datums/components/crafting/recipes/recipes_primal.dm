@@ -94,6 +94,7 @@
 /datum/crafting_recipe/boneshovel
 	name = "Bone Shovel"
 	always_availible = FALSE
+	time = 20
 	reqs = list(
 			/obj/item/stack/sheet/bone = 3,
 			/obj/item/grown/log = 3)
@@ -103,6 +104,7 @@
 /datum/crafting_recipe/boneshovelserrated
 	name = "Serrated Bone Shovel"
 	always_availible = FALSE
+	time = 10
 	reqs = list(
             /obj/item/stack/sheet/bone = 1,
             /datum/reagent/oil = 5,
