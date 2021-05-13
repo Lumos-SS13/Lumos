@@ -755,26 +755,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 /obj/item/stack/tile/bronze/thirty
 	amount = 30
 
-/*
- * Lesser and Greater gems - unused
- */
-/obj/item/stack/sheet/lessergem
-	name = "lesser gems"
-	desc = "Rare kind of gems which are only gained by blood sacrifice to minor deities. They are needed in crafting powerful objects."
-	singular_name = "lesser gem"
-	icon_state = "sheet-lessergem"
-	item_state = "sheet-lessergem"
-	novariants = TRUE
-
-
-/obj/item/stack/sheet/greatergem
-	name = "greater gems"
-	desc = "Rare kind of gems which are only gained by blood sacrifice to minor deities. They are needed in crafting powerful objects."
-	singular_name = "greater gem"
-	icon_state = "sheet-greatergem"
-	item_state = "sheet-greatergem"
-	novariants = TRUE
-
 	/*
  * Bones
  */
