@@ -85,6 +85,9 @@
 
 /*
  Lizard subspecies: ASHWALKERS
+ Primitive lizards hailing from the ashen caves of Lavaland
+ Religiously devoted to The Necropolis, treats Lavaland as their holy land
+ Note: Use ashwalker_desc for flavor on anything in the /items paths - Be vauge!
 */
 /datum/species/lizard/ashwalker
 	name = "Ash Walker"

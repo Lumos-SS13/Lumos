@@ -7,6 +7,7 @@
 	hair_color = "FF4B19" //cap color, spot color uses eye color
 	nojumpsuit = TRUE
 
+	sexes = 0 // no need, simple coom in air
 	say_mod = "poofs" //what does a mushroom sound like
 	species_traits = list(MUTCOLORS, NOEYES, NO_UNDERWEAR,NOGENITALS,NOAROUSAL,HAS_FLESH)
 	inherent_traits = list(TRAIT_NOBREATH)

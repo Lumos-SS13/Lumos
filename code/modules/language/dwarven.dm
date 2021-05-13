@@ -2,7 +2,7 @@
 
 /datum/language/dwarf
 	name = "Dwarvish"
-	desc = "The language of the dwarves"
+	desc = "The honorable language of Dwarves. To the initiated, it's a labyrinthian maze of conjugation, contextual verbage, and spliced proper nouns."
 	space_chance = 100 // Each 'syllable' is its own word
 	key = "D"
 	flags = TONGUELESS_SPEECH

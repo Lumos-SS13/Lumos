@@ -1,6 +1,6 @@
 /datum/language/technorussian
 	name = "Technorussian"
-	desc = "Ancient language of Russian colonists, rusted with time and bastardized with technical terms in everyday use."
+	desc = "A pidgin language originating from Pluto and spoken commonly amoungst the lower-class Neo-Slavic populations."
 	speech_verb = "proclaims"
 	ask_verb = "queries"
 	exclaim_verb = "declares"
