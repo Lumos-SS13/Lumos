@@ -125,11 +125,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	custom_materials = list(/datum/material/wood=50)
 
-/obj/item/flail/attack_obj(obj/O, mob/living/user)
-	. = ..()
-	if(istype(O, /obj/item/grown))
-		seedify(O, 1)
-
 /* LUMOS EDIT START - VINES
 /obj/item/scythe
 	icon_state = "scythe0"
