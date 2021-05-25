@@ -16,7 +16,7 @@
 
 	can_allow_icy = FALSE //lumos edit V V V ALL OF THIS TOO V V V
 
-	var/list/fishing_loot = list(
+	var/list/fishing_loot = list( // What you kind of fish you can catch from water
 			/obj/item/fishy/catfish = 25,
 			/obj/item/fishy/shrimp = 25,
 			/obj/item/fishy/lobster = 25,
