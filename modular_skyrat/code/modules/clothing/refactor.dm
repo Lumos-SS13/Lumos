@@ -10,7 +10,7 @@
 */
 
 //port tg's armor energy resists, adds reskins to various armors
-/obj/item/clothing/head/helmet
+/obj/item/clothing/head/helmet/snowflake // Because every fucking helmet doesn't need to be reskinnable
 	can_flashlight = 0 //for the sake of reskins
 	armor = list("melee" = 35, "bullet" = 30, "laser" = 30,"energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 15)
 	unique_reskin_icons = list(

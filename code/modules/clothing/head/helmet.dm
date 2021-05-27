@@ -406,3 +406,11 @@
 	desc = "A police officer's Hat. This hat emphasizes that you are THE LAW."
 	icon_state = "policehelm"
 	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/helmet/snowflake
+	name = "special aesthetic polymer helmet"
+	desc = "A helmet designed with a special hyper-ashesio-warpweave-foldabila-compress-contracto-flex polymer(tm) for semi-maximum customization once. However, it's not much better than a lightless hardhat."
+	icon_state = "helmetalt"
+	item_state = "helmetalt"
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 40, "wound" = 5)
+	dog_fashion = null
