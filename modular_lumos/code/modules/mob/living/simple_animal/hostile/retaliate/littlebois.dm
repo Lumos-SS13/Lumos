@@ -39,6 +39,13 @@
 	faction = list("dog")
 	loot = list(/obj/effect/decal/cleanable/blood, /obj/item/clothing/head/HoS/beret = 1)
 
+/mob/living/simple_animal/hostile/retaliate/samak/rare
+	name = "red samak"
+	desc = "The elusive crimson Samak. Could catch a fat wallop on the free market."
+	icon_state = "samak"
+	icon_living = "samak"
+	icon_dead = "samak_dead"
+
 /mob/living/simple_animal/hostile/retaliate/simbu // The fluff-beast! Later intended to be used in insulation and duraweave collection!
 	name = "simbu"
 	desc = "A small fluffy animal. They grow a thick lining of wool around their small bodies."
