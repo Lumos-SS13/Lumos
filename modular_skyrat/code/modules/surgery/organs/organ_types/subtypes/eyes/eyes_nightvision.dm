@@ -70,7 +70,7 @@
 
 /obj/item/organ/eyes/night_vision/basic/ashwalker
 	name = "reptilian eyes"
-	desc = "Ashwalker eyes are adapted to the dark caves of their home. "
+	desc = "Ashwalker eyes are adapted to the dark caves of their home."
 
 // night_vision/advanced //
 /obj/item/organ/eyes/night_vision/advanced/alien
