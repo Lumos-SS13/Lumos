@@ -51,6 +51,13 @@
 	item_state = "blueshift"
 	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 
+/obj/item/clothing/suit/armor/vest/snowflake
+	name = "special aesthetic polymer vest"
+	desc = "A vest designed with a special hyper-ashesio-warpweave-foldabila-compress-contracto-flex polymer(tm) for semi-maximum customization exactly once. However, it's not much better than a well-used crusty sock."
+	icon_state = "armor_snowflake"
+	item_state = "armor"
+	armor = list("melee" = 15, "bullet" = 20, "laser" = 10, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 40, "wound" = 10)
+
 /obj/item/clothing/suit/armor/hos
 	name = "armored greatcoat"
 	desc = "A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence."

@@ -35,7 +35,7 @@
 
 	var/tiled_dirt = FALSE // use smooth tiled dirt decal
 
-	var/can_allow_icy = TRUE //lumos edit
+	var/can_allow_icy = TRUE // When at a specific atmos temp, will give the icy turf overlay
 
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list("x", "y", "z")

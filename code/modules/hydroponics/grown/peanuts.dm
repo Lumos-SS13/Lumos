@@ -13,7 +13,7 @@
 /obj/item/reagent_containers/food/snacks/grown/peanut
 	seed = /obj/item/seeds/peanutseed
 	name = "peanut"
-	desc = "Peanuts for the peanut gallery!" //get me a better description, boys.
+	desc = "Show the world your peanuts, my friend."
 	icon_state = "peanut"
 	filling_color = "#C4AE7A"
 	bitesize = 100

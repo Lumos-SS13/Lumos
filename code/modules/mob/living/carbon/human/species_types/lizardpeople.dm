@@ -85,6 +85,9 @@
 
 /*
  Lizard subspecies: ASHWALKERS
+ Primitive lizards hailing from the ashen caves of Lavaland
+ Religiously devoted to The Necropolis, treats Lavaland as their holy land
+ Note: Use ashwalker_desc for flavor on anything in the /items paths - Be vauge!
 */
 /datum/species/lizard/ashwalker
 	name = "Ash Walker"
@@ -92,7 +95,9 @@
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,NO_UNDERWEAR,EYECOLOR,LIPS,DIGITIGRADE,NOAROUSAL)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS)
+	dangerous_existence = 1 // Due to them not breathing station air
 	mutantlungs = /obj/item/organ/lungs/ashwalker
+	default_color = "#636463"
 	fixed_mut_color = "#636463"
 	burnmod = 0.8
 	brutemod = 0.9

@@ -7,13 +7,14 @@
 	hair_color = "FF4B19" //cap color, spot color uses eye color
 	nojumpsuit = TRUE
 
+	sexes = 0 // no need, simple coom in air
 	say_mod = "poofs" //what does a mushroom sound like
 	species_traits = list(MUTCOLORS, NOEYES, NO_UNDERWEAR,NOGENITALS,NOAROUSAL,HAS_FLESH)
 	inherent_traits = list(TRAIT_NOBREATH)
 	speedmod = 1.5 //faster than golems but not by much
 
 	punchdamagelow = 2
-	punchdamagehigh = 12 //still better than humans
+	punchdamagehigh = 10 //still better than humans // They're mushrooms, homie
 	punchstunthreshold = 10
 
 	no_equip = list(SLOT_WEAR_MASK, SLOT_WEAR_SUIT, SLOT_GLOVES, SLOT_SHOES, SLOT_W_UNIFORM)
@@ -21,7 +22,7 @@
 	burnmod = 1.25
 	heatmod = 1.5
 
-	mutanteyes = /obj/item/organ/eyes/night_vision/mushroom
+	mutanteyes = /obj/item/organ/eyes/night_vision/basic/mushroom
 	var/datum/martial_art/mushpunch/mush
 	//Skyrat change - blood
 	bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "SPOR")

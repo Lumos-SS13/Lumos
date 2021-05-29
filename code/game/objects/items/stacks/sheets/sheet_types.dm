@@ -457,6 +457,40 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	. += GLOB.durathread_recipes
 
 /*
+ * Woven Pig-Tails
+ */
+
+GLOBAL_LIST_INIT(pigtail_recipes, list ( \
+	new/datum/stack_recipe("plant bag", /obj/item/storage/bag/plants/pigtail, 4),
+	new/datum/stack_recipe("mining satchel", /obj/item/storage/bag/ore/pigtail, 4), \
+	null, \
+	new/datum/stack_recipe("improvised gauze", /obj/item/stack/medical/gauze/improvised, 1, 2, 6), \
+	new/datum/stack_recipe("bedsheet", /obj/item/bedsheet/pigtail, 3,), \
+	new/datum/stack_recipe("woven cot", /obj/structure/bed/pigtail, 10, time = 10), \
+	))
+
+/obj/item/stack/sheet/pigtail_cloth
+	name = "pigtail cloth"
+	desc = "Scratchy and itchy, but it works."
+	singular_name = "pigtail cloth roll"
+	icon_state = "sheet-pigtail"
+	item_state = "sheet-pigtail"
+	resistance_flags = FLAMMABLE
+	force = 0
+	throwforce = 0
+	merge_type = /obj/item/stack/sheet/pigtail_cloth
+
+/obj/item/stack/sheet/pigtail_cloth/get_main_recipes()
+	. = ..()
+	. += GLOB.pigtail_recipes
+
+/obj/item/stack/sheet/pigtail_cloth/ten
+	amount = 10
+
+/obj/item/stack/sheet/pigtail_cloth/thirty
+	amount = 30
+
+/*
  * Cardboard
  */
 GLOBAL_LIST_INIT(cardboard_recipes, list ( \
@@ -721,26 +755,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 /obj/item/stack/tile/bronze/thirty
 	amount = 30
 
-/*
- * Lesser and Greater gems - unused
- */
-/obj/item/stack/sheet/lessergem
-	name = "lesser gems"
-	desc = "Rare kind of gems which are only gained by blood sacrifice to minor deities. They are needed in crafting powerful objects."
-	singular_name = "lesser gem"
-	icon_state = "sheet-lessergem"
-	item_state = "sheet-lessergem"
-	novariants = TRUE
-
-
-/obj/item/stack/sheet/greatergem
-	name = "greater gems"
-	desc = "Rare kind of gems which are only gained by blood sacrifice to minor deities. They are needed in crafting powerful objects."
-	singular_name = "greater gem"
-	icon_state = "sheet-greatergem"
-	item_state = "sheet-greatergem"
-	novariants = TRUE
-
 	/*
  * Bones
  */
@@ -866,6 +880,29 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	merge_type = /obj/item/stack/sheet/cotton/durathread
 	pull_effort = 70
 	loom_result = /obj/item/stack/sheet/durathread
+
+/obj/item/stack/sheet/cotton/durathread/ten
+	amount = 10
+
+/obj/item/stack/sheet/cotton/durathread/thirty
+	amount = 30
+
+// pigtails raw //
+
+/obj/item/stack/sheet/cotton/pigtail
+	name = "raw pig-tail bundle"
+	desc = "A bundle of raw pig-tail fiber ready to be spun on the loom."
+	singular_name = "raw pigtail fiber"
+	icon_state = "sheet-rawpigtail"
+	merge_type = /obj/item/stack/sheet/cotton/pigtail
+	pull_effort = 50
+	loom_result = /obj/item/stack/sheet/pigtail_cloth
+
+/obj/item/stack/sheet/cotton/pigtail/ten
+	amount = 10
+
+/obj/item/stack/sheet/cotton/pigtail/thirty
+	amount = 30
 
 /obj/item/stack/sheet/meat
 	name = "meat sheets"

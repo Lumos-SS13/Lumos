@@ -58,10 +58,6 @@
 /obj/item/reagent_containers/food/snacks/grown/mushroom/jupitercup
 	plantable_flora = /obj/structure/flora/ash/lumos_planting/jupiter_mushroom
 
-//cotton
-/obj/item/grown/cotton
-	plantable_flora = /obj/structure/flora/ash/lumos_planting/cotton_plant
-
 /obj/item/grown/cotton/durathread
 	plantable_flora = /obj/structure/flora/ash/lumos_planting/durathread_plant
 

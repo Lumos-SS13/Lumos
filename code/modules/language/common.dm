@@ -1,7 +1,7 @@
 // 'basic' language; spoken by default.
 /datum/language/common
 	name = "Galactic Common"
-	desc = "The common galactic tongue."
+	desc = "The most common language across populated space."
 	speech_verb = "says"
 	whisper_verb = "whispers"
 	sing_verb = "sings" // Skyrat edit

@@ -8,7 +8,7 @@
 /obj/item/trade_gem
 	name = "uh oh"
 	desc = "you shouldn't be seeing this!"
-	icon = 'icons/obj/items/trade_gems.dmi'
+	icon = 'icons/obj/mining_gems.dmi'
 	icon_state = "uhoh"
 
 // Common-ish //

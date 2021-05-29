@@ -149,18 +149,6 @@
 	harvest_message_med = "You pick several jupiter mushrooms."  
 	harvest_message_high = "You pick a pair of jupiter mushroom."
 
-//Cotton get
-/obj/structure/flora/ash/lumos_planting/cotton_plant
-	icon_state = "cotton"
-	name = "cotton"
-	desc = "A variant of cotton that adapted to the barren environment."
-	harvested_name = "harvested cotton"
-	harvested_desc = "A variant of cotton that adapted to the barren environment."
-	harvest = /obj/item/grown/cotton
-	harvest_message_low = "You pick a cotton ball."
-	harvest_message_med = "You pick several cotton balls."  
-	harvest_message_high = "You pick a pair of cotton balls."
-
 //Durathread get
 /obj/structure/flora/ash/lumos_planting/durathread_plant
 	icon_state = "dura"

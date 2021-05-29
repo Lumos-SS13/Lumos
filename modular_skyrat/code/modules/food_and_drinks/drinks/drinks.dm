@@ -4,7 +4,6 @@
 	desc = "A popular energy drink all around the galaxy. Liked by Mercenaries, Pirates, Megacorporations, and you will like it too."
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	volume = 50
 	list_reagents = list(/datum/reagent/consumable/maint_energy = 50)
@@ -15,7 +14,6 @@
 	desc = "The galaxy's favorite energy drink, now with no calories and less sugar, but with all the energy you need. Unleash the tide!"
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy0"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/zero_fusion = 50)
 	foodtype = SUGAR
@@ -25,7 +23,6 @@
 	desc = "Sometimes you need a break from the standard experience. Tritium Flood will open a canister of acid flavors in your mouth like no drink ever has before."
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy_tritflood"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/tritium_flood = 50)
 	foodtype = SUGAR
@@ -35,7 +32,6 @@
 	desc = "You're gonna burn alright. The galaxy's favorite energy drink now in a spicy mango flavor, feel your throat heating up like the distro pipes but with all the refreshment you'll ever need."
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy_plasmafire"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/plasma_fire = 50)
 	foodtype = SUGAR
@@ -45,7 +41,6 @@
 	desc = "The intense flavor of cherries with all the energy that you'll need, favored and approved by competitive thunderdome teams all around the sector!"
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy_raid"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/raid = 50)
 	foodtype = SUGAR
@@ -55,7 +50,6 @@
 	desc = "The miners demanded it, and we gave it to them. This is everything you need after coming back from rock breaking and monster slaying, all compacted into a refreshing multifruit mix."
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy_megaflavor"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/megaflavor = 50)
 	foodtype = SUGAR
@@ -65,7 +59,6 @@
 	desc = "Made in partnership with the Gorlex Marauders, Maintenance Energy Blood Red will fill you with the rage of a suited contractor, steel walls will feel like paper!"
 	icon = 'modular_skyrat/icons/obj/drinks.dmi'
 	icon_state = "maintenergy_bloodred"
-	crushed_icon = 'modular_skyrat/icons/obj/janitor.dmi'
 	crushed_state = "maintenergy_bloodred_trash"
 	list_reagents = list(/datum/reagent/consumable/maint_energy/blood_red = 50)
 	foodtype = SUGAR

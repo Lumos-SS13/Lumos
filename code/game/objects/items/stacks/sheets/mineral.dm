@@ -100,6 +100,8 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
  */
 /obj/item/stack/sheet/mineral/diamond
 	name = "diamond"
+	desc = "D-D-D-Diamonds??!??!?"
+	ashwalker_desc = "Brilliant crystals, sharp and strong as steel."
 	icon_state = "sheet-diamond"
 	item_state = "sheet-diamond"
 	singular_name = "diamond"
@@ -358,6 +360,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 /*
  * Adamantine
  */
+
 GLOBAL_LIST_INIT(adamantine_recipes, list(
 	new /datum/stack_recipe("incomplete servant golem shell", /obj/item/golem_shell/servant, req_amount=1, res_amount=1),
 	))
@@ -373,6 +376,12 @@ GLOBAL_LIST_INIT(adamantine_recipes, list(
 /obj/item/stack/sheet/mineral/adamantine/get_main_recipes()
 	. = ..()
 	. += GLOB.adamantine_recipes
+
+/obj/item/stack/sheet/mineral/adamantine/ten
+	amount = 10
+
+/obj/item/stack/sheet/mineral/adamantine/thirty
+	amount = 30
 
 /*
  * Runite
@@ -429,6 +438,7 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
 /*
  * Alien Alloy
  */
+
 /obj/item/stack/sheet/mineral/abductor
 	name = "alien alloy"
 	icon = 'icons/obj/abductor.dmi'

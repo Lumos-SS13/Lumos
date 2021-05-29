@@ -181,6 +181,21 @@
 				"<span class='notice'>You scoop up the ores beneath you with your [name].</span>")
 	spam_protection = FALSE
 
+/obj/item/storage/bag/ore/pigtail
+	name = "woven mining satchel"
+	desc = "A fairly durable pig-tail cloth bag for transporting ores."
+	icon_state = "satchel_pigtail"
+	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = FLAMMABLE
+
+/obj/item/storage/bag/ore/pigtail/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/concrete/stack/STR = GetComponent(/datum/component/storage/concrete/stack)
+	STR.allow_quick_empty = TRUE
+	STR.can_hold = typecacheof(list(/obj/item/stack/ore))
+	STR.max_w_class = WEIGHT_CLASS_HUGE
+	STR.max_combined_stack_amount = 35
+
 /obj/item/storage/bag/ore/cyborg
 	name = "cyborg mining satchel"
 	range = 1
@@ -223,6 +238,7 @@
 
 /obj/item/storage/bag/plants
 	name = "plant bag"
+	desc = "A bag for holding lots of plants. Lots."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	w_class = WEIGHT_CLASS_TINY
@@ -236,8 +252,37 @@
 	STR.max_items = 100
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
 
-////////
+/obj/item/storage/bag/plants/holding
+	name = "plant bag of holding"
+	desc = "A bag for holding lots of plants. Alot of lots."
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon_state = "plantbag_bspace"
 
+/obj/item/storage/bag/plants/holding/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = INFINITY
+	STR.max_combined_w_class = INFINITY
+	STR.max_items = 500
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
+
+/obj/item/storage/bag/plants/pigtail
+	name = "woven plant bag"
+	desc = "A primitive plant bag woven from pig-tail cloth."
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon_state = "plantbag_pigtail"
+	w_class = WEIGHT_CLASS_TINY
+	resistance_flags = FLAMMABLE
+
+/obj/item/storage/bag/plants/pigtail/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 40
+	STR.max_items = 40
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb))
+
+//////// Plant Bag / Seed Extractor Hybrid ////////
 /obj/item/storage/bag/plants/portaseeder
 	name = "portable seed extractor"
 	desc = "For the enterprising botanist on the go. Less efficient than the stationary model, it creates one seed per plant."

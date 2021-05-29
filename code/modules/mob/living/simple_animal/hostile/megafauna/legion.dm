@@ -162,7 +162,7 @@ Difficulty: Medium
 	desc = "An ancient staff retrieved from the remains of Legion. The wind stirs as you move it."
 	icon_state = "staffofstorms"
 	item_state = "staffofstorms"
-	icon = 'icons/obj/guns/magic.dmi'
+	icon = 'icons/obj/weaponry/ranged/magic.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	force = 25

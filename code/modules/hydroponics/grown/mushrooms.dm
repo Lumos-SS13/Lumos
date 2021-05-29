@@ -112,7 +112,7 @@
 // Plump Helmet
 /obj/item/seeds/plump
 	name = "pack of plump-helmet mycelium"
-	desc = "This mycelium grows into helmets... maybe."
+	desc = "This mycelium grows into plump-helmets, a staple foodstuff amoungst dwarves and spacemen alike."
 	icon_state = "mycelium-plump"
 	species = "plump"
 	plantname = "Plump-Helmet Mushrooms"
@@ -130,7 +130,7 @@
 /obj/item/reagent_containers/food/snacks/grown/mushroom/plumphelmet
 	seed = /obj/item/seeds/plump
 	name = "plump-helmet"
-	desc = "<I>Plumus Hellmus</I>: Plump, soft and s-so inviting~"
+	desc = "<I>Plumus Hellmus</I>: A hardy edible mushroom. They'll grow anywhere and reproduce quickly."
 	icon_state = "plumphelmet"
 	filling_color = "#9370DB"
 	distill_reagent = /datum/reagent/consumable/ethanol/manly_dorf
