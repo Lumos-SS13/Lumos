@@ -124,6 +124,10 @@
 	lefthand_file = 'icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	custom_materials = list(/datum/material/wood=50)
+	force = 10
+	throwforce = 3 // sucks to suck
+	throw_range = 4
+	attack_verb = list("threshed", "flailed", "walloped", "wacked", "bludgeoned")
 
 /* LUMOS EDIT START - VINES
 /obj/item/scythe

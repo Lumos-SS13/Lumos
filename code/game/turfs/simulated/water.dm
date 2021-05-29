@@ -76,7 +76,7 @@
 /turf/open/water/jungle_world
 	name = "sea water"
 	desc = "The jade green water of NT7643. Briming with strange lifeforms."
-	icon_state = "seadeep"
+	icon_state = "seadeep" // need sprote
 	baseturfs = /turf/open/water/jungle_world
 
 	fishing_loot = list(
