@@ -16,7 +16,8 @@
 
 	can_allow_icy = FALSE //lumos edit V V V ALL OF THIS TOO V V V
 
-	var/list/fishing_loot = list( // What you kind of fish you can catch from water
+// What you kind of fish you can catch from water
+	var/list/fishing_loot = list(
 			/obj/item/fishy/catfish = 25,
 			/obj/item/fishy/shrimp = 25,
 			/obj/item/fishy/lobster = 25,
@@ -25,6 +26,20 @@
 /turf/open/water/airless
 	initial_gas_mix = AIRLESS_ATMOS
 	baseturfs = /turf/open/water/airless
+
+/turf/open/water/seawater // For TheBeach away "mission"
+	name = "sea water"
+	desc = "Deep blue water absolutely brimming with life."
+	icon = 'icons/misc/beach.dmi'
+	icon_state = "seadeep"
+	baseturfs = /turf/open/water/seawater
+
+	fishing_loot = list(
+			/obj/item/fishy/shark = 10,
+			/obj/item/fishy/shrimp = 25,
+			/obj/item/fishy/lobster = 25,
+			/obj/item/fishy/lobster/rock = 10,
+			/obj/item/fishy/salmon = 30)
 
 /turf/open/water/lavaland
 	name = "jungle water"
@@ -45,7 +60,7 @@
 
 /turf/open/water/asteroid
 	name = "asteroid pond"
-	desc = "Shallow water found in some asteroids, often used by astroforms and extremophiles."
+	desc = "Shallow water held onto asteroids, often used by astroforms and extremophiles in their egg and larval stages."
 	baseturfs = /turf/open/floor/plating/asteroid
 
 	fishing_loot = list(
@@ -58,12 +73,24 @@
 	initial_gas_mix = AIRLESS_ATMOS
 	baseturfs = /turf/open/floor/plating/asteroid/airless
 
-/turf/open/water/seawater
+/turf/open/water/jungle_world
 	name = "sea water"
-	desc = "Deep blue water absolutely brimming with life."
-	icon = 'icons/misc/beach.dmi'
+	desc = "The jade green water of NT7643. Briming with strange lifeforms."
 	icon_state = "seadeep"
-	baseturfs = /turf/open/water/seawater
+	baseturfs = /turf/open/water/jungle_world
+
+	fishing_loot = list(
+			/obj/item/fishy/shark = 10,
+			/obj/item/fishy/shrimp = 25,
+			/obj/item/fishy/lobster = 25,
+			/obj/item/fishy/lobster/rock = 10,
+			/obj/item/fishy/salmon = 30)
+
+/turf/open/water/jungle_world/lake
+	name = "jungle lake"
+	desc = "Light green lake water. God knows what's in it."
+	icon_state = "seadeep"
+	baseturfs = /turf/open/water/jungle_world/lake
 
 	fishing_loot = list(
 			/obj/item/fishy/shark = 10,
