@@ -166,6 +166,17 @@
 	crate_name = "security clothing crate"
 	can_private_buy = TRUE
 
+/datum/supply_pack/security/snowflake_clothes
+	name = "Customizable Security Clothes"
+	desc = "Stem the tide with four Security Barrier grenades. Requires Security access to open."
+	contains = list(/obj/item/grenade/barrier,
+					/obj/item/grenade/barrier,
+					/obj/item/grenade/barrier,
+					/obj/item/grenade/barrier)
+	cost = 2000
+	crate_name = "customizable armor kit"
+	can_private_buy = TRUE
+
 /datum/supply_pack/security/supplies
 	name = "Security Supplies Crate"
 	desc = "Contains seven flashbangs, seven teargas grenades, six flashes, and seven handcuffs. Requires Security access to open."
