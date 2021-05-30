@@ -482,7 +482,6 @@
 					/obj/item/clothing/head/caphat/beret/white = 1,
 					/obj/item/clothing/under/rank/captain/parade = 1,
 					/obj/item/clothing/suit/captunic = 1,
-					/obj/item/clothing/under/rank/captain/femformal = 1,
 					/obj/item/clothing/glasses/sunglasses/gar/supergar = 1,
 					/obj/item/clothing/gloves/color/captain = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/cap_wardrobe

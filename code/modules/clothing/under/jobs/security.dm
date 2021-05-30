@@ -51,6 +51,12 @@
 	item_state = "spacepol"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/security/officer/snowflake
+	name = "special aesthetic security jumpsuit"
+	desc = "A security jumpsuit designed with a special skytensive-polymerized-jogmesh(tm) for semi-maximum customization exactly once."
+	icon_state = "rsecurity"
+	item_state = "r_suit"
+
 /*
  * Warden
  */

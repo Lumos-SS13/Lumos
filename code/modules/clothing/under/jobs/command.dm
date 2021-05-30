@@ -42,11 +42,3 @@
 	icon_state = "captain_parade"
 	item_state = "by_suit"
 	can_adjust = FALSE
-
-/obj/item/clothing/under/rank/captain/femformal
-	name = "captain's female formal outfit"
-	desc = "An ironically skimpy blue dress with gold markings denoting the rank of \"Captain\"."
-	icon_state = "lewdcap"
-	item_state = "lewdcap"
-	can_adjust = FALSE
-	mutantrace_variation = STYLE_DIGITIGRADE|USE_TAUR_CLIP_MASK

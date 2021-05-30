@@ -544,7 +544,7 @@
 /obj/item/clothing/suit/security/hos
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 90, "wound" = 15)
 
-/obj/item/clothing/under/rank/security/officer
+/obj/item/clothing/under/rank/security/officer/snowflake
 	can_adjust = FALSE //sorry but adjusting it with reskins would FUCK everything, sacrifice for the greater good
 	unique_reskin_icons = list(
 	"Default" = 'icons/obj/clothing/uniforms.dmi',
@@ -904,15 +904,6 @@
 	"Default - Medium Security" = "prisoner",
 	"Low Security" = "prisoner_lowsec",
 	"Protective Custody" = "prisoner_protcust"
-	)
-
-/obj/item/clothing/under/rank/prisoner/skirt
-	unique_reskin_stored = list(
-	"Super Max" = "prisoner_superwax_skirt",
-	"High Security" = "prisoner_highsec_skirt",
-	"Default - Medium Security" = "prisoner_skirt",
-	"Low Security" = "prisoner_lowsec_skirt",
-	"Protective Custody" = "prisoner_protcust_skirt"
 	)
 
 //durathread buff
