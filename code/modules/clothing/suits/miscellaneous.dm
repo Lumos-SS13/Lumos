@@ -449,13 +449,6 @@
 	item_state = "draculacoat"
 	body_parts_covered = CHEST|ARMS
 
-/obj/item/clothing/suit/drfreeze_coat
-	name = "doctor freeze's labcoat"
-	desc = "A labcoat imbued with the power of features and freezes."
-	icon_state = "drfreeze_coat"
-	item_state = "drfreeze_coat"
-	body_parts_covered = CHEST|GROIN|ARMS
-
 /obj/item/clothing/suit/gothcoat
 	name = "gothic coat"
 	desc = "Perfect for those who want stalk in a corner of a bar."

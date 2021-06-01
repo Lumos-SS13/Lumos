@@ -211,14 +211,6 @@
 	can_adjust = FALSE
 	mutantrace_variation = USE_TAUR_CLIP_MASK
 
-/obj/item/clothing/under/costume/drfreeze
-	name = "doctor freeze's jumpsuit"
-	desc = "A modified scientist jumpsuit to look extra cool."
-	icon_state = "drfreeze"
-	item_state = "drfreeze"
-	can_adjust = FALSE
-	mutantrace_variation = USE_TAUR_CLIP_MASK
-
 /obj/item/clothing/under/costume/lobster
 	name = "foam lobster suit"
 	desc = "Who beheaded the college mascot?"

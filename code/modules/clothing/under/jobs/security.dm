@@ -74,16 +74,6 @@
 	icon_state = "warden"
 	item_state = "gy_suit"
 
-/obj/item/clothing/under/rank/security/warden/skirt
-	name = "warden's suitskirt"
-	desc = "A formal security suitskirt for officers complete with Nanotrasen belt buckle."
-	icon_state = "rwarden_skirt"
-	item_state = "r_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
 /obj/item/clothing/under/rank/security/warden/formal
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
 	name = "warden's formal uniform"

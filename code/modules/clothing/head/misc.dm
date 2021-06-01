@@ -317,12 +317,6 @@
 	icon_state = "lobster_hat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
-/obj/item/clothing/head/drfreezehat
-	name = "doctor freeze's wig"
-	desc = "A cool wig for cool people."
-	icon_state = "drfreeze_hat"
-	flags_inv = HIDEHAIR
-
 /obj/item/clothing/head/pharaoh
 	name = "pharaoh hat"
 	desc = "Walk like an Egyptian."
