@@ -24,8 +24,8 @@
 		/obj/item/clothing/head/kitty = 4,
 		/obj/item/clothing/head/rabbitears = 4,
 		/obj/item/dildo/custom = 4,
-		/obj/item/reagent_containers/pill/crocin = 10,
-		/obj/item/reagent_containers/pill/camphor = 10
+		/obj/item/reagent_containers/pill/crocin = 5,
+		/obj/item/reagent_containers/pill/camphor = 5
 	)
 
 	contraband = list( //Actually dangerous or exploitable shit.
@@ -42,11 +42,11 @@
 	premium = list(
 		/obj/item/clothing/under/costume/jabroni = 2, // Jabroni outfit is 300 credits
 		/obj/item/bdsm_whip = 1,
-		/obj/item/clothing/under/dress/corset = 4,
+		/obj/item/clothing/under/dress/corset = 2,
 		/obj/item/clothing/under/pants/chaps = 4,
-		/obj/item/clothing/accessory/skullcodpiece/fake = 4,
-		/obj/item/reagent_containers/pill/penis_enlargement = 3,
-		/obj/item/reagent_containers/pill/breast_enlargement = 3
+		/obj/item/clothing/head/cowboyhat = 2,
+		/obj/item/clothing/head/cowboyhat/black = 2,
+		/obj/item/clothing/accessory/skullcodpiece/fake = 2
 	)
 
 	refill_canister = /obj/item/vending_refill/kink

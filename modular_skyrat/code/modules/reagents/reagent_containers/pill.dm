@@ -16,18 +16,6 @@
 	icon_state = "pill0"
 	list_reagents = list(/datum/reagent/drug/anaphrodisiac = 10)
 
-/obj/item/reagent_containers/pill/penis_enlargement
-	name = "penis enlargement pill"
-	desc = "Want some penis enlargement pills?"
-	icon_state = "pill13"
-	list_reagents = list(/datum/reagent/fermi/penis_enlarger = 10)
-
-/obj/item/reagent_containers/pill/breast_enlargement
-	name = "breast enlargement pill"
-	desc = "Want some breast enlargement pills?"
-	icon_state = "pill14"
-	list_reagents = list(/datum/reagent/fermi/breast_enlarger = 10)
-
 /obj/item/reagent_containers/glass/bottle/romerol
 	name = "nanite bottle"
 	desc = "A small bottle containing some type of greyish black goop. It swirls with dazzling glints of light, like glitter."
