@@ -14,7 +14,7 @@
 	punchstunthreshold = 10
 	no_equip = list(SLOT_WEAR_MASK, SLOT_WEAR_SUIT, SLOT_GLOVES, SLOT_SHOES, SLOT_W_UNIFORM, SLOT_S_STORE)
 	nojumpsuit = 1
-	sexes = 1
+	sexes = 0
 	damage_overlay_type = ""
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/golem
 	// To prevent golem subtypes from overwhelming the odds when random species
@@ -71,7 +71,7 @@
 	fixed_mut_color = "4ed"
 	info_text = "As an <span class='danger'>Adamantine Golem</span>, you possess special vocal cords allowing you to \"resonate\" messages to all golems. Your unique mineral makeup makes you immune to most types of magic."
 	prefix = "Adamantine"
-	special_names = null
+	special_names = list("Urist", "Momuz", "Mestthos", "Aban", "Kadol", "Ubbul") // max dorf
 
 /datum/species/golem/adamantine/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
@@ -92,7 +92,7 @@
 	info_text = "As a <span class='danger'>Plasma Golem</span>, you burn easily. Be careful, if you get hot enough while burning, you'll blow up!"
 	heatmod = 0 //fine until they blow up
 	prefix = "Plasma"
-	special_names = list("Flood","Fire","Bar","Man")
+	special_names = list("Flood","Fire","Bar")
 	var/boom_warning = FALSE
 	var/datum/action/innate/ignite/ignite
 
@@ -161,7 +161,7 @@
 	meat = /obj/item/stack/ore/gold
 	info_text = "As a <span class='danger'>Gold Golem</span>, you are faster but less resistant than the average golem."
 	prefix = "Golden"
-	special_names = list("Boy")
+	special_names = list("Boy", "Electrum", "Billon")
 
 //Heavier, thus higher chance of stunning when punching
 /datum/species/golem/silver
@@ -172,7 +172,7 @@
 	meat = /obj/item/stack/ore/silver
 	info_text = "As a <span class='danger'>Silver Golem</span>, your attacks have a higher chance of stunning. Being made of silver, your body is immune to most types of magic."
 	prefix = "Silver"
-	special_names = list("Surfer", "Chariot", "Lining")
+	special_names = list("Surfer", "Chariot", "Lining", "Ral", "Billon")
 
 /datum/species/golem/silver/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
@@ -310,7 +310,7 @@
 	var/last_event = 0
 	var/active = null
 	prefix = "Uranium"
-	special_names = list("Oxide", "Rod", "Meltdown")
+	special_names = list("Oxide", "Rod", "Meltdown", "Yellow Cake")
 
 /datum/species/golem/uranium/spec_life(mob/living/carbon/human/H)
 	if(!active)
@@ -333,7 +333,7 @@
 	info_text = "As a <span class='danger'>Sand Golem</span>, you are immune to physical bullets and take very little brute damage, but are extremely vulnerable to burn damage and energy weapons. You will also turn to sand when dying, preventing any form of recovery."
 	attack_sound = 'sound/effects/shovel_dig.ogg'
 	prefix = "Sand"
-	special_names = list("Castle", "Bag", "Dune", "Worm", "Storm")
+	special_names = list("Castle", "Bag", "Dune", "Storm")
 
 /datum/species/golem/sand/spec_death(gibbed, mob/living/carbon/human/H)
 	H.visible_message("<span class='danger'>[H] turns into a pile of sand!</span>")
@@ -496,7 +496,7 @@
 	attack_verb = "honk"
 	attack_sound = 'sound/items/airhorn2.ogg'
 	prefix = "Bananium"
-	special_names = null
+	special_names = list("Honkerman", "Honk", "Banana", "Toe", "Soap")
 
 	var/last_honk = 0
 	var/honkooldown = 0
@@ -572,17 +572,11 @@
 	info_text = "As a <span class='danger'>Runic Golem</span>, you possess eldritch powers granted by the Elder Goddess Nar'Sie."
 	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOEYES,NOGENITALS,NOAROUSAL) //no mutcolors
 	prefix = "Runic"
-	special_names = null
+	special_names = list("Construct", "God-Machine", "Triad", "Exult", "Sigil", "Blood", "Heretic", "Hexen", "Doom", "Romero") // Ot niw 31SS uoy tsum tsubor em, Nhoj Oremor
 
 	var/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift/golem/phase_shift
 	var/obj/effect/proc_holder/spell/targeted/abyssal_gaze/abyssal_gaze
 	var/obj/effect/proc_holder/spell/targeted/dominate/dominate
-
-/datum/species/golem/runic/random_name(gender,unique,lastname)
-	var/edgy_first_name = pick("Razor","Blood","Dark","Evil","Cold","Pale","Black","Silent","Chaos","Deadly","Coldsteel")
-	var/edgy_last_name = pick("Edge","Night","Death","Razor","Blade","Steel","Calamity","Twilight","Shadow","Nightmare") //dammit Razor Razor
-	var/golem_name = "[edgy_first_name] [edgy_last_name]"
-	return golem_name
 
 /datum/species/golem/runic/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
@@ -634,7 +628,7 @@
 	speedmod = 0
 	damage_overlay_type = "synth"
 	prefix = "Clockwork"
-	special_names = list("Remnant", "Relic", "Scrap", "Vestige") //RIP Ratvar
+	special_names = list("Remnant", "Relic", "Scrap", "Vestige", "Derelict", "Construct", "Exult") //RIP Ratvar
 	var/has_corpse
 
 /datum/species/golem/clockwork/on_species_gain(mob/living/carbon/human/H)
@@ -924,7 +918,7 @@
 /datum/species/golem/leather
 	name = "Leather Golem"
 	id = "leather golem"
-	special_names = list("Face", "Man", "Belt") //Ah dude 4 strength 4 stam leather belt AHHH
+	special_names = list("Face", "Man", "Belt", "Head", "Jabroni") //Ah dude 4 strength 4 stam leather belt AHHH
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER, TRAIT_STRONG_GRABBER)
 	prefix = "Leather"
 	fixed_mut_color = "624a2e"
@@ -961,7 +955,7 @@
 	mutanttongue = /obj/item/organ/tongue/bone
 	sexes = FALSE
 	fixed_mut_color = "ffffff"
-	attack_verb = "rattl"
+	attack_verb = "rattle"
 	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOGENITALS,NOAROUSAL,MUTCOLORS)
 	inherent_traits = list(TRAIT_RESISTHEAT,TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_FAKEDEATH,TRAIT_CALCIUM_HEALER)
 	info_text = "As a <span class='danger'>Bone Golem</span>, You have a powerful spell that lets you chill your enemies with fear, and milk heals you! Just make sure to watch our for bone-hurting juice."
