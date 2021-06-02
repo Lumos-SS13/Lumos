@@ -154,14 +154,6 @@
 	icon_state = "plasmarefill"
 	icon = 'icons/obj/device.dmi'
 
-/obj/item/clothing/under/misc/gear_harness
-	name = "gear harness"
-	desc = "A simple, inconspicuous harness replacement for a jumpsuit."
-	icon_state = "gear_harness"
-	item_state = "gear_harness"
-	body_parts_covered = CHEST|GROIN
-	can_adjust = FALSE
-
 /obj/item/clothing/under/misc/durathread
 	name = "durathread jumpsuit"
 	desc = "A jumpsuit made from durathread, its resilient fibres provide some protection to the wearer."

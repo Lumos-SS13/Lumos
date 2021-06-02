@@ -10,7 +10,6 @@
 		/obj/item/clothing/under/rank/civilian/janitor/maid = 2,
 		/obj/item/clothing/under/misc/stripper = 4,
 		/obj/item/clothing/under/misc/stripper/green = 4,
-		/obj/item/clothing/under/misc/gear_harness = 4,
 		/obj/item/clothing/under/shorts/polychromic/pantsu = 4,
 		/obj/item/clothing/under/misc/poly_bottomless = 4,
 		/obj/item/clothing/under/misc/poly_tanktop = 4,

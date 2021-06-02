@@ -482,12 +482,6 @@
 	restricted_roles = list("Assistant", "Bartender", "Botanist", "Cook", "Curator", "Janitor", "Chaplain")
 	restricted_desc = "Service and Civilian, barring Clown, Mime and Lawyer"
 
-//Memes
-/datum/gear/gear_harnesses
-	name = "Gear Harness"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/misc/gear_harness
-
 //Christmas
 /*Commenting out Until next Christmas or made automatic
 /datum/gear/christmasmaler
