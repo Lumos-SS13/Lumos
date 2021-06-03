@@ -31,7 +31,6 @@
 		/obj/item/clothing/neck/petcollar/locked = 2,
 		/obj/item/key/collar = 2,
 		/obj/item/clothing/under/misc/stripper/mankini = 4,
-		/obj/item/clothing/under/misc/keyholesweater = 2,
 		/obj/item/electropack/shockcollar = 4,
 		/obj/item/assembly/signaler = 4,
 		/obj/item/dildo/flared/huge = 4,

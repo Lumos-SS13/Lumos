@@ -249,11 +249,6 @@
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/sweater/blue
 
-/datum/gear/keyholesweater
-	name =  "Keyhole Sweater"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/misc/keyholesweater
-
 /datum/gear/polyjump
 	name = "Polychromic Jumpsuit"
 	category = SLOT_W_UNIFORM
