@@ -170,22 +170,6 @@
 	can_adjust = FALSE
 	mutantrace_variation = USE_TAUR_CLIP_MASK
 
-/obj/item/clothing/under/misc/blue_camo
-	name = "russian blue camo"
-	desc = "Drop and give me dvadtsat!"
-	icon_state = "russobluecamo"
-	item_state = "russobluecamo"
-	can_adjust = FALSE
-	mutantrace_variation = USE_TAUR_CLIP_MASK
-
-/obj/item/clothing/under/misc/keyholesweater
-	name = "keyhole sweater"
-	desc = "What is the point of this, anyway?"
-	icon_state = "keyholesweater"
-	item_state = "keyholesweater"
-	can_adjust = FALSE
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
 /obj/item/clothing/under/misc/stripper
 	name = "pink stripper outfit"
 	icon_state = "stripper_p"
@@ -252,7 +236,7 @@
 	desc = "Great for showing off your underwear in dubious style."
 	icon_state = "polybottomless"
 	item_state = "rainbow"
-	body_parts_covered = CHEST|ARMS	//Because there's no bottom included
+	body_parts_covered = CHEST|ARMS
 	can_adjust = FALSE
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 

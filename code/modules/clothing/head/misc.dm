@@ -434,13 +434,6 @@
 	item_state = "squatter_hat"
 	desc = "Cyka blyat."
 
-/obj/item/clothing/head/russobluecamohat
-	name = "russian blue camo beret"
-	desc = "A symbol of discipline, honor, and lots and lots of removal of some type of skewered food."
-	icon_state = "russobluecamohat"
-	item_state = "russobluecamohat"
-	dynamic_hair_suffix = ""
-
 /obj/item/clothing/head/hunter
 	name = "bounty hunting hat"
 	desc = "Ain't nobody gonna cheat the hangman in my town."
