@@ -35,7 +35,7 @@
 
 /obj/item/book/manual/wiki/security_space_law
 	name = "Corporate Regulations"
-	desc = "A set of Nanotrasen guidelines for keeping law and order on their space stations."
+	desc = "A set of Nanotrasen guidelines for maintaining law and order on their space stations."
 	icon_state = "bookSpaceLaw"
 	author = "Nanotrasen"
 	title = "CorporateRegulations"
