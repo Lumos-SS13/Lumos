@@ -132,28 +132,6 @@
 	var/obj/item/clothing/accessory/maidapron/A = new (src)
 	attach_accessory(A)
 
-/obj/item/clothing/under/costume/singer
-	desc = "Just looking at this makes you want to sing."
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-	body_parts_covered = CHEST|GROIN|ARMS
-	alternate_worn_layer = ABOVE_SHOES_LAYER
-	can_adjust = FALSE
-
-/obj/item/clothing/under/costume/singer/yellow
-	name = "yellow performer's outfit"
-	icon_state = "ysing"
-	item_state = "ysing"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = NO_FEMALE_UNIFORM
-	can_adjust = FALSE
-
-/obj/item/clothing/under/costume/singer/blue
-	name = "blue performer's outfit"
-	icon_state = "bsing"
-	item_state = "bsing"
-	alternate_worn_layer = ABOVE_SHOES_LAYER
-	fitted = FEMALE_UNIFORM_TOP
-
 /obj/item/clothing/under/costume/geisha
 	name = "geisha suit"
 	desc = "Cute space ninja senpai not included."
