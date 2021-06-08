@@ -38,6 +38,12 @@
 	prefix = "_maps/RandomRuins/AnywhereRuins/"
 	suffix = "fountain_hall.dmm"
 
+/datum/map_template/ruin/icemoon/fountain
+	name = "Garden Outpost"
+	id = "gardenoutpost"
+	description = "A small outpost from a Syndicate cell. A small gardening area included."
+	suffix = "icemoon_garden.dmm"
+
 // above and below ground together
 
 /datum/map_template/ruin/icemoon/mining_site
