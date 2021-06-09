@@ -28,8 +28,8 @@
 	the_icon.Blend(icon_foreground, ICON_OVERLAY)
 
 	the_icon.Insert(the_icon, "wanted")
-	the_icon.Insert(icon('icons/obj/contraband.dmi', "poster_being_set"), "poster_being_set")
-	the_icon.Insert(icon('icons/obj/contraband.dmi', "poster_ripped"), "poster_ripped")
+	the_icon.Insert(icon('icons/obj/posters.dmi', "poster_being_set"), "poster_being_set")
+	the_icon.Insert(icon('icons/obj/posters.dmi', "poster_ripped"), "poster_ripped")
 	icon = the_icon
 
 /obj/structure/sign/poster/wanted/roll_and_drop(turf/location)
