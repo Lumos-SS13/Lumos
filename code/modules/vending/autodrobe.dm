@@ -94,17 +94,12 @@
 						/obj/item/clothing/under/rank/civilian/clown/jester = 1,
 						/obj/item/clothing/head/jester = 1,
 						/obj/item/clothing/under/costume/villain = 1,
-						/obj/item/clothing/shoes/singery = 1,
-						/obj/item/clothing/under/costume/singer/yellow = 1,
-						/obj/item/clothing/shoes/singerb = 1,
-						/obj/item/clothing/under/costume/singer/blue = 1,
 						/obj/item/clothing/suit/hooded/carp_costume = 1,
 						/obj/item/clothing/suit/hooded/ian_costume = 1,
 						/obj/item/clothing/suit/hooded/bee_costume = 1,
 						/obj/item/clothing/suit/snowman = 1,
 						/obj/item/clothing/head/snowman = 1,
 						/obj/item/clothing/head/cueball = 1,
-						/obj/item/clothing/under/suit/white_on_white = 1,
 						/obj/item/clothing/under/costume/sailor = 1,
 						/obj/item/clothing/under/custom/white_bikini = 2,
 						/obj/item/clothing/ears/headphones = 2,
@@ -126,9 +121,7 @@
 					/obj/item/skub = 1,
 					/obj/item/clothing/under/costume/lobster = 1,
 					/obj/item/clothing/head/lobsterhat = 1,
-					/obj/item/clothing/head/drfreezehat = 1,
 					/obj/item/clothing/suit/dracula = 1,
-					/obj/item/clothing/suit/drfreeze_coat = 1,
 					/obj/item/clothing/suit/gothcoat = 2,
 					/obj/item/clothing/under/costume/draculass = 1,
 					/obj/item/clothing/under/costume/christmas = 3,
@@ -136,8 +129,7 @@
 					/obj/item/clothing/under/costume/christmas/croptop = 3,
 					/obj/item/clothing/under/costume/christmas/croptop/green = 3,
 					/obj/item/clothing/head/christmashat = 3,
-					/obj/item/clothing/head/christmashatg = 3,
-					/obj/item/clothing/under/costume/drfreeze = 1)
+					/obj/item/clothing/head/christmashatg = 3)
 
 	refill_canister = /obj/item/vending_refill/autodrobe
 	default_price = PRICE_ALMOST_CHEAP

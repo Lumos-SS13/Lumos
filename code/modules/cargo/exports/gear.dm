@@ -265,7 +265,7 @@
 /datum/export/gear/dressshoes
 	cost = 10
 	unit_name = "dress shoes"
-	export_types = list(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/singerb, /obj/item/clothing/shoes/singery)
+	export_types = list(/obj/item/clothing/shoes/laceup)
 
 /datum/export/gear/working
 	cost = 15
@@ -583,7 +583,7 @@ datum/export/gear/glasses //glasses are not worth selling
 	cost = 10
 	unit_name = "fancy clothing"
 	k_elasticity = 1/90 //These will be what sells
-	export_types = list(/obj/item/clothing/under/suit/white_on_white, /obj/item/clothing/under/suit/sl, /obj/item/clothing/under/misc/vice_officer, /obj/item/clothing/under/suit/black, \
+	export_types = list(/obj/item/clothing/under/suit/sl, /obj/item/clothing/under/misc/vice_officer, /obj/item/clothing/under/suit/black, \
 						/obj/item/clothing/under/misc/burial, /obj/item/clothing/under/dress/skirt, /obj/item/clothing/under/rank/captain/parade, /obj/item/clothing/under/rank/security/head_of_security/parade, \
 						/obj/item/clothing/under/rank/security/head_of_security/parade/female, /obj/item/clothing/under/misc/assistantformal, /obj/item/clothing/under/dress/striped, /obj/item/clothing/under/dress/redeveninggown, \
 						/obj/item/clothing/under/dress/skirt/plaid, /obj/item/clothing/under/costume/geisha, /obj/item/clothing/under/trek, /obj/item/clothing/under/rank)
@@ -595,7 +595,7 @@ datum/export/gear/glasses //glasses are not worth selling
 	k_elasticity = 1/90 //These will be what sells
 	export_types = list(/obj/item/clothing/under/misc/durathread, /obj/item/clothing/under/rank/security/officer, /obj/item/clothing/under/plasmaman, /obj/item/clothing/under/syndicate, \
 						/obj/item/clothing/under/rank/security/detective, /obj/item/clothing/under/rank/security/head_of_security, /obj/item/clothing/under/rank/security/officer/spacepol)
-	exclude_types = list(/obj/item/clothing/under/syndicate/tacticool, /obj/item/clothing/under/syndicate/tacticool/skirt)
+	exclude_types = list(/obj/item/clothing/under/syndicate/tacticool)
 	include_subtypes = TRUE
 
 /datum/export/gear/jumpsuit_addon

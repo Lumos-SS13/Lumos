@@ -32,7 +32,6 @@
 	//SKYRAT EDIT END
 	new /obj/item/clothing/neck/cloak/hop(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel(src)
-	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt(src)
 	new /obj/item/clothing/head/hopcap(src)
 	new /obj/item/clothing/head/hopcap/beret(src)
 	new /obj/item/cartridge/hop(src)
@@ -105,7 +104,6 @@
 	new /obj/item/clothing/head/beret/sec/navywarden(src)
 	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
 	new /obj/item/clothing/under/rank/security/warden/formal(src)
-	new /obj/item/clothing/under/rank/security/warden/skirt(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
@@ -219,7 +217,6 @@
 /obj/structure/closet/secure_closet/brig/PopulateContents()
 	..()
 	new /obj/item/clothing/under/rank/prisoner( src )
-	new /obj/item/clothing/under/rank/prisoner/skirt( src )
 	new /obj/item/clothing/shoes/sneakers/orange( src )
 
 /obj/structure/closet/secure_closet/courtroom

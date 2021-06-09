@@ -68,7 +68,7 @@
 
 /obj/item/clothing/under/costume/redcoat
 	name = "redcoat uniform"
-	desc = "Looks old."
+	desc = "You must learn the lingo."
 	icon_state = "redcoat"
 	item_state = "redcoat"
 	can_adjust = FALSE
@@ -112,7 +112,7 @@
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/costume/gladiator/ash_walker
-	desc = "This gladiator uniform appears to be covered in ash and fairly dated."
+	desc = "This bronze armor appears to be covered in ash and fairly dated."
 	ashwalker_desc = "Let is be your second skin, but not your second heart."
 	has_sensor = NO_SENSORS
 	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30) // Taken from Security Jumpsuits
@@ -131,28 +131,6 @@
 	. = ..()
 	var/obj/item/clothing/accessory/maidapron/A = new (src)
 	attach_accessory(A)
-
-/obj/item/clothing/under/costume/singer
-	desc = "Just looking at this makes you want to sing."
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-	body_parts_covered = CHEST|GROIN|ARMS
-	alternate_worn_layer = ABOVE_SHOES_LAYER
-	can_adjust = FALSE
-
-/obj/item/clothing/under/costume/singer/yellow
-	name = "yellow performer's outfit"
-	icon_state = "ysing"
-	item_state = "ysing"
-	body_parts_covered = CHEST|GROIN|ARMS
-	fitted = NO_FEMALE_UNIFORM
-	can_adjust = FALSE
-
-/obj/item/clothing/under/costume/singer/blue
-	name = "blue performer's outfit"
-	icon_state = "bsing"
-	item_state = "bsing"
-	alternate_worn_layer = ABOVE_SHOES_LAYER
-	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/costume/geisha
 	name = "geisha suit"
@@ -208,14 +186,6 @@
 	item_state = "draculass"
 	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-	mutantrace_variation = USE_TAUR_CLIP_MASK
-
-/obj/item/clothing/under/costume/drfreeze
-	name = "doctor freeze's jumpsuit"
-	desc = "A modified scientist jumpsuit to look extra cool."
-	icon_state = "drfreeze"
-	item_state = "drfreeze"
 	can_adjust = FALSE
 	mutantrace_variation = USE_TAUR_CLIP_MASK
 

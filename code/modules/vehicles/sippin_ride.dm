@@ -5,7 +5,7 @@
 /obj/vehicle/ridden/lawnmower
 	name = "lawn mower"
 	desc = "Equipped with reliable safeties to prevent <i>accidents</i> in the workplace."
-	icon = 'modular_lumos/icons/obj/vehicles/vehicles.dmi'
+	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "lawnmower"
 	key_type = /obj/item/key/lawnmower
 	var/emagged = FALSE

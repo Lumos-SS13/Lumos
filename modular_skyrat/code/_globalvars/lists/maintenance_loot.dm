@@ -263,8 +263,6 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	/obj/item/storage/crayons = 25,
 	/obj/item/storage/daki = 50,
 	/obj/item/storage/fancy/heart_box = 25,
-	/obj/item/storage/pill_bottle/breast_enlargement = 25,
-	/obj/item/storage/pill_bottle/penis_enlargement = 25,
 	/obj/item/surgical_drapes = 5,
 	/obj/item/surgicaldrill = 5,
 	/obj/item/switchblade/crafted = 5,

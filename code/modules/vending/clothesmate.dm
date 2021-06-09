@@ -42,7 +42,6 @@
 					/obj/item/clothing/under/pants/tan = 4,
 					/obj/item/clothing/under/pants/track = 3,
 					/obj/item/clothing/suit/jacket/miljacket = 5,
-					/obj/item/clothing/under/suit/white_on_white/skirt = 2,
 					/obj/item/clothing/under/rank/captain/suit/skirt = 2,
 					/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt = 2,
 					/obj/item/clothing/neck/tie/blue = 3,
@@ -158,7 +157,6 @@
 					/obj/item/storage/backpack/duffelbag/polychromic = 3)
 					// SKYRAT EDIT CLOSE
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 3,
-					/obj/item/clothing/under/syndicate/tacticool/skirt = 3,
 					/obj/item/clothing/mask/balaclava = 3,
 					/obj/item/clothing/head/ushanka = 3,
 					/obj/item/clothing/under/costume/soviet = 3,
@@ -166,7 +164,6 @@
 					/obj/item/clothing/suit/jacket/letterman_syndie = 5,
 					/obj/item/clothing/under/costume/jabroni = 2,
 					/obj/item/clothing/under/costume/geisha = 4,
-					/obj/item/clothing/under/misc/keyholesweater = 3,
 					/obj/item/clothing/under/misc/staffassistant = 5)
 	premium = list(/obj/item/clothing/under/suit/checkered = 4,
 					/obj/item/clothing/head/mailman = 2,

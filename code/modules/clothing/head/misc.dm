@@ -86,30 +86,6 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
-/obj/item/clothing/head/justice
-	name = "justice hat"
-	desc = "Fight for what's righteous!"
-	icon_state = "justicered"
-	item_state = "justicered"
-	flags_inv = HIDEHAIR|HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
-	flags_cover = HEADCOVERSEYES
-
-/obj/item/clothing/head/justice/blue
-	icon_state = "justiceblue"
-	item_state = "justiceblue"
-
-/obj/item/clothing/head/justice/yellow
-	icon_state = "justiceyellow"
-	item_state = "justiceyellow"
-
-/obj/item/clothing/head/justice/green
-	icon_state = "justicegreen"
-	item_state = "justicegreen"
-
-/obj/item/clothing/head/justice/pink
-	icon_state = "justicepink"
-	item_state = "justicepink"
-
 /obj/item/clothing/head/rabbitears
 	name = "rabbit ears"
 	desc = "Wearing these makes you look useless, and only good for your sex appeal."
@@ -317,12 +293,6 @@
 	icon_state = "lobster_hat"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
-/obj/item/clothing/head/drfreezehat
-	name = "doctor freeze's wig"
-	desc = "A cool wig for cool people."
-	icon_state = "drfreeze_hat"
-	flags_inv = HIDEHAIR
-
 /obj/item/clothing/head/pharaoh
 	name = "pharaoh hat"
 	desc = "Walk like an Egyptian."
@@ -439,13 +409,6 @@
 	icon_state = "squatter_hat"
 	item_state = "squatter_hat"
 	desc = "Cyka blyat."
-
-/obj/item/clothing/head/russobluecamohat
-	name = "russian blue camo beret"
-	desc = "A symbol of discipline, honor, and lots and lots of removal of some type of skewered food."
-	icon_state = "russobluecamohat"
-	item_state = "russobluecamohat"
-	dynamic_hair_suffix = ""
 
 /obj/item/clothing/head/hunter
 	name = "bounty hunting hat"

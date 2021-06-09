@@ -51,6 +51,12 @@
 	item_state = "spacepol"
 	can_adjust = FALSE
 
+/obj/item/clothing/under/rank/security/officer/snowflake
+	name = "special aesthetic security jumpsuit"
+	desc = "A security jumpsuit designed with a special skytensive-polymerized-jogmesh(tm) for semi-maximum customization exactly once."
+	icon_state = "rsecurity"
+	item_state = "r_suit"
+
 /*
  * Warden
  */
@@ -67,16 +73,6 @@
 	desc = "A formal relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."
 	icon_state = "warden"
 	item_state = "gy_suit"
-
-/obj/item/clothing/under/rank/security/warden/skirt
-	name = "warden's suitskirt"
-	desc = "A formal security suitskirt for officers complete with Nanotrasen belt buckle."
-	icon_state = "rwarden_skirt"
-	item_state = "r_suit"
-	body_parts_covered = CHEST|GROIN|ARMS
-	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/rank/security/warden/formal
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
@@ -175,14 +171,3 @@
 	icon_state = "hos_parade_fem"
 	item_state = "r_suit"
 	fitted = FEMALE_UNIFORM_TOP
-
-/*
- *Spacepol
- */
-
-/obj/item/clothing/under/rank/security/spacepol
-	name = "police uniform"
-	desc = "Space not controlled by megacorporations, planets, or pirates is under the jurisdiction of Spacepol."
-	icon_state = "spacepol"
-	item_state = "spacepol"
-	can_adjust = FALSE

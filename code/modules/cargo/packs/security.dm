@@ -269,3 +269,12 @@
 	cost = 1400
 	contains = list(/obj/item/grenade/stingbang)
 
+/datum/supply_pack/security/snowflake_clothes
+	name = "Customizable Security Clothes"
+	desc = "Wanna be unique? Aesthetical? Now with all new polymerized clothing, you too can look like an overweight military buff! Not liable for disiplinary action, discharges, or terminations from wearing product during work hours."
+	contains = list(/obj/item/clothing/head/helmet/snowflake,
+					/obj/item/clothing/suit/armor/vest/snowflake,
+					/obj/item/clothing/under/rank/security/officer/snowflake)
+	cost = 2000
+	crate_name = "customizable armor kit"
+	can_private_buy = TRUE

@@ -112,8 +112,8 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	//VERY IMPORTANT SKYRAT CHANGE, FARGOTH'S RING
 	/obj/item/clothing/gloves/ring/silver/fargoth = 1,
 	//
-	/obj/item/storage/pill_bottle/penis_enlargement = 2,
-	/obj/item/storage/pill_bottle/breast_enlargement = 2,
+	/obj/item/storage/pill_bottle/penis_enlargement = 2, // Left these incase we ever revert
+	/obj/item/storage/pill_bottle/breast_enlargement = 2, // Removed because horny CoC shit is bad for actual gameplay and RP
 	/obj/item/clothing/shoes/wheelys = 1,
 	/obj/item/clothing/shoes/kindleKicks = 1,
 	/obj/item/autosurgeon/penis = 1,

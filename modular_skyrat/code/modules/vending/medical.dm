@@ -27,7 +27,6 @@
 					/obj/item/storage/hypospraykit/toxin = 4,
 					/obj/item/storage/hypospraykit/o2 = 4,
 					/obj/item/storage/hypospraykit/brute = 4,
-					/obj/item/storage/hypospraykit/enlarge = 4,
 					/obj/item/reagent_containers/hypospray/medipen/ekit = 10,
 					/obj/item/reagent_containers/hypospray/medipen/blood_loss = 10,
 					/obj/item/reagent_containers/glass/bottle/vial/small = 5,

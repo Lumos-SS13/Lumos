@@ -7,17 +7,6 @@
 	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40, "wound" = 5)
 	alt_covers_chest = TRUE
 
-/obj/item/clothing/under/syndicate/skirt
-	name = "tactical skirtleneck"
-	desc = "A non-descript and slightly suspicious looking skirtleneck."
-	icon_state = "syndicate_skirt"
-	item_state = "bl_suit"
-	has_sensor = NO_SENSORS
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40, "wound" = 5)
-	alt_covers_chest = TRUE
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
 /obj/item/clothing/under/syndicate/bloodred
 	name = "blood-red sneaksuit"
 	desc = "An insidious armored jumpsuit lined with Syndicate nanofibers and prototype platings, slightly resistant to most forms of damage, but is far too bulky to have anything attached to it. It still counts as stealth if there are no witnesses."
@@ -41,15 +30,6 @@
 	icon_state = "tactifool"
 	item_state = "bl_suit"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40, "wound" = 0)
-
-/obj/item/clothing/under/syndicate/tacticool/skirt
-	name = "tacticool skirtleneck"
-	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-."
-	icon_state = "tactifool_skirt"
-	item_state = "bl_suit"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40, "wound" = 0)
-	fitted = FEMALE_UNIFORM_TOP
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/syndicate/cosmetic
 	name = "tactitool turtleneck"

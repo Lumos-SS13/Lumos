@@ -9,9 +9,7 @@
 		/obj/item/clothing/head/ushanka = 20,
 		/obj/item/clothing/shoes/jackboots = 20,
 		/obj/item/clothing/head/squatter_hat = 20,
-		/obj/item/clothing/under/misc/squatter = 20,
-		/obj/item/clothing/under/misc/blue_camo = 20,
-		/obj/item/clothing/head/russobluecamohat = 20
+		/obj/item/clothing/under/misc/squatter = 20
 		)
 	contraband = list(
 		/obj/item/clothing/suit/armor/vest/russian_coat = 4,
