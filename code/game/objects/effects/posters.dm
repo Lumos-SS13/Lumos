@@ -6,7 +6,7 @@
 /obj/item/poster
 	name = "poorly coded poster"
 	desc = "You probably shouldn't be holding this."
-	icon = 'modular_skyrat/icons/obj/contraband.dmi'
+	icon = 'icons/obj/posters.dmi'
 	force = 0
 	resistance_flags = FLAMMABLE
 	var/poster_type
@@ -48,7 +48,7 @@
 	name = "poster"
 	var/original_name
 	desc = "A large piece of space-resistant printed paper."
-	icon = 'modular_skyrat/icons/obj/contraband.dmi'
+	icon = 'icons/obj/posters.dmi'
 	plane = ABOVE_WALL_PLANE
 	anchored = TRUE
 	buildable_sign = FALSE //Cannot be unwrenched from a wall.
@@ -636,7 +636,7 @@
 
 /obj/structure/sign/poster/official/fashion
 	name = "Fashion!"
-	desc = "An advertisement for 'Fashion!', a popular fashion magazine, depicting a woman with a black dress with a golden trim, she also has a red poppy in her hair."
+	desc = "An advertisement for 'Fashion!', a popular fashion magazine. It depicts pretty woman with a fancy dress with a golden trim, she also has a red poppy in her hair."
 	icon_state = "poster38_legit"
 
 /obj/structure/sign/poster/official/pda_ad600
@@ -656,7 +656,7 @@
 
 /obj/structure/sign/poster/official/medical_green_cross
 	name = "Medical"
-	desc = "A green cross, one of the interplanetary symbol of health and aid. It has a bunch of common languages at the top with translations." // Didn't the American Heart Foundation trademark red crosses? I'm playing it safe with green, not that they'll notice spacegame13 poster.
+	desc = "A green cross, one of the interplanetary symbol of health and aid. It has a bunch of common languages at the top with translations." // Keep it green, since the actual Red Cross is a trademarked symbol.
 	icon_state = "poster42_legit"
 
 /obj/structure/sign/poster/official/nt_storm_officer
@@ -677,8 +677,8 @@
 	icon_state = "goldstar"
 
 /obj/structure/sign/poster/contraband/panik
-	name = "Panic"
-	desc = "A poster that says... Don't panic?"
+	name = "Don't Panic"
+	desc = "A poster that tells you to not panic. It's not helping."
 	icon_state = "bsposter10"
 
 /obj/structure/sign/poster/contraband/lady1
@@ -698,7 +698,7 @@
 
 /obj/structure/sign/poster/contraband/beach
 	name = "Beach"
-	desc = "A poster of a planet better place than this rust-bucket."
+	desc = "A poster of a planet better than this rust-bucket."
 	icon_state = "vgposter1"
 
 /obj/structure/sign/poster/contraband/grilbeach
@@ -721,20 +721,10 @@
 	desc = "A poster of an apc..."
 	icon_state = "poster-apc"
 
-/obj/structure/sign/poster/contraband/firealarm
-	name = "Fire Alarm"
-	desc = "A poster of a fire alarm..."
-	icon_state = "poster-firealarm"
-
 /obj/structure/sign/poster/contraband/extinguisher
 	name = "Fire Extinguisher"
 	desc = "A poster of a fire extinguisher..."
 	icon_state = "poster-extinguisher"
-
-/obj/structure/sign/poster/contraband/oxycloset
-	name = "Oxygen Closet"
-	desc = "A poster of an... oxygen closet?"
-	icon_state = "poster-oxycloset"
 
 /obj/structure/sign/poster/contraband/nosmokers
 	name = "No Smoking"
@@ -747,8 +737,23 @@
 	icon_state = "poster113"
 
 /obj/structure/sign/poster/contraband/earthhh
-	name = "Earth"
-	desc = "A poster of our home planet... maybe?"
+	name = "Terrasmokum Advertisment"
+	desc = "A poster of Terra, advocating the benefits of smoking... asteroid moss?"
 	icon_state = "poster115"
+
+/obj/structure/sign/poster/contraband/billyh
+	name = "Billy"
+	desc = "A poster with depicting a muscular man."
+	icon_state = "billyposter"
+
+/obj/structure/sign/poster/contraband/billyh2
+	name = "Billy"
+	desc = "A poster depicting a muscular man in a seductive pose."
+	icon_state = "billyposter2"
+
+/obj/structure/sign/poster/contraband/ramranch
+	name = "Robust Ranch"
+	desc = "A sanctuary for lifting, rutting, and bucking. See you in the showers, cowboy."
+	icon_state = "ramranch"
 
 #undef PLACE_SPEED
