@@ -84,7 +84,7 @@
 /obj/item/clothing/under/pants/chaps
 	name = "black chaps"
 	body_parts_covered = LEGS
-	desc = "Yeehaw"
+	desc = "Josh, all chaps are assless."
 	icon_state = "chaps"
 
 /obj/item/clothing/under/pants/yoga

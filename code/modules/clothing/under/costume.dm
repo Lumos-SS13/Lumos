@@ -68,7 +68,7 @@
 
 /obj/item/clothing/under/costume/redcoat
 	name = "redcoat uniform"
-	desc = "Looks old."
+	desc = "You must learn the lingo."
 	icon_state = "redcoat"
 	item_state = "redcoat"
 	can_adjust = FALSE
@@ -112,7 +112,7 @@
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/under/costume/gladiator/ash_walker
-	desc = "This gladiator uniform appears to be covered in ash and fairly dated."
+	desc = "This bronze armor appears to be covered in ash and fairly dated."
 	ashwalker_desc = "Let is be your second skin, but not your second heart."
 	has_sensor = NO_SENSORS
 	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 30) // Taken from Security Jumpsuits

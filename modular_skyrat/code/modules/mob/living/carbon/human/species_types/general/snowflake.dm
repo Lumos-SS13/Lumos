@@ -18,7 +18,7 @@
 /datum/species/ipc
 	name = "I.P.C"
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
-	fluff_desc = "IPCs are produced by Takyon Data Lattices LLC. and are considered sapient manufactured being. Usually they are owned directly by their employers, however are legally and socially treated as organics."
+	fluff_desc = "IPCs are produced by Takyon Data Lattices LLC. and are considered sapient manufactured beings. Usually they are owned directly by their employers, however are legally and socially treated as organics."
 
 /datum/species/plasmaman
 	screamsounds = list('modular_citadel/sound/voice/scream_skeleton.ogg')
