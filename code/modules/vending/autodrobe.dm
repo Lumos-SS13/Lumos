@@ -100,7 +100,6 @@
 						/obj/item/clothing/suit/snowman = 1,
 						/obj/item/clothing/head/snowman = 1,
 						/obj/item/clothing/head/cueball = 1,
-						/obj/item/clothing/under/suit/white_on_white = 1,
 						/obj/item/clothing/under/costume/sailor = 1,
 						/obj/item/clothing/under/custom/white_bikini = 2,
 						/obj/item/clothing/ears/headphones = 2,
