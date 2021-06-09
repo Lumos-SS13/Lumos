@@ -478,6 +478,13 @@
 	volume = 30
 	spillable = TRUE
 
+/obj/item/reagent_containers/food/drinks/gromitmug
+	name = "\improper Gromit Mug"
+	desc = "Gromit Mug."
+	icon_state = "gromitmug"
+	volume = 30
+	spillable = TRUE
+
 //////////////////////////soda_cans////////////////////////////////////////////////////
 //These are in their own group to be used as IED's in /obj/item/grenade/ghettobomb.dm//
 
