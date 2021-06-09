@@ -42,8 +42,6 @@
 					/obj/item/clothing/under/pants/tan = 4,
 					/obj/item/clothing/under/pants/track = 3,
 					/obj/item/clothing/suit/jacket/miljacket = 5,
-					/obj/item/clothing/under/rank/captain/suit/skirt = 2,
-					/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt = 2,
 					/obj/item/clothing/neck/tie/blue = 3,
 					/obj/item/clothing/neck/tie/red = 3,
 					/obj/item/clothing/neck/tie/black = 3,

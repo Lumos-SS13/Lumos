@@ -425,7 +425,7 @@
 
 /obj/structure/sign/poster/contraband/scum
 	name = "Security are Scum"
-	desc = "Anti-security propaganda. Features a human NanoTrasen security officer being shot in the head, with the words 'Scum' and a short inciteful manifesto. Used to anger security."
+	desc = "Anti-security propaganda. Features a NanoTrasen security officer being shot in the head, with the words 'Scum' and a short inciteful manifesto. Used to anger security."
 	icon_state = "poster46"
 
 /obj/structure/sign/poster/contraband/syndicate_logo
@@ -437,6 +437,9 @@
 	name = "Bounty Hunters"
 	desc = "A poster advertising bounty hunting services. \"I hear you got a problem.\""
 	icon_state = "poster48"
+
+
+// 'Official' posters allowed by Nanotrasen
 
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
@@ -516,7 +519,7 @@
 
 /obj/structure/sign/poster/official/ue_no
 	name = "Ue No."
-	desc = "This thing is all in Japanese."
+	desc = "This thing is all in Neo-Kanji."
 	icon_state = "poster14_legit"
 
 /obj/structure/sign/poster/official/get_your_legs

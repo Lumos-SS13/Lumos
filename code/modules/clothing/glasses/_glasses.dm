@@ -230,6 +230,17 @@
 	glass_colour_type = /datum/client_colour/glass_colour/gray
 	dog_fashion = /datum/dog_fashion/head
 
+/obj/item/clothing/glasses/sunglasses/aviators
+	name = "gold rimmed aviators"
+	desc = "Popular among space pilots who hate seeing where they go. Always headin' into twilight."
+	icon_state = "sun_aviator"
+	item_state = "sunglasses_aviator"
+	darkness_view = 1
+	flash_protect = 1
+	tint = 1
+	glass_colour_type = /datum/client_colour/glass_colour/gray
+	dog_fashion = /datum/dog_fashion/head
+
 /obj/item/clothing/glasses/sunglasses/reagent
 	name = "beer goggles"
 	desc = "A pair of sunglasses outfitted with apparatus to scan reagents."

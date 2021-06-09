@@ -368,7 +368,7 @@
 
 /obj/item/clothing/suit/jacket
 	name = "bomber jacket"
-	desc = "Aviators not included."
+	desc = "Aviators sold separately."
 	icon_state = "bomberjacket"
 	item_state = "brownjsuit"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/radio)
