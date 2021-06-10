@@ -14,11 +14,6 @@
 	description = "A fine green bandana with nanotech lining."
 	path = /obj/item/clothing/mask/bandana/green
 
-/datum/gear/bandana/gold
-	name = "Gold Bandana"
-	description = "A fine gold bandana with nanotech lining."
-	path = /obj/item/clothing/mask/bandana/gold
-
 /datum/gear/bandana/black
 	name = "Black Bandana"
 	description = "A fine black bandana with nanotech lining."

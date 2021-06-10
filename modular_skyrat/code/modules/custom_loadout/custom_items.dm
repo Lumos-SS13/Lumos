@@ -11,15 +11,6 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 
 //Donation reward for Random516
-/obj/item/clothing/gloves/fingerless/blutigen_wraps
-	name = "Blutigen Wraps"
-	desc = "The one who wears these had everything and yet lost it all..."
-	icon = 'modular_skyrat/icons/obj/clothing/gloves.dmi'
-	icon_state = "blutigen_wraps"
-	item_state = "blutigen_wraps"
-	mob_overlay_icon = 'modular_skyrat/icons/mob/clothing/hands.dmi'
-
-//Donation reward for Random516
 /obj/item/clothing/suit/blutigen_kimono
 	name = "Blutigen Kimono"
 	desc = "For the eyes bestowed upon this shall seek adventure..."

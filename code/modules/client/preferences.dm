@@ -2420,7 +2420,7 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 						flavor_background = strip_html_simple(msg, MAX_FLAVOR_LEN, TRUE)
 
 				if("flavor_faction")
-					var/new_faction = input(user, "Set your faction", "Character Faction") as null|anything in GLOB.factions_list + list("None (Freelancer)", "Other")
+					var/new_faction = input(user, "Set your faction", "Character Faction") as null|anything in GLOB.factions_list + list("Nanotrasen (Default)", "Other")
 					if(new_faction)
 						if(new_faction == "Other")
 							var/custom_faction = input(user, "Set your custom faction/subfaction, if unique. Don't abuse this.", "Character Faction", flavor_faction) as null|text
