@@ -127,11 +127,6 @@
 	category = SLOT_W_UNIFORM
 	path = /obj/item/clothing/under/dress/flower
 
-/datum/gear/sweptskirt
-	name = "Swept skirt"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/dress/skirt/swept
-
 /datum/gear/croptop
 	name = "Croptop"
 	category = SLOT_W_UNIFORM

@@ -70,7 +70,6 @@
 					/obj/item/clothing/under/dress/sundress/white = 4,
 					/obj/item/clothing/under/dress/striped = 3,
 					/obj/item/clothing/under/dress/sailor = 3,
-					/obj/item/clothing/under/dress/skirt/swept = 3,
 					/obj/item/clothing/under/dress/green = 3,
 					/obj/item/clothing/under/dress/pink = 3,
 					/obj/item/clothing/under/dress/redeveninggown = 3,
