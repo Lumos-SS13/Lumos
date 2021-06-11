@@ -1,5 +1,6 @@
 /turf/open/space/transit
 	name = "\proper hyperspace"
+	desc = "Space is breezing by into the black void."
 	icon_state = "black"
 	dir = SOUTH
 	baseturfs = /turf/open/space/transit
@@ -42,6 +43,7 @@
 	dir = EAST
 
 /turf/open/space/transit/centcom
+	desc = "You're not exactly sure where you are..."
 	dir = SOUTH
 
 /turf/open/space/transit/centcom/Entered(atom/movable/AM, atom/OldLoc)

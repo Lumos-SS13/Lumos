@@ -2,6 +2,7 @@
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	name = "\proper space"
+	desc = "The twilight, virtually endless and awe-inspiring. Too bad you're stuck here."
 	intact = 0
 
 	temperature = TCMB
