@@ -116,14 +116,6 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 
-/obj/item/clothing/under/dress/skirt/swept
-	name = "swept skirt"
-	desc = "Formal skirt."
-	icon_state = "skirt_swept"
-	body_parts_covered = GROIN
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
 /obj/item/clothing/under/dress/corset
 	name = "black corset"
 	desc = "Nanotrasen is not resposible for any organ damage."
