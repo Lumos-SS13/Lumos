@@ -453,7 +453,7 @@
 	result = /obj/item/banner/command/mundane
 	time = 40
 	reqs = list(/obj/item/stack/rods = 2,
-				/obj/item/clothing/under/rank/captain/parade = 1)
+				/obj/item/clothing/under/rank/captain/navy_formal = 1)
 	subcategory = CAT_FURNITURE
 	category = CAT_MISC
 

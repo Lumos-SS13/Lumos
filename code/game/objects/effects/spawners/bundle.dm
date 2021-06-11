@@ -30,7 +30,7 @@
 /obj/effect/spawner/bundle/costume/madscientist
 	name = "mad scientist costume spawner"
 	items = list(
-		/obj/item/clothing/under/rank/captain/suit,
+		/obj/item/clothing/under/rank/security/officer/blueshirt,
 		/obj/item/clothing/head/flatcap,
 		/obj/item/clothing/suit/toggle/labcoat/mad)
 

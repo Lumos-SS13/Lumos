@@ -584,7 +584,7 @@ datum/export/gear/glasses //glasses are not worth selling
 	unit_name = "fancy clothing"
 	k_elasticity = 1/90 //These will be what sells
 	export_types = list(/obj/item/clothing/under/suit/sl, /obj/item/clothing/under/misc/vice_officer, /obj/item/clothing/under/suit/black, \
-						/obj/item/clothing/under/misc/burial, /obj/item/clothing/under/dress/skirt, /obj/item/clothing/under/rank/captain/parade, /obj/item/clothing/under/rank/security/head_of_security/parade, \
+						/obj/item/clothing/under/misc/burial, /obj/item/clothing/under/dress/skirt, /obj/item/clothing/under/rank/captain/navy_formal, /obj/item/clothing/under/rank/security/head_of_security/parade, \
 						/obj/item/clothing/under/rank/security/head_of_security/parade/female, /obj/item/clothing/under/misc/assistantformal, /obj/item/clothing/under/dress/striped, /obj/item/clothing/under/dress/redeveninggown, \
 						/obj/item/clothing/under/dress/skirt/plaid, /obj/item/clothing/under/costume/geisha, /obj/item/clothing/under/trek, /obj/item/clothing/under/rank)
 	include_subtypes = TRUE

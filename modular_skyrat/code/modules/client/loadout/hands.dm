@@ -9,7 +9,6 @@
 	category = SLOT_HANDS
 	path = /obj/item/paicard
 	cost = 2
-
 /datum/gear/cellphone
 	name = "Cellphone"
 	description =  "A compact cellphone for making calls."
