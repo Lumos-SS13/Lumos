@@ -84,10 +84,6 @@
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
 	fluff_desc = "Humanoid is an umbrella term for sapient beings that share many physical similarities with humans, more so than anthropomorphs. Virtually all of them are genemodded humans."
 
-/datum/species/human/humanoid/dunmer
-	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')
-	fluff_desc = "Dunmeri are native to the volcanic planet of Fumarole, a planet incredibly similar to NT8248-B. Due to the similarity, many freelance Dunmeri naturally seek out employment in this sector."
-
 /datum/species/insect
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
 	fluff_desc = "Insectoids are a collection of species hailing from Ocellus-4, a world covered in marshes and opalescent oceans. They're diverse in both body and mind, making it hard to get a definitive summary of their personalities."

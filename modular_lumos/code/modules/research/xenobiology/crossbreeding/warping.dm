@@ -486,7 +486,7 @@ GLOBAL_LIST_INIT(resin_recipes, list ( \
 		/datum/species/zombie, /datum/species/jelly/slime, /datum/species/jelly/luminescent,
 		/datum/species/abductor, /datum/species/android, /datum/species/angel,
 		/datum/species/golem, /datum/species/vampire, /datum/species/dwarf,
-		/datum/species/human/humanoid/dunmer, /datum/species/xeno, /datum/species/dullahan
+		/datum/species/xeno, /datum/species/dullahan
 	)
 
 /obj/effect/slime_rune/black/attack_hand(mob/living/user)

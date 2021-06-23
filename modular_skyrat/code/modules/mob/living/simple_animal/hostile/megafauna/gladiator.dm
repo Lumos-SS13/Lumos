@@ -113,12 +113,6 @@ They deal 35 brute (armor is considered).
 									)
 			say(message = pick(messages), language = /datum/language/draconic)
 			introduced |= H
-		else if(Hspecies.id == "dunmer")
-			var/list/messages = list("I will finisssh what little of your race remainsss, starting with you!",\
-									"Lavaland belongsss to the lizzzards!",\
-									"Thisss sacred land wasn't your property before, it won't be now!")
-			say(message = pick(messages))
-			introduced |= H
 			GiveTarget(H)
 			Retaliate()
 		else

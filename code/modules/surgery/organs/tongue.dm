@@ -28,7 +28,6 @@
 		/datum/language/vox, //Skyrat change - adds vox language
 		/datum/language/machine, //Skyrat change - adds machine language
 		/datum/language/calcic, //Skyrat change - plasmaman language
-		/datum/language/dunmeri, //Skyrat change - dunmer language
 		/datum/language/moffic, //Skyrat change - insect language
 		/datum/language/neokanji, //Skyrat change - generally asian language
 		/datum/language/shadowtongue, //Skyrat change - shadowpeople language

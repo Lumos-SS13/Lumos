@@ -545,7 +545,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		if("SPOR")
 			. = BLOOD_COLOR_MUSHROOM //Mushroom people blood. Dark purple.
 		if("DRK")
-			. = BLOOD_COLOR_DARK //"Dark" blood. Used by dunmer and shadowpeople. Straight up dark.
+			. = BLOOD_COLOR_DARK //"Dark" blood. Used by shadowpeople. Straight up dark.
 		if("BHZ")
 			. = BLOOD_COLOR_BIOHAZARD //"Biohazard" blood. Used by zombies. Dark green.
 		//
