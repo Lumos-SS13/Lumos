@@ -164,7 +164,6 @@ obj/item/robot_module/butler/Initialize()
 		"Spider" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "whitespider"),
 		"Sleek" = image(icon = 'modular_skyrat/icons/mob/customrobot.dmi', icon_state = "sleekpeace"),
 		"Marina" = image(icon = 'modular_skyrat/icons/mob/customrobot.dmi', icon_state = "marinapeace"),
-		"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakepeacebox"),
 		"Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootypeace"),
 		"Male Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "male_bootypeace"),
 		"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_peacekeeper")
@@ -191,11 +190,6 @@ obj/item/robot_module/butler/Initialize()
 			cyborg_base_icon = "marinapeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/customrobot.dmi'
 			has_snowflake_deadsprite = TRUE
-		if("Drake")
-			cyborg_base_icon = "drakepeace" 
-			sleeper_overlay = "drakepeacesleeper"
-			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-			dogborg = TRUE
 		if("Bootyborg")
 			cyborg_base_icon = "bootypeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
