@@ -57,6 +57,38 @@
 	icon_state = "armor_snowflake"
 	item_state = "armor"
 	armor = list("melee" = 15, "bullet" = 20, "laser" = 10, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 40, "wound" = 10)
+	unique_reskin_icons = list(
+	"Default" = 'icons/obj/clothing/suits.dmi',
+	"Tactical" = 'modular_skyrat/icons/obj/clothing/suits.dmi',
+	"Tactical Classic" = 'modular_skyrat/icons/obj/clothing/suits.dmi',
+	"Press" = 'modular_skyrat/icons/obj/clothing/suits.dmi',
+	"HECU" = 'modular_skyrat/icons/obj/clothing/suits.dmi',
+	"Bloody" = 'modular_skyrat/icons/obj/clothing/suits.dmi'
+	)
+	unique_reskin_worn = list(
+	"Default" = 'icons/mob/clothing/suit.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Tactical Classic" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Press" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Bloody" = 'modular_skyrat/icons/mob/clothing/suit.dmi'
+	)
+	unique_reskin_worn_anthro = list(
+	"Default" = 'icons/mob/clothing/suit.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Tactical Classic" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Press" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/suit.dmi',
+	"Bloody" = 'modular_skyrat/icons/mob/clothing/suit.dmi'
+	)
+	unique_reskin = list(
+	"Default" = "armor",
+	"Tactical" = "epic_armor",
+	"Tactical Classic" = "epic_armor_classic",
+	"Press" = "press_armor",
+	"HECU" = "hecu_armor",
+	"Bloody" = "bloody_armor"
+	)
 
 /obj/item/clothing/suit/armor/hos
 	name = "armored greatcoat"

@@ -56,6 +56,52 @@
 	desc = "A security jumpsuit designed with a special skytensive-polymerized-jogmesh(tm) for semi-maximum customization exactly once."
 	icon_state = "rsecurity"
 	item_state = "r_suit"
+	can_adjust = FALSE
+	unique_reskin_icons = list(
+	"Default" = 'icons/obj/clothing/uniforms.dmi',
+	"Tactical" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	"Sol Federation" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	"HECU" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	"Firestarter" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	"Gorka" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	"Bushfighter" = 'modular_skyrat/icons/obj/clothing/uniform.dmi',
+	)
+	unique_reskin_worn = list(
+	"Default" = 'icons/mob/clothing/uniform.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	"Sol Federation" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	"Firestarter" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	"Gorka" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	"Bushfighter" = 'modular_skyrat/icons/mob/clothing/uniform.dmi',
+	)
+	unique_reskin_worn_anthro = list(
+	"Default" = 'icons/mob/clothing/uniform_digi.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	"Sol Federation" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	"Firestarter" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	"Gorka" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	"Bushfighter" = 'modular_skyrat/icons/mob/clothing/uniform_digi.dmi',
+	)
+	unique_reskin = list(
+	"Default" = "rsecurity",
+	"Tactical" = "tactical_uniform",
+	"Sol Federation" = "solfed_uniform",
+	"HECU" = "hecu_uniform",
+	"Firestarter" = "firestarter_uniform",
+	"Gorka" = "gorka_uniform",
+	"Bushfighter" = "rhodebrush",
+	)
+	unique_desc = list(
+	"Default" = "A good classic - tactical red jumpsuit for officers complete with Nanotrasen belt buckle.",
+	"Tactical" = "A tactical black jumpsuit with Nanotrasen's security armband.",
+	"Sol Federation" = "A tactical light-blue jumpsuit complete with kneepads and an insignia of Sol Federation.",
+	"HECU" = "A snow-camofluaged t-shirt and pants, perfect fit for hunting down the free man.",
+	"Firestarter" = "A tactical jumpsuit with some rusty colors.",
+	"Gorka" = "A militaristic jumpsuit coming from Russian colonies, perfect for windy mountains and space alike.",
+	"Bushfighter" = "A button-up shirt and cargo shorts in a very peculiar brush pattern, best worn with boots and webbing. What a time it was.",
+	)
 
 /*
  * Warden

@@ -407,10 +407,40 @@
 	icon_state = "policehelm"
 	dynamic_hair_suffix = ""
 
-/obj/item/clothing/head/helmet/snowflake
+/obj/item/clothing/head/helmet/snowflake // Because every fucking helmet doesn't need to be reskinnable
 	name = "special aesthetic polymer helmet"
 	desc = "A helmet designed with a special hyper-ashesio-warpweave-foldabila-compress-contracto-flex polymer(tm) for semi-maximum customization exactly once. However, it's not much better than a lightless hardhat."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 40, "wound" = 5)
 	dog_fashion = null
+	can_flashlight = 0 //for the sake of reskins
+	armor = list("melee" = 35, "bullet" = 30, "laser" = 30,"energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 15)
+	unique_reskin_icons = list(
+	"Default" = 'icons/obj/clothing/hats.dmi',
+	"Tactical" = 'modular_skyrat/icons/obj/clothing/hats.dmi',
+	"Press" = 'modular_skyrat/icons/obj/clothing/hats.dmi',
+	"HECU" = 'modular_skyrat/icons/obj/clothing/hats.dmi',
+	"HECU Green" = 'modular_skyrat/icons/obj/clothing/hats.dmi'
+	)
+	unique_reskin_worn = list(
+	"Default" = 'icons/mob/clothing/head.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"Press" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"HECU Green" = 'modular_skyrat/icons/mob/clothing/head.dmi'
+	)
+	unique_reskin_worn_anthro = list(
+	"Default" = 'icons/mob/clothing/head.dmi',
+	"Tactical" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"Press" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"HECU" = 'modular_skyrat/icons/mob/clothing/head.dmi',
+	"HECU Green" = 'modular_skyrat/icons/mob/clothing/head.dmi'
+	)
+	unique_reskin = list(
+	"Default" = "helmet",
+	"Tactical" = "epic_helmet",
+	"Press" = "press_helmet",
+	"HECU" = "hecu_helmet",
+	"HECU Green" = "hecu_helmet_green"
+	)
