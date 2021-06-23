@@ -63,13 +63,6 @@
 		if(dna && dna.species)
 			dna.species.spec_revival(src)
 
-/mob/living/carbon/human/species/synthliz
-	race = /datum/species/synthliz
-
-/mob/living/carbon/human/species/synthliz/mangled/Initialize()
-	..()
-	mangle()
-
 /mob/living/carbon/human/species/synth/mangled/Initialize()
 	..()
 	mangle()

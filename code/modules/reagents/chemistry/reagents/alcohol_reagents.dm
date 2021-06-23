@@ -2309,7 +2309,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_desc = "A gray can of booze and oil..."
 
 /datum/reagent/consumable/ethanol/oil_drum/on_mob_life(mob/living/carbon/M)
-	if(isipcperson(M) || issynthliz(M))
+	if(isipcperson(M))
 		quality = RACE_DRINK
 	else
 		M.adjust_disgust(25)

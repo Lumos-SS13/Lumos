@@ -5,7 +5,7 @@
 	value = 0
 	mob_trait = TRAIT_SYNTH
 	languagewhitelist =list("Encoded Audio Language")
-	var/list/blacklistedspecies = list(/datum/species/synth, /datum/species/android, /datum/species/ipc, /datum/species/synthliz, /datum/species/shadow, /datum/species/plasmaman, /datum/species/jelly, /datum/species/jelly/slime)
+	var/list/blacklistedspecies = list(/datum/species/synth, /datum/species/android, /datum/species/ipc, /datum/species/shadow, /datum/species/plasmaman, /datum/species/jelly, /datum/species/jelly/slime)
 
 /datum/quirk/synthetic/add()
 	sleep(10)

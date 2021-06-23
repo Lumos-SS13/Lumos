@@ -1,6 +1,6 @@
 //this file is a skyrat edit
 /*
-	Mechanical wounds are simply put the IPC/Synthliz/Synth equivalent for each wound.
+	Mechanical wounds are simply put the IPC/Synth equivalent for each wound.
 	Instead of using sutures, they get healed with welders - etc.
 */
 
