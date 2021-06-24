@@ -179,10 +179,6 @@
 	filling_color = "#000000"
 	tastes = list("metal" = 1)
 //
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 409fd4fda5 (did the nae nae)
 /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/avian
 	desc = "Tastes like chicken, that's because it is!"
 	icon_state = "birdmeat"
