@@ -1347,6 +1347,9 @@
 /mob/living/carbon/human/species/humanoid
 	race = /datum/species/human/humanoid
 
+/mob/living/carbon/human/species/dunmer
+	race = /datum/species/human/humanoid/dunmer
+
 /mob/living/carbon/human/species/vox
 	race = /datum/species/vox
 

@@ -86,6 +86,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 // Skyrat specific species
 #define isvox(A) (is_species(A, /datum/species/vox))
 #define ishumanoid(A) (is_species(A, /datum/species/human/humanoid))
+#define isdunmer(A) (is_species(A, /datum/species/human/humanoid/dunmer))
 #define isanthro(A) (is_species(A, /datum/species/anthro))
 #define ismammal(A) (is_species(A, /datum/species/anthro/mammal))
 #define isavian(A) (is_species(A, /datum/species/anthro/avian))

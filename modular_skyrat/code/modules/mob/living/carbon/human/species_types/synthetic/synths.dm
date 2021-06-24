@@ -44,7 +44,7 @@
 	//Power cord so they no die hungry
 	mutant_organs = list(/obj/item/organ/cyberimp/arm/power_cord)
 
-/datum/species/synth/proc/assume_disguise(datum/species/S, mob/living/carbon/human/H) //rework the proc for it to NOT fuck up with other skyrat custom races
+/datum/species/synth/proc/assume_disguise(datum/species/S, mob/living/carbon/human/H) //rework the proc for it to NOT fuck up with dunmer/other skyrat custom races
 	if(S && !istype(S, type))
 		name = S.name
 		say_mod = S.say_mod

@@ -27,6 +27,11 @@
 		/datum/language/dwarf,
 		/datum/language/vox, //Skyrat change - adds vox language
 		/datum/language/machine, //Skyrat change - adds machine language
+<<<<<<< HEAD
+=======
+		/datum/language/calcic, //Skyrat change - plasmaman language
+		/datum/language/dunmeri, //Skyrat change - dunmer language
+>>>>>>> parent of d1df8e8a58 (With this character's death the prophesy has been severed. Reload to a previous save or persist in this doomed world you've created.)
 		/datum/language/moffic, //Skyrat change - insect language
 		/datum/language/neokanji, //Skyrat change - generally asian language
 		/datum/language/shadowtongue, //Skyrat change - shadowpeople language

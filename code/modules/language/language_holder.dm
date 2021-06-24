@@ -320,6 +320,7 @@ Key procs
 								/datum/language/solcommon = list(LANGUAGE_ATOM),
 								/datum/language/technorussian = list(LANGUAGE_ATOM),
 								/datum/language/neokanji = list(LANGUAGE_ATOM),
+								/datum/language/dunmeri = list(LANGUAGE_ATOM),
 								/datum/language/dwarf = list(LANGUAGE_ATOM),
 								// LUMOS EDIT - MOAR LANGUAGES
 								/datum/language/vox = list(LANGUAGE_ATOM),
@@ -333,6 +334,7 @@ Key procs
 							/datum/language/solcommon = list(LANGUAGE_ATOM),
 							/datum/language/technorussian = list(LANGUAGE_ATOM),
 							/datum/language/neokanji = list(LANGUAGE_ATOM),
+							/datum/language/dunmeri = list(LANGUAGE_ATOM),
 							/datum/language/slime = list(LANGUAGE_ATOM),
 							/datum/language/dwarf = list(LANGUAGE_ATOM),
 							// LUMOS EDIT - MOAR LANGUAGES
