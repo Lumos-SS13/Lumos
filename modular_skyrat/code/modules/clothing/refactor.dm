@@ -30,17 +30,6 @@
 	armor = list("melee" = 25, "bullet" = 0, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50, "wound" = 10)
 	unique_reskin = null
 
-/obj/item/clothing/head/helmet/roman/fake
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
-
-/obj/item/clothing/head/helmet/redtaghelm
-	armor = list("melee" = 15, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50, "wound" = 5)
-	unique_reskin = null
-
-/obj/item/clothing/head/helmet/bluetaghelm
-	armor = list("melee" = 15, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50, "wound" = 5)
-	unique_reskin = null
-
 /obj/item/clothing/head/helmet/knight
 	armor = list("melee" = 50, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80, "wound" = 25)
 	unique_reskin = null
