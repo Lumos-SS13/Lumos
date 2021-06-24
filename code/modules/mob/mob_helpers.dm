@@ -532,6 +532,8 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		if("BUG")// yellowish, like, y'know bug guts I guess.
 			. = BLOOD_COLOR_BUG
 		//Skyrat blood types
+		if("S") //Synthlizard
+			. = BLOOD_COLOR_LIZARD
 		if("PL")
 			. = BLOOD_COLOR_PLANT //Plant people blood. Bright green.
 		if("AL")

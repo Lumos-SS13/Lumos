@@ -40,6 +40,10 @@
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
 	fluff_desc = "An advanced model of IPCs, made not only to replicate humanoid behavior but also humanoid appearance. Although they were originally built to be humanlike, they come in various \"species\", and, of course, suffer under the same prejudices of other synthetics."
 
+/datum/species/synthliz
+	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
+	fluff_desc = "Synthetic Lizardpeople are a variant of IPC, much more advanced in construction. Although benefitting from higher production quality and improved internal systems, they still suffer from all of the original problems that being a synthetic humanoid comes with."
+
 /datum/species/android
 	screamsounds = list('modular_citadel/sound/voice/scream_silicon.ogg')
 	fluff_desc = "Some may accidentally assume Androids are some form of IPC, but infact all androids are or were human at some point. Most androids arise from rampant technophilia or massive bodily repair."

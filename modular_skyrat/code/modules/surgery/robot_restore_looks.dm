@@ -55,6 +55,14 @@
 				var/new_ipc_chassis = input(user, "Choose a new chassis", "New Chassis") as null|anything in GLOB.ipc_chassis_list
 				if(new_ipc_chassis)
 					target.dna.species.mutant_bodyparts["ipc_chassis"] = new_ipc_chassis
+		else if(issynthliz(target) && target.dna?.species?.mutant_bodyparts)
+			var/continues = input(user, "Do you wish to set the unit's appearances to synthlizard defaults?", "Additional Changes") as null|anything in list("Yes", "No")
+			if(continues == "Yes")
+				target.dna.species.mutant_bodyparts["ipc_antenna"] = "Synthetic Lizard - Antennae"
+				target.dna.species.mutant_bodyparts["mam_tail"] = "Synthetic Lizard"
+				target.dna.species.mutant_bodyparts["mam_snouts"] = "Synthetic Lizard - Snout"
+				target.dna.species.mutant_bodyparts["legs"] = "Digitigrade"
+				target.dna.species.mutant_bodyparts["mam_body_markings"] = "Synthetic Lizard - Plates"
 		if(target.dna?.species?.mutant_bodyparts)
 			var/continues = input(user, "Do you wish to set the reassign the unit's gender?", "Additional Changes") as null|anything in list("Yes", "No")
 			if(continues == "Yes")

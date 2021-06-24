@@ -373,7 +373,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
 /*
-	IPC/SYNTH CONSTRUCTION
+	IPC/SYNTHLIZ/SYNTH CONSTRUCTION
 	HELL YEAH LETS GET THIS BREAD
 */
 
@@ -404,6 +404,17 @@
 	research_icon = 'modular_skyrat/icons/mob/ipc/ipc_parts.dmi'
 	research_icon_state = "synth_chest"
 	build_path = /mob/living/carbon/human/species/synth/mangled
+	materials = list(/datum/material/iron = 7000, /datum/material/titanium = 10000, /datum/material/plasma = 5000, /datum/material/gold = 5000, /datum/material/glass = 1000)
+	construction_time = 150
+	category = list("IPC")
+
+/datum/design/synthliz_chassis
+	name = "Synth lizard chassis"
+	id = "synthliz_chassis"
+	build_type = MECHFAB
+	research_icon = 'modular_skyrat/icons/mob/ipc/ipc_parts.dmi'
+	research_icon_state = "synth_chest"
+	build_path = /mob/living/carbon/human/species/synthliz/mangled
 	materials = list(/datum/material/iron = 7000, /datum/material/titanium = 10000, /datum/material/plasma = 5000, /datum/material/gold = 5000, /datum/material/glass = 1000)
 	construction_time = 150
 	category = list("IPC")
