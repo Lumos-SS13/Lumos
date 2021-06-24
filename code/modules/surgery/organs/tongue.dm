@@ -31,6 +31,9 @@
 =======
 		/datum/language/calcic, //Skyrat change - plasmaman language
 		/datum/language/dunmeri, //Skyrat change - dunmer language
+<<<<<<< HEAD
+>>>>>>> parent of d1df8e8a58 (With this character's death the prophesy has been severed. Reload to a previous save or persist in this doomed world you've created.)
+=======
 >>>>>>> parent of d1df8e8a58 (With this character's death the prophesy has been severed. Reload to a previous save or persist in this doomed world you've created.)
 		/datum/language/moffic, //Skyrat change - insect language
 		/datum/language/neokanji, //Skyrat change - generally asian language
