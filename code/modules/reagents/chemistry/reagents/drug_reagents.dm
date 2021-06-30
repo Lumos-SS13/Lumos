@@ -37,7 +37,7 @@
 
 /datum/reagent/drug/nicotine
 	name = "Nicotine"
-	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
+	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage." //Does not actually do toxin and oxygen damage on overdose.
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
 	addiction_threshold = 30
@@ -56,6 +56,18 @@
 	M.adjustStaminaLoss(-0.5*REM, 0)
 	..()
 	. = 1
+
+/datum/reagent/drug/nicotine/addiction_act_stage1(mob/living/M)
+	to_chat(M, "<span class='warning'>[pick("Your head hurts.", "You think about how nice a cigarette would be right now.")]</span>")
+
+/datum/reagent/drug/nicotine/addiction_act_stage2(mob/living/M)
+	to_chat(M, "<span class='warning'>[pick("Your head hurts a lot.", "You could really use a smoke.", "Little things are starting to annoy you.")]</span>")
+
+/datum/reagent/drug/nicotine/addiction_act_stage3(mob/living/M)
+	to_chat(M, "<span class='warning'>[pick("Your head hurts!", "You feel the need to get a pack of cigarettes.", "You feel like everything is annoying.")]</span>")
+
+/datum/reagent/drug/nicotine/addiction_act_stage4(mob/living/M)
+	to_chat(M, "<span class='warning'>[pick("You have a strong urge for nicotine!", "You feel a pulsing pain in the back of your head.", "You feel angry about everything.")]</span>")
 
 /datum/reagent/drug/crank
 	name = "Crank"
