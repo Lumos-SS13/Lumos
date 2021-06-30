@@ -125,7 +125,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -145,7 +145,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -168,7 +168,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -187,7 +187,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -203,7 +203,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -820,7 +820,7 @@ obj/item/storage/box/stingbangs
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -1524,3 +1524,18 @@ obj/item/storage/box/stingbangs
 	for(var/i in 1 to 12)
 		new /obj/item/reagent_containers/food/drinks/soda_cans/space_up(src)
 
+/obj/item/storage/patch_pack
+	name = "patch pack"
+	desc = "It's a container for storing medical patches."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "patch_pack"
+
+/obj/item/storage/patch_pack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/pill/patch/))
+	STR.max_items = 10
+	w_class = WEIGHT_CLASS_SMALL
+	STR.display_numerical_stacking = TRUE
+	STR.allow_quick_gather = TRUE
+	STR.click_gather = TRUE
