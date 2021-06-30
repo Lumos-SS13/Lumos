@@ -44,6 +44,7 @@
 	taste_description = "smoke"
 	trippy = FALSE
 	pH = 8
+	metabolization_rate = 0.75 * REAGENTS_METABOLISM
 
 /datum/reagent/drug/nicotine/on_mob_life(mob/living/carbon/M)
 	if(prob(1))
