@@ -41,6 +41,7 @@
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
 	addiction_threshold = 30
+	overdose_threshold = 30
 	taste_description = "smoke"
 	trippy = FALSE
 	pH = 8
@@ -54,20 +55,27 @@
 	M.AdjustAllImmobility(-20, 0)
 	M.AdjustUnconscious(-20, 0)
 	M.adjustStaminaLoss(-0.5*REM, 0)
+	if(prob(10))
+		M.adjustToxLoss(1*REM, 0)
+		M.adjustOxyLoss(5*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/nicotine/addiction_act_stage1(mob/living/M)
-	to_chat(M, "<span class='warning'>[pick("Your head hurts.", "You think about how nice a cigarette would be right now.")]</span>")
+	if(prob(5))
+		to_chat(M, "<span class='warning'>[pick("Your head hurts.", "You think about how nice a cigarette would be right now.")]</span>")
 
 /datum/reagent/drug/nicotine/addiction_act_stage2(mob/living/M)
-	to_chat(M, "<span class='warning'>[pick("Your head hurts a lot.", "You could really use a smoke.", "Little things are starting to annoy you.")]</span>")
+	if(prob(9))
+		to_chat(M, "<span class='warning'>[pick("Your head hurts a lot.", "You could really use a smoke.", "Little things are starting to annoy you.")]</span>")
 
 /datum/reagent/drug/nicotine/addiction_act_stage3(mob/living/M)
-	to_chat(M, "<span class='warning'>[pick("Your head hurts!", "You feel the need to get a pack of cigarettes.", "You feel like everything is annoying.")]</span>")
+	if(prob(15))
+		to_chat(M, "<span class='warning'>[pick("Your head hurts!", "You feel the need to get a pack of cigarettes.", "You feel like everything is annoying.")]</span>")
 
 /datum/reagent/drug/nicotine/addiction_act_stage4(mob/living/M)
-	to_chat(M, "<span class='warning'>[pick("You have a strong urge for nicotine!", "You feel a pulsing pain in the back of your head.", "You feel angry about everything.")]</span>")
+	if(prob(25))
+		to_chat(M, "<span class='warning'>[pick("You have a strong urge for nicotine!", "You feel a pulsing pain in the back of your head.", "You feel angry about everything.")]</span>")
 
 /datum/reagent/drug/crank
 	name = "Crank"
