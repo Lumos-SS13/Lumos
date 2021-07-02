@@ -282,7 +282,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/robustgold
 	desc = "A Robust Gold brand cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/medicine/stimulants = 2)
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/medicine/stimulants = 2, /datum/material/gold = 5)
 
 /obj/item/clothing/mask/cigarette/carp
 	desc = "A Carp Classic brand cigarette."
