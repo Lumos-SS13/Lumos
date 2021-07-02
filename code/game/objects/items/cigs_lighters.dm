@@ -115,8 +115,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/type_butt = /obj/item/cigbutt
 	var/lastHolder = null
 	var/smoketime = 300
-	var/chem_volume = 30
-	var/list/list_reagents = list(/datum/reagent/drug/nicotine = 15)
+	var/chem_volume = 60
+	var/list/list_reagents = list(/datum/reagent/drug/nicotine = 40)
 	heat = 1000
 
 /obj/item/clothing/mask/cigarette/suicide_act(mob/user)
@@ -206,7 +206,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(iscarbon(loc))
 			var/mob/living/carbon/C = loc
 			if (src == C.wear_mask) // if it's in the human/monkey mouth, transfer reagents to the mob
-				var/fraction = min(REAGENTS_METABOLISM/reagents.total_volume, 1)
+				var/fraction = min(REAGENTS_METABOLISM/reagents.total_volume, 0.5)
 				reagents.reaction(C, INGEST, fraction)
 				if(!reagents.trans_to(C, REAGENTS_METABOLISM))
 					reagents.remove_any(REAGENTS_METABOLISM)
@@ -219,8 +219,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/mob/living/M = loc
 	if(isliving(loc))
 		M.IgniteMob()
+		M.adjustOrganLoss(ORGAN_SLOT_LUNGS, 0.5)
 	smoketime--
-	if(smoketime < 1)
+	if(reagents && reagents.total_volume == 0)
 		new type_butt(location)
 		if(ismob(loc))
 			to_chat(M, "<span class='notice'>Your [name] goes out.</span>")
@@ -272,25 +273,25 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/uplift
 	desc = "An Uplift Smooth brand cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 7.5, /datum/reagent/consumable/menthol = 7.5)
+	list_reagents = list(/datum/reagent/drug/nicotine = 25, /datum/reagent/consumable/menthol = 15)
 
 /obj/item/clothing/mask/cigarette/robust
 	desc = "A Robust brand cigarette."
 
 /obj/item/clothing/mask/cigarette/robustgold
 	desc = "A Robust Gold brand cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/gold = 1)
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/gold = 10)
 
 /obj/item/clothing/mask/cigarette/carp
 	desc = "A Carp Classic brand cigarette."
 
 /obj/item/clothing/mask/cigarette/syndicate
 	desc = "An unknown brand cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/medicine/omnizine = 15)
+	list_reagents = list(/datum/reagent/drug/nicotine = 20, /datum/reagent/medicine/omnizine = 20)
 
 /obj/item/clothing/mask/cigarette/shadyjims
 	desc = "A Shady Jim's Super Slims cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/toxin/lipolicide = 4, /datum/reagent/ammonia = 2, /datum/reagent/toxin/plantbgone = 1, /datum/reagent/toxin = 1.5)
+	list_reagents = list(/datum/reagent/drug/nicotine = 25, /datum/reagent/toxin/lipolicide = 10, /datum/reagent/ammonia = 2.5, /datum/reagent/toxin/plantbgone = 2.5, /datum/reagent/toxin = 2.5)
 
 /obj/item/clothing/mask/cigarette/xeno
 	desc = "A Xeno Filtered brand cigarette."
