@@ -4,6 +4,7 @@
 	color = "#FFFF00"
 	nodamage = TRUE
 	knockdown = 60
+	stun = 10
 	knockdown_stamoverride = 36
 	knockdown_stam_max = 50
 	stutter = 10
@@ -39,7 +40,7 @@
 
 /obj/item/projectile/energy/electrode/security
 	tase_duration = 30
-	knockdown = 0
+	knockdown = 20
 	stamina = 10
 	knockdown_stamoverride = 0
 	knockdown_stam_max = 0
