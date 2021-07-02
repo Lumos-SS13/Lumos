@@ -270,6 +270,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/dromedary
 	desc = "A DromedaryCo brand cigarette."
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/water = 5)
 
 /obj/item/clothing/mask/cigarette/uplift
 	desc = "An Uplift Smooth brand cigarette."
@@ -277,13 +278,15 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/cigarette/robust
 	desc = "A Robust brand cigarette."
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/medicine/stimulants = 1)
 
 /obj/item/clothing/mask/cigarette/robustgold
 	desc = "A Robust Gold brand cigarette."
-	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/gold = 10)
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/medicine/stimulants = 2)
 
 /obj/item/clothing/mask/cigarette/carp
 	desc = "A Carp Classic brand cigarette."
+	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/medicine/perfluorodecalin = 5)
 
 /obj/item/clothing/mask/cigarette/syndicate
 	desc = "An unknown brand cigarette."
@@ -309,7 +312,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	throw_speed = 0.5
 	item_state = "spliffoff"
 	smoketime = 180
-	chem_volume = 50
+	chem_volume = 75
 	list_reagents = null
 
 /obj/item/clothing/mask/cigarette/rollie/New()
@@ -354,7 +357,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	throw_speed = 0.5
 	item_state = "cigaroff"
 	smoketime = 1500
-	chem_volume = 40
+	chem_volume = 100
+	list_reagents = list(/datum/reagent/drug/nicotine = 70)
 
 /obj/item/clothing/mask/cigarette/cigar/cohiba
 	name = "\improper Cohiba Robusto cigar"
@@ -363,7 +367,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_on = "cigar2on"
 	icon_off = "cigar2off"
 	smoketime = 2000
-	chem_volume = 80
+	chem_volume = 100
+	list_reagents = list(/datum/reagent/drug/nicotine = 70, /datum/reagent/medicine/stimulants = 3)
 
 
 /obj/item/clothing/mask/cigarette/cigar/havana
@@ -374,6 +379,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_off = "cigar2off"
 	smoketime = 7200
 	chem_volume = 50
+	list_reagents = list(/datum/reagent/drug/nicotine = 70, /datum/reagent/drug/crank = 4)
+
 
 /obj/item/cigbutt
 	name = "cigarette butt"
