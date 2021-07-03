@@ -55,8 +55,8 @@
 	M.AdjustAllImmobility(-8, 0)
 	M.AdjustUnconscious(-8, 0)
 	M.adjustStaminaLoss(-0.5*REM, 0)
-	if(prob(10))
-		M.adjustToxLoss(0.25*REM, 0)
+	if(prob(1))
+		M.adjustToxLoss(0.05*REM, 0)
 		M.adjustOxyLoss(0.5*REM, 0)
 	..()
 	. = 1
