@@ -1611,6 +1611,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "mechbay"
 	ambientsounds = ENGINEERING
 
+/area/science/scilowerlevel
+	name = "Lower Sci Deck"
+	icon_state = "toxlab"
+
 /area/science/lowerlevelmaint
 	name = "Lower Sci. Deck Maintenance"
 	icon_state = "maint_sci"
