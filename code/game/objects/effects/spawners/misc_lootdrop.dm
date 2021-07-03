@@ -24,6 +24,12 @@
 		/turf/closed/wall = 25,
 		/obj/structure/falsewall = 75)
 
+/obj/effect/spawner/lootdrop/wall/fifty_percent_reinforcedfalsewall
+	name = "50% reinforced falsewall"
+	loot = list(
+		/turf/closed/wall/r_wall = 50,
+		/obj/structure/falsewall/reinforced = 50)
+
 /obj/effect/spawner/lootdrop/tenpercent_basic_tool
 	name = "10% basic tool"
 	loot = list(
@@ -186,3 +192,17 @@
 	loot = list(
 		/obj/item/soap = 75,
 		"" = 25)
+
+// GLOVES
+
+/obj/effect/spawner/lootdrop/latexgloves/seventyfive_percent
+	name = "75% latex gloves"
+	loot = list(
+		/obj/item/clothing/gloves/color/latex = 75,
+		"" = 25)
+
+/obj/effect/spawner/lootdrop/insuls/seventyfive_percent
+	name = "75% insulated gloves"
+	loot = list(
+		/obj/item/clothing/gloves/color/yellow = 75,
+		/obj/item/clothing/gloves/color/fyellow = 25)
