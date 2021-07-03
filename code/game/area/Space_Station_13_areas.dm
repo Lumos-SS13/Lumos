@@ -1601,7 +1601,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/garage
 	name = "Security Garage Bay"
 	icon_state = "security"
-	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
 /area/security/sparestorage
 	name = "Security Storage Closet"
@@ -1615,11 +1614,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/science/lowerlevelmaint
 	name = "Lower Sci. Deck Maintenance"
 	icon_state = "maint_sci"
-	ambientsounds = MAINTENANCE
-	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
 
 /area/service/basements
 	name = "Service Basement"
-	icon_state "maint_bar"
-	ambientsounds = MAINTENANCE
-	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
+	icon_state = "maint_bar"
