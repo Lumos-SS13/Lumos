@@ -24,6 +24,12 @@
 		/turf/closed/wall = 25,
 		/obj/structure/falsewall = 75)
 
+/obj/effect/spawner/lootdrop/wall/fifty_percent_reinforcedfalsewall
+	name = "50% reinforced falsewall"
+	loot = list(
+		/turf/closed/wall/r_wall = 50,
+		/obj/structure/falsewall/reinforced = 50)
+
 /obj/effect/spawner/lootdrop/tenpercent_basic_tool
 	name = "10% basic tool"
 	loot = list(
