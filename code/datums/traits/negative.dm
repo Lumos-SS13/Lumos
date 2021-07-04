@@ -249,6 +249,28 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	desc = "An accident caused you to lose one of your limbs. Because of this, you now have a random prosthetic!"
 	value = -1
 	var/slot_string = "limb"
+	var/specific = null
+	medical_record_text = "During physical examination, patient was found to have a prosthetic limb."
+
+/datum/quirk/prosthetic_limb/left_arm
+	name = "Prosthetic Limb (Left Arm)"
+	desc = "An accident caused you to lose your left arm. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_L_ARM
+
+/datum/quirk/prosthetic_limb/right_arm
+	name = "Prosthetic Limb (Right Arm)"
+	desc = "An accident caused you to lose your right arm. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_R_ARM
+
+/datum/quirk/prosthetic_limb/left_leg
+	name = "Prosthetic Limb (Left Leg)"
+	desc = "An accident caused you to lose your left leg. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_L_LEG
+
+/datum/quirk/prosthetic_limb/right_leg
+	name = "Prosthetic Limb (Right Leg)"
+	desc = "An accident caused you to lose your right leg. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_R_LEG
 
 /datum/quirk/prosthetic_limb/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -257,6 +279,9 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
 	else
 		limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+		if(specific)
+			limb_slot = specific
+
 	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
 	var/obj/item/bodypart/prosthetic
 	switch(limb_slot)
