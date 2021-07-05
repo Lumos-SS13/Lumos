@@ -54,3 +54,24 @@
 	response_help_continuous = "respects the authority of"
 	response_help_simple = "respect the authority of"
 	gold_core_spawnable = FRIENDLY_SPAWN
+
+/mob/living/simple_animal/hostile/retaliate/bat/araneus //used to be entirely done in mapping, adding it as a seperate mob - chatter
+	name = "Sergeant Araneus"
+	icon_state = "guard"
+	icon_living = "guard"
+	icon_dead = "guard_dead"
+	icon_gib = "guard_dead"
+	turns_per_move = 10
+	desc = "A fierce companion for any person of power, this spider has been carefully trained by NanoTrasen specialists. Its beady, staring eyes send shivers down your spine."
+	response_help_simple = "pet"
+	response_help_continuous = "pet"
+	movement_type = GROUND
+	maxHealth = 250
+	health = 250
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	faction = list("spiders")
+	speak_emote = list("chitters")
+
+
+
