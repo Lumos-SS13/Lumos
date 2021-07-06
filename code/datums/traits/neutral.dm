@@ -114,7 +114,7 @@
 	lose_text = "<span class='notice'>Pain has become less exciting for you.</span>"
 
 //Skyrat change start
-/datum/quirk/alcohol_lightweight  
+/datum/quirk/alcohol_lightweight
 	name = "Alcoholic Lightweight"
 	desc = "Alcohol really goes straight to your head, gotta be careful with what you drink."
 	value = 0
@@ -140,3 +140,68 @@
 	if(H)
 		var/datum/species/species = H.dna.species
 		species.disliked_food &= ~ALCOHOL
+
+/datum/quirk/prosthetic_limb
+	name = "Prosthetic Limb"
+	desc = "An accident caused you to lose one of your limbs. Because of this, you now have a prosthetic!"
+	value = -1
+	var/slot_string = "limb"
+	var/specific = null
+	medical_record_text = "During physical examination, patient was found to have a prosthetic limb."
+
+/datum/quirk/prosthetic_limb/left_arm
+	name = "Prosthetic Limb (Left Arm)"
+	desc = "An accident caused you to lose your left arm. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_L_ARM
+	value = 0
+
+/datum/quirk/prosthetic_limb/right_arm
+	name = "Prosthetic Limb (Right Arm)"
+	desc = "An accident caused you to lose your right arm. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_R_ARM
+	value = 0
+
+/datum/quirk/prosthetic_limb/left_leg
+	name = "Prosthetic Limb (Left Leg)"
+	desc = "An accident caused you to lose your left leg. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_L_LEG
+	value = 0
+
+/datum/quirk/prosthetic_limb/right_leg
+	name = "Prosthetic Limb (Right Leg)"
+	desc = "An accident caused you to lose your right leg. Because of this, it's replaced with a prosthetic!"
+	specific = BODY_ZONE_R_LEG
+	value = 0
+
+/datum/quirk/prosthetic_limb/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/limb_slot
+	if(HAS_TRAIT(H, TRAIT_PARA))//Prevent paraplegic legs being replaced
+		limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+	else
+		limb_slot = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+		if(specific)
+			limb_slot = specific
+
+	var/obj/item/bodypart/old_part = H.get_bodypart(limb_slot)
+	var/obj/item/bodypart/prosthetic
+	switch(limb_slot)
+		if(BODY_ZONE_L_ARM)
+			prosthetic = new/obj/item/bodypart/l_arm/robot/surplus(quirk_holder)
+			slot_string = "left arm"
+		if(BODY_ZONE_R_ARM)
+			prosthetic = new/obj/item/bodypart/r_arm/robot/surplus(quirk_holder)
+			slot_string = "right arm"
+		if(BODY_ZONE_L_LEG)
+			prosthetic = new/obj/item/bodypart/l_leg/robot/surplus(quirk_holder)
+			slot_string = "left leg"
+		if(BODY_ZONE_R_LEG)
+			prosthetic = new/obj/item/bodypart/r_leg/robot/surplus(quirk_holder)
+			slot_string = "right leg"
+	prosthetic.replace_limb(H)
+	qdel(old_part)
+	H.regenerate_icons()
+
+/datum/quirk/prosthetic_limb/post_add()
+	to_chat(quirk_holder, "<span class='boldannounce'>Your [slot_string] has been replaced with a surplus prosthetic. It is fragile and will easily come apart under duress. Additionally, \
+	you need to use a welding tool and cables to repair it, instead of bruise packs and ointment.</span>")
