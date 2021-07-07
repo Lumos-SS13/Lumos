@@ -38,23 +38,24 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/on_mob_add(mob/living/L, amount)
 	. = ..()
 	if(ishuman(L))
-		L.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.75 * REM)
 		var/mob/living/carbon/human/H = L
 		if(H.physiology?.allergies & ALCOHOL)
 			H.ForceContractDisease(new /datum/disease/anaphylactic_shock())
 			to_chat(H, "<span class='danger'><b>As you feel your muscles inflaming, you realize how much you fucked up.</b></span>")
 
 /datum/reagent/consumable/ethanol/on_mob_life(mob/living/carbon/C)
+	if(prob(5))C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.375 * REM)
 	if(HAS_TRAIT(C, TRAIT_NO_ALCOHOL))
 		C.adjustToxLoss((boozepwr/20)*REM,forced = TRUE)
+		if(prob(5))C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.75 * REM)
 	else if(C.drunkenness < volume * boozepwr * ALCOHOL_THRESHOLD_MODIFIER)
 		var/booze_power = boozepwr
 		if(HAS_TRAIT(C, TRAIT_ALCOHOL_TOLERANCE)) //we're an accomplished drinker
 			booze_power *= 0.5
-			C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.05 * REM)
+			if(prob(5)) C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.025 * REM)
 		else if(HAS_TRAIT(C, TRAIT_ALCOHOL_LIGHTWEIGHT)) //Skyrat change
 			booze_power *= 2 //Skyrat change
-			C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.1 * REM)
+			if(prob(5)) C.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.5 * REM)
 		C.drunkenness = max((C.drunkenness + (sqrt(volume) * booze_power * ALCOHOL_RATE)), 0) //Volume, power, and server alcohol rate effect how quickly one gets drunk
 		var/obj/item/organ/liver/L = C.getorganslot(ORGAN_SLOT_LIVER)
 		if(L)
