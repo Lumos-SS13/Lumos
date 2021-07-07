@@ -6357,16 +6357,6 @@
 /area/hallway/primary/starboard/fore)
 "anU" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external{
-	name = "Mining Dock Airlock";
-	req_access_txt = "48"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
@@ -6380,6 +6370,16 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external{
+	name = "Mining Dock Airlock";
+	req_access_txt = "48"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "anV" = (
@@ -14941,9 +14941,6 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -15329,9 +15326,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
-	},
-/obj/structure/cable/white{
-	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/lab)
@@ -16317,14 +16311,14 @@
 	pixel_x = -26
 	},
 /obj/structure/rack,
-/obj/item/storage/box/flashbangs{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/item/storage/box/handcuffs,
 /obj/item/storage/box/teargas{
 	pixel_x = 3;
 	pixel_y = 3
+	},
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/flashbangs{
+	pixel_x = -3;
+	pixel_y = -3
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
@@ -20255,6 +20249,8 @@
 	pixel_x = -5;
 	pixel_y = -5
 	},
+/obj/item/crowbar/red,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "bjj" = (
@@ -24898,7 +24894,7 @@
 	pixel_y = 24
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "dHj" = (
@@ -26027,14 +26023,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	areastring = "/area/science/lab";
-	dir = 4;
-	name = "Research Lab APC";
-	pixel_x = 26
-	},
-/obj/structure/cable/white{
-	icon_state = "0-8"
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/lab)
@@ -28672,8 +28663,14 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/item/crowbar/red,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/gun/syringe,
+/obj/item/storage/box/beakers{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/syringes,
+/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "gqb" = (
@@ -29890,24 +29887,16 @@
 /area/engine/break_room)
 "hdK" = (
 /obj/effect/turf_decal/bot,
-/obj/structure/table/reinforced,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -26
 	},
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/gun/syringe,
-/obj/item/storage/box/beakers{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/box/syringes,
-/obj/item/clothing/neck/stethoscope,
-/obj/item/clothing/neck/stethoscope,
 /obj/machinery/camera/autoname{
 	dir = 4
 	},
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel,
 /area/medical/storage)
 "hdP" = (
@@ -33140,24 +33129,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output,
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
-"jmV" = (
-/obj/structure/cable/white{
-	icon_state = "4-8"
-	},
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/hallway/primary/port/aft)
 "jnK" = (
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/effect/turf_decal/stripes/line{
@@ -34291,13 +34262,6 @@
 /area/engine/engineering)
 "kkK" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external{
-	name = "Mining Dock Airlock";
-	req_access_txt = "48"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
@@ -34316,6 +34280,16 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external{
+	name = "Mining Dock Airlock";
+	req_access_txt = "48"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -34789,9 +34763,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/white,
 /area/science/lab)
 "kKR" = (
@@ -39242,9 +39213,6 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
 	},
@@ -43620,6 +43588,9 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 8
 	},
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "rJR" = (
@@ -44679,10 +44650,6 @@
 /turf/open/floor/plating,
 /area/quartermaster/qm)
 "sxz" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -44696,11 +44663,17 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/white{
-	icon_state = "1-8"
-	},
 /obj/machinery/camera/autoname{
 	dir = 1
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/science/lab";
+	dir = 1;
+	name = "Research Lab APC";
+	pixel_y = -26
+	},
+/obj/structure/cable/white{
+	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/lab)
@@ -51731,7 +51704,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "wjF" = (
-/obj/machinery/droneDispenser/preloaded,
+/obj/machinery/droneDispenser/snowflake,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "wka" = (
@@ -85212,7 +85185,7 @@ cWR
 qDA
 cAV
 uvF
-jmV
+rqS
 vlx
 sJG
 aFy
