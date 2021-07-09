@@ -9,7 +9,7 @@
 	supervisors = "the Captain"
 	selection_color = "#ddddff"
 	minimal_player_age = 7
-	exp_requirements = 2400
+	exp_requirements = 360 // Lumos change - Lowering blueshield requirement to 6 hours
 	exp_type = EXP_TYPE_SECURITY
 
 	paycheck = PAYCHECK_HARD

@@ -9,7 +9,7 @@
 	supervisors = "the head of personnel"
 	selection_color = "#dddddd"
 	//SKYRAT CHANGES - adds job exp to clown, requires 100 hours.
-	exp_requirements = 6000
+	exp_requirements = 600 //Lumos change - 10 hours. We aren't as cruel as "Some people". But we don't trust new players either.
 	exp_type = EXP_TYPE_CREW
 	//END OF SKYRAT CHANGES
 
