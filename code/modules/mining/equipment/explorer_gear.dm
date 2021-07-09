@@ -69,8 +69,8 @@
 // C.A.M.P. Suit - Civilian mining suit for prospective prospectors. //
 
 /obj/item/clothing/suit/hooded/explorer/campsuit
-	name = "C.A.M.P. Suit"
-	desc = "The Civilian Assisting Mining Personnel Suit is designed to provide bare minimum life support and protection for non-qualified mining personnel."
+	name = "S.E.V.A. Suit"
+	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
 	w_class = WEIGHT_CLASS_BULKY
@@ -78,20 +78,20 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	hoodtype = /obj/item/clothing/head/hooded/explorer/campsuit
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 15, "bio" = 50, "rad" = 25, "fire" = 20, "acid" = 25, "wound" = 5) //skyrat edit
-	resistance_flags = FIRE_PROOF
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
 /obj/item/clothing/head/hooded/explorer/campsuit
-	name = "C.A.M.P. Hood"
-	desc = "A lightweight hood, giving minor physical protection and minimum life support."
+	name = "S.E.V.A. Hood"
+	desc = "A fire-proof hood for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
 	item_state = "seva"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 15, "bio" = 50, "rad" = 25, "fire" = 20, "acid" = 25, "wound" = 5) //skyrat edit
-	resistance_flags = FIRE_PROOF
+	resistance_flags = FIRE_PROOF | GOLIATH_WEAKNESS
 
 /obj/item/clothing/mask/gas/campsuit
-	name = "C.A.M.P. Mask"
-	desc = "A basic rubber gasmask faceplate, designed for use with the C.A.M.P. Suit."
+	name = "S.E.V.A. Mask"
+	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
 	icon_state = "seva"
 	item_state = "seva"
 	resistance_flags = FIRE_PROOF
