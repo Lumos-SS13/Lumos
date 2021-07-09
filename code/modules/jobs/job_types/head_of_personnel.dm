@@ -12,7 +12,7 @@
 	selection_color = "#3a8529"
 	req_admin_notify = 1
 	minimal_player_age = 20
-	exp_requirements = 180
+	exp_requirements = 540 // Lumos change - Upping head requirements to 9 hours in their respective departments
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_SERVICE
 

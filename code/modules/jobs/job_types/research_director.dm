@@ -13,7 +13,7 @@
 	req_admin_notify = 1
 	minimal_player_age = 10
 	exp_type_department = EXP_TYPE_SCIENCE
-	exp_requirements = 180
+	exp_requirements = 540 // Lumos change - Upping head requirements to 9 hours in their respective departments
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/rd
