@@ -2622,10 +2622,6 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "afM" = (
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/machinery/camera{
 	c_tag = "Xenobiology Labs";
 	dir = 4;
@@ -2640,6 +2636,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
+	},
+/obj/machinery/airalarm/unlocked{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/xenobiology)
@@ -4476,23 +4476,33 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/xenobiology)
 "akq" = (
-/obj/structure/cable{
-	icon_state = "2-4"
+/obj/structure/sign/warning/nosmoking{
+	pixel_y = 32
 	},
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/rack,
+/obj/item/stack/cable_coil{
+	pixel_y = 8
 	},
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -24
+/obj/item/stack/rods/ten{
+	pixel_y = 4
 	},
-/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 10
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "akr" = (
 /obj/structure/cable{
-	icon_state = "1-8"
+	icon_state = "0-2"
 	},
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/department/electrical";
+	dir = 1;
+	name = "Electrical Maintenance APC";
+	pixel_y = 23
+	},
+/obj/structure/spider/stickyweb,
+/obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "akt" = (
@@ -4505,9 +4515,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "akv" = (
@@ -4578,18 +4586,14 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "akD" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
+/obj/machinery/power/smes,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/sign/warning/electricshock{
+	pixel_y = 32
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 24
-	},
+/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "akE" = (
@@ -4914,8 +4918,12 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
@@ -4924,12 +4932,18 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "alu" = (
-/obj/structure/table,
-/obj/item/clothing/gloves/color/fyellow{
-	pixel_y = 6
+/obj/machinery/power/terminal{
+	dir = 1
 	},
-/obj/item/storage/toolbox/electrical,
-/obj/structure/spider/stickyweb,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 24
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "alv" = (
@@ -6512,21 +6526,9 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "ape" = (
-/obj/structure/sign/warning/nosmoking{
-	pixel_y = 32
-	},
-/obj/structure/rack,
-/obj/item/stack/cable_coil{
-	pixel_y = 8
-	},
-/obj/item/stack/rods/ten{
-	pixel_y = 4
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 10
-	},
-/turf/open/floor/plating,
-/area/maintenance/department/electrical)
+/obj/structure/sign/poster/contraband/missing_gloves,
+/turf/closed/wall,
+/area/maintenance/starboard)
 "apf" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "aux_base_shutters";
@@ -6636,6 +6638,10 @@
 	pixel_x = -28
 	},
 /obj/item/wallframe/apc,
+/obj/item/storage/toolbox/electrical,
+/obj/item/clothing/gloves/color/fyellow{
+	pixel_y = 6
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "apq" = (
@@ -7041,19 +7047,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
-"aqf" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	areastring = "/area/maintenance/department/electrical";
-	dir = 1;
-	name = "Electrical Maintenance APC";
-	pixel_y = 23
-	},
-/obj/structure/spider/stickyweb,
-/turf/open/floor/plating,
-/area/maintenance/department/electrical)
 "aqg" = (
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
@@ -7106,24 +7099,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
-"aql" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/spider/stickyweb,
-/turf/open/floor/plating,
-/area/maintenance/department/electrical)
-"aqn" = (
-/obj/machinery/power/smes,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/sign/warning/electricshock{
-	pixel_y = 32
-	},
-/obj/structure/spider/stickyweb,
-/turf/open/floor/plating,
-/area/maintenance/department/electrical)
 "aqo" = (
 /obj/effect/turf_decal/lumos/tile/blue/half{
 	dir = 1
@@ -9101,12 +9076,23 @@
 	},
 /obj/effect/landmark/blobstart,
 /obj/machinery/space_heater,
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/starboard";
+	name = "Starboard Maintenance APC";
+	pixel_y = -23
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "auv" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 1;
 	name = "Distro to Connector"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -9205,19 +9191,6 @@
 /obj/effect/turf_decal/stripes/end,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"auN" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink";
-	pixel_y = 28
-	},
-/obj/effect/landmark/xeno_spawn,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/turf/open/floor/plating,
-/area/maintenance/department/electrical)
 "auP" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -10362,10 +10335,6 @@
 	},
 /turf/open/floor/plating,
 /area/tcommsat/computer)
-"axl" = (
-/obj/structure/sign/poster/contraband/missing_gloves,
-/turf/closed/wall,
-/area/maintenance/starboard)
 "axm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command/glass{
@@ -10397,6 +10366,9 @@
 	req_one_access_txt = "10;24;5"
 	},
 /obj/machinery/atmospherics/pipe/layer_manifold,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/starboard)
 "axp" = (
@@ -10428,13 +10400,6 @@
 /obj/effect/landmark/start/mining_engineer,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
-"axt" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Electrical Maintenance";
-	req_access_txt = "11"
-	},
-/turf/open/floor/plasteel/dark,
-/area/maintenance/department/electrical)
 "axu" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "mech bay morgue";
@@ -17778,6 +17743,9 @@
 "aNp" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -46113,22 +46081,14 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "bVG" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc{
-	areastring = "/area/maintenance/starboard";
-	name = "Starboard Maintenance APC";
-	pixel_y = -23
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -47001,7 +46961,7 @@
 /obj/machinery/atmospherics/pipe/manifold/general/visible,
 /obj/machinery/light,
 /obj/machinery/camera{
-	c_tag = "justice chamber";
+	c_tag = "Justice Chamber";
 	dir = 1;
 	name = "Justice Chamber security camera";
 	network = list("ss13","prison")
@@ -51279,6 +51239,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -62178,12 +62141,17 @@
 /area/security/brig)
 "cLA" = (
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "1-8"
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cLC" = (
-/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cLE" = (
@@ -62194,7 +62162,6 @@
 	name = "Electrical Maintenance";
 	req_access_txt = "11"
 	},
-/obj/structure/spider/stickyweb,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -62209,17 +62176,24 @@
 /area/maintenance/starboard)
 "cLH" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "2-4"
 	},
-/obj/item/storage/belt/utility,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	name = "old sink";
+	pixel_y = 28
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cLI" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "1-8"
 	},
-/obj/structure/spider/stickyweb,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cLM" = (
@@ -62315,6 +62289,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
 	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cMj" = (
@@ -62367,6 +62344,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
 	},
+/obj/item/storage/belt/utility,
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "cMu" = (
@@ -62735,11 +62713,11 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
 	},
-/obj/machinery/airalarm/mixingchamber{
+/obj/effect/turf_decal/bot,
+/obj/machinery/airalarm/unlocked{
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
 /area/science/mixing/chamber)
 "cPa" = (
@@ -108515,7 +108493,7 @@ bkd
 bkd
 cLs
 cLs
-axt
+cLs
 cLE
 cLs
 cLs
@@ -108769,8 +108747,8 @@ cMC
 abt
 bkd
 aeu
+aeu
 cLs
-ape
 akq
 als
 amr
@@ -108780,9 +108758,9 @@ cLs
 aNi
 cNh
 auu
-axl
-cLG
 bkd
+cLG
+ape
 aPr
 aGo
 awi
@@ -109026,8 +109004,8 @@ aFF
 bkd
 bkd
 aeu
+aeu
 cLs
-aqf
 akr
 cLA
 cMf
@@ -109283,9 +109261,9 @@ bkd
 bkd
 aeu
 aeu
+aeu
 cLs
 cLs
-auN
 cLH
 cMg
 cMt
@@ -109540,8 +109518,8 @@ aeu
 aeu
 aeu
 aeu
+aeu
 cLs
-aql
 aku
 cLC
 cLI
@@ -109797,8 +109775,8 @@ aeu
 aeu
 aeu
 aeu
+aeu
 cLs
-aqn
 akD
 alu
 ams
@@ -110054,7 +110032,7 @@ aeu
 aeu
 aeu
 aeu
-cLs
+aeu
 cLs
 cLs
 cLs
