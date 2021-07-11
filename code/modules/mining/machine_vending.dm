@@ -327,7 +327,8 @@
 
 /obj/machinery/mineral/equipment_vendor/proc/RedeemSVoucher(obj/item/suit_voucher/voucher, mob/redeemer)
 	var/items = list(	"PALU Exoskeleton" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "exo"),
-						"HEAP suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "bombsuit"))
+						"HEAP suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "bombsuit"),
+						"SEVA Suit" = image(icon = 'icons/obj/clothing/suits.dmi', icon_state = "seva"))
 
 	var/selection = show_radial_menu(redeemer, src, items, require_near = TRUE, tooltips = TRUE)
 	if(!selection || !Adjacent(redeemer) || QDELETED(voucher) || voucher.loc != redeemer)
@@ -340,6 +341,9 @@
 		if("HEAP suit")
 			new /obj/item/clothing/suit/hooded/heapsuit(drop_location)
 			new /obj/item/clothing/mask/gas/explorer(drop_location)
+		if("SEVA Suit")
+			new /obj/item/clothing/suit/hooded/explorer/campsuit(drop_location)
+			new /obj/item/clothing/mask/gas/campsuit(drop_location)
 
 	SSblackbox.record_feedback("tally", "suit_voucher_redeemed", 1, selection)
 	qdel(voucher)
