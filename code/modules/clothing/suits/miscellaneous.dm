@@ -887,7 +887,7 @@
 
 /obj/item/clothing/head/hooded/winterhood/durathread
 	icon_state = "winterhood_durathread"
-	armor = list("melee" = 20, "bullet" = 8, "laser" = 15, "energy" = 8, "bomb" = 25, "bio" = 10, "rad" = 15, "fire" = 75, "acid" = 37, "wound" = 7)
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 10,"energy" = 10, "bomb" = 20, "bio" = 15, "rad" = 10, "fire" = 5, "acid" = 50, "wound" = 15)
 
 /obj/item/clothing/suit/spookyghost
 	name = "spooky ghost"

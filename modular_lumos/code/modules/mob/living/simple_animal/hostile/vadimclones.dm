@@ -1,6 +1,4 @@
 /*
- *
- *
  *  Things've changed, Boss. We pull in dosh, assistants, just to combat Syndicate... Rubbing our mops in bloody station dirt, all for revenge.
  *  NT calls for Janiwork, and we answer. No greater good, no just cause.
  *
@@ -66,7 +64,7 @@
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	loot = list(/obj/effect/decal/cleanable/blood, /obj/item/broom = 1)
 	speak_chance = 10
-	speak = list("B-Blyat!","BLYAT!","N-NYET!")
+	speak = list("B-B-Blyat!","BLYAT!","N-NYET!")
 
 /mob/living/simple_animal/hostile/vadimclone/demon
 	name = "Venom Goat"
@@ -157,7 +155,7 @@
 
 /mob/living/simple_animal/hostile/vadimclone/undies
 	name = "Vadim Kozlov"
-	desc = "He has underwear!"
+	desc = "He has underwear! Oh god!"
 	icon_state = "underwear"
 	icon_living = "underwear"
 	icon_dead = "underwear_dead"

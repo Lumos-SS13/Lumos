@@ -324,7 +324,6 @@ Key procs
 								/datum/language/dwarf = list(LANGUAGE_ATOM),
 								// LUMOS EDIT - MOAR LANGUAGES
 								/datum/language/vox = list(LANGUAGE_ATOM),
-								/datum/language/calcic = list(LANGUAGE_ATOM),
 								/datum/language/moffic = list(LANGUAGE_ATOM),
 								/datum/language/sylvan = list(LANGUAGE_ATOM),
 								/datum/language/shadowtongue = list(LANGUAGE_ATOM))
@@ -340,7 +339,6 @@ Key procs
 							/datum/language/dwarf = list(LANGUAGE_ATOM),
 							// LUMOS EDIT - MOAR LANGUAGES
 							/datum/language/vox = list(LANGUAGE_ATOM),
-							/datum/language/calcic = list(LANGUAGE_ATOM),
 							/datum/language/moffic = list(LANGUAGE_ATOM),
 							/datum/language/sylvan = list(LANGUAGE_ATOM),
 							/datum/language/shadowtongue = list(LANGUAGE_ATOM))

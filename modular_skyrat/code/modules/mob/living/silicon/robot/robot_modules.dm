@@ -109,8 +109,7 @@ obj/item/robot_module/butler/Initialize()
 		"Robot" = image(icon = 'modular_skyrat/icons/mob/robotssd.dmi', icon_state = "robot_old"),
 		"Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootysd"),
 		"Male Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "male_bootysd"),
-		"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_standard"),
-		"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_sd")
+		"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_standard")
 		)
 	if(R.client && R.client.ckey == "banangarang")
 		var/image/cus_maid = image(icon = 'modular_skyrat/icons/mob/robo-maid2.dmi', icon_state = "robomaid_sd")
@@ -146,9 +145,6 @@ obj/item/robot_module/butler/Initialize()
 		if("Protectron")
 			cyborg_base_icon = "protectron_standard"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-		if("Miss m")
-			cyborg_base_icon = "missm_sd"
-			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
 		if("RoboMaid")
 			cyborg_base_icon = "robomaid_sd"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/robo-maid2.dmi'
@@ -164,7 +160,6 @@ obj/item/robot_module/butler/Initialize()
 		"Spider" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "whitespider"),
 		"Sleek" = image(icon = 'modular_skyrat/icons/mob/customrobot.dmi', icon_state = "sleekpeace"),
 		"Marina" = image(icon = 'modular_skyrat/icons/mob/customrobot.dmi', icon_state = "marinapeace"),
-		"Drake" = image(icon = 'icons/mob/cyborg/drakemech.dmi', icon_state = "drakepeacebox"),
 		"Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootypeace"),
 		"Male Bootyborg" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "male_bootypeace"),
 		"Protectron" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "protectron_peacekeeper")
@@ -191,11 +186,6 @@ obj/item/robot_module/butler/Initialize()
 			cyborg_base_icon = "marinapeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/customrobot.dmi'
 			has_snowflake_deadsprite = TRUE
-		if("Drake")
-			cyborg_base_icon = "drakepeace" 
-			sleeper_overlay = "drakepeacesleeper"
-			cyborg_icon_override = 'icons/mob/cyborg/drakemech.dmi'
-			dogborg = TRUE
 		if("Bootyborg")
 			cyborg_base_icon = "bootypeace"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
@@ -306,7 +296,6 @@ obj/item/robot_module/butler/Initialize()
 		"Medical" = image(icon = 'icons/mob/robots.dmi', icon_state = "synd_medical"),
 		"Assault" = image(icon = 'icons/mob/robots.dmi', icon_state = "synd_sec"),
 		"Heavy" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "syndieheavy"),
-		"Miss m" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "missm_syndie"),
 		"Spider" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "spidersyndi"),
 		"Booty Striker" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootynukie"),
 		"Booty Syndicate" = image(icon = 'modular_skyrat/icons/mob/moreborgsmodels.dmi', icon_state = "bootysyndie"),
@@ -326,9 +315,6 @@ obj/item/robot_module/butler/Initialize()
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 		if("Heavy")
 			cyborg_base_icon = "syndieheavy"
-			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
-		if("Miss m")
-			cyborg_base_icon = "missm_syndie"
 			cyborg_icon_override = 'modular_skyrat/icons/mob/moreborgsmodels.dmi'
 		if("Spider")
 			cyborg_base_icon = "spidersyndi"

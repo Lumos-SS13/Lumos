@@ -9,7 +9,7 @@
 
 /datum/species/lizard
 	screamsounds = list('modular_citadel/sound/voice/scream_lizard.ogg')
-	fluff_desc = "Named Uthani in their native tongue of Draconic, Lizardmen are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going wherever they can get work."
+	fluff_desc = "Also known as Lizardmen, Uthani are found throughout most Frontier worlds. They hail from the planet of Quetzal - A tropical planet covered in colossal trees and arid radioactive deserts. Most are hardy and well-traveled, going wherever they can get work."
 
 /datum/species/insect/moth
 	screamsounds = list('modular_citadel/sound/voice/scream_moth.ogg')
@@ -22,7 +22,7 @@
 
 /datum/species/plasmaman
 	screamsounds = list('modular_citadel/sound/voice/scream_skeleton.ogg')
-	fluff_desc = "Plasmamen are the result of the catastrophic, long-term fusion of standard organic physiology with liquid and airborne pools of high-density plasma extract. The changes resulting from this fusion often times leave no trace of the victims original biology or species, turning them into an entirely plasma-based lifeform. Plasmamen are extremely reactive with oxygenated environments, requiring specialized environment suits to survive in such conditions. While most Plasmamen are employed by Nanotrasen, there are known to be pockets of plasma civilization where environmental conditions allow for at the very least tentative existence without the need of outside support."
+	fluff_desc = "Plasmamen are the result of the catastrophic, long-term fusion of standard organic physiology with high-density plasma solutions. The result from this fusion often times leave no trace of the victims original biology or species, turning them into an entirely plasma-based lifeform. Plasmamen are extremely reactive with oxygenated environments, requiring specialized environment suits to survive in such conditions. Due to Plasmamen's mutagentic exposure, virtually all are employed by Nanotrasen on far-flung installations."
 
 /datum/species/dwarf
 	femalescreamsounds = list('modular_citadel/sound/voice/scream_f1.ogg', 'modular_citadel/sound/voice/scream_f2.ogg')

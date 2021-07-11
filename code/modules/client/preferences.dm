@@ -26,7 +26,7 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 		"Hot Plates" = 'modular_skyrat/sound/music/hot_plates.ogg',
 		"Thunderdome" = 'modular_skyrat/sound/music/thunderdome.ogg',
 		"Death Squad" ='modular_skyrat/sound/music/deathsquads.ogg',
-		"Robocop Gameboy Theme" ='modular_skyrat/sound/music/robocop_theme.ogg',
+		"Robocop Gameboy Theme (title2)" ='modular_skyrat/sound/music/robocop_theme.ogg',
 		"Brawlin" ='modular_skyrat/sound/music/brawlin.ogg',
 		"War Season" ='modular_skyrat/sound/music/war_season.ogg',
 		"Fatal Conflict" ='modular_skyrat/sound/music/fatal_conflict.ogg',
@@ -132,10 +132,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 	var/bloodcolor = ""
 	var/skyrat_ooc_notes = ""
 	var/erppref = "Ask"
-	var/nonconpref = "Ask"
-	var/vorepref = "Ask"
-	var/extremepref = "No" //This is for extreme shit, maybe even literal shit, better to keep it on no by default
-	var/extremeharm = "No" //If "extreme content" is enabled, this option serves as a toggle for the related interactions to cause damage or not
 	var/general_records = ""
 	var/security_records = ""
 	var/medical_records = ""
@@ -1365,9 +1361,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 			dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>" // Skyrat - ERP Mechanic Addition
 			dat += "<b>Mute Lewd Verb Sounds:</b> <a href='?_src_=prefs;preference=mute_lewd_verb_sounds'>[(toggles & LEWD_VERB_SOUNDS) ? "Yes":"No"]</a><br>" // Skyrat - ERP Mechanic Addition
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
-			dat += "<b>Voracious MediHound sleepers:</b> <a href='?_src_=prefs;preference=hound_sleeper'>[(cit_toggles & MEDIHOUND_SLEEPER) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Hear Vore Sounds:</b> <a href='?_src_=prefs;preference=toggleeatingnoise'>[(cit_toggles & EATING_NOISES) ? "Yes" : "No"]</a><br>"
-			dat += "<b>Hear Vore Digestion Sounds:</b> <a href='?_src_=prefs;preference=toggledigestionnoise'>[(cit_toggles & DIGESTION_NOISES) ? "Yes" : "No"]</a><br>"
 			dat += "<b>Forced Feminization:</b> <a href='?_src_=prefs;preference=feminization'>[(cit_toggles & FORCED_FEM) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Forced Masculinization:</b> <a href='?_src_=prefs;preference=masculinization'>[(cit_toggles & FORCED_MASC) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Lewd Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & HYPNO) ? "Allowed" : "Disallowed"]</a><br>"
@@ -1380,11 +1373,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Aphrodisiacs:</b> <a href='?_src_=prefs;preference=aphro'>[(cit_toggles & NO_APHRO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
-			//SKYRAT EDIT
-			dat += 	"<b>Extreme ERP verbs :</b> <a href='?_src_=prefs;preference=extremepref'>[extremepref]</a><br>" // https://youtu.be/0YrU9ASVw6w
-			if(extremepref != "No")
-				dat += "<b><span style='color: #e60000;'Harmful ERP verbs :</b> <a href='?_src_=prefs;preference=extremeharm'>[extremeharm]</a><br>"
-			//END OF SKYRAT EDIT
 			dat += "</tr></table>"
 			dat += "<br>"
 		if(5) // Custom keybindings
@@ -1966,7 +1954,7 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 //SKYRAT EDIT - species menu cool
 /datum/preferences/proc/SetSpecies(mob/user)
 	var/list/dat = list()
-	dat += "<center><h2>Choose a species</h2></center>"
+	dat += "<center><h2>Choose a Species</h2></center>"
 	dat += "<center><a href='?_src_=prefs;preference=language;task=close'>Done</a></center>"
 	dat += "<hr>"
 	for(var/name in GLOB.roundstart_race_names)
@@ -3219,7 +3207,7 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 				if("nameless")
 					nameless = !nameless
 
-				if("erp_pref")
+				if("erp_pref") // Quickly! Bully this user!
 					switch(erppref)
 						if("Yes")
 							erppref = "Ask"
@@ -3227,24 +3215,6 @@ GLOBAL_LIST_INIT(combat_music_options, list( // Skyrat addition
 							erppref = "No"
 						if("No")
 							erppref = "Yes"
-				//Skyrat edit - *someone* offered me actual money for this shit
-				if("extremepref") //i hate myself for doing this
-					switch(extremepref) //why the fuck did this need to use cycling instead of input from a list
-						if("Yes")		//seriously this confused me so fucking much
-							extremepref = "Ask"
-						if("Ask")
-							extremepref = "No"
-							extremeharm = "No"
-						if("No")
-							extremepref = "Yes"
-				if("extremeharm")
-					switch(extremeharm)
-						if("Yes")	//this is cursed code
-							extremeharm = "No"
-						if("No")
-							extremeharm = "Yes"
-					if(extremepref == "No")
-						extremeharm = "No"
 				if("auto_hiss")
 					auto_hiss = !auto_hiss
 				//END CITADEL EDIT

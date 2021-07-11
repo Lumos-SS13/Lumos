@@ -69,12 +69,7 @@
             "blows a plume of smoke into \the <b>[partner]</b>'s face.",
             "takes a drag before blowing smoke into \the <b>[partner]</b>'s face.",
             "exhales a cloud of smoke into \the <b>[partner]</b>'s face")]"
-        var/client/cli = partner.client
         var/mob/living/carbon/C = partner
-        if(cli && istype(C))
-            if(cli.prefs.extremeharm != "No")
-                if(prob(65) && C.oxyloss < 36) //So it won't go further than 51.
-                    C.adjustOxyLoss(15)
         var/datum/effect_system/smoke_spread/chem/smoke_machine/s = new
         s.set_up(reagents, 0, 24, C.loc)
         s.start()
