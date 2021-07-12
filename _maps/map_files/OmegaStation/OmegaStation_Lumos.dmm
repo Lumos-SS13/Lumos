@@ -14621,7 +14621,6 @@
 	req_access_txt = "3"
 	},
 /obj/effect/spawner/lootdrop/armory_contraband,
-/obj/item/gun/energy/pumpaction/musket,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aMO" = (
@@ -16361,6 +16360,7 @@
 /obj/structure/closet{
 	name = "Evidence Closet"
 	},
+/obj/item/gun/energy/pumpaction/musket,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "aTq" = (
@@ -21635,8 +21635,8 @@
 /area/engine/atmos)
 "bxt" = (
 /obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = -40
+	pixel_x = 38;
+	pixel_y = -24
 	},
 /obj/machinery/button/door{
 	id = "atmoslock";
@@ -23792,12 +23792,12 @@
 /turf/closed/wall/r_wall,
 /area/medical/storage)
 "cUy" = (
-/obj/machinery/camera/preset/toxins{
-	dir = 8
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
 	},
-/obj/item/beacon,
-/turf/open/floor/plating/asteroid/airless,
-/area/science/test_area)
+/obj/machinery/recharge_station,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
 "cUA" = (
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/starboard/aft";
@@ -26659,6 +26659,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/blueshield)
+"eUj" = (
+/turf/closed/indestructible{
+	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
+	icon_state = "riveted";
+	name = "hyper-reinforced wall"
+	},
+/area/science/test_area)
 "eUS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -32888,7 +32895,9 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
-/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/loading_area{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "jej" = (
@@ -33891,6 +33900,7 @@
 /area/maintenance/port/central)
 "jSZ" = (
 /obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "jTo" = (
@@ -34132,10 +34142,6 @@
 /area/hallway/primary/starboard/fore)
 "khO" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/mining{
-	name = "Mining Dock";
-	req_access_txt = "48"
-	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
@@ -34154,6 +34160,10 @@
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
+	},
+/obj/machinery/door/airlock/mining/glass{
+	name = "Mining Dock";
+	req_access_txt = "48"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -34249,6 +34259,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/machinery/door/airlock/external/glass{
+	name = "Mining Dock Airlock";
+	req_access_txt = "48"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "kkE" = (
@@ -34287,7 +34301,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/external/glass{
 	name = "Mining Dock Airlock";
 	req_access_txt = "48"
 	},
@@ -42175,11 +42189,11 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "qBy" = (
-/turf/closed/indestructible{
-	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
-	icon_state = "riveted";
-	name = "hyper-reinforced wall"
+/obj/machinery/camera/preset/toxins{
+	dir = 8
 	},
+/obj/item/beacon,
+/turf/open/floor/plating/asteroid/airless,
 /area/science/test_area)
 "qBI" = (
 /obj/structure/cable/white{
@@ -46559,10 +46573,6 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/machinery/power/port_gen/pacman,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 10
-	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_x = -28
@@ -46923,7 +46933,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/obj/machinery/recharge_station,
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 10
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
 "sXT" = (
@@ -77214,7 +77227,7 @@ xbg
 sOV
 yhI
 qdl
-cCl
+cUy
 byk
 gCj
 bmD
@@ -112174,13 +112187,13 @@ jFP
 jFP
 jFP
 jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -112191,13 +112204,13 @@ aaa
 aaa
 aaa
 aaa
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jFP
 jFP
 jFP
@@ -112431,13 +112444,13 @@ jFP
 jFP
 jFP
 jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -112448,13 +112461,13 @@ aaa
 aaa
 aaa
 aaa
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
-jFP
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jFP
 jFP
 jFP
@@ -112952,14 +112965,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-sdX
-aaa
-sdX
-aaa
-aaa
+hhM
+hhM
+hhM
+hhM
+iSC
+hhM
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -113208,16 +113221,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-sdX
-aaa
-sdX
-aaa
-aaa
-aaa
+hhM
+hhM
+hhM
+hhM
+hhM
+iSC
+hhM
+hhM
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -113464,19 +113477,19 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-sdX
-aaa
-sdX
-aaa
-aaa
-aaa
-aaa
-aaa
+hhM
+hhM
+hhM
+hhM
+hhM
+hhM
+iSC
+hhM
+hhM
+hhM
+hhM
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -113720,9 +113733,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+hhM
+hhM
+hhM
 hhM
 hhM
 hhM
@@ -113731,10 +113744,10 @@ iSC
 hhM
 hhM
 hhM
-aaa
-aaa
-aaa
-aaa
+hhM
+hhM
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -113977,8 +113990,8 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+hhM
+hhM
 hhM
 hhM
 hhM
@@ -113989,10 +114002,10 @@ hhM
 hhM
 hhM
 hhM
-aaa
-aaa
-aaa
-aaa
+hhM
+hhM
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -114233,8 +114246,8 @@ jFP
 aaa
 aaa
 aaa
-aaa
-aaa
+hhM
+hhM
 hhM
 hhM
 hhM
@@ -114248,8 +114261,8 @@ hhM
 hhM
 hhM
 hhM
-aaa
-aaa
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -114490,7 +114503,7 @@ jFP
 aaa
 aaa
 aaa
-aaa
+hhM
 hhM
 hhM
 hhM
@@ -114506,8 +114519,8 @@ hhM
 hhM
 hhM
 hhM
-aaa
-aaa
+hhM
+hhM
 aaa
 aaa
 aaa
@@ -114747,7 +114760,7 @@ jFP
 aaa
 aaa
 aaa
-aaa
+hhM
 hhM
 hhM
 hhM
@@ -114764,7 +114777,7 @@ hhM
 hhM
 hhM
 hhM
-aaa
+hhM
 aaa
 aaa
 aaa
@@ -115021,8 +115034,8 @@ hhM
 hhM
 hhM
 hhM
-aaa
-aaa
+hhM
+hhM
 aaa
 aaa
 jFP
@@ -115279,7 +115292,7 @@ hhM
 hhM
 hhM
 hhM
-aaa
+hhM
 aaa
 aaa
 jFP
@@ -115783,7 +115796,7 @@ hhM
 hhM
 hhM
 hhM
-iSC
+qBy
 hhM
 hhM
 hhM
@@ -115793,7 +115806,7 @@ hhM
 hhM
 hhM
 hhM
-hhM
+aaa
 aaa
 aaa
 jFP
@@ -116040,7 +116053,7 @@ hhM
 hhM
 hhM
 hhM
-iSC
+eUj
 hhM
 hhM
 hhM
@@ -116050,7 +116063,7 @@ hhM
 hhM
 hhM
 hhM
-hhM
+aaa
 aaa
 aaa
 jFP
@@ -116297,7 +116310,7 @@ hhM
 hhM
 hhM
 hhM
-iSC
+hhM
 hhM
 hhM
 hhM
@@ -116554,7 +116567,6 @@ hhM
 hhM
 hhM
 hhM
-cUy
 hhM
 hhM
 hhM
@@ -116564,7 +116576,8 @@ hhM
 hhM
 hhM
 hhM
-aaa
+hhM
+hhM
 aaa
 aaa
 jFP
@@ -116811,7 +116824,6 @@ hhM
 hhM
 hhM
 hhM
-qBy
 hhM
 hhM
 hhM
@@ -116821,7 +116833,8 @@ hhM
 hhM
 hhM
 hhM
-aaa
+hhM
+hhM
 aaa
 aaa
 jFP
@@ -117060,7 +117073,7 @@ jFP
 aaa
 aaa
 aaa
-hhM
+aaa
 hhM
 hhM
 hhM
@@ -117317,6 +117330,7 @@ jFP
 aaa
 aaa
 aaa
+aaa
 hhM
 hhM
 hhM
@@ -117333,9 +117347,8 @@ hhM
 hhM
 hhM
 hhM
-hhM
-hhM
-hhM
+aaa
+aaa
 aaa
 aaa
 jFP
@@ -117574,6 +117587,8 @@ jFP
 aaa
 aaa
 aaa
+aaa
+aaa
 hhM
 hhM
 hhM
@@ -117586,13 +117601,11 @@ hhM
 hhM
 hhM
 hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 jFP
@@ -117832,6 +117845,7 @@ aaa
 aaa
 aaa
 aaa
+aaa
 hhM
 hhM
 hhM
@@ -117843,12 +117857,11 @@ hhM
 hhM
 hhM
 hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118089,6 +118102,7 @@ aaa
 aaa
 aaa
 aaa
+aaa
 hhM
 hhM
 hhM
@@ -118099,12 +118113,11 @@ hhM
 hhM
 hhM
 hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118347,18 +118360,18 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+hhM
+hhM
+aaa
+aaa
 hhM
 hhM
 hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118604,17 +118617,17 @@ aaa
 aaa
 aaa
 aaa
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118861,16 +118874,16 @@ aaa
 aaa
 aaa
 aaa
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
-hhM
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -119113,30 +119126,30 @@ jFP
 jFP
 jFP
 jFP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-hhM
-hhM
-aaa
-aaa
-hhM
-hhM
-hhM
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
 jFP
 jFP
 jFP
@@ -119370,30 +119383,30 @@ jFP
 jFP
 jFP
 jFP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
 jFP
 jFP
 jFP
@@ -119627,30 +119640,30 @@ jFP
 jFP
 jFP
 jFP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
 jFP
 jFP
 jFP
@@ -119884,30 +119897,30 @@ jFP
 jFP
 jFP
 jFP
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
+jFP
 jFP
 jFP
 jFP
