@@ -440,7 +440,9 @@
 /turf/open/floor/plasteel,
 /area/security/processing)
 "abh" = (
-/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/machinery/atmospherics/components/unary/tank/air{
+	piping_layer = 1
+	},
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
 /area/gateway)
@@ -814,9 +816,9 @@
 /turf/open/floor/plating,
 /area/quartermaster/qm)
 "acm" = (
-/obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/stripes/box,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/gateway)
 "acn" = (
@@ -3935,7 +3937,9 @@
 /obj/machinery/airalarm{
 	pixel_y = 24
 	},
-/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/machinery/atmospherics/components/unary/tank/air{
+	piping_layer = 1
+	},
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
@@ -4386,10 +4390,10 @@
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "ajz" = (
-/obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "ajA" = (
@@ -4430,32 +4434,32 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "ajF" = (
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible/layer1{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating,
 /area/security/prison)
 "ajH" = (
-/obj/machinery/atmospherics/components/binary/valve/on{
-	dir = 4
-	},
 /obj/structure/closet/crate/trashcart,
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/atmospherics/components/binary/valve/layer1{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/security/prison)
 "ajI" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
 /obj/structure/rack,
 /obj/item/storage/bag/trash,
 /obj/item/flashlight,
 /obj/item/radio/off{
 	pixel_x = -6;
 	pixel_y = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
 	},
 /turf/open/floor/plating,
 /area/security/prison)
@@ -5287,23 +5291,24 @@
 /area/space)
 "aly" = (
 /obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 4
+	dir = 4;
+	piping_layer = 1
 	},
 /turf/open/floor/plating,
 /area/security/prison)
 "alz" = (
-/obj/machinery/atmospherics/components/binary/valve/on{
-	dir = 4
-	},
 /obj/structure/mopbucket,
 /obj/item/caution,
 /obj/item/caution,
 /obj/item/caution,
 /obj/item/mop,
+/obj/machinery/atmospherics/components/binary/valve/on/layer1{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/security/prison)
 "alA" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -5727,10 +5732,10 @@
 /area/space)
 "amz" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/machinery/door/airlock/glass{
 	name = "Storage"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/security/prison)
 "amA" = (
@@ -31474,11 +31479,11 @@
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "hZn" = (
-/obj/machinery/atmospherics/pipe/layer_manifold{
-	dir = 4
-	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/medical/virology)
@@ -42378,7 +42383,8 @@
 /area/hallway/secondary/service)
 "qGH" = (
 /obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 8
+	dir = 8;
+	piping_layer = 1
 	},
 /obj/structure/sign/poster/random{
 	pixel_y = 32
@@ -44014,10 +44020,10 @@
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "saq" = (
-/obj/machinery/atmospherics/pipe/layer_manifold{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -48556,7 +48562,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "tYd" = (
-/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/machinery/atmospherics/components/unary/tank/air{
+	piping_layer = 1
+	},
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "tYL" = (
@@ -53962,11 +53970,11 @@
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/chief)
 "xPZ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/visible{
-	dir = 5
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 5
 	},
 /turf/open/floor/plating,
 /area/science/xenobiology)
