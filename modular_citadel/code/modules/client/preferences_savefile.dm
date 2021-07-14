@@ -37,7 +37,6 @@
 	nonconpref = sanitize_text(S["noncon_pref"], "Ask")
 	if(!length(nonconpref)) nonconpref = "Ask"
 	vorepref = sanitize_text(S["vore_pref"], "Ask")
-	if(!length(vorepref)) vorepref = "Ask"
 	extremepref = sanitize_text(S["extremepref"], "No") //god has forsaken me
 	if(!length(extremepref))
 		extremepref = "No"
@@ -87,13 +86,12 @@
 	//flavor text
 	WRITE_FILE(S["feature_flavor_text"], features["flavor_text"])
 	WRITE_FILE(S["silicon_feature_flavor_text"], features["silicon_flavor_text"])
-	
+
 	//SKYRAT CHANGES
 	WRITE_FILE(S["feature_ipc_chassis"], features["ipc_chassis"])
 	WRITE_FILE(S["skyrat_ooc_notes"], skyrat_ooc_notes)
 	WRITE_FILE(S["erp_pref"], erppref)
 	WRITE_FILE(S["noncon_pref"], nonconpref)
-	WRITE_FILE(S["vore_pref"], vorepref)
 	WRITE_FILE(S["extremepref"], extremepref)
 	WRITE_FILE(S["extremeharm"], extremeharm)
 	WRITE_FILE(S["security_records"], security_records)
