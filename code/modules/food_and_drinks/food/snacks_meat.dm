@@ -431,7 +431,7 @@
 	qdel(src)
 
 /datum/chemical_reaction/monkey_cube_grenade
-	required_reagents = list(/datum/reagent/toxin/plasma = 5)
+	required_reagents = list(/datum/reagent/toxin/plasma = 10)
 	required_container = /obj/item/reagent_containers/food/snacks/cube/monkey
 
 /datum/chemical_reaction/monkey_cube_grenade/on_reaction(datum/reagents/holder, multiplier, specialreact)
