@@ -103,8 +103,9 @@
 		return FALSE
 
 /obj/item/reagent_containers/blood/proc/attach_iv(mob/living/target, mob/user)
-	user.visible_message("<span class='warning'><b>[user]</b> attaches [src] to [target].</span>", \
-					"<span class='notice'>I attach [src] to [target].</span>")
+	if(user)
+		user.visible_message("<span class='warning'><b>[user]</b> attaches [src] to [target].</span>", \
+						"<span class='notice'>I attach [src] to [target].</span>")
 	log_combat(user, target, "attached", src, "containing: ([reagents.log_list()])")
 	add_fingerprint(user)
 	attached = target
@@ -227,3 +228,83 @@
 
 /obj/item/reagent_containers/blood/bluespace/distance_check(mob/living/target)
 	return TRUE
+
+//cholostomy bags
+/obj/item/reagent_containers/cholostomy_bag
+	name = "\improper cholostomy bag"
+	desc = "A cholostomy bag. Can be attached to a human to slowly transfer their bloodstream reagents to the bag."
+	icon = 'icons/obj/bloodpack.dmi'
+	icon_state = "bloodpack"
+	volume = 100
+	reagent_flags = DRAINABLE
+	amount_per_transfer_from_this = 1
+	possible_transfer_amounts = list(0.5, 1, 2, 5)
+	var/color_to_apply = "#FFFFFF"
+	var/mutable_appearance/fill_overlay
+	///Who are we sticking our needle in?
+	var/mob/living/carbon/attached
+
+/obj/item/reagent_containers/cholostomy_bag/Destroy()
+	if(attached)
+		detach_iv()
+	return ..()
+
+/obj/item/reagent_containers/cholostomy_bag/update_overlays()
+	. = ..()
+	var/v = min(round(reagents.total_volume / volume * 10), 10)
+	if(v > 0)
+		. += mutable_appearance('icons/obj/reagentfillings.dmi', "bloodpack[v]", color = mix_color_from_reagents(reagents.reagent_list))
+
+/obj/item/reagent_containers/cholostomy_bag/examine()
+	. = ..()
+	if(attached)
+		. += "<span class='notice'>Currently taking reagents from <b>[attached]</b>.</span>"
+
+/obj/item/reagent_containers/cholostomy_bag/AltClick(mob/user)
+	. = ..()
+	if(attached)
+		to_chat(user, "<span class='notice'>\The cholostomy bag needle is removed from <b>[attached]</b>.</span>")
+		detach_iv()
+
+/obj/item/reagent_containers/cholostomy_bag/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
+	. = ..()
+	if(iscarbon(over) && (loc == usr) && isliving(usr) &&  distance_check(over))
+		attach_iv(over, usr)
+
+/obj/item/reagent_containers/cholostomy_bag/process()
+	if(!attached)
+		return PROCESS_KILL
+
+	if(!distance_check(attached))
+		attached.visible_message("<span class='danger'>\The IV bag needle is ripped out of <b>[attached]</b>!</span>", \
+								"<span class='userdanger'>Ouch! \The IV bag needle is ripped from me!</span>")
+		attached.apply_damage(3, BRUTE, pick(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM), sharpness = SHARP_POINTY)
+
+		detach_iv()
+		return PROCESS_KILL
+
+	if(attached.reagents)
+		attached.reagents.trans_to(src, amount_per_transfer_from_this)
+		update_icon()
+
+/obj/item/reagent_containers/cholostomy_bag/proc/distance_check(mob/living/target)
+	. = TRUE
+	if(!(get_dist(src, target) <= 1) || !isturf(target.loc)))
+		return FALSE
+
+/obj/item/reagent_containers/cholostomy_bag/proc/attach_iv(mob/living/target, mob/user)
+	if(user)
+		user.visible_message("<span class='warning'><b>[user]</b> attaches [src] to [target].</span>", \
+						"<span class='notice'>I attach [src] to [target].</span>")
+	log_combat(user, target, "attached", src, "containing: ([reagents.log_list()])")
+	add_fingerprint(user)
+	attached = target
+	START_PROCESSING(SSobj, src)
+
+	update_icon()
+
+/obj/item/reagent_containers/cholostomy_bag/proc/detach_iv()
+	attached = null
+	STOP_PROCESSING(SSobj, src)
+
+	update_icon()
