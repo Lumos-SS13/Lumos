@@ -862,6 +862,14 @@
 		C.adjustBruteLoss(1.5 * min(6*toxpwr, reac_volume * toxpwr))
 		return
 	C.acid_act(acidpwr, reac_volume)
+	if(ishuman(C))
+		for(var/i in 1 to CEILING(reac_volume/15, 1))
+			var/datum/scar/burn_scar = new()
+			var/zone = pick(ALL_BODYPARTS)
+			var/burntype = pick(/datum/wound/burn/critical, /datum/wound/burn/severe, /datum/wound/burn/moderate)
+			var/datum/wound/burn = new burntype()
+			burn_scar.generate(C.get_bodypart(zone), burn, TRUE)
+			qdel(burn)
 
 /datum/reagent/toxin/acid/reaction_obj(obj/O, reac_volume)
 	if(ismob(O.loc)) //handled in human acid_act()
