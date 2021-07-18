@@ -76,7 +76,7 @@
 	if(nuts)
 		nuts.Remove()
 		qdel(nuts)
-	new M.gib_type(T,1,M.get_static_viruses())
+	new M.gib_type(get_turf(M),1,M.get_static_viruses())
 	M.add_splatter_floor(get_turf(M))
 	if(groin)
 		groin.receive_damage(groin.max_damage)
