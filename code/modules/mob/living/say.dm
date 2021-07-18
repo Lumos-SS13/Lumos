@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		var/datum/language/L = GLOB.language_datum_instances[language]
 		spans |= L.spans
 
-// Skyrat edits
+	// Skyrat edits
 	if(message_mode == MODE_SING)
 	#if DM_VERSION < 513
 		var/randomnote = "~"
@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	#endif
 		spans |= SPAN_SINGING
 		message = "[randomnote] [message] [randomnote]"
-// End of Skyrat edits
+	// End of Skyrat edits
 
 	var/radio_return = radio(message, message_mode, spans, language)
 	if(radio_return & ITALICS)
@@ -224,6 +224,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		succumb()
 		to_chat(src, compose_message(src, language, message, null, spans, message_mode))
 
+	if(findtext(message, "nigga") || findtext(message, "ni" + "gg" + "e" + "r"))
+		adjustOrganLoss(ORGAN_SLOT_TONGUE, 5)
 	return 1
 
 /mob/living/compose_message(atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, face_name = FALSE, atom/movable/source)
