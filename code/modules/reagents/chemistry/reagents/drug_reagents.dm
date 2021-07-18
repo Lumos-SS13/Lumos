@@ -96,8 +96,8 @@
 
 /datum/reagent/drug/crank/on_mob_end_metabolize(mob/living/M)
 	. = ..()
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
 		H.dna?.species?.punchdamagelow += 10
 		H.dna?.species?.punchdamagehigh += 10
 
