@@ -9,7 +9,7 @@
 	if(!isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	dreamer = parent
-	START_PROCESSING(SSobj, src)
+	START_PROCESSING(SSstatus_effects, src)
 	agony()
 
 /datum/component/bad_ending/proc/agony()
@@ -19,7 +19,8 @@
 	dreamer.overlay_fullscreen("wakeup", /obj/screen/fullscreen/bad_ending/waking_up, 1)
 
 /datum/component/bad_ending/process()
-	. = ..()
+	if(world.time % 20)
+		return
 	INVOKE_ASYNC(src, .proc/screenshake)
 	fucky_floor()
 
@@ -27,11 +28,9 @@
 	if(!dreamer.client)
 		return
 	var/list/turf/open/floor/floorlist = list()
-	for(var/turf/open/floor/F in range(dreamer))
+	for(var/turf/open/floor/fucky in range(dreamer))
 		if(prob(15))
-			floorlist += F
-	for(var/F in floorlist)
-		INVOKE_ASYNC(src, .proc/handle_this_fucky_floor, F)
+			INVOKE_ASYNC(src, .proc/handle_this_fucky_floor, fucky)
 
 /datum/component/bad_ending/proc/screenshake()
 	if(!dreamer.client)
