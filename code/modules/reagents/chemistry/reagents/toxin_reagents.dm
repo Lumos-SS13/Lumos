@@ -845,12 +845,11 @@
 	description = "A strong mineral acid with the molecular formula H2SO4."
 	color = "#00FF32"
 	toxpwr = 1
+	var/acidpwr = 10 //the amount of protection removed from the armour
 	taste_description = "acid"
 	self_consuming = TRUE
 	pH = 2.75
 	value = REAGENT_VALUE_NONE
-	var/acidpwr = 10 //the amount of protection removed from the armour
-	var/scarring_coefficient = 10
 
 /datum/reagent/toxin/acid/reaction_mob(mob/living/carbon/C, method=TOUCH, reac_volume)
 	if(!istype(C))
@@ -863,13 +862,6 @@
 		C.adjustBruteLoss(1.5 * min(6*toxpwr, reac_volume * toxpwr))
 		return
 	C.acid_act(acidpwr, reac_volume)
-	if(ishuman(C))
-		for(var/i in 1 to CEILING(reac_volume/15, 1))
-			var/datum/scar/burn_scar = new()
-			var/zone = pick(ALL_BODYPARTS)
-			var/datum/wound/burn = new pick(/datum/wound/burn/critical, /datum/wound/burn/severe, /datum/wound/burn/moderate)
-			burn_scar.generate(C.get_bodypart(zone), burn, TRUE)
-			qdel(burn)
 
 /datum/reagent/toxin/acid/reaction_obj(obj/O, reac_volume)
 	if(ismob(O.loc)) //handled in human acid_act()
@@ -888,9 +880,8 @@
 	description = "Fluorosulfuric acid is an extremely corrosive chemical substance."
 	color = "#5050FF"
 	toxpwr = 2
-	value = REAGENT_VALUE_COMMON
 	acidpwr = 42.0
-	scarring_coefficient = 2.5
+	value = REAGENT_VALUE_COMMON
 
 /datum/reagent/toxin/acid/fluacid/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(current_cycle/10, 0)
