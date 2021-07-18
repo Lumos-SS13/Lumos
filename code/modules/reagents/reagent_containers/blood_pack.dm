@@ -1,20 +1,31 @@
 /obj/item/reagent_containers/blood
-	name = "blood pack"
-	desc = "Contains blood used for transfusion. Must be attached to an IV drip."
+	name = "\improper IV bag"
+	desc = "An IV bag. Can be attached to a human to slowly transfer it's reagents to their bloodstream. Can also take blood from a human."
 	icon = 'icons/obj/bloodpack.dmi'
 	icon_state = "bloodpack"
 	volume = 200
 	reagent_flags = DRAINABLE
+	amount_per_transfer_from_this = 0.1
+	possible_transfer_amounts = list(0.1, 0.2, 0.5, 1, 2, 5)
 	var/blood_type = null
 	var/labelled = 0
 	var/color_to_apply = "#FFFFFF"
 	var/mutable_appearance/fill_overlay
+	///Who are we sticking our needle in?
+	var/mob/living/carbon/attached
+	///Are we injecting or sucking?
+	var/injecting = FALSE
 
 /obj/item/reagent_containers/blood/Initialize()
 	. = ..()
 	if(blood_type != null)
 		reagents.add_reagent(/datum/reagent/blood, 200, list("donor"=null,"viruses"=null,"blood_DNA"=null,"bloodcolor"=bloodtype_to_color(blood_type), "blood_type"=blood_type,"resistances"=null,"trace_chem"=null))
 		update_icon()
+
+/obj/item/reagent_containers/blood/Destroy()
+	if(attached)
+		detach_iv()
+	return ..()
 
 /obj/item/reagent_containers/blood/on_reagent_change(changetype)
 	if(reagents)
@@ -28,17 +39,84 @@
 	update_icon()
 
 /obj/item/reagent_containers/blood/proc/update_pack_name()
-	if(!labelled)
-		if(blood_type)
-			name = "blood pack - [blood_type]"
-		else
-			name = "blood pack"
+	if(labelled)
+		return
+	name = "\improper IV bag[blood_type ? " - [blood_type]" : null]"
 
 /obj/item/reagent_containers/blood/update_overlays()
 	. = ..()
 	var/v = min(round(reagents.total_volume / volume * 10), 10)
 	if(v > 0)
 		. += mutable_appearance('icons/obj/reagentfillings.dmi', "bloodpack[v]", color = mix_color_from_reagents(reagents.reagent_list))
+
+/obj/item/reagent_containers/blood/examine()
+	. = ..()
+	. += "<span class='notice'>Currently in [injecting ? "injection" : "extraction"] mode.</span>"
+	if(attached)
+		. += "<span class='notice'>Currently [injecting ? "injecting" : "taking blood from"] <b>[attached]</b>.</span>"
+
+/obj/item/reagent_containers/blood/AltClick(mob/user)
+	. = ..()
+	if(attached)
+		to_chat(user, "<span class='notice'>\The IV bag needle is removed from <b>[attached]</b>.</span>")
+		detach_iv()
+
+/obj/item/reagent_containers/blood/CtrlClick(mob/user)
+	. = ..()
+	injecting = !injecting
+	to_chat(user, "<span class='notice'>\The [src] will now [injecting ? "inject" : "take blood from"] the attached patient.</span>")
+
+/obj/item/reagent_containers/blood/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
+	. = ..()
+	if(iscarbon(over) && (loc == usr) && isliving(usr) &&  distance_check(over))
+		attach_iv(over, usr)
+
+/obj/item/reagent_containers/blood/process()
+	if(!attached)
+		return PROCESS_KILL
+
+	if(!distance_check(attached))
+		attached.visible_message("<span class='danger'>\The IV bag needle is ripped out of <b>[attached]</b>!</span>", \
+								"<span class='userdanger'>Ouch! \The IV bag needle is ripped from me!</span>")
+		attached.apply_damage(3, BRUTE, pick(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM), sharpness = SHARP_POINTY)
+
+		detach_iv()
+		return PROCESS_KILL
+
+	if(reagents)
+		// Inject reagents
+		if(injecting)
+			if(reagents.total_volume)
+				reagents.trans_to(attached, amount_per_transfer_from_this) //make reagents reacts, but don't spam messages
+				update_icon()
+		// Take blood
+		else
+			var/amount = reagents.maximum_volume - reagents.total_volume
+			amount = min(amount, amount_per_transfer_from_this)
+
+			attached.transfer_blood_to(src, amount_per_transfer_from_this)
+			update_icon()
+
+/obj/item/reagent_containers/blood/proc/distance_check(mob/living/target)
+	. = TRUE
+	if(!(get_dist(src, target) <= 1) || !isturf(target.loc) || !isliving(loc))
+		return FALSE
+
+/obj/item/reagent_containers/blood/proc/attach_iv(mob/living/target, mob/user)
+	user.visible_message("<span class='warning'><b>[user]</b> attaches [src] to [target].</span>", \
+					"<span class='notice'>I attach [src] to [target].</span>")
+	log_combat(user, target, "attached", src, "containing: ([reagents.log_list()])")
+	add_fingerprint(user)
+	attached = target
+	START_PROCESSING(SSobj, src)
+
+	update_icon()
+
+/obj/item/reagent_containers/blood/proc/detach_iv()
+	attached = null
+	STOP_PROCESSING(SSobj, src)
+
+	update_icon()
 
 /obj/item/reagent_containers/blood/random
 	icon_state = "random_bloodpack"
@@ -128,11 +206,11 @@
 		reagents.remove_reagent(src, 2) //Inneficency, so hey, IVs are usefull.
 		playsound(C.loc,'sound/items/drink.ogg', rand(10, 50), TRUE)
 		return
-	..()
+	return ..()
 
 /obj/item/reagent_containers/blood/bluespace
-	name = "bluespace blood pack"
-	desc = "Contains blood used for transfusion, this one has been made with bluespace technology to hold much more blood. Must be attached to an IV drip."
+	name = "bluespace IV bag"
+	desc = "A bluespace IV bag. This one can inject reagents and extract blood at a distance."
 	icon_state = "bsbloodpack"
 	volume = 600 //its a blood bath!
 
@@ -145,4 +223,7 @@
 			to_chat(user, "<span class='notice'>You try to suck on the [src], but nothing comes out.</span>")
 			return
 	else
-		..()
+		. = ..()
+
+/obj/item/reagent_containers/blood/bluespace/distance_check(mob/living/target)
+	return TRUE
