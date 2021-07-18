@@ -210,7 +210,7 @@
 
 /obj/item/reagent_containers/blood/bluespace
 	name = "bluespace IV bag"
-	desc = "A bluespace IV bag. This one can inject reagents at a distance."
+	desc = "A bluespace IV bag. This one can inject reagents and extract blood at a distance."
 	icon_state = "bsbloodpack"
 	volume = 600 //its a blood bath!
 
