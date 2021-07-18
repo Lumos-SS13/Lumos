@@ -225,7 +225,12 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		to_chat(src, compose_message(src, language, message, null, spans, message_mode))
 
 	if(findtext(message, "nigga") || findtext(message, "ni" + "gg" + "e" + "r"))
-		adjustOrganLoss(ORGAN_SLOT_TONGUE, 5)
+		if(ishuman(src))
+			var/mob/living/carbon/human/humie = src
+			if(!findtext(humie.skin_tone, "african"))
+				adjustOrganLoss(ORGAN_SLOT_TONGUE, 5)
+		else
+			adjustOrganLoss(ORGAN_SLOT_TONGUE, 5)
 	return 1
 
 /mob/living/compose_message(atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, face_name = FALSE, atom/movable/source)
