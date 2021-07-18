@@ -14,7 +14,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("beaten")
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-
+	
+	var/electroshock_cost = 1500
+	var/electroshock_brainhurty = 30
 	var/stamforce = 35
 	var/turned_on = FALSE
 	var/knockdown = TRUE
@@ -52,6 +54,40 @@
 	if(turned_on && prob(throw_hit_chance) && iscarbon(hit_atom))
 		baton_stun(hit_atom)
 
+/obj/item/melee/baton/alt_pre_attack(atom/A, mob/living/user, params)
+	. = TRUE
+	//borgs cant ungay people
+	if(!iscarbon(A) || !iscarbon(user))
+		return
+	var/mob/living/carbon/gay = A
+	if(HAS_TRAIT(user, TRAIT_PACIFISM))
+		to_chat(user, "<span class='warning'>You don't want to hurt anyone.</span>")
+		return
+	if(!turned_on)
+		to_chat(user, "<span class='warning'>\The [src] needs to be on.</span>")
+		return
+	if(INTERACTING_WITH(user, A))
+		to_chat(user, "<span class='warning'>Uou are already interacting with [gay].</span>")
+		return
+	user.visible_message("<span class='danger'>[user] starts performing electroshock therapy on [gay]!</span>", \
+						"<span class='notice'>You start performing electroshock therapy on [gay]!</span>", \
+						ignored_mobs = gay)
+	to_chat(gay, "<span class='userdanger'>[user] starts performing electroshock therapy on you!</span>")
+	if(!do_mob(user, gay))
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [gay]!", \
+						"<span class='danger'>You need to stand close to them!</span>")
+		return
+	if(deductcharge(electroshock_cost, TRUE))
+		gay.adjustOrganLoss(ORGAN_SLOT_BRAIN, electroshock_brainhurty)
+		user.visible_message("<span class='danger'>[user] performs electroshock therapy on [gay]!</span>", \
+						"<span class='notice'>You perform electroshock therapy on [gay]!</span>", \
+						ignored_mobs = gay)
+		to_chat(gay, "<span class='userdanger'>My brain hurty!</span>")
+		playsound(gay, 'sound/weapons/zapbang.ogg', 100, 0, 3)
+	else
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [gay]!", \
+						"<span class='danger'>Not enough charge!</span>")
+	
 /obj/item/melee/baton/loaded //this one starts with a cell pre-installed.
 	preload_cell_type = /obj/item/stock_parts/cell/high/plus
 
