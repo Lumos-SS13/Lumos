@@ -430,11 +430,25 @@
 		visible_message("<span class='notice'>[src] fails to expand!</span>")
 	qdel(src)
 
+/datum/chemical_reaction/monkey_cube_grenade
+	required_reagents = list(/datum/reagent/toxin/plasma = 5)
+	required_container = /obj/item/reagent_containers/food/snacks/cube/monkey
+
+/datum/chemical_reaction/monkey_cube_grenade/on_reaction(datum/reagents/holder, multiplier, specialreact)
+	. = ..()
+	if(holder.my_atom && get_turf(holder.my_atom))
+		var/obj/item/reagent_containers/food/snacks/cube/monkey/mokey = holder.my_atom
+		if(mokey.frag_grenades && mokey.frag_type)
+			mokey.frag_grenades--
+			new mokey.frag_type(get_turf(mokey))
+
 /obj/item/reagent_containers/food/snacks/cube/monkey
 	name = "monkey cube"
 	desc = "Just add water!"
 	tastes = list("the jungle" = 1, "bananas" = 1)
 	dried_being = /mob/living/carbon/monkey
+	var/frag_grenades = 1
+	var/frag_type = /obj/item/grenade/frag
 
 /obj/item/reagent_containers/food/snacks/cube/beno
 	name = "alien drone cube"
