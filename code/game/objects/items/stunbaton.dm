@@ -59,7 +59,7 @@
 	//borgs cant ungay people
 	if(!iscarbon(A) || !iscarbon(user) || !(user.zone_selected == BODY_ZONE_HEAD))
 		return
-	var/mob/living/carbon/gay = A
+	var/mob/living/carbon/target = A
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
 		to_chat(user, "<span class='warning'>You don't want to hurt anyone.</span>")
 		return
@@ -67,25 +67,25 @@
 		to_chat(user, "<span class='warning'>\The [src] needs to be on.</span>")
 		return
 	if(INTERACTING_WITH(user, A))
-		to_chat(user, "<span class='warning'>Uou are already interacting with [gay].</span>")
+		to_chat(user, "<span class='warning'>Uou are already interacting with [target].</span>")
 		return
-	user.visible_message("<span class='danger'>[user] starts performing electroshock therapy on [gay]!</span>", \
-						"<span class='notice'>You start performing electroshock therapy on [gay]!</span>", \
-						ignored_mobs = gay)
-	to_chat(gay, "<span class='userdanger'>[user] starts performing electroshock therapy on you!</span>")
-	if(!do_mob(user, gay, 3 SECONDS))
-		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [gay]!", \
+	user.visible_message("<span class='danger'>[user] starts performing electroshock therapy on [target]!</span>", \
+						"<span class='notice'>You start performing electroshock therapy on [target]!</span>", \
+						ignored_mobs = target)
+	to_chat(target, "<span class='userdanger'>[user] starts performing electroshock therapy on you!</span>")
+	if(!do_mob(user, target, 3 SECONDS))
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [target]!", \
 						"<span class='danger'>You need to stand close to them!</span>")
 		return
 	if(deductcharge(electroshock_cost, TRUE))
-		gay.adjustOrganLoss(ORGAN_SLOT_BRAIN, electroshock_brainhurty)
-		user.visible_message("<span class='danger'>[user] performs electroshock therapy on [gay]!</span>", \
-						"<span class='notice'>You perform electroshock therapy on [gay]!</span>", \
-						ignored_mobs = gay)
-		to_chat(gay, "<span class='userdanger'>My brain hurty!</span>")
-		playsound(gay, 'sound/weapons/zapbang.ogg', 100, 0, 3)
+		target.adjustOrganLoss(ORGAN_SLOT_BRAIN, electroshock_brainhurty)
+		user.visible_message("<span class='danger'>[user] performs electroshock therapy on [target]!</span>", \
+						"<span class='notice'>You perform electroshock therapy on [target]!</span>", \
+						ignored_mobs = target)
+		to_chat(target, "<span class='userdanger'>My brain hurty!</span>")
+		playsound(target, 'sound/weapons/zapbang.ogg', 100, 0, 3)
 	else
-		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [gay]!", \
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [target]!", \
 						"<span class='danger'>Not enough charge!</span>")
 	
 /obj/item/melee/baton/loaded //this one starts with a cell pre-installed.
