@@ -289,7 +289,7 @@
 
 /obj/item/reagent_containers/cholostomy_bag/proc/distance_check(mob/living/target)
 	. = TRUE
-	if(!(get_dist(src, target) <= 1) || !isturf(target.loc)))
+	if(!(get_dist(src, target) <= 1) || !isturf(target.loc))
 		return FALSE
 
 /obj/item/reagent_containers/cholostomy_bag/proc/attach_iv(mob/living/target, mob/user)
