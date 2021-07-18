@@ -79,7 +79,7 @@
 	new M.gib_type(T,1,M.get_static_viruses())
 	M.add_splatter_floor(get_turf(M))
 	if(groin)
-	groin.receive_damage(groin.max_damage)
+		groin.receive_damage(groin.max_damage)
 	playsound(M, 'sound/effects/splat.ogg', 50, 1)
 
 /obj/item/nutcracker/proc/gib_head(mob/living/carbon/M)
