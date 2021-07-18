@@ -16,7 +16,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 	
 	var/defib_cost = 7500
-	var/defib_tlimit = DEFIB_TIME_LIMIT
+	var/defib_tlimit = DEFIB_TIME_LIMIT * 2
 	var/electroshock_cost = 1500
 	var/electroshock_brainhurty = 30
 	var/stamforce = 35
@@ -78,14 +78,13 @@
 		target.notify_ghost_cloning("Your heart is being defibrillated. Re-enter your corpse if you want to be revived!", source = src)
 		var/primetimer = 30
 		var/primetimer2 = 20
-		var/deathtimer = DEFIB_TIME_LOSS * 10
+		var/deathtimer = defib_tlimit
 		if(do_mob(user, target, primetimer))
 			user.visible_message("<span class='notice'>[user] places [src] on [target]'s chest.</span>", \
 				"<span class='warning'>You place [src] on [target]'s chest and begin to rub it against them...</span>")
 			playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
 			// patients rot when they are killed, and die when they are dead
 			var/tplus = world.time - target.timeofdeath	//length of time spent dead
-			var/tloss = deathtimer
 			var/total_burn	= 0
 			var/total_brute	= 0
 			var/failed = ""
@@ -108,7 +107,7 @@
 					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Recovery of patient impossible. Further attempts futile.</span>"
 				else if (target.hellbound)
 					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's soul appears to be on another plane of existence.  Further attempts futile.</span>"
-				else if (tplus > defib_tlimit)
+				else if (tplus > deathtimer)
 					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Body has decayed for too long. Further attempts futile.</span>"
 				else if (!heart)
 					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's heart is missing.</span>"
@@ -150,8 +149,8 @@
 					target.emote("gasp")
 					target.Jitter(100)
 					SEND_SIGNAL(target, COMSIG_LIVING_MINOR_SHOCK)
-					if(tplus > tloss)
-						target.adjustOrganLoss(ORGAN_SLOT_BRAIN,  50, 150)
+					target.adjustOrganLoss(ORGAN_SLOT_BRAIN,  150, 150)
+					target.adjustOrganLoss(ORGAN_SLOT_HEART, 15)
 					log_combat(user, target, "revived", src)
 		return
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
