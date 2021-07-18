@@ -3,7 +3,7 @@
 
 /datum/component/bad_ending/Destroy(force, silent)
 	. = ..()
-	STOP_PROCESSING(SSobj, src)
+	STOP_PROCESSING(SSstatus_effects, src)
 
 /datum/component/bad_ending/Initialize()
 	if(!isliving(parent))
