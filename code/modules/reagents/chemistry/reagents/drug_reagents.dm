@@ -87,6 +87,20 @@
 	pH = 10
 	value = REAGENT_VALUE_UNCOMMON
 
+/datum/reagent/drug/crank/on_mob_metabolize(mob/living/L)
+	. = ..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		H.dna?.species?.punchdamagelow += 10
+		H.dna?.species?.punchdamagehigh += 10
+
+/datum/reagent/drug/crank/on_mob_end_metabolize(mob/living/M)
+	. = ..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		H.dna?.species?.punchdamagelow += 10
+		H.dna?.species?.punchdamagehigh += 10
+
 /datum/reagent/drug/crank/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
 		var/high_message = pick("You feel jittery.", "You feel like you gotta go fast.", "You feel like you need to step it up.")
