@@ -77,7 +77,7 @@
 		nuts.Remove()
 		qdel(nuts)
 	new M.gib_type(T,1,M.get_static_viruses())
-	M.add_splatter_floor(T)
+	M.add_splatter_floor(get_turf(M))
 	if(groin)
 	groin.receive_damage(groin.max_damage)
 	playsound(M, 'sound/effects/splat.ogg', 50, 1)
