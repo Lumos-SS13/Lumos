@@ -82,8 +82,10 @@
 
     if(user.nextsoundemote >= world.time)
         return
-
-	user.adjustOrganLoss(ORGAN_SLOT_STOMACH, 2)
+		
+	if(iscarbon(user))
+		var/mob/living/carbon/carbon_user = user
+		carbon_user.adjustOrganLoss(ORGAN_SLOT_STOMACH, 2)
     user.nextsoundemote = world.time + 20
     playsound(user, pickweight(list(
 		'modular_lumos/sound/effects/fart.ogg' = 50, 
