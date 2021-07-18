@@ -57,7 +57,7 @@
 /obj/item/melee/baton/alt_pre_attack(atom/A, mob/living/user, params)
 	. = TRUE
 	//borgs cant ungay people
-	if(!iscarbon(A) || !iscarbon(user))
+	if(!iscarbon(A) || !iscarbon(user) || !(user.zone_selected == BODY_ZONE_HEAD))
 		return
 	var/mob/living/carbon/gay = A
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
