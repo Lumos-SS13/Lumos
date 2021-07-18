@@ -73,7 +73,7 @@
 						"<span class='notice'>You start performing electroshock therapy on [gay]!</span>", \
 						ignored_mobs = gay)
 	to_chat(gay, "<span class='userdanger'>[user] starts performing electroshock therapy on you!</span>")
-	if(!do_mob(user, gay))
+	if(!do_mob(user, gay, 3 SECONDS))
 		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [gay]!", \
 						"<span class='danger'>You need to stand close to them!</span>")
 		return
