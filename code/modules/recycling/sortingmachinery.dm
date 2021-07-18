@@ -13,6 +13,8 @@
 	playsound(src.loc, 'sound/items/poster_ripped.ogg', 50, 1)
 	if(prob(pipebomb_chance))
 		var/obj/item/grenade/iedcasing/pipebomb = new(get_turf(src))
+		to_chat(user, "<span class='userdanger'>Wait, i didn't order this...</span>")
+		user.put_in_hands(pipebomb)
 		pipebomb.name = "improvised surprise"
 		pipebomb.desc = "Kaczynski sends his regards!"
 		pipebomb.range = 5
@@ -102,6 +104,8 @@
 		user.put_in_hands(AM)
 	if(prob(pipebomb_chance))
 		var/obj/item/grenade/iedcasing/pipebomb = new(get_turf(src))
+		to_chat(user, "<span class='userdanger'>Wait, i didn't order this...</span>")
+		user.put_in_hands(pipebomb)
 		pipebomb.name = "improvised surprise"
 		pipebomb.desc = "Kaczynski sends his regards!"
 		pipebomb.range = 5
