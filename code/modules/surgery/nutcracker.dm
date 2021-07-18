@@ -58,11 +58,11 @@
 			to_chat(user, "<span class='notice'>Expose [M]\s [target_limb.name] before trying to crush it!</span>")
 
 /obj/item/nutcracker/suicide_act(mob/living/carbon/user)
-	var/obj/item/bodypart/target_limb = user.get_bodypart("head")
-	if(target_limb) //I mean like... for example lings can be still alive without heads.
-		user.visible_message("<span class='suicide'>[user] is crushing [user.p_their()] own head with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	var/obj/item/bodypart/target_limb = user.get_bodypart(BODY_ZONE_PRECISE_GROIN)
+	if(target_limb)
+		user.visible_message("<span class='suicide'>[user] is crushing [user.p_their()] own balls with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		if(do_after(user, 30))
-			gib_head(user)
+			gib_nuts(user)
 	else
 		return
 	return (BRUTELOSS)
