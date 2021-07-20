@@ -352,6 +352,18 @@
 	color = "#FFFFFF" // rgb: 255,255,255
 	taste_description = "salt"
 
+/datum/reagent/consumable/sodiumchloride/on_mob_metabolize(mob/living/L)
+	. = ..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		H.physiology?.bleed_mod += 0.1
+
+/datum/reagent/consumable/sodiumchloride/on_mob_end_metabolize(mob/living/L)
+	. = ..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		H.physiology?.bleed_mod -= 0.1
+
 /datum/reagent/consumable/sodiumchloride/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(!istype(M))
 		return

@@ -20,6 +20,8 @@
 	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/glass/bottle/charcoal(src)
 	new /obj/item/storage/box/rxglasses(src)
+	new /obj/item/reagent_containers/cholostomy_bag(src)
+	new /obj/item/reagent_containers/cholostomy_bag(src)
 
 /obj/structure/closet/secure_closet/medical2
 	name = "anesthetic closet"

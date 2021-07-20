@@ -17,23 +17,6 @@
 		new /obj/effect/decal/cleanable/blood/gibs(get_turf(O))
 		qdel(O)
 
-/obj/item/nutcracker/proc/gib_head(mob/living/carbon/M)
-	var/obj/item/bodypart/head = M.get_bodypart("head")
-	if(!head)
-		return
-
-	var/turf/T = get_turf(M)
-	var/list/organs = M.getorganszone("head") + M.getorganszone("eyes") + M.getorganszone("mouth")
-	for(var/internal_organ in organs)
-		var/obj/item/organ/I = internal_organ
-		I.Remove()
-		I.forceMove(T)
-	head.drop_limb()
-	qdel(head)
-	new M.gib_type(T,1,M.get_static_viruses())
-	M.add_splatter_floor(T)
-	playsound(M, 'sound/effects/splat.ogg', 50, 1)
-
 //It's a bit of a clusterfuck, but if someone wants, it can be easily repurposed to work on other limbs too.
 /obj/item/nutcracker/attack(mob/living/carbon/M, mob/living/carbon/user)
 	. = ..()
@@ -65,8 +48,7 @@
 				if(target_limb.body_zone == BODY_ZONE_HEAD)
 					gib_head(M)
 				else if(target_limb.body_zone == BODY_ZONE_PRECISE_GROIN)
-					target_limb.disembowel(BRUTE)
-					target_limb.receive_damage(target_limb.max_damage)
+					gib_nuts(M)
 				else if(target_limb.body_zone == BODY_ZONE_CHEST)
 					target_limb.disembowel(BRUTE)
 					target_limb.receive_damage(target_limb.max_damage)
@@ -76,11 +58,43 @@
 			to_chat(user, "<span class='notice'>Expose [M]\s [target_limb.name] before trying to crush it!</span>")
 
 /obj/item/nutcracker/suicide_act(mob/living/carbon/user)
-	var/obj/item/bodypart/target_limb = user.get_bodypart("head")
-	if(target_limb) //I mean like... for example lings can be still alive without heads.
-		user.visible_message("<span class='suicide'>[user] is crushing [user.p_their()] own head with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	var/obj/item/bodypart/target_limb = user.get_bodypart(BODY_ZONE_PRECISE_GROIN)
+	if(target_limb)
+		user.visible_message("<span class='suicide'>[user] is crushing [user.p_their()] own balls with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		if(do_after(user, 30))
-			gib_head(user)
+			gib_nuts(user)
 	else
 		return
 	return (BRUTELOSS)
+
+/obj/item/nutcracker/proc/gib_nuts(mob/living/carbon/M)
+	var/obj/item/bodypart/groin/groin = M.get_bodypart(BODY_ZONE_PRECISE_GROIN)
+	var/obj/item/organ/genital/testicles/nuts = M.getorganslot(ORGAN_SLOT_TESTICLES)
+	if(!groin)
+		return
+	M.emote("scream")
+	if(nuts)
+		nuts.Remove()
+		qdel(nuts)
+	new M.gib_type(get_turf(M),1,M.get_static_viruses())
+	M.add_splatter_floor(get_turf(M))
+	if(groin)
+		groin.receive_damage(groin.max_damage)
+	playsound(M, 'sound/effects/splat.ogg', 50, 1)
+
+/obj/item/nutcracker/proc/gib_head(mob/living/carbon/M)
+	var/obj/item/bodypart/head = M.get_bodypart(BODY_ZONE_HEAD)
+	if(!head)
+		return
+
+	var/turf/T = get_turf(M)
+	var/list/organs = M.getorganszone(BODY_ZONE_HEAD) + M.getorganszone(BODY_ZONE_PRECISE_EYES) + M.getorganszone(BODY_ZONE_PRECISE_MOUTH)
+	for(var/internal_organ in organs)
+		var/obj/item/organ/I = internal_organ
+		I.Remove()
+		I.forceMove(T)
+	head.drop_limb()
+	qdel(head)
+	new M.gib_type(T,1,M.get_static_viruses())
+	M.add_splatter_floor(T)
+	playsound(M, 'sound/effects/splat.ogg', 50, 1)

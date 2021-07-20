@@ -5,11 +5,21 @@
 	icon_state = "deliverycloset"
 	density = TRUE
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
+	var/pipebomb_chance = 1
 	var/giftwrapped = FALSE
 	var/sortTag = 0
 
 /obj/structure/bigDelivery/interact(mob/user)
 	playsound(src.loc, 'sound/items/poster_ripped.ogg', 50, 1)
+	if(prob(pipebomb_chance))
+		var/obj/item/grenade/iedcasing/pipebomb = new(get_turf(src))
+		to_chat(user, "<span class='userdanger'>Wait, i didn't order this...</span>")
+		user.put_in_hands(pipebomb)
+		pipebomb.name = "improvised surprise"
+		pipebomb.desc = "Kaczynski sends his regards!"
+		pipebomb.range = 5
+		pipebomb.det_time = 2 SECONDS
+		pipebomb.prime()
 	qdel(src)
 
 /obj/structure/bigDelivery/Destroy()
@@ -79,6 +89,7 @@
 	desc = "A brown paper delivery parcel."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "deliverypackage3"
+	var/pipebomb_chance = 0.5
 	var/giftwrapped = 0
 	var/sortTag = 0
 
@@ -91,6 +102,15 @@
 	for(var/X in contents)
 		var/atom/movable/AM = X
 		user.put_in_hands(AM)
+	if(prob(pipebomb_chance))
+		var/obj/item/grenade/iedcasing/pipebomb = new(get_turf(src))
+		to_chat(user, "<span class='userdanger'>Wait, i didn't order this...</span>")
+		user.put_in_hands(pipebomb)
+		pipebomb.name = "improvised surprise"
+		pipebomb.desc = "Kaczynski sends his regards!"
+		pipebomb.range = 5
+		pipebomb.det_time = 2 SECONDS
+		pipebomb.prime()
 	playsound(src.loc, 'sound/items/poster_ripped.ogg', 50, 1)
 	qdel(src)
 

@@ -11,9 +11,17 @@
 	name = "Round"
 	icon_state = "round"
 
+/datum/sprite_accessory/snouts/sharp_long
+	name = "Sharp + Long"
+	icon_state = "sharp_long"
+
 /datum/sprite_accessory/snouts/sharplight
 	name = "Sharp + Light"
 	icon_state = "sharplight"
+
+/datum/sprite_accessory/snouts/round_long
+	name = "Round + Long"
+	icon_state = "round_long"
 
 /datum/sprite_accessory/snouts/roundlight
 	name = "Round + Light"

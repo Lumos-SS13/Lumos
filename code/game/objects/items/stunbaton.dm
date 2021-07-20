@@ -14,7 +14,11 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("beaten")
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-
+	
+	var/defib_cost = 7500
+	var/defib_tlimit = DEFIB_TIME_LIMIT * 2
+	var/electroshock_cost = 1500
+	var/electroshock_brainhurty = 30
 	var/stamforce = 35
 	var/turned_on = FALSE
 	var/knockdown = TRUE
@@ -52,6 +56,124 @@
 	if(turned_on && prob(throw_hit_chance) && iscarbon(hit_atom))
 		baton_stun(hit_atom)
 
+/obj/item/melee/baton/alt_pre_attack(atom/A, mob/living/user, params)
+	. = TRUE
+	//borgs cant ungay people
+	if(!iscarbon(A) || !iscarbon(user) || !(user.zone_selected in list(BODY_ZONE_HEAD, BODY_ZONE_CHEST)))
+		return
+	var/mob/living/carbon/target = A
+	if(!turned_on)
+		to_chat(user, "<span class='warning'>\The [src] needs to be on.</span>")
+		return
+	if(INTERACTING_WITH(user, A))
+		to_chat(user, "<span class='warning'>You are already interacting with [target].</span>")
+		return
+	//defib mode
+	if(user.zone_selected == BODY_ZONE_CHEST)
+		if(target.stat != DEAD)
+			return
+		if(HAS_TRAIT(target, TRAIT_NODEFIB))
+			to_chat(user, "<span class='warning'>You aren't sure how to revive that...</span>")
+			return
+		target.notify_ghost_cloning("Your heart is being defibrillated. Re-enter your corpse if you want to be revived!", source = src)
+		var/primetimer = 30
+		var/primetimer2 = 20
+		var/deathtimer = defib_tlimit
+		if(do_mob(user, target, primetimer))
+			user.visible_message("<span class='notice'>[user] places [src] on [target]'s chest.</span>", \
+				"<span class='warning'>You place [src] on [target]'s chest and begin to rub it against them...</span>")
+			playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
+			// patients rot when they are killed, and die when they are dead
+			var/tplus = world.time - target.timeofdeath	//length of time spent dead
+			var/total_burn	= 0
+			var/total_brute	= 0
+			var/failed = ""
+			var/obj/item/organ/heart = target.getorgan(/obj/item/organ/heart)
+			if(do_mob(user, target, primetimer2))
+				if(!deductcharge(defib_cost, TRUE))
+					to_chat(user, "<span class='warning'>Not enough charge.")
+					return
+				for(var/obj/item/carried_item in target.contents)
+					if(istype(carried_item, /obj/item/clothing/suit/space))
+						user.audible_message("<span class='warning'>Patient's chest is obscured. Operation aborted.</span>")
+						update_icon()
+						return
+				target.visible_message("<span class='warning'>[target]'s body convulses a bit.</span>")
+				playsound(src, "bodyfall", 50, 1)
+				playsound(src, 'sound/machines/defib_zap.ogg', 75, 1, -1)
+				total_brute	= target.getBruteLoss()
+				total_burn	= target.getFireLoss()
+				if(target.suiciding || (HAS_TRAIT(target, TRAIT_NOCLONE)))
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Recovery of patient impossible. Further attempts futile.</span>"
+				else if (target.hellbound)
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's soul appears to be on another plane of existence.  Further attempts futile.</span>"
+				else if (tplus > deathtimer)
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Body has decayed for too long. Further attempts futile.</span>"
+				else if (!heart)
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's heart is missing.</span>"
+				else if (heart.organ_flags & ORGAN_FAILING)
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's heart too damaged.</span>"
+				else if(total_burn >= 180 || total_brute >= 180)
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. Further attempts futile.</span>"
+				else if(target.get_ghost())
+					failed = "<span class='warning'>[src] buzzes: Resuscitation failed - No activity in patient's brain. Further attempts may be successful.</span>"
+				else
+					var/obj/item/organ/brain/BR = target.getorgan(/obj/item/organ/brain)
+					if(BR) //BUG_PROBABLE_CAUSE - slight difference between us and tg
+						if(BR.organ_flags & ORGAN_FAILING)
+							failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's brain tissue is damaged making recovery of patient impossible via defibrillator. Further attempts futile.</span>"
+						if(BR.brain_death)
+							failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's brain damaged beyond point of no return. Further attempts futile.</span>"
+						if(target.suiciding || BR.brainmob?.suiciding)
+							failed = "<span class='warning'>[src] buzzes: Resuscitation failed - No intelligence pattern can be detected in patient's brain. Further attempts futile.</span>"
+					else
+						failed = "<span class='warning'>[src] buzzes: Resuscitation failed - Patient's brain is missing. Further attempts futile.</span>"
+				if(failed)
+					user.visible_message(failed)
+				else
+					//If the body has been fixed so that they would not be in crit when defibbed, give them oxyloss to put them back into crit
+					if(target.health > HALFWAYCRITDEATH)
+						target.adjustOxyLoss(target.health - HALFWAYCRITDEATH, 0)
+					else
+						var/overall_damage = total_brute + total_burn + target.getToxLoss() + target.getOxyLoss()
+						var/mobhealth = target.health
+						target.adjustOxyLoss((mobhealth - HALFWAYCRITDEATH) * (target.getOxyLoss() / overall_damage), 0)
+						target.adjustToxLoss((mobhealth - HALFWAYCRITDEATH) * (target.getToxLoss() / overall_damage), 0)
+						target.adjustFireLoss((mobhealth - HALFWAYCRITDEATH) * (total_burn / overall_damage), 0)
+						target.adjustBruteLoss((mobhealth - HALFWAYCRITDEATH) * (total_brute / overall_damage), 0)
+					target.updatehealth() // Previous "adjust" procs don't update health, so we do it manually.
+					user.visible_message("<span class='notice'>[src] pings: Resuscitation successful.</span>")
+					playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
+					target.set_heartattack(FALSE)
+					target.revive()
+					target.emote("gasp")
+					target.Jitter(100)
+					SEND_SIGNAL(target, COMSIG_LIVING_MINOR_SHOCK)
+					target.adjustOrganLoss(ORGAN_SLOT_BRAIN,  150, 150)
+					target.adjustOrganLoss(ORGAN_SLOT_HEART, 15)
+					log_combat(user, target, "revived", src)
+		return
+	if(HAS_TRAIT(user, TRAIT_PACIFISM))
+		to_chat(user, "<span class='warning'>You don't want to hurt anyone.</span>")
+		return
+	user.visible_message("<span class='danger'>[user] starts performing electroshock therapy on [target]!</span>", \
+						"<span class='notice'>You start performing electroshock therapy on [target]!</span>", \
+						ignored_mobs = target)
+	if(!do_mob(user, target, 3 SECONDS))
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [target]!", \
+						"<span class='danger'>You need to stand close to them!</span>")
+		return
+	if(deductcharge(electroshock_cost, TRUE))
+		target.adjustOrganLoss(ORGAN_SLOT_BRAIN, electroshock_brainhurty)
+		user.visible_message("<span class='danger'>[user] performs electroshock therapy on [target]!</span>", \
+						"<span class='notice'>You perform electroshock therapy on [target]!</span>", \
+						ignored_mobs = target)
+		to_chat(target, "<span class='userdanger'>My brain hurty!</span>")
+		playsound(target, 'sound/weapons/zapbang.ogg', 100, 0, 3)
+	else
+		user.visible_message("<span class='danger'>[user] fails to perform electroshock therapy on [target]!", \
+						"<span class='danger'>Not enough charge!</span>")
+	
 /obj/item/melee/baton/loaded //this one starts with a cell pre-installed.
 	preload_cell_type = /obj/item/stock_parts/cell/high/plus
 
