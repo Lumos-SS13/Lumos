@@ -40,7 +40,7 @@
 	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage." //Does not actually do toxin and oxygen damage on overdose.
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
-	addiction_threshold = 30
+	addiction_threshold = 20
 	overdose_threshold = 30
 	taste_description = "smoke"
 	trippy = FALSE
@@ -91,8 +91,8 @@
 	if(prob(5))
 		var/high_message = pick("You feel jittery.", "You feel like you gotta go fast.", "You feel like you need to step it up.")
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.AdjustAllImmobility(-20, 0)
-	M.AdjustUnconscious(-20, 0)
+	M.AdjustAllImmobility(-40, 0)
+	M.AdjustUnconscious(-40, 0)
 	..()
 	. = 1
 
@@ -140,6 +140,9 @@
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
 	..()
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.dizziness = max(0,M.dizziness-5)
 
 /datum/reagent/drug/krokodil/overdose_process(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25*REM)
@@ -178,7 +181,7 @@
 
 /datum/reagent/drug/methamphetamine
 	name = "Methamphetamine"
-	description = "Reduces stun times by about 300%, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
+	description = "Reduces stun times by about 600%, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 20
@@ -204,9 +207,9 @@
 	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.AdjustAllImmobility(-40, 0)
-	M.AdjustUnconscious(-40, 0)
-	M.adjustStaminaLoss(-7.5 * REM, 0)
+	M.AdjustAllImmobility(-80, 0)
+	M.AdjustUnconscious(-80, 0)
+	M.adjustStaminaLoss(-15 * REM, 0)
 	if(jitter)
 		M.Jitter(2)
 	if(brain_damage)
@@ -306,7 +309,7 @@
 	var/high_message = pick("You feel amped up.", "You feel ready.", "You feel like you can push it to the limit.")
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.adjustStaminaLoss(-5, 0)
+	M.adjustStaminaLoss(-15, 0)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 4)
 	M.hallucination += 5
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovable(M.loc))
@@ -488,14 +491,14 @@
 /datum/reagent/drug/skooma/on_mob_metabolize(mob/living/L)
 	. = ..()
 	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/skooma)
-	L.next_move_modifier *= 2
+	L.next_move_modifier *= 4
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(H.physiology)
-			H.physiology.stamina_mod *= 0.5
+			H.physiology.stamina_mod *= 0.25
 		if(H.dna && H.dna.species)
-			H.dna.species.punchdamagehigh += 4
-			H.dna.species.punchdamagelow  += 4
+			H.dna.species.punchdamagehigh += 6
+			H.dna.species.punchdamagelow  += 6
 			H.dna.species.punchstunthreshold -= 2
 
 /datum/reagent/drug/skooma/on_mob_end_metabolize(mob/living/L)
@@ -515,26 +518,26 @@
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1*REM)
 	M.adjustToxLoss(1*REM)
 	if(prob(10))
-		M.adjust_blurriness(2)
+		M.adjust_blurriness(1)
 	..()
 	. = 1
 
 /datum/reagent/drug/skooma/addiction_act_stage1(mob/living/M)
 	M.Jitter(10)
 	if(prob(50))
-		M.adjust_blurriness(2)
+		M.adjust_blurriness(1)
 	..()
 
 /datum/reagent/drug/skooma/addiction_act_stage2(mob/living/M)
 	M.Jitter(20)
 	M.Dizzy(10)
-	M.adjust_blurriness(2)
+	M.adjust_blurriness(1)
 	..()
 
 /datum/reagent/drug/skooma/addiction_act_stage3(mob/living/M)
 	M.Jitter(50)
 	M.Dizzy(20)
-	M.adjust_blurriness(4)
+	M.adjust_blurriness(2)
 	if(prob(20))
 		M.emote(pick("twitch","drool","moan"))
 	..()
