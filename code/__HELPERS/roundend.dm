@@ -189,7 +189,6 @@
 	display_report(popcount)
 
 	CHECK_TICK
-	/* Skyrat change, removed.
 	// Add AntagHUD to everyone, see who was really evil the whole time!
 	for(var/datum/atom_hud/antag/H in GLOB.huds)
 		for(var/m in GLOB.player_list)
@@ -197,7 +196,6 @@
 			H.add_hud_to(M)
 
 	CHECK_TICK
-	*/
 	//Set news report and mode result
 	mode.set_round_result()
 
@@ -224,7 +222,11 @@
 		if(!(A.name in total_antagonists))
 			total_antagonists[A.name] = list()
 		total_antagonists[A.name] += "[key_name(A.owner)]"
-
+		if(isliving(A.owner?.current))
+			for(var/datum/objective/objective in A.objectives)
+				if(!objective.check_completion() && !A.owner.current.GetComponent(/datum/component/bad_ending))
+					AddComponent(A.owner.current, /datum/component/bad_ending)
+					break
 	CHECK_TICK
 
 	//Now print them all into the log!
