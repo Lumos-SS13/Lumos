@@ -27,8 +27,7 @@
 /datum/component/bad_ending/proc/fucky_floor()
 	if(!dreamer.client)
 		return
-	var/list/turf/open/floor/floorlist = list()
-	for(var/turf/open/floor/fucky in range(dreamer))
+	for(var/turf/open/floor/fucky in view(dreamer))
 		if(prob(15))
 			INVOKE_ASYNC(src, .proc/handle_this_fucky_floor, fucky)
 
