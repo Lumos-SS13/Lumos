@@ -76,6 +76,9 @@
 	if(!Process_Spacemove(turn(dir, 180)))
 		newtonian_move(turn(dir, 180))
 	//
+	//Masturbating makes you blind
+	adjustOrganLoss(ORGAN_SLOT_EYES, 5)
+	blind_eyes(2)
 
 /mob/living/carbon/human/proc/mob_climax_outside(obj/item/organ/genital/G, mb_time = 30) //This is used for forced orgasms and other hands-free climaxes
 	var/datum/reagents/fluid_source = G.climaxable(src, TRUE)
