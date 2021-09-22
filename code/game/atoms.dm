@@ -126,6 +126,8 @@
 
 	ComponentInitialize()
 
+	if(findtext(name, "vadim") || findtext(desc, "vadim"))
+		return INITIALIZE_HINT_QDEL
 	return INITIALIZE_HINT_NORMAL
 
 //called if Initialize returns INITIALIZE_HINT_LATELOAD
