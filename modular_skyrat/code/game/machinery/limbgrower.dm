@@ -34,6 +34,7 @@
 							"fly" =  /datum/species/fly,
 							"plasmaman" =  /datum/species/plasmaman,
 							"xeno" =  /datum/species/xeno,
+							"synth" = /datum/species/synth,
 							)
 	var/list/stored_species = list()
 	var/obj/item/disk/data/dna_disk
