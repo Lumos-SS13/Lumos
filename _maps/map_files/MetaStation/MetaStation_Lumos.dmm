@@ -25265,9 +25265,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "bnN" = (
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/hallway/primary/central)
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
 "bnP" = (
 /obj/machinery/requests_console{
 	department = "Detective's office";
@@ -35699,27 +35703,25 @@
 /obj/item/paicard{
 	desc = "A real Nanotrasen success, these personal AIs provide all of the companionship of an AI without any law related red-tape.";
 	name = "Nanotrasen-brand personal AI device exhibit";
-	pixel_x = -7
-	},
-/obj/item/disk/design_disk{
-	name = "component design disk";
-	pixel_x = 11;
-	pixel_y = 6
-	},
-/obj/item/disk/data{
-	pixel_x = 17;
-	pixel_y = -1
-	},
-/obj/item/disk/tech_disk{
-	pixel_x = 7;
-	pixel_y = -3
+	pixel_y = 2
 	},
 /turf/open/floor/carpet,
 /area/bridge/showroom/corporate)
 "bNb" = (
 /obj/structure/window/reinforced,
 /obj/structure/table/wood,
-/obj/item/storage/backpack/duffelbag/drone,
+/obj/item/disk/data{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/obj/item/disk/tech_disk{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/disk/design_disk{
+	name = "component design disk";
+	pixel_y = 6
+	},
 /turf/open/floor/carpet,
 /area/bridge/showroom/corporate)
 "bNc" = (
@@ -35728,6 +35730,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table/wood,
+/obj/item/storage/backpack/duffelbag/drone,
 /turf/open/floor/carpet,
 /area/bridge/showroom/corporate)
 "bNd" = (
@@ -40619,6 +40622,10 @@
 /obj/effect/turf_decal/lumos/tile/green/half{
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "bYf" = (
@@ -41207,9 +41214,6 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "bZq" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
@@ -41217,6 +41221,10 @@
 	},
 /obj/effect/turf_decal/lumos/tile/green/fullcorner{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
@@ -41958,19 +41966,11 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "caG" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -24
+/obj/effect/turf_decal/lumos/tile/green/half{
+	dir = 8
 	},
-/obj/machinery/camera{
-	c_tag = "Hydroponics - Foyer";
-	dir = 1
-	},
-/obj/structure/sign/poster/official/hydro_ad{
-	pixel_y = -32
-	},
-/obj/effect/turf_decal/lumos/tile/green/fullcorner{
-	dir = 1
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
@@ -44136,9 +44136,12 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "cfd" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/plating,
-/area/hallway/primary/central)
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel,
+/area/hydroponics)
 "cff" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45418,6 +45421,7 @@
 	icon_state = "map-left-MS";
 	pixel_y = 32
 	},
+/obj/machinery/vending/wardrobe/science_wardrobe,
 /turf/open/floor/plasteel,
 /area/science/research)
 "chw" = (
@@ -45463,29 +45467,27 @@
 "chB" = (
 /obj/machinery/space_heater,
 /obj/effect/landmark/blobstart,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "chC" = (
-/obj/structure/closet/crate,
-/obj/item/storage/belt/utility,
-/obj/item/stack/cable_coil/random,
-/obj/effect/turf_decal/stripes/line{
+/obj/structure/sign/poster/official/hydro_ad{
+	pixel_y = -32
+	},
+/obj/machinery/camera{
+	c_tag = "Hydroponics - Foyer";
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/maintenance,
-/turf/open/floor/plating,
-/area/maintenance/starboard)
+/obj/effect/turf_decal/lumos/tile/green/fullcorner{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
 "chD" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
 /obj/item/cane,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/starboard)
@@ -47082,10 +47084,17 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
 "cld" = (
-/obj/item/radio/intercom{
-	pixel_y = -25
+/obj/effect/turf_decal/lumos/tile/green/half{
+	dir = 4
 	},
-/obj/effect/turf_decal/lumos/tile/green/fullcorner,
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/bottle/nutrient/ez{
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/obj/item/reagent_containers/glass/bottle/nutrient/ez{
+	pixel_x = 4
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "cle" = (
@@ -47582,8 +47591,13 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "cmi" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/plating,
+/obj/machinery/light,
+/obj/effect/turf_decal/lumos/tile/green/half,
+/obj/structure/table/glass,
+/obj/item/wirecutters{
+	pixel_y = 9
+	},
+/turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "cmj" = (
 /obj/structure/cable{
@@ -48470,7 +48484,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 31
 	},
-/obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/plasteel,
 /area/science/research)
 "coh" = (
@@ -53289,9 +53302,7 @@
 /turf/open/floor/engine,
 /area/science/storage)
 "cyA" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
+/obj/structure/closet/emcloset,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -61647,8 +61658,7 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/main)
 "cRH" = (
-/obj/machinery/light,
-/obj/effect/turf_decal/lumos/tile/green/half,
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "cRI" = (
@@ -65166,9 +65176,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "diw" = (
-/obj/machinery/firealarm{
-	pixel_y = 29
-	},
 /obj/structure/sign/poster/official/random{
 	pixel_x = 32
 	},
@@ -65226,6 +65233,10 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/lumos/tile/green/fulltile,
+/obj/machinery/door/airlock/public/glass{
+	name = "Hydroponics";
+	req_access_txt = "35"
+	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "diC" = (
@@ -65249,7 +65260,7 @@
 	icon_state = "map-right-MS";
 	pixel_y = 32
 	},
-/obj/machinery/vending/wardrobe/science_wardrobe,
+/obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/plasteel,
 /area/science/research)
 "diE" = (
@@ -67697,6 +67708,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
+"fKs" = (
+/obj/structure/grille,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/maintenance/starboard/aft)
 "fNY" = (
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
@@ -69670,6 +69687,13 @@
 /obj/structure/table/glass,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"kub" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
+/obj/item/flashlight,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
 "kuk" = (
 /obj/machinery/door/firedoor,
 /obj/structure/table/reinforced,
@@ -71024,13 +71048,13 @@
 /turf/open/floor/plating,
 /area/maintenance/department/science/xenobiology)
 "nwS" = (
-/obj/machinery/hydroponics/constructable,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+/obj/item/radio/intercom{
+	pixel_y = -25
 	},
-/turf/open/floor/plasteel/dark,
-/area/hydroponics)
+/obj/effect/turf_decal/lumos/tile/green/fullcorner,
+/obj/structure/table/glass,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
 "nwW" = (
 /obj/structure/plasticflaps/opaque,
 /obj/effect/turf_decal/bot{
@@ -71825,6 +71849,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "poq" = (
+/obj/structure/grille,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -72771,9 +72796,6 @@
 /area/maintenance/port)
 "ryb" = (
 /obj/structure/trash_pile,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "ryX" = (
@@ -107551,8 +107573,8 @@ bWH
 bci
 bZq
 caG
+chC
 bSS
-cmi
 cki
 ciL
 rvf
@@ -107808,8 +107830,8 @@ bWI
 bYd
 ciR
 cRH
+cmi
 bSS
-cfd
 cki
 dwX
 cmP
@@ -108065,8 +108087,8 @@ bVq
 bci
 cQq
 cld
+nwS
 bSS
-bnN
 cfa
 dwX
 cyA
@@ -109351,7 +109373,7 @@ ccw
 ckm
 nQX
 bST
-ciL
+kub
 dDr
 ckl
 cpp
@@ -109608,7 +109630,7 @@ ccx
 dIt
 caO
 bST
-ciL
+dww
 bVm
 cgo
 cmN
@@ -109865,7 +109887,7 @@ ccy
 ckn
 nQX
 bST
-ciL
+cmP
 bVm
 cgq
 cgq
@@ -110377,9 +110399,9 @@ ccp
 bxO
 cid
 ckn
-nwS
+nQX
 bST
-dwX
+fKs
 cff
 cgq
 cmO
@@ -110636,7 +110658,7 @@ ciO
 ckz
 nQX
 bST
-dwX
+fKs
 bVm
 cgq
 chA
@@ -110887,13 +110909,13 @@ bjU
 caP
 eQP
 bUh
-nQX
+bnN
 nQX
 bYk
 gAb
 soe
 bST
-dwX
+fKs
 bVm
 cgq
 chx
@@ -111403,7 +111425,7 @@ ccz
 ctn
 bKe
 deQ
-bxO
+cfd
 cQM
 caQ
 tnA
@@ -112438,7 +112460,7 @@ ccD
 cEh
 dLK
 apc
-chC
+bVE
 dvY
 dvY
 dvY
