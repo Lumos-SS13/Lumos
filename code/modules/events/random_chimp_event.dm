@@ -13,7 +13,7 @@
 	var/sound/chimp_sound = sound('sound/ambience/random_chimp_event.ogg', volume = 80)
 	for(var/mob/M in GLOB.player_list)
 		SEND_SOUND(M, chimp_sound)
-			
+
 /datum/round_event/random_chimp_event/start()
 	var/chimp_amount = rand(3, 15)
 	var/static/list/cool_areas = list(/area/medical/medbay, /area/crew_quarters/bar, /area/security/brig)
