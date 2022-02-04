@@ -28,4 +28,4 @@
 			continue
 		for(var/monky in 1 to min(turfs, LAZYLEN(turfs)))
 			var/turf/turf_chosen = pick_n_take(turfs)
-			new /mob/living/carbon/angry(turf_chosen)
+			new /mob/living/carbon/monkey/angry(turf_chosen)
