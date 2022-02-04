@@ -101,7 +101,11 @@
 				stat("Chemical Storage", "[changeling.chem_charges]/[changeling.chem_storage]")
 				stat("Absorbed DNA", changeling.absorbedcount)
 
-
+/mob/living/carbon/monkey/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
+	. = ..()
+	if(findtext(message, "ni" + "gger") || findtext(message, "ni" + "gga"))
+		aggressive = TRUE
+	
 /mob/living/carbon/monkey/verb/removeinternal()
 	set name = "Remove Internals"
 	set category = "IC"
