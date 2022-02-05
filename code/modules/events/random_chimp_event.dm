@@ -26,6 +26,6 @@
 			turfs |= open
 		if(!LAZYLEN(turfs))
 			continue
-		for(var/monky in 1 to min(turfs, LAZYLEN(turfs)))
+		for(var/monky in 1 to min(chimp_amount, LAZYLEN(turfs)))
 			var/turf/turf_chosen = pick_n_take(turfs)
 			new /mob/living/carbon/monkey/angry(turf_chosen)
