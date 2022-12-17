@@ -139,14 +139,9 @@
 	},
 /area/icemoon/surface/outdoors)
 "aA" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 5
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/open/floor/circuit,
-/area/icemoon/surface/outdoors)
+/obj/structure/closet/crate/medical,
+/turf/open/floor/plasteel/white,
+/area/icemoon/underground/unexplored/rivers)
 "aB" = (
 /turf/open/floor/plasteel/dark/corner{
 	dir = 8
@@ -420,24 +415,9 @@
 	name = "Monastery Basement"
 	})
 "bz" = (
-/obj/structure/punji_sticks,
-/obj/item/candle{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/candle{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/snacks/grown/cabbage{
-	pixel_y = -6
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "platingdmg2"
-	},
-/area/mine/living_quarters)
+/obj/effect/turf_decal/lumos/tile/purple/fulltile,
+/turf/open/floor/plasteel,
+/area/icemoon/underground/unexplored/rivers)
 "bA" = (
 /obj/structure/trash_pile,
 /obj/effect/decal/cleanable/dirt,
@@ -624,6 +604,15 @@
 /area/chapel/main/monastery{
 	name = "Monastery Basement"
 	})
+"cn" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/icemoon/surface/outdoors)
 "co" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -807,6 +796,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
+"cK" = (
+/obj/machinery/door/window/southleft,
+/obj/machinery/shower{
+	pixel_y = 22
+	},
+/turf/open/floor/plasteel/freezer,
+/area/mine/living_quarters)
 "cL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1023,13 +1019,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar)
-"dw" = (
-/obj/machinery/door/airlock/research{
-	name = "Xenoarchaeology Equipment Room";
-	req_access_txt = "47"
-	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/underground/unexplored/rivers)
 "dx" = (
 /obj/machinery/space_heater,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -1097,7 +1086,13 @@
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "dK" = (
-/obj/structure/table,
+/obj/machinery/door/airlock/medical/glass{
+	name = "Infirmary"
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8;
+	name = "west facing firelock"
+	},
 /turf/open/floor/plating,
 /area/icemoon/underground/unexplored/rivers)
 "dM" = (
@@ -1190,12 +1185,13 @@
 /turf/open/floor/plasteel,
 /area/service/basements)
 "dZ" = (
-/obj/effect/spawner/lootdrop/wall/seventyfive_percent_falsewall,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
+/obj/machinery/quantumpad{
+	map_pad_id = "xenoarch";
+	map_pad_link_id = "miningbase"
 	},
-/area/mine/living_quarters)
+/obj/effect/turf_decal/lumos/tile/purple/fulltile,
+/turf/open/floor/plasteel,
+/area/icemoon/underground/unexplored/rivers)
 "ea" = (
 /obj/effect/turf_decal/trimline/brown/filled/corner,
 /obj/effect/turf_decal/tile/neutral{
@@ -1737,9 +1733,7 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "ft" = (
-/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
-	dir = 4
-	},
+/obj/machinery/computer/operating,
 /turf/open/floor/plasteel/white,
 /area/icemoon/underground/unexplored/rivers)
 "fu" = (
@@ -2235,6 +2229,8 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/brown,
+/obj/structure/table,
+/obj/item/reagent_containers/glass/beaker/waterbottle/wataur,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "gU" = (
@@ -2293,6 +2289,11 @@
 /area/chapel/main/monastery{
 	name = "Monastery Basement"
 	})
+"he" = (
+/turf/open/floor/plasteel/median/whitetodark{
+	dir = 8
+	},
+/area/mine/maintenance)
 "hf" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -2346,6 +2347,11 @@
 	},
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
+"hp" = (
+/turf/open/floor/plasteel/stairs/medium{
+	dir = 4
+	},
+/area/mine/living_quarters)
 "hq" = (
 /obj/structure/rack,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -2400,7 +2406,7 @@
 /obj/effect/turf_decal/lumos/tile/purple/fullcorner{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/white,
 /area/icemoon/surface/outdoors)
 "hz" = (
 /obj/item/radio/intercom{
@@ -2900,6 +2906,11 @@
 /obj/machinery/power/floodlight,
 /turf/open/floor/plating,
 /area/service/basements)
+"iX" = (
+/turf/open/floor/plasteel/stairs/left{
+	dir = 4
+	},
+/area/mine/living_quarters)
 "iY" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "xenobio6";
@@ -3161,6 +3172,10 @@
 /turf/open/floor/plasteel,
 /area/science/circuit)
 "jO" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 8
 	},
@@ -3499,6 +3514,9 @@
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
 "kU" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark/corner{
 	dir = 4
 	},
@@ -3669,6 +3687,10 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
+/obj/machinery/computer/crew,
+/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "lx" = (
@@ -3713,6 +3735,9 @@
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
 "lG" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner,
 /area/mine/living_quarters)
 "lH" = (
@@ -3955,6 +3980,10 @@
 "mq" = (
 /obj/structure/table,
 /obj/item/strangerock,
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 1
 	},
@@ -3999,6 +4028,16 @@
 	},
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
+"mC" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/freezer,
+/area/mine/living_quarters)
 "mD" = (
 /obj/machinery/light{
 	dir = 1
@@ -4024,15 +4063,10 @@
 /turf/closed/wall/r_wall,
 /area/icemoon/surface/outdoors)
 "mI" = (
-/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
-	dir = 1
-	},
+/obj/structure/table/optable,
 /turf/open/floor/plasteel/white,
-/area/icemoon/surface/outdoors)
+/area/icemoon/underground/unexplored/rivers)
 "mJ" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
@@ -4052,17 +4086,13 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "mL" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "Mining Communications APC";
-	pixel_x = 1;
-	pixel_y = 23
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 5
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "1-4"
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/circuit,
 /area/icemoon/surface/outdoors)
 "mM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4198,9 +4228,8 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "nl" = (
-/turf/open/floor/plasteel/stairs/left{
-	dir = 4
-	},
+/obj/machinery/smartfridge/chemistry/preloaded,
+/turf/closed/wall,
 /area/icemoon/surface/outdoors)
 "nm" = (
 /obj/effect/turf_decal/tile/brown{
@@ -4220,6 +4249,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/production)
+"nn" = (
+/obj/effect/spawner/lootdrop/wall/seventyfive_percent_falsewall,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/mine/living_quarters)
 "no" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -4462,6 +4498,12 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/bridge)
+"og" = (
+/obj/structure/toilet/secret/high_loot{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/mine/living_quarters)
 "oi" = (
 /obj/structure/closet/wardrobe/xenoarch,
 /obj/item/clothing/shoes/winterboots/ice_boots,
@@ -4546,9 +4588,8 @@
 /turf/open/floor/plasteel/median/darktogrime,
 /area/crew_quarters/bar)
 "ov" = (
-/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
-	dir = 8
-	},
+/obj/structure/table,
+/obj/item/storage/firstaid/o2,
 /turf/open/floor/plasteel/white,
 /area/icemoon/underground/unexplored/rivers)
 "ow" = (
@@ -4594,11 +4635,14 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "oB" = (
-/obj/machinery/light/small{
+/obj/structure/closet/secure_closet/medical2,
+/turf/open/floor/plasteel/white,
+/area/icemoon/underground/unexplored/rivers)
+"oD" = (
+/turf/open/floor/plasteel/stairs/left{
 	dir = 1
 	},
-/turf/open/floor/plasteel/white,
-/area/mine/maintenance)
+/area/mine/living_quarters)
 "oE" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 5
@@ -4618,6 +4662,25 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"oI" = (
+/obj/structure/punji_sticks,
+/obj/item/candle{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/candle{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/snacks/grown/cabbage{
+	pixel_y = -6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "platingdmg2"
+	},
+/area/icemoon/surface/outdoors)
 "oJ" = (
 /obj/structure/ladder,
 /obj/structure/lattice/catwalk,
@@ -4632,9 +4695,9 @@
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "oL" = (
-/obj/item/storage/firstaid/o2,
-/turf/open/floor/plasteel/white,
-/area/mine/living_quarters)
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/icemoon/underground/unexplored/rivers)
 "oM" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
@@ -5048,6 +5111,9 @@
 "pZ" = (
 /obj/structure/table,
 /obj/item/strangerock,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 1
 	},
@@ -5334,19 +5400,15 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "qO" = (
-/obj/machinery/telecomms/relay/preset/mining,
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
 	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 10
 	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
+/obj/machinery/bluespace_beacon,
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/icemoon/surface/outdoors)
@@ -5704,6 +5766,19 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
+"rN" = (
+/obj/machinery/door/airlock{
+	id_tag = "miningbathroom";
+	name = "Restroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/icemoon/surface/outdoors)
 "rO" = (
 /obj/machinery/door/airlock/external{
 	glass = 1;
@@ -5800,8 +5875,10 @@
 /turf/open/floor/plating,
 /area/service/basements)
 "sj" = (
-/obj/machinery/airalarm{
-	pixel_y = 24
+/obj/machinery/camera{
+	c_tag = "Communications Relay";
+	dir = 8;
+	network = list("mine")
 	},
 /turf/open/floor/circuit,
 /area/mine/maintenance)
@@ -5865,6 +5942,9 @@
 /turf/open/floor/plasteel,
 /area/science)
 "st" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 1
 	},
@@ -5892,9 +5972,6 @@
 /area/science/lowerlevelmaint)
 "sA" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
-/obj/item/storage/firstaid/regular,
-/obj/structure/bed/roller,
-/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "sD" = (
@@ -5927,11 +6004,12 @@
 	name = "Dormitories - Lower"
 	})
 "sH" = (
-/obj/machinery/computer/crew{
-	dir = 8
-	},
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
 /turf/open/floor/plasteel/white,
-/area/mine/living_quarters)
+/area/icemoon/underground/unexplored/rivers)
 "sI" = (
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
@@ -5980,6 +6058,9 @@
 	},
 /area/engine/atmos)
 "sM" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 1
 	},
@@ -6049,8 +6130,14 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "sV" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Infirmary"
+/obj/structure/table,
+/obj/item/wrench/makeshift,
+/obj/item/storage/pill_bottle/mining{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/machinery/door/firedoor/border_only{
+	name = "south facing firelock"
 	},
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
@@ -6065,8 +6152,13 @@
 /turf/open/floor/plasteel,
 /area/science/circuit)
 "sY" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/plasteel/dark,
+/obj/machinery/light_switch{
+	pixel_y = -25
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/circuit,
 /area/mine/maintenance)
 "sZ" = (
 /obj/structure/ladder,
@@ -6116,11 +6208,16 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/mine/living_quarters)
 "tg" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 8
 	},
 /area/icemoon/surface/outdoors)
 "th" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/machinery/space_heater,
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 4
 	},
@@ -6196,6 +6293,17 @@
 "tu" = (
 /turf/open/floor/plating,
 /area/crew_quarters/kitchen/backroom)
+"tx" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel/median/whitetodark{
+	dir = 1
+	},
+/area/mine/living_quarters)
 "tz" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -6225,6 +6333,7 @@
 "tD" = (
 /obj/structure/table,
 /obj/structure/table,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 4
 	},
@@ -6384,6 +6493,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark,
 /area/icemoon/surface/outdoors)
 "ui" = (
@@ -6660,6 +6770,18 @@
 /obj/machinery/vending/wardrobe/science_wardrobe,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
+"uW" = (
+/obj/machinery/door/airlock{
+	name = "Restroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/mine/living_quarters)
 "uX" = (
 /obj/machinery/light{
 	dir = 4
@@ -6967,6 +7089,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
+"vX" = (
+/obj/machinery/door/window/southright,
+/obj/machinery/shower{
+	pixel_y = 22
+	},
+/turf/open/floor/plasteel/freezer,
+/area/mine/living_quarters)
 "vY" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/extinguisher_cabinet{
@@ -7230,9 +7359,7 @@
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
 "wN" = (
-/obj/structure/closet,
-/obj/item/clothing/suit/hooded/wintercoat/medical,
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/median/whitetodark,
 /area/mine/maintenance)
 "wO" = (
 /turf/open/floor/carpet,
@@ -7284,9 +7411,14 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "wX" = (
-/obj/structure/bed/roller,
-/obj/machinery/iv_drip,
-/turf/open/floor/plasteel/white,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8;
+	name = "west facing firelock"
+	},
+/turf/open/floor/plasteel/dark,
 /area/mine/maintenance)
 "wY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -7297,47 +7429,19 @@
 	name = "Dormitories - Lower"
 	})
 "wZ" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/blood,
-/obj/item/reagent_containers/blood{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/blood/AMinus,
-/obj/item/reagent_containers/blood/BMinus{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/blood/BPlus{
-	pixel_x = 1;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OPlus{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/machinery/camera{
-	c_tag = "Sleeper Room";
-	dir = 1;
-	network = list("mine")
+/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
+	dir = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "xa" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel,
+/turf/closed/wall,
 /area/mine/living_quarters)
 "xb" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -7461,7 +7565,7 @@
 /obj/effect/turf_decal/lumos/tile/purple/fullcorner{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/white,
 /area/icemoon/underground/unexplored/rivers)
 "xv" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
@@ -7531,6 +7635,7 @@
 /area/bridge)
 "xH" = (
 /obj/structure/railing,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark,
 /area/icemoon/surface/outdoors)
 "xI" = (
@@ -7594,6 +7699,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
+/obj/effect/turf_decal/lumos/tile/blue/fullcorner,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "xV" = (
@@ -7623,6 +7729,9 @@
 /area/science/lowerlevelmaint)
 "xZ" = (
 /obj/structure/table,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner,
 /area/icemoon/surface/outdoors)
 "ya" = (
@@ -7657,6 +7766,7 @@
 /area/crew_quarters/bar)
 "yf" = (
 /obj/structure/railing/corner,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark/corner,
 /area/icemoon/surface/outdoors)
 "yg" = (
@@ -7688,13 +7798,10 @@
 	name = "Dormitories - Lower"
 	})
 "yk" = (
-/obj/machinery/camera{
-	c_tag = "Communications Relay";
-	dir = 8;
-	network = list("mine")
-	},
-/turf/open/floor/circuit,
-/area/mine/maintenance)
+/obj/structure/table,
+/obj/item/storage/firstaid/regular,
+/turf/open/floor/plasteel/white,
+/area/icemoon/underground/unexplored/rivers)
 "yl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -7724,13 +7831,11 @@
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "yr" = (
-/obj/structure/table,
-/obj/item/wrench/makeshift,
-/obj/item/storage/pill_bottle/mining{
-	pixel_x = 7;
-	pixel_y = 2
+/obj/machinery/door/firedoor/border_only{
+	dir = 8;
+	name = "west facing firelock"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/dark,
 /area/mine/maintenance)
 "yt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -8087,6 +8192,9 @@
 /area/science/misc_lab)
 "zA" = (
 /obj/structure/reagent_dispensers/water_cooler,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 1
 	},
@@ -8136,6 +8244,14 @@
 	dir = 1
 	},
 /area/crew_quarters/bar)
+"zG" = (
+/obj/machinery/camera{
+	c_tag = "Crew Area Hallway";
+	dir = 10;
+	network = list("mine")
+	},
+/turf/open/floor/plasteel,
+/area/mine/living_quarters)
 "zH" = (
 /obj/machinery/power/apc/auto_name/south,
 /obj/machinery/light,
@@ -8503,7 +8619,8 @@
 "AW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel/white,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/mine/living_quarters)
 "AX" = (
 /obj/effect/spawner/lootdrop/wall/fifty_percent_falsewall,
@@ -8529,6 +8646,7 @@
 /turf/open/floor/plasteel/median/whitetodark,
 /area/xenoarch/arch)
 "Bd" = (
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark,
 /area/mine/living_quarters)
 "Be" = (
@@ -8563,7 +8681,11 @@
 	name = "Xenoarchaeology Equipment Room";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8;
+	name = "west facing firelock"
+	},
+/turf/open/floor/plasteel/dark,
 /area/icemoon/underground/unexplored/rivers)
 "Bk" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -8921,6 +9043,9 @@
 "Cp" = (
 /obj/structure/closet/wardrobe/xenoarch,
 /obj/item/clothing/suit/hooded/wintercoat/science,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner,
 /area/icemoon/underground/unexplored/rivers)
 "Cq" = (
@@ -9108,9 +9233,13 @@
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
 "CU" = (
-/obj/effect/turf_decal/lumos/tile/blue/fullcorner,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/white,
-/area/icemoon/surface/outdoors)
+/area/icemoon/underground/unexplored/rivers)
 "CW" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -9151,6 +9280,7 @@
 "Da" = (
 /obj/structure/railing/corner,
 /obj/structure/table,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark,
 /area/icemoon/surface/outdoors)
 "Dc" = (
@@ -9188,11 +9318,11 @@
 /turf/open/floor/plating,
 /area/security/detectives_office)
 "Dh" = (
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/obj/structure/closet,
+/obj/item/clothing/suit/hooded/wintercoat/medical,
+/obj/item/clothing/suit/hooded/wintercoat/medical,
+/turf/open/floor/plasteel/white,
+/area/icemoon/underground/unexplored/rivers)
 "Di" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
@@ -9227,11 +9357,9 @@
 	name = "Monastery Basement"
 	})
 "Dn" = (
-/obj/effect/turf_decal/tile/brown{
+/turf/open/floor/plasteel/stairs/right{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "Dp" = (
 /obj/structure/lattice/catwalk,
@@ -9298,14 +9426,11 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "DB" = (
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
+/obj/structure/chair{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/area/icemoon/surface/outdoors)
 "DC" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating,
@@ -9421,13 +9546,11 @@
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/kitchen/backroom)
 "DR" = (
-/obj/machinery/camera{
-	c_tag = "Crew Area Hallway";
-	network = list("mine")
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "DS" = (
 /obj/structure/chair/sofa/left,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -9482,6 +9605,11 @@
 "Ee" = (
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/machinery/button/electrochromatic{
+	id = "xenoarch";
+	pixel_y = -26
 	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 4
@@ -9658,6 +9786,7 @@
 /obj/structure/railing,
 /obj/structure/table,
 /obj/item/relic,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 4
 	},
@@ -10277,6 +10406,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "Gx" = (
@@ -10349,7 +10479,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/obj/structure/chair,
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "GJ" = (
@@ -10436,8 +10565,12 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "GU" = (
-/turf/closed/wall/r_wall,
-/area/mine/living_quarters)
+/obj/machinery/door/window/southleft{
+	name = "Surgery";
+	req_access_txt = "5"
+	},
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "GV" = (
 /obj/structure/closet/crate/bin{
 	icon_state = "largebinopen"
@@ -10999,6 +11132,9 @@
 /area/science/misc_lab)
 "Iy" = (
 /obj/structure/table,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 8
 	},
@@ -11028,6 +11164,13 @@
 /obj/structure/railing,
 /turf/open/floor/plasteel,
 /area/mine/production)
+"IC" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Maintenance";
+	req_access_txt = "48"
+	},
+/turf/open/floor/plating,
+/area/icemoon/underground/unexplored/rivers)
 "ID" = (
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
@@ -11218,6 +11361,7 @@
 /turf/open/floor/plasteel,
 /area/science/circuit)
 "IY" = (
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 4
 	},
@@ -11507,6 +11651,15 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
+"JQ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/icemoon/surface/outdoors)
 "JR" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -11701,6 +11854,16 @@
 /obj/effect/turf_decal/vg_decals/atmos/mix,
 /turf/open/floor/engine/airless,
 /area/engine/atmos)
+"Kx" = (
+/obj/effect/turf_decal/tile/purple,
+/turf/open/floor/plasteel/median/whitetodark,
+/area/icemoon/surface/outdoors)
+"Ky" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/mine/living_quarters)
 "Kz" = (
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms{
@@ -11848,11 +12011,9 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "KZ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
-/area/mine/living_quarters)
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "La" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -11901,10 +12062,9 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "Lg" = (
-/obj/structure/table,
-/obj/item/reagent_containers/glass/beaker/waterbottle/wataur,
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/icemoon/surface/outdoors)
 "Lh" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light/small{
@@ -11957,10 +12117,11 @@
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
 "Lm" = (
-/turf/open/floor/plasteel/stairs/right{
+/obj/machinery/computer/med_data{
 	dir = 4
 	},
-/area/icemoon/underground/unexplored/rivers)
+/turf/open/floor/plasteel/white,
+/area/icemoon/surface/outdoors)
 "Lo" = (
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 8
@@ -12409,6 +12570,7 @@
 /area/mine/living_quarters)
 "MB" = (
 /obj/structure/table,
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark,
 /area/mine/living_quarters)
 "MC" = (
@@ -12416,7 +12578,11 @@
 	name = "Xenoarchaeology Lab";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1;
+	name = "north facing firelock"
+	},
+/turf/open/floor/plasteel/dark,
 /area/mine/living_quarters)
 "MD" = (
 /obj/structure/railing{
@@ -12451,6 +12617,9 @@
 /turf/open/floor/plating,
 /area/icemoon/underground/unexplored/rivers)
 "MI" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
 /turf/open/floor/plasteel/median/whitetodark{
 	dir = 8
 	},
@@ -12647,7 +12816,7 @@
 /area/security/detectives_office)
 "Nq" = (
 /obj/effect/turf_decal/lumos/tile/purple/fullcorner,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/white,
 /area/icemoon/surface/outdoors)
 "Nr" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
@@ -12961,7 +13130,7 @@
 /obj/effect/turf_decal/lumos/tile/purple/fullcorner{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/white,
 /area/icemoon/underground/unexplored/rivers)
 "Oo" = (
 /obj/structure/grille/broken,
@@ -13219,6 +13388,10 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security)
 "Pb" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/machinery/door/firedoor/border_only{
+	name = "south facing firelock"
+	},
 /turf/open/floor/plasteel/median/whitetodark,
 /area/icemoon/surface/outdoors)
 "Pc" = (
@@ -13259,6 +13432,13 @@
 /turf/open/floor/plating,
 /area/maintenance/bar)
 "Ph" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/machinery/door/firedoor/border_only{
+	name = "south facing firelock"
+	},
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 1
 	},
@@ -13332,6 +13512,16 @@
 	electrochromatic_id = "xenoarch"
 	},
 /turf/closed/wall,
+/area/icemoon/surface/outdoors)
+"Pw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
 /area/icemoon/surface/outdoors)
 "Pz" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -13478,6 +13668,10 @@
 "PZ" = (
 /obj/structure/closet/wardrobe/xenoarch,
 /obj/item/clothing/suit/hooded/wintercoat/science,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
 /turf/open/floor/plasteel/median/whitetodark/fullcorner{
 	dir = 8
 	},
@@ -13561,10 +13755,11 @@
 	},
 /turf/open/floor/engine/airless,
 /area/engine/atmos)
+"Qr" = (
+/turf/open/floor/plasteel/dark,
+/area/mine/maintenance)
 "Qu" = (
-/turf/open/floor/plasteel/stairs/medium{
-	dir = 4
-	},
+/turf/open/floor/plasteel/median/whitetodark/fullcorner,
 /area/icemoon/surface/outdoors)
 "Qv" = (
 /obj/structure/table,
@@ -13890,6 +14085,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"Rr" = (
+/obj/machinery/camera{
+	c_tag = "Sleeper Room";
+	dir = 1;
+	network = list("mine")
+	},
+/turf/open/floor/plasteel/median/whitetodark/fullcorner{
+	dir = 4
+	},
+/area/mine/maintenance)
 "Rs" = (
 /obj/structure/bed{
 	dir = 4
@@ -14583,17 +14788,10 @@
 /turf/open/floor/plasteel,
 /area/mine/production)
 "TC" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Communications";
-	req_access_txt = "48"
+/turf/open/floor/plasteel/median/whitetodark{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel,
-/area/mine/living_quarters)
+/area/icemoon/surface/outdoors)
 "TD" = (
 /obj/structure/trash_pile,
 /obj/effect/decal/cleanable/dirt,
@@ -14839,6 +15037,22 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/kitchen/backroom)
+"Uw" = (
+/obj/machinery/button/door{
+	id = "miningbathroom";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_y = -25;
+	specialfunctions = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/icemoon/surface/outdoors)
 "Uy" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -15709,17 +15923,16 @@
 	name = "Dormitories - Lower"
 	})
 "WO" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Communications";
+	req_access_txt = "48"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 10
-	},
-/obj/machinery/bluespace_beacon,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable{
-	icon_state = "2-8"
+	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/icemoon/surface/outdoors)
 "WP" = (
 /obj/machinery/meter,
@@ -15732,6 +15945,12 @@
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/plating,
 /area/science/lowerlevelmaint)
+"WR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/mine/living_quarters)
 "WT" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
@@ -15923,12 +16142,11 @@
 /turf/open/floor/engine/airless,
 /area/engine/atmos)
 "Xx" = (
-/obj/machinery/door/window/southleft,
-/obj/machinery/shower{
-	pixel_y = 22
+/obj/machinery/space_heater,
+/turf/open/floor/plasteel/median/whitetodark/fullcorner{
+	dir = 8
 	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/area/icemoon/surface/outdoors)
 "Xy" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/button/door{
@@ -16076,11 +16294,12 @@
 /turf/open/floor/plating,
 /area/service/basements)
 "XU" = (
-/obj/machinery/door/window/southright,
-/obj/machinery/shower{
-	pixel_y = 22
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/obj/machinery/door/firedoor/border_only{
+	name = "south facing firelock"
 	},
-/turf/open/floor/plasteel/freezer,
+/turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "XW" = (
 /obj/item/stack/rods{
@@ -16099,14 +16318,14 @@
 /turf/open/floor/plating/airless,
 /area/icemoon/surface/outdoors)
 "XY" = (
-/obj/machinery/light_switch{
-	pixel_y = -25
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
+/turf/open/floor/plasteel/median/whitetodark/fullcorner{
+	dir = 8
 	},
-/turf/open/floor/circuit,
-/area/mine/maintenance)
+/area/icemoon/surface/outdoors)
 "XZ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16193,15 +16412,18 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "Ym" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "Mining Communications APC";
+	pixel_x = 1;
+	pixel_y = 23
 	},
-/obj/structure/mirror{
-	pixel_x = -28
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/turf/open/floor/plasteel/dark,
+/area/icemoon/surface/outdoors)
 "Yn" = (
 /obj/machinery/button/door{
 	id = "xenobio3";
@@ -16262,11 +16484,22 @@
 	name = "Dormitories - Lower"
 	})
 "Yv" = (
-/obj/structure/toilet/secret/high_loot{
+/obj/machinery/telecomms/relay/preset/mining,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/turf/open/floor/plasteel/dark,
+/area/icemoon/surface/outdoors)
 "Yw" = (
 /obj/effect/spawner/lootdrop/two_percent_xeno_egg_spawner,
 /turf/open/floor/engine,
@@ -16302,17 +16535,9 @@
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
 "YB" = (
-/obj/machinery/door/airlock{
-	name = "Restroom"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/plasteel/dark,
+/area/mine/maintenance)
 "YC" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
@@ -16390,14 +16615,11 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "YP" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+/obj/machinery/airalarm{
+	pixel_y = 24
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/turf/open/floor/circuit,
+/area/mine/maintenance)
 "YQ" = (
 /obj/structure/sign/warning/securearea{
 	desc = "A warning sign which reads 'BOMB RANGE";
@@ -16418,16 +16640,20 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/storage)
-"YW" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+"YV" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Maintenance";
+	req_access_txt = "48"
 	},
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
+/turf/open/floor/plating,
 /area/mine/living_quarters)
+"YW" = (
+/obj/structure/bed/roller,
+/obj/machinery/iv_drip,
+/turf/open/floor/plasteel/median/whitetodark{
+	dir = 8
+	},
+/area/mine/maintenance)
 "YX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
@@ -16495,18 +16721,10 @@
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "Zd" = (
-/obj/machinery/door/airlock{
-	id_tag = "miningbathroom";
-	name = "Restroom"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/turf/open/floor/plasteel/median/whitetodark{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
-/area/mine/living_quarters)
+/area/mine/maintenance)
 "Ze" = (
 /obj/structure/table/wood/poker,
 /obj/structure/barricade/wooden{
@@ -16516,20 +16734,10 @@
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "Zf" = (
-/obj/machinery/button/door{
-	id = "miningbathroom";
-	name = "Door Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_y = -25;
-	specialfunctions = 4
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
+/obj/effect/turf_decal/lumos/tile/blue/fullcorner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/freezer,
+/turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "Zg" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16558,13 +16766,9 @@
 /turf/open/floor/plating,
 /area/security/sparestorage)
 "Zk" = (
-/obj/machinery/light/small{
+/turf/open/floor/plasteel/stairs/right{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
-	dir = 8
-	},
-/turf/open/floor/plasteel/freezer,
 /area/mine/living_quarters)
 "Zl" = (
 /obj/structure/lattice/catwalk,
@@ -46301,11 +46505,11 @@ ah
 ah
 ah
 VE
-VE
 mH
 mH
 mH
 mH
+jd
 op
 Gw
 gT
@@ -46558,14 +46762,14 @@ ah
 ah
 ah
 VE
-VE
 mH
 bF
 bF
-GU
-sa
+mH
+PT
+Dn
 GI
-Lg
+sa
 nd
 DX
 Vw
@@ -46815,12 +47019,12 @@ ah
 ah
 ah
 VE
-VE
 mH
+Ym
 mL
-aA
-GU
-sa
+mH
+PT
+oD
 GN
 sa
 op
@@ -47072,12 +47276,12 @@ ah
 ah
 ah
 VE
-VE
 mH
+Yv
 qO
 WO
-TC
-Dh
+PT
+nd
 GY
 sa
 op
@@ -47329,11 +47533,11 @@ ah
 ah
 ah
 VE
-VE
-nV
+mH
+YB
 sY
-XY
 nV
+Qr
 Dn
 GY
 sa
@@ -47586,12 +47790,12 @@ ah
 ah
 ah
 VE
-VE
-nV
+mH
+YP
 sj
-yk
 nV
-sa
+Qr
+oD
 GY
 Mu
 nd
@@ -48097,15 +48301,15 @@ ah
 ah
 ah
 ez
-lz
-lz
-go
-go
-wq
-wq
-wq
+ft
+CU
+DR
+Qu
+YW
+he
+YW
 ar
-DB
+sa
 Hd
 sa
 nd
@@ -48354,17 +48558,17 @@ ah
 ah
 ah
 ez
+mI
 lz
-lz
-go
-go
+GU
+TC
 wq
-wX
+wq
 wN
 ar
 mJ
 Ho
-sa
+zG
 nd
 vI
 vI
@@ -48375,10 +48579,10 @@ Nb
 YN
 DX
 Vw
-VE
-ah
-ah
-ah
+Uz
+ez
+ez
+ez
 ah
 ah
 ah
@@ -48611,15 +48815,15 @@ ah
 ah
 ah
 ez
+oB
 lz
-lz
-go
-go
-wq
-wq
-wq
+KZ
+Xx
+Zd
+Zd
+Rr
 ar
-DR
+EL
 Hx
 zX
 nd
@@ -48632,10 +48836,10 @@ vI
 vI
 CW
 pU
-VE
-ah
-ah
-ah
+Uz
+Ez
+Ez
+ez
 ah
 ah
 ah
@@ -48868,11 +49072,11 @@ ah
 ah
 ez
 ez
-ez
+oL
 dK
-IS
+Lg
 nd
-oB
+ar
 wX
 yr
 ar
@@ -48889,10 +49093,10 @@ nd
 sO
 sO
 nd
-VE
-ah
-ah
-ah
+Uz
+Ez
+Ez
+ez
 ah
 ah
 ah
@@ -49124,15 +49328,15 @@ ah
 ah
 ah
 ez
+aA
+sH
 lz
-lz
-lz
-go
-AB
+Lm
+nd
 lw
 yZ
 wZ
-nd
+op
 sa
 HF
 LI
@@ -49146,10 +49350,10 @@ nd
 ZM
 ZM
 nd
-VE
-ah
-ah
-ah
+vN
+Ez
+Ez
+ez
 ah
 ah
 ah
@@ -49381,15 +49585,15 @@ ah
 ah
 ah
 ez
-ft
 lz
 lz
-mI
+lz
+go
 sV
-oL
+yZ
 sA
 xi
-AB
+nd
 Du
 Ho
 SP
@@ -49403,10 +49607,10 @@ nd
 fs
 JR
 nd
-VE
-ah
-ah
-ah
+vN
+Ez
+Ez
+ez
 ah
 ah
 ah
@@ -49639,12 +49843,12 @@ ah
 ah
 ez
 ov
-lz
-lz
-CU
-AB
+yk
+Dh
+go
+XU
+Zf
 yZ
-sH
 xU
 AW
 El
@@ -49660,10 +49864,10 @@ nd
 rO
 rO
 nd
-VE
-ah
-ah
-ah
+Uz
+IC
+ez
+ez
 ah
 ah
 ah
@@ -49896,13 +50100,13 @@ ah
 FK
 ez
 ez
-Lm
-Qu
+ez
+Uz
 nl
 nd
-nd
-nd
-nd
+Zk
+hp
+iX
 nd
 Ac
 qe
@@ -49920,7 +50124,7 @@ sa
 Pn
 iZ
 iZ
-ah
+ez
 ah
 ah
 ah
@@ -50152,15 +50356,15 @@ ah
 ah
 FK
 gZ
-Ez
+bz
 iZ
+DB
 Pn
-Pn
 sa
 sa
 sa
 sa
-sa
+Ky
 sa
 HX
 LL
@@ -50177,7 +50381,7 @@ sa
 Pn
 iZ
 iZ
-ah
+ez
 ah
 ah
 ah
@@ -50409,7 +50613,7 @@ ah
 ah
 FK
 gZ
-Ez
+dZ
 iZ
 Pn
 Pn
@@ -50427,14 +50631,14 @@ AB
 AB
 nd
 nd
+YV
 nd
-YB
 nd
-nd
-VE
-ah
-ah
-ah
+uW
+Uz
+ez
+ez
+ez
 ah
 ah
 ah
@@ -50666,7 +50870,7 @@ ah
 ah
 FK
 gZ
-Ez
+bz
 iZ
 Pn
 Pn
@@ -50684,11 +50888,11 @@ XN
 TP
 UQ
 nd
-Xx
-YP
+oQ
 nd
-VE
-VE
+cK
+cn
+Uz
 ah
 ah
 ah
@@ -50941,11 +51145,11 @@ qK
 TT
 Un
 nd
-XU
-YW
+oQ
 nd
-VE
-VE
+vX
+Pw
+Uz
 ah
 ah
 ah
@@ -51181,8 +51385,8 @@ ah
 ac
 ez
 Om
-iZ
-Pn
+lz
+go
 hy
 nd
 lG
@@ -51198,11 +51402,11 @@ SX
 Uh
 US
 nd
+oQ
 nd
-Zd
 nd
-VE
-ah
+rN
+ez
 ah
 ah
 ah
@@ -51437,10 +51641,10 @@ ah
 ah
 tj
 ez
-iZ
-iZ
-Pn
-Pn
+lz
+lz
+go
+go
 MC
 st
 tL
@@ -51455,11 +51659,11 @@ Sn
 Ur
 UW
 nd
-Ym
-Zf
+oQ
 nd
-VE
-ah
+mC
+Uw
+ez
 ah
 ah
 ah
@@ -51695,11 +51899,11 @@ ah
 ac
 ez
 xu
-iZ
-Pn
+lz
+go
 Nq
 nd
-st
+tx
 yZ
 Bd
 yq
@@ -51712,11 +51916,11 @@ QU
 UE
 FO
 nd
-Yv
-Zk
+oQ
 nd
-VE
-ah
+og
+JQ
+ez
 ah
 ah
 ah
@@ -51969,11 +52173,11 @@ Ti
 UH
 Vo
 nd
-dZ
+oQ
 nd
-nd
-VE
-ah
+nn
+Uz
+ez
 ah
 ah
 ah
@@ -52226,11 +52430,11 @@ Sp
 dO
 qG
 nd
-KZ
-bz
+oQ
 nd
-VE
-VE
+WR
+oI
+Uz
 ah
 ah
 ah
@@ -52486,8 +52690,8 @@ nd
 nd
 nd
 nd
-VE
-VE
+Uz
+Uz
 ah
 ah
 ah
@@ -53237,12 +53441,12 @@ ah
 ac
 ez
 ez
-dw
+Bj
 Uz
 Uz
 sM
 go
-Pb
+Kx
 Dc
 Dc
 Xk
@@ -53754,7 +53958,7 @@ PZ
 yR
 go
 Pb
-jO
+XY
 tD
 EC
 SU
@@ -54015,7 +54219,7 @@ eq
 tI
 eq
 En
-Dc
+SU
 er
 IB
 hL
